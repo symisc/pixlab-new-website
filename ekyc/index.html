@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Universal ID scanning with PixLab eKYC Platform: Process over 11,000 types of ID documents from 197+ countries for KYC and compliance needs.">
+    <meta name="author" content="PixLab | Symisc Systems. All rights reserved.">
+    <meta name="keywords" content="passport scanner api, id card scanner api, residence card scanner api, web api for scanning passports, rest api passport scanner, document scanner api, docscan rest api, pixlab docscan, pixlab document scanner api, universal ID scanner, OCR ID Scan API, OCR scanner for ID, OCR scanner for Passports, API for scanning ID, API for scanning Passports, API for scanning driver license, DOCSCAN API, REST API for ID scanning, global document scanner, ID verification, KYC automation, document processing API, international ID scan, secure ID verification, REST API for scanning all ID documents from all the world, worldwide ID scanner api, pixlab document scanner api, ground breaking ID document scanner api, KYC Rest api, KYC worldwide api, passport scanning, driver license verification api, ID compliance API">
+    <link rel="shortcut icon" href="favicon.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="assets/css/libs.bundle.css" />
+    <link rel="stylesheet" href="assets/css/theme.bundle.css" />
+    <noscript>
+        <style>
+          /**
+          * Reinstate scrolling for non-JS clients
+          */
+          .simplebar-content-wrapper {
+            overflow: auto;
+          }
+        </style>
+    </noscript>
+    <title>Universal ID Scanning & Extraction APIs for developers</title>
+</head>
+<body class="">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center lh-1 me-10 transition-opacity opacity-75-hover" target="_blank" href="https://pixlab.io" title="Powered by the PixLab Machine Vision OCR">
+                <img src="https://pixlab.io/images/logo.png" alt="PixLab logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="ri-menu-line"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Features
+                        </a>
+                        <!-- Features dropdown menu-->
+                        <div class="dropdown-menu dropdown-megamenu">
+                            <div class="container">
+                                <!-- Dropdown Menu Links Section-->
+                                <div class="row py-lg-5 gx-8">
+                                    <!-- menu row-->
+                                    <div class="col-auto me-4 mb-4 me-lg-0 mb-lg-0 col-lg-4 d-flex align-items-start">
+                                        <span class="f-w-16 d-block text-primary me-4 d-none d-lg-flex">
+                                            <svg class="w-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline opacity=".4" points="2 12 12 17 22 12"></polyline></svg>
+                                        </span>
+                                        <div class="position-relative">
+                                            <h6 class="dropdown-heading">Data Extraction</h6>
+                                            <p class="text-muted">Extract crucial information from documents with high accuracy, including details like full name, date of birth, and address. This capability ensures reliable data retrieval, essential for accurate verification and record-keeping.</p>
+                                            <a href="docscan" class="fw-medium fs-7 text-decoration-none link-cover">Consult Documentation &rarr;</a>
+                                        </div>
+                                    </div>
+                                    <!-- /menu row-->
+                                    <!-- menu row-->
+                                    <div class="col-auto me-4 mb-4 me-lg-0 mb-lg-0 col-lg-4 d-flex align-items-start">
+                                        <span class="f-w-16 d-block text-primary me-4 d-none d-lg-flex">
+                                            <svg class="w-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect opacity=".3" x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                                        </span>
+                                        <div class="position-relative">
+                                            <h6 class="dropdown-heading">Document Identification</h6>
+                                            <p class="text-muted">Effortlessly recognize and categorize a wide range of documents such as IDs, passports, and driving licenses. This feature enables precise identification, streamlining the verification process across various document types.</p>
+                                            <a href="https://console.pixlab.io" target="_blank" title="Log in to the PixLab console, create your first API Key, and start scanning ID documents from across the globe!" class="fw-medium fs-7 text-decoration-none link-cover">Get Your API Key &nearr;</a>
+                                        </div>
+                                    </div>
+                                    <!-- /menu row-->    
+                                
+                                    <!-- menu row-->
+                                    <div class="col-auto me-4 mb-4 me-lg-0 mb-lg-0 col-lg-4 d-flex align-items-start">
+                                        <span class="f-w-16 d-block text-primary me-4 d-none d-lg-flex">
+                                            <svg class="w-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path opacity=".4" d="M13 6h3a2 2 0 0 1 2 2v7"></path><line opacity=".4" x1="6" y1="9" x2="6" y2="21"></line></svg>
+                                        </span>
+                                        <div class="position-relative">
+                                            <h6 class="dropdown-heading">Single API Endpoint</h6>
+                                            <p class="text-muted">Leverage the power of <a href="docscan">DOCSCAN</a> through a <strong>unified API endpoint</strong> that ensures a smooth, hassle-free integration into your existing systems. Optimize your workflows with fast, reliable access to advanced document verification capabilities..</p>
+                                            <a href="docscan#code" class="fw-medium fs-7 text-decoration-none link-cover">Code Samples &rarr;</a>
+                                        </div>
+                                    </div>
+                                    <!-- /menu row-->
+                                </div>
+                                <!-- Latest from the blog-->
+                                <div class="mt-4 border-top d-none d-lg-flex flex-column py-5">
+                                    <p class="text-muted">From the <a href="https://blog.pixlab.io" target="_blank">PixLab Blog &nearr;</a></p>
+                                    <span>&bullet; <a href="https://itnext.io/step-by-step-guide-to-do-e-kyc-in-your-app-c3b4e240617" target="_blank">Step-by-step guide to do e-KYC in your Web Application &nearr;</a></span>
+                                    <span>&bullet; <a href="https://levelup.gitconnected.com/streamlining-kyc-with-pixlabs-document-scanner-api-c26836fb372e" target="_blank">Streamlining KYC with PixLab’s Document Scanner API &nearr;</a></span>
+                                    <span>&bullet; <a href="https://dev.to/unqlite_db/implement-a-minimalistic-kyc-form-identify-verification-check-36f5" target="_blank">Implement a Minimalistic KYC Form & Identify Verification Check &nearr;</a></span>
+                                    <span>&bullet; <a href="https://blog.pixlab.io/2020/11/modern-passports-structure-bulk-scan-apis" target="_blank">Modern Passport Structure & Bulk Scan APIs &nearr;</a></span>
+                                    <span>&bullet; <a href="https://levelup.gitconnected.com/streamlining-kyc-with-pixlabs-document-scanner-api-c26836fb372e" target="_blank">Streamlining KYC with PixLab’s Document Scanner API &nearr;</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / Features dropdown menu-->
+                    </li>    
+                    <li class="nav-item">
+                        <a class="nav-link" href="docscan">API Integration Guide &rarr;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="docscan#code">Code Samples &rarr;</a>
+                    </li>
+                </ul>
+                <div class="d-none d-lg-flex">
+                    <a href="https://console.pixlab.io" target="_blank" class="btn btn-primary ms-2 fw-bold" role="button" title="Log in to the PixLab console, create your first API Key, and start scanning ID documents from across the globe!">Get your API Key &nearr;</a>
+                </div>
+            </div>
+        </div>
+    </nav> <!-- / Navbar-->
+    <!-- Main Section-->
+    <main class="mt-0 ">
+        <!-- Hero Content-->
+        <div class="container pt-4 pt-md-5 pt-lg-6 pb-4 position-relative">
+            <div class="row gx-10 align-items-center">
+                <!-- Hero Text-->
+                <div class="col-12 col-lg-6 position-relative z-index-20 text-center text-lg-start" data-aos="fade-in">
+                    <h1 class="display-4 fw-bold text-primary mb-4">AI-Powered, ID Scan & Extraction APIs for Developers</h1>
+                    <h2 class="fs-5 lh-base">Scan and extract data from over 11,097 ID documents, including Passports, Driver Licenses, Visas, and ID Cards from 197+ countries, with or without MRZ, using a single developer-friendly <a href="docscan">REST API endpoint</a>.</h2>
+                    <ul class="list-unstyled mt-3 pt-1 justify-content-lg-start">
+                        <li class="align-items-center"><i
+                                class="ri-checkbox-circle-fill text-success ri-lg me-1"></i>&nbsp;<strong><a href="docscan">Document Identification</a></strong>: Efficiently recognize and classify various types of documents, including IDs, passports, and driving licenses…
+                        </li>
+                        <li class="align-items-center"><i
+                                class="ri-checkbox-circle-fill text-success ri-lg me-1"></i>&nbsp;<strong><a href="docscan">Data Extraction</a></strong>: Accurately extract relevant data from uploaded documents, such as personal information (e.g., full name, ID number, date of birth, address, <em>etc</em>).</li>
+                    </ul>
+                    <div class="mt-4 pt-1 d-flex flex-column flex-md-row justify-content-center justify-content-lg-start">
+                        <a href="docscan" class="btn btn-success" role="button">Browse Documentation &rarr;</a>
+                        <a href="https://console.pixlab.io" target="_blank" class="btn btn-link text-decoration-none text-primary ms-2 bg-light-hover" title="Log in to the PixLab console, create your first API Key, and start scanning ID documents from across the globe!" role="button">Get Your First API Key &nearr;</a>
+                    </div>
+                    <ul class="list-unstyled d-none d-md-flex align-items-center small text-muted mt-3 pt-1 fw-medium fs-9 justify-content-center justify-content-lg-start">
+                        <li class="me-4 d-flex align-items-center"><i
+                                class="ri-checkbox-circle-fill text-success ri-lg me-1"></i> All Programming Languages Support
+                        </li>
+                        <li class="me-4 d-flex align-items-center"><i
+                                class="ri-checkbox-circle-fill text-success ri-lg me-1"></i> Single REST API Endpoint</li>
+                        <li class="me-4 d-flex align-items-center"><i
+                                class="ri-checkbox-circle-fill text-success ri-lg me-1"></i> 11K IDs from 197+ Countries</li>
+                    </ul>
+                </div>
+                <!-- / Hero Text-->
+                <!-- Hero Graphic-->
+                <div class="col-12 col-lg-6 mt-5 mt-lg-0 align-self-stretch position-relative z-index-20" data-aos="fade-in">
+                    <div class="d-flex h-100 bg-dark rounded-3 shadow-lg card">
+                        <div class="card-header border-white-10 border-1 py-4 d-flex align-items-center">
+                            <span class="f-w-2 f-h-2 block bg-danger rounded-circle me-2"></span>
+                            <span class="f-w-2 f-h-2 block bg-warning rounded-circle me-2"></span>
+                            <span class="f-w-2 f-h-2 block bg-info rounded-circle"></span>
+                        </div>
+                        <div class="card-body" style="min-height: 280px;">
+                            <code class="highlight fs-8" data-typed='{"backSpeed":2,"strings":["from pixlab import DOCSCAN<br>👍🚀"]}'>
+
+                                
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                <!-- / Hero Graphic-->
+            </div>
+            <!-- Bottom left shapes-->
+            <div class="position-absolute top-0 end-0 start-0 bottom-0 z-index-0 d-none d-lg-block">
+                <div class="d-block f-w-6  position-absolute bottom-7 start-5 rotate-n45 origin-center">
+                    <span class="d-block animation-float-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.51 89.72"><path class="text-body" d="M14.75,46.11C14.75,53,2.5,51.83,2.5,60.64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/><path class="text-body" d="M14.75,17C14.75,24,2.5,22.75,2.5,31.57" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/><path class="text-body" d="M14.75,46.11c0-6.91-12.25-5.72-12.25-14.54" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/><path class="text-body" d="M14.75,17C14.75,10.13,2.5,11.32,2.5,2.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/><path class="text-secondary" d="M37,75.18c0,6.91-12.25,5.72-12.25,14.54" fill="none" stroke="currentColor" stroke-miterlimit="10"/><path class="text-secondary" d="M37,46.11C37,53,24.76,51.83,24.76,60.64" fill="none" stroke="currentColor" stroke-miterlimit="10"/><path class="text-secondary" d="M37,75.18c0-6.91-12.25-5.72-12.25-14.54" fill="none" stroke="currentColor" stroke-miterlimit="10"/><path class="text-secondary" d="M37,46.11c0-6.91-12.25-5.72-12.25-14.54" fill="none" stroke="currentColor" stroke-miterlimit="10"/></svg></span>
+                </div>
+                <div class="d-block f-w-6  position-absolute bottom-35 start-n3">
+                    <span class="d-block animation-float-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55.95 50.74"><path class="text-secondary" d="M55.45,34.33A15.92,15.92,0,1,1,39.54,18.41,15.91,15.91,0,0,1,55.45,34.33Z" fill="none" stroke="currentColor" stroke-miterlimit="10"/><path class="text-body" d="M34.33,18.41A15.92,15.92,0,1,1,18.41,2.5,15.92,15.92,0,0,1,34.33,18.41Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/></svg></span>
+                </div>
+                <div class="d-block f-w-6  position-absolute bottom-20 start-n2">
+                    <span class="d-block animation-float">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.66 58.68"><polygon class="text-body" points="20.69 33.95 38.85 23.45 20.68 12.98 2.5 2.5 2.52 23.47 2.53 44.45 20.69 33.95" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/><polygon class="text-secondary" points="43.5 47.31 61.66 36.81 43.49 26.34 25.32 15.86 25.33 36.83 25.34 57.81 43.5 47.31" fill="none" stroke="currentColor" stroke-miterlimit="10"/></svg></span>
+                </div>
+            </div>
+            <!-- / Bottom left shapes-->
+        </div>
+        <!-- /hero Content-->
+        <div class="pt-2">
+            <div class="container">
+                <div class="col-12 mx-auto col-sm-10 col-md-8 col-lg-6 text-center">
+                    <h2 class="fs-1 fw-bold text-success text-uppercase">Powered by A Single API Endpoint</h2>
+                    <div class="my-5 d-none d-md-flex align-items-start justify-content-between">
+                        <div>
+                            <span class="display-3 fw-bold text-primary d-block">11097+</span>
+                            <span
+                                class="d-block fs-9 fw-bolder tracking-wide text-uppercase text-muted">ID Documents</span>
+                        </div>
+                        &nbsp;&nbsp;&nbsp;
+                        <div>
+                            <span class="display-3 fw-bold text-primary d-block">197</span>
+                            <span
+                                class="d-block fs-9 fw-bolder tracking-wide text-uppercase text-muted">Countries</span>
+                        </div>
+                        <div>
+                            <span class="display-3 fw-bold text-primary d-block">86+</span>
+                            <span class="d-block fs-9 fw-bolder tracking-wide text-uppercase text-muted">Millions of API Calls each month</span>
+                        </div>
+                    </div>
+                    <p class="fs-5 lh-base"><strong>The <a href="docscan">DOCSCAN API endpoint</a> extracts data from over 11097+ ID & Travel Documents across 197+ countries with built-in Face Detection & Extraction</strong>. <a href="docscan">DOCSCAN</a> swiftly scan, identifies and processes ID documents with precision &amp; robust support for multiple languages, ensuring accurate results worldwide...</p>
+                    <a href="https://console.pixlab.io" target="_blank" class="btn btn-success mt-4" title="Log in to the PixLab console, create your first API Key, and start scanning ID documents from across the globe!">Get Your API Key &nearr;</a>
+                    <a href="docscan" class="btn btn-link text-decoration-none text-primary ms-2 bg-light-hover mt-4">Integration &amp; Code Samples &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <!-- / About Us-->
+        <div class="py-5 py-lg-5">
+            <!-- Highlight One-->
+            <div class="container py-3 py-lg-3">
+                <h4 class="fs-1 fw-bold mb-5 text-center text-primary">Unmatched Global Document Support!</h4>
+                <div class="row g-5 g-lg-10 d-flex align-items-center">
+                    <!-- Highlight One Image Section-->
+                    <div class="col-12 col-md-6 col-xl-5 offset-xl-1 position-relative" data-aos="fade-in">
+                        <p class="mb-0 small fw-bolder tracking-wider text-uppercase text-primary text-center">Universal Document Coverage for your KYC Processes...</p>
+                        <picture class="position-relative z-index-20">
+                            <img class="img-fluid rounded-5" src="assets/images/passport_template.png"
+                                alt="Passport Template" loading="lazy" title="Passport Template fully supported by DOCSCAN with built-in Face Detection & Extraction">
+                        </picture>
+                        <div class="text-center ">
+                            <h3 class="text-success">&#10004; Built for Every Industry</h3>
+                            <div class="row mb-2">
+                                <div class="col">
+                                    <p class="text-primary fw-bold">User Onboarding</p>
+                                    <small class="text-muted">Enhance security across your digital platforms.</small>
+                                </div>
+                                <div class="col">
+                                    <p class="text-primary fw-bold">User Verification</p>
+                                    <small class="text-muted">Ensure authenticity in user profiles.</small>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col">
+                                    <p class="text-primary fw-bold">Financial Services</p>
+                                    <small class="text-muted">Facilitate expansion into international markets.</small>
+                                </div>
+                                <div class="col">
+                                    <p class="text-primary fw-bold">Fraud Detection</p>
+                                    <small class="text-muted">Combat identity theft and fraudulent activities.</small>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col">
+                                    <p class="text-primary fw-bold">Marketplace &amp; Communities</p>
+                                    <small class="text-muted">Safeguard against harmful content and fraudulent listings.</small>
+                                </div>
+                                <div class="col">
+                                    <p class="text-primary fw-bold">Gaming &amp; Entertainment</p>
+                                    <small class="text-muted">Increase player engagement and deter cheating.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Highlight One Image Section-->
+                    <!-- Highlight One Text Section-->
+                    <div class="col-12 col-md-6 col-xl-5 offset-xl-1 position-relative" data-aos="fade-in">
+                        <div class="position-relative z-index-20">
+                            <h4 class="fs-1 fw-bold mb-4 mt-3 text-center text-success">Straightforward API Integration</h4>
+                            <p>the <a href="docscan">DOCSCAN</a> API endpoint is <strong>capable of processing 11,094 types of ID documents, including <a href="docscan#supported-docs">Passports, ID Cards, Driver Licenses, Residence Cards, Birth & Death Certificates, and Visas</a>. This extensive range encompasses documents from over 197 countries, making it an incredibly versatile tool for global KYC & ID Verification operations.</strong> Whether for international banking, immigration, or multinational employment processes, <a href="docscan">DOCSCAN's</a> broad coverage ensures that organizations can accommodate users from nearly any geographical location.</p>
+                            <a href="docscan" class="btn btn-link px-0 me-3 fw-medium text-decoration-none mt-4 text-uppercase" role="button"><strong>Let's Get Started &rarr;</strong></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Hightlight One-->
+            <!-- Highlight Two-->
+            <div class="container py-3 py-lg-3">
+                <div class="row g-5 g-lg-10 d-flex align-items-center flex-row-reverse">
+                    <div class="col-12 col-md-6 col-xl-5 offset-xl-1 position-relative" data-aos="fade-in">
+                        <div class="text-center mb-6">
+                            <h3 class="text-success text-center fw-bold">&#10004; Smart Use Cases</h3>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="text-primary fw-bold">KYC</p>
+                                    <small class="text-muted">Enhance security across your digital platforms.</small>
+                                </div>
+                                <div class="col">
+                                    <p class="text-primary fw-bold">Ecommerce</p>
+                                    <small class="text-muted">Prevent chargebacks and combat credit card fraud.</small>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="text-primary fw-bold">Education</p>
+                                    <small class="text-muted">Safeguard exams and enhance the educational experience.</small>
+                                </div>
+                                <div class="col">
+                                    <p class="text-primary fw-bold">Healthcare</p>
+                                    <small class="text-muted">Enhance patient care with secure identity verification.</small>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="text-primary fw-bold">Access Control</p>
+                                    <small class="text-muted">Enhance security with robust on-premise access control.</small>
+                                </div>
+                                <div class="col">
+                                    <p class="text-primary fw-bold">Travel &amp; Hospitality</p>
+                                    <small class="text-muted">Ensure secure, seamless check-in processes for travelers.</small>
+                                </div>
+                            </div>
+                        </div>
+                        <picture class="position-relative z-index-20">
+                            <img class="img-fluid rounded-5" loading="lazy" src="assets/images/us_dl_template.png"
+                                alt="US Driver License Template" title="DOCSCAN is capable of processing 11,094 types of ID documents from over 197+ countries...">
+                        </picture>
+                        <div class="position-absolute bottom-3 start-5 z-index-30 d-none d-lg-block" data-aos="fade-in" data-aos-duration="350" data-aos-delay="200">
+                            <div class="p-3 py-2 rounded-3 f-w-16 mb-3">
+                                <span class="fs-3">🇧🇷</span>
+                            </div>
+                            <div class="p-3 py-2 rounded-3 f-w-16 mb-3">
+                                <span class="fs-3">🇬🇧</span>
+                            </div>
+                            <div class="p-3 py-2 rounded-3 f-w-16 mb-3">
+                                <span class="fs-3">🇪🇸</span>
+                            </div>
+                            <div class="p-3 py-2 rounded-3 f-w-16 mb-3">
+                                <span class="fs-3">🇹🇳</span>
+                            </div>
+                            <div class="p-3 py-2 rounded-3 f-w-16 mb-3">
+                                <span class="fs-3">🇰🇷</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Highlight Two Image Section-->
+                    <!-- Highlight Two Text Section-->
+                    <div class="col-12 col-md-6 col-xl-5 offset-xl-1 position-relative" data-aos="fade-in">
+                        <div class="text-lg-start">
+                            <p class="mb-0 small fw-bolder tracking-wider text-uppercase text-center text-primary">Scalable Architecture &amp; Adaptive Image Handling
+                            </p>
+                            <h4 class="fs-1 fw-bold mb-4 mt-3 text-success text-center">Multi-Language Support</h4>
+                            <p><strong><a href="docscan">DOCSCAN</a> eliminates language barriers with robust support for multiple languages whether <em>English, Portuguese, Spanish, Arabic or Japanese</em>, etc. ensuring accurate document interpretation worldwide</strong>. Ideal for global document extraction operations, this feature enhances accessibility and operational efficiency across diverse markets.</p>
+                            <p><strong>Intelligent Image Correction</strong>: To ensure the highest quality scans, the <a href="docscan">DOCSCAN</a> API endpoint is  incorporates intelligent image correction capabilities. This feature automatically adjusts for distortions, skew, and variations in document layout, enhancing the accuracy of the data extracted from scanned images.</p>
+                            <a href="https://console.pixlab.io" target="_blank" class="btn btn-link px-0 me-3 fw-medium  text-decoration-none mt-4 text-uppercase"
+                                role="button">Get Your API Key From the PixLab Console &nearr;</a>
+                        </div>
+                    </div>
+                    <!-- /Highlight Two Text Section-->
+                </div>
+            </div>
+            <!-- /Hightlight Two-->
+        </div>
+        <!-- /Product Highlights-->
+        <!-- Product Features summary-->
+        <div class="py-3">
+            <div class="container">
+                <h4 class="fs-1 fw-bold mb-3 text-center text-primary">Discover DOCSCAN's Capabilities</h4>
+                <p class="text-center text-uppercase fw-bold">Unparalleled capabilities designed to streamline &amp; secure your document scanning processes.</p>
+                <div class="row gx-10 gy-7 mt-4">
+                    <!-- Feature-->
+                    <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start">
+                        <span class="f-w-8 d-block text-primary">
+                            <svg class='w-100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='12 2 2 7 12 12 22 7 12 2'></polygon><polyline points='2 17 12 22 22 17'></polyline><polyline opacity='.4' points='2 12 12 17 22 12'></polyline></svg>
+                        </span>
+                        <p class="fw-medium mb-1 mt-3 text-primary fs-5">High-Volume Processing Capacity</p>
+                        <span class="fs-7"><a href="docscan">DOCSCAN</a> is built on a scalable architecture that can handle large volumes of document scans simultaneously. This makes it ideal for enterprises and organizations that need to process a <a href="docscan">high number of documents</a> in a short time, without compromising on efficiency or accuracy..</span>
+                    </div>
+                    <!-- / Feature-->
+                    <!-- Feature-->
+                    <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start">
+                        <span class="f-w-8 d-block text-primary">
+                            <svg class='w-100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='4' width='16' height='16' rx='2' ry='2'></rect><rect opacity='.3' x='9' y='9' width='6' height='6'></rect><line x1='9' y1='1' x2='9' y2='4'></line><line x1='15' y1='1' x2='15' y2='4'></line><line x1='9' y1='20' x2='9' y2='23'></line><line x1='15' y1='20' x2='15' y2='23'></line><line x1='20' y1='9' x2='23' y2='9'></line><line x1='20' y1='14' x2='23' y2='14'></line><line x1='1' y1='9' x2='4' y2='9'></line><line x1='1' y1='14' x2='4' y2='14'></line></svg>
+                        </span>
+                        <p class="fw-medium mb-1 mt-3 fs-5 text-primary">Universal Document Scanner</p>
+                        <span class="fs-7">Verify and process ID documents from more than 197 countries, encompassing over 4073 types of documents. The <a href="docscan">DOCSCAN API Endpoint</a> delivers high accuracy and reliability, ensuring comprehensive coverage and dependable results across a vast array of global documents.</span>
+                    </div>
+                    <!-- / Feature-->
+                    <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start">
+                        <span class="f-w-8 d-block text-primary">
+                            <svg class='w-100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' ><circle opacity='.4' cx='12' cy='12' r='2'></circle><path d='M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14'></path></svg>
+                        </span>
+                        <p class="fw-medium text-primary mb-1 mt-3 fs-5">Multi-Language & Format Support</p>
+                        <span class="fs-7">Embrace global operations with <a href="docscan">DOCSCAN's</a> multi-language support, designed to interpret documents in various languages <strong>whether structured or not, with or without MRZ</strong>. Enabling efficient processing of <a href="docscan#supported-countries">international documents</a> and enhancing the API's versatility across diverse regions.</span>
+                    </div>
+                    <!-- Feature-->
+                    <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start">
+                        <span class="f-w-8 d-block text-primary">
+                            <svg class='w-100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='18' cy='18' r='3'></circle><circle cx='6' cy='6' r='3'></circle><path opacity='.4' d='M13 6h3a2 2 0 0 1 2 2v7'></path><line opacity='.4' x1='6' y1='9' x2='6' y2='21'></line></svg>
+                        </span>
+                        <p class="fw-medium text-primary mb-1 mt-3 fs-5">Single API Endpoint</p>
+                        <span class="fs-7">Integrate effortlessly with our <a href="docscan">single REST API endpoint</a>, simplifying your application’s architecture and reducing development time.</span>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start">
+                        <span class="f-w-8 d-block text-primary">
+                            <svg class='w-100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' ><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path opacity='.4' d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path opacity='.4' d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg>
+                        </span>
+                        <p class="fw-medium text-primary mb-1 mt-3 fs-5">Privacy-First Processing</p>
+                        <span class="fs-7"><a href="docscan">DOCSCAN</a> prioritizes your privacy by <strong>processing all data in-memory</strong>, ensuring no information is ever stored on our servers.</span>
+                    </div>
+                    <!-- / Feature-->
+                    <!-- Feature-->
+                    <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start">
+                        <span class="f-w-8 d-block text-primary">
+                            <svg class='w-100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' ><path d='M19 16.9A5 5 0 0 0 18 7h-1.26a8 8 0 1 0-11.62 9'></path><polyline opacity='.4' points='13 11 9 17 15 17 11 23'></polyline></svg>
+                        </span>
+                        <p class="fw-medium text-primary mb-1 mt-3 fs-5">Straightforward Integration</p>
+                        <span class="fs-7">Adopt <a href="docscan">DOCSCAN</a> quickly with comprehensive documentation and dedicated support, making setup a breeze for developers of all skill levels.</span>
+                    </div>
+                    <!-- / Feature-->
+                </div>
+                <a href="docscan" title="Explore The DOCSCAN API Reference Guide and Start Your Integration Phase Now..." class="btn btn-primary d-table mx-auto mt-5 w-100 w-md-auto btn-lg mb-3" role="button">Explore Documentation & Start Your Integration Phase &rarr;</a>
+                <ul
+                    class="list-unstyled d-none d-md-flex align-items-center justify-content-center small text-muted mt-3 pt-1 fw-medium fs-9">
+                    <li class="me-4 d-flex align-items-center"><i
+                            class="ri-checkbox-circle-fill text-primary ri-lg me-1"></i> No credit card required
+                    </li>
+                    <li class="me-4 d-flex align-items-center"><i
+                            class="ri-checkbox-circle-fill text-primary ri-lg me-1"></i> Cancel anytime</li>
+                    <li class="me-4 d-flex align-items-center"><i
+                            class="ri-checkbox-circle-fill text-primary ri-lg me-1"></i> 30 day free trial</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Product Features summary-->
+        <!-- Integrations-->
+        <div class="bg-dark py-5" data-aos="fade-in">
+            <div class="container py-4">
+                <p class="mb-0 text-center small fw-bolder tracking-wider text-uppercase text-orange">Developer-Friendly Integrations</p>
+                <h3 class="text-white text-center mt-3 fs-1 mb-3 fw-bold">Straightforward API & SDK Integration</h3>
+                <p class="text-success fw-bolder text-uppercase text-center">Easily integrate DOCSCAN with your preferred programming languages & framework...</p>
+                <div class="row gx-10 gy-7 mt-4">
+                    <!-- Integration-->
+                    <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center justify-content-center" data-aos="fade-in" data-aos-duration="500" data-aos-delay="000">
+                        <p class="text-white fs-4 fw-medium mb-2 mt-3">Framework Flexibility</p>
+                        <p class="text-white opacity-75 text-center fs-7">Integrate seamlessly with popular frameworks, allowing developers to incorporate <a href="docscan">document scanning capabilities</a> directly into their existing projects with ease.</p>
+                    </div>
+                    <!-- /Integration-->
+                    <!-- Integration-->
+                    <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center justify-content-center" data-aos="fade-in" data-aos-duration="500" data-aos-delay="100">
+                        <p class="text-white fs-4 fw-medium mb-2 mt-3">Language Versatility</p>
+                        <p class="text-white opacity-75 text-center fs-7">Support for <a href="docscan">multiple programming languages</a> including Python, Java, PHP, &amp; JavaScript ensures that DOCSCAN can be easily adopted by a broad developer community.</p>
+                    </div>
+                    <!-- /Integration-->
+                    <!-- Integration-->
+                    <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center justify-content-center" data-aos="fade-in" data-aos-duration="500" data-aos-delay="200">
+                        <p class="text-white fs-4 fw-medium mb-2 mt-3">SDK Availability</p>
+                        <p class="text-white opacity-75 text-center fs-7">Access comprehensive SDKs for <a href="docscan">smoother integration</a>. The REST API provide ready-to-use tools and libraries tailored for different programming environments.</p>
+                    </div>
+                    <!-- /Integration-->
+                    <!-- Integration-->
+                    <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center justify-content-center" data-aos="fade-in" data-aos-duration="500" data-aos-delay="300">
+                        <p class="text-white fs-4 fw-medium mb-2 mt-3">API Documentation</p>
+                        <p class="text-white opacity-75 text-center fs-7">Benefit from detailed and user-friendly API documentation.</p>
+                    </div>
+                    <!-- /Integration-->
+                    <!-- Integration-->
+                    <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center justify-content-center" data-aos="fade-in" data-aos-duration="500" data-aos-delay="400">
+                        <p class="text-white fs-4 fw-medium mb-2 mt-3">Code Samples</p>
+                        <p class="text-white opacity-75 text-center fs-7">Explore a variety of code samples available in different languages.</p>
+                    </div>
+                    <!-- /Integration-->
+                    <!-- Integration-->
+                    <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center justify-content-center" data-aos="fade-in" data-aos-duration="500" data-aos-delay="500">
+                        <p class="text-white fs-4 fw-medium mb-2 mt-3">Community Support</p>
+                        <p class="text-white opacity-75 text-center fs-7">Engage with a supportive developer community.</p>
+                    </div>
+                    <!-- /Integration-->
+                </div>
+                <a href="docscan" class="btn btn-primary d-table mx-auto mt-7 w-100 w-md-auto btn-lg" title="Start integrating DOCSCAN using your favorite programming language!" role="button">Code Samples &amp; Integration Guide &rarr;</a>
+            </div>
+        </div>
+        <!-- / Integrations-->
+        <!-- Customer Reviews-->
+        <div class="py-5 pb-10">
+            <div class="container">
+                <p class="mb-3 small fw-bolder tracking-wider text-uppercase text-primary text-center">DOCSCAN Developers Feedback</p>
+                <h4 class="fs-1 fw-bold mb-6 text-center col-12 col-sm-6 col-md-5 col-lg-6 col-xl-4 mx-auto text-uppercase">What our customers are saying...</h4>
+            </div>
+            <div class="mt-5">
+                <section class="marquee marquee-hover-pause">
+                    <div class="marquee-body">
+                        <div class="marquee-section animation-marquee-200 py-3">
+                            <div class="rounded shadow-sm border f-w-76 d-flex flex-wrap flex-column px-5 pb-5 pt-7 mx-4 text-wrap position-relative h-100">
+                                <i class="ri-double-quotes-l position-absolute top-n1 start-2 ri-2x opacity-10"></i>
+                                <p class="mb-2 fw-medium fs-6">Integrating DOCSCAN API was a breeze! The comprehensive documentation and supportive community really helped us hit the ground running with our KYC implementations.</p>
+                                <div class="d-flex align-items-center mt-2">
+                                    <span class="d-block text-muted fs-7 ms-3">Reiner, Web Developer Reygroup</span>
+                                </div>
+                                <div class="mt-4 f-w-20">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" loading="lazy" src="assets/images/reygroup.png" alt="DOCSCAN customers testimonials" title="DOCSCAN customers testimonials">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="rounded shadow-sm border f-w-76 d-flex flex-wrap flex-column px-5 pb-5 pt-7 mx-4 text-wrap position-relative h-100">
+                                <i class="ri-double-quotes-l position-absolute top-n1 start-2 ri-2x opacity-10"></i>
+                                <p class="mb-2 fw-medium fs-6">The versatility of the DOCSCAN RESTful API with multiple programming languages made it perfectly fit into our diverse tech stack. It’s reliable and incredibly easy to use for our KYC purposes...</p>
+                                <div class="d-flex align-items-center mt-2">
+                                    <span class="d-block text-muted fs-7 ms-3">Priya, Software Engineer - Daisy Tech</span>
+                                </div>
+                                <div class="mt-4 f-w-20">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto"
+                                            src="assets/images/daisy.png" loading="lazy" alt="DOCSCAN customers testimonials" title="DOCSCAN customers testimonials">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="rounded shadow-sm border f-w-76 d-flex flex-wrap flex-column px-5 pb-5 pt-7 mx-4 text-wrap position-relative h-100">
+                                <i class="ri-double-quotes-l position-absolute top-n1 start-2 ri-2x opacity-10"></i>
+                                <p class="mb-2 fw-medium fs-6">DOCSCAN is a game changer. The REST API saved us a lot of development time and made the integration process smooth and straightforward!</p>
+                                <div class="d-flex align-items-center mt-2">
+                                    <span class="d-block text-muted fs-7 ms-3"> Mrad, CTO Symisc Systems</span>
+                                </div>
+                                <div class="mt-4 f-w-20">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto"
+                                            src="https://symisc.net/images/logo.png" loading="lazy" aalt="DOCSCAN customers testimonials" title="DOCSCAN customers testimonials">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="rounded shadow-sm border f-w-76 d-flex flex-wrap flex-column px-5 pb-5 pt-7 mx-4 text-wrap position-relative h-100">
+                                <i class="ri-double-quotes-l position-absolute top-n1 start-2 ri-2x opacity-10"></i>
+                                <p class="mb-2 fw-medium fs-6">Using DOCSCAN transformed how we handle document verification. The API’s robustness and the detailed code examples provided made it simple to enhance our customer onboarding process.</p>
+                                <div class="d-flex align-items-center mt-2">
+                                    <span class="d-block text-muted fs-7 ms-3">Hanna, System Architect at Mirobytes Software</span>
+                                </div>
+                                <div class="mt-4 f-w-20">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto"
+                                            src="assets/images/miro.png" loading="lazy" alt="DOCSCAN customers testimonials" title="DOCSCAN customers testimonials">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="rounded shadow-sm border f-w-76 d-flex flex-wrap flex-column px-5 pb-5 pt-7 mx-4 text-wrap position-relative h-100">
+                                <i class="ri-double-quotes-l position-absolute top-n1 start-2 ri-2x opacity-10"></i>
+                                <p class="mb-2 fw-medium fs-6">Integrating DOCSCAN API was a breeze! The comprehensive documentation and supportive community really helped us hit the ground running with our KYC implementations.</p>
+                                <div class="d-flex align-items-center mt-2">
+                                    <span class="d-block text-muted fs-7 ms-3">Reiner, Web Developer Reygroup</span>
+                                </div>
+                                <div class="mt-4 f-w-20">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto" src="assets/images/reygroup.png" loading="lazy" alt="DOCSCAN customers testimonials" title="DOCSCAN customers testimonials">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="rounded shadow-sm border f-w-76 d-flex flex-wrap flex-column px-5 pb-5 pt-7 mx-4 text-wrap position-relative h-100">
+                                <i class="ri-double-quotes-l position-absolute top-n1 start-2 ri-2x opacity-10"></i>
+                                <p class="mb-2 fw-medium fs-6">The versatility of the DOCSCAN RESTful API with multiple programming languages made it perfectly fit into our diverse tech stack. It’s reliable and incredibly easy to use for our KYC purposes...</p>
+                                <div class="d-flex align-items-center mt-2">
+                                    <span class="d-block text-muted fs-7 ms-3">Priya, Software Engineer - Daisy Tech</span>
+                                </div>
+                                <div class="mt-4 f-w-20">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto"
+                                            src="assets/images/daisy.png" loading="lazy" alt="DOCSCAN customers testimonials" title="DOCSCAN customers testimonials">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="rounded shadow-sm border f-w-76 d-flex flex-wrap flex-column px-5 pb-5 pt-7 mx-4 text-wrap position-relative h-100">
+                                <i class="ri-double-quotes-l position-absolute top-n1 start-2 ri-2x opacity-10"></i>
+                                <p class="mb-2 fw-medium fs-6">DOCSCAN is a game changer. The REST API saved us a lot of development time and made the integration process smooth and straightforward!</p>
+                                <div class="d-flex align-items-center mt-2">
+                                    <span class="d-block text-muted fs-7 ms-3"> Mrad, CTO Symisc Systems</span>
+                                </div>
+                                <div class="mt-4 f-w-20">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto"
+                                            src="https://symisc.net/images/logo.png" loading="lazy" alt="DOCSCAN customers testimonials" title="DOCSCAN customers testimonials">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="rounded shadow-sm border f-w-76 d-flex flex-wrap flex-column px-5 pb-5 pt-7 mx-4 text-wrap position-relative h-100">
+                                <i class="ri-double-quotes-l position-absolute top-n1 start-2 ri-2x opacity-10"></i>
+                                <p class="mb-2 fw-medium fs-6">Using DOCSCAN transformed how we handle document verification. The API’s robustness and the detailed code examples provided made it simple to enhance our customer onboarding process.</p>
+                                <div class="d-flex align-items-center mt-2">
+                                    <span class="d-block text-muted fs-7 ms-3">Hanna, System Architect at Mirobytes Software</span>
+                                </div>
+                                <div class="mt-4 f-w-20">
+                                    <picture>
+                                        <img class="img-fluid d-table mx-auto"
+                                            src="assets/images/miro.png" loading="lazy" alt="DOCSCAN customers testimonials" title="DOCSCAN customers testimonials">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="mt-3 d-flex justify-content-center flex-column flex-md-row">
+                    <a href="https://console.pixlab.io" target="_blank" class="btn btn-primary btn-lg mb-2 mb-md-0" title="Log in to the PixLab console, create your first API Key, and start scanning ID documents from across the globe!" role="button">Get Your First API Key &nearr;</a>
+                    <a href="docscan" class="btn btn-link btn-lg text-decoration-none ms-md-2 bg-light-hover" role="button">Explore Documentation &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <!-- /Customer Reviews-->
+        <!-- /Page Content -->
+    </main>
+    <!-- / Main Section-->
+    <!-- Footer-->
+    <footer class="bg-dark pt-10 pb-8">
+        <div class="container">
+            <!-- Free trial -->
+            <div class="border-bottom border-white-10 pb-7">
+                <div class="col-12 d-flex mx-auto flex-column align-items-center justify-content-center">
+                    <h2 class="fs-2 fw-bolder text-white text-center pb-2">11097 IDs &star; 197 Countries &star; 85+ Millions of API/Month</h2>
+                    <h2 class="fs-2 fw-bolder text-white text-uppercase text-center pb-2">Elevate Your Compliance &amp; Efficiency...</h2>
+                    <h2 class="fs-2 fw-bolder text-white text-uppercase text-center pb-2">Try <a href="docscan">DOCSCAN</a> Today...</h2>
+                    <a href="https://console.pixlab.io" target="_blank" class="btn btn-primary btn-lg" title="Log in to the PixLab console, create your first API Key, and start scanning ID documents from across the globe!" role="button">Get Your API Key &amp; Start Your Integration &nearr;</a>
+                </div>
+            </div>
+            <!-- Free trial-->
+        </div>
+        <!-- Footer Menus-->
+        <div class="container pt-7">
+            <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-center">
+                <!-- Footer Logo-->
+                <a class="d-flex align-items-center lh-1 text-white transition-opacity opacity-50-hover text-decoration-none mb-4 mb-md-0" href="https://pixlab.io" target="_blank">
+                    <img src="https://pixlab.io/images/logo-dark.png" title="Machine Vision & Media Processing APIs" alt="logo">
+                </a>
+                <!-- /Footer Logo-->
+                <!-- Footer socials-->
+                <ul class="list-unstyled d-flex align-items-center justify-content-end">
+                    <li class="ms-5"><a title="PixLab on Facebook" href="https://www.facebook.com/pixlab.io/" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="ri-facebook-circle-line ri-lg"></i></a></li>
+                    <li class="ms-5"><a title="PixLab on X" href="https://twitter.com/unqlite_db" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="ri-twitter-line ri-lg"></i></a></li>
+                    <li class="ms-5"><a title="PixLab on LinkedIn" href="https://www.linkedin.com/company/pixlabio" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="ri-linkedin-line ri-lg"></i></a></li>
+                    <li class="ms-5"><a title="Symisc Systems on Github" href="https://github.com/symisc" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="ri-github-line ri-lg"></i></a></li>
+                </ul>
+                <!-- Footer socials-->
+            </div>
+            <div class="d-flex flex-wrap justify-content-between mt-5 mt-lg-7">
+                <!-- Menu-->
+                <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
+                    <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">Products</h6>
+                    <ul class="list-unstyled footer-nav">
+                        <li><a href="https://faceio.net" target="_blank">FACEIO - Facial Authentication<br/>for the Web <span class="badge bg-primary rounded ms-2 align-middle">NEW</span></a></li>
+                       <!-- <li><a href="https://ui.pixlab.io" target="_blank">MobiView - UI Code Generator<br>for Mobile Apps <span class="badge bg-primary rounded ms-2 align-middle">NEW</span></a></li> -->
+                        <li><a href="https://pixlab.io/on-premises" target="_blank">PixLab On-Premises &nearr;</a></li>
+                        <li><a href="https://pixlab.io/tiny-dream" target="_blank">Tiny Dream - Stable Diffusion<br/>Inference &nearr;</a></li>
+                        <li><a href="https://sod.pixlab.io/" target="_blank">SOD - Embedded Computer<br/>Vision Library &nearr;</a></li>
+                        <li><a href="https://pixlab.io/annotate" target="_blank">Annotate - Online Image<br/>Annotation &nearr;</a></li>
+                        <li><a href="https://pixlab.io/ai-photo-editor" target="_blank">Generative AI Photo Editor &nearr;</a></li>
+                        <li><a href="/">eKYC - AI Powered ID<br>Scanning APIs <span class="badge bg-primary rounded ms-2 align-middle">NEW</span></a></li>
+                    </ul>
+                </div>
+                <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
+                    <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">Resources &amp; Documentation</h6>
+                    <ul class="list-unstyled footer-nav">
+                        <li><a href="https://console.pixlab.io" target="_blank">PixLab Console &nearr;</a></li>
+                        <li><a href="https://pixlab.io/start" target="_blank">Getting Started &nearr;</a></li>
+                        <li><a href="docscan">DOCSCAN API &rarr;</a></li>
+                        <li><a href="https://pixlab.io/api" target="_blank">PixLab API Reference &nearr;</a></li>
+                        <li><a href="https://pixlab.io/cmdls" target="_blank">API Endpoints &nearr;</a></li>
+                        <li><a href="https://faceio.net/integration-guide" target="_blank">FACEIO Integration Guide &nearr;</a></li>
+                        <li><a href="https://status.faceio.net" target="_blank">Health Status &nearr;</a></li>
+                        <li><a href="https://pixlab.io/pricing" target="_blank">Pricing &nearr;</a></li>
+                    </ul>
+                </div>
+                <!-- /Menu-->
+                <!-- Menu-->
+                <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
+                    <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">Company &amp; Social Handles</h6>
+                    <ul class="list-unstyled footer-nav">
+                        <li><a href="https://symisc.net" target="_blank">Symisc Systems &nearr;</a></li>
+                        <li><a href="https://pixlab.com/community" target="_blank">Support Channels &nearr;</a></li>
+                        <li><a href="https://blog.pixlab.io" target="_blank">PixLab Blog &nearr;</a></li>
+                        <li><a href="https://github.com/symisc" target="_blank">Github &nearr;</a></li>
+                        <li><a href="https://www.facebook.com/pixlab.io/" target="_blank">Facebook &nearr;</a></li>
+                        <li><a href="https://twitter.com/unqlite_db" target="_blank">Twitter &nearr;</a></li>
+                        <li><a href="https://www.linkedin.com/company/pixlabio" target="_blank">LinkedIn &nearr;</a></li>
+                    </ul>
+                </div>
+                <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
+                    <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">Legals</h6>
+                    <ul class="list-unstyled footer-nav">
+                        <li><a href="https://pixlab.io/privacy-policy" target="_blank">Privacy Policy &nearr;</a></li>
+                        <li><a href="https://pixlab.io/terms" target="_blank">Terms of Service &nearr;</a></li>
+                        <li><a href="https://pixlab.io/dmca" target="_blank">DMCA &nearr;</a></li>
+                    </ul>
+                </div>
+                <!-- /Menu-->
+            </div>
+        </div>
+        <div class="container">
+            <div class="border-top pt-6 mt-7 border-white-10 d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <span class="small text-white opacity-50 mb-2 mb-md-0">Copyright © 2017 - 2025, <a href="https://symisc.net" target="_blank">Symisc Systems, SUARL</a>. All rights reserved.</span>
+                <span class="small text-white opacity-50"><a href="https://pixlab.io/terms" target="_blank">Terms of Services</a>  |  <a href="https://pixlab.io/privacy-policy" target="_blank">Privacy Policy</a></span>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/vendor.bundle.js"></script>
+    <script src="assets/js/theme.bundle.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SUMMARIZE LLM API Endpoint Documentation</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="=">
+    <meta name="author" content="PixLab | Symisc Systems. Portion based on Createx Studio works">
+    <script src="assets/js/theme-switcher.js"></script>
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="assets/css/theme.min.css" as="style">
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+  </head>
+  <body>
+    <main class="page-wrapper">
+      <header class="header navbar navbar-expand-lg bg-light">
+        <div class="container px-3">
+          <a href="index" class="navbar-brand pe-3" title="PixLab - Machine Vision & Media Processing APIs...">
+            <img src="assets/img/ai.png" width="48" alt="PixLab AI">
+            <strong>PixLab |</strong>
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="../api-endpoints" class="nav-link">API Endpoints</a>
+                </li>
+                <li class="nav-item dropdown active">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products & SDKs</a>
+                  <div class="dropdown-menu">
+                    <div class="d-lg-flex pt-lg-3">
+                      <div class="mega-dropdown-column">
+                        <h6 class="px-3 mb-2">Products</h6>
+                        <ul class="list-unstyled mb-3">
+                          <li><a href="../ekyc/" class="dropdown-item py-1">eKYC API Platform</a></li>
+                          <li><a href="../web-llm-api/" class="dropdown-item py-1">Web LLM API</a></li>
+                          <li><a href="../api-endpoints" class="dropdown-item py-1">PixLab REST APIs</a></li>
+                        </ul>
+                        <h6 class="px-3 mb-2">Online Tools</h6>
+                        <ul class="list-unstyled mb-3">
+                          <li><a href="llm-playground" class="dropdown-item py-1">LLM Playground</a></li>
+                          <li><a href="../ai-photo-editor" class="dropdown-item py-1">AI Photo Editor</a></li>
+                          <li><a href="../annotate" class="dropdown-item py-1">List View no Sidebar</a></li>
+                          <li><a href="blog-grid-no-sidebar.html" class="dropdown-item py-1">Grid View no Sidebar</a></li>
+                          <li><a href="blog-simple-feed.html" class="dropdown-item py-1">Simple Feed</a></li>
+                          <li><a href="blog-single.html" class="dropdown-item py-1">Single Post</a></li>
+                          <li><a href="blog-podcast.html" class="dropdown-item py-1">Podcast</a></li>
+                        </ul>
+                      </div>
+                      <div class="mega-dropdown-column">
+                        <h6 class="px-3 mb-2">Portfolio</h6>
+                        <ul class="list-unstyled mb-3">
+                          <li><a href="portfolio-grid.html" class="dropdown-item py-1">Grid View</a></li>
+                          <li><a href="portfolio-list.html" class="dropdown-item py-1">List View</a></li>
+                          <li><a href="portfolio-slider.html" class="dropdown-item py-1">Slider View</a></li>
+                          <li><a href="portfolio-courses.html" class="dropdown-item py-1">Courses</a></li>
+                          <li><a href="portfolio-single-project.html" class="dropdown-item py-1">Single Project</a></li>
+                          <li><a href="portfolio-single-course.html" class="dropdown-item py-1">Single Course</a></li>
+                        </ul>
+                        <h6 class="px-3 mb-2">Services</h6>
+                        <ul class="list-unstyled mb-3">
+                          <li><a href="services-v1.html" class="dropdown-item py-1">Services v.1</a></li>
+                          <li><a href="services-v2.html" class="dropdown-item py-1">Services v.2</a></li>
+                          <li><a href="services-single-v1.html" class="dropdown-item py-1">Service Details v.1</a></li>
+                          <li><a href="services-single-v2.html" class="dropdown-item py-1">Service Details v.2</a></li>
+                        </ul>
+                      </div>
+                      <div class="mega-dropdown-column">
+                        <h6 class="px-3 mb-2">Pricing</h6>
+                        <ul class="list-unstyled mb-3">
+                          <li><a href="pricing.html" class="dropdown-item py-1">Pricing Page</a></li>
+                        </ul>
+                        <h6 class="px-3 mb-2">Contacts</h6>
+                        <ul class="list-unstyled mb-3">
+                          <li><a href="contacts-v1.html" class="dropdown-item py-1">Contacts v.1</a></li>
+                          <li><a href="contacts-v2.html" class="dropdown-item py-1">Contacts v.2</a></li>
+                          <li><a href="contacts-v3.html" class="dropdown-item py-1">Contacts v.3</a></li>
+                        </ul>
+                        <h6 class="px-3 mb-2">Specialty</h6>
+                        <ul class="list-unstyled">
+                          <li><a href="404-v1.html" class="dropdown-item py-1">404 Error v.1</a></li>
+                          <li><a href="404-v2.html" class="dropdown-item py-1">404 Error v.2</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">LLM Endpoints</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="chat-llm-api-endpoint" class="dropdown-item">CHAT</a></li>
+                    <li><a href="summarize-llm-api-endpoint" class="dropdown-item">Summarize</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="../ekyc/" class="nav-link">eKYC Platform</a>
+                </li>
+                <li class="nav-item">
+                  <a href="http://web-llm.pixlab.io" target="_blank" class="nav-link">Try LLM Playground &nearr;</a>
+                </li>
+              </ul>
+            </div>
+            <div class="offcanvas-header border-top">
+              <a href="https://console.pixlab.io" class="btn btn-primary btn-round w-100" target="_blank" title="Connect to the PixLab Console, generate your first API key, and start integrating state-of-the-art LLM models on your apps...">
+                &nbsp;PixLab Console &nearr;
+              </a>
+            </div>      
+          </div>
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode">
+            <label class="form-check-label d-none d-sm-block" for="theme-mode" title="Toggle Light Theme">&#9728;</label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode" title="Toggle Dark Mode">&#9789;</label>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="https://console.pixlab.io" class="btn fs-sm bg-gradient-primary border-0 rounded-pill" target="_blank" title="Connect to the PixLab Console, generate your first API key, and start integrating state-of-the-art LLM models on your apps...">
+            &nbsp;PixLab Console &nearr;
+          </a>
+        </div>
+      </header>
+      <!-- Breadcrumb -->
+      <nav class="container pt-4 mt-lg-3" aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item">
+            <a href="../api-endpoints"><i class="bx bx-home-alt fs-lg me-1"></i>PixLab API</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="../web-llm-api/">Web LLM Homepage & Documentation</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">SUMMARIZE LLM API Endpoint</li>
+        </ol> 
+      </nav>
+      <section class="container mt-4 pt-lg-2">
+        <h1 class="pb-3 h2"><span class="fw-bold text-success" style="font-family:'Courier New';">SUMMARIZE</span> - LLM API Endpoint Reference Guide</h1>
+      </section>
+      <section class="container py-mg-4">
+        <div class="row gy-4">
+          <div class="col-lg-9">
+            <ul class="list fs-5 pb-4">
+              <li><a href="#endpoint-url">API Endpoint Access URL</a></li>
+              <li><a href="#description">Description</a></li>
+              <li><a href="#http-methods">HTTP Methods</a></li>
+              <li><a href="#http-params">HTTP Parameters</a></li>
+              <li><a href="#http-response">HTTP Response</a></li>
+              <li><a href="#code">Code Samples</a></li>
+              <li><a href="#other-endpoints">Related LLM API Endpoints</a></li>
+            </ul>
+            <h2 class="h4 text-capitalize" id="endpoint-url"><i class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-success"></i>&nbsp;API Endpoint Access URL</h2>
+            <h2 class="h4" id="description"><i class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-success"></i>&nbsp;Description</h2>
+            <p>The SUMMARIZE LLM API endpoint let you generate high quality summary</p>
+            <h2 class="h4" id="http-methods"><i class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-success"></i>&nbsp;HTTP Methods</h2>
+            <h2 class="h4" id="http-params"><i class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-success"></i>&nbsp;HTTP Parameters</h2>
+            <h2 class="h4" id="http-response"><i class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-success"></i>&nbsp;HTTP Response</h2>
+            <h2 class="h4" id="code"><i class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-success"></i>&nbsp;Code Samples</h2>
+            <h2 class="h4" id="other-endpoints"><i class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-success"></i>&nbsp;Related LLM API Endpoints</h2>
+            <h3 class="h5 mb-4 pb-2 fw-medium">Est quis sit phasellus proin proin fringilla eu quis. Placerat praesent blandit urna eu pellentesque dictum. Aliquam duis quam interdum quis. Urna, rutrum aenean lacus phasellus. Ipsum, ac porttitor lacus orci, cras lacus, quis leo.</h3>
+            <p class="mb-4 pb-2">Purus ornare nisl est nec. Nunc, enim tellus pretium viverra quisque id in metus volutpat. Urna eget velit venenatis, commodo eget massa. Magna donec dictum cras nullam platea. Diam rhoncus massa lectus pellentesque tristique. Amet commodo, egestas vitae bibendum. Volutpat elit condimentum integer tortor porttitor justo vel lobortis risus. Lacinia pellentesque fermentum tellus orci mauris, velit duis eget. Commodo justo, hac ligula molestie felis, iaculis. Vitae dui at ante orci, dictum fusce. Urna, sed urna fringilla faucibus euismod aliquet nec. Quis libero, fermentum amet eu, condimentum auctor. Sit vel ipsum sem tempus gravida et. Scelerisque blandit orci, est quis. Nisi, tellus amet est nascetur habitant faucibus ornare et vivamus.</p>
+
+            <!-- Video -->
+            <div class="gallery mb-4 pb-2" data-video="true">
+              <a href="https://www.youtube.com/watch?v=LDb-G8y88Sc" class="gallery-item video-item is-hovered rounded-3" data-sub-html='<h6 class="fs-sm text-light">Video inside blog post</h6>'>
+                <img src="assets/img/blog/single/video-cover.jpg" alt="Video preview">
+              </a>
+            </div>
+
+            <p class="mb-4 pb-2">Tempor donec aliquam est, a. Sit arcu tellus pharetra, bibendum hendrerit arcu, sed. Scelerisque dui enim libero sit ac sed lacus lectus. Quam in iaculis scelerisque feugiat nibh mi. Maecenas posuere lobortis praesent iaculis sagittis. Egestas vel at praesent ipsum pretium faucibus adipiscing gravida feugiat. Lacus, rhoncus velit at non nunc, quam urna, phasellus facilisis. Cursus elit posuere amet tortor at. Mi tristique congue vulputate eget in pellentesque tincidunt. In viverra est id nibh. Nunc tellus ultrices magna turpis. Viverra est morbi posuere dapibus nisi habitasse. Id tristique cursus vel metus.</p>
+
+            <!-- Quotation -->
+            <figure class="position-relative mb-4 ps-4">
+              <span class="position-absolute top-0 start-0 w-3 h-100 bg-primary"></span>
+              <blockquote class="blockquote fs-xl fw-medium text-dark ps-1 ps-sm-3">
+                <p>Sollicitudin eget massa, elementum, purus nec fermentum vitae, elementum. Tincidunt vulputate lorem cursus id. Dictum tincidunt mi ornare tristique. Id sit elit pulvinar eu. Tempus vel, mauris sed proin aliquet vulputate cras est. Ut ornare eget a viverra.</p>
+              </blockquote>
+              <figcaption class="d-flex align-items-center pt-3 ps-1 ps-sm-3">
+                <img src="assets/img/avatar/04.jpg" width="48" class="rounded-circle" alt="Jane Cooper">
+                <div class="ps-3">
+                  <h6 class="fw-semibold lh-base mb-0">Jane Cooper</h6>
+                  <span class="fs-sm text-muted">CEO of Ipsum Company</span>
+                </div>
+              </figcaption>
+            </figure>
+
+            <p class="mb-4 pb-2">Pellentesque laoreet neque ut dictumst fames scelerisque. In malesuada orci dapibus risus tellus, amet, ultrices sagittis a. Turpis vel tincidunt tristique maecenas cursus tortor, suscipit ut. Ullamcorper at faucibus dolor tortor suspendisse suscipit senectus convallis aliquam. At orci amet facilisi nunc mi vitae iaculis diam a. Mauris venenatis sed purus cursus torte.</p>
+            <h2 class="h4">Paragraph Title 2</h2>
+            <p class="mb-4 pb-2">Praesent sed pulvinar posuere nisl tincidunt. Iaculis sit quam magna congue. Amet vel non aliquet habitasse. Egestas erat odio et, eleifend turpis etiam blandit interdum. Nec augue ut senectus quisque diam quis. At augue accumsan, in bibendum. A eget et, eget quisque egestas netus vel. Velit, aliquet turpis convallis ullamcorper. Scelerisque sagittis condimentum pretium in vitae etiam lacinia quis amet. Porttitor consequat, sollicitudin vivamus pharetra nibh faucibus neque, viverra. Praesent amet sed lacus vitae.</p>
+            <h4 class="h6">
+              <i class="bx bx-plus-circle me-1 mt-n1 align-middle fs-5 text-primary"></i>
+              PROS
+            </h4>
+            <ul class="mb-4 pb-2 ps-4">
+              <li class="mb-1">A eu, ac nunc, volutpat. Augue enim ac justo, at elementum, arcu.</li>
+              <li class="mb-1">At sodales quam felis ullamcorper iaculis tristique. Felis, etiam felis pellentesque sit neque.</li>
+              <li class="mb-1">Porta ipsum quis lacus eu ipsum mattis sit quis. Massa, massa lectus porttitor laoreet ultricies odio fermentum arcu quam.</li>
+              <li class="mb-1">Accumsan arcu neque, nisl, pellentesque fames justo consequat blandit lacus. Eget odio vel nulla vel.</li>
+              <li class="mb-1">Diam ac phasellus est, eu urna purus blandit aliquam. Vitae accumsan et pellentesque diam in.</li>
+              <li>Tellus arcu, lectus tincidunt neque nunc. Bibendum lacus, molestie ultrices sed arcu.</li>
+            </ul>
+            <h4 class="h6">
+              <i class="bx bx-minus-circle me-1 mt-n1 align-middle fs-5 text-primary"></i>
+              CONS
+            </h4>
+            <ul class="mb-4 pb-2 ps-4">
+              <li class="mb-1">Donec maecenas justo, et tortor quam elementum pharetra velit. Auctor dictum purus sollicitudin et quam vehicula amet lacus, integer.</li>
+              <li class="mb-1">Mi elit nibh erat facilisis. Volutpat eget malesuada mi in.</li>
+              <li class="mb-1">Tincidunt iaculis eleifend arcu egestas. Sit gravida vestibulum quam scelerisque.</li>
+              <li class="mb-1">Ornare elit, vel, ullamcorper nunc nulla pellentesque ut varius. Vitae tortor nulla a turpis erat fermentum, rhoncus.</li>
+              <li>Gravida cursus nunc habitant aliquet lacus. Tempus, interdum nullam non quam ipsum ultricies ac.</li>
+            </ul>
+            <h2 class="h4">Conclusion</h2>
+            <p class="mb-4 pb-2">Venenatis faucibus platea gravida amet sed sed urna volutpat. Aliquam neque, mi, justo odio semper. Egestas potentiquis neque nunc, rhoncus hendrerit. Viverra gravida pretium dolor eget placerat morbi proin eget. Vestibulum vitae ultrices vel sed sit quis. Ac quis diam at nulla libero. Turpis duis magna tellus condimentum.</p>
+            <p class="mb-4 pb-2">Velit parturient tellus tellus, congue pulvinar tellus viverra. In cum massa mattis ac. Amet vitae massa ut mi etiam. Auctor aliquam tristique felis donec eu sit nisi. Accumsan mauris eget convallis mattis sed etiam scelerisque.</p>
+
+            <!-- Tags -->
+            <hr class="mb-4">
+            <div class="d-flex flex-sm-row flex-column pt-2">
+              <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">Related Tags:</h6>
+              <div>
+                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2">#lifestyle</a>
+                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2">#tech</a>
+                <a href="#" class="btn btn-sm btn-outline-secondary me-2 mb-2">#business</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sharing -->
+          <div class="col-lg-3 position-relative">
+            <div class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4" style="top: 105px !important;">
+              <span class="d-block mb-3">5 min read</span>
+              <h6>Share this post:</h6>
+              <div class="mb-4 pb-lg-3">
+                <a href="#" class="btn btn-icon btn-secondary btn-linkedin me-2 mb-2" aria-label="LinkedIn">
+                  <i class="bx bxl-linkedin"></i>
+                </a>
+                <a href="#" class="btn btn-icon btn-secondary btn-facebook me-2 mb-2" aria-label="Facebook">
+                  <i class="bx bxl-facebook"></i>
+                </a>
+                <a href="#" class="btn btn-icon btn-secondary btn-twitter me-2 mb-2" aria-label="Twitter">
+                  <i class="bx bxl-twitter"></i>
+                </a>
+                <a href="#" class="btn btn-icon btn-secondary btn-instagram me-2 mb-2" aria-label="Instagram">
+                  <i class="bx bxl-instagram"></i>
+                </a>
+              </div>
+              <button type="button" class="btn btn-lg btn-outline-secondary">
+                <i class="bx bx-like me-2 lead"></i>
+                Like it
+                <span class="badge bg-primary shadow-primary mt-n1 ms-3">8</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Post comments -->
+      <section class="container mb-4 pt-lg-4 pb-lg-3">
+        <h2 class="h1 text-center text-sm-start">4 comments</h2>
+        <div class="row">
+
+          <!-- Comments -->
+          <div class="col-lg-9">
+
+            <!-- Comment -->
+            <div class="py-4">
+              <div class="d-flex align-items-center justify-content-between pb-2 mb-1">
+                <div class="d-flex align-items-center me-3">
+                  <img src="assets/img/avatar/03.jpg" class="rounded-circle" width="48" alt="Avatar">
+                  <div class="ps-3">
+                    <h6 class="fw-semibold mb-0">Esther Howard</h6>
+                    <span class="fs-sm text-muted">4 mins ago</span>
+                  </div>
+                </div>
+                <a href="#" class="nav-link fs-sm px-0">
+                  <i class="bx bx-share fs-lg me-2"></i>
+                  Reply
+                </a>
+              </div>
+              <p class="mb-0">Nibh enim porta ut augue felis, donec sit luctus. Quis ullamcorper dolor sit mauris. Hendrerit eu libero, eu tristique sodales ultrices etiam adipiscing. Donec viverra sodales arcu gravida nibh at. Neque lobortis quis porta integer et placerat lectus scelerisque. Velit eget malesuada morbi faucibus at sed euismod. Tortor, eu ut id tincidunt leo placerat luctus.</p>
+            </div>
+
+            <hr class="my-2">
+
+            <!-- Comment -->
+            <div class="py-4">
+              <div class="d-flex align-items-center justify-content-between pb-2 mb-1">
+                <div class="d-flex align-items-center me-3">
+                  <img src="assets/img/avatar/02.jpg" class="rounded-circle" width="48" alt="Avatar">
+                  <div class="ps-3">
+                    <h6 class="fw-semibold mb-0">Ralph Edwards</h6>
+                    <span class="fs-sm text-muted">September 9 at 12:48</span>
+                  </div>
+                </div>
+                <a href="#" class="nav-link fs-sm px-0">
+                  <i class="bx bx-share fs-lg me-2"></i>
+                  Reply
+                </a>
+              </div>
+              <p class="mb-0 pb-2">Eget amet, ac scelerisque tellus sed. Sapien duis sit neque pulvinar. Est sit aenean nisl etiam donec mattis ut diam. Luctus massa eu nunc aliquam viverra tempus, eu amet, luctus. Ac faucibus vestibulum eu lacus. Ullamcorper sem ultrices tincidunt pharetra?</p>
+
+              <!-- Comment reply -->
+              <div class="position-relative ps-4 mt-4">
+                <span class="position-absolute top-0 start-0 w-1 h-100 bg-primary"></span>
+                <div class="d-flex align-items-center justify-content-between ps-3 pb-2 mb-1">
+                  <div class="d-flex align-items-center me-3">
+                    <img src="assets/img/avatar/05.jpg" class="rounded-circle" width="48" alt="Avatar">
+                    <div class="ps-3">
+                      <h6 class="fw-semibold mb-0">Albert Flores</h6>
+                      <span class="fs-sm text-muted">16 hours ago</span>
+                    </div>
+                  </div>
+                  <a href="#" class="nav-link fs-sm px-0">
+                    <i class="bx bx-share fs-lg me-2"></i>
+                    Reply
+                  </a>
+                </div>
+                <p class="ps-3 mb-0"><a href="#" class="fw-semibold text-decoration-none">@Ralph Edwards</a> Vulputate malesuada amet, consequat ullamcorper. Orci, cras maecenas in sit purus pellentesque. Ridiculus blandit pellentesque eget arcu morbi nisl. Morbi volutpat adipiscing sapien sed ut tempor.</p>
+              </div>
+            </div>
+
+            <hr class="my-2">
+
+            <!-- Comment -->
+            <div class="py-4">
+              <div class="d-flex align-items-center justify-content-between pb-2 mb-1">
+                <div class="d-flex align-items-center me-3">
+                  <img src="assets/img/avatar/07.jpg" class="rounded-circle" width="48" alt="Avatar">
+                  <div class="ps-3">
+                    <h6 class="fw-semibold mb-0">Cameron Williamson</h6>
+                    <span class="fs-sm text-muted">March 24 at 8:20</span>
+                  </div>
+                </div>
+                <a href="#" class="nav-link fs-sm px-0">
+                  <i class="bx bx-share fs-lg me-2"></i>
+                  Reply
+                </a>
+              </div>
+              <p class="mb-0">Mattis id ut sed arcu metus elit faucibus condimentum aliquam. Nam adipiscing diam et suspendisse. Sagittis massa maecenas laoreet nulla amet nunc sagittis, pulvinar neque. Duis imperdiet ipsum suspendisse massa lectus habitasse. Id ante volutpat hendrerit augue parturient eget. Ac vitae posuere leo morbi vitae at hac lectus. Nibh neque quam quis amet mattis sit. Faucibus risus at sit tempus ut.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Comment form + Subscription -->
+      <section class="container mb-4 pb-2 mb-md-5 pb-lg-5">
+        <div class="row gy-5">
+
+          <!-- Comment form -->
+          <div class="col-lg-9">
+            <div class="card p-md-5 p-4 border-0 bg-secondary">
+              <div class="card-body w-100 mx-auto px-0" style="max-width: 746px;">
+                <h2 class="mb-4 pb-3">Leave a Comment</h2>
+                <form class="row gy-4 needs-validation" novalidate>
+                  <div class="col-sm-6 col-12">
+                    <label for="c-name" class="form-label fs-base">Name</label>
+                    <input id="c-name" type="text" class="form-control form-control-lg" required>
+                    <span class="invalid-tooltip">Please, enter your name.</span>
+                  </div>
+                  <div class="col-sm-6 col-12">
+                    <label for="c-email" class="form-label fs-base">Email</label>
+                    <input id="c-email" type="email" class="form-control form-control-lg" required>
+                    <span class="invalid-tooltip">Please, provide a valid email address.</span>
+                  </div>
+                  <div class="col-12">
+                    <label for="c-comment" class="form-label fs-base">Comment</label>
+                    <textarea id="c-comment" class="form-control form-control-lg" rows="3" placeholder="Type your comment here..." required></textarea>
+                    <span class="invalid-tooltip">Please, enter your comment.</span>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input id="c-save" type="checkbox" class="form-check-input">
+                      <label for="c-save" class="form-check-label">Save my name and email in this browser for the next time I comment.</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-lg btn-primary w-sm-auto w-100 mt-2">Post comment</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subscription form + Sharing -->
+          <div class="col-lg-3 position-relative">
+            <div class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4" style="top: 70px !important;">
+              <div class="row gy-lg-5 gy-4 justify-content-center text-lg-start text-center">
+
+                <!-- Subscription form -->
+                <div class="col-lg-12 col-sm-7 col-11">
+                  <h6 class="fs-lg">Enjoy this post? Join our newsletter</h6>
+                  <form class="needs-validation" novalidate>
+                    <div class="input-group mb-3">
+                      <i class="bx bx-envelope position-absolute start-0 top-50 translate-middle-y zindex-5 ms-3 text-muted d-lg-inline-block d-none"></i>
+                      <input type="email" placeholder="Your Email" class="form-control ps-lg-5 rounded text-lg-start text-center" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                  </form>
+                </div>
+
+                <!-- Sharing -->
+                <div class="col-lg-12 col-sm-7 col-11">
+                  <h6 class="fs-lg">Don’t forget to share it</h6>
+                  <div class="mb-4 pb-lg-3">
+                    <a href="#" class="btn btn-icon btn-secondary btn-linkedin me-2 mb-2" aria-label="LinkedIn">
+                      <i class="bx bxl-linkedin"></i>
+                    </a>
+                    <a href="#" class="btn btn-icon btn-secondary btn-facebook me-2 mb-2" aria-label="Facebook">
+                      <i class="bx bxl-facebook"></i>
+                    </a>
+                    <a href="#" class="btn btn-icon btn-secondary btn-twitter me-2 mb-2" aria-label="Twitter">
+                      <i class="bx bxl-twitter"></i>
+                    </a>
+                    <a href="#" class="btn btn-icon btn-secondary btn-instagram me-2 mb-2" aria-label="Instagram">
+                      <i class="bx bxl-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Related articles (Slider below lg breakpoint) -->
+      <section class="container mb-5 pt-md-4">
+        <div class="d-flex flex-sm-row flex-column align-items-center justify-content-between mb-4 pb-1 pb-md-3">
+          <h2 class="h1 mb-sm-0">Related Articles</h2>
+          <a href="blog-list-with-sidebar.html" class="btn btn-lg btn-outline-primary ms-4">
+            All posts
+            <i class="bx bx-right-arrow-alt ms-1 me-n1 lh-1 lead"></i>
+          </a>
+        </div>
+
+        <div class="swiper mx-n2" data-swiper-options='{
+          "slidesPerView": 1,
+          "spaceBetween": 8,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          },
+          "breakpoints": {
+            "500": {
+              "slidesPerView": 2
+            },
+            "1000": {
+              "slidesPerView": 3
+            }
+          }
+        }'>
+          <div class="swiper-wrapper">
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto pb-3">
+              <article class="card border-0 shadow-sm h-100 mx-2">
+                <div class="position-relative">
+                  <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                  <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later" aria-label="Read later">
+                    <i class="bx bx-bookmark"></i>
+                  </a>
+                  <img src="assets/img/blog/01.jpg" class="card-img-top" alt="Image">
+                </div>
+                <div class="card-body pb-4">
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Business</a>
+                    <span class="fs-sm text-muted">May 19, 2023</span>
+                  </div>
+                  <h3 class="h5 mb-0">
+                    <a href="blog-single.html">5 Bad Landing Page Examples &amp; How We Would Fix Them</a>
+                  </h3>
+                </div>
+                <div class="card-footer py-4">
+                  <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none">
+                    <img src="assets/img/avatar/01.jpg" class="rounded-circle me-3" width="48" alt="Avatar">
+                    Jerome Bell
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto pb-3">
+              <article class="card border-0 shadow-sm h-100 mx-2">
+                <div class="position-relative">
+                  <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                  <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later" aria-label="Read later">
+                    <i class="bx bx-bookmark"></i>
+                  </a>
+                  <img src="assets/img/blog/06.jpg" class="card-img-top" alt="Image">
+                </div>
+                <div class="card-body pb-4">
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Marketing</a>
+                    <span class="fs-sm text-muted">Apr 2, 2023</span>
+                  </div>
+                  <h3 class="h5 mb-0">
+                    <a href="blog-single.html">How Agile is Your Forecasting Process?</a>
+                  </h3>
+                </div>
+                <div class="card-footer py-4">
+                  <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none">
+                    <img src="assets/img/avatar/05.jpg" class="rounded-circle me-3" width="48" alt="Avatar">
+                    Albert Flores
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto pb-3">
+              <article class="card border-0 shadow-sm h-100 mx-2">
+                <div class="position-relative">
+                  <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                  <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later" aria-label="Read later">
+                    <i class="bx bx-bookmark"></i>
+                  </a>
+                  <img src="assets/img/blog/03.jpg" class="card-img-top" alt="Image">
+                </div>
+                <div class="card-body pb-4">
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Business</a>
+                    <span class="fs-sm text-muted">Sep 16, 2023</span>
+                  </div>
+                  <h3 class="h5 mb-0">
+                    <a href="blog-single.html">This Week in Search: New Limits and Exciting Features</a>
+                  </h3>
+                </div>
+                <div class="card-footer py-4">
+                  <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none">
+                    <img src="assets/img/avatar/02.jpg" class="rounded-circle me-3" width="48" alt="Avatar">
+                    Ralph Edwards
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Pagination (bullets) -->
+          <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+        </div>
+      </section>
+    </main>
+        <!-- Footer -->
+    <footer class="footer border-top border-light bg-dark pt-5 pb-4 pb-lg-5" data-bs-theme="dark">
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              <a class="d-flex align-items-center lh-1 text-white transition-opacity opacity-50-hover text-decoration-none mb-4 mb-md-0" href="https://pixlab.io" target="_blank">
+                <img src="https://pixlab.io/images/logo-dark.png" title="Machine Vision & Media Processing APIs" alt="logo">
+              </a>
+              <p class="text-body mt-3 pb-2">Powered by PixLab fine-tuned LLMs, MobiView let you generate production ready, beautiful UI code seamlessly for your mobile application using your preferred framework, including  SwitfUI, Flutter, React-Native or JetPack Compose.</p>
+            </div>
+            <div class="col"></div>
+            <div class="col">
+              <ul class="list-unstyled d-flex align-items-center justify-content-end">
+                    <li class="ms-5"><a title="PixLab on Facebook" href="https://www.facebook.com/pixlab.io/" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class='bx bxl-facebook-square'></i></a></li>
+                    <li class="ms-5"><a title="PixLab on Reddit" href="https://www.reddit.com/r/pixlab/" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class='bx bxl-reddit'></i></a></li>
+                    <li class="ms-5"><a title="PixLab on X" href="https://twitter.com/unqlite_db" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class='bx bxl-twitter'></i></a></li>
+                    <li class="ms-5"><a title="PixLab on LinkedIn" href="https://www.linkedin.com/company/pixlabio" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class='bx bxl-linkedin'></i></a></li>
+                    <li class="ms-5"><a title="Symisc Systems on Github" href="https://github.com/symisc" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class='bx bxl-github'></i></a></li>
+                </ul>
+                <!-- Footer socials-->
+                <form class="needs-validation" action="../search.html">
+                  <div class="input-group">
+                    <input type="text" id="search-box" class="form-control rounded-start ps-5" placeholder="Search Documentation..." minlength="3" required>
+                    <i class="bx bx-search fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                    <div class="invalid-tooltip position-absolute top-100 start-0">Search Documentation...</div>
+                    <button type="submit" class="btn btn-primary" title="Search entire PixLab Documentation...">Search</button>
+                  </div>
+                </form>
+            </div>
+          </div>  
+          <div class="d-flex flex-wrap justify-content-between mt-5 mt-lg-7">
+                <!-- Menu-->
+                <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
+                    <h6 class="text-uppercase fs-sm fw-bolder tracking-wider text-primary">Products</h6>
+                    <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://faceio.net" target="_blank">FACEIO - Facial Authentication<br/>for the Web <span class="badge bg-success rounded ms-2 align-middle">NEW</span></a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="/">MobiView - UI Code Generator &uarr;</a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://pixlab.io/on-premises" target="_blank">PixLab On-Premises &nearr;</a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://pixlab.io/tiny-dream" target="_blank">Tiny Dream - Stable Diffusion<br/>Inference &nearr;</a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://sod.pixlab.io/" target="_blank">SOD - Embedded Computer<br/>Vision Library &nearr;</a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://pixlab.io/annotate" target="_blank">Annotate - Online Image<br/>Annotation &nearr;</a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://pixlab.io/ai-photo-editor" target="_blank">Generative AI Photo Editor &nearr;</a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://ekyc.pixlab.io" target="_blank">eKYC - AI Powered ID<br>Scanning APIs <span class="badge bg-success rounded ms-2 align-middle">NEW</span></a></li>
+                    </ul>
+                </div>
+                <!-- /Menu-->
+                <!-- Menu-->
+                <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
+                    <h6 class="text-uppercase fs-sm fw-bolder tracking-wider text-primary">Resources &amp; Documentation</h6>
+                    <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://console.pixlab.io" target="_blank">PixLab Console &nearr;</a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://pixlab.io/start" target="_blank">Getting Started &nearr;</a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://ekyc.pixlab.io/docscan" target="_blank">DOCSCAN API Endpoint &nearr;</a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://pixlab.io/api" target="_blank">PixLab API Reference &nearr;</a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://pixlab.io/cmdls" target="_blank">API Endpoints &nearr;</a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://faceio.net/integration-guide" target="_blank">FACEIO Integration Guide &nearr;</a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://status.faceio.net" target="_blank">Health Status &nearr;</a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://pixlab.io/pricing" target="_blank">Pricing &nearr;</a></li>
+                    </ul>
+                </div>
+                <!-- /Menu-->
+                <!-- Menu-->
+                <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
+                    <h6 class="text-uppercase fs-sm fw-bolder tracking-wider text-primary">Company &amp; Social Handles</h6>
+                    <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://symisc.net" target="_blank">Symisc Systems &nearr;</a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://pixlab.com/community" target="_blank">Support Channels &nearr;</a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://blog.pixlab.io" target="_blank">PixLab Blog &nearr;</a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://github.com/symisc" target="_blank">Github &nearr;</a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://www.facebook.com/pixlab.io/" target="_blank">Facebook &nearr;</a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://twitter.com/unqlite_db" target="_blank">Twitter &nearr;</a></li>
+                        <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="https://www.linkedin.com/company/pixlabio" target="_blank">LinkedIn &nearr;</a></li>
+                    </ul>
+                </div>
+                <!-- /Menu-->
+                <!-- Menu-->
+                <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
+                    <h6 class="text-uppercase fs-sm fw-bolder tracking-wider text-primary">Legals & Support</h6>
+                    <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                      <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="../community" target="_blank">Support Channels</a></li>
+                      <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="../privacy-policy" target="_blank">Privacy Policy</a></li>
+                      <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="../terms" target="_blank">Terms of Service</a></li>
+                      <li class="nav-item"><a class="nav-link d-inline-block px-0 pt-1 pb-1" href="../dmca" target="_blank">DMCA</a></li>
+                    </ul>
+                </div>
+                <!-- /Menu-->
+            </div>
+        </div>
+        <div class="container">
+            <div class="border-top pt-6 mt-7 border-white-10 d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <span class="small text-white opacity-70 pt-4 mb-2 mb-md-0">Copyright © 2017 - 2025, <a href="https://symisc.net" target="_blank">Symisc Systems, SUARL</a>. All rights reserved.</span>
+                <span class="small text-white opacity-70 pt-4"><a href="../terms" target="_blank">Terms of Services</a>  |  <a href="../privacy-policy" target="_blank">Privacy Policy</a></span>
+            </div>
+        </div>
+    </footer>
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
