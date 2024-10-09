@@ -1,1 +1,14 @@
+# Allow all search engines to crawl the entire website
 User-agent: *
+Disallow: 
+
+# Allow specific directories (optional)
+# Disallow: /private/
+# Allow: /public/
+
+# Block a specific search engine (optional)
+# User-agent: Googlebot
+# Disallow: /
+
+# Specify the location of the sitemap (if you have one)
+Sitemap: https://pixlab.io/sitemap.xml
