@@ -71,7 +71,7 @@ nav .hs-dropdown:hover>button {
 }
 
 .footer-link {
-  @apply block text-[15px] text-muted transition-all duration-200
+  @apply block w-fit text-[15px] text-muted transition-all duration-200
 }
 
 .footer-link:hover {
