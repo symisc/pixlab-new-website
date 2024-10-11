@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.html", "node_modules/preline/dist/*.js"],
+  content: ["./*.html"],
   theme: {
     extend: {
       colors: {
@@ -15,5 +15,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("preline/plugin")],
+  plugins: [require("preline/plugin")]
 };
