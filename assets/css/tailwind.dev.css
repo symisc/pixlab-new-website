@@ -96,3 +96,12 @@ body.dark-theme ul li.card {
 .footer-link:hover {
   @apply text-primary
 }
+.link{
+  @apply text-blue-600
+}
+.link:hover{
+  @apply underline
+}
+.list{
+  @apply marker:text-blue-600 list-disc pl-5 space-y-4 text-tColor mt-5
+}
