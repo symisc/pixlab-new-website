@@ -766,6 +766,11 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.my-7 {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -812,6 +817,10 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mt-9 {
+  margin-top: 2.25rem;
 }
 
 .block {
@@ -869,6 +878,10 @@ video {
   height: 3rem;
 }
 
+.h-36 {
+  height: 9rem;
+}
+
 .h-6 {
   height: 1.5rem;
 }
@@ -883,6 +896,10 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.w-12 {
+  width: 3rem;
 }
 
 .w-28 {
@@ -1293,12 +1310,12 @@ video {
   padding-inline-end: 0.75rem;
 }
 
-.pl-5 {
-  padding-left: 1.25rem;
+.pl-2 {
+  padding-left: 0.5rem;
 }
 
-.pl-9 {
-  padding-left: 2.25rem;
+.pl-5 {
+  padding-left: 1.25rem;
 }
 
 .pr-3 {
@@ -1333,10 +1350,6 @@ video {
   padding-top: 2rem;
 }
 
-.pl-2 {
-  padding-left: 0.5rem;
-}
-
 .text-center {
   text-align: center;
 }
@@ -1353,6 +1366,11 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .text-\[\.9375rem\] {
@@ -1417,6 +1435,11 @@ video {
 
 .leading-snug {
   line-height: 1.375;
+}
+
+.text-\[\#dc2a76\] {
+  --tw-text-opacity: 1;
+  color: rgb(220 42 118 / var(--tw-text-opacity));
 }
 
 .text-gray-100 {
@@ -1872,12 +1895,34 @@ body.dark-theme ul li.card {
 }
 
 @media (min-width: 640px) {
+  .sm\:w-14 {
+    width: 3.5rem;
+  }
+
   .sm\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
+  .sm\:gap-6 {
+    gap: 1.5rem;
+  }
+
+  .sm\:gap-9 {
+    gap: 2.25rem;
+  }
+
+  .sm\:px-9 {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+
   .sm\:pl-9 {
     padding-left: 2.25rem;
+  }
+
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 
   .sm\:text-xl {
@@ -1915,6 +1960,10 @@ body.dark-theme ul li.card {
     align-items: center;
   }
 
+  .md\:gap-4 {
+    gap: 1rem;
+  }
+
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -1938,6 +1987,11 @@ body.dark-theme ul li.card {
   .md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -2013,6 +2067,10 @@ body.dark-theme ul li.card {
 
   .lg\:max-w-96 {
     max-width: 24rem;
+  }
+
+  .lg\:max-w-md {
+    max-width: 28rem;
   }
 
   .lg\:max-w-screen-sm {
@@ -2115,6 +2173,10 @@ body.dark-theme ul li.card {
   .lg\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .lg\:text-\[3rem\] {
+    font-size: 3rem;
   }
 
   .lg\:text-xl {
