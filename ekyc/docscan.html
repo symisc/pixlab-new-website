@@ -28015,18 +28015,6 @@
                             <td style="font-family:'Courier New'" class="fw-bolder">Hex String</td>
                             <td><strong>Your PixLab <a href="https://console.pixlab.io" target="_blank">API Key &nearr;</a></strong>. Your <a href="https://console.pixlab.io" target="_blank">API Key &nearr;</a> is mandatory in order to authenticate the upcoming request. You can also embed your API Key in the <code>WWW-Authenticate</code> HTTP header and omit this parameter if you want to. Connect to the <a href="https://console.pixlab.io" target="_blank">PixLab Console &nearr;</a> to generate your first API key.</td>
                         </tr>
-                    </tbody>
-                </table>
-                <p id="optional-params" class="lead fw-bolder">Optional Parameters</p>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Fields</th>
-                            <th>Type</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
                         <tr>
                             <td><strong><code>type</code></strong></td>
                             <td style="font-family:'Courier New'" class="fw-bolder">String</td>
@@ -28046,6 +28034,28 @@
                             <td><strong><code>country</code></strong></td>
                             <td style="font-family:'Courier New'" class="fw-bolder">String</td>
                             <td>Country of origin of the ID document being scanned. <strong>You can omit this field for Passports or ICAO Travel documents, or if the country of origin of the document being scanned is unknown in advance</strong> (feature only available starting from the <a href="https://console.pixlab.io" target="_blank">Team or Enterprise Plan &nearr;</a>). As of this release, over 11,094 ID documents with or without MRZ from more than 197 countries are fully supported. The list of supported countries and documents is documneted <a href="#supported-docs">here</a>.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p id="optional-params" class="lead fw-bolder">Optional Parameters</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Fields</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="face-crop"><strong><code>facecrop</code> | <code>face-crop</code></strong></td>
+                            <td style="font-family:'Courier New'" class="fw-bolder">Boolean</td>
+                            <td>If this parameter is set to <code>false</code>, <strong>no face cropping operation will be performed on the provided document</strong>, and the <code><a href="#face-url-field">face_url</a></code> return field will be set to <code>false</code>.<br>Please note, for face cropping to function correctly, you <strong>must connect your AWS S3 bucket from the <a href="https://console.pixlab.io" target="_blank">PixLab Console &nearr;</a> to ensure that the engine stores the cropped face URL in your private S3 bucket</strong>.</td>
+                        </tr>
+                        <tr>
+                            <td id="face-png-blob"><strong><code>faceblob</code> | <code>face-blob</code></strong></td>
+                            <td style="font-family:'Courier New'" class="fw-bolder">Boolean</td>
+                            <td>If this parameter is set to <code>true</code>, <strong>return the BASE64 encoding of the cropped PNG image of the extracted face</strong> instead of an S3 URL in the <code><a href="#face-url-field">face_url</a></code> object return field.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -28084,9 +28094,9 @@
                             <td>Type of the scanned document.</td>
                         </tr>
                         <tr>
-                            <td><code class="fw-bolder">face_url</code></td>
+                            <td id="face-url-field"><code class="fw-bolder">face_url</code></td>
                             <td style="font-family:'Courier New'" class="fw-bolder">URL</td>
-                            <td>URL to the cropped image of the face from the document. <strong>PixLab recommend that you store extracted images directly on your own AWS S3 Bucket by linking it via the <a href="https://console.pixlab.io" target="_blank">PixLab Console &nearr;</a> for complete control of users data</strong>.</td>
+                            <td>Defaults to <span style="font-family:'Courier New'" class="fw-bolder">false</span> unless you connect your AWS S3 bucket via the <a href="https://console.pixlab.io" target="_blank">PixLab Console &nearr;</a>. This stores the URL of the cropped face image from the scanned document on your <strong>own AWS S3 Bucket</strong>.<br><strong>PixLab require storing extracted images directly in your own AWS S3 Bucket by linking it through the <a href="https://console.pixlab.io" target="_blank">PixLab Console &nearr;</a> to maintain complete control over user data.</strong><br>If the optional <code><a href="#face-crop">face-crop</a></code> field is set to <code>false</code> on the request, no face cropping operation will be done.<br>If the optional <code><a href="#face-png-blob">face-png-blob</a></code> field is set to <code>true</code> on the request, <strong>the BASE64-encoded PNG image of the cropped face is returned instead of the S3 URL</strong>.</td>
                         </tr>
                         <tr>
                             <td><code class="fw-bolder">mrz_raw_text</code></td>
