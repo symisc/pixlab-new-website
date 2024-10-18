@@ -16,6 +16,8 @@
     --color-border: #dbe4f0;
     --color-surface: #F0F4F9;
     --color-input: #E6ECF3;
+    --color-off-white: #f7f7f7;
+    --color-gradient: linear-gradient(to top, var(--color-primary) 5%, var(--color-secondary) 95%)
   }
 
   /* Apply font to all elements */
@@ -34,6 +36,7 @@
   --color-border: #333333;
   --color-surface: #282828;
   --color-input: #333333;
+  --color-off-white: #282828;
 }
 
 body {
@@ -66,6 +69,21 @@ nav .hs-dropdown:hover>button {
 .gradient-button:hover::before {
   @apply opacity-100
 }
+.bg-gradient {
+  background: var(--color-gradient);
+}
+.gradient-outline-btn{
+  @apply bg-gradient flex h-full rounded-[100px] p-0.5 transition-all duration-300;
+}
+
+.gradient-outline-btn:hover div{
+  @apply bg-gradient
+}
+.gradient-outline-btn:hover span{
+  @apply text-white
+}
+
+
 
 .gradient-graph-line {
   height: 5px;
@@ -74,15 +92,18 @@ nav .hs-dropdown:hover>button {
 }
 
 .gradient-bg {
-  background: linear-gradient(to top, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(to top, var(--color-primary) 0%, var(--color-secondary) 100% );
 }
 
 .gradient-text {
   width: fit-content;
-  background: linear-gradient(to top, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(to left, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+.bg-off-white{
+  background-color: var(--color-off-white);
 }
 
 body.dark-theme ul li.card {
@@ -104,4 +125,20 @@ body.dark-theme ul li.card {
 }
 .list{
   @apply marker:text-blue-600 list-disc pl-5 space-y-4 text-tColor mt-5
+}
+/* body.dark-theme .code{
+  @apply  border-neutral-700
+} */
+.code{
+  @apply bg-surface rounded-md text-pink-500 p-1 border border-gray-200;
+}
+body.dark-theme .table-wrapper,body.dark-theme .code,body.dark-theme tbody tr.t-row {
+  @apply  border-neutral-700
+}
+.table-wrapper{
+  @apply bg-off-white my-5 mx-auto rounded-lg shadow-md p-6 overflow-x-auto border border-gray-200 
+}
+
+.table-wrapper tbody tr.t-row{
+  @apply border-b border-gray-200 
 }
