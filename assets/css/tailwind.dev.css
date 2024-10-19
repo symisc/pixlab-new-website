@@ -96,7 +96,7 @@ nav .hs-dropdown:hover>button {
 }
 
 .gradient-text {
-  width: fit-content;
+  /* width: fit-content; */
   background: linear-gradient(to left, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
