@@ -106,6 +106,10 @@ nav .hs-dropdown:hover>button {
   background-color: var(--color-off-white);
 }
 
+.lead{
+  @apply text-base sm:text-lg md:text-2xl leading-snug;
+}
+
 body.dark-theme ul li.card {
   @apply bg-black/50
 }
@@ -142,3 +146,4 @@ body.dark-theme .table-wrapper,body.dark-theme .code,body.dark-theme tbody tr.t-
 .table-wrapper tbody tr.t-row{
   @apply border-b border-gray-200 
 }
+
