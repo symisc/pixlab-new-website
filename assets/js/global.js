@@ -1,5 +1,7 @@
 "use strict";
 
+hljs.highlightAll(); // For code highlighting
+ 
 const themeToggler = document.querySelectorAll(".theme-toggler");
 
 // Apply system theme based on user preference or saved theme

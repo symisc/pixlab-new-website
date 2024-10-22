@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pixlab APIs Reference Guide</title>
-    <meta name="author" content="PixLab | Symisc Systems. Portion based on Softnio works" />
+    <title>ASCII Art C/C++ Library</title>
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://pixlab.io/" />
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
-    <meta name="description" content="Access to the PixLab RESTful API which is built with a growing list of over 130 production ready, battle tested and intelligent API endpoints..." />
-    <meta name="keywords" content="pixlab api, pixlab api reference, pixlab api documentation, pixlab rest api, pixlab images api, pixlab api keys, pixlab restful HTTP api, pixlab php, pixlab python, pixlab ruby api, pixlab javascript, pixlab RESTFul API, pixlab HTTP API, pixlab api" />
+    <meta name="author" content="PixLab | Symisc Systems. Portion based on Softnio works" />
+    <meta name="description" content="ASCII Art is a single header C/C++ library that let you transform an input image or video frame into printable ASCII characters at real-time using a single decision tree." />
+    <meta name="keywords" content="ascii art,C/C++ ascii art library,pixlab ascii art,machine-learning,C/C++ library,decision tree c code,embedded,ascii,algorithms,graphics,rendering,image-processing,ascii-art,ascii-glyphs" />
     <link rel="stylesheet" href="assets/css/unicons/css/line.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/highlightjs.css">
   </head>
   <body>
     <!-- Header/Navbar -->
@@ -129,9 +130,9 @@
           <div class="absolute flex h-full w-full items-center px-5 pt-10 text-white">
             <div class="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between gap-10 lg:flex-row">
               <!-- Hero Text -->
-              <div class="max-w-[31.25rem] text-center lg:max-w-screen-sm lg:text-left">
-                <h1 class="hero-heading">API Reference Guide</h1>
-                <p class="mt-5 lead text-gray-200">Get access to a growing list of over 130 production ready, battle tested & intelligent PixLab API endpoints...</p>
+              <div class="max-w-[500px] text-center lg:max-w-screen-sm lg:text-left">
+                <h1 class="hero-heading">ASCII Art C/C++ Library</h1>
+                <p class="lead mt-5 text-gray-200">A header only, C/C++ library that let you transform an input image or video frame into printable ASCII characters at real-time using a single decision tree.</p>
               </div>
 
               <div class="flex w-full max-w-[500px] flex-col gap-6">
@@ -157,7 +158,7 @@
 
       <!-- Content Section -->
       <section>
-        <div class="mx-auto w-full max-w-screen-xl px-5 pb-12 pt-8 leading-7">
+        <div class="mx-auto w-full max-w-screen-xl px-5 pb-12 pt-8 text-tColor overflow-hidden">
           <!-- Social Bar -->
           <div class="flex flex-wrap items-center justify-between gap-5 pb-3">
             <img class="dark-logo w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" />
@@ -186,236 +187,233 @@
             <!-- AddToAny END -->
           </div>
 
-          <div class="mt-5 text-tColor">
-            <div class="gradient-graph-line mb-5 h-1 w-full"></div>
-            <p class="">This page define the Rest API interface to <strong>PixLab</strong>. This is not a tutorial. This page is designed to be precise. Although easy to read.</p>
-            <p class="my-6">For a tutorial introduction see <a class="link" href="/start">Getting Started with PixLab</a> and <a class="link" href="/examples">The PixLab Code Samples Set</a>. You’re welcome to copy/paste and run these examples to see the API in action.</p>
-            <p class="mb-6">The<strong> PixLab</strong> API is built on HTTP/TLS. Our API is <a class="link" target="_blank" href="https://en.wikipedia.org/wiki/Representational_State_Transfer">RESTful</a> and it:</p>
-            <ul class="space-y-4">
-              <li class="flex items-start">
-                <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
-                </svg>
-                <p class="ml-3">Uses built-in HTTP capabilities for passing parameters and authentication.</p>
-              </li>
+          <div class="gradient-graph-line mb-5 h-1 w-full"></div>
+          <p class="my-5">
+            ASCII Art is a <strong>single header, C/C++ library</strong> developed by <span style="font-family: Montserrat"><strong>PixLab</strong></span> and based on the work of <a class="link" href="https://nenadmarkus.com/" target="_blank">Nenad Markus</a> that let you transform an input image or video frame into printable ASCII characters at real-time using a single <a class="link" href="https://en.wikipedia.org/wiki/Decision_tree" target="_blank">decision tree</a>. Real-time performance is
+            achieved by using <strong>pixel intensity comparison</strong> inside internal nodes of the tree.
+          </p>
 
-              <li class="flex items-start">
-                <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
-                </svg>
-                <p class="ml-3">Responds with standard HTTP response codes to indicate errors.</p>
-              </li>
+          <p class="my-5">
+            For a live demonstration including tests on static images, Webcam/Camera stream and a general overview on how the algorithm works, please visit <a class="link" href="https://art.pixlab.io" target="_blank"><strong>art.pixlab.io</strong></a
+            >.
+          </p>
 
-              <li class="flex items-start">
-                <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
-                </svg>
-                <p class="ml-3">Always returns <code class="code">JSON</code> for each request whether successful or not.</p>
-              </li>
-            </ul>
+          <img src="assets/images/ascii_art_demo.png" alt="demo" title="For a live demonstration including tests on static images, Webcam/Camera stream, please visit art.pixlab.io" class="mx-auto" />
 
-            <!-- Features -->
-            <h2 class="mb-5 mt-7 uppercase text-xl font-semibold text-tColor md:text-3xl">Features</h2>
-            <div class="gradient-graph-line mb-5 h-1 w-full"></div>
-            <ul class="space-y-4">
-              <li class="flex items-start">
-                <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
-                </svg>
-                <p class="ml-3">
-                  Access to over <strong>130 battle tested, intelligent <a href="cmdls">API endpoints</a></strong> and growing...
-                </p>
-              </li>
+          <h2 class="mb-3 mt-12 text-center text-lg font-semibold uppercase text-tColor sm:text-xl md:text-2xl">ASCII Camera is now available on Unity Asset Store - <a class="link" href="https://assetstore.unity.com/packages/slug/165558" target="_blank">assetstore.unity.com/packages/slug/165558</a></h2>
 
-              <li class="flex items-start">
-                <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
-                </svg>
-                <p class="ml-3"><strong>99.9*% uptime guaranty</strong>. 24/7 friendly support assistance.</p>
-              </li>
+          <p class="text-center text-muted">This implementation is based on the paper:<br />N. Markus, M. Fratarcangeli, I. S. Pandzic and J. Ahlberg, "Fast Rendering of Image Mosaics and ASCII Art", Computer Graphics Forum, 2015, <a class="link" href="https://dx.doi.org/10.1111/cgf.12597" target="_blank">dx.doi.org/10.1111/cgf.12597</a></p>
+          <ul class="list text-lg">
+            <li><a href="#artm" class="link">Download</a></li>
+            <li><a href="#gstart" class="link">Getting Started</a></li>
+            <li><a href="#capi" class="link">C/C++ API Reference</a></li>
+            <li><a href="#related-projects" class="link">Related Projects</a></li>
+          </ul>
+          <div class="gradient-graph-line my-5 h-1 w-full"></div>
+          <h2 class="mb-3 mt-12 text-lg font-semibold uppercase text-tColor sm:text-xl md:text-2xl" id="artm">Download</h2>
 
-              <li class="flex items-start">
-                <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
-                </svg>
-                <p class="ml-3">No hidden fees, no contract. <strong>Cancel your plan at anytime</strong>!</p>
-              </li>
-              <li class="flex items-start">
-                <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
-                </svg>
-                <p class="ml-3"><a class="link" href="/cmdls">Rich Documentation</a>, Production Ready <a class="link" href="/examples">Code Samples</a> &amp; Open source <a class="link" href="https://github.com/symisc" target="_blank">Advocates 💗</a></p>
-              </li>
-            </ul>
+          <div class="flex md:flex-row flex-col md:items-center gap-2 md:gap-4 border-b">
 
-            <!-- API Access Point URL -->
-            <h2 class="mb-5 mt-7 uppercase text-xl font-semibold text-tColor md:text-3xl">API Access Point URL</h2>
-            <div class="gradient-graph-line mb-5 h-1 w-full"></div>
-            <ul class="list">
-              <li>
-                <p>The <strong>PixLab</strong> API’s base endpoint is located at <code class="code">https://api.pixlab.io/</code>.</p>
-              </li>
-              <li>
-                <p>
-                  The request URL scheme is <code class="code">https://api.pixlab.io/cmd?param=val&amp;param2=val2</code> where <strong><code class="code">cmd</code></strong> is the <a href="cmdls" class="link">API Endpoint</a> you want to call such as <a href="cmd?id=facedetect" class="link">FACEDETECT</a> (for face detection), <a href="https://ekyc.pixlab.io/docscan" class="link">DOCSCAN</a> (for Passports &amp; ID scanning), <a href="cmd?id=mogrify" class="link">MOGRIFY</a> (for face
-                  blurring), <a href="cmd?id=nsfw" class="link">NSFW</a> (for adult &amp; bloody content detection), <a href="cmd?id=" class="link">ROTATE</a>, and <a href="cmdls" class="link">hundreds of others</a> and <code class="code">param=val</code> are the endpoint parameters (if any).
-                </p>
-              </li>
-              <li>
-                <p>
-                  Each endpoint may handle both <code class="code">GET</code> &amp; <code class="code">POST</code> requests at the same time. <span><strong>PixLab</strong></span> is shipped with over <a href="cmdls" class="link">130 endpoints</a> and all of them are invoked using exactly the same way.
-                </p>
-              </li>
-              <li>
-                <p>
-                  Health &amp; Status dashboard is located at <a class="link" href="https://status.faceio.net" target="_blank">status.faceio.net</a> (a <span><strong>PixLab</strong></span> product) for real-time monitoring.
-                </p>
-              </li>
-            </ul>
-
-            <!-- Summary table -->
-            <div class="max-w-2xl table-wrapper">
-              <h2 class="sm:mb-4 mb-2 text-xl font-semibold uppercase text-tColor">Summary</h2>
-                <table class="min-w-full whitespace-nowrap text-left">
-                  <tbody>
-                    <tr class="t-row">
-                      <td class="px-4 py-3 font-medium sm:py-5">Access Point URL</td>
-                      <td class="px-4 py-3 sm:py-5"><a class="link" href="https://api.pixlab.io">api.pixlab.io</a></td>
-                    </tr>
-                    <tr class="t-row">
-                      <td class="px-4 py-3 font-medium sm:py-5">API Status Endpoint</td>
-                      <td class="px-4 py-3 sm:py-5"><a class="link" href="https://api.pixlab.io/status">api.pixlab.io/status</a></td>
-                    </tr>
-                    <tr class="t-row">
-                      <td class="px-4 py-3 font-medium sm:py-5">Architecture</td>
-                      <td class="px-4 py-3">RESTFul</td>
-                    </tr>
-                    <tr class="t-row">
-                      <td class="px-4 py-3 font-medium sm:py-5">HTTP & TLS Protocols Version</td>
-                      <td class="px-4 py-3 sm:py-5">1.1/2 (Optional TLS 1.2/3)</td>
-                    </tr>
-                    <tr class="t-row">
-                      <td class="px-4 py-3 font-medium sm:py-5">Authentication</td>
-                      <td class="px-4 py-3"><a class="link" href="#authentication">Key Based</a></td>
-                    </tr>
-                    <tr class="t-row">
-                      <td class="px-4 py-3 font-medium sm:py-5">Network</td>
-                      <td class="px-4 py-3">Cloudflare, AWS & OVH</td>
-                    </tr>
-                    <tr class="t-row">
-                      <td class="px-4 py-3 font-medium sm:py-5">HTTP Response MIME Type</td>
-                      <td class="px-4 py-3"><code class="code">application/json</code> or BLOBs</td>
-                    </tr>
-
-                    <tr class="t-row">
-                      <td class="px-4 py-3 font-medium sm:py-5">HTTP Status & Error Codes</td>
-                      <td class="px-4 py-3 sm:py-5"><a class="link" href="#response">See Below</a></td>
-                    </tr>
-                    <tr>
-                      <td class="px-4 py-3 font-medium sm:py-5">API Endpoints</td>
-                      <td class="px-4 py-3 sm:py-5"><a class="link" href="cmdls">Listed Here</a></td>
-                    </tr>
-                  </tbody>
-                </table>
-            </div>
-
-            <!-- Authentication -->
-            <h2 class="my-5 uppercase mt-7 text-xl font-semibold text-tColor md:text-3xl" id="authentication">Authentication</h2>
-            <div class="gradient-graph-line mb-5 h-1 w-full"></div>
-            <p>When you <a class="link" href="https://console.pixlab.io/" target="_blank">sign up</a> for an account, you are given an API key. You authenticate to the <span><strong>PixLab</strong></span> API by providing your API key in the request. You can manage your keys via the <em>API Keys</em> tab of the <a class="link" href="https://console.pixlab.io/" target="_blank">Console</a>.</p>
-            <div class="max-w-4xl table-wrapper">
-                <h2 class="sm:mb-2 mb-2 text-xl font-semibold uppercase">Authentication Methods
-                </h2>
-                <p>Authentication to the API occurs via two manner. Use the one you feel comfortable with:</p>
-                <table class="min-w-full whitespace-nowrap text-left">
-                    <tbody>
-                        <tr class="t-row">
-                            <td class="px-4 py-3 font-medium sm:py-5 align-top">HTTP Header                            </td>
-                            <td class="px-4 py-3 sm:py-5"><p>Embed your API Key in the <strong>WWW-Authenticate</strong> HTTP header of the incoming request as follows:<br><code class="code">WWW-Authenticate: API_KEY</code>.<br>Replace <code class="code">API_KEY</code> with your application’s real API Key you got from the <a href="https://console.pixlab.io/" target="_blank">Console</a>.</p></td>
-                        </tr>
-                        <tr class="t-row">
-                            <td class="px-4 py-3 font-medium sm:py-5 align-top">Query Parameter                            </td>
-                            <td class="px-4 py-3 sm:py-5"><p>Or, simply include your API key within your <code class="code">POST</code> or <code class="code">GET</code> request like any other parameters an <a class="link" href="cmdls">API Endpoint</a> would takes as follows:<br><code class="code">https://api.pixlab.io/facedetect?param=val&amp;key=API_KEY</code></p></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <span class="mt-3"><i class="uil uil-exclamation-triangle text-yellow-500 text-xl"></i> Don't forget to keep your API keys handy, and make sure they are used by authorized scripts only.</span>
-            </div>
-
-             <!-- Responses, Status Codes & Errors -->
-             <h2 class="my-5 uppercase mt-7 text-xl font-semibold md:text-3xl" id="response">Responses, Status Codes & Errors</h2>
-             <div class="gradient-graph-line mb-5 h-1 w-full"></div>
-             <p>The following <strong>HTTP status codes</strong> are always returned after each initiated request. All <span><strong>PixLab</strong></span> <a class="link" href="cmdls">API Endpoints</a>, always returns <code class="code">application/json</code> for each request whether successful or not.&nbsp;<strong>BLOBs (images binary contents)</strong> are returned only after successful requests and at the user explicit demand, usually by setting the <code class="code">blob</code> parameter an endpoint takes to <code class="code">true</code>.</p>
-             <div class="max-w-4xl table-wrapper">
-                <table class="min-w-full whitespace-nowrap text-left table-fixed">
-                  <tbody>
-                    <tr class="t-row">
-                      <td class="px-4 py-3 font-medium sm:py-5 text-lg"><code class="code">200</code></td>
-                      <td class="px-4 py-3 sm:py-5">The target endpoint (i.e. <a href="cmd?id=facedetect"class="link">FACEDETECT</a>, <a href="https://ekyc.pixlab.io/docscan"class="link">DOCSCAN</a>, etc.) executed successfully.</td>
-                    </tr>
-                    <tr class="t-row">
-                      <td class="px-4 py-3 font-medium sm:py-5 text-lg"><code class="code">400</code></td>
-                      <td class="px-4 py-3 sm:py-5">Bad Request - Often missing a required parameter.</td>
-                    </tr>
-                    <tr class="t-row">
-                      <td class="px-4 py-3 font-medium sm:py-5 text-lg"><code class="code">401</code></td>
-                      <td class="px-4 py-3 sm:py-5">Unauthorized - Missing, Blocked or Invalid API Key.</td>
-                    </tr>
-                    <tr class="t-row">
-                      <td class="px-4 py-3 font-medium sm:py-5 text-lg"><code class="code">404</code></td>
-                      <td class="px-4 py-3">Not Found - The requested item (i.e. Image URL) does not exists.</td>
-                    </tr>
-                    <tr class="t-row">
-                      <td class="px-4 py-3 font-medium sm:py-5 text-lg"><code class="code">405</code></td>
-                      <td class="px-4 py-3">	The HTTP method is not handled by the API endpoint.</td>
-                    </tr>
-                    <tr class="t-row">
-                      <td class="px-4 py-3 font-medium sm:py-5 text-lg"><code class="code">415</code></td>
-                      <td class="px-4 py-3">The given media file is not supported by the target API endpoint (i.e. Unsupported image format).</td>
-                    </tr>
-
-                    <tr class="t-row">
-                      <td class="px-4 py-3 font-medium sm:py-5 text-lg"><code class="code">429</code></td>
-                      <td class="px-4 py-3 sm:py-5">Too many requests (per minute) from this IP address.</td>
-                    </tr>
-                    <tr>
-                      <td class="px-4 py-3 font-medium sm:py-5 text-lg"><code class="code">500</code></td>
-                      <td class="px-4 py-3 sm:py-5">Server Side Error or Maintenance Planned (We'll notify you anyway).</td>
-                    </tr>
-                  </tbody>
-                </table>
-            </div>
-
-             <!-- Further Reading -->
-             <h2 class="my-5 uppercase mt-7 text-xl font-semibold md:text-3xl" id="response">Further Reading</h2>
-             <div class="gradient-graph-line mb-5 h-1 w-full"></div>
-             <p>Now that you understand how <strong>PixLab</strong> handle your incoming HTTP requests, we can tackle each API endpoint in details in the next lecture.</p>
-
-             <!-- Button Group -->
-            <div class="mt-10 flex flex-wrap justify-center gap-3">
-              <a href="start" class="gradient-outline-btn">
-                <div class="flex items-center gap-2 rounded-[98px] bg-background p-3 px-8 uppercase transition-all duration-300">
-                <span class="font-medium text-center tracking-wider"><i class="uil uil-rocket mr-3 text-lg"></i>Getting Started</span>
-                </div>
-                </a>
-                <a href="examples" class="gradient-outline-btn">
-                <div class="flex items-center gap-2 rounded-[98px] bg-background p-3 px-8 uppercase transition-all duration-300">
-                <span class="font-medium text-center tracking-wider"><i class="uil uil-arrow mr-3 text-xl"></i>Code Samples</span>
-                </div>
-                </a>
-                <a href="cmdls" class="gradient-outline-btn">
-                <div class="flex items-center gap-2 rounded-[98px] bg-background p-3 px-8 uppercase transition-all duration-300">
-                <span class="font-medium text-center tracking-wider"><i class="uil uil-list-ul mr-3 text-lg"></i>Api Endpoints</span>
-                </div>
-                </a>
-                <a href="support" class="gradient-outline-btn">
-                <div class="flex items-center gap-2 rounded-[98px] bg-background p-3 px-8 uppercase transition-all duration-300">
-                <span class="font-medium text-center tracking-wider"><i class="uil uil-comment-alt-dots mr-3 text-lg"></i>Ask questions</span>
-                </div>
-                </a>
-                
+            <div class="md:p-4 flex-none text-lg font-semibold">ASCII Art Hex Model</div>
+            <div class=" md:p-4 text-muted">This is the hex output model generated during the training phase. It contains both the <strong>codebook and the decision tree</strong> that let you render your images or video frames at Real-time. The model is available for a <strong>one-time fee of $25.</strong> Once downloaded, just put it in the directory where the ASCII Art source reside.</div>
+            <div class="flex-none self-center py-4 md:p-4">
+              <a href="#!" class="flex items-center gap-2 rounded-md bg-blue-200 px-5 py-3 font-bold text-blue-700 shadow-sm transition duration-500 ease-in-out hover:bg-blue-300 hover:shadow-lg">
+                <svg class="w-6" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" stroke-linejoin="round" stroke-linecap="round"></path>
+                 </svg>
+                Download the Hex Model
+              </a>
             </div>
           </div>
+        <div class="flex md:flex-row flex-col md:items-center gap-2 md:gap-4">
+
+            <div class="py-4 flex-none text-lg font-semibold">ASCII Art Source Code v1.3</div>
+            <div class=" md:p-4 text-muted">This ZIP archive contains all C source code for ASCII Art combined into a single source file (the amalgamation).</div>
+            <div class="flex-none self-center py-4 md:p-4">
+              <a href="https://github.com/symisc/ascii_art/archive/1.3.zip" class="flex items-center gap-2 rounded-md bg-blue-200 px-5 py-3 font-bold text-blue-700 shadow-sm transition duration-500 ease-in-out hover:bg-blue-300 hover:shadow-lg">
+                <svg class="w-6" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" stroke-linejoin="round" stroke-linecap="round"></path>
+                 </svg>
+                Download
+              </a>
+            </div>
+          </div>
+
+          <div class="gradient-graph-line my-5 h-1 w-full"></div>
+          <h2 class="mb-3 md:text-2xl sm:text-xl text-lg font-semibold text-tColor uppercase" id="gstart">Getting Started
+        </h2>
+        <p>Embedding the library in your application is straightforward. All you have to do is drop the <code class="code">ascii_art.c</code> and its accompanying <a class="link" href="https://github.com/symisc/ascii_art" target="_blank">header file</a> in your source tree plus the <strong>model</strong> that you can download from the link <a class="link" href="#model_dl">above</a> and perform the following API calls successively:</p>
+        <ul class="list">
+            <li>
+                <p>Call <code class="code">AsciiArtInit</code> first to initialize the <code class="code">ascii_render</code> structure defined in the <code class="code">ascii_art.h</code> header file.</p>
+            </li>
+            <li>
+                <p>Prepare the image to be processed by converting it to the <strong>grayscale colorspace</strong>. You can rely on some external library like OpenCV <a class="link" href="https://docs.opencv.org/3.1.0/de/d25/imgproc_color_conversions.html" target="_blank">cvtColor</a> or the built-in <code class="code">AsciiArtLoadImage</code> interface.</p>
+            </li>
+            <li>
+                <p>Allocate a buffer big enough to hold the entire ASCII text output. The amount of bytes needed is returned via the <code class="code">AsciiArtTextBufSize</code> interface. This step is optional if you do not want a text output but instead a binary ASCII glyphs image.</p>
+            </li>
+            <li>
+                <p>Finally, transform the input image into ASCII glyphs/text via <code class="code">AsciiArtRender</code>.</p>
+            </li>
+        </ul>
+        <p class="my-5">Below is a simple C program that demonstrates a typical usage of the ASCII Art C/C++ interfaces.</p>
+
+        <pre class="font-mono"><code class="rounded-lg language-c">/*
+* Compile this file together with the ASCII Art source code (https://pixlab.io/art - https://github.com/symisc/ascii_art)
+* to generate the executable. For example:
+*
+*  gcc -W -Wall -O6 ascii_art.c sample.c -o ascii -D ART_ENABLE_STB_IMAGE
+* ./ascii test.png
+*
+* ART_ENABLE_STB_IMAGE directive must be defined in order to load images from disk.
+* Otherwise you have to rely on an external library such as OpenCV to load the target images.
+*
+* If you get a compile-time error, it means that the `ascii_art.hex` model is missing.
+* Download it from: https://pixlab.io/art
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include "ascii_art.h"
+
+int main(int argc, char **argv) {
+	ascii_render sRender; /* Stack allocated */
+
+	unsigned char *zText, *zBlob;
+	int width, height;
+	unsigned int nBytes;
+
+	if (argc < 2) {
+		puts("Missing input image");
+		return -1;
+	}
+
+	/* Initialize the render structure */
+	AsciiArtInit(&sRender);
+
+	/* Load the target image */
+	zBlob = AsciiArtLoadImage(argv[1], &width, &height);
+	if (zBlob == 0) {
+		puts("Cannot load image");
+		return -1;
+	}
+
+	/* Allocate a buffer big enough to hold the entire text output */
+	nBytes = AsciiArtTextBufSize(&sRender, width, height);
+	zText = malloc(nBytes);
+
+	/* Finally, process */
+	AsciiArtRender(&sRender, zBlob, &width, &height, zText, 1);
+
+	/* Output the result */
+	fwrite(zText, sizeof(char), nBytes, stdout);
+	/* zBlob[] hold the binary ASCII glyphs now */
+
+	/* Release memory */
+	free(zText);
+	free(zBlob);
+
+	return 0;
+}</code>
+        </pre>
+        <p class="text-center"><a class="link" href="https://github.com/symisc/ascii_art/blob/master/sample.c" target="_blank">sample.c</a> on Github. Please report any issue or feature request on the <a class="link" href="https://github.com/symisc/ascii_art" target="_blank">Github page</a>.</p>
+        <h2 class="my-5 md:text-2xl sm:text-xl text-lg font-semibold text-tColor uppercase" id="capi">C/C++ API Reference</h2>
+        <p>This is the C/C++ language interface to ASCII Art. As of this release, only <strong>three interfaces</strong> are exported plus <strong>another optional</strong> for straightforward integration.</p>
+        <pre class="my-5"><code class="rounded-lg language-c">void AsciiArtInit(ascii_render *pRender)</code></pre>
+
+        <p class="text-pink-500">Description</p>
+        <p class="mt-3">Initialize and prepare the <code class="code">ascii_render</code> structure. This routine is often the first API call that an application makes and is a prerequisite in order to work with the ASCII Art library.</p>
+        <p class="text-pink-500 mt-7">Parameters</p>
+        <div class="flex sm:flex-row flex-col items-start sm:items-center gap-3 sm:gap-12 my-7 border-b pb-6">
+            <code class="code">ascii_render *pRender</code>
+            <p>A pointer to a stack or heap allocated ascii_render structure defined in the header file of the library.</p>
+        </div>
+
+        <pre class="my-5"><code class="rounded-lg language-c">unsigned int AsciiArtTextBufSize(ascii_render *pRender, int img_width, int img_height)</code></pre>
+        <p class="text-pink-500 ">Description</p>
+        <p class="mt-3">Calculate the <strong>amount of bytes</strong> needed to hold the <strong>entire ASCII text output</strong> of the input image.</p>
+        <p class="text-pink-500 mt-7">Parameters</p>
+        <div class="overflow-x-auto">
+            <table class="whitespace-nowrap">
+                <tbody>
+                <tr>
+                    <td class="p-4"><code class="code">ascii_render *pRender</code></td>
+                    <td class="p-4"><p>A pointer to an already initialized <code class="code">ascii_render</code> structure.</p></td>
+                </tr>
+                <tr>
+                    <td class="p-4"><code class="code">int img_width</code></td>
+                    <td class="p-4 "><p><strong>Width</strong> of the input image to be processed.</p></td>
+                </tr>
+                <tr>
+                    <td class="p-4"><code class="code">int img_height</code></td>
+                    <td class="p-4"><p><strong>Height</strong> of the input image to be processed.</p></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="text-pink-500 mt-7">Return Type</p>
+    <p class="my-5"><strong>Amount of bytes</strong> needed to hold the entire buffer that can be safely passed to a memory allocation routine such as <em>malloc()</em>.</p>
+    <pre class="my-5"><code class="rounded-lg language-c">void AsciiArtRender(ascii_render *pRender, unsigned char *zPixels /*IN/OUT*/, int *pnWidth /*IN/OUT*/, int *pnHeight /*IN/OUT*/, unsigned char *zBuf/* Optional/OUT */, int Optimize)</code></pre>
+
+    <p class="text-pink-500 mt-7">Description</p>
+    <p class="my-5">Transform an input <strong>grayscaled image</strong> into ASCII Art.</p>
+    <p class="text-pink-500 mt-7">Parameters</p>
+    <div class="overflow-x-auto border-b">
+        <table class="md:min-w-[50rem] min-w-[80rem]">
+            <tbody>
+                <tr>
+                    <td class="sm:p-4 p-2 text-nowrap"><code class="code">ascii_render *pRender</code></td>
+                    <td class="sm:p-4 p-2"><p>A pointer to an already initialized <code class="code">ascii_render</code> structure.</p></td>
+                </tr>
+                <tr>
+                    <td class="sm:p-4 p-2 text-nowrap"><code class="code">unsigned char *zPixels IN/OUT</code></td>
+                    <td class="sm:p-4 p-2 "><p>A pointer to a <strong>writable</strong> memory buffer holding the <strong>raw pixels</strong> of the input image. The pixels must be in the <strong>grayscale colorspace</strong> where each byte corresponds to a shade of gray (usually a value between 0 and 255). If you are working with OpenCV, then <span><a class="link" href="https://docs.opencv.org/3.1.0/de/d25/imgproc_color_conversions.html" target="_blank">cvtColor</a>(src, bwsrc, cv::<strong>COLOR_RGB2GRAY</strong>)</span> should produce grayscale image suitable for this routine. When done, the grayscale pixels are converted to ASCII glyphs <strong>in-place</strong> which mean that the input buffer must be <strong>writable</strong>. The built-in <code class="code">AsciiArtLoadImage</code> can be called to load an image from disk suitable for this routine.</p></td>
+                </tr>
+                <tr>
+                    <td class="sm:p-4 p-2 text-nowrap"><code class="code">int *pnWidth IN/OUT</code></td>
+                    <td class="sm:p-4 p-2">A pointer to an integer holding the <strong>width</strong> of the input image to be processed.</td>
+                </tr>
+                <tr>
+                    <td class="sm:p-4 p-2 text-nowrap"><code class="code">int *pnHeight IN/OUT</code></td>
+                    <td class="sm:p-4 p-2">A pointer to an integer holding the <strong>height</strong> of the input image to be processed.</td>
+                </tr>
+                <tr>
+                    <td class="sm:p-4 p-2 text-nowrap"><code class="code">unsigned char *zBuf Optional/OUT</code></td>
+                    <td class="sm:p-4 p-2">When set, the text output (i.e. printable ASCII characters) of the input image is written into this buffer. The buffer must be large enough to hold the entire text output. Call <code class="code">AsciiArtTextBufSize</code> before to get the amount of bytes needed.</td>
+                </tr>
+                <tr>
+                    <td class="sm:p-4 p-2 text-nowrap"><code class="code">int Optimize</code></td>
+                    <td class="sm:p-4 p-2">If non zero, perform some contrast enhancing preprocessing on the input grayscale image which is based on the <a class="link" href="https://en.wikipedia.org/wiki/Adaptive_histogram_equalization">adaptive histogram equalization</a> technique. If set, this operation is CPU intensive.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <pre class="my-5"><code class="rounded-lg language-c">unsigned char * AsciiArtLoadImage(const char *zPath, int *pWidth, int *pHeight)</code></pre>
+    
+    <p class="text-pink-500 mt-7">Description</p>
+    <p class="my-5">Loads an image from a file, convert it to the grayscale colorspace. Where done, the returned memory buffer can be passed directly to <code class="code">AsciiArtRender</code>. This interface is available only if the library is compiled with the <code class="code">ART_ENABLE_STB_IMAGE</code> compile-time directive.</p>
+    <div class="overflow-x-auto border-b">
+        <table class="min-w-[50rem]">
+            <tbody>
+                <tr>
+                    <td class="p-4 text-nowrap"><code class="code">const char *zPath                    </code></td>
+                    <td class="p-4"><p>Path to the target image to be processed. As of this release, the following format are supported: <strong>PNG</strong>, <strong>JPEG</strong>, <strong>PGM</strong>, <strong>PPM</strong>, <strong>BMP</strong>.</p></td>
+                </tr>
+                <tr>
+                    <td class="p-4 text-nowrap"><code class="code">int *pWidth OUT</code></td>
+                    <td class="p-4"><p>The <strong>width</strong> of the target image is written into this pointer.</p></td>
+                </tr>
+                <tr>
+                    <td class="p-4 text-nowrap"><code class="code">int *pHeight IN/OUT</code></td>
+                    <td class="p-4"><p>The <strong>height</strong> of the target image is written into this pointer.</p></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="text-pink-500 mt-7">Return Value </p>
+    <p class="my-5">A pointer to a writable buffer holding the <strong>raw grayscaled pixels</strong> of the target image that can be safely passed to <code class="code">AsciiArtRender</code> for processing. When done, this buffer must be freed using the <em>free()</em> interface from the standard C library to avoid memory leaks. <strong>NULL</strong> is returned on failure.</p>
         </div>
       </section>
     </main>
@@ -538,9 +536,12 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="assets/js/highlight/highlight.js"></script>
     <script src="assets/js/global.js"></script>
     <script src="assets/js/preline/preline.min.js"></script>
     <script src="assets/js/particles/particles.min.js"></script>
     <script src="assets/js/particles/particles-config.js"></script>
+    
+
   </body>
 </html>

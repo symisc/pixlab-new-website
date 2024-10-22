@@ -102,6 +102,9 @@ nav .hs-dropdown:hover>button {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+.hero-heading{
+  @apply text-4xl font-bold lg:text-5xl gradient-text
+}
 .bg-off-white{
   background-color: var(--color-off-white);
 }
