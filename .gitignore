@@ -18,6 +18,7 @@ dist/
 # System files
 .DS_Store
 Thumbs.db
+package-lock.json
 
 # Editor directories and files
 .vscode/
