@@ -1211,3 +1211,5 @@
     const n=e.replace("grmr_","").replace("_","-");He.registerLanguage(n,Ke[e])}
     return He}()
     ;"object"==typeof exports&&"undefined"!=typeof module&&(module.exports=hljs);
+
+    hljs.highlightAll();
