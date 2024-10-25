@@ -7,8 +7,8 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://pixlab.io/" />
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
-    <meta name="author" content="PixLab | Symisc Systems. Portion based on Softnio works">
-    <meta name="description" content="Tiny-Dream is a header only, embedded, dependency free, partially uncensored, Stable Diffusion implementation C++ library with primary focus on CPU performance and smaller memory footprint...">
+    <meta name="author" content="PixLab | Symisc Systems. Portion based on Softnio works" />
+    <meta name="description" content="Tiny-Dream is a header only, embedded, dependency free, partially uncensored, Stable Diffusion implementation C++ library with primary focus on CPU performance and smaller memory footprint..." />
     <link rel="stylesheet" href="assets/css/unicons/css/line.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
@@ -123,7 +123,7 @@
             <div class="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between gap-10 lg:flex-row">
               <!-- Hero Text -->
               <div class="max-w-[500px] text-center lg:max-w-screen-sm lg:text-left">
-                <h1 class="text-3xl font-bold lg:text-4xl gradient-text">Tiny Dream - Embedded, Stable Diffusion Inference in C++</h1>
+                <h1 class="gradient-text text-3xl font-bold lg:text-4xl">Tiny Dream - Embedded, Stable Diffusion Inference in C++</h1>
                 <p class="lead mt-5 text-gray-200">An embedded, header only, Stable Diffusion inference library written in C++ with primary focus on CPU efficiency & smaller memory footprint.</p>
               </div>
 
@@ -148,15 +148,15 @@
         </div>
       </section>
 
-       <!-- Content Section -->
-       <section>
+      <!-- Content Section -->
+      <section>
         <div class="mx-auto w-full max-w-screen-xl px-5 pb-12 pt-8 leading-8">
           <!-- Social Bar -->
           <div class="flex flex-wrap items-center justify-between gap-5 pb-3">
             <img class="dark-logo w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" />
             <p class="text-sm text-muted">
               <span>Version 2.197</span>
-              <span>(<a href="#"  target="_blank" class="text-primary hover:text-secondary">Release Notes</a>)</span>
+              <span>(<a href="#" target="_blank" class="text-primary hover:text-secondary">Release Notes</a>)</span>
             </p>
 
             <div class="flex flex-wrap">
@@ -181,160 +181,208 @@
 
           <article class="mt-5 text-tColor">
             <div class="gradient-graph-line mb-5 h-1 w-full"></div>
-            <p class="text-lg mb-5"><span><strong>Tiny Dream</strong></span> is a header only, dependency free*, <strong>partially uncensored, Stable Diffusion implementation** written in C++</strong> with primary focus on CPU efficiency, and smaller memory footprint. <span><strong>Tiny Dream</strong></span> runs reasonably <a class="link" href="#features">fast</a> on the average consumer hardware, <a class="link" href="#features">require</a> <strong>only 1.7 ~ 5.5 GB of RAM</strong> to execute, does not enforce Nvidia GPUs presence, and <strong>is designed to be <a class="link" href="#getting-started">embedded</a> on larger codebases (host programs) with an easy to use <a class="link" href="#cpp-api">C++ API</a></strong>. The possibilities are literally endless, or at least extend to the boundaries of Stable Diffusion's latent manifold.</p>
+            <p class="mb-5 text-lg">
+              <span><strong>Tiny Dream</strong></span> is a header only, dependency free*, <strong>partially uncensored, Stable Diffusion implementation** written in C++</strong> with primary focus on CPU efficiency, and smaller memory footprint. <span><strong>Tiny Dream</strong></span> runs reasonably <a class="link" href="#features">fast</a> on the average consumer hardware, <a class="link" href="#features">require</a> <strong>only 1.7 ~ 5.5 GB of RAM</strong> to execute, does not enforce
+              Nvidia GPUs presence, and <strong>is designed to be <a class="link" href="#getting-started">embedded</a> on larger codebases (host programs) with an easy to use <a class="link" href="#cpp-api">C++ API</a></strong
+              >. The possibilities are literally endless, or at least extend to the boundaries of Stable Diffusion's latent manifold.
+            </p>
 
             <small><strong>*</strong> Exception for the backend tensor library of course which is <em>ncnn</em> as of this release, with planned transition to <em>ggml</em>. Refer to the <a class="link" href="#roadmap">Roadmap section</a> for additional information.</small>
-            <br>
+            <br />
             <small><strong>**</strong> Stable Diffusion 1.x using the <a class="link" href="https://openai.com/research/clip" target="_blank">CLIP transformer</a> for token embedding, 512*512 pixels output that can be <a class="link" href="#features">upscaled</a> to <strong>2048x2048</strong> high resolution output.</small>
 
-            <p class="mt-8 text-center">Principle of Diffusion models. The prompt used to <a href="#code-gist">generate</a> such image using the Tiny Dream <a href="#cpp-api">C++ API</a> is:<br><span class="text-primary">"pyramid, desert, palm trees, river, sun, (landscape), (high quality)"</span></p>
-            <div class="flex gap-6 justify-center my-5 flex-wrap">
-              <img width="350" src="assets/images/pixelgenerate.png" alt="">
-              <img width="350" src="assets/images/tiny-dream-pyramid.jpeg" alt="">
+            <p class="mt-8 text-center">Principle of Diffusion models. The prompt used to <a href="#code-gist">generate</a> such image using the Tiny Dream <a href="#cpp-api">C++ API</a> is:<br /><span class="text-primary">"pyramid, desert, palm trees, river, sun, (landscape), (high quality)"</span></p>
+            <div class="my-5 flex flex-wrap justify-center gap-6">
+              <img width="350" src="assets/images/pixelgenerate.png" alt="Pixel generate" />
+              <img width="350" src="assets/images/tiny-dream-pyramid.jpeg" alt="Prompt used to generate such image: pyramid, desert, palm trees, river, sun, (landscape), (high quality)" title="Prompt used to generate such image: pyramid, desert, palm trees, river, (landscape), (high quality)" />
             </div>
-            <img width="700" class="mx-auto" src="assets/images/stablediffusion_overview.jpg" alt="Principle of Diffusion models">
-            <div class="flex justify-center my-5">
-
-              <small class="text-muted text-center">Illustration courtesy of <a class="link" href="https://scholar.harvard.edu/binxuw/classes/machine-learning-scratch/materials/stable-diffusion-scratch" target="_blank">Binxu Wang <i class="uil uil-external-link-alt"></i></a>, Ph.D candidate, Harvard University.</small>
+            <img width="700" class="mx-auto" src="assets/images/stablediffusion_overview.jpg" alt="Principle of Diffusion models" title="Principle of Diffusion models" />
+            <div class="my-5 flex justify-center">
+              <small class="text-center text-muted"
+                >Illustration courtesy of <a class="link" href="https://scholar.harvard.edu/binxuw/classes/machine-learning-scratch/materials/stable-diffusion-scratch" target="_blank">Binxu Wang <i class="uil uil-external-link-alt"></i></a>, Ph.D candidate, Harvard University.</small
+              >
             </div>
-            <p><a class="link" href="https://en.wikipedia.org/wiki/Stable_Diffusion" target="_blank">Stable Diffusion <i class="uil uil-external-link-alt"></i></em></a>, a powerful, open-source text-to-image generation model launched publicly by <a class="link" href="https://stability.ai/blog/stable-diffusion-public-release" target="_blank">Stability.ai <i class="uil uil-external-link-alt"></i></a> in August, 2022, and is designed to produce images matching input text prompt. Stable Diffusion rely on the <a class="link" href="https://ommer-lab.com/research/latent-diffusion-models/" target="_blank">latent diffusion model <i class="uil uil-external-link-alt"></i></a> architecture, a variant of the diffusion model which maps to the latent space using a fixed Markov chain <a class="link" href="https://arxiv.org/abs/2112.10752" target="_blank"><i class="uil uil-external-link-alt"></i></a>. The goal of diffusion models is to learn the latent structure of a dataset by modeling the way in which data points diffuse through the latent space <a class="link" href="https://www.louisbouchard.ai/latent-diffusion-models" target="_blank"><i class="uil uil-external-link-alt"></i></a>. They are designed to learn the underlying structure of a dataset by mapping it to a lower-dimensional latent space. This latent space represents the data in which the relationships between different data points are more easily understood and analyzed.</p>
+            <p>
+              <a class="link" href="https://en.wikipedia.org/wiki/Stable_Diffusion" target="_blank">Stable Diffusion <i class="uil uil-external-link-alt"></i></a>, a powerful, open-source text-to-image generation model launched publicly by <a class="link" href="https://stability.ai/blog/stable-diffusion-public-release" target="_blank">Stability.ai <i class="uil uil-external-link-alt"></i></a> in August, 2022, and is designed to produce images matching input text prompt. Stable Diffusion rely on
+              the <a class="link" href="https://ommer-lab.com/research/latent-diffusion-models/" target="_blank">latent diffusion model <i class="uil uil-external-link-alt"></i></a> architecture, a variant of the diffusion model which maps to the latent space using a fixed Markov chain <a class="link" href="https://arxiv.org/abs/2112.10752" target="_blank"><i class="uil uil-external-link-alt"></i></a>. The goal of diffusion models is to learn the latent structure of a dataset by modeling the way
+              in which data points diffuse through the latent space <a class="link" href="https://www.louisbouchard.ai/latent-diffusion-models" target="_blank"><i class="uil uil-external-link-alt"></i></a>. They are designed to learn the underlying structure of a dataset by mapping it to a lower-dimensional latent space. This latent space represents the data in which the relationships between different data points are more easily understood and analyzed.
+            </p>
 
             <div class="text-center">
-              <p class="my-5"><small class="text-muted">PixLab | <a class="link" href="https://symisc.net" target="_blank">Symisc Systems</a> Open Source, ML/DL related projects namely:<br><a class="link" href="https://github.com/symisc/tiny-dream" target="_blank">Tiny Dream</a>, <a class="link" href="art" target="_blank">ASCII Art</a> &amp; <a class="link" href="https://sod.pixlab.io" target="_blank">SOD</a></small></p>
-              <div class="flex justify-center flex-wrap gap-3">
-
+              <p class="my-5">
+                <small class="text-muted">PixLab | <a class="link" href="https://symisc.net" target="_blank">Symisc Systems</a> Open Source, ML/DL related projects namely:<br /><a class="link" href="https://github.com/symisc/tiny-dream" target="_blank">Tiny Dream</a>, <a class="link" href="art" target="_blank">ASCII Art</a> &amp; <a class="link" href="https://sod.pixlab.io" target="_blank">SOD</a></small>
+              </p>
+              <div class="flex flex-wrap justify-center gap-3">
                 <iframe src="https://ghbtns.com/github-btn.html?user=symisc&amp;repo=tiny-dream&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
                 <iframe src="https://ghbtns.com/github-btn.html?user=symisc&amp;repo=ascii_art&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
-              <iframe src="https://ghbtns.com/github-btn.html?user=symisc&amp;repo=sod&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
-              <iframe src="https://ghbtns.com/github-btn.html?user=symisc&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="220px" height="30px"></iframe>
+                <iframe src="https://ghbtns.com/github-btn.html?user=symisc&amp;repo=sod&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+                <iframe src="https://ghbtns.com/github-btn.html?user=symisc&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="220px" height="30px"></iframe>
               </div>
-
             </div>
             <ul class="list text-lg">
               <li><a class="link" href="#features">Features</a></li>
               <li><a class="link" href="#getting-started">Getting Started</a></li>
               <li><a class="link" href="#downloads">Download</a></li>
-              <li><a class="link" href="https://github.com/symisc/tiny-dream" target="_blank">Github Repository <i class="uil uil-external-link-alt"></i></a></li>
+              <li>
+                <a class="link" href="https://github.com/symisc/tiny-dream" target="_blank">Github Repository <i class="uil uil-external-link-alt"></i></a>
+              </li>
               <li><a class="link" href="#roadmap">Project Roadmap</a></li>
               <li><a class="link" href="#license">Licensing</a></li>
               <li><a class="link" href="#cpp-api">C++ API Reference</a></li>
               <li><a class="link" href="#related-projects">Related Projects</a></li>
-              <li><a class="link" href="https://github.com/symisc/tiny-dream/issues" target="_blank">Issues Tracker <i class="uil uil-external-link-alt"></i></a></li>
-          </ul>
-        </article>
+              <li>
+                <a class="link" href="https://github.com/symisc/tiny-dream/issues" target="_blank">Issues Tracker <i class="uil uil-external-link-alt"></i></a>
+              </li>
+            </ul>
+          </article>
 
           <article class="mt-12">
-            <h2 class="mb-5 text-2xl sm:text-3xl font-semibold text-tColor uppercase" id="features">Features</h2>
+            <h2 class="sub-heading" id="features">Features</h2>
             <div class="gradient-graph-line mb-5 h-1 w-full"></div>
 
             <ul class="list">
               <li>
-                  <strong>Smallest, Run-Time Memory Footprint for Running Stable Diffusion on Inference</strong>
-                  <ul>
-                      <li><span><strong>Tiny Dream</strong></span> maximizes memory efficiency thanks to ONNX quantization <a class="link" href="https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html" target="_blank"><i class="uil uil-external-link-alt"></i></a>, allowing for seamless image generation with minimal memory footprint.</li>
-                      <li>As of this release, only <strong>5.5GB of RAM</strong> are needed for Stable Diffusion <a class="link" href="#tiny-dream-method">Inference</a> with <strong>high-resolution, 2048x2048 pixels output</strong>.</li>
-                      <li>Further memory gain (<strong>1.7GB ~ 4GB</strong>) can be achieved with <strong>standard, medium quality 512x512 pixels output</strong>.</li>
-                  </ul>
+                <strong>Smallest, Run-Time Memory Footprint for Running Stable Diffusion on Inference</strong>
+                <ul>
+                  <li>
+                    <span><strong>Tiny Dream</strong></span> maximizes memory efficiency thanks to ONNX quantization <a class="link" href="https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html" target="_blank"><i class="uil uil-external-link-alt"></i></a>, allowing for seamless image generation with minimal memory footprint.
+                  </li>
+                  <li>As of this release, only <strong>5.5GB of RAM</strong> are needed for Stable Diffusion <a class="link" href="#tiny-dream-method">Inference</a> with <strong>high-resolution, 2048x2048 pixels output</strong>.</li>
+                  <li>Further memory gain (<strong>1.7GB ~ 4GB</strong>) can be achieved with <strong>standard, medium quality 512x512 pixels output</strong>.</li>
+                </ul>
               </li>
               <li>
-                  <strong>OpenCV Dependency Free</strong>
-                  <ul>
-                      <li>You do not need to link to OpenCV or any other bloated image processing library.</li>
-                      <li>Only <code><a class="link" href="https://github.com/nothings/stb/blob/master/stb_image_write.h" target="_blank">stb_image_write.h</a></code> from the excellent <a href="https://github.com/nothings/stb/" target="_blank">stb <i class="uil uil-external-link-alt"></i></a> single-header, public domain C library is required for saving images to disk.</li>
-                  </ul>
+                <strong>OpenCV Dependency Free</strong>
+                <ul>
+                  <li>You do not need to link to OpenCV or any other bloated image processing library.</li>
+                  <li>
+                    Only <code><a class="link" href="https://github.com/nothings/stb/blob/master/stb_image_write.h" target="_blank">stb_image_write.h</a></code> from the excellent <a href="https://github.com/nothings/stb/" target="_blank">stb <i class="uil uil-external-link-alt"></i></a> single-header, public domain C library is required for saving images to disk.
+                  </li>
+                </ul>
               </li>
               <li>
-                  <strong>Straightforward to Integrate on Existing Codebases</strong>
-                  <ul>
-                      <li>Just drop <code class="code">tinydream.hpp</code> and <code class="code">stb_image_write.h</code> on your source tree with the <a class="link" href="#downloads">Pre-trained assets</a>.</li>
-                      <li>The library exposes a <strong>single C++ class</strong> named <code class="code">tinyDream</code> with just <a class="link" href="#cpp-api">8 public methods</a>.</li>
-                      <li><strong>No output to <code class="code">stdout/stderr</code></strong>. You just supply your log <a class="link" href="#set-log-callback">consumer callback</a>, and redirect the generated log messages to your favorite stream (<em>eg</em> Terminal, Disk File or Network Socket).</li>
-                  </ul>
+                <strong>Straightforward to Integrate on Existing Codebases</strong>
+                <ul>
+                  <li>Just drop <code class="code">tinydream.hpp</code> and <code class="code">stb_image_write.h</code> on your source tree with the <a class="link" href="#downloads">Pre-trained assets</a>.</li>
+                  <li>The library exposes a <strong>single C++ class</strong> named <code class="code">tinyDream</code> with just <a class="link" href="#cpp-api">8 public methods</a>.</li>
+                  <li>
+                    <strong>No output to <code class="code">stdout/stderr</code></strong
+                    >. You just supply your log <a class="link" href="#set-log-callback">consumer callback</a>, and redirect the generated log messages to your favorite stream (<em>eg</em> Terminal, Disk File or Network Socket).
+                  </li>
+                </ul>
               </li>
               <li id="bench">
                 <strong>Reasonably fast on Intel/AMD CPUs</strong>
                 <ul class="list">
-                    <li>With TBB threading, Intel MKL*, and AVX vectorization.</li>
-                    <li>
-                      <div class="overflow-x-auto">
-                      <table class="min-w-[34.375rem] max-w-xl border border-gray-300 rounded-lg shadow-md">
+                  <li>With TBB threading, Intel MKL*, and AVX vectorization.</li>
+                  <li>
+                    <div class="overflow-x-auto">
+                      <table class="min-w-[34.375rem] max-w-xl rounded-lg border border-gray-300 shadow-md">
                         <thead>
                           <tr class="bg-surface uppercase">
-                            <th class="py-3 px-6 text-left border-r">Intel i9-9990XE</th>
-                            <th class="py-3 px-6 text-left border-r">Intel i7-13700</th>
-                            <th class="py-3 px-6 text-left">Ryzen 9-5900X</th>
+                            <th class="border-r px-6 py-3 text-left">Intel i9-9990XE</th>
+                            <th class="border-r px-6 py-3 text-left">Intel i7-13700</th>
+                            <th class="px-6 py-3 text-left">Ryzen 9-5900X</th>
                           </tr>
                         </thead>
-                        <tbody class="text-muted font-light">
+                        <tbody class="font-light text-muted">
                           <tr class="border-b">
-                            <td class="py-3 px-6 text-left border-r">2.98s ~ 5.07s <em>Clock</em>: 5.0GHz ~ 4.0GHz</td>
-                            <td class="py-3 px-6 text-left border-r">10.09s ~ 8.16s <em>Clock</em>: 2.8GHz ~ 3.9GHz</td>
-                            <td class="py-3 px-6 text-left">5.38s ~ 4.02s <em>Clock</em>: 3.7GHz ~ 4.8GHz</td>
+                            <td class="border-r px-6 py-3 text-left">2.98s ~ 5.07s <em>Clock</em>: 5.0GHz ~ 4.0GHz</td>
+                            <td class="border-r px-6 py-3 text-left">10.09s ~ 8.16s <em>Clock</em>: 2.8GHz ~ 3.9GHz</td>
+                            <td class="px-6 py-3 text-left">5.38s ~ 4.02s <em>Clock</em>: 3.7GHz ~ 4.8GHz</td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
 
-                      
-                        <div class="text-muted mt-5">
-                            <span>Slowest to fastest inference time (<em>single seed</em>) expressed in seconds with clock speed (base &amp; turbo-boost) under various background loads for a <strong>standard 512x512, non-upscaled PNG image</strong>. Please note that PixLab maintain a private fork of NCNN that is extremely optimized for the x86 architecture so inference speed may vary if reproduced on your machine.</span>
-                        </div>
-                    </li>
+                    <div class="mt-5 text-muted">
+                      <span>Slowest to fastest inference time (<em>single seed</em>) expressed in seconds with clock speed (base &amp; turbo-boost) under various background loads for a <strong>standard 512x512, non-upscaled PNG image</strong>. Please note that PixLab maintain a private fork of NCNN that is extremely optimized for the x86 architecture so inference speed may vary if reproduced on your machine.</span>
+                    </div>
+                  </li>
                 </ul>
-            </li>
-              <li>
-                  <strong>Support <a class="link" href="https://github.com/xinntao/Real-ESRGAN" target="_blank">Real-ESRGAN <i class="uil uil-external-link-alt"></i></a>, A Super Resolution Network Upscaler</strong>
-                  <ul class="list">
-                      <li>Generate extremely <strong>high-resolution, 2048x2048 pixels output</strong> thanks to this neural network. This extra step is a CPU intensive operation, and takes few seconds to complete.</li>
-                  </ul>
               </li>
               <li>
-                  <strong>Full Support for Negative Words</strong>
-                  <ul class="list">
-                      <li>Supply an extra set of words that allows you to list what you don't want to see generated such as <strong>gore or <a class="link" href="cmd?id=nsfw" target="_blank">NSFW&nbsp;<i class="uil uil-external-link-alt"></i></a> content</strong> besides your <a class="link" href="#tiny-dream-method">Positive Prompts</a>.</li>
-                  </ul>
+                <strong
+                  >Support <a class="link" href="https://github.com/xinntao/Real-ESRGAN" target="_blank">Real-ESRGAN <i class="uil uil-external-link-alt"></i></a>, A Super Resolution Network Upscaler</strong
+                >
+                <ul class="list">
+                  <li>Generate extremely <strong>high-resolution, 2048x2048 pixels output</strong> thanks to this neural network. This extra step is a CPU intensive operation, and takes few seconds to complete.</li>
+                </ul>
               </li>
               <li>
-                  <strong>Full Support for Words Priority</strong>
-                  <ul class="list">
-                      <li>Instruct the model to pay attention, and <strong>give higher priority</strong> to word (<em>keywords</em>) surrounded by parenthesis <em><strong>()</strong></em>.</li>
-                      <li>square brackets <em><strong>[]</strong></em> on the other side are used to <strong>reduce word importance</strong>.</li>
-                  </ul>
+                <strong>Full Support for Negative Words</strong>
+                <ul class="list">
+                  <li>
+                    Supply an extra set of words that allows you to list what you don't want to see generated such as
+                    <strong
+                      >gore or <a class="link" href="cmd?id=nsfw" target="_blank">NSFW&nbsp;<i class="uil uil-external-link-alt"></i></a> content</strong
+                    >
+                    besides your <a class="link" href="#tiny-dream-method">Positive Prompts</a>.
+                  </li>
+                </ul>
               </li>
               <li>
-                  <strong>Support for Output Metadata</strong>
-                  <ul class="list">
-                      <li>Link meta information to your output images such as <em>copyright notice</em>, <em>comments</em>, or any other meta data you would like to see linked to your image.</li>
-                  </ul>
+                <strong>Full Support for Words Priority</strong>
+                <ul class="list">
+                  <li>
+                    Instruct the model to pay attention, and <strong>give higher priority</strong> to word (<em>keywords</em>) surrounded by parenthesis <em><strong>()</strong></em
+                    >.
+                  </li>
+                  <li>
+                    square brackets <em><strong>[]</strong></em> on the other side are used to <strong>reduce word importance</strong>.
+                  </li>
+                </ul>
               </li>
               <li>
-                  <strong>Support for Stable Diffusion Extra Parameters</strong>
-                  <ul class="list">
-                      <li>Adjust <a class="link" href="#tiny-dream-method">Seed resizing</a>: A way to generate the same image but at slightly different resolution.</li>
-                      <li>Control how much the image generation process follows the text prompt using <a class="link" href="#tiny-dream-method">guidance scale</a>.</li>
-                      <li>Adjust sampling steps during Stable Diffusion <a class="link" href="#tiny-dream-method">Inference</a>.</li>
-                  </ul>
+                <strong>Support for Output Metadata</strong>
+                <ul class="list">
+                  <li>Link meta information to your output images such as <em>copyright notice</em>, <em>comments</em>, or any other meta data you would like to see linked to your image.</li>
+                </ul>
               </li>
-          </ul>
+              <li>
+                <strong>Support for Stable Diffusion Extra Parameters</strong>
+                <ul class="list">
+                  <li>Adjust <a class="link" href="#tiny-dream-method">Seed resizing</a>: A way to generate the same image but at slightly different resolution.</li>
+                  <li>Control how much the image generation process follows the text prompt using <a class="link" href="#tiny-dream-method">guidance scale</a>.</li>
+                  <li>Adjust sampling steps during Stable Diffusion <a class="link" href="#tiny-dream-method">Inference</a>.</li>
+                </ul>
+              </li>
+            </ul>
           </article>
           <article class="mt-12">
-            <h2 class="mb-5 text-2xl sm:text-3xl font-semibold text-tColor uppercase" id="getting-started">Getting Started</h2>
+            <h2 class="sub-heading" id="getting-started">Getting Started</h2>
             <div class="gradient-graph-line mb-5 h-1 w-full"></div>
-            <p class="text-lg text-tColor">Integrating <span><strong>Tiny Dream</strong></span> on your existing code base is straightforward. Here is what to do without having to do a lot of tedious reading and configuration:</p>
-            <h5 class="text-lg sm:text-xl text-primary my-5 uppercase">1. Download The Tiny-Dream Source Code</h5>
+            <p class="text-lg text-tColor">
+              Integrating <span><strong>Tiny Dream</strong></span> on your existing code base is straightforward. Here is what to do without having to do a lot of tedious reading and configuration:
+            </p>
+            <h5 class="my-5 text-lg uppercase text-primary sm:text-xl">1. Download The Tiny-Dream Source Code</h5>
             <div class="sm:pl-9">
               <ul class="list">
-                  <li><a class="link" href="#downloads">Download</a> the latest public release of <span><strong>Tiny Dream</strong></span>, and extract the package on a directory of your choice. Usually, extraction occur on the source tree of your existing codebase for example.</li>
-                  <li>Refer to the <a class="link" href="#downloads">download</a> section below to get a copy of the <span><strong>Tiny Dream</strong></span> source code as well as the <strong>Pre-Trained Models &amp; Assets</strong>.</li>
+                <li>
+                  <a class="link" href="#downloads">Download</a> the latest public release of <span><strong>Tiny Dream</strong></span
+                  >, and extract the package on a directory of your choice. Usually, extraction occur on the source tree of your existing codebase for example.
+                </li>
+                <li>
+                  Refer to the <a class="link" href="#downloads">download</a> section below to get a copy of the <span><strong>Tiny Dream</strong></span> source code as well as the <strong>Pre-Trained Models &amp; Assets</strong>.
+                </li>
               </ul>
-          </div>
-          <h5 class="text-lg sm:text-xl text-primary my-5 uppercase">2. Embedding Tiny-Dream</h5>
-          <div class="sm:pl-9" >
-            <ul class="list">
-                <li>The <span><strong>Tiny Dream</strong></span> source code <a class="link" href="#downloads">comprise</a> <strong>only two header files</strong> that is <code class="code"><strong>tinydream.hpp</strong></code> and <code class="code"><strong>stb_image_write.h</strong></code>.</li>
+            </div>
+            <h5 class="my-5 text-lg uppercase text-primary sm:text-xl">2. Embedding Tiny-Dream</h5>
+            <div class="sm:pl-9">
+              <ul class="list">
+                <li>
+                  The <span><strong>Tiny Dream</strong></span> source code <a class="link" href="#downloads">comprise</a> <strong>only two header files</strong> that is <code class="code"><strong>tinydream.hpp</strong></code> and <code class="code"><strong>stb_image_write.h</strong></code
+                  >.
+                </li>
                 <li>All you have to do is drop these two C/C++ header files on your source tree, and <a class="link" href="#tiny-dream-constructor">instantiate</a> a new <code class="code">tinyDream</code> object as shown on the pseudo C++ code below:</li>
-            </ul>
-           <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:.2em .6em;border-radius: 10px;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1 
+              </ul>
+              <!-- HTML generated using hilite.me -->
+              <div style="background: #ffffff; overflow: auto; width: auto; border: 1px solid #ccc; padding: 0.2em 0.6em; border-radius: 4px">
+                <table>
+                  <tr>
+                    <td>
+                      <pre style="margin: 0; line-height: 125%">
+ 1 
  2
  3
  4
@@ -391,7 +439,11 @@
 55
 56
 57
-58</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">#include &quot;tinydream.hpp&quot;</span>
+58</pre
+                      >
+                    </td>
+                    <td>
+                      <pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">#include &quot;tinydream.hpp&quot;</span>
 <span style="color: #2b91af">int</span> main(<span style="color: #2b91af">int</span> argc, <span style="color: #2b91af">char</span> *argv[]) 
 {
     tinyDream td; <span style="color: #008000">// stack allocated tinyDream object</span>
@@ -449,70 +501,119 @@
     }
     <span style="color: #0000ff">return</span> 0;
 }
-</pre></td></tr></table></div>
+</pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
 
-        <p class="text-lg mt-5 text-tColor">👏 You have successfully integrated <span><strong>Tiny Dream</strong></span>. To build &amp; generate an executable for the <a class="link" href="https://gist.github.com/symisc/4936706c19e43cfa1e05cc8c1157ad11" target="_blank">boilerplate application <i class="uil uil-external-link-alt"></i></a>, refer to the next section...</p>
-      </div>
-      
-      <div class="sm:pl-9">
+              <p class="mt-5 text-lg text-tColor">
+                👏 You have successfully integrated <span><strong>Tiny Dream</strong></span
+                >. To build &amp; generate an executable for the <a class="link" href="https://gist.github.com/symisc/4936706c19e43cfa1e05cc8c1157ad11" target="_blank">boilerplate application <i class="uil uil-external-link-alt"></i></a>, refer to the next section...
+              </p>
+            </div>
 
-      
-      <ul class="list">
-          <li>Building Tiny-Dream from <a class="link" href="https://github.com/symisc/tiny-dream" target="_blank">source <i class="uil uil-external-link-alt"></i></a> require a <strong>modern C++17 compiler</strong> such as GCC 7 or later, Clang or Microsoft Visual Studio (MSVC).</li>
-          <li>You also <strong>need to link to the default backend Tensor library</strong> in order to generate the executable.</li>
-          <li>As of this release, <a class="link" href="https://github.com/Tencent/ncnn/wiki/how-to-build" target="_blank">NCNN <i class="uil uil-external-link-alt"></i></a> is the default tensor library. On our <a class="link" href="#roadmap">Roadmap</a>, we plan to ditch <code class="code">ncnn</code> to a less bloated tensor library such as <a class="link" href="https://sod.pixlab.io" target="_blank">SOD</a> or <a class="link" href="https://github.com/ggerganov/ggml " target="_blank">GGML</a> with focus on CPU efficiency.</li>
-          <li>An example of generating a heavy optimized executable without relying on a external build manager is shown just below:</li>
-      </ul>
-<!-- HTML generated using hilite.me -->
- <div class="text-lg" style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:.2em .6em;border-radius: 10px;"><table><tr><td><pre style="margin: 0; line-height: 125%">
+            <div class="sm:pl-9">
+              <ul class="list">
+                <li>
+                  Building Tiny-Dream from <a class="link" href="https://github.com/symisc/tiny-dream" target="_blank">source <i class="uil uil-external-link-alt"></i></a> require a <strong>modern C++17 compiler</strong> such as GCC 7 or later, Clang or Microsoft Visual Studio (MSVC).
+                </li>
+                <li>You also <strong>need to link to the default backend Tensor library</strong> in order to generate the executable.</li>
+                <li>
+                  As of this release, <a class="link" href="https://github.com/Tencent/ncnn/wiki/how-to-build" target="_blank">NCNN <i class="uil uil-external-link-alt"></i></a> is the default tensor library. On our <a class="link" href="#roadmap">Roadmap</a>, we plan to ditch <code class="code">ncnn</code> to a less bloated tensor library such as <a class="link" href="https://sod.pixlab.io" target="_blank">SOD</a> or
+                  <a class="link" href="https://github.com/ggerganov/ggml " target="_blank">GGML</a> with focus on CPU efficiency.
+                </li>
+                <li>An example of generating a heavy optimized executable without relying on a external build manager is shown just below:</li>
+              </ul>
+              <!-- HTML generated using hilite.me -->
+              <div class="text-lg" style="background: #ffffff; overflow: auto; width: auto; border: 1px solid #ccc; padding: 0.2em 0.6em; border-radius: 4px">
+                <table>
+                  <tr>
+                    <td>
+                      <pre style="margin: 0; line-height: 125%">
 git clone https://github.com/symisc/tiny-dream.git
 cd tiny-dream
 g++ -o tinydream boileplate.cpp -funsafe-math-optimizations -Ofast -flto=auto  -funroll-all-loops -pipe -march=native -std=c++17 -Wall -Wextra <span style="color: #a31515">`</span>pkg-config --cflags --libs ncnn<span style="color: #a31515">`</span> -lstdc++ -pthread -Wl -flto -fopt-info-vec-optimized 
 ./tinydream <span style="color: #a31515">&quot;pyramid, desert, palm trees, river, (landscape), (high quality)&quot;</span>
-</pre></td></tr></table></div>
-  
+</pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
 
-      <ul class="list">
-          <li>Just reproduce the steps above on your terminal to generate a heavy optimized build for your target platform.</li>
-          <li>Alternatively, you can rely on a build manager such as <a class="link" href="https://cmake.org/" target="_blank">CMAKE <i class="uil uil-external-link-alt"></i></a> to build the executable for you. The Tiny-Dream <a class="link" href="https://github.com/symisc/tiny-dream" target="_blank">repository <i class="uil uil-external-link-alt"></i></a> repository already contain the necessarily CMAKE template to build the executable from source.</li>
-      </ul>
-    </div>
-      <h5 class="text-lg sm:text-xl text-primary my-5 uppercase">4. Get the Pre-Trained Models & Assets</h5>
-      <div class="sm:pl-9">
-        <ul class="list">
-            <li>Once your executable built, <strong>you will need the <span ><strong>Tiny Dream</strong></span> pre-trained models &amp; assets path accessible to your executable</strong>.</li>
-            <li>The <span ><strong>Tiny Dream</strong></span> assets comprise all pre-trained models (<strong>over 2GB as of this release</strong>) required by the <a href="#tiny-dream-method"><font face="courier">tinyDream::dream()</font></a> method in order to run stable diffusion in inference (<em>image generation</em>).</li>
-            <li><strong>You can download the pre-trained models from the <a class="link" href="#downloads">Download</a> section below</strong>.</li>
-            <li>Once downloaded, extract the assets ZIP archive in a directory of your choice (usually the directory where your executable is located), and set the full path via <font face="courier"><a class="link" href="#set-assets-path-method">tinyDream::setAssetsPath()</a></font> or from the <span ><strong>Tiny Dream</strong></span> <a class="link" href="#tiny-dream-constructor">constructor</a>.</li>
-        </ul>
-    </div>
-    <h5 class="text-lg sm:text-xl text-primary my-5 uppercase" id="code-gist">5. C++ Usage Example</h5>
-    <div class="sm:pl-9 text-tColor">
-      <p>The <a class="link" href="https://gist.github.com/symisc/4936706c19e43cfa1e05cc8c1157ad11" target="_blank">C++ gist <i class="uil uil-external-link-alt"></i></a> below highlights a typical integration usage of <span ><strong>Tiny Dream</strong></span> on an existing C++ code base:</p>
-      <script src="https://gist.github.com/symisc/4936706c19e43cfa1e05cc8c1157ad11.js"></script>
-<ul class="list" id="step-by-step-cpp">
-  <li>The above code should be self-explanatory, and easy to understand for the average C++ programmer. A new <code class="code">tinyDream</code> object is allocated on the stack, and <a class="link" href="#tiny-dream-constructor">initialized</a> on line 83 of the gist above.</li>
-  <li>Library inference engine, version number &amp; copyright notice, are shown on line 86 of the gist via call to the <a class="link" href="#about-method">tinyDream::about()</a> static method.</li>
-  <li>At least, one argument is required that is the <strong>Positive Prompt which consists of words separated by commas that describe something you'd like to see generated</strong>. If no arguments were provided, an example of Positive &amp; Negative Prompts are shown on line 93 via call to the <font face="courier"><a class="link" href="#prompt-example-method">tinyDream::promptExample()</a></font> static method, and the program exits immediately.</li>
-  <li>Optionally, a log consumer callback is registered on line 101 via call to the <font face="courier"><a class="link" href="#set-log-callback">tinyDream::setLogCallback()</a></font> method. Inference is a heavy process, and may take some time to execute depending on the available resources so it make sense to log everything to the terminal or a text file during execution for a better user experience or to get an insight of what went wrong during the entire process.</li>
-  <li>Pre-trained models path is set on line 106 via call to the <font face="courier"><a class="link" href="#set-assets-path-method">tinyDream::setAssetsPath()</a></font> method. The <span ><strong>Tiny Dream</strong></span> assets comprise all pre-trained models (over 2GB as of this release) required by the <a class="link" href="#tiny-dream-method"><font face="courier">tinyDream::dream()</font></a> method in order to run stable diffusion in inference (<em>image generation</em>). <strong>You can download the pre-trained assets from the <a class="link" href="#downloads">Download</a> section below</strong>. You can also set the path directly from the <a class="link" href="#tiny-dream-constructor">constructor</a> without calling this method.</li>
-  <li>Please note that if your <span ><strong>Tiny Dream</strong></span> assets are located on the same directory where your executable reside, there is no need then to specify any path, the <a class="link" href="#tiny-dream-constructor">constructor</a> default argument handle this specific case for you.</li>
-  <li><em>Seed</em> &amp; <em>Steps</em> extra parameters are collected if available which controls respectively the resolution, and the accuracy (input text criteria) of the <a class="link" href="#tiny-dream-method">image generation process</a>.</li>
-  <li>Finally, <strong>Stable Diffusion inference took place on line 158</strong> of the gist above via single call to the <font face="courier"><a class="link" href="#tiny-dream-method"><strong>tinyDream::dream()</strong></a></font>method. On successful execution, the generated image path is copied to the <font face="courier">outputImagePath</font> parameter, and the supplied log callback should report any errors if any during the entire process.</li>
-</ul>
-    </div>
-    <h5 class="text-lg sm:text-xl text-primary my-5 uppercase" id="code-gist">6. Continue with The C++ API Reference Guide</h5>
-    <p class=" text-tColor">The <span ><strong>Tiny Dream</strong></span> <a class="link" href="#cpp-api">C++ Interface</a>, provides detailed specifications for all of the various methods the <span ><strong>Tiny Dream</strong></span> class exports. Once the reader understands the basic principles of operation for <span ><strong>Tiny Dream</strong></span>, that <a class="link" href="#cpp-api">section</a> should serve as a reference guide.</p>
+              <ul class="list">
+                <li>Just reproduce the steps above on your terminal to generate a heavy optimized build for your target platform.</li>
+                <li>
+                  Alternatively, you can rely on a build manager such as <a class="link" href="https://cmake.org/" target="_blank">CMAKE <i class="uil uil-external-link-alt"></i></a> to build the executable for you. The Tiny-Dream <a class="link" href="https://github.com/symisc/tiny-dream" target="_blank">repository <i class="uil uil-external-link-alt"></i></a> repository already contain the necessarily CMAKE template to build the executable from source.
+                </li>
+              </ul>
+            </div>
+            <h5 class="my-5 text-lg uppercase text-primary sm:text-xl">4. Get the Pre-Trained Models & Assets</h5>
+            <div class="sm:pl-9">
+              <ul class="list">
+                <li>
+                  Once your executable built,
+                  <strong
+                    >you will need the <span><strong>Tiny Dream</strong></span> pre-trained models &amp; assets path accessible to your executable</strong
+                  >.
+                </li>
+                <li>
+                  The <span><strong>Tiny Dream</strong></span> assets comprise all pre-trained models (<strong>over 2GB as of this release</strong>) required by the <a href="#tiny-dream-method">tinyDream::dream()</a> method in order to run stable diffusion in inference (<em>image generation</em>).
+                </li>
+                <li>
+                  <strong>You can download the pre-trained models from the <a class="link" href="#downloads">Download</a> section below</strong>.
+                </li>
+                <li>
+                  Once downloaded, extract the assets ZIP archive in a directory of your choice (usually the directory where your executable is located), and set the full path via <a class="link" href="#set-assets-path-method">tinyDream::setAssetsPath()</a> or from the <span><strong>Tiny Dream</strong></span> <a class="link" href="#tiny-dream-constructor">constructor</a>.
+                </li>
+              </ul>
+            </div>
+            <h5 class="my-5 text-lg uppercase text-primary sm:text-xl" id="code-gist">5. C++ Usage Example</h5>
+            <div class="text-tColor sm:pl-9">
+              <p>
+                The <a class="link" href="https://gist.github.com/symisc/4936706c19e43cfa1e05cc8c1157ad11" target="_blank">C++ gist <i class="uil uil-external-link-alt"></i></a> below highlights a typical integration usage of <span><strong>Tiny Dream</strong></span> on an existing C++ code base:
+              </p>
+              <script src="https://gist.github.com/symisc/4936706c19e43cfa1e05cc8c1157ad11.js"></script>
+              <ul class="list" id="step-by-step-cpp">
+                <li>The above code should be self-explanatory, and easy to understand for the average C++ programmer. A new <code class="code">tinyDream</code> object is allocated on the stack, and <a class="link" href="#tiny-dream-constructor">initialized</a> on line 83 of the gist above.</li>
+                <li>Library inference engine, version number &amp; copyright notice, are shown on line 86 of the gist via call to the <a class="link" href="#about-method">tinyDream::about()</a> static method.</li>
+                <li>At least, one argument is required that is the <strong>Positive Prompt which consists of words separated by commas that describe something you'd like to see generated</strong>. If no arguments were provided, an example of Positive &amp; Negative Prompts are shown on line 93 via call to the <a class="link" href="#prompt-example-method">tinyDream::promptExample()</a> static method, and the program exits immediately.</li>
+                <li>Optionally, a log consumer callback is registered on line 101 via call to the <a class="link" href="#set-log-callback">tinyDream::setLogCallback()</a> method. Inference is a heavy process, and may take some time to execute depending on the available resources so it make sense to log everything to the terminal or a text file during execution for a better user experience or to get an insight of what went wrong during the entire process.</li>
+                <li>
+                  Pre-trained models path is set on line 106 via call to the <a class="link" href="#set-assets-path-method">tinyDream::setAssetsPath()</a> method. The <span><strong>Tiny Dream</strong></span> assets comprise all pre-trained models (over 2GB as of this release) required by the <a class="link" href="#tiny-dream-method">tinyDream::dream()</a> method in order to run stable diffusion in inference (<em>image generation</em>).
+                  <strong>You can download the pre-trained assets from the <a class="link" href="#downloads">Download</a> section below</strong>. You can also set the path directly from the <a class="link" href="#tiny-dream-constructor">constructor</a> without calling this method.
+                </li>
+                <li>
+                  Please note that if your <span><strong>Tiny Dream</strong></span> assets are located on the same directory where your executable reside, there is no need then to specify any path, the <a class="link" href="#tiny-dream-constructor">constructor</a> default argument handle this specific case for you.
+                </li>
+                <li><em>Seed</em> &amp; <em>Steps</em> extra parameters are collected if available which controls respectively the resolution, and the accuracy (input text criteria) of the <a class="link" href="#tiny-dream-method">image generation process</a>.</li>
+                <li>
+                  Finally, <strong>Stable Diffusion inference took place on line 158</strong> of the gist above via single call to the <a class="link" href="#tiny-dream-method"><strong>tinyDream::dream()</strong></a
+                  >method. On successful execution, the generated image path is copied to the outputImagePath parameter, and the supplied log callback should report any errors if any during the entire process.
+                </li>
+              </ul>
+            </div>
+            <h5 class="my-5 text-lg uppercase text-primary sm:text-xl" id="code-gist">6. Continue with The C++ API Reference Guide</h5>
+            <p class="text-tColor">
+              The <span><strong>Tiny Dream</strong></span> <a class="link" href="#cpp-api">C++ Interface</a>, provides detailed specifications for all of the various methods the <span><strong>Tiny Dream</strong></span> class exports. Once the reader understands the basic principles of operation for <span><strong>Tiny Dream</strong></span
+              >, that <a class="link" href="#cpp-api">section</a> should serve as a reference guide.
+            </p>
           </article>
           <article class="mt-12">
-            <h2 class="mb-5 text-2xl sm:text-3xl font-semibold text-tColor uppercase" id="downloads">Downloads</h2>
+            <h2 class="sub-heading" id="downloads">Downloads</h2>
             <div class="gradient-graph-line mb-5 h-1 w-full"></div>
             <div class="flex flex-col gap-2 border-b md:flex-row md:items-center md:gap-4">
-              <div class="flex-none text-lg md:p-4 text-muted"><strong>Tiny Dream</strong> Source Code
-                <br>
-                <small class="text-muted"><strong>Release 1.7.5 <a class="link" href="https://github.com/symisc/tiny-dream/releases" target="_blank"><i class="uil uil-external-link-alt"></i></a></strong></small>
+              <div class="flex-none text-lg text-muted md:p-4">
+                <strong>Tiny Dream</strong> Source Code
+                <br />
+                <small class="text-muted"
+                  ><strong
+                    >Release 1.7.5 <a class="link" href="https://github.com/symisc/tiny-dream/releases" target="_blank"><i class="uil uil-external-link-alt"></i></a></strong
+                ></small>
               </div>
-              <p class="text-muted md:p-4">This ZIP archive contains all C++ source code for <span><strong>Tiny Dream</strong></span> combined into a <strong>single header file</strong> for easier integration on your existing code base. You may refer to the <a class="link" href="#getting-started">Getting Started</a> section above for a step-by-step integration guide.</p>
+              <p class="text-muted md:p-4">
+                This ZIP archive contains all C++ source code for <span><strong>Tiny Dream</strong></span> combined into a <strong>single header file</strong> for easier integration on your existing code base. You may refer to the <a class="link" href="#getting-started">Getting Started</a> section above for a step-by-step integration guide.
+              </p>
               <div class="flex-none self-center py-4 md:p-4">
                 <a href="https://github.com/symisc/tiny-dream/archive/refs/tags/1.7.5.zip" class="flex items-center gap-2 rounded-md bg-blue-200 px-5 py-3 font-bold text-blue-700 shadow-sm transition duration-500 ease-in-out hover:bg-blue-300 hover:shadow-lg">
                   <svg class="w-6" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -523,13 +624,18 @@ g++ -o tinydream boileplate.cpp -funsafe-math-optimizations -Ofast -flto=auto  -
               </div>
             </div>
 
-            <div class="flex flex-col gap-2 border-b md:flex-row md:items-center md:gap-4">
-              <div class="flex-none text-lg md:p-4 text-muted"><strong>Tiny Dream</strong> Pre-Trained <br> Models & Assets
-                <br>
+            <div class="flex flex-col gap-2 md:flex-row md:items-center md:gap-4">
+              <div class="flex-none text-lg text-muted md:p-4">
+                <strong>Tiny Dream</strong> Pre-Trained <br />
+                Models & Assets
+                <br />
                 <small class="text-muted"><strong>2GB of Assets</strong></small>
               </div>
-              <p class="text-muted md:p-4">This ZIP archive contains all <strong>Pre-Trained Models &amp; 2GB of Assets</strong> required for <a href="#tiny-dream-method">Stable Diffusion Inference</a>. Once downloaded, extract the assets ZIP archive in a directory of your choice (usually the directory where your executable is located), and set the path via the <span ><strong>Tiny Dream</strong></span> <a href="#tiny-dream-constructor">constructor</a> or from the <font face="courier"><a href="#set-assets-path-method">tinyDream::setAssetsPath()</a></font> method. The assets package is available to download for a <strong>one-time fee</strong> of $29.</p>
-              <div class=" self-center py-4 md:p-4">
+              <p class="text-muted md:p-4">
+                This ZIP archive contains all <strong>Pre-Trained Models &amp; 2GB of Assets</strong> required for <a href="#tiny-dream-method">Stable Diffusion Inference</a>. Once downloaded, extract the assets ZIP archive in a directory of your choice (usually the directory where your executable is located), and set the path via the <span><strong>Tiny Dream</strong></span> <a href="#tiny-dream-constructor">constructor</a> or from the
+                <a href="#set-assets-path-method">tinyDream::setAssetsPath()</a> method. The assets package is available to download for a <strong>one-time fee</strong> of $29.
+              </p>
+              <div class="self-center py-4 md:p-4">
                 <a href="https://github.com/symisc/tiny-dream/archive/refs/tags/1.7.5.zip" class="flex items-center gap-2 rounded-md bg-blue-200 px-5 py-3 font-bold text-blue-700 shadow-sm transition duration-500 ease-in-out hover:bg-blue-300 hover:shadow-lg">
                   <svg class="w-6" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" stroke-linejoin="round" stroke-linecap="round"></path>
@@ -538,20 +644,117 @@ g++ -o tinydream boileplate.cpp -funsafe-math-optimizations -Ofast -flto=auto  -
                 </a>
               </div>
             </div>
-            
           </article>
 
           <article class="mt-12">
-            <h2 class="mb-5 text-2xl sm:text-3xl font-semibold text-tColor uppercase" id="roadmap">Roadmap</h2>
+            <h2 class="sub-heading" id="roadmap">Roadmap</h2>
             <div class="gradient-graph-line mb-5 h-1 w-full"></div>
-            <ul class="list list-dot">
-              <li><span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-sm font-medium bg-red-500 text-white">Highest Priority</span> <strong>Move the Tensor library from NCNN to a non bloated one such as <a href="https://sod.pixlab.io" target="_blank">SOD</a> or <a href="https://github.com/ggerganov/ggml " target="_blank">GGML</a> with focus on CPU performance</strong>.</li>
-              <li><span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-sm font-medium bg-blue-500 text-white">Highest Priority</span> <strong>Output SVG, and easy to alter formats (potentially PSD) rather than static PNGs</strong>.</li>
+            <ul class="list">
+              <li>
+                <span class="inline-flex items-center gap-x-1.5 rounded-full bg-red-500 px-3 py-1.5 text-sm font-medium text-white">Highest Priority</span> <strong>Move the Tensor library from NCNN to a non bloated one such as <a href="https://sod.pixlab.io" target="_blank">SOD</a> or <a href="https://github.com/ggerganov/ggml " target="_blank">GGML</a> with focus on CPU performance</strong>.
+              </li>
+              <li><span class="inline-flex items-center gap-x-1.5 rounded-full bg-blue-500 px-3 py-1.5 text-sm font-medium text-white">Highest Priority</span> <strong>Output SVG, and easy to alter formats (potentially PSD) rather than static PNGs</strong>.</li>
 
-              <li><span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-sm font-medium bg-teal-500 text-white">Hot</span>  Provide a Cross-Platform GUI to <span ><strong>Tiny Dream</strong></span> implemented in <a href="https://github.com/ocornut/imgui" target="_blank">Dear imGUI</a>.</li>
-              <li><span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-sm font-medium bg-teal-500 text-white">Hot</span>  Provide a Web-Assembly port to the library once the future Tensor library (<a href="https://sod.pixlab.io" target="_blank">SOD</a> or <a href="https://github.com/ggerganov/ggml " target="_blank">GGML</a>) ported to WASM.</li>
-              <li><span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-sm font-medium bg-sky-500 text-white">Low</span>  Provide an Android, proof of concept, show-case APK.</li>
-          </ul>
+              <li>
+                <span class="inline-flex items-center gap-x-1.5 rounded-full bg-teal-500 px-3 py-1.5 text-sm font-medium text-white">Hot</span> Provide a Cross-Platform GUI to <span><strong>Tiny Dream</strong></span> implemented in <a href="https://github.com/ocornut/imgui" target="_blank">Dear imGUI</a>.
+              </li>
+              <li><span class="inline-flex items-center gap-x-1.5 rounded-full bg-teal-500 px-3 py-1.5 text-sm font-medium text-white">Hot</span> Provide a Web-Assembly port to the library once the future Tensor library (<a href="https://sod.pixlab.io" target="_blank">SOD</a> or <a href="https://github.com/ggerganov/ggml " target="_blank">GGML</a>) ported to WASM.</li>
+              <li><span class="inline-flex items-center gap-x-1.5 rounded-full bg-sky-500 px-3 py-1.5 text-sm font-medium text-white">Low</span> Provide an Android, proof of concept, show-case APK.</li>
+            </ul>
+          </article>
+          <article class="mt-12 text-tColor">
+            <h2 class="sub-heading" id="license">Licensing</h2>
+            <div class="gradient-graph-line mb-5 h-1 w-full"></div>
+            <img class="mx-auto" src="assets/images/agplv3-155x51.png" alt="Tiny Dream is released under the GNU Affero General Public License" title="Tiny Dream is released under the GNU Affero General Public License" />
+            <ul class="list">
+              <li>
+                <span><strong>Tiny Dream</strong></span> is a dual-licensed, open source product. The <a class="link" href="https://github.com/symisc/tiny-dream" target="_blank">complete source code</a> of the library, and related utility are freely available on <a class="link" href="https://github.com/symisc/tiny-dream" target="_blank">Github</a>.
+              </li>
+              <li>
+                <span><strong>Tiny Dream</strong></span> is released under the
+                <strong
+                  >GNU Affero General Public License (AGPLv3) <a class="link" href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank"><i class="uil uil-external-link-alt"></i></a></strong
+                >.
+              </li>
+              <li>
+                The <a class="link" href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank">AGPLv3</a> license permits you to use <span><strong>Tiny Dream</strong></span> at no charge under the condition that if you use the library in a host application, the complete source code for your application must be available and freely redistributable under reasonable conditions.
+              </li>
+              <li>
+                If you wish to <strong>derive a commercial advantage by not releasing your application under the <a class="link" href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank">AGPLv3</a></strong> or any other compatible open source license,
+                <strong
+                  >you must purchase a non-exclusive commercial <span><strong>Tiny Dream</strong></span> license</strong
+                >.
+              </li>
+              <li><strong>By purchasing a commercial license, you do not longer have to release your application's source code</strong>. Please reach out to <a class="link" href="mailto:licensing@pixlab.io?subject=Tiny Dream Commercial License">licensing@pixlab.io</a> to place an order and/or for additional information about the licensing situation.</li>
+            </ul>
+          </article>
+
+          <article class="mt-12">
+            <h2 class="sub-heading" id="cpp-api">C++ API Reference</h2>
+            <div class="gradient-graph-line mb-5 h-1 w-full"></div>
+            <p class="text-tColor">
+              This section define the C++ language interface to <span style="font-family: Montserrat"><strong>Tiny Dream</strong></span
+              >. For a tutorial introduction, please refer to the <a class="link" href="#getting-started">Getting Started</a> section above. As of this <a class="link" href="#downloads"><strong>release</strong></a
+              >, the library <strong>expose a single class with just eight methods</strong>, making it easy to use &amp; integrate in your existing C++ projects. The exposed methods are documented below.
+            </p>
+            <p class="lead mt-5 text-center text-tColor">
+              <code><strong>tinyDream</strong></code> Public Methods:
+            </p>
+            <div class="flex flex-col justify-center gap-6 md:flex-row">
+              <ul class="list text-lg">
+                <li><a class="link" href="#tiny-dream-constructor">tinyDream::tinyDream()</a> - <em class="text-muted">Constructor</em></li>
+                <li>
+                  <a class="link" href="#tiny-dream-method"><strong>tinyDream::dream()</strong></a> - <em class="text-muted">Stable Diffusion Inference</em>
+                </li>
+                <li><a class="link" href="#set-img-output-method">tinyDream::setImageOutputPath()</a></li>
+                <li><a class="link" href="#set-img-output-prefix">tinyDream::setImageOutputPrefix()</a></li>
+              </ul>
+              <ul class="list text-lg">
+                <li><a class="link" href="#set-log-callback">tinyDream::setLogCallback()</a></li>
+                <li><a class="link" href="#set-assets-path-method">tinyDream::setAssetsPath()</a></li>
+                <li><a class="link" href="#prompt-example-method">tinyDream::promptExample()</a></li>
+                <li><a class="link" href="#about-method">tinyDream::about()</a></li>
+              </ul>
+            </div>
+            <h5 class="mb-2 mt-5 text-lg uppercase text-primary sm:text-xl">Syntax</h5>
+            <!-- HTML generated using hilite.me -->
+            <div class="text-lg" id="tiny-dream-constructor" style="background: #f8f8f8; overflow: auto; width: auto; border: 1px solid #ccc; padding: 0.6em; border-radius: 4px">
+              <pre style="margin: 0; line-height: 125%">tinyDream<span style="color: #666666">::</span>tinyDream(<span style="color: #008000; font-weight: semi-bold">const</span> std<span style="color: #666666">::</span>string<span style="color: #666666">&amp;</span> assetsPath <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;./assets/&quot;</span>);</pre>
+            </div>
+            <h5 class="mb-2 mt-5 text-lg uppercase text-primary sm:text-xl">Description</h5>
+            <p class="text-tColor">
+              <strong>Constructor for the <code class="code">tinyDream</code> class</strong>.
+            </p>
+            <ul class="list">
+            <li>
+                Instantiate a new <strong><code>tinyDream</code></strong> object ready for Stable Diffusion <a class="link" href="#tiny-dream-method">Inference</a>. The constructor takes an <strong>optional argument</strong> <code>assetsPath</code> which specifies the path to the pre-trained models required by the
+               <a class="link" href="#tiny-dream-method"><strong>tinyDream::dream()</strong></a>
+                method in order to accept prompts and generate images that matches the input criteria.
+              </li>
+              <li>
+                Once the object instantiated, you can start registering <a class="link" href="#set-log-callback">log callback</a>, <a class="link" href="#set-assets-path-method">assets path location</a>, <a class="link" href="#set-img-output-method">image storage directory</a>, <a class="link" href="#set-img-output-prefix">name prefixes</a>, etc. and finally calls
+                <font face="courier"
+                  ><a class="link" href="#tiny-dream-method"><strong>tinyDream::dream()</strong></a></font
+                >
+                for inference.
+              </li>
+              <li>
+                <strong>You can download the pre-trained assets from the <a class="link" href="#downloads">Download</a> section above</strong>. Once downloaded, extract the assets ZIP archive in a directory of your choice (usually the directory where your executable is located), and optionally set the path via the constructor or <font face="courier"><a class="link" href="#set-assets-path-method">tinyDream::setAssetsPath()</a></font
+                >.
+              </li>
+            </ul>
+            <h5 class="mb-2 mt-5 text-lg uppercase text-primary sm:text-xl">Parameters</h5>
+            <div class=" flex flex-col items-start gap-3 pb-6 sm:flex-row  sm:gap-12">
+              <code class="code text-nowrap">const std::string& assetsPath</code>
+              <p class=" text-tColor"><em>Optional Argument</em>: Full path to the pre-trained models location which can be downloaded from <a href="#downloads">here</a>. If this parameter is omitted, then the current path where the executable is located is assumed (recommended case).</p>
+            </div>
+            <h5 class="mb-2 mt-5 text-lg uppercase text-primary sm:text-xl">Return Value</h5>
+            <em class="text-tColor">None</em>
+            <hr class="my-5">
+            <h5 class="mb-2 mt-5 text-lg uppercase text-primary sm:text-xl">Syntax</h5>
+            <!-- HTML generated using hilite.me --><div id="set-log-callback" style="background: #f8f8f8; overflow:auto;width:auto;border: 1px solid #ccc;padding: .6em .6em;border-radius: 4px;"><pre style="margin: 0; line-height: 125%"><span style="color: #B00040">void</span> tinyDream<span style="color: #666666">::</span>setLogCallback(std<span style="color: #666666">::</span>function<span style="color: #666666">&lt;</span><span style="color: #B00040">void</span>(<span style="color: #008000; font-weight: bold">const</span> <span style="color: #B00040">char</span><span style="color: #666666">*</span> <span style="color: #408080; font-style: italic">/* zLogMsg */</span>, <span style="color: #B00040">int</span> <span style="color: #408080; font-style: italic">/*msg length*/</span>, <span style="color: #B00040">void</span><span style="color: #666666">*</span> <span style="color: #408080; font-style: italic">/* pCookie */</span>) xLogHandler, <span style="color: #B00040">void</span><span style="color: #666666">*</span> pUserData);</pre></div>
+            <h5 class="mb-2 mt-5 text-lg uppercase text-primary sm:text-xl">Description</h5>
+            <p class="text-tColor">Consume log messages via an external log handler callback. The main task of the supplied callback is <strong>to consume log messages generated during <a class="link" href="#tiny-dream-method">Stable Diffusion inference</a></strong>. Inference may take some time to execute depending on the available resources so it make sense to log everything to the terminal or text file for example.</p>
           </article>
         </div>
       </section>
@@ -563,7 +766,7 @@ g++ -o tinydream boileplate.cpp -funsafe-math-optimizations -Ofast -flto=auto  -
         <div class="grid grid-cols-10 gap-y-10">
           <div class="col-span-10 md:col-span-5 lg:col-span-3">
             <img class="dark-logo mb-1 w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" />
-            <p class="text-[15px] text-tColor pr-3">PixLab offers cutting-edge AI solutions to empower developers and creators with automated tools for vision, data processing, and creativity.</p>
+            <p class="pr-3 text-[15px] text-tColor">PixLab offers cutting-edge AI solutions to empower developers and creators with automated tools for vision, data processing, and creativity.</p>
 
             <!-- Search Input in Footer -->
             <form action="search" method="get">

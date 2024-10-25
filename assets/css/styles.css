@@ -738,11 +738,6 @@ video {
   grid-column: span 10 / span 10;
 }
 
-.\!mx-\[\.625rem\] {
-  margin-left: .625rem !important;
-  margin-right: .625rem !important;
-}
-
 .\!mx-\[10px\] {
   margin-left: 10px !important;
   margin-right: 10px !important;
@@ -1020,10 +1015,6 @@ video {
 
 .max-w-\[640px\] {
   max-width: 640px;
-}
-
-.max-w-\[82\.5rem\] {
-  max-width: 82.5rem;
 }
 
 .max-w-\[85rem\] {
@@ -1684,11 +1675,6 @@ video {
   color: var(--text-muted);
 }
 
-.text-neutral-800 {
-  --tw-text-opacity: 1;
-  color: rgb(38 38 38 / var(--tw-text-opacity));
-}
-
 .text-pink-500 {
   --tw-text-opacity: 1;
   color: rgb(236 72 153 / var(--tw-text-opacity));
@@ -1916,6 +1902,22 @@ nav .hs-dropdown:hover>button {
   .hero-heading {
     font-size: 3rem;
     line-height: 1;
+  }
+}
+
+.sub-heading {
+  margin-bottom: 1.25rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+@media (min-width: 640px) {
+  .sub-heading {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 
@@ -2163,11 +2165,6 @@ body.dark-theme .border-dark {
 .hover\:bg-neutral-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(229 229 229 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-neutral-300:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(212 212 212 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-primary:hover {

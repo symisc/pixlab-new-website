@@ -107,6 +107,9 @@ nav .hs-dropdown:hover>button {
 .hero-heading {
   @apply text-4xl font-bold lg:text-5xl gradient-text
 }
+.sub-heading{
+  @apply mb-5 text-2xl sm:text-3xl font-semibold text-tColor uppercase;
+}
 
 .hero-section #particles-js::before {
   content: "";
