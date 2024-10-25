@@ -137,7 +137,7 @@ body.dark-theme ul li.card {
   @apply  border-neutral-700
 } */
 .code{
-  @apply bg-surface rounded-md text-pink-500 p-1 border border-gray-200;
+  @apply bg-surface rounded-md text-primary p-1 border border-gray-200;
 }
 body.dark-theme .table-wrapper,body.dark-theme .code,body.dark-theme tbody tr.t-row {
   @apply  border-neutral-700
