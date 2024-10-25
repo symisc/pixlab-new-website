@@ -974,13 +974,10 @@ video {
   width: 100%;
 }
 
-<<<<<<< HEAD
 .min-w-\[34\.375rem\] {
   min-width: 34.375rem;
 }
 
-=======
->>>>>>> b037c3f95f20fa483ac36d5c7d30245435445ce3
 .min-w-\[50rem\] {
   min-width: 50rem;
 }
@@ -1041,13 +1038,10 @@ video {
   max-width: 1280px;
 }
 
-<<<<<<< HEAD
 .max-w-xl {
   max-width: 36rem;
 }
 
-=======
->>>>>>> b037c3f95f20fa483ac36d5c7d30245435445ce3
 .flex-none {
   flex: none;
 }
@@ -1282,6 +1276,11 @@ video {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
+.bg-\[\#0b0e13\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(11 14 19 / var(--tw-bg-opacity));
+}
+
 .bg-background {
   background-color: var(--color-background);
 }
@@ -1294,6 +1293,11 @@ video {
 .bg-blue-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+}
+
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
 .bg-gray-800 {
@@ -1325,8 +1329,18 @@ video {
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
+.bg-sky-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 165 233 / var(--tw-bg-opacity));
+}
+
 .bg-surface {
   background-color: var(--color-surface);
+}
+
+.bg-teal-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 184 166 / var(--tw-bg-opacity));
 }
 
 .bg-transparent {
@@ -1344,61 +1358,6 @@ video {
 
 .bg-white\/85 {
   background-color: rgb(255 255 255 / 0.85);
-}
-
-<<<<<<< HEAD
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-}
-
-.bg-teal-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(20 184 166 / var(--tw-bg-opacity));
-}
-
-.bg-sky-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(14 165 233 / var(--tw-bg-opacity));
-=======
-.bg-\[\#0D1016\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(13 16 22 / var(--tw-bg-opacity));
-}
-
-.bg-\[0D1016\] {
-  background-color: 0D1016;
-}
-
-.bg-\[\#0b0d13\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(11 13 19 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#030305\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(3 3 5 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#050508\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(5 5 8 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#07070c\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(7 7 12 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#090b0f\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(9 11 15 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#0b0e13\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(11 14 19 / var(--tw-bg-opacity));
->>>>>>> b037c3f95f20fa483ac36d5c7d30245435445ce3
 }
 
 .bg-opacity-30 {
@@ -1536,13 +1495,10 @@ video {
   padding-bottom: 0.75rem;
 }
 
-<<<<<<< HEAD
-=======
 .pb-36 {
   padding-bottom: 9rem;
 }
 
->>>>>>> b037c3f95f20fa483ac36d5c7d30245435445ce3
 .pb-6 {
   padding-bottom: 1.5rem;
 }
@@ -1652,11 +1608,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
 }
 
 .font-bold {
@@ -2055,6 +2006,10 @@ body.dark-theme ul li.card {
 .list::marker {
   color: rgb(37 99 235 );
 }
+
+/* body.dark-theme .code{
+  @apply  border-neutral-700
+} */
 
 .code {
   border-radius: 0.375rem;
