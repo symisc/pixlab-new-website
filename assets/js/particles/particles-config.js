@@ -1,32 +1,40 @@
 const particlesJSON = {
   particles: {
     number: {
-      value: 30,
+      value: 150,
       density: {
         enable: true,
-        value_area: 800,
+        value_area: 1000,
       },
     },
     color: {
-      value: "#0D4758",
+      value: ["#ffffff", "#f8c210", "#83d238", "#ee7752", "#e73c7e", "#23a6d5", "#23d5ab", "#000000"],
+    },
+    collisions: {
+      enable: true,
+    },
+    move: {
+      direction: "none",
+      enable: true,
+      outModes: {
+        default: "bounce",
+      },
+      random: false,
+      speed: 2,
+      straight: false,
     },
     shape: {
       type: "circle",
       stroke: {
         width: 0,
-        color: "#000000",
+        color: "#266db6",
       },
       polygon: {
         nb_sides: 5,
       },
-      image: {
-        src: "img/github.svg",
-        width: 100,
-        height: 100,
-      },
     },
     opacity: {
-      value: 0.7,
+      value: 0.6,
       random: false,
       anim: {
         enable: false,
@@ -36,77 +44,24 @@ const particlesJSON = {
       },
     },
     size: {
-      value: 5,
+      value: 2,
       random: true,
       anim: {
         enable: false,
-        speed: 80,
+        speed: 40,
         size_min: 0.1,
         sync: false,
       },
     },
     line_linked: {
       enable: true,
-      distance: 150,
-      color: "#1B2A62",
-      opacity: 0.9,
-      width: 2,
-    },
-    move: {
-      enable: true,
-      speed: 6,
-      direction: "none",
-      random: false,
-      straight: false,
-      out_mode: "out",
-      bounce: false,
-      attract: {
-        enable: false,
-        rotateX: 600,
-        rotateY: 1200,
-      },
+      distance: 120,
+      color: "#266db6",
+      opacity: 0.4,
+      width: 1,
     },
   },
-  interactivity: {
-    detect_on: "canvas",
-    events: {
-      onhover: {
-        enable: false,
-        mode: "repulse",
-      },
-      onclick: {
-        enable: false,
-        mode: "push",
-      },
-      resize: true,
-    },
-    modes: {
-      grab: {
-        distance: 800,
-        line_linked: {
-          opacity: 1,
-        },
-      },
-      bubble: {
-        distance: 800,
-        size: 80,
-        duration: 2,
-        opacity: 8,
-        speed: 3,
-      },
-      repulse: {
-        distance: 400,
-        duration: 0.4,
-      },
-      push: {
-        particles_nb: 4,
-      },
-      remove: {
-        particles_nb: 2,
-      },
-    },
-  },
-  retina_detect: true,
+  detectRetina: true,
 };
 
 particlesJS("particles-js", particlesJSON);

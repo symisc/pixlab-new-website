@@ -47,51 +47,60 @@
             <div class="flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:items-center lg:justify-end lg:py-0 lg:ps-7">
               <a class="nav-link p-3 ps-1 text-sm text-white focus:outline-none lg:py-4" href="start">Get Started</a>
               <a class="nav-link p-3 ps-1 text-sm text-white focus:outline-none lg:py-4" href="api-portal">API Portal</a>
-              <a class="nav-link p-3 ps-1 text-sm text-white focus:outline-none lg:py-4" href="pricing">Pricing</a>
               <!-- Products & SDKs -->
               <div class="hs-dropdown cursor-pointer p-3 ps-1 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:py-4 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
-                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">Products & SDKs <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:ms-1 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></button>
+                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  Products & SDKs <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:ms-1 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
                 <!-- Dropdown menu -->
                 <div class="hs-dropdown-menu top-full z-10 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:opacity-100 lg:w-48 lg:bg-neutral-800 lg:shadow-md lg:duration-[150ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
-                    <div class="space-y-1 py-1 lg:px-1">
-                      <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="ekyc/">eKYC - Universal ID Scanner APIs</a>
-                      <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="vision-llm-api-playground/">Vision Playground & APIs</a>
-                      <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="on-premises">PixLab On-Premises</a>
-                      <div class="hs-dropdown relative [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:[--is-collapse:false] lg:[--strategy:absolute] lg:[--trigger:hover]">
-                        <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-white focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">Open Source SDK <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></button>
-                        <div class="hs-dropdown-menu end-full top-0 z-10 !mx-[10px] hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-end-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:opacity-100 lg:w-48 lg:bg-neutral-800 lg:shadow-md lg:duration-[150ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
-                            <div class="space-y-1 py-1 lg:px-1">
-                                <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="https://sod.pixlab.io/" target="_blank">SOD - Embedded Computer Vision Library &nearr;</a>
-                                <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="tiny-dream">Tiny Dream - Stable Diffusion Inference in C++</a>
-                                <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="art">ART - Real-Time ASCII Art C Library</a>
-                                <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="downloads">SOD Downloads</a>
-                                <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="sod">SOD Licensing Information</a>
-                            </div>
+                  <div class="space-y-1 py-1 lg:px-1">
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="on-premises">PixLab On-Premises</a>
+                    <div class="hs-dropdown relative [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:[--is-collapse:false] lg:[--strategy:absolute] lg:[--trigger:hover]">
+                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-white focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        Open Source SDK <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      </button>
+                      <div class="hs-dropdown-menu end-full top-0 z-10 !mx-[10px] hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-end-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:opacity-100 lg:w-48 lg:bg-neutral-800 lg:shadow-md lg:duration-[150ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
+                        <div class="space-y-1 py-1 lg:px-1">
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="https://sod.pixlab.io/" target="_blank">SOD - Embedded Computer Vision Library &nearr;</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="tiny-dream">Tiny Dream - Stable Diffusion Inference in C++</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="art">ART - Real-Time ASCII Art C Library</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="downloads">SOD Downloads</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="sod">SOD Licensing Information</a>
                         </div>
                       </div>
-                      <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="rest-api">Rest APIs</a>
-                      <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="api-endpoints">PixLab API Endpoints</a>
-                      <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="app-ui-ux-code">APP UX - Mobile UI Code Generator</a>
-                      <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="https://faceio.net/" target="_blank">FACEIO - Facial Authentication for the Web &nearr;</a>
+                    </div>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="ekyc/">eKYC - Universal ID Scanner APIs</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="vision-llm-api-playground/">Vision LLM & APIs</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="template-pdf-image-engine">PDF Template Engine</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="app-ui-ux-code">APP UX - Mobile UI Code Generator</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="api-endpoints">PixLab API Endpoints</a>
+                    <!-- NEW PRODUCT ADD -->
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="https://faceio.net/" target="_blank">FACEIO - Facial Authentication for the Web &nearr;</a>
                   </div>
                 </div>
               </div>
-              <a class="nav-link p-3 ps-1 text-sm text-white focus:outline-none lg:py-4" href="vision-llm-api-playground/" target="_blank">Vision LLM & APIs &nearr;</a>
-              <a class="nav-link p-3 ps-1 text-sm text-white focus:outline-none lg:py-4" href="ekyc/" target="_blank">eKYC Platform &nearr;</a>
+              <a class="nav-link p-3 ps-1 text-sm text-white focus:outline-none lg:py-4" href="vision-llm-api-playground/">Vision Playground &nearr;</a>
+              <a class="nav-link p-3 ps-1 text-sm text-white focus:outline-none lg:py-4" href="ekyc/">eKYC APIs &nearr;</a>
               <!-- Online Creativity dropdown link -->
               <div class="hs-dropdown cursor-pointer p-3 ps-1 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:py-4 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
-                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">Online Creativity<svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:ms-1 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></button>
+                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  Online Creativity Tools<svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:ms-1 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
                 <!-- Dropdown menu -->
                 <div class="hs-dropdown-menu top-full z-10 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:opacity-100 lg:w-48 lg:bg-neutral-800 lg:shadow-md lg:duration-[150ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
                   <div class="space-y-1 py-1 lg:px-1">
                     <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="annotate">Annotate - Image Annotation & Labelling</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="creative-toolbox">Creative Apps Toolbox</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="creative-toolbox">Creative Toolbox</a>
                     <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="mockup-screenshot-editor">Mockup & Screenshot AI Editor</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="ai-photo-editor">Online AI Photo Editor</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="ai-photo-editor">Tilemap & Level Editor</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="ai-photo-editor">AI Photo Editor</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="bulk-image-video-background-removal-tool-apis">Bulk Image & Video Background Removal</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="tilemap-2d-level-editor">Tilemap & 2D Level Editor</a>
+                    <!-- NEW TOOL ADD -->
                   </div>
                 </div>
               </div>
+              <a class="nav-link p-3 ps-1 text-sm text-white focus:outline-none lg:py-4" href="pricing">Pricing</a>
             </div>
             <!-- Theme / Signup / PixLab Console buttons -->
             <div class="flex items-center gap-4">
@@ -99,25 +108,24 @@
                 <i class="uil uil-moon text-xl"></i>
               </button>
               <div class="flex h-11 gap-3 py-1">
-                <button class="gradient-button group block h-full items-center gap-x-2 rounded-lg px-3 text-sm font-medium text-white" href="https://console.pixlab.io" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console.">
-                  <span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i>
-                </button>
+                <button class="gradient-button group block h-full items-center gap-x-2 rounded-lg px-3 text-sm font-medium text-white" href="https://console.pixlab.io" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></button>
               </div>
             </div>
           </div>
         </div>
       </nav>
     </header>
+
     <main>
       <!-- Hero Section -->
-      <section>
-        <div id="particles-js" class="relative h-[75vh] bg-gray-950">
+      <section class="hero-section">
+        <div id="particles-js" class="relative h-[75vh] bg-[#0b0e13]">
           <div class="absolute flex h-full w-full items-center px-5 pt-10 text-white">
             <div class="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between gap-10 lg:flex-row">
               <!-- Hero Text -->
               <div class="max-w-[500px] text-center lg:max-w-screen-sm lg:text-left">
                 <h1 class="hero-heading">Getting Started with PixLab</h1>
-                <p class="mt-5 lead text-gray-200">AI tools for vision, automation, and creativity. Seamless APIs to empower developers, businesses, and creators.</p>
+                <p class="lead mt-5 text-gray-200">AI tools for vision, automation, and creativity. Seamless APIs to empower developers, businesses, and creators.</p>
               </div>
 
               <div class="flex w-full max-w-[500px] flex-col gap-6">
@@ -144,13 +152,13 @@
 
       <!-- Content Section -->
       <section>
-        <div class="mx-auto w-full max-w-screen-xl px-5 pb-12 pt-8">
+        <div class="mx-auto w-full max-w-screen-xl px-5 pb-36 pt-8">
           <!-- Social Bar -->
           <div class="flex flex-wrap items-center justify-between gap-5 pb-3">
             <img class="dark-logo w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" />
             <p class="text-sm text-muted">
               <span>Version 2.197</span>
-              <span>(<a href="#"  target="_blank" class="text-primary hover:text-secondary">Release Notes</a>)</span>
+              <span>(<a href="#" target="_blank" class="text-primary hover:text-secondary">Release Notes</a>)</span>
             </p>
 
             <div class="flex flex-wrap">
@@ -190,10 +198,11 @@
     <!-- Footer Section -->
     <footer class="bg-surface">
       <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+        <div class="gradient-graph-line mb-10"></div>
         <div class="grid grid-cols-10 gap-y-10">
           <div class="col-span-10 md:col-span-5 lg:col-span-3">
             <img class="dark-logo mb-1 w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" />
-            <p class="text-[15px] text-tColor pr-3">PixLab offers cutting-edge AI solutions to empower developers and creators with automated tools for vision, data processing, and creativity.</p>
+            <p class="pr-3 text-[15px] text-tColor">PixLab offers cutting-edge AI solutions to empower developers and creators with automated tools for vision, data processing, and creativity.</p>
 
             <!-- Search Input in Footer -->
             <form action="search" method="get">
@@ -202,25 +211,6 @@
                 <input name="q" class="h-full w-full border-none bg-transparent text-tColor outline-none" type="search" placeholder="Search Docs..." aria-label="Search" />
               </div>
             </form>
-
-            <!-- Social Media Links -->
-            <div class="mt-5 flex gap-1.5">
-              <a href="#" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow us on Facebook">
-                <i class="uil uil-facebook text-lg"></i>
-              </a>
-              <a href="#" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow us on LinkedIn">
-                <i class="uil uil-linkedin text-lg"></i>
-              </a>
-              <a href="#" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow us on Twitter">
-                <i class="uil uil-twitter text-lg"></i>
-              </a>
-              <a href="#" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow us on GitHub">
-                <i class="uil uil-github text-lg"></i>
-              </a>
-              <a href="https://blog.pixlab.io" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="PixLab Blog">
-                <i class="uil uil-rss text-lg"></i>
-              </a>
-            </div>
           </div>
 
           <!-- Products Section -->
@@ -259,7 +249,6 @@
               <ul class="flex flex-col gap-3">
                 <li><a href="support" class="footer-link">Support Channels</a></li>
                 <li><a href="https://blog.pixlab.io" target="_blank" class="footer-link">Pixlab Blog</a></li>
-
               </ul>
             </div>
           </div>
@@ -289,6 +278,25 @@
 
         <!-- Copyright Section -->
         <div class="mt-10 flex flex-col justify-between gap-5 md:flex-row md:items-center">
+          <!-- Social Media Links -->
+          <div class="mt-5 flex gap-1.5">
+            <a href="#" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow us on Facebook">
+              <i class="uil uil-facebook text-lg"></i>
+            </a>
+            <a href="#" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow us on LinkedIn">
+              <i class="uil uil-linkedin text-lg"></i>
+            </a>
+            <a href="#" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow us on Twitter">
+              <i class="uil uil-twitter text-lg"></i>
+            </a>
+            <a href="#" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow us on GitHub">
+              <i class="uil uil-github text-lg"></i>
+            </a>
+            <a href="https://blog.pixlab.io" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="PixLab Blog">
+              <i class="uil uil-rss text-lg"></i>
+            </a>
+          </div>
+
           <div class="flex flex-col gap-1">
             <p class="text-sm text-muted">Copyright © 2017 - 2024, <a href="https://symisc.net" target="_blank">Symisc Systems</a>, SUARL. All rights reserved.</p>
             <p class="text-sm text-muted">All trademarks and copyrights belong to their respective owners.</p>

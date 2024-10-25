@@ -10,11 +10,11 @@
     /* Light theme color variables */
     --color-primary: #DC2A76;
     --color-secondary: #F76E72;
-    --color-background: #F9FAFB;
+    --color-background: #FAF8F5;
     --color-text: #000000;
     --text-muted: #484848;
     --color-border: #dbe4f0;
-    --color-surface: #F0F4F9;
+    --color-surface: #FFFFFF;
     --color-input: #E6ECF3;
     --color-off-white: #f7f7f7;
     --color-gradient: linear-gradient(to top, var(--color-primary) 5%, var(--color-secondary) 95%)
@@ -30,11 +30,11 @@
 
 .dark-theme {
   /* Light theme color variables */
-  --color-background: #1C1C1C;
-  --color-text: #F9FAFB;
+  --color-background: #0D1016;
+  --color-text: #FAF8F5;
   --text-muted: #D4D4D4;
   --color-border: #333333;
-  --color-surface: #282828;
+  --color-surface: #0D1016;
   --color-input: #333333;
   --color-off-white: #282828;
 }
@@ -69,30 +69,31 @@ nav .hs-dropdown:hover>button {
 .gradient-button:hover::before {
   @apply opacity-100
 }
+
 .bg-gradient {
   background: var(--color-gradient);
 }
-.gradient-outline-btn{
+
+.gradient-outline-btn {
   @apply bg-gradient flex h-full rounded-[100px] p-0.5 transition-all duration-300;
 }
 
-.gradient-outline-btn:hover div{
+.gradient-outline-btn:hover div {
   @apply bg-gradient
 }
-.gradient-outline-btn:hover span{
+
+.gradient-outline-btn:hover span {
   @apply text-white
 }
 
-
-
 .gradient-graph-line {
-  height: 5px;
+  height: 1px;
   background: #c4e17f;
-  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #ff4e50 50%, #ff4e50 62.5%, #8e9eab 62.5%, #8e9eab 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #79C1E1, #709ADB, #ED5C57, #E17E71, #F7D07F, #F8FCCF, #CADF8B);
 }
 
 .gradient-bg {
-  background: linear-gradient(to top, var(--color-primary) 0%, var(--color-secondary) 100% );
+  background: linear-gradient(to top, var(--color-primary) 0%, var(--color-secondary) 100%);
 }
 
 .gradient-text {
@@ -102,14 +103,28 @@ nav .hs-dropdown:hover>button {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.hero-heading{
+
+.hero-heading {
   @apply text-4xl font-bold lg:text-5xl gradient-text
 }
-.bg-off-white{
+
+.hero-section #particles-js::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background: url("../images/blur-vector.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bg-off-white {
   background-color: var(--color-off-white);
 }
 
-.lead{
+.lead {
   @apply text-base sm:text-lg md:text-2xl leading-snug;
 }
 
@@ -124,29 +139,41 @@ body.dark-theme ul li.card {
 .footer-link:hover {
   @apply text-primary
 }
-.link{
+
+.link {
   @apply text-blue-600
 }
-.link:hover{
+
+.link:hover {
   @apply underline
 }
-.list{
+
+.list {
   @apply marker:text-blue-600 list-disc pl-5 space-y-4 text-tColor mt-5
 }
+<<<<<<< HEAD
 /* body.dark-theme .code{
   @apply  border-neutral-700
 } */
 .code{
   @apply bg-surface rounded-md text-primary p-1 border border-gray-200;
-}
-body.dark-theme .table-wrapper,body.dark-theme .code,body.dark-theme tbody tr.t-row {
-  @apply  border-neutral-700
-}
-.table-wrapper{
-  @apply bg-off-white my-5 mx-auto rounded-lg shadow-md p-6 overflow-x-auto border border-gray-200 
+=======
+
+.code {
+  @apply bg-surface rounded-md text-pink-500 p-1 border border-gray-200;
+>>>>>>> b037c3f95f20fa483ac36d5c7d30245435445ce3
 }
 
-.table-wrapper tbody tr.t-row{
-  @apply border-b border-gray-200 
+body.dark-theme .table-wrapper,
+body.dark-theme .code,
+body.dark-theme tbody tr.t-row {
+  @apply border-neutral-700
 }
 
+.table-wrapper {
+  @apply bg-off-white my-5 mx-auto rounded-lg shadow-md p-6 overflow-x-auto border border-gray-200
+}
+
+.table-wrapper tbody tr.t-row {
+  @apply border-b border-gray-200
+}
