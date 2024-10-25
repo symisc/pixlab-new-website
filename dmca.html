@@ -42,75 +42,66 @@
             </div>
           </div>
         </div>
-        <!-- Collapse -->
+        <!-- Main Menu -->
         <div id="hs-navbar-floating-dark" class="hs-collapse hidden grow basis-full overflow-hidden ps-0 transition-all duration-300 lg:block lg:ps-5" aria-labelledby="hs-navbar-floating-dark-collapse">
           <div class="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
             <div class="flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:items-center lg:justify-end lg:py-0 lg:ps-7">
               <a class="nav-link p-3 ps-1 text-sm text-white focus:outline-none lg:py-4" href="start">Get Started</a>
-              <a class="nav-link p-3 ps-1 text-sm text-white focus:outline-none lg:py-4" href="developer-portal">API Portal</a>
+              <a class="nav-link p-3 ps-1 text-sm text-white focus:outline-none lg:py-4" href="api-portal">API Portal</a>
+              <!-- Products & SDKs -->
+              <div class="hs-dropdown cursor-pointer p-3 ps-1 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:py-4 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
+                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  Products & SDKs <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:ms-1 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div class="hs-dropdown-menu top-full z-10 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:opacity-100 lg:w-48 lg:bg-neutral-800 lg:shadow-md lg:duration-[150ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
+                  <div class="space-y-1 py-1 lg:px-1">
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="on-premises">PixLab On-Premises</a>
+                    <div class="hs-dropdown relative [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:[--is-collapse:false] lg:[--strategy:absolute] lg:[--trigger:hover]">
+                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-white focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        Open Source SDK <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      </button>
+                      <div class="hs-dropdown-menu end-full top-0 z-10 !mx-[10px] hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-end-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:opacity-100 lg:w-48 lg:bg-neutral-800 lg:shadow-md lg:duration-[150ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
+                        <div class="space-y-1 py-1 lg:px-1">
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="https://sod.pixlab.io/" target="_blank">SOD - Embedded Computer Vision Library &nearr;</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="tiny-dream">Tiny Dream - Stable Diffusion Inference in C++</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="art">ART - Real-Time ASCII Art C Library</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="downloads">SOD Downloads</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="sod">SOD Licensing Information</a>
+                        </div>
+                      </div>
+                    </div>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="ekyc/">eKYC - Universal ID Scanner APIs</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="vision-llm-api-playground/">Vision LLM & APIs</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="template-pdf-image-engine">PDF Template Engine</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="app-ui-ux-code">APP UX - Mobile UI Code Generator</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="api-endpoints">PixLab API Endpoints</a>
+                    <!-- NEW PRODUCT ADD -->
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="https://faceio.net/" target="_blank">FACEIO - Facial Authentication for the Web &nearr;</a>
+                  </div>
+                </div>
+              </div>
+              <a class="nav-link p-3 ps-1 text-sm text-white focus:outline-none lg:py-4" href="vision-llm-api-playground/">Vision Playground &nearr;</a>
+              <a class="nav-link p-3 ps-1 text-sm text-white focus:outline-none lg:py-4" href="ekyc/">eKYC APIs &nearr;</a>
+              <!-- Online Creativity dropdown link -->
+              <div class="hs-dropdown cursor-pointer p-3 ps-1 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:py-4 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
+                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  Online Creativity Tools<svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:ms-1 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div class="hs-dropdown-menu top-full z-10 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:opacity-100 lg:w-48 lg:bg-neutral-800 lg:shadow-md lg:duration-[150ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
+                  <div class="space-y-1 py-1 lg:px-1">
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="annotate">Annotate - Image Annotation & Labelling</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="creative-toolbox">Creative Toolbox</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="mockup-screenshot-editor">Mockup & Screenshot AI Editor</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="ai-photo-editor">AI Photo Editor</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="bulk-image-video-background-removal-tool-apis">Bulk Image & Video Background Removal</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="tilemap-2d-level-editor">Tilemap & 2D Level Editor</a>
+                    <!-- NEW TOOL ADD -->
+                  </div>
+                </div>
+              </div>
               <a class="nav-link p-3 ps-1 text-sm text-white focus:outline-none lg:py-4" href="pricing">Pricing</a>
-              <!-- Dropdown link -->
-              <div class="hs-dropdown cursor-pointer p-3 ps-1 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:py-4 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
-                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                 Products & SDKs
-                  <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:ms-1 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
-                </button>
-
-                <!-- Dropdown menu -->
-                <div class="hs-dropdown-menu top-full z-10 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:opacity-100 lg:w-48 lg:bg-neutral-800 lg:shadow-md lg:duration-[150ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
-                  <div class="space-y-1 py-1 lg:px-1">
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="#"> SDKs </a>
-                    <div class="hs-dropdown relative [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:[--is-collapse:false] lg:[--strategy:absolute] lg:[--trigger:hover]">
-                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-white focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                        Sub Menu
-                        <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
-                      </button>
-
-                      <div class="hs-dropdown-menu end-full top-0 z-10 !mx-[10px] hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-end-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:opacity-100 lg:w-48 lg:bg-neutral-800 lg:shadow-md lg:duration-[150ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
-                        <div class="space-y-1 py-1 lg:px-1">
-                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="#"> About </a>
-                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="#"> Downloads </a>
-                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="#"> Team Account </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="#"> Downloads </a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="#"> Team Account </a>
-                  </div>
-                </div>
-              </div>
-              <a class="nav-link p-3 ps-1 text-sm text-white focus:outline-none lg:py-4" href="vision-portal/" target="_blank">Vision APIs &nearr;</a>
-              <a class="nav-link p-3 ps-1 text-sm text-white focus:outline-none lg:py-4" href="ekyc/" target="_blank">eKYC Platform &nearr;</a>
-              <!-- Dropdown link -->
-              <div class="hs-dropdown cursor-pointer p-3 ps-1 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:py-4 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
-                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                 Online Creativity
-                  <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:ms-1 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
-                </button>
-                <!-- Dropdown menu -->
-                <div class="hs-dropdown-menu top-full z-10 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:opacity-100 lg:w-48 lg:bg-neutral-800 lg:shadow-md lg:duration-[150ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
-                  <div class="space-y-1 py-1 lg:px-1">
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="#"> SDKs </a>
-                    <div class="hs-dropdown relative [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:[--is-collapse:false] lg:[--strategy:absolute] lg:[--trigger:hover]">
-                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-white focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                        Sub Menu
-                        <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
-                      </button>
-
-                      <div class="hs-dropdown-menu end-full top-0 z-10 !mx-[10px] hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-end-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:opacity-100 lg:w-48 lg:bg-neutral-800 lg:shadow-md lg:duration-[150ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
-                        <div class="space-y-1 py-1 lg:px-1">
-                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="#"> About </a>
-                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="#"> Downloads </a>
-                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="#"> Team Account </a>
-                        </div>
-                      </div>
-                    </div>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="#"> Downloads </a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="#"> Team Account </a>
-                  </div>
-                </div>
-              </div>
             </div>
             <!-- Theme / Signup / PixLab Console buttons -->
             <div class="flex items-center gap-4">
@@ -118,9 +109,7 @@
                 <i class="uil uil-moon text-xl"></i>
               </button>
               <div class="flex h-11 gap-3 py-1">
-                <button class="gradient-button group block h-full items-center gap-x-2 rounded-lg px-3 text-sm font-medium text-white" href="https://console.pixlab.io" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console.">
-                  <span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i>
-                </button>
+                <button class="gradient-button group block h-full items-center gap-x-2 rounded-lg px-3 text-sm font-medium text-white" href="https://console.pixlab.io" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></button>
               </div>
             </div>
           </div>

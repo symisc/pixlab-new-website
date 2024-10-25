@@ -2028,6 +2028,12 @@ body.dark-theme tbody tr.t-row {
   border-color: rgb(64 64 64 / var(--tw-border-opacity));
 }
 
+body.dark-theme .border-dark {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(64 64 64 / var(--tw-border-opacity));
+}
+
 .table-wrapper {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -2042,7 +2048,6 @@ body.dark-theme tbody tr.t-row {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  background-color: var(--color-off-white);
 }
 
 .table-wrapper tbody tr.t-row {
@@ -2316,10 +2321,6 @@ body.dark-theme tbody tr.t-row {
 
   .sm\:gap-6 {
     gap: 1.5rem;
-  }
-
-  .sm\:gap-9 {
-    gap: 2.25rem;
   }
 
   .sm\:p-4 {
