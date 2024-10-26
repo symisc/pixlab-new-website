@@ -651,9 +651,7 @@ video {
 
 /* Apply font to all elements */
 
-*,
-  *::before,
-  *::after {
+body {
   font-family: "Poppins", sans-serif;
 }
 
@@ -1675,11 +1673,6 @@ video {
   color: var(--text-muted);
 }
 
-.text-pink-500 {
-  --tw-text-opacity: 1;
-  color: rgb(236 72 153 / var(--tw-text-opacity));
-}
-
 .text-primary {
   color: var(--color-primary);
 }
@@ -1888,9 +1881,11 @@ nav .hs-dropdown:hover>button {
 }
 
 .hero-heading {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+  text-align: center;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
   font-weight: 700;
+  line-height: 1.25;
   /* width: fit-content; */
   background: linear-gradient(to left, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
@@ -1900,24 +1895,39 @@ nav .hs-dropdown:hover>button {
 
 @media (min-width: 1024px) {
   .hero-heading {
-    font-size: 3rem;
-    line-height: 1;
+    font-size: 2.5rem;
   }
 }
 
-.sub-heading {
+.sec-title {
+  margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   font-size: 1.5rem;
   line-height: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+@media (min-width: 640px) {
+  .sec-title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+.sec-title-sm {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--color-text);
 }
 
 @media (min-width: 640px) {
-  .sub-heading {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
+  .sec-title-sm {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -1938,6 +1948,7 @@ nav .hs-dropdown:hover>button {
 }
 
 .lead {
+  text-align: center;
   font-size: 1rem;
   line-height: 1.5rem;
   line-height: 1.375;
@@ -2336,11 +2347,6 @@ body.dark-theme .border-dark {
 
   .sm\:pl-9 {
     padding-left: 2.25rem;
-  }
-
-  .sm\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .sm\:text-6xl {

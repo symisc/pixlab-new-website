@@ -203,7 +203,7 @@
             <li><a href="#related-projects" class="link">Related Projects</a></li>
           </ul>
           <div class="gradient-graph-line my-5 h-1 w-full"></div>
-          <h2 class="mb-3 mt-12 text-lg font-semibold uppercase text-tColor sm:text-xl md:text-2xl" id="artm">Download</h2>
+          <h2 class="sec-title" id="artm">Download</h2>
 
           <div class="flex flex-col gap-2 border-b md:flex-row md:items-center md:gap-4" id="model_dl">
             <div class="flex-none text-lg font-semibold md:p-4 text-tColor">ASCII Art Hex Model</div>
@@ -231,7 +231,7 @@
           </div>
 
           <div class="gradient-graph-line my-5 h-1 w-full"></div>
-          <h2 class="mb-3 text-lg font-semibold uppercase text-tColor sm:text-xl md:text-2xl" id="gstart">Getting Started</h2>
+          <h2 class="sec-title" id="gstart">Getting Started</h2>
           <p class=" text-tColor">Embedding the library in your application is straightforward. All you have to do is drop the <code class="code">ascii_art.c</code> and its accompanying <a class="link" href="https://github.com/symisc/ascii_art" target="_blank">header file</a> in your source tree plus the <strong>model</strong> that you can download from the link <a class="link" href="#model_dl">above</a> and perform the following API calls successively:</p>
           <ul class="list">
             <li>
@@ -250,28 +250,28 @@
           <p class="my-5 text-tColor">Below is a simple C program that demonstrates a typical usage of the ASCII Art C/C++ interfaces.</p>
 
           <script src="https://gist.github.com/symisc/8638b3f1959874377547b89d8a8aa801.js"></script>
-          <p class="text-center text-tColor"><a class="link" href="https://github.com/symisc/ascii_art/blob/master/sample.c" target="_blank">sample.c</a> on Github. Please report any issue or feature request on the <a class="link" href="https://github.com/symisc/ascii_art" target="_blank">Github page</a>.</p>
-          <h2 class="my-5 text-lg font-semibold uppercase text-tColor sm:text-xl md:text-2xl" id="capi">C/C++ API Reference</h2>
+          <p class="mb-3 text-center text-tColor"><a class="link" href="https://github.com/symisc/ascii_art/blob/master/sample.c" target="_blank">sample.c</a> on Github. Please report any issue or feature request on the <a class="link" href="https://github.com/symisc/ascii_art" target="_blank">Github page</a>.</p>
+          <h2 class="sec-title" id="capi">C/C++ API Reference</h2>
           <p class=" text-tColor">This is the C/C++ language interface to ASCII Art. As of this release, only <strong>three interfaces</strong> are exported plus <strong>another optional</strong> for straightforward integration.</p>
-          <!-- HTML generated using hilite.me --><div class="my-5" style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:1em;border-radius: 10px;"><pre style="margin: 0; line-height: 125%"><span style="color: #B00040">void</span> AsciiArtInit(ascii_render <span style="color: #666666">*</span>pRender)
+          <!-- HTML generated using hilite.me --><div class="my-5 text-sm"  style="background: #f8f8f8; overflow:auto;width:auto;border: 1px solid #ccc;padding: .6em .6em;border-radius: 4px;"><pre style="margin: 0; line-height: 125%"><span style="color: #B00040">void</span> AsciiArtInit(ascii_render <span style="color: #666666">*</span>pRender)
 </pre></div>
 
 
 
-          <p class="text-pink-500">Description</p>
+          <p class="sec-title-sm">Description</p>
           <p class="mt-3 text-tColor">Initialize and prepare the <code class="code">ascii_render</code> structure. This routine is often the first API call that an application makes and is a prerequisite in order to work with the ASCII Art library.</p>
-          <p class="mt-7 text-pink-500">Parameters</p>
+          <p class="mt-7 sec-title-sm">Parameters</p>
           <div class="my-7 flex flex-col items-start gap-3 border-b pb-6 sm:flex-row sm:items-center sm:gap-12">
             <code class="code">ascii_render *pRender</code>
             <p class=" text-tColor">A pointer to a stack or heap allocated ascii_render structure defined in the header file of the library.</p>
           </div>
 
-          <!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:1em;border-radius: 10px;"><pre style="margin: 0; line-height: 125%"><span style="color: #B00040">unsigned</span> <span style="color: #B00040">int</span> AsciiArtTextBufSize(ascii_render <span style="color: #666666">*</span>pRender, <span style="color: #B00040">int</span> img_width, <span style="color: #B00040">int</span> img_height)
+          <!-- HTML generated using hilite.me --><div class="text-sm" style="background: #f8f8f8; overflow:auto;width:auto;border: 1px solid #ccc;padding: .6em .6em;border-radius: 4px;"><pre style="margin: 0; line-height: 125%"><span style="color: #B00040">unsigned</span> <span style="color: #B00040">int</span> AsciiArtTextBufSize(ascii_render <span style="color: #666666">*</span>pRender, <span style="color: #B00040">int</span> img_width, <span style="color: #B00040">int</span> img_height)
 </pre></div>
 
-          <p class="text-pink-500 mt-5">Description</p>
+          <p class="sec-title-sm mt-5">Description</p>
           <p class="mt-3 text-tColor">Calculate the <strong>amount of bytes</strong> needed to hold the <strong>entire ASCII text output</strong> of the input image.</p>
-          <p class="mt-7 text-pink-500">Parameters</p>
+          <p class="mt-7 sec-title-sm">Parameters</p>
           <div class="overflow-x-auto text-tColor">
             <table class="whitespace-nowrap">
               <tbody>
@@ -297,15 +297,15 @@
             </table>
           </div>
 
-          <p class="mt-7 text-pink-500">Return Type</p>
+          <p class="mt-7 sec-title-sm">Return Type</p>
           <p class="my-5 text-tColor"><strong>Amount of bytes</strong> needed to hold the entire buffer that can be safely passed to a memory allocation routine such as <em>malloc()</em>.</p>
-          <!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:1em;border-radius: 10px;"><pre style="margin: 0; line-height: 125%"><span style="color: #B00040">void</span> AsciiArtRender(ascii_render <span style="color: #666666">*</span>pRender, <span style="color: #B00040">unsigned</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span>zPixels <span style="color: #408080; font-style: italic">/*IN/OUT*/</span>, <span style="color: #B00040">int</span> <span style="color: #666666">*</span>pnWidth <span style="color: #408080; font-style: italic">/*IN/OUT*/</span>, <span style="color: #B00040">int</span> <span style="color: #666666">*</span>pnHeight <span style="color: #408080; font-style: italic">/*IN/OUT*/</span>, <span style="color: #B00040">unsigned</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span>zBuf<span style="color: #408080; font-style: italic">/* Optional/OUT */</span>, <span style="color: #B00040">int</span> Optimize)
+          <!-- HTML generated using hilite.me --><div class="text-sm" style="background: #f8f8f8; overflow:auto;width:auto;border: 1px solid #ccc;padding: .6em .6em;border-radius: 4px;"><pre style="margin: 0; line-height: 125%"><span style="color: #B00040">void</span> AsciiArtRender(ascii_render <span style="color: #666666">*</span>pRender, <span style="color: #B00040">unsigned</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span>zPixels <span style="color: #408080; font-style: italic">/*IN/OUT*/</span>, <span style="color: #B00040">int</span> <span style="color: #666666">*</span>pnWidth <span style="color: #408080; font-style: italic">/*IN/OUT*/</span>, <span style="color: #B00040">int</span> <span style="color: #666666">*</span>pnHeight <span style="color: #408080; font-style: italic">/*IN/OUT*/</span>, <span style="color: #B00040">unsigned</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span>zBuf<span style="color: #408080; font-style: italic">/* Optional/OUT */</span>, <span style="color: #B00040">int</span> Optimize)
 </pre></div>
 
 
-          <p class="mt-7 text-pink-500">Description</p>
+          <p class="mt-7 sec-title-sm">Description</p>
           <p class="my-5 text-tColor">Transform an input <strong>grayscaled image</strong> into ASCII Art.</p>
-          <p class="mt-7 text-pink-500">Parameters</p>
+          <p class="mt-7 sec-title-sm">Parameters</p>
           <div class="overflow-x-auto border-b text-tColor">
             <table class="min-w-[80rem] md:min-w-[50rem]">
               <tbody>
@@ -345,11 +345,11 @@
             </table>
           </div>
 
-          <!-- HTML generated using hilite.me --><div class="mt-5" style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:1em;border-radius: 10px;"><pre style="margin: 0; line-height: 125%"><span style="color: #B00040">unsigned</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span> AsciiArtLoadImage(<span style="color: #008000; font-weight: semi-bold">const</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span>zPath, <span style="color: #B00040">int</span> <span style="color: #666666">*</span>pWidth, <span style="color: #B00040">int</span> <span style="color: #666666">*</span>pHeight)
+          <!-- HTML generated using hilite.me --><div class="mt-5 text-sm"  style="background: #f8f8f8; overflow:auto;width:auto;border: 1px solid #ccc;padding: .6em .6em;border-radius: 4px;"><pre style="margin: 0; line-height: 125%"><span style="color: #B00040">unsigned</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span> AsciiArtLoadImage(<span style="color: #008000; font-weight: semi-bold">const</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span>zPath, <span style="color: #B00040">int</span> <span style="color: #666666">*</span>pWidth, <span style="color: #B00040">int</span> <span style="color: #666666">*</span>pHeight)
 </pre></div>
 
 
-          <p class="mt-7 text-pink-500">Description</p>
+          <p class="mt-7 sec-title-sm">Description</p>
           <p class="my-5 text-tColor">Loads an image from a file, convert it to the grayscale colorspace. Where done, the returned memory buffer can be passed directly to <code class="code">AsciiArtRender</code>. This interface is available only if the library is compiled with the <code class="code">ART_ENABLE_STB_IMAGE</code> compile-time directive.</p>
           <div class="overflow-x-auto border-b text-tColor">
             <table class="min-w-[50rem]">
@@ -375,10 +375,10 @@
               </tbody>
             </table>
           </div>
-          <p class="mt-7 text-pink-500">Return Value</p>
+          <p class="mt-7 sec-title-sm">Return Value</p>
           <p class="my-5 text-tColor">A pointer to a writable buffer holding the <strong>raw grayscaled pixels</strong> of the target image that can be safely passed to <code class="code">AsciiArtRender</code> for processing. When done, this buffer must be freed using the <em>free()</em> interface from the standard C library to avoid memory leaks. <strong>NULL</strong> is returned on failure.</p>
 
-          <h2 class="mb-3 mt-12 text-lg font-semibold uppercase text-tColor sm:text-xl md:text-2xl" id="related-projects">Related Projects</h2>
+          <h2 class="sec-title" id="related-projects">Related Projects</h2>
           <div class="gradient-graph-line my-5 h-1 w-full"></div>
           <p class=" text-tColor">You may find useful the following <a class="link" href="https://github.com/symisc">open source</a>*, production-ready products developed &amp; maintained by <strong>PixLab</strong> | <a class="link" href="https://symisc.net" target="_blank">Symisc Systems</a>:</p>
           <div class="flex md:flex-row flex-col gap-6">

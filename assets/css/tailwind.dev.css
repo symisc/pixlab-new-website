@@ -21,9 +21,7 @@
   }
 
   /* Apply font to all elements */
-  *,
-  *::before,
-  *::after {
+  body {
     font-family: "Poppins", sans-serif;
   }
 }
@@ -105,10 +103,13 @@ nav .hs-dropdown:hover>button {
 }
 
 .hero-heading {
-  @apply text-4xl font-bold lg:text-5xl gradient-text
+  @apply text-3xl font-bold lg:text-[2.5rem] gradient-text text-center leading-tight
 }
-.sub-heading{
-  @apply mb-5 text-2xl sm:text-3xl font-semibold text-tColor uppercase;
+.sec-title{
+  @apply my-5 text-2xl sm:text-3xl font-semibold text-primary uppercase;
+}
+.sec-title-sm{
+  @apply text-lg uppercase text-tColor font-semibold sm:text-xl;
 }
 
 .hero-section #particles-js::before {
@@ -128,7 +129,7 @@ nav .hs-dropdown:hover>button {
 }
 
 .lead {
-  @apply text-base sm:text-lg md:text-2xl leading-snug;
+  @apply text-base sm:text-lg md:text-2xl leading-snug text-center;
 }
 
 body.dark-theme ul li.card {
