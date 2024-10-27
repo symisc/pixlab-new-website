@@ -355,7 +355,7 @@
             <p class="text-lg text-tColor">
               Integrating <span><strong>Tiny Dream</strong></span> on your existing code base is straightforward. Here is what to do without having to do a lot of tedious reading and configuration:
             </p>
-            <h5 class="my-5 sec-title-sm">1. Download The Tiny-Dream Source Code</h5>
+            <h5 class="sec-title-sm my-5">1. Download The Tiny-Dream Source Code</h5>
             <div class="sm:pl-9">
               <ul class="list">
                 <li>
@@ -367,7 +367,7 @@
                 </li>
               </ul>
             </div>
-            <h5 class="my-5 sec-title-sm">2. Embedding Tiny-Dream</h5>
+            <h5 class="sec-title-sm my-5">2. Embedding Tiny-Dream</h5>
             <div class="sm:pl-9">
               <ul class="list">
                 <li>
@@ -548,7 +548,7 @@ g++ -o tinydream boileplate.cpp -funsafe-math-optimizations -Ofast -flto=auto  -
                 </li>
               </ul>
             </div>
-            <h5 class="my-5 sec-title-sm">4. Get the Pre-Trained Models & Assets</h5>
+            <h5 class="sec-title-sm my-5">4. Get the Pre-Trained Models & Assets</h5>
             <div class="sm:pl-9">
               <ul class="list">
                 <li>
@@ -568,7 +568,7 @@ g++ -o tinydream boileplate.cpp -funsafe-math-optimizations -Ofast -flto=auto  -
                 </li>
               </ul>
             </div>
-            <h5 class="my-5 sec-title-sm" id="code-gist">5. C++ Usage Example</h5>
+            <h5 class="sec-title-sm my-5" id="code-gist">5. C++ Usage Example</h5>
             <div class="text-tColor sm:pl-9">
               <p>
                 The <a class="link" href="https://gist.github.com/symisc/4936706c19e43cfa1e05cc8c1157ad11" target="_blank">C++ gist <i class="uil uil-external-link-alt"></i></a> below highlights a typical integration usage of <span><strong>Tiny Dream</strong></span> on an existing C++ code base:
@@ -593,7 +593,7 @@ g++ -o tinydream boileplate.cpp -funsafe-math-optimizations -Ofast -flto=auto  -
                 </li>
               </ul>
             </div>
-            <h5 class="my-5 sec-title-sm" id="code-gist">6. Continue with The C++ API Reference Guide</h5>
+            <h5 class="sec-title-sm my-5" id="code-gist">6. Continue with The C++ API Reference Guide</h5>
             <p class="text-tColor">
               The <span><strong>Tiny Dream</strong></span> <a class="link" href="#cpp-api">C++ Interface</a>, provides detailed specifications for all of the various methods the <span><strong>Tiny Dream</strong></span> class exports. Once the reader understands the basic principles of operation for <span><strong>Tiny Dream</strong></span
               >, that <a class="link" href="#cpp-api">section</a> should serve as a reference guide.
@@ -693,7 +693,7 @@ g++ -o tinydream boileplate.cpp -funsafe-math-optimizations -Ofast -flto=auto  -
             <h2 class="sec-title" id="cpp-api">C++ API Reference</h2>
             <div class="gradient-graph-line mb-5 h-1 w-full"></div>
             <p class="text-tColor">
-              This section define the C++ language interface to <span style="font-family: Montserrat"><strong>Tiny Dream</strong></span
+              This section define the C++ language interface to <span><strong>Tiny Dream</strong></span
               >. For a tutorial introduction, please refer to the <a class="link" href="#getting-started">Getting Started</a> section above. As of this <a class="link" href="#downloads"><strong>release</strong></a
               >, the library <strong>expose a single class with just eight methods</strong>, making it easy to use &amp; integrate in your existing C++ projects. The exposed methods are documented below.
             </p>
@@ -702,33 +702,52 @@ g++ -o tinydream boileplate.cpp -funsafe-math-optimizations -Ofast -flto=auto  -
             </p>
             <div class="flex flex-col justify-center gap-6 md:flex-row">
               <ul class="list text-lg">
-                <li><a class="link" href="#tiny-dream-constructor">tinyDream::tinyDream()</a> - <em class="text-muted">Constructor</em></li>
                 <li>
-                  <a class="link" href="#tiny-dream-method"><strong>tinyDream::dream()</strong></a> - <em class="text-muted">Stable Diffusion Inference</em>
+                  <a class="link" href="#tiny-dream-constructor"><code>tinyDream::tinyDream()</code></a> - <em class="text-muted">Constructor</em>
                 </li>
-                <li><a class="link" href="#set-img-output-method">tinyDream::setImageOutputPath()</a></li>
-                <li><a class="link" href="#set-img-output-prefix">tinyDream::setImageOutputPrefix()</a></li>
+                <li>
+                  <a class="link" href="#tiny-dream-method"
+                    ><strong><code>tinyDream::dream()</code></strong></a
+                  >
+                  - <em class="text-muted">Stable Diffusion Inference</em>
+                </li>
+                <li>
+                  <a class="link" href="#set-img-output-method"><code>tinyDream::setImageOutputPath()</code></a>
+                </li>
+                <li>
+                  <a class="link" href="#set-img-output-prefix"><code>tinyDream::setImageOutputPrefix()</code></a>
+                </li>
               </ul>
               <ul class="list text-lg">
-                <li><a class="link" href="#set-log-callback">tinyDream::setLogCallback()</a></li>
-                <li><a class="link" href="#set-assets-path-method">tinyDream::setAssetsPath()</a></li>
-                <li><a class="link" href="#prompt-example-method">tinyDream::promptExample()</a></li>
-                <li><a class="link" href="#about-method">tinyDream::about()</a></li>
+                <li>
+                  <a class="link" href="#set-log-callback"><code>tinyDream::setLogCallback()</code></a>
+                </li>
+                <li>
+                  <a class="link" href="#set-assets-path-method"><code>tinyDream::setAssetsPath()</code></a>
+                </li>
+                <li>
+                  <a class="link" href="#prompt-example-method"><code>tinyDream::promptExample()</code></a>
+                </li>
+                <li>
+                  <a class="link" href="#about-method"><code>tinyDream::about()</code></a>
+                </li>
               </ul>
             </div>
-            <h5 class="mb-2 mt-5 sec-title-sm">Syntax</h5>
+            <h5 class="sec-title-sm mb-2 mt-5">Syntax</h5>
             <!-- HTML generated using hilite.me -->
             <div class="text-sm" id="tiny-dream-constructor" style="background: #f8f8f8; overflow: auto; width: auto; border: 1px solid #ccc; padding: 0.6em; border-radius: 4px">
               <pre style="margin: 0; line-height: 125%">tinyDream<span style="color: #666666">::</span>tinyDream(<span style="color: #008000; font-weight: semi-bold">const</span> std<span style="color: #666666">::</span>string<span style="color: #666666">&amp;</span> assetsPath <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;./assets/&quot;</span>);</pre>
             </div>
-            <h5 class="mb-2 mt-5 sec-title-sm">Description</h5>
+            <h5 class="sec-title-sm mb-2 mt-5">Description</h5>
             <p class="text-tColor">
               <strong>Constructor for the <code class="code">tinyDream</code> class</strong>.
             </p>
             <ul class="list">
-            <li>
+              <li>
                 Instantiate a new <strong><code>tinyDream</code></strong> object ready for Stable Diffusion <a class="link" href="#tiny-dream-method">Inference</a>. The constructor takes an <strong>optional argument</strong> <code>assetsPath</code> which specifies the path to the pre-trained models required by the
-               <a class="link" href="#tiny-dream-method"><strong>tinyDream::dream()</strong></a>
+                <a class="link" href="#tiny-dream-method"
+                  ><strong><code>tinyDream::dream()</code></strong></a
+                >
                 method in order to accept prompts and generate images that matches the input criteria.
               </li>
               <li>
@@ -743,19 +762,251 @@ g++ -o tinydream boileplate.cpp -funsafe-math-optimizations -Ofast -flto=auto  -
                 >.
               </li>
             </ul>
-            <h5 class="mb-2 mt-5 sec-title-sm">Parameters</h5>
-            <div class=" flex flex-col items-start gap-3 pb-6 sm:flex-row  sm:gap-12">
+            <h5 class="sec-title-sm mb-2 mt-5">Parameters</h5>
+            <div class="flex flex-col items-start gap-3 pb-6 sm:flex-row sm:gap-12">
               <code class="code text-nowrap">const std::string& assetsPath</code>
-              <p class=" text-tColor"><em>Optional Argument</em>: Full path to the pre-trained models location which can be downloaded from <a href="#downloads">here</a>. If this parameter is omitted, then the current path where the executable is located is assumed (recommended case).</p>
+              <p class="text-tColor"><em>Optional Argument</em>: Full path to the pre-trained models location which can be downloaded from <a href="#downloads">here</a>. If this parameter is omitted, then the current path where the executable is located is assumed (recommended case).</p>
             </div>
-            <h5 class="mb-2 mt-5 sec-title-sm">Return Value</h5>
+            <h5 class="sec-title-sm mb-2 mt-5">Return Value</h5>
             <em class="text-tColor">None</em>
-            <hr class="my-5">
-            <h5 class="mb-2 mt-5 sec-title-sm">Syntax</h5>
-            <!-- HTML generated using hilite.me --><div class="text-sm" id="set-log-callback" style="background: #f8f8f8; overflow:auto;width:auto;border: 1px solid #ccc;padding: .6em .6em;border-radius: 4px;"><pre style="margin: 0; line-height: 125%"><span style="color: #B00040">void</span> tinyDream<span style="color: #666666">::</span>setLogCallback(std<span style="color: #666666">::</span>function<span style="color: #666666">&lt;</span><span style="color: #B00040">void</span>(<span style="color: #008000; font-weight: bold">const</span> <span style="color: #B00040">char</span><span style="color: #666666">*</span> <span style="color: #408080; font-style: italic">/* zLogMsg */</span>, <span style="color: #B00040">int</span> <span style="color: #408080; font-style: italic">/*msg length*/</span>, <span style="color: #B00040">void</span><span style="color: #666666">*</span> <span style="color: #408080; font-style: italic">/* pCookie */</span>) xLogHandler, <span style="color: #B00040">void</span><span style="color: #666666">*</span> pUserData);</pre></div>
-            <h5 class="mb-2 mt-5 sec-title-sm">Description</h5>
-            <p class="text-tColor">Consume log messages via an external log handler callback. The main task of the supplied callback is <strong>to consume log messages generated during <a class="link" href="#tiny-dream-method">Stable Diffusion inference</a></strong>. Inference may take some time to execute depending on the available resources so it make sense to log everything to the terminal or text file for example.</p>
-            <h5 class="mb-2 mt-5 sec-title-sm">Parameters</h5>
+            <hr class="my-5" />
+            <h5 class="sec-title-sm mb-2 mt-5">Syntax</h5>
+            <!-- HTML generated using hilite.me -->
+            <div class="text-sm" id="set-log-callback" style="background: #f8f8f8; overflow: auto; width: auto; border: 1px solid #ccc; padding: 0.6em 0.6em; border-radius: 4px">
+              <pre
+                style="margin: 0; line-height: 125%"
+              ><span style="color: #B00040">void</span> tinyDream<span style="color: #666666">::</span>setLogCallback(std<span style="color: #666666">::</span>function<span style="color: #666666">&lt;</span><span style="color: #B00040">void</span>(<span style="color: #008000; font-weight: bold">const</span> <span style="color: #B00040">char</span><span style="color: #666666">*</span> <span style="color: #408080; font-style: italic">/* zLogMsg */</span>, <span style="color: #B00040">int</span> <span style="color: #408080; font-style: italic">/*msg length*/</span>, <span style="color: #B00040">void</span><span style="color: #666666">*</span> <span style="color: #408080; font-style: italic">/* pCookie */</span>) xLogHandler, <span style="color: #B00040">void</span><span style="color: #666666">*</span> pUserData);</pre>
+            </div>
+            <h5 class="sec-title-sm mb-2 mt-5">Description</h5>
+            <p class="text-tColor">
+              Consume log messages via an external log handler callback. The main task of the supplied callback is <strong>to consume log messages generated during <a class="link" href="#tiny-dream-method">Stable Diffusion inference</a></strong
+              >. Inference may take some time to execute depending on the available resources so it make sense to log everything to the terminal or text file for example.
+            </p>
+            <h5 class="sec-title-sm mb-2 mt-5">Parameters</h5>
+            <div class="flex flex-col items-start gap-3 pb-6 sm:flex-row sm:gap-12">
+              <code class="code text-nowrap">std::function<> xLogHandler </code>
+              <div class="text-tColor">
+                <p class="mb-5">Log consumer callback. The supplied callback must have the following signature:</p>
+                <code class="code">void(const char *zLogMsg,int msgLen void *pUserData)</code>
+                <p class="my-5">The supplied callback must accept three arguments:</p>
+                <ul class="list">
+                  <li>The first argument is a pointer to a <strong>null terminated string holding the generated log message</strong>.</li>
+                  <li>The second argument is the <strong>size in bytes of the generated log message</strong>.</li>
+                  <li>
+                    The last argument is the <font face="courier"><strong>pUserData</strong></font> opaque pointer forwarded verbatim to your callback whenever a log message is generated.
+                  </li>
+                </ul>
+                <p class="mt-5">Please note that depending on the load &amp; inference parameters, the log consumer callback may be called dozens if not hundred of times, so make sure your supplied callback <strong>runs without blocking, and as fast as possible to avoid wasting CPU cycles</strong>.</p>
+              </div>
+            </div>
+            <div class="flex flex-col items-start gap-3 pb-6 sm:flex-row sm:gap-12">
+              <code class="code text-nowrap">void *pUserData</code>
+              <p class="text-tColor"><em>Optional Argument</em>: Full path to the pre-trained models location which can be downloaded from <a href="#downloads">here</a>. If this parameter is omitted, then the current path where the executable is located is assumed (recommended case).</p>
+            </div>
+            <h5 class="sec-title-sm mb-2 mt-5">Return Value</h5>
+            <em class="text-tColor">None</em>
+            <hr class="my-5" />
+            <h5 class="sec-title-sm mb-2 mt-5">Syntax</h5>
+            <!-- HTML generated using hilite.me -->
+            <div class="text-sm" id="set-assets-path-method" style="background: #f8f8f8; overflow: auto; width: auto; border: 1px solid #ccc; padding: 0.6em; border-radius: 4px">
+              <pre style="margin: 0; line-height: 125%"><span style="color: #B00040">void</span> tinyDream<span style="color: #666666">::</span>setAssetsPath(<span style="color: #008000; font-weight: bold">const</span> std<span style="color: #666666">::</span>string<span style="color: #666666">&amp;</span> assetsPath);</pre>
+            </div>
+
+            <h5 class="sec-title-sm mb-2 mt-5">Description</h5>
+            <div class="text-tColor">
+              <p class="mb-5">
+                <strong>Set the pre-trained models path</strong>. The <span><strong>Tiny Dream</strong></span> assets comprise all pre-trained models (over 2GB as of this release) required by the <a class="link" href="#tiny-dream-method"><font face="courier">tinyDream::dream()</font></a> method for stable diffusion inference (<em>image generation</em>).
+              </p>
+              <p>
+                <strong>You can download the pre-trained assets from the <a class="link" href="#downloads">Download</a> section above</strong>. Once downloaded, extract the assets ZIP archive in a directory of your choice (usually the directory where your executable is located), and set the full path via this method or from the <span><strong>Tiny Dream</strong></span> <a class="link" href="#tiny-dream-constructor">constructor</a>. You do not need to call this
+                method if the assets are located on the same directory where your executable reside.
+              </p>
+
+              <h5 class="sec-title-sm mb-2 mt-5">Parameters</h5>
+              <div class="flex flex-col items-start gap-3 pb-6 sm:flex-row sm:gap-12">
+                <code class="code text-nowrap">const std::string& assetsPath</code>
+                <p class="text-tColor">Full or relative path to the pre-trained models location which can be downloaded from <a class="link" href="#downloads">here</a>.</p>
+              </div>
+            </div>
+            <h5 class="sec-title-sm mb-2 mt-5">Return Value</h5>
+            <em class="text-tColor">None</em>
+            <hr class="my-5" />
+            <h5 class="sec-title-sm mb-2 mt-5">Syntax</h5>
+            <!-- HTML generated using hilite.me -->
+            <div class="text-sm" id="set-img-output-method" style="background: #f8f8f8; overflow: auto; width: auto; border: 1px solid #ccc; padding: 0.6em; border-radius: 4px">
+              <pre style="margin: 0; line-height: 125%"><span style="color: #B00040">void</span> tinyDream<span style="color: #666666">::</span>setImageOutputPath(<span style="color: #008000; font-weight: bold">const</span> std<span style="color: #666666">::</span>string<span style="color: #666666">&amp;</span> outputPath <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;./&quot;</span>);
+</pre>
+            </div>
+            <div class="text-tColor">
+              <h5 class="sec-title-sm mb-2 mt-5">Description</h5>
+              <div class="text-tColor">
+                <p>Set a <strong>directory of your choice where you want your output images to be stored</strong>. The default path is set to the current directory where the executable reside.</p>
+
+                <h5 class="sec-title-sm mb-2 mt-5">Parameters</h5>
+                <div class="flex flex-col items-start gap-3 pb-6 sm:flex-row sm:gap-12">
+                  <code class="code text-nowrap">const std::string& outputPath</code>
+                  <p class="text-tColor">Full or relative path to the desired location where you want the generated images to be stored.</p>
+                </div>
+              </div>
+              <h5 class="sec-title-sm mb-2 mt-5">Return Value</h5>
+              <em class="text-tColor">None</em>
+              <hr class="my-5" />
+            </div>
+
+            <h5 class="sec-title-sm mb-2 mt-5">Syntax</h5>
+            <!-- HTML generated using hilite.me -->
+            <div class="text-sm" id="set-img-output-prefix" style="background: #f8f8f8; overflow: auto; width: auto; border: 1px solid #ccc; padding: 0.6em; border-radius: 4px">
+              <pre style="margin: 0; line-height: 125%"><span style="color: #B00040">void</span> tinyDream<span style="color: #666666">::</span>setImageOutputPrefix(<span style="color: #008000; font-weight: bold">const</span> std<span style="color: #666666">::</span>string<span style="color: #666666">&amp;</span> outputImgPrefix <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;tinydream-&quot;</span>);
+</pre>
+            </div>
+
+            <div class="text-tColor">
+              <h5 class="sec-title-sm mb-2 mt-5">Description</h5>
+              <p><strong>Set a prefix of your choice to the yet to be generated image names</strong>. Output image names must be unique during each <a href="#tiny-dream-method">inference step</a>. The assigned prefix alongside a random string plus the current step, and seed generation will be used to generate this unique name that will reside on the <a href="#set-img-output-method">directory</a> of your choice.</p>
+
+              <h5 class="sec-title-sm mb-2 mt-5">Parameters</h5>
+              <div class="flex flex-col items-start gap-3 pb-6 sm:flex-row sm:gap-12">
+                <code class="code text-nowrap">const std::string& outputImgPrefix</code>
+                <p>Prefix to assign to each future image to be generated. The default prefix is set to <font face="courier">tinydream-</font>.</p>
+              </div>
+            </div>
+            <h5 class="sec-title-sm mb-2 mt-5">Return Value</h5>
+            <em class="text-tColor">None</em>
+            <hr class="my-5" />
+            <h5 class="sec-title-sm mb-2 mt-5">Syntax</h5>
+            <!-- HTML generated using hilite.me -->
+            <div class="text-sm" id="tiny-dream-method" style="background: #f8f8f8; overflow: auto; width: auto; border: 1px solid #ccc; padding: 0.6em; border-radius: 4px">
+              <pre style="margin: 0; line-height: 125%"><span style="color: #B00040">bool</span> tinyDream<span style="color: #666666">::</span>dream(<span style="color: #008000; font-weight: bold">const</span> std<span style="color: #666666">::</span>string<span style="color: #666666">&amp;</span> positivePrompt, <span style="color: #008000; font-weight: bold">const</span> std<span style="color: #666666">::</span>string<span style="color: #666666">&amp;</span> negativePrompt,
+std<span style="color: #666666">::</span>string<span style="color: #666666">&amp;</span> outputImgPath, <span style="color: #B00040">bool</span> upScale <span style="color: #666666">=</span> <span style="color: #008000">true</span>, <span style="color: #B00040">int</span> step <span style="color: #666666">=</span> <span style="color: #666666">30</span>, <span style="color: #B00040">int</span> seed <span style="color: #666666">=</span> <span style="color: #666666">42</span>);
+</pre>
+            </div>
+
+            <div class="text-tColor">
+              <h5 class="sec-title-sm mb-2 mt-5">Description</h5>
+              <p class="mt-5"><strong>Stable diffusion inference</strong> - <strong>Generate high definition output images that matches the input criteria</strong>.</p>
+              <p class="mt-5">Prompts (<em>Positive</em> or <em>Negative</em>) in this implementation are <strong>keywords separated by commas where each word describe the thing you'd like to see (or not) generated</strong>.</p>
+              <p class="mt-5">
+                Prior to calling this method, <strong>Pre-trained Models &amp; Assets must be accessible to your executable</strong>. You can download the Pre-trained models from the <a class="link" href="#downloads">Download</a> section above. Once downloaded, extract the assets ZIP archive in a directory of your choice (usually the directory where your executable is located), and optionally set the full path (if located outside the current executable directory) via
+                <font face="courier"><a class="link" href="#set-assets-path-method">tinyDream::setAssetsPath()</a></font> or from the <span><strong>Tiny Dream</strong></span> <a class="link" href="#tiny-dream-constructor">constructor</a>.
+              </p>
+              <p class="mt-5">
+                Depending on the <font face="courier">step</font>, and <font face="courier">seed</font> parameters, it make sense to call this method more than once (<em>ie</em> dozen times) to achieve the desired result. On which case, we recommend that you install a log consumer callback via <font face="courier"><a class="link" href="#set-log-callback">tinyDream::setLogCallback()</a></font> to <strong>capture log messages generated during inference</strong>, and get a detailed overview of
+                what's going on under the hood.
+              </p>
+              <p class="mt-5">
+                Stable Diffusion is based on the Latent Diffusion architecture, introduced in the <a class="link" href="https://arxiv.org/abs/2112.10752" target="_blank">High-Resolution Image Synthesis with Latent Diffusion Models <i class="uil uil-external-link-alt"></i></a> paper. There are three main building blocks in Stable Diffusion:
+              </p>
+              <ul class="list">
+                <li><strong>Text Encoder</strong>: The text-encoder is responsible for converting the input prompt into an embedding space (latent vector).</li>
+                <li><strong>Diffusion Model &amp; Image Encoder</strong>: Diffusion models are trained to denoise random Gaussian noise (64x64 latent image patch) step by step, to get to a sample of interest.</li>
+                <li><strong>Image Decoder</strong>: Finally, the decoder is responsible for converting the latent patches into 512x512 pixels output.</li>
+              </ul>
+
+              <h5 class="sec-title-sm mb-2 mt-5">Parameters</h5>
+              <div class="grid grid-cols-1 border-b py-6 sm:grid-cols-[30%_70%]">
+                <div><code class="code">const std::string& positivePrompt</code></div>
+                <div>
+                  <p>Describe something you'd like to see generated using <strong>words separated by commas</strong>. High priority or meta instructions (<em>eg</em> image quality) must be surrounded by parenthesis.</p>
+                  <p class="mt-5"><em>Example</em>: the following prompts will generate a high quality, landscape picture of a pyramid surrounded by palm trees and a river in the middle of the desert:<br /><span style="color: #ba2121">"pyramid, desert, palm trees, river, sun, (landscape), (high quality)"</span>.</p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 border-b py-6 sm:grid-cols-[30%_70%]">
+                <div><code class="code">const std::string& negativePrompt</code></div>
+                <div>
+                  <p>
+                    <em>Optional String, <strong>defaults to the empty string</strong></em
+                    >: An extra set of keywords that allows you to list what you do not want to see generated. Example of such keywords are:<br /><span style="color: #ba2121">"blood, mutilation, gore, genitals, nudity, destruction"</span>.
+                  </p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 border-b py-6 sm:grid-cols-[30%_70%]">
+                <div>
+                  <code class="code">std::string& outputImgPath</code>
+                </div>
+                <div>
+                  <p>On successful inference, the <strong>path to the generated image location</strong> will be copied to the supplied string object.</p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 border-b py-6 sm:grid-cols-[30%_70%]">
+                <div><code class="code">bool upScale</code></div>
+                <div>
+                  <p>
+                    <em>Optional Boolean, defaults to <strong>true</strong></em
+                    >. When <strong>true</strong>, the inference output is a <strong>high resolution, 2048x2048 image instead of the standard, medium resolution 512x512 Stable Diffusion output</strong> (when this field is set to <strong>false</strong>). This extra step is compute intensive, takes few seconds to complete, and is powered by <a href="https://github.com/xinntao/Real-ESRGAN" target="_blank">Real-ESRGAN <i class="uil uil-external-link"></i></a>, a Super Resolution Network Upscaler.
+                  </p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 border-b py-6 sm:grid-cols-[30%_70%]">
+                <div><code class="code">int seed</code></div>
+                <div>
+                  <p><em>Optional integer, defaults to <strong>42</strong></em>. Seed in Stable Diffusion is a number used to initialize the generation. Controlling the seed can help you generate reproducible images, experiment with other parameters, or prompt variations.</p>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 py-6 sm:grid-cols-[30%_70%]">
+                <div><code class="code">int step</code></div>
+                <div>
+                  <p><em>Optional integer, defaults to <strong>30</strong></em>. An integer for adjusting the inference steps in Stable Diffusion. The more steps you use, the better quality you'll achieve but you shouldn't set <font face="courier">steps</font> as high as possible. Around 30 sampling steps (default value) are usually enough to achieve high-quality images. Using more may produce a slightly different picture, but not necessarily better quality. In addition, the iterative nature of the process makes generation slow; the more steps you'll use, the more time it will take to generate an image. In most cases, it's not worth the additional wait time.</p>
+                </div>
+              </div>
+              <h5 class="sec-title-sm mb-2 mt-5">Return Value</h5>
+              <p>Boolean <font face="courier"><strong>true</strong></font> is returned on successful inference, <font face="courier"><strong>false</strong></font> is returned otherwise. On which case, log messages captured by your <a class="link" href="#set-log-callback">log consumer callback</a> should give you an insight of what went wrong during the whole image generation process.</p>
+            </div>
+            <hr class="my-5" />
+
+            <h5 class="sec-title-sm mb-2 mt-5">Syntax</h5>
+            <!-- HTML generated using hilite.me --><div id="prompt-example-method" class="text-sm" style="background: #f8f8f8; overflow:auto;width:auto;border: 1px solid #ccc;padding: .6em;border-radius: 4px;"><pre style="margin: 0; line-height: 125%"> <span style="color: #008000; font-weight: bold">static</span> std<span style="color: #666666">::</span>pair<span style="color: #666666">&lt;</span>std<span style="color: #666666">::</span>string <span style="color: #408080; font-style: italic">/*Positive Prompt */</span>, std<span style="color: #666666">::</span>string <span style="color: #408080; font-style: italic">/* Negative Prompt*/</span><span style="color: #666666">&gt;</span> tinyDream<span style="color: #666666">::</span>promptExample();
+</pre></div>
+
+            <div class="text-tColor">
+              <h5 class="sec-title-sm mb-2 mt-5">Description</h5>
+              <div class="text-tColor">
+                <p>Return a <strong>hard-coded, prompt example template</strong> to be passed to the <a class="link" href="#tiny-dream-method"><font face="courier">tinyDream::dream()</font></a> method. This static method is of no particular interest except to familiarize the developer (<em>in lack of imagination</em>) with the library prompt inputs.</p>
+
+                <h5 class="sec-title-sm mb-2 mt-5">Parameters</h5>
+                <em>None</em>
+              </div>
+              <h5 class="sec-title-sm mb-2 mt-5">Return Value</h5>
+              <p>This <strong>static method</strong> never fail, and always return a standard template <a class="link" href="https://cplusplus.com/reference/utility/pair/pair/" target="_blank"><font face="courier">std::pair</font> <i class="uil uil-external-link-alt"></i></a> object holding the <strong>positive prompt</strong> in the <font face="courier"><strong>first</strong></font> field of the <font face="courier">std::pair</font>, while the <strong>negative prompt</strong> is stored in the <font face="courier"><strong>second</strong></font> field of the pair object.</p>
+              <hr class="my-5" />
+            </div>
+            <h5 class="sec-title-sm mb-2 mt-5">Syntax</h5>
+            <!-- HTML generated using hilite.me --><div id="about-method" style="background: #f8f8f8; overflow:auto;width:auto;border: 1px solid #ccc;padding: .6em;border-radius: 4px;"><pre style="margin: 0; line-height: 125%"><span style="color: #008000; font-weight: bold">static</span> <span style="color: #008000; font-weight: bold">const</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span> tinyDream<span style="color: #666666">::</span>about();
+</pre></div>
+
+
+            <div class="text-tColor">
+              <h5 class="sec-title-sm mb-2 mt-5">Description</h5>
+              <div class="text-tColor">
+                <p>Return the current <a class="link" href="#roadmap">tensor engine</a>, copyright notice, library identification and version number.</p>
+
+                <h5 class="sec-title-sm mb-2 mt-5">Parameters</h5>
+                <em>None</em>
+              </div>
+              <h5 class="sec-title-sm mb-2 mt-5">Return Value</h5>
+              <p>This <strong>static method</strong> never fail, and always return a pointer to a <strong>null terminated string</strong> holding the copyright notice, and the current inference engine.</p>
+            </div>
+          </article>
+          <article class="mt-12">
+            <h2 class="sec-title" id="related-projects">Related Projects</h2>
+          <div class="gradient-graph-line my-5 h-1 w-full"></div>
+          <p class=" text-tColor">You may find useful the following <a class="link" href="https://github.com/symisc">open source</a>*, production-ready products developed &amp; maintained by <strong>PixLab</strong> | <a class="link" href="https://symisc.net" target="_blank">Symisc Systems</a>:</p>
+          <div class="flex md:flex-row flex-col gap-6">
+            <ul class="list list-dot">
+              <li><a class="link" href="art">ASCII Art</a> - Real-Time ASCII Art Rendering C Library.</li>
+              <li><a class="link" href="https://sod.pixlab.io" target="_blank">SOD</a> - An Embedded, Dependency-Free, Computer Vision C/C++ Library.</li>
+              <li><a class="link" href="https://unqlite.symisc.net" target="_blank">UnQLite</a> - An Embedded, Transactional Key/Value Database Engine.</li>
+          </ul>
+          <ul class="list list-dot">
+            <li><a class="link" href="https://faceio.net" target="_blank">FACEIO</a> - Cross Browser, Passwordless Facial Authentication Framework.</li>
+            <li><a class="link" href="https://annotate.pixlab.io" target="_blank">Annotate</a> - Online Image Annotation, Labeling &amp; Segmentation Tool.</li>
+            <li><a class="link" href="https://ekyc.pixlab.io" target="_blank">eKYC Platform</a> - AI Powered ID Scanning APIs.</li>
+            <li><a class="link" href="ai-photo-editor">AI Photo Editor</a> - Online, Web Based, Generative AI Photo Editor.</li>
+        </ul>
+          </div>
           </article>
         </div>
       </section>

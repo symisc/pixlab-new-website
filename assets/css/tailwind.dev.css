@@ -155,11 +155,11 @@ body.dark-theme ul li.card {
 .list {
   @apply marker:text-blue-600 list-disc pl-5 space-y-4 text-tColor mt-5
 }
-/* body.dark-theme .code{
-  @apply  border-neutral-700
-} */
+body.dark-theme .code{
+  @apply bg-neutral-900
+}
 .code{
-  @apply bg-surface rounded-md text-primary p-1 border border-gray-200;
+  @apply bg-gray-100 rounded-md text-primary p-1 border border-gray-200;
 }
 body.dark-theme .table-wrapper,
 body.dark-theme .code,

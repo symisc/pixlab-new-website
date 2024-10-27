@@ -1015,6 +1015,10 @@ body {
   max-width: 640px;
 }
 
+.max-w-\[66\.666667\%\] {
+  max-width: 66.666667%;
+}
+
 .max-w-\[85rem\] {
   max-width: 85rem;
 }
@@ -1031,8 +1035,40 @@ body {
   max-width: 36rem;
 }
 
+.max-w-\[33\.333333\%\] {
+  max-width: 33.333333%;
+}
+
+.max-w-full {
+  max-width: 100%;
+}
+
+.flex-\[33\.333333\%\] {
+  flex: 33.333333%;
+}
+
+.flex-\[66\.666667\%\] {
+  flex: 66.666667%;
+}
+
 .flex-none {
   flex: none;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-\[\] {
+  flex: ;
+}
+
+.flex-\[70\] {
+  flex: 70;
+}
+
+.flex-\[70\%\] {
+  flex: 70%;
 }
 
 .flex-shrink-0 {
@@ -1080,6 +1116,10 @@ body {
 
 .grid-cols-10 {
   grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1472,6 +1512,11 @@ body {
   padding-bottom: 1rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -1675,6 +1720,11 @@ body {
 
 .text-primary {
   color: var(--color-primary);
+}
+
+.text-slate-600 {
+  --tw-text-opacity: 1;
+  color: rgb(71 85 105 / var(--tw-text-opacity));
 }
 
 .text-tColor {
@@ -2020,16 +2070,18 @@ body.dark-theme ul li.card {
   color: rgb(37 99 235 );
 }
 
-/* body.dark-theme .code{
-  @apply  border-neutral-700
-} */
+body.dark-theme .code {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+}
 
 .code {
   border-radius: 0.375rem;
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
-  background-color: var(--color-surface);
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
   padding: 0.25rem;
   color: var(--color-primary);
 }
@@ -2311,8 +2363,16 @@ body.dark-theme .border-dark {
     width: 3.5rem;
   }
 
+  .sm\:max-w-\[66\.666667\%\] {
+    max-width: 66.666667%;
+  }
+
   .sm\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-\[30\%_70\%\] {
+    grid-template-columns: 30% 70%;
   }
 
   .sm\:flex-row {
@@ -2329,6 +2389,10 @@ body.dark-theme .border-dark {
 
   .sm\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .sm\:gap-8 {
+    gap: 2rem;
   }
 
   .sm\:p-4 {
