@@ -50,6 +50,18 @@ nav .hs-dropdown:hover>button {
   @apply text-primary
 }
 
+nav .nav-logo {
+  border-radius: 6px 6px 15px 6px;
+}
+
+nav .nav-menu {
+  border-radius: 15px 6px 15px 6px;
+}
+
+nav .nav-buttons {
+  border-radius: 15px 6px 6px 6px;
+}
+
 .gradient-button {
   @apply relative overflow-hidden;
   background: linear-gradient(to top, var(--color-primary) 0%, var(--color-secondary) 100%);
@@ -102,13 +114,20 @@ nav .hs-dropdown:hover>button {
   background-clip: text;
 }
 
+.header-gradient-bg {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: linear-gradient(to top, #13161D, #292C39);
+}
+
 .hero-heading {
   @apply text-3xl font-bold lg:text-[2.5rem] gradient-text text-center leading-tight
 }
-.sec-title{
+
+.sec-title {
   @apply my-5 text-2xl sm:text-3xl font-semibold text-primary uppercase;
 }
-.sec-title-sm{
+
+.sec-title-sm {
   @apply text-lg uppercase text-tColor font-semibold sm:text-xl;
 }
 
@@ -155,25 +174,36 @@ body.dark-theme ul li.card {
 .list {
   @apply marker:text-blue-600 list-disc pl-5 space-y-4 text-tColor mt-5
 }
-body.dark-theme .code{
+
+body.dark-theme .code {
   @apply bg-neutral-900
 }
-.code{
+
+.code {
   @apply bg-gray-100 rounded-md text-primary p-1 border border-gray-200;
 }
+
 body.dark-theme .table-wrapper,
 body.dark-theme .code,
 body.dark-theme tbody tr.t-row {
   @apply border-neutral-700
 }
-body.dark-theme .border-dark{
+
+body.dark-theme .border-dark {
   @apply border border-neutral-700
 }
 
 .table-wrapper {
-  @apply  my-5 mx-auto rounded-lg shadow-md p-6 overflow-x-auto border border-gray-200
+  @apply my-5 mx-auto rounded-lg shadow-md p-6 overflow-x-auto border border-gray-200
 }
 
 .table-wrapper tbody tr.t-row {
   @apply border-b border-gray-200
+}
+
+@media screen and (max-width: 1024px) {
+  .header-gradient-bg {
+    border: none;
+    background: transparent;
+  }
 }
