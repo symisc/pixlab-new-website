@@ -17,7 +17,15 @@
     --color-surface: #FFFFFF;
     --color-input: #E6ECF3;
     --color-off-white: #f7f7f7;
-    --color-gradient: linear-gradient(to top, var(--color-primary) 5%, var(--color-secondary) 95%)
+
+    --color-table-background: #f7fafc; 
+    --color-table-header: #e5e7eb; 
+    --color-table-row-odd: #ffffff;
+    --color-table-row-even: #f9fafb; 
+    --color-table-text-header: #4a5568;
+    --color-table-text-body: #2d3748;
+    --color-table-hover: #f3f4f6; 
+    --color-gradient: linear-gradient(to top, var(--color-primary) 5%, var(--color-secondary) 95%);
   }
 
   /* Apply font to all elements */
@@ -35,6 +43,14 @@
   --color-surface: #0D1016;
   --color-input: #333333;
   --color-off-white: #282828;
+
+  --color-table-background: #2d3748;
+  --color-table-header: #2a2d33;
+  --color-table-row-odd: #1c1f24;
+  --color-table-row-even: #15181c;
+  --color-table-text-header: #e2e8f0;
+  --color-table-text-body: #cbd5e0;
+  --color-table-hover: #3a3e47;
 }
 
 body {
@@ -182,7 +198,12 @@ body.dark-theme .code {
 .code {
   @apply bg-gray-100 rounded-md text-primary p-1 border border-gray-200;
 }
-
+.badge{
+  @apply bg-pink-100 text-pink-800 font-medium me-2 px-2.5 py-0.5 rounded-xl;
+}
+body.dark-theme .badge{
+  @apply bg-pink-800/30 text-pink-500;
+}
 body.dark-theme .table-wrapper,
 body.dark-theme .code,
 body.dark-theme tbody tr.t-row {
@@ -206,4 +227,7 @@ body.dark-theme .border-dark {
     border: none;
     background: transparent;
   }
+}
+body.dark-theme .img-invert{
+  filter: brightness(0) invert(1);
 }

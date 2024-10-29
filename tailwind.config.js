@@ -12,6 +12,15 @@ module.exports = {
         bColor: "var(--color-border)",
         surface: "var(--color-surface)",
         input: "var(--color-input)",
+
+        // Table-specific colors
+        tableBackground: "var(--color-table-background)",
+        tableHeader: "var(--color-table-header)",
+        tableRowOdd: "var(--color-table-row-odd)",
+        tableRowEven: "var(--color-table-row-even)",
+        tableTextHeader: "var(--color-table-text-header)",
+        tableTextBody: "var(--color-table-text-body)",
+        tableHover: "var(--color-table-hover)",
       },
     },
   },
