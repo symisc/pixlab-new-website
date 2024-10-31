@@ -1121,6 +1121,10 @@ body {
   width: 2rem;
 }
 
+.w-96 {
+  width: 24rem;
+}
+
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -1128,6 +1132,30 @@ body {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[470px\] {
+  width: 470px;
+}
+
+.w-\[4\] {
+  width: 4;
+}
+
+.w-\[3\] {
+  width: 3;
+}
+
+.w-\[30r\] {
+  width: 30r;
+}
+
+.w-\[30rem\] {
+  width: 30rem;
 }
 
 .min-w-\[34\.375rem\] {
@@ -1200,6 +1228,10 @@ body {
 
 .max-w-xl {
   max-width: 36rem;
+}
+
+.max-w-\[30rem\] {
+  max-width: 30rem;
 }
 
 .flex-1 {
@@ -1567,11 +1599,6 @@ body {
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
-.bg-blue-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
-}
-
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -1723,14 +1750,6 @@ body {
 
 .p-5 {
   padding: 1.25rem;
-}
-
-.p-7 {
-  padding: 1.75rem;
-}
-
-.p-32 {
-  padding: 8rem;
 }
 
 .px-1 {
@@ -2668,11 +2687,6 @@ body.dark-theme .img-invert{
   background-color: rgb(147 197 253 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-blue-700:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-gray-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -2724,11 +2738,6 @@ body.dark-theme .img-invert{
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.focus\:bg-blue-700:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
 .focus\:bg-gray-200:focus {
@@ -2937,11 +2946,14 @@ body.dark-theme .img-invert{
   }
 }
 
-@media not all and (min-width: 640px) {
-  .max-sm\:mt-3 {
-    margin-top: 0.75rem;
+@media not all and (min-width: 768px) {
+  .max-md\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
   }
+}
 
+@media not all and (min-width: 640px) {
   .max-sm\:mt-5 {
     margin-top: 1.25rem;
   }
@@ -3056,12 +3068,12 @@ body.dark-theme .img-invert{
     width: 29.5rem;
   }
 
-  .md\:w-\[46\.875rem\] {
-    width: 46.875rem;
-  }
-
   .md\:w-\[55rem\] {
     width: 55rem;
+  }
+
+  .md\:w-\[70rem\] {
+    width: 70rem;
   }
 
   .md\:min-w-\[50rem\] {
