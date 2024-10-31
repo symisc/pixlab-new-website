@@ -213,6 +213,9 @@ body.dark-theme tbody tr.t-row {
 body.dark-theme .border-dark {
   @apply border border-neutral-700
 }
+body.dark-theme .border-b-dark{
+  @apply border-b border-neutral-700
+}
 
 .table-wrapper {
   @apply my-5 mx-auto rounded-lg shadow-md p-6 overflow-x-auto border border-gray-200
