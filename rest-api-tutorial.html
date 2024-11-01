@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getting Started with the PixLab API</title>
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://pixlab.io/" />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="." />
+    <meta name="keywords" content="pixlab tutorial, pixlab usage, pixlab how to, pixlab in 5 minutes, introduction to Pixlab, getting started with pixlab">
+    <link rel="stylesheet" href="assets/css/unicons/css/line.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- Header/Navbar -->
+    <header class="absolute inset-x-0 top-3 z-50 mx-auto flex w-full max-w-[1320px] flex-wrap px-3 before:absolute before:inset-0 before:mx-5 before:max-w-full before:rounded-xl max-lg:before:bg-neutral-800/30 max-lg:before:backdrop-blur-lg lg:top-5 lg:flex-nowrap lg:justify-start">
+      <nav class="relative mx-2 w-full max-w-screen-xl gap-2 px-3 py-1.5 lg:mx-auto lg:flex lg:items-center lg:justify-between lg:px-1 lg:py-0">
+        <div class="flex items-center justify-between lg:h-full">
+          <!-- Logo -->
+          <a class="header-gradient-bg nav-logo flex h-full flex-none rounded-md text-xl font-semibold focus:opacity-80 focus:outline-none" href="/" aria-label="PixLab">
+            <img class="w-28 object-contain lg:w-[137px] lg:px-2.5 lg:py-0.5" src="assets/images/pixlab-logo-light.png" alt="PixLab Logo" />
+          </a>
+
+          <!-- Toggle Theme and Menu Buttons -->
+          <div class="flex items-center gap-3 lg:hidden">
+            <button class="theme-toggler flex items-center text-white">
+              <i class="uil uil-moon text-lg"></i>
+            </button>
+            <div>
+              <button type="button" class="hs-collapse-toggle flex size-8 items-center justify-center rounded-full bg-neutral-800 text-sm font-semibold text-white disabled:pointer-events-none disabled:opacity-50" id="hs-navbar-floating-dark-collapse" aria-expanded="false" aria-controls="hs-navbar-floating-dark" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-floating-dark">
+                <svg class="size-4 shrink-0 hs-collapse-open:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="3" x2="21" y1="6" y2="6" />
+                  <line x1="3" x2="21" y1="12" y2="12" />
+                  <line x1="3" x2="21" y1="18" y2="18" />
+                </svg>
+                <svg class="hidden size-4 shrink-0 hs-collapse-open:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 6 6 18" />
+                  <path d="m6 6 12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Menu -->
+        <div id="hs-navbar-floating-dark" class="hs-collapse header-gradient-bg nav-menu hidden flex-1 overflow-hidden transition-all duration-300 lg:flex lg:h-full" aria-labelledby="hs-navbar-floating-dark-collapse">
+          <div class="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
+            <div class="flex w-full flex-col gap-x-3.5 py-2 lg:w-auto lg:flex-row lg:items-center lg:justify-between lg:py-0 lg:ps-6">
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="start">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#8343EA] bg-[#8343EA] transition-all group-hover:bg-transparent"></span>
+                Get Started
+              </a>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="api-portal">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#EAA743] bg-[#EAA743] transition-all group-hover:bg-transparent"></span>
+                API Portal
+              </a>
+              <!-- Products & SDKs -->
+              <div class="hs-dropdown group cursor-pointer p-2 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:px-0 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
+                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  <span class="block h-2 w-2 shrink-0 rounded-full border border-[#21db49] bg-[#21db49] transition-all group-hover:bg-transparent"></span>
+                  Products & SDKs
+                  <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:ms-0.5 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div class="hs-dropdown-menu header-gradient-bg top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
+                  <div class="space-y-1 py-1 lg:px-1">
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="on-premises">PixLab On-Premises</a>
+                    <div class="hs-dropdown relative [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:[--is-collapse:false] lg:[--strategy:absolute] lg:[--trigger:hover]">
+                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-white focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        Open Source SDK <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      </button>
+                      <div class="hs-dropdown-menu header-gradient-bg start-full top-0 z-10 !mx-[10px] -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-start-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
+                        <div class="space-y-1 py-1 lg:px-1">
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="https://sod.pixlab.io/" target="_blank">SOD - Embedded Computer Vision Library &nearr;</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="tiny-dream">Tiny Dream - Stable Diffusion Inference in C++</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="art">ART - Real-Time ASCII Art C Library</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="downloads">SOD Downloads</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="sod">SOD Licensing Information</a>
+                        </div>
+                      </div>
+                    </div>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="ekyc/">eKYC - Universal ID Scanner APIs</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="vision-llm-api-playground/">Vision Play, LLM & APIs</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="template-pdf-image-engine">PDF Template Engine</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="app-ui-ux-code">APP UX - Mobile UI Code Generator</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="api-endpoints">PixLab API Endpoints</a>
+                    <!-- NEW PRODUCT ADD -->
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="https://faceio.net/" target="_blank">FACEIO - Facial Authentication for the Web &nearr;</a>
+                  </div>
+                </div>
+              </div>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="vision-llm-api-playground/">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#BFEA43] bg-[#BFEA43] transition-all group-hover:bg-transparent"></span>
+                Vision Play &nearr;
+              </a>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="ekyc/">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#EA4393] bg-[#EA4393] transition-all group-hover:bg-transparent"></span>
+                eKYC APIs &nearr;
+              </a>
+              <!-- Online Creativity dropdown link -->
+              <div class="hs-dropdown group cursor-pointer p-2 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:px-0 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
+                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  <span class="block h-2 w-2 shrink-0 rounded-full border border-[#43AEEA] bg-[#43AEEA] transition-all group-hover:bg-transparent"></span>
+                  Online Creativity
+                  <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:ms-0.5 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div class="hs-dropdown-menu header-gradient-bg top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
+                  <div class="space-y-1 py-1 lg:px-1">
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="annotate">Annotate - Image Annotation & Labelling</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="creative-toolbox">Creative Toolbox</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="mockup-screenshot-editor">Mockup & Screenshot AI Editor</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="ai-photo-editor">AI Photo Editor</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="bulk-image-video-background-removal-tool-apis">Bulk Image & Video Background Removal</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="tilemap-2d-level-editor">Tilemap & 2D Level Editor</a>
+                    <!-- NEW TOOL ADD -->
+                  </div>
+                </div>
+              </div>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="pricing">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#4643EA] bg-[#4643EA] transition-all group-hover:bg-transparent"></span>
+                Pricing
+              </a>
+            </div>
+
+            <!-- Theme / Signup / PixLab Console buttons -->
+            <div class="flex items-center gap-4 lg:hidden">
+              <button class="theme-toggler hidden items-center text-white lg:flex">
+                <i class="uil uil-moon text-xl"></i>
+              </button>
+              <div class="flex h-11 gap-3 py-1">
+                <button class="gradient-button group block h-full items-center gap-x-2 rounded-lg px-3 text-sm font-medium text-white" href="https://console.pixlab.io" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Theme / Signup / PixLab Console buttons -->
+        <div class="nav-buttons hidden h-full items-center gap-4 px-1.5 py-0.5 lg:flex">
+          <button class="theme-toggler hidden items-center text-white lg:flex">
+            <i class="uil uil-moon text-xl"></i>
+          </button>
+          <div class="flex h-full gap-3">
+            <button class="gradient-button console-button group flex h-full items-center gap-x-2 rounded-lg px-2.5 text-sm font-medium text-white" href="https://console.pixlab.io" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div id="particles-js" class="relative h-[75vh] bg-[#0b0e13]">
+          <div class="absolute flex h-full w-full items-center px-5 pt-10 text-white">
+            <div class="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between gap-10 lg:flex-row">
+              <!-- Hero Text -->
+              <div class="max-w-[500px] text-center lg:max-w-screen-sm lg:text-left">
+                <h1 class="hero-heading">Getting Started with PixLab</h1>
+                <p class="lead mt-5 text-gray-200">Learn the fundamentals and start building smart websites & web applications using the powerful yet simple PixLab APIs...</p>
+              </div>
+
+              <div class="flex w-full max-w-[500px] flex-col gap-6">
+                <!-- Search Form -->
+                <form action="search" method="get" class="flex h-12 w-full items-center justify-between rounded-xl bg-white/10 pe-3 ps-4 backdrop-blur-md focus-within:bg-white/15 lg:h-14">
+                  <label for="search-docs" class="sr-only">Search Documentation...</label>
+                  <input id="search-docs" name="q" class="h-full w-full border-none bg-transparent pe-2 outline-none" type="search" placeholder="Search documentation" required />
+                  <button type="submit" class="gradient-button flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white lg:h-10 lg:w-10" title="Search PixLab knowledge Base...">
+                    <i class="uil uil-search text-lg lg:text-xl" aria-hidden="true"></i>
+                    <span class="sr-only">Search</span>
+                  </button>
+                </form>
+                <!-- Connect Button -->
+                <a href="https://console.pixlab.io" target="_blank" class="gradient-button flex h-12 w-full items-center justify-between gap-x-3 rounded-xl pe-3 ps-4 lg:h-14" title="Connect to the PixLab Console and elevate your projects with powerful Vision and ID Scan APIs...">
+                  <span>Connect to the PixLab Console</span>
+                  <i class="uil uil-arrow-up-right flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-black bg-opacity-30 text-lg lg:h-10 lg:w-10 lg:text-xl"></i>
+                </a>
+                <span class="text-sm text-slate-600">Connect to the PixLab Console and elevate your projects with powerful Vision & Creativity APIs, designed to enhance your development workflow and productivity.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 pb-36 pt-8 text-tColor leading-8">
+          <!-- Social Bar -->
+          <div class="flex flex-wrap items-center justify-between gap-5 pb-3">
+            <img class="dark-logo w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" />
+            <p class="text-sm text-muted">
+              <span>Version 2.197</span>
+              <span>(<a href="#" target="_blank" class="text-primary hover:text-secondary">Release Notes</a>)</span>
+            </p>
+
+            <div class="flex flex-wrap">
+              <iframe loading="lazy" src="https://ghbtns.com/github-btn.html?user=symisc&repo=pixlab&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+
+              <iframe loading="lazy" src="https://ghbtns.com/github-btn.html?user=symisc&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+            </div>
+
+            <!-- AddToAny BEGIN -->
+            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+              <a class="a2a_button_google_gmail"></a>
+              <a class="a2a_button_email"></a>
+              <a class="a2a_button_linkedin"></a>
+              <a class="a2a_button_twitter"></a>
+              <a class="a2a_button_facebook_messenger"></a>
+              <a class="a2a_button_facebook"></a>
+              <a class="a2a_button_hacker_news"></a>
+            </div>
+            <script async src="https://static.addtoany.com/menu/page.js"></script>
+            <!-- AddToAny END -->
+          </div>
+
+          <div class="mt-5">
+            <div class="gradient-graph-line mb-5 h-1 w-full"></div>
+            <p>In this introduction course, you'll learn how to make use of the <span><strong>PixLab</strong></span> API to process &amp; analyze your input media assets whether images or video frames using your favorite programming language. <a class="link" href="api">API Documentation</a>, <a class="link" href="cmdls">List of API Endpoints</a>, and the <a class="link" href="examples" target="_blank">Code Samples Set</a> are the reference once you understand how <span><strong>PixLab</strong></span> handle your incoming HTTP request. Let's get started!</p>
+          </div>
+
+          <!-- Features of the PixLab API -->
+          <div class="mt-12">
+            <h2 class="sec-title">Features of the PixLab API</h2>
+            <div class="gradient-graph-line mb-5 h-1 w-full"></div>
+            <ul class="space-y-4">
+                <li class="flex items-start">
+                  <svg class="size-6 flex-shrink-0 text-green-400" width="24" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
+                  </svg>
+                  <p class="ml-3">
+                    Access to over <strong>130 battle tested, intelligent <a href="cmdls">API endpoints</a></strong> and growing...
+                  </p>
+                </li>
+  
+                <li class="flex items-start">
+                  <svg class="size-6 flex-shrink-0 text-green-400" width="24" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
+                  </svg>
+                  <p class="ml-3"><strong>99.9*% uptime guaranty</strong>. 24/7 friendly support assistance.</p>
+                </li>
+  
+                <li class="flex items-start">
+                  <svg class="size-6 flex-shrink-0 text-green-400" width="24" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
+                  </svg>
+                  <p class="ml-3">No hidden fees, no contract. <strong>Cancel your plan at anytime</strong>!</p>
+                </li>
+                <li class="flex items-start">
+                  <svg class="size-6 flex-shrink-0 text-green-400" width="24" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
+                  </svg>
+                  <p class="ml-3"><a class="link" href="/cmdls">Rich Documentation</a>, Production Ready <a class="link" href="/examples">Code Samples</a> &amp; Open source <a class="link" href="https://github.com/symisc" target="_blank">Advocates 💗</a></p>
+                </li>
+              </ul>
+          </div>
+
+          <!-- API Access Point URL -->
+          <div class="mt-12">
+            <h2 class="sec-title">API Access Point URL</h2>
+            <div class="gradient-graph-line mb-5 h-1 w-full"></div>
+            <ul class="list">
+                <li>
+                  <p>The <strong>PixLab</strong> API’s base endpoint is located at <code class="code">https://api.pixlab.io/</code>.</p>
+                </li>
+                <li>
+                  <p>
+                    The request URL scheme is <code class="code">https://api.pixlab.io/cmd?param=val&amp;param2=val2</code> where <strong><code class="code">cmd</code></strong> is the <a href="cmdls" class="link">API Endpoint</a> you want to call such as <a href="cmd?id=facedetect" class="link">FACEDETECT</a> (for face detection), <a href="https://ekyc.pixlab.io/docscan" class="link">DOCSCAN</a> (for Passports &amp; ID scanning), <a href="cmd?id=mogrify" class="link">MOGRIFY</a> (for face
+                    blurring), <a href="cmd?id=nsfw" class="link">NSFW</a> (for adult &amp; bloody content detection), <a href="cmd?id=" class="link">ROTATE</a>, and <a href="cmdls" class="link">hundreds of others</a> and <code class="code">param=val</code> are the endpoint parameters (if any).
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Each endpoint may handle both <code class="code">GET</code> &amp; <code class="code">POST</code> requests at the same time. <span><strong>PixLab</strong></span> is shipped with over <a href="cmdls" class="link">130 endpoints</a> and all of them are invoked using exactly the same way.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Health &amp; Status dashboard is located at <a class="link" href="https://status.faceio.net" target="_blank">status.faceio.net</a> (a <span><strong>PixLab</strong></span> product) for real-time monitoring.
+                  </p>
+                </li>
+              </ul>
+              <!-- Summary table -->
+              <div class="max-w-2xl table-wrapper bg-tableRowEven">
+                <h2 class="sm:mb-4 mb-2 text-xl font-semibold uppercase text-tColor">Summary</h2>
+                  <table class="min-w-full whitespace-nowrap text-left">
+                    <tbody>
+                      <tr class="t-row">
+                        <td class="px-4 py-3 font-medium sm:py-5">Access Point URL</td>
+                        <td class="px-4 py-3 sm:py-5"><a class="link" href="https://api.pixlab.io">api.pixlab.io</a></td>
+                      </tr>
+                      <tr class="t-row">
+                        <td class="px-4 py-3 font-medium sm:py-5">API Status Endpoint</td>
+                        <td class="px-4 py-3 sm:py-5"><a class="link" href="https://api.pixlab.io/status">api.pixlab.io/status</a></td>
+                      </tr>
+                      <tr class="t-row">
+                        <td class="px-4 py-3 font-medium sm:py-5">Architecture</td>
+                        <td class="px-4 py-3">RESTFul</td>
+                      </tr>
+                      <tr class="t-row">
+                        <td class="px-4 py-3 font-medium sm:py-5">Authentication</td>
+                        <td class="px-4 py-3"><a class="link" href="api#authentication">Key Based</a></td>
+                      </tr>
+                      <tr class="t-row">
+                        <td class="px-4 py-3 font-medium sm:py-5">HTTP Response MIME Type</td>
+                        <td class="px-4 py-3"><code class="code">application/json</code> or BLOBs</td>
+                      </tr>
+  
+                      <tr class="t-row">
+                        <td class="px-4 py-3 font-medium sm:py-5">HTTP Status &amp; Error Codes</td>
+                        <td class="px-4 py-3 sm:py-5"><a class="link" href="api#response">Refer to the API Documentation</a></td>
+                      </tr>
+                      <tr>
+                        <td class="px-4 py-3 font-medium sm:py-5">API Endpoints</td>
+                        <td class="px-4 py-3 sm:py-5"><a class="link" href="cmdls">Listed Here</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+          </div>
+
+          <!-- API Endpoints Categories -->
+        <div class="mt-12">
+            <h2 class="sec-title">API Endpoints Categories</h2>
+            <div class="gradient-graph-line mb-5 h-1 w-full"></div>
+            <h4 class="sec-title-sm">The PixLab API is broken down into three main categories:</h4>
+            <ul class="list">
+                <li>
+                    <p><strong class="text-green-600">Media Processing</strong> where you can apply series of transformations to your input media assets such as image <em>resizing, crop, motion blur, rotation</em>, etc. using your favorite programming language. Example of such endpoints: 
+                    <a href="cmd?id=crop" class="link">CROP</a>, 
+                    <a href="cmd?id=blur" class="link">BLUR</a>, 
+                    <a href="cmd?id=rotate" class="link">ROTATE</a>, 
+                    <a href="cmd?id=resize" class="link">RESIZE</a>, and 
+                    <a href="cmdls" class="link">dozens of others</a>.
+                    </p>
+                </li>
+                <li>
+                    <p><strong class="text-green-600">Media Analysis</strong> where you can apply series of <strong>Machine Learning analysis</strong> that does not alter the contents of the input image or video frame but rather return its <strong>computation result</strong>. For example, the 
+                    <a href="cmd?id=nsfw" class="link">NSFW</a> endpoint, returns a score value of type float between 0 and 1. The more this value approaches 1, the highly your input image contain bloody, gory or adult scene. 
+                    <a href="cmd?id=facedetect" class="link">FACEDETECT</a> on the other hand, output the rectangle coordinates for all the detected human faces in a given image or video frame. Example of such media analysis endpoints includes 
+                    <a href="cmd?id=nsfw" class="link">NSFW</a> for <em>not suitable for work</em> content detection, 
+                    <a href="cmd?id=tagimg" class="link">TAGIMG</a> for content extraction &amp; image tagging, 
+                    <a href="cmd?id=facedetect" class="link">FACEDETECT</a> is for face detection, 
+                    <a href="https://ekyc.pixlab.io/docscan" class="link">DOCSCAN</a> for Passports &amp; ID cards scan, and 
+                    <a href="cmdls" class="link">many others</a>.
+                    </p>
+                </li>
+                <li>
+                    <p><strong class="text-green-600">Mixing Both</strong>. The real power of the <span><strong>PixLab</strong></span> APIs really shine and comes to evidence when <strong>both Analysis &amp; Processing API calls are mixed</strong>. You can unlock endless possibilities and achieve amazing transformations to your input assets using this powerful combination. You can for example 
+                    <a href="https://dzone.com/articles/detect-and-blur-faces-programmatically" class="link" target="_blank">detect &amp; blur human faces</a>, <em>censor image uploads according to their NSFW score, generate a Captcha-like dynamic image to challenge bots on your platform, mimic Snapchat filters</em>, and so forth. The reader is encouraged to take a look at the 
+                    <a href="examples" class="link">examples section</a> for production ready code samples that illustrate this.
+                    </p>
+                </li>                
+            </ul>
+            <p class="text-lg mt-5">The code samples listed here and dozen of others are also available on the <span><strong> PixLab</strong></span> <a class="link" href="https://github.com/symisc/pixlab/" target="_blank">Github sample Page</a>.</p>
+            <ul class="list text-lg">
+                <li><a class="link" href="#first-api-call">Your First API Call</a></li>
+                <li><a class="link" href="#detect-and-crop-faces">Detect &amp; Extract or Mark Faces</a></li>
+                <li><a class="link" href="#detect-and-blur-faces">Detect &amp; Blur Human Faces</a></li>
+                <li><a class="link" href="#generate-meme">Programmatically Generate MEMEs</a></li>
+                <li><a class="link" href="#dynamic-image-challenge">Challenge Bots by Dynamic Image Generation</a></li>
+                <li><a class="link" href="#scan-passports">Scan Passports, ID Cards &amp; KYC Verification Check</a></li>
+                <li><a class="link" href="#moderate-image-uploads">Moderate Image Uploads According to their NSFW Score</a></li>
+            </ul>
+        </div>
+
+        <!-- Your First API Call -->
+        <div class="mt-12" id="first-api-call">
+            <h2 class="sec-title">Your First API Call</h2>
+            <div class="gradient-graph-line mb-5 h-1 w-full"></div>
+            <p class="mb-5">In order to familiarize yourself with the <span><strong> PixLab</strong></span> API, Let's start with the simplest command: <a class="link" href="cmd?id=grayscale">GRAYSCALE</a>. Given an input image, the <a class="link" href="cmd?id=grayscale">GRAYSCALE</a> endpoint produce a graylevel image in which the only colors are shades of gray like the following:</p>
+            <div class="flex max-sm:flex-col max-sm:gap-3 gap-6 mx-auto mb-5 max-w-4xl">
+                <div>
+                    <p class="text-muted text-sm mb-2">Input Picture</p>                    
+                    <img src="assets/images/nature31.jpg" alt="input picture">
+                </div>
+                <div>
+                    <p class="text-muted text-sm mb-2"><a class="link" href="cmd?id=grayscale">GRAYSCALE</a> (api.pixlab.io/grayscale) Picture Output</p>
+                    <img src="assets/images/nature31_gray.jpg" alt="Nature after processing">
+                </div>
+            </div>
+            <p class="mb-5 text-muted text-center">The output, grayscaled image above was obtained using the following code snippets:</p>
+            <div class="w-full">
+                <div class="border-b-dark border-b border-gray-200 px-4">
+                  <nav class="flex justify-center gap-x-2" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                    <button type="button" class="active inline-flex w-full items-center justify-center gap-x-2 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-center text-base hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 hs-tab-active:border-blue-600 hs-tab-active:font-semibold hs-tab-active:text-blue-600" aria-selected="true" data-hs-tab="#tab-1-1" role="tab">Python</button>
+                    <button type="button" class="inline-flex w-full items-center justify-center gap-x-2 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-center text-base hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 hs-tab-active:border-blue-600 hs-tab-active:font-semibold hs-tab-active:text-blue-600" aria-selected="false" data-hs-tab="#tab-1-2" role="tab">PHP</button>
+                  </nav>
+                </div>
+
+                <div class="mt-3 py-2">
+                  <div id="tab-1-1" role="tabpanel">
+                    <script src="https://gist.github.com/symisc/ee6f90e3a315317dcf79857c5aed7b06.js"></script>
+                  </div>
+                  <div id="tab-1-2" class="hidden" role="tabpanel">
+                    <script src="https://gist.github.com/symisc/b0c1ad7fdc8a5d9b2b7693b3cd82b97e.js"></script>
+                  </div>
+                </div>
+              </div>
+              <ul class="list">
+                <li>Regardless of the underlying programming language, the logic is always same. We made a simple HTTP <font face="courrier">GET</font> request with the input image URL as a sole parameter. Most <a class="link" href="cmdls">API Endpoints</a> support <strong>both GET &amp; POST HTTP methods at the same time</strong> so you can easily upload your images &amp; videos directly from your mobile or web application for processing. Refer to the <a class="link" href="examples">Code Samples</a> page on how to do that.</li>
+                <li>Once your request executed, a JSON object with a <code class="code">link</code> field to the image output URL alongside with a <code class="code">status</code> code is returned by default to the caller. Status code <code class="code">200</code> indicates success. Any other code indicates failure with an appropriate error message. Refer to the <a class="link" href="api#response">API documentation</a> for the full list of status codes.</li>
+                <li>Sometimes, you would want the <strong>raw image content (BLOB)</strong> to be returned directly to you instead of the JSON object holding the link to the media asset output. To do that, simply set the <code class="code">blob</code> parameter to <code class="code">true</code> on the incoming HTTP request as follows: <code class="code">https://api.pixlab.io/endpoint?<strong>blob=true</strong>&amp;param=val</code>. With the <code class="code">blob</code> parameter turned on, the raw asset content is returned directly to the caller rather than being stored on the <a class="link" href="http://pixlab.xyz" target="_blank">pixlab.xyz</a> storage cluster.</li>
+                <li>By default, any processed asset is automatically stored on the globally distributed (via <a class="link" href="https://www.cloudflare.com" target="_blank">Cloudflare</a>) <a class="link" href="http://pixlab.xyz" target="_blank">pixlab.xyz</a> storage cluster so you can access your output assets at request (via the <code class="code">link</code> field of the returned JSON object). If privacy or restrictive storage requirements is an issue, you can connect your <strong>own AWS S3 Bucket</strong> to serve as the main storage gateway. That way, each time a video or image is processed, it is automatically stored on your own S3 bucket rather than the <span><strong>PixLab</strong></span> public one. This is what most serious customers prefer to do, and this option <strong>gives you full control over your processed media assets</strong>. Sign-in to your account on the <a class="link" href="https://console.pixlab.io/" target="_blank">PixLab Console</a> to connect your AWS S3 Bucket.</li>
+            </ul>
+        </div>
+
+        <!-- Detect & Extract or Mark Faces -->
+        <div class="mt-12" id="detect-and-crop-faces">
+            <h2 class="sec-title">Detect & Extract or Mark Faces
+            </h2>
+            <div class="gradient-graph-line mb-5 h-1 w-full"></div>
+            <p class="mb-5">Let's tackle a more serious, yet very useful example that <strong>mixes analysis &amp; processing API calls at the same time</strong> now you understand how the <span><strong>PixLab API Servers</strong></span> handle your incoming HTTP request. First, we will try to <strong>detect all human faces</strong> present in a given image or video frame via the <a class="link" href="cmd?id=facedetect">FACEDETECT</a> endpoint, then, we will <strong>extract each detected face</strong> in a new image using the <a class="link" href="cmd?id=crop">CROP</a> endpoint (Useful for your KYC verification form).</p>
+            <div class="flex max-sm:flex-col max-sm:gap-3 gap-6 mx-auto mb-5 max-w-full">
+                <div>
+                    <p class="text-muted text-sm mb-2">Input Picture</p>                    
+                    <img src="assets/images/face1.jpg" alt="picture before processing" title="Input picture we are going to perform face detection on">
+                </div>
+                <div>
+                    <p class="text-muted text-sm mb-2"><a class="link" href="cmd?id=drawrectangle">Draw Rectangle</a> instead of CROP</p>
+                    <img src="assets/images/face_rec.jpg" alt="Jeremy after processing" title="Rectangle is drawn on each detected face">
+                </div>
+                <div>
+                    <p class="text-muted text-sm mb-2">Extract (crop) face via <a class="link" href="cmd?id=crop">CROP</a></p>
+                    <img src="assets/images/face_crop.jpg" width="554" alt="cropped face" title="Cropped face after processing">
+                </div>
+                
+            </div>
+            <p class="mb-5 text-muted text-center">This is easily done via the following code snippets:</p>
+            <div class="w-full">
+                <div class="border-b-dark border-b border-gray-200 px-4">
+                  <nav class="flex justify-center gap-x-2" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                    <button type="button" class="active inline-flex w-full items-center justify-center gap-x-2 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-center text-base hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 hs-tab-active:border-blue-600 hs-tab-active:font-semibold hs-tab-active:text-blue-600" aria-selected="true" data-hs-tab="#tab-2-1" role="tab">Python</button>
+                    <button type="button" class="inline-flex w-full items-center justify-center gap-x-2 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-center text-base hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 hs-tab-active:border-blue-600 hs-tab-active:font-semibold hs-tab-active:text-blue-600" aria-selected="false" data-hs-tab="#tab-2-2" role="tab">PHP</button>
+                  </nav>
+                </div>
+
+                <div class="mt-3 py-2">
+                  <div id="tab-2-1" role="tabpanel">
+                    <script src="https://gist.github.com/symisc/b6b9343969c52c0c919a08d1ad2630a6.js"></script>
+                  </div>
+                  <div id="tab-2-2" class="hidden" role="tabpanel">
+                    <script src="https://gist.github.com/symisc/9574b7d9077cd1d379b337f68ce39d67.js"></script>
+                  </div>
+                </div>
+              </div>
+              <p class="text-lg">To perform such operation, two endpoints are actually needed: One for the analysis phase, the other for processing:</p>
+              <ul class="list">
+                <li><a class="link" href="cmd?id=facedetect">FACEDETECT</a> is the analysis endpoint that must be called first. It <strong>outputs the rectangle coordinates for each detected face</strong> in a given image or video frame. This endpoint, its expected parameter, and JSON output result is documented <a class="link" href="cmd?id=facedetect">here</a>.</li>
+                <li><a class="link" href="cmd?id=crop">CROP</a> is called later after we obtain the rectangle coordinates for all the detected faces. In which case, we simply pass these coordinates to <em>crop</em> untouched and the target region of the image where each face is located is extracted and saved in a new image. Find out more information on the <em>CROP</em> endpoint <a class="link" href="cmd?id=crop">here</a>.</li>
+                <li>Alternatively, if you prefer marking the face(s) instead of extracting it, you can rely on the <a class="link" href="cmd?id=drawrectangle">DRAWRECTANGLE</a> endpoint to perform such operation.</li>
+            </ul>
+        </div>
+
+        <!-- Detect & Blur Human Faces -->
+        <div class="mt-12" id="detect-and-blur-faces">
+            <h2 class="sec-title">Detect & Blur Human Faces
+            </h2>
+            <div class="gradient-graph-line mb-5 h-1 w-full"></div>
+            <p class="mb-5">Similarly, we could apply a <strong>blur filter on all the detected human faces</strong> in a given image or video frame using only two PixLab Endpoints. This is very useful in the age of privacy. With privacy regulations changing all the time around the globe and the recent GDPR that came into effect in the EU, it is recommended to comply with all regulations per default by adding/integrating face blurring into your services. A typical output picture after processing should look like the following:</p>
+            <div class="flex max-sm:flex-col max-sm:gap-3 gap-6 mx-auto mb-5 max-w-full">
+                <div>
+                    <p class="text-muted text-sm mb-2">Input Picture</p>                    
+                    <img src="assets/images/m3.jpg" alt="faces before processing" title="Clear faces before processing">
+                </div>
+                <div>
+                    <p class="text-muted text-sm mb-2">Output Blurred Faces</p>
+                    <img src="assets/images/m3_cens.jpg" alt="faces after processing" title="Blurred faces after processing">
+                </div>
+            </div>
+            <p class="mb-5 text-muted text-center">Again, this is easily achieved using the following snippets:</p>
+            <div class="w-full">
+                <div class="border-b-dark border-b border-gray-200 px-4">
+                  <nav class="flex justify-center gap-x-2" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                    <button type="button" class="active inline-flex w-full items-center justify-center gap-x-2 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-center text-base hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 hs-tab-active:border-blue-600 hs-tab-active:font-semibold hs-tab-active:text-blue-600" aria-selected="true" data-hs-tab="#tab-3-1" role="tab">Python</button>
+                    <button type="button" class="inline-flex w-full items-center justify-center gap-x-2 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-center text-base hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 hs-tab-active:border-blue-600 hs-tab-active:font-semibold hs-tab-active:text-blue-600" aria-selected="false" data-hs-tab="#tab-3-2" role="tab">PHP</button>
+                  </nav>
+                </div>
+
+                <div class="mt-3 py-2">
+                  <div id="tab-3-1" role="tabpanel">
+                    <script src="https://gist.github.com/symisc/6ecdea76ba0d33d73ea7f23cade0d216.js"></script>
+                  </div>
+                  <div id="tab-3-2" class="hidden" role="tabpanel">
+                    <script src="https://gist.github.com/symisc/d54808915093e5375fdcb841e436580d.js"></script>
+                  </div>
+                </div>
+              </div>
+              <ul class="list">
+                <li>Just like the previous example, we relied on the <a class="link" href="cmd?id=facedetect">FACEDETECT</a> endpoint to output the rectangle coordinates for each present human face then, we immediately called the <a class="link" href="cmd?id=mogrify">MOGRIFY</a> endpoint, and we simply passed the facial coordinates untouched to <em>mogrify</em> to <strong>blur the target regions of the input image</strong> hence, the facial coordinates. The <em>mogrify</em> endpoint, its expected parameters, and output results is documented <a class="link" href="cmd?id=mogrify">here</a>.</li>
+                </ul>
+        </div>
+
+        <!-- Programmatically Generate MEMEs -->
+        <div class="mt-12" id="generate-meme">
+            <h2 class="sec-title">Programmatically Generate MEMEs
+            </h2>
+            <div class="gradient-graph-line mb-5 h-1 w-full"></div>
+            <p class="mb-5">Let's generate a funny MEME by drawing some text on top of the famous <a class="link" href="https://unsplash.com/photos/yMSecCHsIBc" target="_blank">Cool Cat</a>, public domain image using the <a class="link" href="cmd?id=drawtext">DRAWTEXT</a> API endpoint. Given an input image, <strong>draw some text</strong> on TOP &amp; BOTTOM of the image to obtain something like this:</p>
+            <div class="flex max-sm:flex-col max-sm:gap-3 gap-6 mx-auto mb-5 max-w-4xl">
+                <div>
+                    <p class="text-muted text-sm mb-2">Input Picture</p>                    
+                    <img src="assets/images/jdr.jpg" alt="input image">
+                </div>
+                <div>
+                    <p class="text-muted text-sm mb-2">Output Picture, dynamically generated <a class="link" href="cmd?id=drawtext">DRAWTEXT</a></p>
+                    <img src="assets/images/jdr_draw.jpg" alt="dynamically generated image with text drawn on top, and bottom">
+                </div>
+            </div>
+            <p class="mb-5 text-muted text-center">The output picture with text drawn on TOP & BOTTOM was obtained via the following code snippets:
+            </p>
+            <div class="w-full">
+                <div class="border-b-dark border-b border-gray-200 px-4">
+                  <nav class="flex justify-center gap-x-2" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                    <button type="button" class="active inline-flex w-full items-center justify-center gap-x-2 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-center text-base hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 hs-tab-active:border-blue-600 hs-tab-active:font-semibold hs-tab-active:text-blue-600" aria-selected="true" data-hs-tab="#tab-4-1" role="tab">Python</button>
+                    <button type="button" class="inline-flex w-full items-center justify-center gap-x-2 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-center text-base hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 hs-tab-active:border-blue-600 hs-tab-active:font-semibold hs-tab-active:text-blue-600" aria-selected="false" data-hs-tab="#tab-4-2" role="tab">PHP</button>
+                  </nav>
+                </div>
+
+                <div class="mt-4 py-2">
+                  <div id="tab-4-1" role="tabpanel">
+                    <script src="https://gist.github.com/symisc/94109c10ab319abfff3c5010224ac60e.js"></script>
+                  </div>
+                  <div id="tab-4-2" class="hidden" role="tabpanel">
+                    <script src="https://gist.github.com/symisc/bd820c4d9a510b38c2aef7f265dd517d.js"></script>
+                  </div>
+                </div>
+              </div>
+              <ul class="list">
+                <li><a class="link" href="cmd?id=drawtext" target="_blank">DRAWTEXT</a> is the sole endpoint needed to generate such image. It expect the text to be displayed on <strong>TOP</strong>, <strong>CENTER</strong> or <strong>BOTTOM</strong> of the target image. This endpoint is so flexible that you can supply <em>Font Name</em>, <em>Size</em> &amp; <em>Color</em>, <em>Stroke width</em>, etc. Refer to <a class="link" href="cmd?id=drawtext" target="_blank">DRAWTEXT</a> documentation for additional information. Notice that there is a more flexible endpoint named <a class="link" href="cmd?id=drawtextat" target="_blank">DRAWTEXTAT</a> which let you draw text on <strong>any region</strong> of the target image by specifying the <em>X</em> &amp; <em>Y</em> coordinates instead.</li>
+            </ul>
+        </div>
+
+        <!-- Challenge Bots by Dynamic Image Generation -->
+        <div class="mt-12" id="dynamic-image-challenge">
+            <h2 class="sec-title">Challenge Bots by Dynamic Image Generation
+            </h2>
+            <div class="gradient-graph-line mb-5 h-1 w-full"></div>
+            <p class="mb-5">In this sample, we'll <strong>dynamically create</strong> a 300x300 pixels, PNG image with a yellow background and draw some text on top. This is very useful, if you want for example to challenge bots on your platform by implementing a minimalistic yet powerful Captcha-like challenge. A typical generated image should look like the following using the steps below:</p>
+           <div class="flex max-sm:flex-col mb-5">
+            <div class="basis-96 sm:pr-6">
+                <img src="assets/images/bj.png" alt="Draw after processing" class="max-sm:mx-auto">
+                <p class="text-muted max-sm:hidden"><em>Dynamically created using <a class="link" href="cmd?id=newimage">NEWIMAGE</a>, text drawn via <a class="link" href="cmd?id=drawtext">DRAWTEXT</a></em></p>
+            </div>
+            <div class="basis-3/4">
+                <ul class="list">
+                    <li>A <strong>blank image</strong> is requested first via a call <a class="link" href="cmd?id=newimage">NEWIMAGE</a> which export to PNG by default but you can change the <strong>output format</strong> at request. We set the image <strong>height</strong>, <strong>width</strong> and the <strong>background color</strong> respectively to 300x300 with a yellow background color.</li>
+                    <li>Note, if one of the <em>height</em> or <em>width</em> parameter is missing (but not both), then the available length is applied to the missing side and if you want a <strong>transparent image</strong> set the <em>color</em> parameter to <em>none</em>.</li>
+                    <li>We finally <a class="link" href="cmd?id=drawtext">DRAW</a> our text at the center of the newly created image using the <em>WOLF Font</em>, <strong>black color</strong> and <strong>35 px font size</strong>. One could also draw <a class="link" href="cmd?id=drawlines">lines</a>, a <a class="link" href="cmd?id=drawrectangle">rectangle</a>, and other shapes for example to surround <a class="link" href="cmd?id=facedetect">faces</a>, <a class="link" href="cmd?id=merge">merge</a> with other images and so on...</li>
+                </ul>
+            </div>
+           </div>
+            
+            <p class="mb-5 text-muted">After generating such image, the automated script, hence the bot scrapping your platform, <strong>has to resolve your challenge by typing the text drawn on top of this image</strong>. The whole image creation process is done via the following code snippets:</p>
+            <div class="w-full">
+                <div class="border-b-dark border-b border-gray-200 px-4">
+                  <nav class="flex justify-center gap-x-2" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                    <button type="button" class="active inline-flex w-full items-center justify-center gap-x-2 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-center text-base hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 hs-tab-active:border-blue-600 hs-tab-active:font-semibold hs-tab-active:text-blue-600"  aria-selected="true" data-hs-tab="#tab-5-1" role="tab">Python</button>
+                    <button type="button" class="inline-flex w-full items-center justify-center gap-x-2 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-center text-base hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 hs-tab-active:border-blue-600 hs-tab-active:font-semibold hs-tab-active:text-blue-600" aria-selected="false" data-hs-tab="#tab-5-2" role="tab">PHP</button>
+                  </nav>
+                </div>
+
+                <div class="mt-4 py-2">
+                  <div id="tab-5-1" role="tabpanel">
+                    <script src="https://gist.github.com/symisc/fea5db44fd0bc78a5afeab24aab9e443.js"></script>
+                  </div>
+                  <div id="tab-5-2" class="hidden" role="tabpanel">
+                    <script src="https://gist.github.com/symisc/295e915bc0af51412d746ee0921c8ffb.js"></script>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <!-- Scan Passports, ID Cards & KYC Verification Check -->
+        <div class="mt-12" id="scan-passports">
+            <h2 class="sec-title">Scan Passports, ID Cards & KYC Verification Check</h2>
+            <div class="gradient-graph-line mb-5 h-1 w-full"></div>
+            <p class="mb-5">In this sample, you will learn how to make use of the <a class="link" href="ekyc/docscan">DOCSCAN</a> endpoint to <strong>implement a minimalistic KYC (Know Your Customer) form</strong> for your web site, and verify the authenticity of the personal information submitted by any of your users using an image upload of their ID card or Passport.</p>
+            <p class="mb-5">We'll start by scanning a <strong>government issued, travel document</strong> such as Passport, Visa or ID card from various countries using the <a class="link" href="ekyc/docscan">DOCSCAN</a> API endpoint. Besides its highly accurate text scanning capability, <a class="link" href="ekyc/docscan">DOCSCAN</a> should also extract (i.e. crop) any detected face within the target document. A typical input passport specimen and the scanned output fields should look like the following after processing:</p>
+           <div class="flex max-sm:flex-col gap-6 mb-5"> 
+            <div class="basis-2/5">
+              <p class="text-center text-muted">Input Passport Specimen</p>
+              <img src="assets/images/oJY2K.png" alt="Passport Specimen" title="Input Passport Specimen">
+            </div>
+            <div class="basis-3/5">
+              <p class="text-center text-muted">Extracted MRZ Fields</p>
+              <img src="assets/images/docscan_output.png" alt="Docscan Passport Scan Output" title="Scanned Passports MRZ using /DOCSCAN API endpoint">
+            </div>
+           </div>
+            
+            <p class="mb-5 text-muted">The extracted face, plus the scanned Passport <em>MRZ</em> fields were obtained via the following code snippets:</p>
+            <div class="w-full">
+                <div class="border-b-dark border-b border-gray-200 px-4">
+                  <nav class="flex justify-center gap-x-2" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                    <button type="button" class="active inline-flex w-full items-center justify-center gap-x-2 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-center text-base hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 hs-tab-active:border-blue-600 hs-tab-active:font-semibold hs-tab-active:text-blue-600"  aria-selected="true" data-hs-tab="#tab-6-1" role="tab">Python</button>
+                    <button type="button" class="inline-flex w-full items-center justify-center gap-x-2 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-center text-base hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 hs-tab-active:border-blue-600 hs-tab-active:font-semibold hs-tab-active:text-blue-600" aria-selected="false" data-hs-tab="#tab-6-2" role="tab">PHP</button>
+                  </nav>
+                </div>
+
+                <div class="mt-4 py-2">
+                  <div id="tab-6-1" role="tabpanel">
+                    <script src="https://gist.github.com/symisc/3a8df5c54e427ec1781515ceb27965e4.js"></script>
+                  </div>
+                  <div id="tab-6-2" class="hidden" role="tabpanel">
+                    <script src="https://gist.github.com/symisc/ca211ac7ff38ddcaab102e98fe5a7fa9.js"></script>
+                  </div>
+                </div>
+              </div>
+              <ul class="list">
+                <li><a class="link" href="https://ekyc.pixlab.io/docscan">DOCSCAN</a> is the sole endpoint needed for such a task. It support various ID cards besides Passports &amp; Visas and does face extraction automatically for you.</li>
+                <li><strong>PixLab recommend that you connect your AWS S3 bucket via the <a class="link" href="https://pixlab.io/dashboard" target="_blank">dashboard</a> so that, any extracted face or MRZ crop is automatically stored on your S3 bucket rather than the PixLab one</strong>. This feature should give you full control over your analyzed media files.<br>Refer to the <em>docscan</em> <a class="link" href="https://ekyc.pixlab.io/docscan">documentation</a> for additional information such as the set of scanned fields, where face crops are stored, how to process PDF documents instead of images and so forth.</li>
+            </ul>
+        </div>
+
+        <!-- Moderate Image Uploads According to their NSFW Score -->
+        <div class="mt-12" id="moderate-image-uploads">
+            <h2 class="sec-title">Moderate Image Uploads According to their NSFW Score</h2>
+            <div class="gradient-graph-line mb-5 h-1 w-full"></div>
+            <p class="mb-5">In this last sample, we shall <strong>censor image uploads according to their NSFW score by applying a blur filter</strong> on each image if, and only if, its <em>NSFW score</em> is high enough. A typical blurred picture should look like the following after processing:</p>
+           <div class="mb-5">
+            <img src="assets/images/blur_nsfw.jpg" alt="NSFW after processing" title="blurred picture after calling the NSFW/BLUR endpoints" class="mx-auto">
+           </div>
+            
+            <p class="mb-5 text-muted text-center">To filter, and obtain such blurred image, we used the following code snippets:</p>
+            <div class="w-full">
+                <div class="border-b-dark border-b border-gray-200 px-4">
+                  <nav class="flex justify-center gap-x-2" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                    <button type="button" class="active inline-flex w-full items-center justify-center gap-x-2 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-center text-base hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 hs-tab-active:border-blue-600 hs-tab-active:font-semibold hs-tab-active:text-blue-600"  aria-selected="true" data-hs-tab="#tab-7-1" role="tab">Python</button>
+                    <button type="button" class="inline-flex w-full items-center justify-center gap-x-2 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-center text-base hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 hs-tab-active:border-blue-600 hs-tab-active:font-semibold hs-tab-active:text-blue-600" aria-selected="false" data-hs-tab="#tab-7-2" role="tab">PHP</button>
+                  </nav>
+                </div>
+
+                <div class="mt-4 py-2">
+                  <div id="tab-7-1" role="tabpanel">
+                    <script src="https://gist.github.com/symisc/40c911b599f1d86ee1b75d0829a3cfe4.js"></script>
+                  </div>
+                  <div id="tab-7-2" class="hidden" role="tabpanel">
+                    <script src="https://gist.github.com/symisc/bf383cf60a68cb3631e17aa641bb94fe.js"></script>
+                  </div>
+                </div>
+              </div>
+              <p class="mb-5">To perform such operation, two endpoints are actually needed. One for the analysis phase, the other for processing:</p>
+              <ul class="list">
+                <li><a class="link" href="cmd?id=nsfw">NSFW</a> is the analysis endpoint that must be called first. It does perform nudity &amp; adult content detection and <strong>returns a score value between 0..1. The more this value approaches 1, the more your picture/frame is highly nsfw</strong>. Find out more information about <em>NSFW</em> <a class="link" href="cmd?id=nsfw">here</a>.</li>
+                <li><a class="link" href="cmd?id=blur">BLUR</a> is called later only if the <strong>nsfw score value returned earlier is greater than certain threshold</strong>. In our case, it is set to 0.5. The <em>blur</em> endpoint is documented <a class="link" href="cmd?id=blur">here</a>.</li>
+            </ul>
+        </div>
+
+        <!-- Further Reading -->
+        <div class="mt-12">
+          <h2 class="sec-title">Further Reading</h2>
+          <div class="gradient-graph-line mb-5 h-1 w-full"></div>
+          <p class="text-lg mb-5">Congratulation 👏. If you have followed this tutorial since the beginning, you should already have a good understanding on <strong>PixLab</strong> handle your incoming HTTP request. As you may notice, all the examples shown above are fully operational, easy to read and self-explanatory. The reader is now encouraged to dig further into the <strong>PixLab</strong> API by following the links below. Don't forget to refer to the <a class="link" href="https://github.com/symisc/pixlab/" target="_blank">Github sample repository</a> for more samples.</p>
+
+          <div class="mt-10 flex flex-wrap justify-center gap-3">
+            <a href="api" class="gradient-outline-btn">
+              <div class="flex items-center gap-2 rounded-[98px] bg-background p-3 px-8 uppercase transition-all duration-300">
+              <span class="font-medium text-center tracking-wider"><i class="uil uil-rocket mr-3 text-lg"></i>Api reference guide</span>
+              </div>
+              </a>
+              <a href="examples" class="gradient-outline-btn">
+              <div class="flex items-center gap-2 rounded-[98px] bg-background p-3 px-8 uppercase transition-all duration-300">
+              <span class="font-medium text-center tracking-wider"><i class="uil uil-arrow mr-3 text-xl"></i>Code Samples</span>
+              </div>
+              </a>
+              <a href="cmdls" class="gradient-outline-btn">
+              <div class="flex items-center gap-2 rounded-[98px] bg-background p-3 px-8 uppercase transition-all duration-300">
+              <span class="font-medium text-center tracking-wider"><i class="uil uil-list-ul mr-3 text-lg"></i>Api Endpoints</span>
+              </div>
+              </a>
+              <a href="support" class="gradient-outline-btn">
+              <div class="flex items-center gap-2 rounded-[98px] bg-background p-3 px-8 uppercase transition-all duration-300">
+              <span class="font-medium text-center tracking-wider"><i class="uil uil-comment-alt-dots mr-3 text-lg"></i>Ask questions</span>
+              </div>
+              </a>
+              
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-background">
+      <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+        <div class="gradient-graph-line mb-10"></div>
+        <div class="grid grid-cols-10 gap-y-10">
+          <div class="col-span-10 md:col-span-5 lg:col-span-3">
+            <img class="dark-logo mb-1 w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" />
+            <p class="pr-3 text-[15px] text-tColor">PixLab offers cutting-edge AI solutions to empower developers and creators with automated tools for vision, data processing, and creativity.</p>
+
+            <!-- Search Input in Footer -->
+            <form action="search" method="get">
+              <div class="mt-5 flex h-10 w-full items-center gap-3 rounded-full border border-bColor bg-input px-4 focus-within:bg-surface md:max-w-[80%] lg:h-12">
+                <i class="uil uil-search text-xl text-tColor" aria-hidden="true"></i>
+                <input name="q" class="h-full w-full border-none bg-transparent text-tColor outline-none" type="search" placeholder="Search Docs..." aria-label="Search" />
+              </div>
+            </form>
+          </div>
+
+          <!-- Products Section -->
+          <div class="col-span-10 md:col-span-5 lg:col-span-3">
+            <h3 class="mb-4 font-semibold text-tColor">PRODUCTS & SDKs</h3>
+            <ul class="flex flex-col gap-3">
+              <li><a href="#" class="footer-link">PixLab REST API</a></li>
+              <li><a href="#" class="footer-link">PixLab Vision LLM Playground & APIs</a></li>
+              <li><a href="#" class="footer-link">eKYC Project & ID Document Scanner</a></li>
+              <li><a href="#" class="footer-link">Mobile App UI/UX Generator & Builder</a></li>
+            </ul>
+            <!-- Creativity Tools -->
+            <h3 class="mt-4 mb-2 font-semibold text-tColor">ONLINE CREATIVITY</h3>
+            <ul class="flex flex-col gap-3">
+              <li><a href="#" class="footer-link">Creative Toolbox</a></li>
+              <li><a href="#" class="footer-link">Image Annotation & Segmentation</a></li>
+              <li><a href="#" class="footer-link">Mockup & Screenshot Editor</a></li>
+              <li><a href="#" class="footer-link">AI Photo Editor</a></li>
+              <li><a href="#" class="footer-link">Bulk Background Removal</a></li>
+              <li><a href="#" class="footer-link">AI Game Tilemap Editor</a></li>
+            </ul>
+          </div>
+          <!-- Resources Section -->
+          <div class="col-span-10 md:col-span-5 lg:col-span-2">
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-tColor">DEVELOPERS</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="start" class="footer-link">Getting Started</a></li>
+                <li><a href="api-portal" class="footer-link">API Portal</a></li>
+                <li><a href="api-endpoints" class="footer-link">API Endpoints</a></li>
+                <li><a href="ekyc/" class="footer-link">eKYC Platform</a></li>
+                <li><a href="vision-llm-playground-api/" class="footer-link">Vision LLM & APIs</a></li>
+              </ul>
+            </div>
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-tColor">RESOURCES</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="https://console.pixlab.io" target="_blank" class="footer-link">Pixlab Console &nearr;</a></li>
+                <li><a href="pricing" class="footer-link">Pricing</a></li>
+                <li><a href="support" class="footer-link">Support Channels</a></li>
+                <li><a href="https://community.faceio.net" target="_blank" class="footer-link">Community Forum &nearr;</a></li>
+                <li><a href="https://status.faceio.net" target="_blank" class="footer-link">Services Status &nearr;</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Company Section -->
+          <div class="col-span-10 md:col-span-5 lg:col-span-2">
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-tColor">COMPANY</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="https://symisc.net/" target="_blank" class="footer-link">Symisc Systems &nearr;</a></li>
+                <li><a href="https://blog.pixlab.io" target="_blank" class="footer-link">Pixlab Blog &nearr;</a></li>
+                <li><a href="https://github.com/symisc" target="_blank" class="footer-link">Github &nearr;</a></li>
+                <li><a href="https://www.linkedin.com/company/pixlabio" target="_blank" class="footer-link">LinkedIn &nearr;</a></li>
+                <li><a href="https://x.com/unqlite_db" target="_blank" class="footer-link">Twitter/X &nearr;</a></li>
+                <li><a href="https://www.facebook.com/pixlab.io/" target="_blank" class="footer-link">Facebook &nearr;</a></li>
+              </ul>
+            </div>
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-tColor">LEGAL</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="privacy-policy" class="footer-link">Privacy Policy</a></li>
+                <li><a href="terms-of-use" class="footer-link">Terms of Services</a></li>
+                <li><a href="dmca" class="footer-link">DCMA</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="mt-10 flex flex-col justify-between gap-5 md:flex-row md:items-center">
+          <!-- Social Media Links -->
+          <div class="mt-5 flex gap-1.5">
+            <a href="https://www.facebook.com/pixlab.io/" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow PixLab on Facebook">
+              <i class="uil uil-facebook text-lg"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/pixlabio" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow us on LinkedIn">
+              <i class="uil uil-linkedin text-lg"></i>
+            </a>
+            <a href="https://x.com/unqlite_db" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow PixLab on Twitter/X">
+              <i class="uil uil-twitter text-lg"></i>
+            </a>
+            <a href="https://github.com/symisc" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow Symisc on GitHub">
+              <i class="uil uil-github text-lg"></i>
+            </a>
+            <a href="https://blog.pixlab.io" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="PixLab Blog">
+              <i class="uil uil-rss text-lg"></i>
+            </a>
+          </div>
+
+          <div class="flex flex-col gap-1">
+            <p class="text-sm text-muted">Copyright © 2017 - 2025, <a href="https://symisc.net" target="_blank">Symisc Systems</a>, SUARL. All rights reserved.</p>
+            <p class="text-sm text-muted">All trademarks and copyrights belong to their respective owners.</p>
+          </div>
+          <div class="flex">
+            <a class="block" href="#" title="GDPR Compliant">
+              <img class="w-32 lg:w-36" src="assets/images/gdpr-compliant.png" alt="GDPR compliant badge" />
+            </a>
+            <a class="block" href="#" title="Privacy First">
+              <img class="w-32 lg:w-36" src="assets/images/privacy-first.png" alt="Privacy first badge" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/preline/preline.min.js"></script>
+    <script src="assets/js/particles/particles.min.js"></script>
+    <script src="assets/js/particles/particles-config.js"></script>
+  </body>
+</html>
