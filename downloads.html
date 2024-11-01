@@ -420,7 +420,7 @@
                       <strong>Most accurate but largest &amp; slowest</strong> (compared to <strong>:voc</strong> or <strong>:coco</strong>) object detection CNN model pre-trained on the <a href="http://cocodataset.org/" target="_blank">MS COCO dataset</a> that is able to <strong>detect 80 classes</strong> of different objects including car, motorbike, horse, bicycle, and so forth. <u>This model does not work at Real-time even with the proprietary multi-core enabled SOD release</u>.<br />ID -
                       <strong>full.sod</strong>
                     </td>
-                    <td class="px-4 py-4"><a class="link" href="https://gist.github.com/symisc/e7977fdc91e895da4b55d82c9dc72abf" target="_blank">cnn_coco.c</a></td>
+                    <td class="px-4 py-4"><a class="link" href="https://gist.github.com/symisc/e7977fdc91e895da4b55d82c9dc72abf" target="_blank">cnn_full.c</a></td>
                     <td class="px-4 py-4 text-center text-nowrap">
                       $29 (One time fee)<br /><br />
                       <button class="rounded-md bg-green-500 px-3 py-2 text-white hover:bg-green-600 text-nowrap" onclick="getModel('530083')">Get Model <i class="uil uil-arrow-to-bottom"></i></button>
@@ -465,11 +465,11 @@
               </thead>
               <tbody class="text-sm text-tableTextBody">
                 <!-- Frontal Face Detector -->
-                <tr class="odd:bg-tableRowOdd even:bg-tableRowEven hover:bg-tableHover">
+                <tr class="odd:bg-tableRowOdd even:bg-tableRowEven hover:bg-tableHover align-top" id="facerealnet">
                   <td class="px-4 py-4 font-semibold">Frontal Face Detector</td>
                   <td class="px-4 py-4">234 KB</td>
                   <td class="px-4 py-4">&lt; 10MB</td>
-                  <td class="px-4 py-4"><strong>Real-time (5 ~ 15 ms on HD video stream)</strong>, frontal face detector RealNet model pre-trained on the <a href="http://mplab.ucsd.edu/wordpress/?page_id=398" target="_blank">Genki-4K datatset</a>.<br>This is the recommended model if you are capturing video stream from user's Webcam or smartphone frontal camera to implement Snapchat-like filters, face recognition and so forth.<br>RealNets are designed to analyze &amp; extract useful information from video stream rather than static images thanks to their fast processing speed (less than 10 milliseconds on 1920*1080 HD stream) and low memory footprint making them suitable for use on mobile devices. You are encouraged to connect the RealNets APIs with the <a href="https://sod.pixlab.io/c_api/sod_img_load_from_cv_stream.html" target="_blank">OpenCV Video capture interfaces</a> or any proprietary Video capture API to see them in action.<br>ID - <strong>face.realnet.sod</strong></td>
+                  <td class="px-4 py-4"><strong>Real-time (5 ~ 15 ms on HD video stream)</strong>, frontal face detector RealNet model pre-trained on the <a class="link" href="http://mplab.ucsd.edu/wordpress/?page_id=398" target="_blank">Genki-4K datatset</a>.<br>This is the recommended model if you are capturing video stream from user's Webcam or smartphone frontal camera to implement Snapchat-like filters, face recognition and so forth.<br>RealNets are designed to analyze &amp; extract useful information from video stream rather than static images thanks to their fast processing speed (less than 10 milliseconds on 1920*1080 HD stream) and low memory footprint making them suitable for use on mobile devices. You are encouraged to connect the RealNets APIs with the <a class="link" href="https://sod.pixlab.io/c_api/sod_img_load_from_cv_stream.html" target="_blank">OpenCV Video capture interfaces</a> or any proprietary Video capture API to see them in action.<br>ID - <strong>face.realnet.sod</strong></td>
 
                   <td class="px-4 py-4"><a class="link" href="https://gist.github.com/symisc/529c7fc21da227ad4ac5807ec6c85208" target="_blank">realnet_face.c</a></td>
                   <td class="px-4 py-4 text-center text-nowrap">
@@ -478,7 +478,7 @@
                   </td>
                 </tr>
                 <!-- WebAssemby Face Model -->
-                <tr class="odd:bg-tableRowOdd even:bg-tableRowEven hover:bg-tableHover">
+                <tr class="odd:bg-tableRowOdd even:bg-tableRowEven hover:bg-tableHover align-top">
                   <td class="px-4 py-4 font-semibold">WebAssemby Face Model</td>
                   <td class="px-4 py-4">242 KB</td>
                   <td class="px-4 py-4">&lt; 5MB</td>
@@ -500,7 +500,7 @@
             <h2 class="sec-title text-center">Pre-trained RNN Models</h2>
             <p class="text-center text-lg text-muted">
               Production ready, pre-trained models to be used in conjunction with the SOD
-              <a class="link" href="https://sod.pixlab.io/c_api/sod_cnn_create.html" target="_blank">CNN interfaces</a>.
+              <a class="link" href="https://sod.pixlab.io/api.html#sod_cnn" target="_blank">RNN interfaces</a>.
             </p>
             <div class="mt-5 overflow-x-auto">
               <table class="min-w-[56rem] rounded-lg bg-tableBackground shadow-md">
@@ -607,9 +607,9 @@
                 </tr>
               </thead>
               <tbody class="text-sm text-tableTextBody">
-                <tr class="odd:bg-tableRowOdd even:bg-tableRowEven hover:bg-tableHover">
-                  <td class="px-4 py-4 font-semibold"><a href="https://pixlab.io/art" class="link">ASCII Art</a></td>
-                  <td class="px-4 py-4">2.5 MB</td>
+                <tr class="odd:bg-tableRowOdd even:bg-tableRowEven hover:bg-tableHover align-top">
+                  <td class="px-4 py-4 font-semibold"><a href="art" class="link">ASCII Art</a></td>
+                  <td class="px-4 py-4">2.6 MB</td>
                   <td class="px-4 py-4">Transform an input image or video frame into printable ASCII characters at real-time using a single decision tree. Real-time performance is achieved by using pixel intensity comparison inside internal nodes of the tree.<br>The library repository is available on <a class="link" href="https://github.com/symisc/ascii_art" target="_blank">Github</a>.<iframe loading="lazy" src="https://ghbtns.com/github-btn.html?user=symisc&amp;repo=ascii_art&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>This is the hex output model generated during the training phase. It contains both the codebook and the decision tree that let you render your images or video frames at Real-time.<br>ID - <strong>ascii_art.hex</strong></td>
                   <td class="px-4 py-4"><a href="https://art.pixlab.io/" class="link">art.pixlab.io</a></td>
                   <td class="px-4 py-4"><a class="link" href="https://github.com/symisc/ascii_art/blob/master/sample.c" target="_blank">sample.c</a></td>

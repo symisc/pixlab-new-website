@@ -1121,10 +1121,6 @@ body {
   width: 2rem;
 }
 
-.w-96 {
-  width: 24rem;
-}
-
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -1132,30 +1128,6 @@ body {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[\] {
-  width: ;
-}
-
-.w-\[470px\] {
-  width: 470px;
-}
-
-.w-\[4\] {
-  width: 4;
-}
-
-.w-\[3\] {
-  width: 3;
-}
-
-.w-\[30r\] {
-  width: 30r;
-}
-
-.w-\[30rem\] {
-  width: 30rem;
 }
 
 .min-w-\[34\.375rem\] {
@@ -1228,10 +1200,6 @@ body {
 
 .max-w-xl {
   max-width: 36rem;
-}
-
-.max-w-\[30rem\] {
-  max-width: 30rem;
 }
 
 .flex-1 {
