@@ -21,8 +21,16 @@ module.exports = {
         tableTextHeader: "var(--color-table-text-header)",
         tableTextBody: "var(--color-table-text-body)",
         tableHover: "var(--color-table-hover)",
+
+        // AI Photo Editor Page Colors
+        apePrimary: "var(--color-ape-primary)",
+        apeSecondary: "var(--color-ape-secondary)",
+        apeBackground: "var(--color-ape-background)",
+        apeTColor: "var(--color-ape-text)",
+        apeTGray: "var(--color-ape-text-gray)",
+        apeSurface: "var(--color-ape-surface)",
       },
     },
   },
-  plugins: [require("preline/plugin")]
+  plugins: [require("preline/plugin")],
 };

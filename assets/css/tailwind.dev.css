@@ -1,4 +1,5 @@
 @import url("poppins/fonts.css");
+@import url("playfair_display/fonts.css");
 
 @tailwind base;
 @tailwind components;
@@ -18,14 +19,22 @@
     --color-input: #E6ECF3;
     --color-off-white: #f7f7f7;
 
-    --color-table-background: #f7fafc; 
-    --color-table-header: #e5e7eb; 
+    --color-table-background: #f7fafc;
+    --color-table-header: #e5e7eb;
     --color-table-row-odd: #ffffff;
-    --color-table-row-even: #f9fafb; 
+    --color-table-row-even: #f9fafb;
     --color-table-text-header: #4a5568;
     --color-table-text-body: #2d3748;
-    --color-table-hover: #f3f4f6; 
+    --color-table-hover: #f3f4f6;
     --color-gradient: linear-gradient(to top, var(--color-primary) 5%, var(--color-secondary) 95%);
+
+    /* AI Photo Editor Page Colors */
+    --color-ape-primary: #28A745;
+    --color-ape-secondary: #008BD1;
+    --color-ape-background: #FAF8F5;
+    --color-ape-text: #0D1016;
+    --color-ape-text-gray: #323231;
+    --color-ape-surface: #EAE8E6;
   }
 
   /* Apply font to all elements */
@@ -51,13 +60,30 @@
   --color-table-text-header: #e2e8f0;
   --color-table-text-body: #cbd5e0;
   --color-table-hover: #3a3e47;
+
+  /* AI Photo Editor Page Colors */
+  --color-ape-background: #0D1016;
+  --color-ape-text: #FAF8F5;
+  --color-ape-text-gray: #CFD2D3;
+  --color-ape-surface: #3D4044;
 }
 
 body {
   @apply bg-background
 }
 
-body.dark-theme .dark-logo {
+/* Scrollbar styles */
+.thin-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.thick-scrollbar,
+.thin-scrollbar:hover {
+  scrollbar-color: var(--color-muted) transparent;
+}
+
+body.dark-theme :where(.img-invert, .dark-logo) {
   filter: brightness(0) invert(1);
 }
 
@@ -130,9 +156,20 @@ nav .nav-buttons .console-button {
   background-clip: text;
 }
 
-.header-gradient-bg {
+.header-gradient-bg,
+body.dark-theme .bg-gradient-theme {
   border: 1px solid rgba(255, 255, 255, 0.15);
-  background: linear-gradient(to top, #13161D, #292C39);
+  background: linear-gradient(to top, #13161D, #191C28);
+}
+
+.bg-gradient-theme {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.gradient-button:hover>.bg-gradient-theme {
+  color: #fff;
+  background: transparent;
 }
 
 .hero-heading {
@@ -198,12 +235,15 @@ body.dark-theme .code {
 .code {
   @apply bg-gray-100 rounded-md text-primary p-1 border border-gray-200;
 }
-.badge{
+
+.badge {
   @apply bg-pink-100 text-pink-800 font-medium me-2 px-2.5 py-0.5 rounded-xl;
 }
-body.dark-theme .badge{
+
+body.dark-theme .badge {
   @apply bg-pink-800/30 text-pink-500;
 }
+
 body.dark-theme .table-wrapper,
 body.dark-theme .code,
 body.dark-theme tbody tr.t-row {
@@ -213,7 +253,8 @@ body.dark-theme tbody tr.t-row {
 body.dark-theme .border-dark {
   @apply border border-neutral-700
 }
-body.dark-theme .border-b-dark{
+
+body.dark-theme .border-b-dark {
   @apply border-b border-neutral-700
 }
 
@@ -225,12 +266,175 @@ body.dark-theme .border-b-dark{
   @apply border-b border-gray-200
 }
 
+/* Pricing Page's Brands Carousel Styling */
+.pricing-brands-carousel::before,
+.pricing-brands-carousel::after {
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+}
+
+.pricing-brands-carousel::before {
+  left: 0;
+  background: linear-gradient(to left, transparent, var(--color-background));
+}
+
+.pricing-brands-carousel::after {
+  right: 0;
+  background: linear-gradient(to right, transparent, var(--color-background));
+}
+
+.pricing-brands-carousel .brands-wrapper {
+  animation: slide 30s linear infinite;
+}
+
+.pricing-brands-carousel:hover .brands-wrapper {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.pricing-brands-carousel .brands-wrapper img {
+  display: unset;
+  margin: 0 35px;
+  max-width: unset;
+  filter: brightness(100%) invert(1);
+}
+
+body.dark-theme .pricing-brands-carousel .brands-wrapper img {
+  filter: brightness(0) invert(1);
+}
+
+/* Media query for small screen */
 @media screen and (max-width: 1024px) {
   .header-gradient-bg {
     border: none;
     background: transparent;
   }
 }
-body.dark-theme .img-invert{
+
+/* AI Photo Editor Stylings */
+
+body.ai-photo-editor {
+  @apply bg-apeBackground
+}
+
+.playfair-font {
+  font-family: "PlayfairDisplay", sans-serif;
+}
+
+header .ape-navbar .nav-logo {
+  filter: brightness(100) invert(1);
+}
+
+nav.ape-navbar :where(.nav-link, .theme-toggler):hover,
+nav.ape-navbar .hs-dropdown:hover>button {
+  @apply text-apePrimary
+}
+
+body.dark-theme header .nav-logo {
   filter: brightness(0) invert(1);
+}
+
+.ape-gradient-button {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to top left, var(--color-ape-primary), var(--color-ape-secondary));
+}
+
+.ape-gradient-button :where(span, i) {
+  @apply z-20 relative
+}
+
+.ape-gradient-button::before {
+  @apply absolute left-0 top-0 content-[""] w-full h-full z-10 opacity-0 transition-all duration-300;
+  background: linear-gradient(to bottom left, var(--color-ape-primary) 0%, var(--color-ape-secondary) 100%);
+}
+
+.ape-gradient-button:hover::before {
+  @apply opacity-100
+}
+
+.ape-gradient-bg-theme {
+  background: linear-gradient(to top, var(--color-ape-primary), var(--color-ape-secondary));
+}
+
+.ape-gradient-surface-theme {
+  background: linear-gradient(to bottom, #FFFFFF, #999999);
+}
+
+.ape-gradient-text {
+  width: fit-content;
+  background: linear-gradient(to top, var(--color-ape-primary), var(--color-ape-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ape-header-gradient-theme,
+.ape-card-gradient-theme {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+body.dark-theme .ape-header-gradient-theme,
+body.dark-theme .ape-card-gradient-theme {
+  background: linear-gradient(to top, #13161D, #191C28);
+}
+
+body.dark-theme .ape-header-gradient-theme {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.text-stroke {
+  color: var(--color-ape-background);
+  -webkit-text-stroke: 1px var(--color-ape-primary);
+}
+
+/* Transparent background and no border on large screens */
+@media screen and (min-width: 1024px) {
+
+  header.ape-header-gradient-theme,
+  body.dark-theme header.ape-header-gradient-theme {
+    background: transparent;
+    border: none;
+  }
+}
+
+
+/* Transparent background and no border on small screens */
+@media screen and (max-width: 1024px) {
+
+  header .ape-header-gradient-theme,
+  body.dark-theme header .ape-header-gradient-theme {
+    background: transparent;
+    border: none;
+  }
+
+  header.ape-header-gradient-theme,
+  body.dark-theme header.ape-header-gradient-theme {
+    background: transparent;
+    border: none;
+  }
+
+  header.ape-header-gradient-theme::before {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
+  body.dark-theme header.ape-header-gradient-theme::before {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: linear-gradient(to top, #13161D, #191C28);
+  }
 }
