@@ -402,6 +402,10 @@ body.dark-theme .ape-header-gradient-theme {
   -webkit-text-stroke: 1px var(--color-ape-primary);
 }
 
+.ai-photo-editor .footer-link:hover {
+  @apply text-apePrimary
+}
+
 /* Transparent background and no border on large screens */
 @media screen and (min-width: 1024px) {
 

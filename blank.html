@@ -233,7 +233,9 @@
         <div class="gradient-graph-line mb-10"></div>
         <div class="grid grid-cols-10 gap-y-10">
           <div class="col-span-10 md:col-span-5 lg:col-span-3">
-            <img class="dark-logo mb-1 w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" />
+            <a href="/">
+              <img class="dark-logo mb-1 w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" />
+            </a>
             <p class="pr-3 text-[15px] text-tColor">PixLab offers cutting-edge AI solutions to empower developers and creators with Automated Tools & APIs for Machine Vision, Media Processing & Creative Innovation.</p>
 
             <!-- Search Input in Footer -->
@@ -243,11 +245,30 @@
                 <input name="q" class="h-full w-full border-none bg-transparent text-tColor outline-none" type="search" placeholder="Search Docs..." aria-label="Search" />
               </div>
             </form>
+
+            <!-- Social Media Links -->
+            <div class="mt-10 flex gap-1.5">
+              <a href="https://www.facebook.com/pixlab.io/" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow PixLab on Facebook">
+                <i class="uil uil-facebook text-lg"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/pixlabio" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow us on LinkedIn">
+                <i class="uil uil-linkedin text-lg"></i>
+              </a>
+              <a href="https://x.com/unqlite_db" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow PixLab on Twitter/X">
+                <i class="uil uil-twitter text-lg"></i>
+              </a>
+              <a href="https://github.com/symisc" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow Symisc on GitHub">
+                <i class="uil uil-github text-lg"></i>
+              </a>
+              <a href="https://blog.pixlab.io" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="PixLab Blog">
+                <i class="uil uil-rss text-lg"></i>
+              </a>
+            </div>
           </div>
 
           <!-- Products Section -->
           <div class="col-span-10 md:col-span-5 lg:col-span-3">
-            <h3 class="mb-4 font-semibold text-tColor">PRODUCTS & SDKs</h3>
+            <h3 class="mb-4 font-semibold text-primary">PRODUCTS & SDKs</h3>
             <ul class="flex flex-col gap-3">
               <li><a href="api-portal" class="footer-link">PixLab API Portal</a></li>
               <li><a href="template-pdf-image-engine" class="footer-link">PDF Template Engine</a></li>
@@ -257,7 +278,7 @@
               <li><a href="https://faceio.net/" target="_blank" class="footer-link">FACEIO - Facial Authentication for the Web &nearr;</a></li>
             </ul>
             <!-- Creativity Tools -->
-            <h3 class="mb-2 mt-4 font-semibold text-tColor">ONLINE CREATIVITY</h3>
+            <h3 class="mb-2 mt-4 font-semibold text-primary">ONLINE CREATIVITY</h3>
             <ul class="flex flex-col gap-3">
               <li><a href="annotate" class="footer-link">Image Annotation & Segmentation</a></li>
               <li><a href="mockup-screenshot-editor" class="footer-link">Mockup & Screenshot Editor</a></li>
@@ -270,7 +291,7 @@
           <!-- Resources Section -->
           <div class="col-span-10 md:col-span-5 lg:col-span-2">
             <div class="mb-4">
-              <h3 class="mb-4 font-semibold text-tColor">DEVELOPERS</h3>
+              <h3 class="mb-4 font-semibold text-primary">DEVELOPERS</h3>
               <ul class="flex flex-col gap-3">
                 <li><a href="start" class="footer-link">Getting Started</a></li>
                 <li><a href="api-endpoints" class="footer-link">API Endpoints</a></li>
@@ -281,7 +302,7 @@
               </ul>
             </div>
             <div class="mb-4">
-              <h3 class="mb-4 font-semibold text-tColor">RESOURCES</h3>
+              <h3 class="mb-4 font-semibold text-primary">RESOURCES</h3>
               <ul class="flex flex-col gap-3">
                 <li><a href="https://console.pixlab.io" target="_blank" class="footer-link">PixLab Console &nearr;</a></li>
                 <li><a href="pricing" class="footer-link">Pricing</a></li>
@@ -295,7 +316,7 @@
           <!-- Company Section -->
           <div class="col-span-10 md:col-span-5 lg:col-span-2">
             <div class="mb-4">
-              <h3 class="mb-4 font-semibold text-text-pink-600">COMPANY</h3>
+              <h3 class="mb-4 font-semibold text-primary">COMPANY</h3>
               <ul class="flex flex-col gap-3">
                 <li><a href="https://symisc.net/" target="_blank" class="footer-link">Symisc Systems &nearr;</a></li>
                 <li><a href="https://blog.pixlab.io" target="_blank" class="footer-link">PixLab Blog &nearr;</a></li>
@@ -306,7 +327,7 @@
               </ul>
             </div>
             <div class="mb-4">
-              <h3 class="mb-4 font-semibold text-tColor">LEGAL</h3>
+              <h3 class="mb-4 font-semibold text-primary">LEGAL</h3>
               <ul class="flex flex-col gap-3">
                 <li><a href="privacy-policy" class="footer-link">Privacy Policy</a></li>
                 <li><a href="terms-of-use" class="footer-link">Terms of Services</a></li>
@@ -319,24 +340,9 @@
 
         <!-- Copyright Section -->
         <div class="mt-10 flex flex-col justify-between gap-5 md:flex-row md:items-center">
-          <!-- Social Media Links -->
-          <div class="mt-5 flex gap-1.5">
-            <a href="https://www.facebook.com/pixlab.io/" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow PixLab on Facebook">
-              <i class="uil uil-facebook text-lg"></i>
-            </a>
-            <a href="https://www.linkedin.com/company/pixlabio" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow us on LinkedIn">
-              <i class="uil uil-linkedin text-lg"></i>
-            </a>
-            <a href="https://x.com/unqlite_db" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow PixLab on Twitter/X">
-              <i class="uil uil-twitter text-lg"></i>
-            </a>
-            <a href="https://github.com/symisc" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow Symisc on GitHub">
-              <i class="uil uil-github text-lg"></i>
-            </a>
-            <a href="https://blog.pixlab.io" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="PixLab Blog">
-              <i class="uil uil-rss text-lg"></i>
-            </a>
-          </div>
+          <a href="/">
+            <img class="dark-logo mb-1 w-36" src="assets/images/symisc-systems-logo.png" alt="Symisc Systems" />
+          </a>
 
           <div class="flex flex-col gap-1 text-sm text-slate-600">
             <p>Copyright © 2017 - 2025, <a href="https://symisc.net" target="_blank">Symisc Systems</a>, SUARL. All rights reserved.</p>

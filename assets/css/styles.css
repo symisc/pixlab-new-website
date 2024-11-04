@@ -2992,6 +2992,10 @@ body.dark-theme .ape-header-gradient-theme {
   -webkit-text-stroke: 1px var(--color-ape-primary);
 }
 
+.ai-photo-editor .footer-link:hover {
+  color: var(--color-ape-primary);
+}
+
 /* Transparent background and no border on large screens */
 
 @media screen and (min-width: 1024px) {
@@ -3133,10 +3137,6 @@ body.dark-theme .ape-header-gradient-theme {
 
 .focus-within\:bg-white\/15:focus-within {
   background-color: rgb(255 255 255 / 0.15);
-}
-
-.hover\:bg-apePrimary:hover {
-  background-color: var(--color-ape-primary);
 }
 
 .hover\:bg-apeSecondary:hover {
