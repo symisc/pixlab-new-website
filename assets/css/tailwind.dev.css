@@ -237,11 +237,11 @@ body.dark-theme .code {
 }
 
 .badge {
-  @apply bg-pink-100 text-pink-800 font-medium me-2 px-2.5 py-0.5 rounded-xl;
+  @apply bg-green-100 text-green-800 font-medium me-2 px-2.5 py-0.5 rounded-xl;
 }
 
 body.dark-theme .badge {
-  @apply bg-pink-800/30 text-pink-500;
+  @apply bg-green-800/30 text-green-500;
 }
 
 body.dark-theme .table-wrapper,
