@@ -182,41 +182,9 @@
         </div>
       </section>
 
-      <!-- Brands Carousel Section -->
-      <section>
-        <div class="px-5 py-10">
-          <h3 class="text-center text-muted">Trusted by</h3>
-
-          <div id="pricing-brands-carousel" class="pricing-brands-carousel relative mt-5 overflow-hidden whitespace-nowrap py-7">
-            <div class="brands-wrapper inline-block">
-              <img class="w-36 object-contain" src="assets/images/brand-creative-zone.png" alt="Creative Zone" />
-              <img class="w-36 object-contain" src="assets/images/brand-reygroup.png" alt="Reygroup" />
-              <img class="w-36 object-contain" src="assets/images/brand-media-hub.png" alt="Media Hub" />
-              <img class="w-36 object-contain" src="assets/images/brand-all-travel.png" alt="All Travel" />
-              <img class="w-36 object-contain" src="assets/images/brand-perform-line.png" alt="Perform Line" />
-              <img class="w-36 object-contain" src="assets/images/brand-hub-people.png" alt="Hub People" />
-              <img class="w-36 object-contain" src="assets/images/brand-register-play.png" alt="Register Play" />
-              <img class="w-36 object-contain" src="assets/images/brand-all-travel.png" alt="All Travel" />
-            </div>
-
-            <script>
-              document.addEventListener("DOMContentLoaded", () => {
-                const carousel = document.querySelector("#pricing-brands-carousel");
-                const brandsWrapper = carousel?.querySelector(".brands-wrapper");
-
-                // Clone and append the brands wrapper
-                if (!carousel || !brandsWrapper) return;
-                const brandsWrapperClone = brandsWrapper.cloneNode(true);
-                carousel.appendChild(brandsWrapperClone);
-              });
-            </script>
-          </div>
-        </div>
-      </section>
-
       <!-- Social Bar Section -->
       <section>
-        <div class="mx-auto w-full max-w-screen-xl px-5">
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
           <div class="flex flex-wrap items-center justify-between gap-5 pb-3">
             <img class="dark-logo w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" />
             <p class="text-sm text-muted">
@@ -251,7 +219,7 @@
         <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
           <div class="mb-12">
             <div class="gradient-graph-line"></div>
-            <p class="mt-3 text-sm text-muted">SIMPLE & AFFORDABLE PLANS</p>
+            <p class="gradient-text-animation mt-3 text-[15px]">SIMPLE & AFFORDABLE PLANS</p>
           </div>
 
           <h2 class="text-center text-2xl font-semibold leading-snug text-tColor lg:text-4xl">
@@ -262,7 +230,7 @@
           <!-- Pricing Cards -->
           <div class="pricing-cards mt-12 grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-5">
             <!-- Single Pricing Card -->
-            <div class="card bg-gradient-theme rounded-xl p-5">
+            <div class="card bg-gradient-theme rounded-xl p-5 transition-all duration-[400ms] hover:scale-105 hover:shadow-lg">
               <h4 class="font-medium text-yellow-400">Starter</h4>
               <div class="flex h-full flex-col justify-between">
                 <div class="mt-7 text-tColor">
@@ -279,31 +247,31 @@
 
                   <ul class="flex flex-col gap-2">
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
-                      <span>35K Media Analysis API Calls/month</span>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
+                      <span> Media Analysis API Calls/month</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>350K Media Processing API Calls/month</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>$0.9 per 1000 requests after you reach your monthly quota</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>50 GB of media storage or direct export to your AWS S3 Bucket for all your media files</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>CDN over TLS</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>Real-Time Analytics</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>Standard Email Support</span>
                     </li>
                   </ul>
@@ -316,8 +284,13 @@
             </div>
 
             <!-- Single Pricing Card -->
-            <div class="card bg-gradient-theme rounded-xl p-5">
-              <h4 class="font-medium text-sky-400">Prod</h4>
+            <div class="card bg-gradient-theme rounded-xl border !border-secondary p-5 shadow-lg transition-all duration-[400ms] hover:scale-105">
+              <h4 class="flex items-center justify-between font-medium">
+                <span class="text-sky-400">Prod</span>
+                <span class="gradient-text w-fit rounded-lg border border-primary px-2 py-0.5 text-sm font-medium">
+                  <span>Most Popular</span>
+                </span>
+              </h4>
               <div class="flex h-full flex-col justify-between">
                 <div class="mt-7 text-tColor">
                   <h3 class="text-4xl font-medium">$40 <span class="text-base font-normal text-muted">/month</span></h3>
@@ -333,31 +306,31 @@
 
                   <ul class="flex flex-col gap-2">
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>190K Media Analysis API Calls/month.</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>900K Media Processing API Calls/month</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>$0.9 per 1000 requests after you reach your monthly quota</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>250 GB of media storage or direct export to your AWS S3 Bucket for all your media files</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>CDN over TLS</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>Real-Time Analytics</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>Priority Email Support</span>
                     </li>
                   </ul>
@@ -370,7 +343,7 @@
             </div>
 
             <!-- Single Pricing Card -->
-            <div class="card bg-gradient-theme rounded-xl p-5">
+            <div class="card bg-gradient-theme rounded-xl p-5 transition-all duration-[400ms] hover:scale-105 hover:shadow-lg">
               <h4 class="font-medium text-lime-400">Team</h4>
               <div class="flex h-full flex-col justify-between">
                 <div class="mt-7 text-tColor">
@@ -387,31 +360,31 @@
 
                   <ul class="flex flex-col gap-2">
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>500K Media Analysis API Calls/month</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>1M Media Processing API Calls/month</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>$0.9 per 1000 requests after you reach your monthly quota</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>500 GB of media storage or direct export to your AWS S3 Bucket for all your media files</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>CDN over TLS</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>Real-Time Analytics</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>High Priority Email Support</span>
                     </li>
                   </ul>
@@ -424,7 +397,7 @@
             </div>
 
             <!-- Single Pricing Card -->
-            <div class="card bg-gradient-theme rounded-xl p-5">
+            <div class="card bg-gradient-theme rounded-xl p-5 transition-all duration-[400ms] hover:scale-105 hover:shadow-lg">
               <h4 class="font-medium text-purple-400">Enterprise</h4>
               <div class="flex h-full flex-col justify-between">
                 <div class="mt-7 text-tColor">
@@ -441,31 +414,31 @@
 
                   <ul class="flex flex-col gap-2">
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>1.1M Media Analysis API Calls/month</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>Unlimited Media Processing API Calls/month</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>$0.9 per 1000 requests after you reach your monthly quota</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>1 TB of media storage or direct export to your AWS S3 Bucket for all your media files</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>CDN over TLS</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>Real-Time Analytics</span>
                     </li>
                     <li class="flex items-center gap-2 text-tColor">
-                      <i class="uil uil-check-circle self-start text-[17px]"></i>
+                      <i class="uil uil-check-circle self-start text-[17px] text-secondary"></i>
                       <span>High Priority Email Support</span>
                     </li>
                   </ul>
@@ -480,12 +453,44 @@
         </div>
       </section>
 
+      <!-- Brands Carousel Section -->
+      <section>
+        <div class="px-5 py-10">
+          <h3 class="gradient-text-animation text-center text-lg">Trusted by</h3>
+
+          <div id="pricing-brands-carousel" class="pricing-brands-carousel relative mt-5 overflow-hidden whitespace-nowrap py-7">
+            <div class="brands-wrapper inline-block">
+              <img class="w-36 object-contain" src="assets/images/brand-creative-zone.png" alt="Creative Zone" />
+              <img class="w-36 object-contain" src="assets/images/brand-reygroup.png" alt="Reygroup" />
+              <img class="w-36 object-contain" src="assets/images/brand-media-hub.png" alt="Media Hub" />
+              <img class="w-36 object-contain" src="assets/images/brand-all-travel.png" alt="All Travel" />
+              <img class="w-36 object-contain" src="assets/images/brand-perform-line.png" alt="Perform Line" />
+              <img class="w-36 object-contain" src="assets/images/brand-hub-people.png" alt="Hub People" />
+              <img class="w-36 object-contain" src="assets/images/brand-register-play.png" alt="Register Play" />
+              <img class="w-36 object-contain" src="assets/images/brand-all-travel.png" alt="All Travel" />
+            </div>
+
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                const carousel = document.querySelector("#pricing-brands-carousel");
+                const brandsWrapper = carousel?.querySelector(".brands-wrapper");
+
+                // Clone and append the brands wrapper
+                if (!carousel || !brandsWrapper) return;
+                const brandsWrapperClone = brandsWrapper.cloneNode(true);
+                carousel.appendChild(brandsWrapperClone);
+              });
+            </script>
+          </div>
+        </div>
+      </section>
+
       <!-- FAQs Section -->
       <section>
         <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
           <div class="mb-12">
             <div class="gradient-graph-line"></div>
-            <p class="mt-3 text-sm text-muted">FREQUENTLY ASKED QUESTIONS</p>
+            <p class="gradient-text-animation mt-3 text-[15px]">FREQUENTLY ASKED QUESTIONS</p>
           </div>
 
           <h2 class="text-center text-4xl font-semibold leading-snug text-tColor">Trusted By Hundreds Of Customers</h2>
