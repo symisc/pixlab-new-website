@@ -178,8 +178,8 @@ body.dark-theme .bg-gradient-theme {
   background-clip: text;
   background-size: 200%;
   background-position: -200%;
-  background-image: linear-gradient(to right, #709ADB, #ED5C57, #F7D07F, #CADF8B, #709ADB);
-  animation: animate-gradient 4s infinite alternate-reverse;
+  background-image: linear-gradient(to right, #79C1E1, #709ADB, #ED5C57, #E17E71, #F7D07F, #F8FCCF, #CADF8B, #79C1E1);
+  animation: animate-gradient 5s infinite alternate-reverse;
 }
 
 @keyframes animate-gradient {
@@ -253,11 +253,11 @@ body.dark-theme .code {
 }
 
 .badge {
-  @apply bg-pink-100 text-pink-800 font-medium me-2 px-2.5 py-0.5 rounded-xl;
+  @apply bg-green-100 text-green-800 font-medium me-2 px-2.5 py-0.5 rounded-xl;
 }
 
 body.dark-theme .badge {
-  @apply bg-pink-800/30 text-pink-500;
+  @apply bg-green-800/30 text-green-500;
 }
 
 body.dark-theme .table-wrapper,
