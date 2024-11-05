@@ -172,6 +172,22 @@ body.dark-theme .bg-gradient-theme {
   background: transparent;
 }
 
+.gradient-text-animation {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200%;
+  background-position: -200%;
+  background-image: linear-gradient(to right, #79C1E1, #709ADB, #ED5C57, #E17E71, #F7D07F, #F8FCCF, #CADF8B, #79C1E1);
+  animation: animate-gradient 5s infinite alternate-reverse;
+}
+
+@keyframes animate-gradient {
+  to {
+    background-position: 200%;
+  }
+}
+
 .hero-heading {
   @apply text-3xl font-bold lg:text-[2.5rem] gradient-text text-center leading-tight
 }
