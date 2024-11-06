@@ -447,7 +447,7 @@
                     <div class="mt-5 flex flex-col gap-4 md:flex-row">
                       <div class="md:w-[55rem]">
                         <p class="text-center text-muted"><em>Input image</em>.</p>
-                        <img class="mb-3" src="assets/images/tag.jpg" alt="PDF invoice converted to image" />
+                        <img class="mb-3" src="assets/images/tag.jpg" alt="Tagged image" />
                       </div>
                       <div>
                         <ul class="list">
@@ -504,7 +504,7 @@
                     <p class="mt-1">Let's generate a GIF file from a set of static images:</p>
                     <div class="mt-5 flex flex-col gap-4 md:flex-row">
                       <div class="md:w-[55rem]">
-                        <img class="mb-3" src="assets/images/mk.gif" alt="img after processing" />
+                        <img class="mb-3" src="assets/images/mk.gif" alt="GIF after processing" />
                         <p class="text-center text-muted"><em>Output GIF</em></p>
                       </div>
                       <div>
@@ -748,13 +748,17 @@
                   </button>
                   <div class="overflow-y-auto p-4">
                     <p class="mt-1">In this sample, we'll perform human face detection using the <a class="link" href="cmd?id=facedetect" target="_blank">FACEDETECT</a> endpoint, and finally extract each detected face via <a class="link" href="cmd?id=crop" target="_blank">CROP</a>.</p>
-                    <div class="mt-5 flex flex-col gap-4 md:flex-row">
-                      <div class="text-center text-muted md:w-[55rem]">
-                        <img src="assets/images/face1.jpg" alt="input image" />
-                        <p class="mb-4"><em>Input Picture</em></p>
-                        <img class="max-md:mx-auto" src="assets/images/face_crop.jpg" alt="After crop" />
-                        <p class="mb-4"><em>After Crop</em></p>
+                    <div class="flex max-sm:flex-col justify-center gap-6 text-center text-muted my-5">
+                      <div>
+                        <p><em>Input Picture</em></p>
+                        <img class="max-md:mx-auto" src="assets/images/face1.jpg" width="347" alt="input image" >
                       </div>
+                      <div>
+                        <p><em>After Crop</em></p>
+                        <img class="max-md:mx-auto" src="assets/images/face_crop.jpg" alt="After crop" />
+                       </div>
+                    </div>
+
                       <div>
                         <p>To perform such operation, two endpoints are actually needed: One for the analysis phase, the other for processing:</p>
                         <ul class="list">
@@ -763,7 +767,6 @@
                           <li>Alternatively, if you prefer marking the face(s) instead of extracting it, you can rely on the <a class="link" href="cmd?id=drawrectangle">DRAWRECTANGLE</a> endpoint to perform such task.</li>
                         </ul>
                       </div>
-                    </div>
                     <div class="gradient-graph-line mb-5 mt-3 h-1 w-full"></div>
                     <div>
                       <h3 class="text-center text-2xl font-semibold text-primary">The Code</h3>
