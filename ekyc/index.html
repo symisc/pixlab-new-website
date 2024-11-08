@@ -37,6 +37,16 @@
           }
         </style>
     </noscript>
+    <style>
+        .typed-cursor {
+        color: #61afef; /* Set your desired cursor color here */
+    }
+        .text-default { color: #c9d1d9; } /* Default text color */
+        .text-purple { color: #c678dd; }  /* Keywords */
+        .text-blue { color: #61afef; }    /* Functions */
+        .text-green { color: #98c379; }   /* Strings */
+        .text-gray { color: #6a737d; font-style: italic; } /* Comments */
+    </style>
     <title>Universal ID Scanning & Extraction APIs for developers</title>
 </head>
 <body class="">
@@ -165,10 +175,9 @@
                             <span class="f-w-2 f-h-2 block bg-info rounded-circle"></span>
                         </div>
                         <div class="card-body" style="min-height: 280px;">
-                            <code class="highlight fs-8" data-typed='{"backSpeed":2,"strings":["from pixlab import DOCSCAN<br>👍🚀"]}'>
-
-                                
-                            </code>
+                                <code class="highlight fs-8 text-white">
+                                    <span id="typed-code"></span>
+                                </code>
                         </div>
                     </div>
                 </div>
@@ -625,7 +634,7 @@
                 <!-- Footer socials-->
                 <ul class="list-unstyled d-flex align-items-center justify-content-end">
                     <li class="ms-5"><a title="PixLab on Facebook" href="https://www.facebook.com/pixlab.io/" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="ri-facebook-circle-line ri-lg"></i></a></li>
-                    <li class="ms-5"><a title="PixLab on X" href="https://twitter.com/unqlite_db" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="ri-twitter-line ri-lg"></i></a></li>
+                    <li class="ms-5"><a title="PixLab on X" href="https://x.com/unqlite_db" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="ri-twitter-line ri-lg"></i></a></li>
                     <li class="ms-5"><a title="PixLab on LinkedIn" href="https://www.linkedin.com/company/pixlabio" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="ri-linkedin-line ri-lg"></i></a></li>
                     <li class="ms-5"><a title="Symisc Systems on Github" href="https://github.com/symisc" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="ri-github-line ri-lg"></i></a></li>
                 </ul>
@@ -636,13 +645,21 @@
                 <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
                     <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">Products</h6>
                     <ul class="list-unstyled footer-nav">
+                        <li><a href="../api-portal" target="_blank">Pixlab API Portal</a></li>
+                        <li><a href="../vision-llm-playground-api" target="_blank">Vision Playground, LLM & APIs</a></li>
+                        <li><a href="../template-pdf-media-engine" target="_blank">PDF & Media Template Engine</a></li>
+                        <li><a href="../app-ui-ux-code" target="_blank">APP UX - Mobile UI Code Generator</a></li>
                         <li><a href="https://faceio.net" target="_blank">FACEIO - Facial Authentication<br/>for the Web <span class="badge bg-primary rounded ms-2 align-middle">NEW</span></a></li>
                        <!-- <li><a href="https://ui.pixlab.io" target="_blank">MobiView - UI Code Generator<br>for Mobile Apps <span class="badge bg-primary rounded ms-2 align-middle">NEW</span></a></li> -->
                         <li><a href="../on-premises" target="_blank">PixLab On-Premises &nearr;</a></li>
                         <li><a href="../tiny-dream" target="_blank">Tiny Dream - Stable Diffusion<br/>Inference &nearr;</a></li>
                         <li><a href="https://sod.pixlab.io/" target="_blank">SOD - Embedded Computer<br/>Vision Library &nearr;</a></li>
-                        <li><a href="..//annotate" target="_blank">Annotate - Online Image<br/>Annotation &nearr;</a></li>
+                        <li><a href="annotate" target="_blank">Image Annotation & Segmentation &nearr;</a></li>
+                        <li><a href="mockup-screenshot-editor" target="_blank">Mockup & Screenshot Editor</a></li>
+                        <li><a href="bulk-image-video-background-removal-tool-apis" target="_blank">Bulk Background Removal Tool</a></li>
+                        <li><a href="creative-toolbox" target="_blank">Creative Toolbox</a></li>
                         <li><a href="../ai-photo-editor" target="_blank">Generative AI Photo Editor &nearr;</a></li>
+                        <li><a href="tilemap-2d-level-editor" target="_blank">AI Game Tilemap Editor</a></li>
                         <li><a href="/">eKYC - AI Powered ID<br>Scanning APIs <span class="badge bg-primary rounded ms-2 align-middle">NEW</span></a></li>
                     </ul>
                 </div>
@@ -665,11 +682,11 @@
                     <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">Company &amp; Social Handles</h6>
                     <ul class="list-unstyled footer-nav">
                         <li><a href="https://symisc.net" target="_blank">Symisc Systems &nearr;</a></li>
-                        <li><a href="https://pixlab.com/community" target="_blank">Support Channels &nearr;</a></li>
+                        <li><a href="../support" target="_blank">Support Channels &nearr;</a></li>
                         <li><a href="https://blog.pixlab.io" target="_blank">PixLab Blog &nearr;</a></li>
                         <li><a href="https://github.com/symisc" target="_blank">Github &nearr;</a></li>
                         <li><a href="https://www.facebook.com/pixlab.io/" target="_blank">Facebook &nearr;</a></li>
-                        <li><a href="https://twitter.com/unqlite_db" target="_blank">Twitter &nearr;</a></li>
+                        <li><a href="https://x.com/unqlite_db" target="_blank">Twitter | X &nearr;</a></li>
                         <li><a href="https://www.linkedin.com/company/pixlabio" target="_blank">LinkedIn &nearr;</a></li>
                     </ul>
                 </div>
@@ -679,6 +696,7 @@
                         <li><a href="../privacy-policy" target="_blank">Privacy Policy &nearr;</a></li>
                         <li><a href="../terms-of-use" target="_blank">Terms of Service &nearr;</a></li>
                         <li><a href="../dmca" target="_blank">DMCA &nearr;</a></li>
+                        <li><a href="https://status.faceio.net" target="_blank">Services Status &nearr;</a></li>
                     </ul>
                 </div>
                 <!-- /Menu-->
@@ -686,13 +704,45 @@
         </div>
         <div class="container">
             <div class="border-top pt-6 mt-7 border-white-10 d-flex flex-column flex-md-row justify-content-between align-items-center">
-                <span class="small text-white opacity-50 mb-2 mb-md-0">Copyright © 2017 - 2025, <a href="https://symisc.net" target="_blank">Symisc Systems, SUARL</a>. All rights reserved.</span>
+                <span class="small text-white opacity-50 mb-2 mb-md-0">Copyright © 2017 - 2025, <a href="https://symisc.net" target="_blank">Symisc Systems, SUARL</a>. All rights reserved. <br>All trademarks and copyrights belong to their respective owners.</span>
                 <span class="small text-white opacity-50"><a href="../terms-of-use" target="_blank">Terms of Services</a>  |  <a href="../privacy-policy" target="_blank">Privacy Policy</a></span>
             </div>
         </div>
     </footer>
     <script src="assets/js/vendor.bundle.js"></script>
     <script src="assets/js/theme.bundle.js"></script>
+     <script src="assets/js/typed.js"></script>
+    <script>
+        new Typed("#typed-code", {
+            strings: [
+                `<span class="text-purple">import</span> request<br>
+                req = <span class="text-blue">requests.get</span>(<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green">'https://api.pixlab.io/docscan'</span>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;params={<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green">'img'</span>: <span class="text-green">'https://i.stack.imgur.com/oJY2K.png'</span>, <span class="text-gray"># ID Input Image</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green">'type'</span>: <span class="text-green">'passport'</span>, <span class="text-gray"># Type of document we are going to scan</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green">'key'</span>: <span class="text-green">'PIXLAB_API_KEY'</span> <span class="text-gray"># Get your PixLab API Key</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                )<br>
+                reply = req.<span class="text-blue">json</span>()<br>
+                <span class="text-purple">if</span> reply[<span class="text-green">'status'</span>] != 200:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue">print</span>(reply[<span class="text-green">'error'</span>])<br>
+                <span class="text-purple">else</span>:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-gray"># Print scan results</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue">print</span>(<span class="text-green">"\\tIssuing Country: "</span> + reply[<span class="text-green">'fields'</span>][<span class="text-green">'issuingCountry'</span>])<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue">print</span>(<span class="text-green">"\\tFull Name: "</span> + reply[<span class="text-green">'fields'</span>][<span class="text-green">'fullName'</span>])<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue">print</span>(<span class="text-green">"\\tDocument Number: "</span> + reply[<span class="text-green">'fields'</span>][<span class="text-green">'documentNumber'</span>])<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue">print</span>(<span class="text-green">"\\tAddress: "</span> + reply[<span class="text-green">'fields'</span>][<span class="text-green">'address'</span>])<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue">print</span>(<span class="text-green">"\\tDate Of Birth: "</span> + reply[<span class="text-green">'fields'</span>][<span class="text-green">'dateOfBirth'</span>])`
+            ],
+            typeSpeed: 40,
+            backSpeed: 0,
+            showCursor: true,
+            loop: true,
+            loopDelay: 2000
+        });
+
+    </script>
 </body>
 </html>
 
