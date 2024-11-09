@@ -44,7 +44,7 @@
         .text-default { color: #c9d1d9; } /* Default text color */
         .text-purple { color: #c678dd; }  /* Keywords */
         .text-blue { color: #61afef; }    /* Functions */
-        .text-green { color: #98c379; }   /* Strings */
+        .text-green { color: #5debdf; }   /* Strings */
         .text-gray { color: #6a737d; font-style: italic; } /* Comments */
     </style>
     <title>Universal ID Scanning & Extraction APIs for developers</title>
@@ -175,9 +175,10 @@
                             <span class="f-w-2 f-h-2 block bg-info rounded-circle"></span>
                         </div>
                         <div class="card-body" style="min-height: 280px;">
-                                <code class="highlight fs-8 text-white">
-                                    <span id="typed-code"></span>
-                                </code>
+                            <code class="highlight fs-8 text-white"
+                            data-typed='{"backSpeed":2, "strings": [
+                              "<span class=\"text-purple\">import</span>&nbsp;requests<br/>req&nbsp;=&nbsp;requests.<span class=\"text-blue\">get</span>(<br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"text-green\">\"https://api.pixlab.io/docscan\"</span>,<br/>&nbsp;&nbsp;&nbsp;&nbsp;params&nbsp;=&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"text-green\">\"img\":\"https://i.stack.imgur.com/oJY2K.png\"</span>,&nbsp;<span class=\"text-gray\">#&nbsp;ID&nbsp;Input&nbsp;Image</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"text-green\">\"type\":\"passport\"</span>,&nbsp;<span class=\"text-gray\">#&nbsp;Document&nbsp;type</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"text-green\">\"key\":\"PIXLAB_API_KEY\"</span>&nbsp;<span class=\"text-gray\">#&nbsp;Your&nbsp;API&nbsp;Key</span><br/>&nbsp;&nbsp;&nbsp;}<br/>)<br/>reply&nbsp;=&nbsp;req.<span class=\"text-blue\">json</span>()<br/><span class=\"text-purple\">if</span>&nbsp;reply[<span class=\"text-green\">\"status\"</span>]&nbsp;!=&nbsp;200:<br/>&nbsp;&nbsp;&nbsp;<span class=\"text-blue\">print</span>(reply[<span class=\"text-green\">\"error\"</span>])<br/><span class=\"text-purple\">else</span>:<br/>&nbsp;&nbsp;&nbsp;<span class=\"text-gray\">#&nbsp;Print&nbsp;scan&nbsp;results</span><br/>&nbsp;&nbsp;&nbsp;<span class=\"text-blue\">print</span>(<span class=\"text-green\">\"Issuing&nbsp;Country:&nbsp;\"</span>&nbsp;+&nbsp;reply[<span class=\"text-green\">\"fields\"</span>][<span class=\"text-green\">\"issuingCountry\"</span>])<br/>&nbsp;&nbsp;&nbsp;<span class=\"text-blue\">print</span>(<span class=\"text-green\">\"Full&nbsp;Name:&nbsp;\"</span>&nbsp;+&nbsp;reply[<span class=\"text-green\">\"fields\"</span>][<span class=\"text-green\">\"fullName\"</span>])<br/>&nbsp;&nbsp;&nbsp;<span class=\"text-blue\">print</span>(<span class=\"text-green\">\"Document&nbsp;Number:&nbsp;\"</span>&nbsp;+&nbsp;reply[<span class=\"text-green\">\"fields\"</span>][<span class=\"text-green\">\"documentNumber\"</span>])<br/>&nbsp;&nbsp;&nbsp;<span class=\"text-blue\">print</span>(<span class=\"text-green\">\"Address:&nbsp;\"</span>&nbsp;+&nbsp;reply[<span class=\"text-green\">\"fields\"</span>][<span class=\"text-green\">\"address\"</span>])<br/>&nbsp;&nbsp;&nbsp;<span class=\"text-blue\">print</span>(<span class=\"text-green\">\"Date&nbsp;Of&nbsp;Birth:&nbsp;\"</span>&nbsp;+&nbsp;reply[<span class=\"text-green\">\"fields\"</span>][<span class=\"text-green\">\"dateOfBirth\"</span>])"
+                            ]}'></code>
                         </div>
                     </div>
                 </div>
@@ -711,38 +712,7 @@
     </footer>
     <script src="assets/js/vendor.bundle.js"></script>
     <script src="assets/js/theme.bundle.js"></script>
-     <script src="assets/js/typed.js"></script>
-    <script>
-        new Typed("#typed-code", {
-            strings: [
-                `<span class="text-purple">import</span> request<br>
-                req = <span class="text-blue">requests.get</span>(<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green">'https://api.pixlab.io/docscan'</span>,<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;params={<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green">'img'</span>: <span class="text-green">'https://i.stack.imgur.com/oJY2K.png'</span>, <span class="text-gray"># ID Input Image</span><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green">'type'</span>: <span class="text-green">'passport'</span>, <span class="text-gray"># Type of document we are going to scan</span><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green">'key'</span>: <span class="text-green">'PIXLAB_API_KEY'</span> <span class="text-gray"># Get your PixLab API Key</span><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                )<br>
-                reply = req.<span class="text-blue">json</span>()<br>
-                <span class="text-purple">if</span> reply[<span class="text-green">'status'</span>] != 200:<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue">print</span>(reply[<span class="text-green">'error'</span>])<br>
-                <span class="text-purple">else</span>:<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-gray"># Print scan results</span><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue">print</span>(<span class="text-green">"\\tIssuing Country: "</span> + reply[<span class="text-green">'fields'</span>][<span class="text-green">'issuingCountry'</span>])<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue">print</span>(<span class="text-green">"\\tFull Name: "</span> + reply[<span class="text-green">'fields'</span>][<span class="text-green">'fullName'</span>])<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue">print</span>(<span class="text-green">"\\tDocument Number: "</span> + reply[<span class="text-green">'fields'</span>][<span class="text-green">'documentNumber'</span>])<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue">print</span>(<span class="text-green">"\\tAddress: "</span> + reply[<span class="text-green">'fields'</span>][<span class="text-green">'address'</span>])<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue">print</span>(<span class="text-green">"\\tDate Of Birth: "</span> + reply[<span class="text-green">'fields'</span>][<span class="text-green">'dateOfBirth'</span>])`
-            ],
-            typeSpeed: 40,
-            backSpeed: 0,
-            showCursor: true,
-            loop: true,
-            loopDelay: 2000
-        });
-
-    </script>
+     
 </body>
 </html>
 
