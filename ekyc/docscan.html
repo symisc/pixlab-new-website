@@ -99,6 +99,18 @@
         .hide-column {
         display: none;
         }
+        .search-box {
+        background-color: rgba(255, 255, 255, 0.2);
+        border: none;
+        padding: 8px 14px;
+        margin-bottom: 1rem;
+        width: 100%;
+        color: white;
+        border-radius: 20px;
+      }
+      .search-box::placeholder {
+        color: hsla(0, 0%, 100%, 0.85);
+      }
     </style>
     <title>DOCSCAN REST API Documentation, Code Samples & Integration Guide</title>
 </head>
@@ -28198,105 +28210,142 @@
     </main>
     <!-- / Main Section-->
     <!-- Footer -->
-    <footer class="bg-dark pt-10 pb-8">
+    <footer class="bg-dark pb-8 pt-10">
         <div class="container">
-            <!-- Free trial -->
-            <div class="border-bottom border-white-10 pb-7">
-                <div class="col-12 d-flex mx-auto flex-column align-items-center justify-content-center">
-                    <h2 class="fs-2 fw-bolder text-white text-center pb-2">11097 IDs &star; 197 Countries &star; 85+ Millions of API/Month</h2>
-                    <h2 class="fs-2 fw-bolder text-white text-uppercase text-center pb-2">Elevate Your Compliance &amp; Efficiency...</h2>
-                    <h2 class="fs-2 fw-bolder text-white text-uppercase text-center pb-2">Try <a href="docscan">DOCSCAN</a> Today...</h2>
-                    <a href="https://console.pixlab.io" target="_blank" class="btn btn-primary btn-lg" title="Log in to the PixLab console, create your first API Key, and start scanning ID documents from across the globe!" role="button">Get Your API Key &amp; Start Your Integration &nearr;</a>
-                </div>
+          <!-- Free trial -->
+          <div class="border-bottom border-white-10 pb-7">
+            <div class="col-12 d-flex flex-column align-items-center justify-content-center mx-auto">
+              <h2 class="fs-2 fw-bolder pb-2 text-center text-white">11097 IDs &star; 197 Countries &star; 85+ Millions of API/Month</h2>
+              <h2 class="fs-2 fw-bolder text-uppercase pb-2 text-center text-white">Elevate Your Compliance &amp; Efficiency...</h2>
+              <h2 class="fs-2 fw-bolder text-uppercase pb-2 text-center text-white">Try <a href="docscan">DOCSCAN</a> Today...</h2>
+              <a href="https://console.pixlab.io" target="_blank" class="btn btn-primary btn-lg" title="Log in to the PixLab console, create your first API Key, and start scanning ID documents from across the globe!" role="button">Get Your API Key &amp; Start Your Integration &nearr;</a>
             </div>
-            <!-- Free trial-->
+          </div>
+          <!-- Free trial-->
         </div>
         <!-- Footer Menus-->
         <div class="container pt-7">
-            <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-center">
-                <!-- Footer Logo-->
-                <a class="d-flex align-items-center lh-1 text-white transition-opacity opacity-50-hover text-decoration-none mb-4 mb-md-0" href="/" target="_blank">
-                    <img src="../images/logo-dark.png" title="Machine Vision & Media Processing APIs" alt="logo">
-                </a>
-                <!-- /Footer Logo-->
-                <!-- Footer socials-->
-                <ul class="list-unstyled d-flex align-items-center justify-content-end">
-                    <li class="ms-5"><a title="PixLab on Facebook" href="https://www.facebook.com/pixlab.io/" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="ri-facebook-circle-line ri-lg"></i></a></li>
-                    <li class="ms-5"><a title="PixLab on X" href="https://x.com/unqlite_db" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="ri-twitter-line ri-lg"></i></a></li>
-                    <li class="ms-5"><a title="PixLab on LinkedIn" href="https://www.linkedin.com/company/pixlabio" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="ri-linkedin-line ri-lg"></i></a></li>
-                    <li class="ms-5"><a title="Symisc Systems on Github" href="https://github.com/symisc" target="_blank" class="text-white text-decoration-none opacity-50-hover transition-opacity"><i class="ri-github-line ri-lg"></i></a></li>
+          <div class="row mt-lg-7 mt-5">
+            <!-- Logo and Description -->
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+              <a class="d-flex align-items-center lh-1 opacity-50-hover text-decoration-none mb-4 text-white transition-opacity" href="/" target="_blank">
+                <img src="../images/logo-dark.png" title="Machine Vision & Media Processing APIs" alt="logo" />
+              </a>
+              <p class="small" style="color: hsla(0, 0%, 100%, 0.85)">PixLab offers cutting-edge AI solutions to empower developers and creators with Automated Tools & APIs for Machine Vision, Media Processing & Creative Innovation.</p>
+              <form action="search" method="get">
+                <input name="q" type="search" class="search-box" placeholder="Search Docs..." />
+              </form>
+              <ul class="list-unstyled d-flex align-items-start">
+                <li class="">
+                  <a title="PixLab on Facebook" href="https://www.facebook.com/pixlab.io/" target="_blank" class="text-decoration-none opacity-50-hover text-white transition-opacity"><i class="ri-facebook-circle-line ri-lg"></i></a>
+                </li>
+                <li class="ms-5">
+                  <a title="PixLab on X" href="https://x.com/unqlite_db" target="_blank" class="text-decoration-none opacity-50-hover text-white transition-opacity"><i class="ri-twitter-line ri-lg"></i></a>
+                </li>
+                <li class="ms-5">
+                  <a title="PixLab on LinkedIn" href="https://www.linkedin.com/company/pixlabio" target="_blank" class="text-decoration-none opacity-50-hover text-white transition-opacity"><i class="ri-linkedin-line ri-lg"></i></a>
+                </li>
+                <li class="ms-5">
+                  <a title="Symisc Systems on Github" href="https://github.com/symisc" target="_blank" class="text-decoration-none opacity-50-hover text-white transition-opacity"><i class="ri-github-line ri-lg"></i></a>
+                </li>
+              </ul>
+            </div>
+            <!-- Menu-->
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="mb-4">
+                <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">PRODUCTS & SDKs</h6>
+                <ul class="list-unstyled footer-nav">
+                  <li><a href="../api-portal" target="_blank">Pixlab API Portal</a></li>
+                  <li><a href="../vision-llm-playground-api" target="_blank">Vision Playground, LLM & APIs</a></li>
+                  <li><a href="../template-pdf-media-engine" target="_blank">PDF & Media Template Engine</a></li>
+                  <li><a href="../app-ui-ux-code" target="_blank">APP UX - Mobile UI Code Generator</a></li>
+                  <li><a href="/">eKYC - AI Powered ID Scanning APIs</a></li>
+                  <li><a href="https://faceio.net" target="_blank">FACEIO - Facial Authentication for the Web </a></li>
                 </ul>
-                <!-- Footer socials-->
+              </div>
+              <div class="mb-4">
+                <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">ONLINE CREATIVITY</h6>
+                <ul class="list-unstyled footer-nav">
+                  <li><a href="../annotate" target="_blank">Image Annotation & Segmentation</a></li>
+                  <li><a href="../mockup-screenshot-editor" target="_blank">Mockup & Screenshot Editor</a></li>
+                  <li><a href="bulk-image-video-background-removal-tool-apis" target="_blank">Bulk Background Removal Tool</a></li>
+                  <li><a href="../creative-toolbox" target="_blank">Creative Toolbox</a></li>
+                  <li><a href="../ai-photo-editor" target="_blank">Generative AI Photo Editor</a></li>
+                  <li><a href="tilemap-2d-level-editor" target="_blank">AI Game Tilemap Editor</a></li>
+                  <!-- <li><a href="../tiny-dream" target="_blank">Tiny Dream - Stable Diffusion<br/>Inference &nearr;</a></li>
+                              <li><a href="https://sod.pixlab.io/" target="_blank">SOD - Embedded Computer<br/>Vision Library &nearr;</a></li> -->
+                </ul>
+              </div>
             </div>
-            <div class="d-flex flex-wrap justify-content-between mt-5 mt-lg-7">
-                <!-- Menu-->
-                <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
-                    <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">Products</h6>
-                    <ul class="list-unstyled footer-nav">
-                        <li><a href="../api-portal" target="_blank">Pixlab API Portal</a></li>
-                        <li><a href="../vision-llm-playground-api" target="_blank">Vision Playground, LLM & APIs</a></li>
-                        <li><a href="../template-pdf-media-engine" target="_blank">PDF & Media Template Engine</a></li>
-                        <li><a href="../app-ui-ux-code" target="_blank">APP UX - Mobile UI Code Generator</a></li>
-                        <li><a href="https://faceio.net" target="_blank">FACEIO - Facial Authentication<br/>for the Web <span class="badge bg-primary rounded ms-2 align-middle">NEW</span></a></li>
-                       <!-- <li><a href="https://ui.pixlab.io" target="_blank">MobiView - UI Code Generator<br>for Mobile Apps <span class="badge bg-primary rounded ms-2 align-middle">NEW</span></a></li> -->
-                        <li><a href="../on-premises" target="_blank">PixLab On-Premises &nearr;</a></li>
-                        <li><a href="../tiny-dream" target="_blank">Tiny Dream - Stable Diffusion<br/>Inference &nearr;</a></li>
-                        <li><a href="https://sod.pixlab.io/" target="_blank">SOD - Embedded Computer<br/>Vision Library &nearr;</a></li>
-                        <li><a href="annotate" target="_blank">Image Annotation & Segmentation &nearr;</a></li>
-                        <li><a href="mockup-screenshot-editor" target="_blank">Mockup & Screenshot Editor</a></li>
-                        <li><a href="bulk-image-video-background-removal-tool-apis" target="_blank">Bulk Background Removal Tool</a></li>
-                        <li><a href="creative-toolbox" target="_blank">Creative Toolbox</a></li>
-                        <li><a href="../ai-photo-editor" target="_blank">Generative AI Photo Editor &nearr;</a></li>
-                        <li><a href="tilemap-2d-level-editor" target="_blank">AI Game Tilemap Editor</a></li>
-                        <li><a href="/">eKYC - AI Powered ID<br>Scanning APIs <span class="badge bg-primary rounded ms-2 align-middle">NEW</span></a></li>
-                    </ul>
-                </div>
-                <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
-                    <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">Resources &amp; Documentation</h6>
-                    <ul class="list-unstyled footer-nav">
-                        <li><a href="https://console.pixlab.io" target="_blank">PixLab Console &nearr;</a></li>
-                        <li><a href="../start" target="_blank">Getting Started &nearr;</a></li>
-                        <li><a href="docscan">DOCSCAN API &rarr;</a></li>
-                        <li><a href="../api" target="_blank">Developer API Portal &nearr;</a></li>
-                        <li><a href="../api-endpoints" target="_blank">API Endpoints &nearr;</a></li>
-                        <li><a href="https://faceio.net/integration-guide" target="_blank">FACEIO Integration Guide &nearr;</a></li>
-                        <li><a href="https://status.faceio.net" target="_blank">Health Status &nearr;</a></li>
-                        <li><a href="../pricing" target="_blank">Pricing &nearr;</a></li>
-                    </ul>
-                </div>
-                <!-- /Menu-->
-                <!-- Menu-->
-                <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
-                    <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">Company &amp; Social Handles</h6>
-                    <ul class="list-unstyled footer-nav">
-                        <li><a href="https://symisc.net" target="_blank">Symisc Systems &nearr;</a></li>
-                        <li><a href="../support" target="_blank">Support Channels &nearr;</a></li>
-                        <li><a href="https://blog.pixlab.io" target="_blank">PixLab Blog &nearr;</a></li>
-                        <li><a href="https://github.com/symisc" target="_blank">Github &nearr;</a></li>
-                        <li><a href="https://www.facebook.com/pixlab.io/" target="_blank">Facebook &nearr;</a></li>
-                        <li><a href="https://x.com/unqlite_db" target="_blank">Twitter | X &nearr;</a></li>
-                        <li><a href="https://www.linkedin.com/company/pixlabio" target="_blank">LinkedIn &nearr;</a></li>
-                    </ul>
-                </div>
-                <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
-                    <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">Legals</h6>
-                    <ul class="list-unstyled footer-nav">
-                        <li><a href="../privacy-policy" target="_blank">Privacy Policy &nearr;</a></li>
-                        <li><a href="../terms-of-use" target="_blank">Terms of Service &nearr;</a></li>
-                        <li><a href="../dmca" target="_blank">DMCA &nearr;</a></li>
-                        <li><a href="https://status.faceio.net" target="_blank">Services Status &nearr;</a></li>
-                    </ul>
-                </div>
-                <!-- /Menu-->
+            <!-- /Menu-->
+            <div class="col-lg-2 col-md-6 col-12">
+              <div class="mb-4">
+                <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">Developers</h6>
+                <ul class="list-unstyled footer-nav">
+                  <li><a href="../start" target="_blank">Getting Started</a></li>
+                  <li><a href="../api-endpoints" target="_blank">API Endpoints</a></li>
+                  <li><a href="../rest-api" target="_blank">REST APIs</a></li>
+                  <li><a href="/" target="_blank">eKYC Platform</a></li>
+                  <li><a href="../vision-llm-playground-api" target="_blank"> Vision LLM & APIs</a></li>
+                  <li><a href="../on-premises" target="_blank">PixLab On-Premises</a></li>
+                </ul>
+              </div>
+              <div class="mb-4">
+                <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">Resources</h6>
+                <ul class="list-unstyled footer-nav">
+                  <li><a href="https://console.pixlab.io" target="_blank">PixLab Console &nearr;</a></li>
+                  <li><a href="../pricing" target="_blank">Pricing</a></li>
+                  <li><a href="docscan">DOCSCAN API &rarr;</a></li>
+                  <li><a href="../support" target="_blank">Support Channels</a></li>
+                  <li><a href="../api" target="_blank">Developer API Portal &nearr;</a></li>
+                  <li><a href="../api-endpoints" target="_blank">API Endpoints &nearr;</a></li>
+                  <li><a href="https://faceio.net/integration-guide" target="_blank">FACEIO Integration Guide &nearr;</a></li>
+                </ul>
+              </div>
             </div>
+  
+            <!-- Menu-->
+            <div class="col-lg-2 col-md-6 col-12">
+              <div class="mb-4">
+                <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">Company</h6>
+                <ul class="list-unstyled footer-nav">
+                  <li><a href="https://symisc.net" target="_blank">Symisc Systems &nearr;</a></li>
+                  <li><a href="https://blog.pixlab.io" target="_blank">PixLab Blog &nearr;</a></li>
+                  <li><a href="https://github.com/symisc" target="_blank">Github &nearr;</a></li>
+                  <li><a href="https://www.facebook.com/pixlab.io/" target="_blank">Facebook &nearr;</a></li>
+                  <li><a href="https://x.com/unqlite_db" target="_blank">Twitter | X &nearr;</a></li>
+                  <li><a href="https://www.linkedin.com/company/pixlabio" target="_blank">LinkedIn &nearr;</a></li>
+                </ul>
+              </div>
+              <div class="mb-4">
+                <h6 class="text-uppercase fs-xs fw-bolder mt-3 tracking-wider text-white opacity-50">Legals</h6>
+                <ul class="list-unstyled footer-nav">
+                  <li><a href="../privacy-policy" target="_blank">Privacy Policy &nearr;</a></li>
+                  <li><a href="../terms-of-use" target="_blank">Terms of Service &nearr;</a></li>
+                  <li><a href="../dmca" target="_blank">DMCA &nearr;</a></li>
+                  <li><a href="https://status.faceio.net" target="_blank">Services Status &nearr;</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- <div class="w-100 w-sm-50 w-lg-auto mb-4 mb-lg-0">
+                      <h6 class="text-uppercase fs-xs fw-bolder tracking-wider text-white opacity-50">Legals</h6>
+                      <ul class="list-unstyled footer-nav">
+                          <li><a href="../privacy-policy" target="_blank">Privacy Policy &nearr;</a></li>
+                          <li><a href="../terms-of-use" target="_blank">Terms of Service &nearr;</a></li>
+                          <li><a href="../dmca" target="_blank">DMCA &nearr;</a></li>
+                          <li><a href="https://status.faceio.net" target="_blank">Services Status &nearr;</a></li>
+                      </ul>
+                  </div> -->
+            <!-- /Menu-->
+          </div>
         </div>
         <div class="container">
-            <div class="border-top pt-6 mt-7 border-white-10 d-flex flex-column flex-md-row justify-content-between align-items-center">
-                <span class="small text-white opacity-50 mb-2 mb-md-0">Copyright © 2017 - 2025, <a href="https://symisc.net" target="_blank">Symisc Systems, SUARL</a>. All rights reserved. <br>All trademarks and copyrights belong to their respective owners.</span>
-                <span class="small text-white opacity-50"><a href="../terms-of-use" target="_blank">Terms of Services</a>  |  <a href="../privacy-policy" target="_blank">Privacy Policy</a></span>
-            </div>
+          <div class="border-top border-white-10 d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 pt-3">
+            <span class="small mb-md-0 mb-2 text-white opacity-50">Copyright © 2017 - 2025, <a href="https://symisc.net" target="_blank">Symisc Systems, SUARL</a>. All rights reserved. <br />All trademarks and copyrights belong to their respective owners.</span>
+            <span class="small text-white opacity-50"><a href="../terms-of-use" target="_blank">Terms of Services</a> | <a href="../privacy-policy" target="_blank">Privacy Policy</a></span>
+          </div>
         </div>
-    </footer>
+      </footer>
     <script src="assets/js/vendor.bundle.js"></script>
     <script src="assets/js/theme.bundle.js"></script>
 </body>
