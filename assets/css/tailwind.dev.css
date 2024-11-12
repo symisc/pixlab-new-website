@@ -332,6 +332,11 @@ body.dark-theme .pricing-brands-carousel .brands-wrapper img {
   filter: brightness(0) invert(1);
 }
 
+.api-endpoint-link {
+  @apply uppercase text-[#43AEEA] hover:text-[#43EAA4]
+}
+
+
 /* Media query for small screen */
 @media screen and (max-width: 1024px) {
   .header-gradient-bg {
