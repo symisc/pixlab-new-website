@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PixLab Developer Portal | Tools, APIs, and Resources for Developers</title>
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://pixlab.io/developer-portal" />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Access PixLab's powerful API documentation, code samples, and developer tools designed to drive productivity, innovation, and seamless integration." />
+    <meta name="keywords" content="PixLab, developer portal, developer tools, APIs, API documentation, code samples, productivity tools, integration, PixLab API, API resources, developer resources" />
+    <link rel="stylesheet" href="assets/css/unicons/css/line.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- Header/Navbar -->
+    <header class="absolute inset-x-0 top-3 z-50 mx-auto flex w-full max-w-[1320px] flex-wrap px-3 before:absolute before:inset-0 before:mx-5 before:max-w-full before:rounded-xl max-lg:before:bg-neutral-800/30 max-lg:before:backdrop-blur-lg lg:top-5 lg:flex-nowrap lg:justify-start">
+      <nav class="relative mx-2 w-full max-w-screen-xl gap-3 px-3 py-1.5 lg:mx-auto lg:flex lg:items-center lg:justify-between lg:px-1 lg:py-0">
+        <div class="flex items-center justify-between lg:h-full">
+          <!-- Logo -->
+          <a class="nav-logo flex h-full flex-none rounded-md text-xl font-semibold focus:opacity-80 focus:outline-none" href="/" aria-label="PixLab">
+            <img class="w-28 object-contain lg:w-[137px]" src="assets/images/pixlab-logo-light.png" alt="PixLab Logo" />
+          </a>
+          <div class="flex items-center gap-3 lg:hidden">
+            <button class="theme-toggler flex items-center text-white">
+              <i class="uil uil-moon text-lg"></i>
+            </button>
+            <div>
+              <button type="button" class="hs-collapse-toggle flex size-8 items-center justify-center rounded-full bg-neutral-800 text-sm font-semibold text-white disabled:pointer-events-none disabled:opacity-50" id="hs-navbar-floating-dark-collapse" aria-expanded="false" aria-controls="hs-navbar-floating-dark" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-floating-dark">
+                <svg class="size-4 shrink-0 hs-collapse-open:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="3" x2="21" y1="6" y2="6" />
+                  <line x1="3" x2="21" y1="12" y2="12" />
+                  <line x1="3" x2="21" y1="18" y2="18" />
+                </svg>
+                <svg class="hidden size-4 shrink-0 hs-collapse-open:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 6 6 18" />
+                  <path d="m6 6 12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Main Menu -->
+        <div id="hs-navbar-floating-dark" class="hs-collapse header-gradient-bg nav-menu hidden flex-1 overflow-hidden transition-all duration-300 lg:flex lg:h-full" aria-labelledby="hs-navbar-floating-dark-collapse">
+          <div class="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
+            <div class="flex w-full flex-col gap-x-3.5 py-2 lg:w-auto lg:flex-row lg:items-center lg:justify-between lg:py-0 lg:ps-6">
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="start">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#8343EA] bg-[#8343EA] transition-all group-hover:bg-transparent"></span>
+                Get Started
+              </a>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="api-portal">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#EAA743] bg-[#EAA743] transition-all group-hover:bg-transparent"></span>
+                API Portal
+              </a>
+              <!-- Products & SDKs -->
+              <div class="hs-dropdown group cursor-pointer p-2 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:px-0 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
+                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  <span class="block h-2 w-2 shrink-0 rounded-full border border-[#21db49] bg-[#21db49] transition-all group-hover:bg-transparent"></span>
+                  Products & SDKs
+                  <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div class="hs-dropdown-menu header-gradient-bg top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
+                  <div class="space-y-1 py-1 lg:px-1">
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="on-premises">PixLab On-Premises</a>
+                    <div class="hs-dropdown relative [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:[--is-collapse:false] lg:[--strategy:absolute] lg:[--trigger:hover]">
+                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-white focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        Open Source SDK <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      </button>
+                      <div class="hs-dropdown-menu header-gradient-bg start-full top-0 z-10 !mx-[10px] -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-start-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
+                        <div class="space-y-1 py-1 lg:px-1">
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="https://sod.pixlab.io/" target="_blank">SOD - Embedded Computer Vision Library &nearr;</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="tiny-dream">Tiny Dream - Stable Diffusion Inference in C++</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="art">ART - Real-Time ASCII Art C Library</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="downloads">SOD Downloads</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="sod">SOD Licensing Information</a>
+                        </div>
+                      </div>
+                    </div>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="ekyc/">eKYC - Universal ID Scanner APIs</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="vision-llm-api-playground/">Vision Play, LLM & APIs</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="template-pdf-media-engine">PDF & Media Template Engine</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="app-ui-ux-code">APP UX - Mobile UI Code Generator</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="api-endpoints">PixLab API Endpoints</a>
+                    <!-- NEW PRODUCT ADD -->
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="https://faceio.net/" target="_blank">FACEIO - Facial Authentication for the Web &nearr;</a>
+                  </div>
+                </div>
+              </div>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="vision-llm-api-playground/">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#BFEA43] bg-[#BFEA43] transition-all group-hover:bg-transparent"></span>
+                Vision Play &nearr;
+              </a>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="ekyc/">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#EA4393] bg-[#EA4393] transition-all group-hover:bg-transparent"></span>
+                eKYC APIs &nearr;
+              </a>
+              <!-- Online Creativity dropdown link -->
+              <div class="hs-dropdown group cursor-pointer p-2 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:px-0 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
+                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  <span class="block h-2 w-2 shrink-0 rounded-full border border-[#43AEEA] bg-[#43AEEA] transition-all group-hover:bg-transparent"></span>
+                  Online Creativity
+                  <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div class="hs-dropdown-menu header-gradient-bg top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
+                  <div class="space-y-1 py-1 lg:px-1">
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="annotate">Annotate - Image Annotation & Labelling</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="creative-toolbox">Creative Toolbox</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="mockup-screenshot-editor">Mockup & Screenshot AI Editor</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="ai-photo-editor">AI Photo Editor</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="bulk-image-video-background-removal-tool-apis">Bulk Image & Video Background Removal</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="tilemap-2d-level-editor">Tilemap & 2D Level Editor</a>
+                    <!-- NEW TOOL ADD -->
+                  </div>
+                </div>
+              </div>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="pricing">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#4643EA] bg-[#4643EA] transition-all group-hover:bg-transparent"></span>
+                Pricing
+              </a>
+            </div>
+
+            <!-- Theme / Signup / PixLab Console buttons -->
+            <div class="flex items-center gap-4 lg:hidden">
+              <button class="theme-toggler hidden items-center text-white lg:flex">
+                <i class="uil uil-moon text-xl"></i>
+              </button>
+              <div class="flex h-11 gap-3 py-1">
+                <button class="gradient-button group block h-full items-center gap-x-2 rounded-lg px-3 text-sm font-medium text-white" href="https://console.pixlab.io" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Theme / Signup / PixLab Console buttons -->
+        <div class="nav-buttons hidden h-full items-center gap-4 px-1.5 py-0.5 lg:flex">
+          <button class="theme-toggler hidden items-center text-white lg:flex">
+            <i class="uil uil-moon text-xl"></i>
+          </button>
+          <div class="flex h-full gap-3">
+            <button class="gradient-button console-button group flex h-full items-center gap-x-2 rounded-lg px-2.5 text-sm font-medium text-white" href="https://console.pixlab.io" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div id="particles-js" class="relative h-[75vh] bg-[#0b0e13]">
+          <div class="absolute flex h-full w-full items-center px-5 pt-10 text-white">
+            <div class="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between gap-10 lg:flex-row">
+              <!-- Hero Text -->
+              <div class="max-w-[500px] text-center lg:max-w-screen-sm lg:text-left">
+                <h1 class="hero-heading">Developer Tools to Empower Your Projects</h1>
+                <p class="lead mt-4 text-gray-200">Explore a suite of tools and projects tailored for developers to enhance productivity and innovation.</p>
+              </div>
+
+              <div class="flex w-full max-w-[500px] flex-col gap-6">
+                <!-- Search Form -->
+                <form action="search" method="get" class="flex h-12 w-full items-center justify-between rounded-xl bg-white/10 pe-3 ps-4 backdrop-blur-md focus-within:bg-white/15 lg:h-14">
+                  <label for="search-docs" class="sr-only">Search Documentation...</label>
+                  <input id="search-docs" name="q" class="h-full w-full border-none bg-transparent pe-2 outline-none" type="search" placeholder="Search Documentation..." required />
+                  <button type="submit" class="gradient-button flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white lg:h-10 lg:w-10" title="Search PixLab knowledge Base...">
+                    <i class="uil uil-search text-lg lg:text-xl" aria-hidden="true"></i>
+                    <span class="sr-only">Search</span>
+                  </button>
+                </form>
+                <!-- Connect Button -->
+                <a href="https://console.pixlab.io" target="_blank" class="gradient-button flex h-12 w-full items-center justify-between gap-x-3 rounded-xl pe-3 ps-4 lg:h-14" title="Connect to the PixLab Console and elevate your projects with powerful Vision and ID Scan APIs...">
+                  <span>Connect to the PixLab Console</span>
+                  <i class="uil uil-arrow-up-right flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-black bg-opacity-30 text-lg lg:h-10 lg:w-10 lg:text-xl"></i>
+                </a>
+                <span class="text-sm text-slate-600">Connect to the PixLab Console and elevate your projects with powerful Vision & Creativity APIs, designed to enhance your development workflow and productivity.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tools Section -->
+      <section>
+        <div class="mx-auto flex w-full max-w-screen-xl flex-col px-5 py-16">
+          <div class="mb-12">
+            <div class="gradient-graph-line"></div>
+            <p class="gradient-text-animation mt-3 text-[15px]">SUITE OF TOOLS FOR DEVELOPERS</p>
+          </div>
+
+          <div class="flex w-full flex-col items-center">
+            <!-- Tool Cards Grid Container -->
+            <div class="mt-10 flex w-full flex-col gap-6">
+              <!-- Single Grid Row -->
+              <div class="grid grid-cols-10 gap-6">
+                <div class="relative col-span-10 flex flex-col justify-between gap-20 overflow-hidden rounded-xl bg-[url(../images/gradient-bg-type-6.png)] bg-cover p-5 md:col-span-5 lg:col-span-3">
+                  <div>
+                    <img class="w-36" src="assets/images/pixlab-logo-light.png" alt="PixLab logo" />
+                    <div class="max-w-[350px]">
+                      <h2 class="mt-3 text-2xl font-semibold text-white">eKYC Project & ID Document Scanner</h2>
+                      <p class="mt-5 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit lacus, sagittis in eros sed, lobortis cursus felis.</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-3">
+                    <a href="#" class="rounded-lg bg-white px-6 py-2 text-sm font-medium text-gray-950 transition hover:bg-neutral-200">Try Now</a>
+                    <a href="#" class="rounded-lg bg-gray-800 px-6 py-2 text-sm font-medium text-white transition hover:bg-gray-700">Learn More</a>
+                  </div>
+                </div>
+                <div class="relative col-span-10 flex flex-col justify-between gap-20 overflow-hidden rounded-xl bg-[url(../images/gradient-bg-type-2.png)] bg-cover p-5 md:col-span-5 lg:col-span-7">
+                  <img class="pointer-events-none absolute -right-1/3 top-1/2 hidden h-full w-full -translate-y-1/2 scale-[0.8] object-contain lg:block" src="assets/images/pixlab-vision-screenshot.png" alt="PixLab Vision LLM Playground & APIs" />
+                  <div>
+                    <img class="w-36" src="assets/images/pixlab-logo-light.png" alt="PixLab logo" />
+                    <div class="max-w-[350px]">
+                      <h2 class="mt-3 text-2xl font-semibold text-white">PixLab Vision LLM Playground & APIs.</h2>
+                      <p class="mt-5 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit lacus, sagittis in eros sed, lobortis cursus felis.</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-3">
+                    <a href="#" class="rounded-lg bg-white px-6 py-2 text-sm font-medium text-gray-950 transition hover:bg-neutral-200">Try Now</a>
+                    <a href="#" class="rounded-lg bg-gray-800 px-6 py-2 text-sm font-medium text-white transition hover:bg-gray-700">Learn More</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Single Grid Row -->
+              <div class="grid grid-cols-10 gap-6">
+                <div class="relative col-span-10 flex flex-col justify-between gap-20 overflow-hidden rounded-xl bg-[url(../images/gradient-bg-type-2.png)] bg-cover p-5 md:col-span-5 lg:col-span-5">
+                  <img class="pointer-events-none absolute -right-[45%] top-1/2 hidden h-full w-full -translate-y-1/2 scale-[0.8] bg-cover object-contain lg:block" src="assets/images/pixlab-mobile-app-screenshot.png" alt="Mobile App UI/UX Generator & Builder" />
+                  <div>
+                    <img class="w-36" src="assets/images/pixlab-logo-light.png" alt="PixLab logo" />
+                    <div class="max-w-[350px]">
+                      <h2 class="mt-3 text-2xl font-semibold text-white">Mobile App UI/UX Generator & Builder</h2>
+                      <p class="mt-5 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit lacus, sagittis in eros sed, lobortis cursus felis.</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-3">
+                    <a href="#" class="rounded-lg bg-white px-6 py-2 text-sm font-medium text-gray-950 transition hover:bg-neutral-200">Try Now</a>
+                    <a href="#" class="rounded-lg bg-gray-800 px-6 py-2 text-sm font-medium text-white transition hover:bg-gray-700">Learn More</a>
+                  </div>
+                </div>
+                <div class="relative col-span-10 flex flex-col justify-between gap-20 overflow-hidden rounded-xl bg-[url(../images/gradient-bg-type-1.png)] bg-cover p-5 md:col-span-5 lg:col-span-5">
+                  <div>
+                    <img class="w-36" src="assets/images/pixlab-logo-light.png" alt="PixLab logo" />
+                    <div class="max-w-[350px]">
+                      <h2 class="mt-3 text-2xl font-semibold text-white">PixLab REST API</h2>
+                      <p class="mt-5 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit lacus, sagittis in eros sed, lobortis cursus felis.</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-3">
+                    <a href="#" class="rounded-lg bg-white px-6 py-2 text-sm font-medium text-gray-950 transition hover:bg-neutral-200">Try Now</a>
+                    <a href="#" class="rounded-lg bg-gray-800 px-6 py-2 text-sm font-medium text-white transition hover:bg-gray-700">Learn More</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Single Grid Row -->
+              <div class="grid gap-6">
+                <div class="relative flex flex-col justify-between gap-20 overflow-hidden rounded-xl bg-[url(../images/gradient-bg-type-7.png)] bg-cover p-5">
+                  <img class="pointer-events-none absolute -right-1/3 top-1/2 hidden h-full w-full -translate-y-1/2 bg-cover object-contain lg:block" src="assets/images/api-endpoints.png" alt="PixLab API Endpoints" />
+                  <div>
+                    <img class="w-36" src="assets/images/pixlab-logo-light.png" alt="PixLab logo" />
+                    <div class="max-w-[450px]">
+                      <h2 class="mt-3 text-2xl font-semibold text-white">PixLab API Endpoints</h2>
+                      <p class="mt-5 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit lacus, sagittis in eros sed, lobortis cursus felis. In eu accumsan enim.</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-3">
+                    <a href="#" class="rounded-lg bg-white px-6 py-2 text-sm font-medium text-gray-950 transition hover:bg-neutral-200">Try Now</a>
+                    <a href="#" class="rounded-lg bg-gray-800 px-6 py-2 text-sm font-medium text-white transition hover:bg-gray-700">Learn More</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Single Grid Row -->
+              <div class="grid grid-cols-10 gap-6">
+                <div class="relative col-span-10 flex flex-col justify-between gap-20 overflow-hidden rounded-xl bg-[url(../images/gradient-bg-type-1.png)] bg-cover p-5 md:col-span-5 lg:col-span-5">
+                  <div>
+                    <img class="w-36" src="assets/images/pixlab-logo-light.png" alt="PixLab logo" />
+                    <div class="max-w-[350px]">
+                      <h2 class="mt-3 text-2xl font-semibold text-white">Developer Creative Toolbox</h2>
+                      <p class="mt-5 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit lacus, sagittis in eros sed, lobortis cursus felis.</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-3">
+                    <a href="#" class="rounded-lg bg-white px-6 py-2 text-sm font-medium text-gray-950 transition hover:bg-neutral-200">Try Now</a>
+                    <a href="#" class="rounded-lg bg-gray-800 px-6 py-2 text-sm font-medium text-white transition hover:bg-gray-700">Learn More</a>
+                  </div>
+                </div>
+                <div class="relative col-span-10 flex flex-col justify-between gap-20 overflow-hidden rounded-xl bg-[url(../images/gradient-bg-type-1.png)] bg-cover p-5 md:col-span-5 lg:col-span-5">
+                  <div>
+                    <img class="w-36" src="assets/images/pixlab-logo-light.png" alt="PixLab logo" />
+                    <div class="max-w-[350px]">
+                      <h2 class="mt-3 text-2xl font-semibold text-white">AI Game Tilemap Editor</h2>
+                      <p class="mt-5 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit lacus, sagittis in eros sed, lobortis cursus felis.</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-3">
+                    <a href="#" class="rounded-lg bg-white px-6 py-2 text-sm font-medium text-gray-950 transition hover:bg-neutral-200">Try Now</a>
+                    <a href="#" class="rounded-lg bg-gray-800 px-6 py-2 text-sm font-medium text-white transition hover:bg-gray-700">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQs Section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <div class="mb-12">
+            <div class="gradient-graph-line"></div>
+            <p class="gradient-text-animation mt-3 text-[15px]">FREQUENTLY ASKED QUESTIONS</p>
+          </div>
+
+          <h2 class="max-w-[500px] text-3xl text-tColor lg:text-4xl"><b>Got Questions For Us? </b>We've Got Answers For You</h2>
+
+          <!-- FAQ -->
+          <div class="border-dark mx-auto mt-12 max-w-[85rem] rounded-lg border p-5 pb-0">
+            <!-- Grid -->
+            <div class="grid gap-10">
+              <div class="md:col-span-3">
+                <!-- Accordion -->
+                <div class="hs-accordion-group divide-y divide-bColor">
+                  <div class="hs-accordion active pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-one">
+                    <button class="hs-accordion-toggle group inline-flex w-full items-center gap-x-3 rounded-lg pb-3 text-start font-medium text-tColor transition focus:outline-none md:text-lg" aria-expanded="true" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
+                      <svg class="block size-6 shrink-0 transition duration-300 hs-accordion-active:-rotate-180" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      What happens if I go over my monthly quota?
+                    </button>
+                    <div id="hs-basic-with-title-and-arrow-stretched-collapse-one" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one">
+                      <p class="ps-[34px] text-muted">Our AI can generate text based on your prompts, suggest improvements, and provide real-time editing to enhance clarity and style, making content creation effortless.</p>
+                    </div>
+                  </div>
+
+                  <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                    <button class="hs-accordion-toggle group inline-flex w-full items-center gap-x-3 rounded-lg pb-3 text-start font-medium text-tColor transition focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                      <svg class="block size-6 shrink-0 transition duration-300 hs-accordion-active:-rotate-180" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      What happens if I go over my storage quota?
+                    </button>
+                    <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-collapse-heading-two">
+                      <p class="ps-[34px] text-muted">Our AI can generate text based on your prompts, suggest improvements, and provide real-time editing to enhance clarity and style, making content creation effortless.</p>
+                    </div>
+                  </div>
+
+                  <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-three">
+                    <button class="hs-accordion-toggle group inline-flex w-full items-center gap-x-3 rounded-lg pb-3 text-start font-medium text-tColor focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-three">
+                      <svg class="block size-6 shrink-0 transition duration-300 hs-accordion-active:-rotate-180" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      Why don't you offer free plans?
+                    </button>
+                    <div id="hs-basic-with-title-and-arrow-collapse-heading-three" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-collapse-heading-three">
+                      <p class="ps-[34px] text-muted">Our AI can generate text based on your prompts, suggest improvements, and provide real-time editing to enhance clarity and style, making content creation effortless.</p>
+                    </div>
+                  </div>
+
+                  <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-four">
+                    <button class="hs-accordion-toggle group inline-flex w-full items-center gap-x-3 rounded-lg pb-3 text-start font-medium text-tColor focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-four">
+                      <svg class="block size-6 shrink-0 transition duration-300 hs-accordion-active:-rotate-180" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      What's the limit of the free trial period?
+                    </button>
+                    <div id="hs-basic-with-title-and-arrow-collapse-heading-four" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-collapse-heading-four">
+                      <p class="ps-[34px] text-muted">Our AI can generate text based on your prompts, suggest improvements, and provide real-time editing to enhance clarity and style, making content creation effortless.</p>
+                    </div>
+                  </div>
+
+                  <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-five">
+                    <button class="hs-accordion-toggle group inline-flex w-full items-center gap-x-3 rounded-lg pb-3 text-start font-medium text-tColor focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-five">
+                      <svg class="block size-6 shrink-0 transition duration-300 hs-accordion-active:-rotate-180" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      Do you offer SLA's (Service Level Agreements)?
+                    </button>
+                    <div id="hs-basic-with-title-and-arrow-collapse-heading-five" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-collapse-heading-five">
+                      <p class="ps-[34px] text-muted">Our AI can generate text based on your prompts, suggest improvements, and provide real-time editing to enhance clarity and style, making content creation effortless.</p>
+                    </div>
+                  </div>
+
+                  <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-six">
+                    <button class="hs-accordion-toggle group inline-flex w-full items-center gap-x-3 rounded-lg pb-3 text-start font-medium text-tColor focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-six">
+                      <svg class="block size-6 shrink-0 transition duration-300 hs-accordion-active:-rotate-180" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      Payment Processing - Merchant of Records
+                    </button>
+                    <div id="hs-basic-with-title-and-arrow-collapse-heading-six" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-collapse-heading-six">
+                      <p class="ps-[34px] text-muted">Our AI can generate text based on your prompts, suggest improvements, and provide real-time editing to enhance clarity and style, making content creation effortless.</p>
+                    </div>
+                  </div>
+
+                  <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-seven">
+                    <button class="hs-accordion-toggle group inline-flex w-full items-center gap-x-3 rounded-lg pb-3 text-start font-medium text-tColor focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-seven">
+                      <svg class="block size-6 shrink-0 transition duration-300 hs-accordion-active:-rotate-180" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      Are my credit card details safe?
+                    </button>
+                    <div id="hs-basic-with-title-and-arrow-collapse-heading-seven" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-collapse-heading-seven">
+                      <p class="ps-[34px] text-muted">Our AI can generate text based on your prompts, suggest improvements, and provide real-time editing to enhance clarity and style, making content creation effortless.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Accordion -->
+              </div>
+              <!-- End Col -->
+            </div>
+            <!-- End Grid -->
+          </div>
+          <!-- End FAQ -->
+        </div>
+      </section>
+
+      <!-- PixLab's APIs Links Section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <h2 class="text-center text-lg font-medium text-muted">Explore Endless Possibilities with PixLab's APIs</h2>
+
+          <div class="mt-10 flex flex-col flex-wrap justify-center gap-2 gap-y-3 sm:flex-row">
+            <button class="gradient-button rounded-lg p-[1px] font-medium text-tColor">
+              <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                <span>GET STARTED</span>
+                <i class="uil uil-arrow-up-right"></i>
+              </div>
+            </button>
+            <button class="gradient-button rounded-lg p-[1px] font-medium text-tColor">
+              <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                <span>CODE SAMPLES</span>
+                <i class="uil uil-arrow-up-right"></i>
+              </div>
+            </button>
+            <button class="gradient-button rounded-lg p-[1px] font-medium text-tColor">
+              <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                <span>API INTEGRATION</span>
+                <i class="uil uil-arrow-up-right"></i>
+              </div>
+            </button>
+            <button class="gradient-button rounded-lg p-[1px] font-medium text-tColor">
+              <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                <span>API ENDPOINTS</span>
+                <i class="uil uil-arrow-up-right"></i>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-background">
+      <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+        <div class="gradient-graph-line mb-10"></div>
+        <div class="grid grid-cols-10 gap-y-10">
+          <div class="col-span-10 md:col-span-5 lg:col-span-3">
+            <a href="/">
+              <img class="dark-logo mb-1 w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" />
+            </a>
+            <p class="pr-3 text-[15px] text-tColor">PixLab offers cutting-edge AI solutions to empower developers and creators with Automated Tools & APIs for Machine Vision, Media Processing & Creative Innovation.</p>
+
+            <!-- Search Input in Footer -->
+            <form action="search" method="get">
+              <div class="mt-5 flex h-10 w-full items-center gap-3 rounded-full border border-bColor bg-input px-4 focus-within:bg-surface md:max-w-[80%] lg:h-12">
+                <i class="uil uil-search text-xl text-tColor" aria-hidden="true"></i>
+                <input name="q" class="h-full w-full border-none bg-transparent text-tColor outline-none" type="search" placeholder="Search Docs..." aria-label="Search" />
+              </div>
+            </form>
+
+            <!-- Social Media Links -->
+            <div class="mt-10 flex gap-1.5">
+              <a href="https://www.facebook.com/pixlab.io/" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow PixLab on Facebook">
+                <i class="uil uil-facebook text-lg"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/pixlabio" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow PixLab on LinkedIn">
+                <i class="uil uil-linkedin text-lg"></i>
+              </a>
+              <a href="https://x.com/unqlite_db" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow PixLab on Twitter/X">
+                <i class="uil uil-twitter text-lg"></i>
+              </a>
+              <a href="https://github.com/symisc" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow Symisc on GitHub">
+                <i class="uil uil-github text-lg"></i>
+              </a>
+              <a href="https://blog.pixlab.io" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="PixLab Blog">
+                <i class="uil uil-rss text-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Products Section -->
+          <div class="col-span-10 md:col-span-5 lg:col-span-3">
+            <h3 class="mb-4 font-semibold text-primary">PRODUCTS & SDKs</h3>
+            <ul class="flex flex-col gap-3">
+              <li><a href="api-portal" class="footer-link">PixLab API Portal</a></li>
+              <li><a href="vision-llm-playground-api/" class="footer-link">Vision Playground, LLM & APIs</a></li>
+              <li><a href="template-pdf-media-engine" class="footer-link">PDF & Media Template Engine</a></li>
+              <li><a href="ekyc/" class="footer-link">eKYC - Universal ID Scanner APIs</a></li>
+              <li><a href="app-ui-ux-code" class="footer-link">APP UX - Mobile UI Code Generator</a></li>
+              <li><a href="https://faceio.net/" target="_blank" class="footer-link">FACEIO - Facial Authentication for the Web &nearr;</a></li>
+            </ul>
+            <!-- Creativity Tools -->
+            <h3 class="mb-2 mt-4 font-semibold text-primary">ONLINE CREATIVITY</h3>
+            <ul class="flex flex-col gap-3">
+              <li><a href="annotate" class="footer-link">Image Annotation & Segmentation</a></li>
+              <li><a href="mockup-screenshot-editor" class="footer-link">Mockup & Screenshot Editor</a></li>
+              <li><a href="bulk-image-video-background-removal-tool-apis" class="footer-link">Bulk Background Removal Tool</a></li>
+              <li><a href="creative-toolbox" class="footer-link">Creative Toolbox</a></li>
+              <li><a href="ai-photo-editor" class="footer-link">AI Photo Editor</a></li>
+              <li><a href="tilemap-2d-level-editor" class="footer-link">AI Game Tilemap Editor</a></li>
+            </ul>
+          </div>
+          <!-- Resources Section -->
+          <div class="col-span-10 md:col-span-5 lg:col-span-2">
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-primary">DEVELOPERS</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="start" class="footer-link">Getting Started</a></li>
+                <li><a href="api-endpoints" class="footer-link">API Endpoints</a></li>
+                <li><a href="rest-api" class="footer-link">REST APIs</a></li>
+                <li><a href="ekyc/" class="footer-link">eKYC Platform</a></li>
+                <li><a href="vision-llm-playground-api/" class="footer-link">Vision LLM & APIs</a></li>
+                <li><a href="on-premises" class="footer-link">PixLab On-Premises</a></li>
+              </ul>
+            </div>
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-primary">RESOURCES</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="https://console.pixlab.io" target="_blank" class="footer-link">PixLab Console &nearr;</a></li>
+                <li><a href="pricing" class="footer-link">Pricing</a></li>
+                <li><a href="support" class="footer-link">Support Channels</a></li>
+                <li><a href="https://community.faceio.net" target="_blank" class="footer-link">Community Forum &nearr;</a></li>
+                <li><a href="https://sod.pixlab.io" target="_blank" class="footer-link">Open Computer Vision &nearr;</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Company Section -->
+          <div class="col-span-10 md:col-span-5 lg:col-span-2">
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-primary">COMPANY</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="https://symisc.net/" target="_blank" class="footer-link">Symisc Systems &nearr;</a></li>
+                <li><a href="https://blog.pixlab.io" target="_blank" class="footer-link">PixLab Blog &nearr;</a></li>
+                <li><a href="https://github.com/symisc" target="_blank" class="footer-link">Github &nearr;</a></li>
+                <li><a href="https://www.linkedin.com/company/pixlabio" target="_blank" class="footer-link">LinkedIn &nearr;</a></li>
+                <li><a href="https://x.com/unqlite_db" target="_blank" class="footer-link">Twitter | X &nearr;</a></li>
+                <li><a href="https://www.facebook.com/pixlab.io/" target="_blank" class="footer-link">Facebook &nearr;</a></li>
+              </ul>
+            </div>
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-primary">LEGAL</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="privacy-policy" class="footer-link">Privacy Policy</a></li>
+                <li><a href="terms-of-use" class="footer-link">Terms of Services</a></li>
+                <li><a href="dmca" class="footer-link">DMCA</a></li>
+                <li><a href="https://status.faceio.net" target="_blank" class="footer-link">Services Status &nearr;</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="mt-10 flex flex-col justify-between gap-5 md:flex-row md:items-center">
+          <a href="https://symisc.net/" target="_blank" title="Copyright © 2017 - 2025, Symisc Systems, SUARL. All rights reserved.">
+            <img class="dark-logo mb-1 w-36" src="assets/images/symisc-systems-logo.png" alt="Symisc Systems" />
+          </a>
+
+          <div class="flex flex-col gap-1 text-sm text-slate-600">
+            <p>Copyright © 2017 - 2025, <a href="https://symisc.net" target="_blank">Symisc Systems</a>, SUARL. All rights reserved.</p>
+            <p>All trademarks and copyrights belong to their respective owners.</p>
+          </div>
+          <div class="flex">
+            <a class="block" href="#" title="GDPR Compliant">
+              <img class="w-32 lg:w-36" src="assets/images/gdpr-compliant.png" alt="GDPR compliant badge" />
+            </a>
+            <a class="block" href="#" title="Privacy First">
+              <img class="w-32 lg:w-36" src="assets/images/privacy-first.png" alt="Privacy first badge" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/preline/preline.min.js"></script>
+    <script src="assets/js/particles/particles.min.js"></script>
+    <script src="assets/js/particles/particles-config.js"></script>
+  </body>
+</html>
