@@ -35,6 +35,10 @@
     --color-ape-text: #0D1016;
     --color-ape-text-gray: #323231;
     --color-ape-surface: #EAE8E6;
+
+    /* App UI/UX Code Page Colors */
+    --color-auc-primary: #D747F0;
+    --color-auc-secondary: #6466F1;
   }
 
   /* Apply font to all elements */
@@ -345,8 +349,7 @@ body.dark-theme .pricing-brands-carousel .brands-wrapper img {
   }
 }
 
-/* AI Photo Editor Stylings */
-
+/* AI Photo Editor Stylings Start */
 body.ai-photo-editor {
   @apply bg-apeBackground
 }
@@ -437,7 +440,6 @@ body.dark-theme .ape-header-gradient-theme {
   }
 }
 
-
 /* Transparent background and no border on small screens */
 @media screen and (max-width: 1024px) {
 
@@ -463,3 +465,47 @@ body.dark-theme .ape-header-gradient-theme {
     background: linear-gradient(to top, #13161D, #191C28);
   }
 }
+
+/* AI Photo Editor Styling End */
+
+/* App UI/UX Code Styling Start */
+.app-ui-ux-code nav :where(.nav-link, .theme-toggler):hover,
+.app-ui-ux-code nav .hs-dropdown:hover>button {
+  @apply text-aucPrimary
+}
+
+.auc-gradient-bg-theme {
+  background: linear-gradient(to top, var(--color-auc-primary), var(--color-auc-secondary));
+}
+
+.auc-gradient-text {
+  width: fit-content;
+  background: linear-gradient(to right, var(--color-auc-primary), var(--color-auc-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.auc-gradient-button {
+  @apply relative overflow-hidden;
+  background: linear-gradient(to right, var(--color-auc-primary), var(--color-auc-secondary));
+}
+
+.auc-gradient-button :where(span, i) {
+  @apply z-20 relative
+}
+
+.auc-gradient-button::before {
+  @apply absolute left-0 top-0 content-[""] w-full h-full z-10 opacity-0 transition-all duration-300;
+  background: linear-gradient(to left, var(--color-auc-primary), var(--color-auc-secondary));
+}
+
+.auc-gradient-button:hover::before {
+  @apply opacity-100
+}
+
+.app-ui-ux-code .footer-link:hover {
+  @apply text-aucPrimary
+}
+
+/* App UI/UX Code Styling End */

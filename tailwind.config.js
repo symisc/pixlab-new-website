@@ -29,6 +29,9 @@ module.exports = {
         apeTColor: "var(--color-ape-text)",
         apeTGray: "var(--color-ape-text-gray)",
         apeSurface: "var(--color-ape-surface)",
+
+        // App UI/UX Code Page Colors
+        aucPrimary: "var(--color-auc-primary)",
       },
     },
   },

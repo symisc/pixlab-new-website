@@ -851,8 +851,8 @@ g++ -o tinydream boileplate.cpp -funsafe-math-optimizations -Ofast -flto=auto  -
                 <strong>Set the pre-trained models path</strong>. The <span><strong>Tiny Dream</strong></span> assets comprise all pre-trained models (over 2GB as of this release) required by the <a class="link" href="#tiny-dream-method"><font face="courier">tinyDream::dream()</font></a> method for stable diffusion inference (<em>image generation</em>).
               </p>
               <p>
-                <strong>You can download the pre-trained assets from the <a class="link" href="#downloads">Download</a> section above</strong>. Once downloaded, extract the assets ZIP archive in a directory of your choice (usually the directory where your executable is located), and set the full path via this method or from the <span><strong>Tiny Dream</strong></span> <a class="link" href="#tiny-dream-constructor">constructor</a>. You do not need to call this
-                method if the assets are located on the same directory where your executable reside.
+                <strong>You can download the pre-trained assets from the <a class="link" href="#downloads">Download</a> section above</strong>. Once downloaded, extract the assets ZIP archive in a directory of your choice (usually the directory where your executable is located), and set the full path via this method or from the <span><strong>Tiny Dream</strong></span> <a class="link" href="#tiny-dream-constructor">constructor</a>. You do not need to call this method if the assets are located on
+                the same directory where your executable reside.
               </p>
 
               <h5 class="sec-title-sm mb-2 mt-5">Parameters</h5>
@@ -976,40 +976,61 @@ std<span style="color: #666666">::</span>string<span style="color: #666666">&amp
               <div class="grid grid-cols-1 border-b py-6 sm:grid-cols-[30%_70%]">
                 <div><code class="code">int seed</code></div>
                 <div>
-                  <p><em>Optional integer, defaults to <strong>42</strong></em>. Seed in Stable Diffusion is a number used to initialize the generation. Controlling the seed can help you generate reproducible images, experiment with other parameters, or prompt variations.</p>
+                  <p>
+                    <em>Optional integer, defaults to <strong>42</strong></em
+                    >. Seed in Stable Diffusion is a number used to initialize the generation. Controlling the seed can help you generate reproducible images, experiment with other parameters, or prompt variations.
+                  </p>
                 </div>
               </div>
               <div class="grid grid-cols-1 py-6 sm:grid-cols-[30%_70%]">
                 <div><code class="code">int step</code></div>
                 <div>
-                  <p><em>Optional integer, defaults to <strong>30</strong></em>. An integer for adjusting the inference steps in Stable Diffusion. The more steps you use, the better quality you'll achieve but you shouldn't set <font face="courier">steps</font> as high as possible. Around 30 sampling steps (default value) are usually enough to achieve high-quality images. Using more may produce a slightly different picture, but not necessarily better quality. In addition, the iterative nature of the process makes generation slow; the more steps you'll use, the more time it will take to generate an image. In most cases, it's not worth the additional wait time.</p>
+                  <p>
+                    <em>Optional integer, defaults to <strong>30</strong></em
+                    >. An integer for adjusting the inference steps in Stable Diffusion. The more steps you use, the better quality you'll achieve but you shouldn't set <font face="courier">steps</font> as high as possible. Around 30 sampling steps (default value) are usually enough to achieve high-quality images. Using more may produce a slightly different picture, but not necessarily better quality. In addition, the iterative nature of the process makes generation slow; the more steps you'll
+                    use, the more time it will take to generate an image. In most cases, it's not worth the additional wait time.
+                  </p>
                 </div>
               </div>
               <h5 class="sec-title-sm mb-2 mt-5">Return Value</h5>
-              <p>Boolean <font face="courier"><strong>true</strong></font> is returned on successful inference, <font face="courier"><strong>false</strong></font> is returned otherwise. On which case, log messages captured by your <a class="link" href="#set-log-callback">log consumer callback</a> should give you an insight of what went wrong during the whole image generation process.</p>
+              <p>
+                Boolean <font face="courier"><strong>true</strong></font> is returned on successful inference, <font face="courier"><strong>false</strong></font> is returned otherwise. On which case, log messages captured by your <a class="link" href="#set-log-callback">log consumer callback</a> should give you an insight of what went wrong during the whole image generation process.
+              </p>
             </div>
             <hr class="my-5" />
 
             <h5 class="sec-title-sm mb-2 mt-5">Syntax</h5>
-            <!-- HTML generated using hilite.me --><div id="prompt-example-method" class="text-sm" style="background: #f8f8f8; overflow:auto;width:auto;border: 1px solid #ccc;padding: .6em;border-radius: 4px;"><pre style="margin: 0; line-height: 125%"> <span style="color: #008000; font-weight: bold">static</span> std<span style="color: #666666">::</span>pair<span style="color: #666666">&lt;</span>std<span style="color: #666666">::</span>string <span style="color: #408080; font-style: italic">/*Positive Prompt */</span>, std<span style="color: #666666">::</span>string <span style="color: #408080; font-style: italic">/* Negative Prompt*/</span><span style="color: #666666">&gt;</span> tinyDream<span style="color: #666666">::</span>promptExample();
-</pre></div>
+            <!-- HTML generated using hilite.me -->
+            <div id="prompt-example-method" class="text-sm" style="background: #f8f8f8; overflow: auto; width: auto; border: 1px solid #ccc; padding: 0.6em; border-radius: 4px">
+              <pre
+                style="margin: 0; line-height: 125%"
+              > <span style="color: #008000; font-weight: bold">static</span> std<span style="color: #666666">::</span>pair<span style="color: #666666">&lt;</span>std<span style="color: #666666">::</span>string <span style="color: #408080; font-style: italic">/*Positive Prompt */</span>, std<span style="color: #666666">::</span>string <span style="color: #408080; font-style: italic">/* Negative Prompt*/</span><span style="color: #666666">&gt;</span> tinyDream<span style="color: #666666">::</span>promptExample();
+</pre>
+            </div>
 
             <div class="text-tColor">
               <h5 class="sec-title-sm mb-2 mt-5">Description</h5>
               <div class="text-tColor">
-                <p>Return a <strong>hard-coded, prompt example template</strong> to be passed to the <a class="link" href="#tiny-dream-method"><font face="courier">tinyDream::dream()</font></a> method. This static method is of no particular interest except to familiarize the developer (<em>in lack of imagination</em>) with the library prompt inputs.</p>
+                <p>
+                  Return a <strong>hard-coded, prompt example template</strong> to be passed to the <a class="link" href="#tiny-dream-method"><font face="courier">tinyDream::dream()</font></a> method. This static method is of no particular interest except to familiarize the developer (<em>in lack of imagination</em>) with the library prompt inputs.
+                </p>
 
                 <h5 class="sec-title-sm mb-2 mt-5">Parameters</h5>
                 <em>None</em>
               </div>
               <h5 class="sec-title-sm mb-2 mt-5">Return Value</h5>
-              <p>This <strong>static method</strong> never fail, and always return a standard template <a class="link" href="https://cplusplus.com/reference/utility/pair/pair/" target="_blank"><font face="courier">std::pair</font> <i class="uil uil-external-link-alt"></i></a> object holding the <strong>positive prompt</strong> in the <font face="courier"><strong>first</strong></font> field of the <font face="courier">std::pair</font>, while the <strong>negative prompt</strong> is stored in the <font face="courier"><strong>second</strong></font> field of the pair object.</p>
+              <p>
+                This <strong>static method</strong> never fail, and always return a standard template <a class="link" href="https://cplusplus.com/reference/utility/pair/pair/" target="_blank"><font face="courier">std::pair</font> <i class="uil uil-external-link-alt"></i></a> object holding the <strong>positive prompt</strong> in the <font face="courier"><strong>first</strong></font> field of the <font face="courier">std::pair</font>, while the <strong>negative prompt</strong> is stored in the
+                <font face="courier"><strong>second</strong></font> field of the pair object.
+              </p>
               <hr class="my-5" />
             </div>
             <h5 class="sec-title-sm mb-2 mt-5">Syntax</h5>
-            <!-- HTML generated using hilite.me --><div id="about-method" style="background: #f8f8f8; overflow:auto;width:auto;border: 1px solid #ccc;padding: .6em;border-radius: 4px;"><pre style="margin: 0; line-height: 125%"><span style="color: #008000; font-weight: bold">static</span> <span style="color: #008000; font-weight: bold">const</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span> tinyDream<span style="color: #666666">::</span>about();
-</pre></div>
-
+            <!-- HTML generated using hilite.me -->
+            <div id="about-method" style="background: #f8f8f8; overflow: auto; width: auto; border: 1px solid #ccc; padding: 0.6em; border-radius: 4px">
+              <pre style="margin: 0; line-height: 125%"><span style="color: #008000; font-weight: bold">static</span> <span style="color: #008000; font-weight: bold">const</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span> tinyDream<span style="color: #666666">::</span>about();
+</pre>
+            </div>
 
             <div class="text-tColor">
               <h5 class="sec-title-sm mb-2 mt-5">Description</h5>
@@ -1025,21 +1046,21 @@ std<span style="color: #666666">::</span>string<span style="color: #666666">&amp
           </article>
           <article class="mt-12">
             <h2 class="sec-title" id="related-projects">Related Projects</h2>
-          <div class="gradient-graph-line my-5 h-1 w-full"></div>
-          <p class=" text-tColor">You may find useful the following <a class="link" href="https://github.com/symisc">open source</a>*, production-ready products developed &amp; maintained by <strong>PixLab</strong> | <a class="link" href="https://symisc.net" target="_blank">Symisc Systems</a>:</p>
-          <div class="flex md:flex-row flex-col gap-6">
-            <ul class="list list-dot">
-              <li><a class="link" href="art">ASCII Art</a> - Real-Time ASCII Art Rendering C Library.</li>
-              <li><a class="link" href="https://sod.pixlab.io" target="_blank">SOD</a> - An Embedded, Dependency-Free, Computer Vision C/C++ Library.</li>
-              <li><a class="link" href="https://unqlite.symisc.net" target="_blank">UnQLite</a> - An Embedded, Transactional Key/Value Database Engine.</li>
-          </ul>
-          <ul class="list list-dot">
-            <li><a class="link" href="https://faceio.net" target="_blank">FACEIO</a> - Cross Browser, Passwordless Facial Authentication Framework.</li>
-            <li><a class="link" href="https://annotate.pixlab.io" target="_blank">Annotate</a> - Online Image Annotation, Labeling &amp; Segmentation Tool.</li>
-            <li><a class="link" href="https://ekyc.pixlab.io" target="_blank">eKYC Platform</a> - AI Powered ID Scanning APIs.</li>
-            <li><a class="link" href="ai-photo-editor">AI Photo Editor</a> - Online, Web Based, Generative AI Photo Editor.</li>
-        </ul>
-          </div>
+            <div class="gradient-graph-line my-5 h-1 w-full"></div>
+            <p class="text-tColor">You may find useful the following <a class="link" href="https://github.com/symisc">open source</a>*, production-ready products developed &amp; maintained by <strong>PixLab</strong> | <a class="link" href="https://symisc.net" target="_blank">Symisc Systems</a>:</p>
+            <div class="flex flex-col gap-6 md:flex-row">
+              <ul class="list list-dot">
+                <li><a class="link" href="art">ASCII Art</a> - Real-Time ASCII Art Rendering C Library.</li>
+                <li><a class="link" href="https://sod.pixlab.io" target="_blank">SOD</a> - An Embedded, Dependency-Free, Computer Vision C/C++ Library.</li>
+                <li><a class="link" href="https://unqlite.symisc.net" target="_blank">UnQLite</a> - An Embedded, Transactional Key/Value Database Engine.</li>
+              </ul>
+              <ul class="list list-dot">
+                <li><a class="link" href="https://faceio.net" target="_blank">FACEIO</a> - Cross Browser, Passwordless Facial Authentication Framework.</li>
+                <li><a class="link" href="https://annotate.pixlab.io" target="_blank">Annotate</a> - Online Image Annotation, Labeling &amp; Segmentation Tool.</li>
+                <li><a class="link" href="https://ekyc.pixlab.io" target="_blank">eKYC Platform</a> - AI Powered ID Scanning APIs.</li>
+                <li><a class="link" href="ai-photo-editor">AI Photo Editor</a> - Online, Web Based, Generative AI Photo Editor.</li>
+              </ul>
+            </div>
           </article>
         </div>
       </section>
