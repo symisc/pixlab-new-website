@@ -185,11 +185,13 @@
         <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
           <!-- Social Bar -->
           <div class="flex flex-wrap items-center justify-between gap-5 pb-3">
-            <img class="dark-logo w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" title="Machine Vision & Media Processing APIs" />
-            <p class="text-sm text-muted">
-              <span>Version 2.197</span>
-              <span>(<a href="https://blog.pixlab.io/2020/08/pixlab-api-1972-released" target="_blank" class="text-primary hover:text-secondary">Release Notes &nearr;</a>)</span>
-            </p>
+            <div class="flex flex-wrap items-center gap-5">
+              <img class="dark-logo w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" title="Machine Vision & Media Processing APIs" />
+              <p class="text-sm text-muted">
+                <span>Version 2.197</span>
+                <span>(<a href="https://blog.pixlab.io/2020/08/pixlab-api-1972-released" target="_blank" class="text-primary hover:text-secondary">Release Notes &nearr;</a>)</span>
+              </p>
+            </div>
 
             <!-- AddToAny BEGIN -->
             <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
@@ -206,9 +208,9 @@
           </div>
 
           <article class="mt-5">
-            <div class="gradient-graph-line "></div>
-            <p class="gradient-text-animation mb-3 mt-3 font-bold text-3xl">REST API ENDPOINTS</p>
-            <form action="search" method="get" class="flex items-center justify-end mt-4 mb-4">
+            <div class="gradient-graph-line"></div>
+            <p class="gradient-text-animation mb-3 mt-3 text-3xl font-bold">REST API ENDPOINTS</p>
+            <form action="search" method="get" class="mb-4 mt-4 flex items-center justify-end">
               <div class="flex h-12 w-full items-center justify-between rounded-xl border border-bColor bg-surface pe-2 ps-4 backdrop-blur-md focus-within:border-secondary md:max-w-96 lg:h-12">
                 <label for="search-api" class="sr-only text-sm">Search API Endpoints</label>
                 <input id="search-api" name="q" class="h-full w-full border-none bg-transparent pe-2 text-sm text-tColor outline-none" type="search" placeholder="Search API Endpoints Documentation.." required />
@@ -218,14 +220,17 @@
                 </button>
               </div>
             </form>
-            <p class="text-tColor text-lg">This page lists all the exposed <span style="font-family: Montserrat;"><strong>PixLab</strong></span> API endpoints. <strong>As of this release, there are over 150 API endpoints covering Computer Vision, Generative AI, Large Language Models (LLMs), and Media Processing tasks</strong>, with enhancements and new endpoints added in each release. This is the <strong>API endpoints reference document</strong> to follow. If you have any suggestions or feature requests, please open a new ticket via the support tab of the <a href="https://console.pixlab.io/">PixLab Console &nearr;</a>. For a tutorial introduction, refer to <a href="start">Getting Started with PixLab</a> and <a href="rest-api-examples">The REST-APIs Code Samples</a>. Feel free to copy, paste, and run these examples to see the API in action.</p>
+            <p class="text-lg text-tColor">
+              This page lists all the exposed <span style="font-family: Montserrat"><strong>PixLab</strong></span> API endpoints. <strong class="font-semibold">As of this release, there are over 150 API endpoints covering Computer Vision, Generative AI, Large Language Models (LLMs), and Media Processing tasks</strong>, with enhancements and new endpoints added in each release. This is the <strong class="font-semibold">API endpoints reference document</strong> to follow. If you have any
+              suggestions or feature requests, please open a new ticket via the support tab of the <a class="text-primary transition-all duration-300 hover:text-secondary" href="https://console.pixlab.io/">PixLab Console &nearr;</a>. For a tutorial introduction, refer to <a href="start">Getting Started with PixLab</a> and <a href="rest-api-examples">The REST-APIs Code Samples</a>. Feel free to copy, paste, and run these examples to see the API in action.
+            </p>
           </article>
         </div>
       </section>
       <section>
         <div class="mx-auto w-full max-w-screen-xl px-5">
           <!-- API Endpoints Section -->
-          <div class="mt-10 flex flex-wrap justify-between gap-10">
+          <div class="mt-2 flex flex-wrap justify-between gap-10">
             <!-- API Endpoint List -->
             <div class="flex flex-col gap-7">
               <div>
@@ -303,7 +308,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="text-2xl uppercase font-bold text-primary">Image Encryption & Compression</h3>
+                <h3 class="text-2xl font-bold uppercase text-primary">Image Encryption & Compression</h3>
                 <ul class="ml-5 mt-5 flex list-disc flex-col gap-2 marker:text-[#43EAA4]">
                   <li class="pl-1"><a href="endpoints/encrypt" class="api-endpoint-link">encrypt</a></li>
                   <li class="pl-1"><a href="endpoints/encipher" class="api-endpoint-link">encipher</a></li>
@@ -314,7 +319,7 @@
                 </ul>
               </div>
               <div>
-                <h3 class="text-2xl uppercase font-bold text-primary">Image Colorspace Conversion</h3>
+                <h3 class="text-2xl font-bold uppercase text-primary">Image Colorspace Conversion</h3>
                 <ul class="ml-5 mt-5 flex list-disc flex-col gap-2 marker:text-[#43EAA4]">
                   <li class="pl-1"><a href="endpoints/colorspace_rgb" class="api-endpoint-link">colorspace_rgb</a></li>
                   <li class="pl-1"><a href="endpoints/colorspace_srgb" class="api-endpoint-link">colorspace_srgb</a></li>
@@ -331,7 +336,7 @@
             <!-- API Endpoint List -->
             <div class="flex flex-col gap-7">
               <div>
-                <h3 class="text-2xl uppercase font-bold text-primary">Image Processing</h3>
+                <h3 class="text-2xl font-bold uppercase text-primary">Image Processing</h3>
                 <ul class="ml-5 mt-5 flex list-disc flex-col gap-2 marker:text-[#43EAA4]">
                   <li class="pl-1"><a href="endpoints/mogrify" class="api-endpoint-link">mogrify</a></li>
                   <li class="pl-1"><a href="endpoints/grayscale" class="api-endpoint-link">grayscale</a></li>

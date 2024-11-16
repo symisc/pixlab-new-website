@@ -5,18 +5,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     /* Light theme color variables */
-    --color-primary: #DC2A76;
-    --color-secondary: #F76E72;
-    --color-background: #FAF8F5;
+    --color-primary: #dc2a76;
+    --color-secondary: #f76e72;
+    --color-background: #faf8f5;
     --color-text: #000000;
     --text-muted: #484848;
     --color-border: #dbe4f0;
-    --color-surface: #FFFFFF;
-    --color-input: #E6ECF3;
+    --color-surface: #ffffff;
+    --color-input: #e6ecf3;
     --color-off-white: #f7f7f7;
 
     --color-table-background: #f7fafc;
@@ -29,16 +28,16 @@
     --color-gradient: linear-gradient(to top, var(--color-primary) 5%, var(--color-secondary) 95%);
 
     /* AI Photo Editor Page Colors */
-    --color-ape-primary: #28A745;
-    --color-ape-secondary: #008BD1;
-    --color-ape-background: #FAF8F5;
-    --color-ape-text: #0D1016;
+    --color-ape-primary: #28a745;
+    --color-ape-secondary: #008bd1;
+    --color-ape-background: #faf8f5;
+    --color-ape-text: #0d1016;
     --color-ape-text-gray: #323231;
-    --color-ape-surface: #EAE8E6;
+    --color-ape-surface: #eae8e6;
 
     /* App UI/UX Code Page Colors */
-    --color-auc-primary: #D747F0;
-    --color-auc-secondary: #6466F1;
+    --color-auc-primary: #d747f0;
+    --color-auc-secondary: #6466f1;
   }
 
   /* Apply font to all elements */
@@ -49,11 +48,11 @@
 
 .dark-theme {
   /* Light theme color variables */
-  --color-background: #0D1016;
-  --color-text: #FAF8F5;
-  --text-muted: #D4D4D4;
+  --color-background: #0d1016;
+  --color-text: #faf8f5;
+  --text-muted: #d4d4d4;
   --color-border: #333333;
-  --color-surface: #0D1016;
+  --color-surface: #0d1016;
   --color-input: #333333;
   --color-off-white: #282828;
 
@@ -66,14 +65,14 @@
   --color-table-hover: #3a3e47;
 
   /* AI Photo Editor Page Colors */
-  --color-ape-background: #0D1016;
-  --color-ape-text: #FAF8F5;
-  --color-ape-text-gray: #CFD2D3;
-  --color-ape-surface: #3D4044;
+  --color-ape-background: #0d1016;
+  --color-ape-text: #faf8f5;
+  --color-ape-text-gray: #cfd2d3;
+  --color-ape-surface: #3d4044;
 }
 
 body {
-  @apply bg-background
+  @apply bg-background;
 }
 
 /* Scrollbar styles */
@@ -92,8 +91,8 @@ body.dark-theme :where(.img-invert, .dark-logo) {
 }
 
 nav :where(.nav-link, .theme-toggler):hover,
-nav .hs-dropdown:hover>button {
-  @apply text-primary
+nav .hs-dropdown:hover > button {
+  @apply text-primary;
 }
 
 nav .nav-logo {
@@ -114,16 +113,16 @@ nav .nav-buttons .console-button {
 }
 
 .gradient-button :where(span, i) {
-  @apply z-20 relative
+  @apply relative z-20;
 }
 
 .gradient-button::before {
-  @apply absolute left-0 top-0 content-[""] w-full h-full z-10 opacity-0 transition-all duration-300;
+  @apply absolute left-0 top-0 z-10 h-full w-full opacity-0 transition-all duration-300 content-[""];
   background: linear-gradient(to bottom, var(--color-primary) 0%, var(--color-secondary) 100%);
 }
 
 .gradient-button:hover::before {
-  @apply opacity-100
+  @apply opacity-100;
 }
 
 .bg-gradient {
@@ -135,17 +134,17 @@ nav .nav-buttons .console-button {
 }
 
 .gradient-outline-btn:hover div {
-  @apply bg-gradient
+  @apply bg-gradient;
 }
 
 .gradient-outline-btn:hover span {
-  @apply text-white
+  @apply text-white;
 }
 
 .gradient-graph-line {
   height: 1px;
   background: #c4e17f;
-  background-image: linear-gradient(to right, #79C1E1, #709ADB, #ED5C57, #E17E71, #F7D07F, #F8FCCF, #CADF8B);
+  background-image: linear-gradient(to right, #79c1e1, #709adb, #ed5c57, #e17e71, #f7d07f, #cadf8b);
 }
 
 .gradient-bg {
@@ -163,7 +162,7 @@ nav .nav-buttons .console-button {
 .header-gradient-bg,
 body.dark-theme .bg-gradient-theme {
   border: 1px solid rgba(255, 255, 255, 0.15);
-  background: linear-gradient(to top, #13161D, #191C28);
+  background: linear-gradient(to top, #13161d, #191c28);
 }
 
 .bg-gradient-theme {
@@ -171,7 +170,7 @@ body.dark-theme .bg-gradient-theme {
   background: #fff;
 }
 
-.gradient-button:hover>.bg-gradient-theme {
+.gradient-button:hover > .bg-gradient-theme {
   color: #fff;
   background: transparent;
 }
@@ -182,7 +181,7 @@ body.dark-theme .bg-gradient-theme {
   background-clip: text;
   background-size: 200%;
   background-position: -200%;
-  background-image: linear-gradient(to right, #79C1E1, #709ADB, #ED5C57, #E17E71, #F7D07F, #F8FCCF, #CADF8B, #79C1E1);
+  background-image: linear-gradient(to right, #28a745, #008bd1, #d747f0, #6466f1, #dc2a76, #28a745);
   animation: animate-gradient 5s infinite alternate-reverse;
 }
 
@@ -193,15 +192,15 @@ body.dark-theme .bg-gradient-theme {
 }
 
 .hero-heading {
-  @apply text-3xl font-bold lg:text-[2.5rem] gradient-text text-center leading-tight
+  @apply gradient-text text-center text-3xl font-bold leading-tight lg:text-[2.5rem];
 }
 
 .sec-title {
-  @apply my-5 text-2xl sm:text-3xl font-semibold text-primary uppercase;
+  @apply my-5 text-2xl font-semibold uppercase text-primary sm:text-3xl;
 }
 
 .sec-title-sm {
-  @apply text-lg uppercase text-tColor font-semibold sm:text-xl;
+  @apply text-lg font-semibold uppercase text-tColor sm:text-xl;
 }
 
 .hero-section #particles-js::before {
@@ -221,43 +220,43 @@ body.dark-theme .bg-gradient-theme {
 }
 
 .lead {
-  @apply text-base sm:text-lg md:text-2xl leading-snug text-center;
+  @apply text-center text-base leading-snug sm:text-lg md:text-2xl;
 }
 
 body.dark-theme ul li.card {
-  @apply bg-black/50
+  @apply bg-black/50;
 }
 
 .footer-link {
-  @apply block w-fit text-[15px] text-muted transition-all duration-200
+  @apply block w-fit text-[15px] text-muted transition-all duration-200;
 }
 
 .footer-link:hover {
-  @apply text-primary
+  @apply text-primary;
 }
 
 .link {
-  @apply text-blue-600
+  @apply text-blue-600;
 }
 
 .link:hover {
-  @apply underline
+  @apply underline;
 }
 
 .list {
-  @apply marker:text-blue-600 list-disc pl-5 space-y-4 text-tColor mt-5
+  @apply mt-5 list-disc space-y-4 pl-5 text-tColor marker:text-blue-600;
 }
 
 body.dark-theme .code {
-  @apply bg-neutral-900
+  @apply bg-neutral-900;
 }
 
 .code {
-  @apply bg-gray-100 rounded-md text-primary p-1 border border-gray-200;
+  @apply rounded-md border border-gray-200 bg-gray-100 p-1 text-primary;
 }
 
 .badge {
-  @apply bg-green-100 text-green-800 font-medium me-2 px-2.5 py-0.5 rounded-xl;
+  @apply me-2 rounded-xl bg-green-100 px-2.5 py-0.5 font-medium text-green-800;
 }
 
 body.dark-theme .badge {
@@ -267,23 +266,23 @@ body.dark-theme .badge {
 body.dark-theme .table-wrapper,
 body.dark-theme .code,
 body.dark-theme tbody tr.t-row {
-  @apply border-neutral-700
+  @apply border-neutral-700;
 }
 
 body.dark-theme .border-dark {
-  @apply border border-neutral-700
+  @apply border border-neutral-700;
 }
 
 body.dark-theme .border-b-dark {
-  @apply border-b border-neutral-700
+  @apply border-b border-neutral-700;
 }
 
 .table-wrapper {
-  @apply my-5 mx-auto rounded-lg shadow-md p-6 overflow-x-auto border border-gray-200
+  @apply mx-auto my-5 overflow-x-auto rounded-lg border border-gray-200 p-6 shadow-md;
 }
 
 .table-wrapper tbody tr.t-row {
-  @apply border-b border-gray-200
+  @apply border-b border-gray-200;
 }
 
 /* Pricing Page's Brands Carousel Styling */
@@ -337,9 +336,8 @@ body.dark-theme .pricing-brands-carousel .brands-wrapper img {
 }
 
 .api-endpoint-link {
-  @apply uppercase text-[#43AEEA] hover:text-[#43EAA4]
+  @apply uppercase text-[#2b56f5] transition-all duration-300 hover:text-[#46bdf4];
 }
-
 
 /* Media query for small screen */
 @media screen and (max-width: 1024px) {
@@ -351,7 +349,7 @@ body.dark-theme .pricing-brands-carousel .brands-wrapper img {
 
 /* AI Photo Editor Stylings Start */
 body.ai-photo-editor {
-  @apply bg-apeBackground
+  @apply bg-apeBackground;
 }
 
 .playfair-font {
@@ -363,8 +361,8 @@ header .ape-navbar .nav-logo {
 }
 
 nav.ape-navbar :where(.nav-link, .theme-toggler):hover,
-nav.ape-navbar .hs-dropdown:hover>button {
-  @apply text-apePrimary
+nav.ape-navbar .hs-dropdown:hover > button {
+  @apply text-apePrimary;
 }
 
 body.dark-theme header .nav-logo {
@@ -378,16 +376,16 @@ body.dark-theme header .nav-logo {
 }
 
 .ape-gradient-button :where(span, i) {
-  @apply z-20 relative
+  @apply relative z-20;
 }
 
 .ape-gradient-button::before {
-  @apply absolute left-0 top-0 content-[""] w-full h-full z-10 opacity-0 transition-all duration-300;
+  @apply absolute left-0 top-0 z-10 h-full w-full opacity-0 transition-all duration-300 content-[""];
   background: linear-gradient(to bottom left, var(--color-ape-primary) 0%, var(--color-ape-secondary) 100%);
 }
 
 .ape-gradient-button:hover::before {
-  @apply opacity-100
+  @apply opacity-100;
 }
 
 .ape-gradient-bg-theme {
@@ -395,7 +393,7 @@ body.dark-theme header .nav-logo {
 }
 
 .ape-gradient-surface-theme {
-  background: linear-gradient(to bottom, #FFFFFF, #999999);
+  background: linear-gradient(to bottom, #ffffff, #999999);
 }
 
 .ape-gradient-text {
@@ -414,7 +412,7 @@ body.dark-theme header .nav-logo {
 
 body.dark-theme .ape-header-gradient-theme,
 body.dark-theme .ape-card-gradient-theme {
-  background: linear-gradient(to top, #13161D, #191C28);
+  background: linear-gradient(to top, #13161d, #191c28);
 }
 
 body.dark-theme .ape-header-gradient-theme {
@@ -427,12 +425,11 @@ body.dark-theme .ape-header-gradient-theme {
 }
 
 .ai-photo-editor .footer-link:hover {
-  @apply text-apePrimary
+  @apply text-apePrimary;
 }
 
 /* Transparent background and no border on large screens */
 @media screen and (min-width: 1024px) {
-
   header.ape-header-gradient-theme,
   body.dark-theme header.ape-header-gradient-theme {
     background: transparent;
@@ -442,7 +439,6 @@ body.dark-theme .ape-header-gradient-theme {
 
 /* Transparent background and no border on small screens */
 @media screen and (max-width: 1024px) {
-
   header .ape-header-gradient-theme,
   body.dark-theme header .ape-header-gradient-theme {
     background: transparent;
@@ -462,7 +458,7 @@ body.dark-theme .ape-header-gradient-theme {
 
   body.dark-theme header.ape-header-gradient-theme::before {
     border: 1px solid rgba(255, 255, 255, 0.15);
-    background: linear-gradient(to top, #13161D, #191C28);
+    background: linear-gradient(to top, #13161d, #191c28);
   }
 }
 
@@ -470,8 +466,8 @@ body.dark-theme .ape-header-gradient-theme {
 
 /* App UI/UX Code Styling Start */
 .app-ui-ux-code nav :where(.nav-link, .theme-toggler):hover,
-.app-ui-ux-code nav .hs-dropdown:hover>button {
-  @apply text-aucPrimary
+.app-ui-ux-code nav .hs-dropdown:hover > button {
+  @apply text-aucPrimary;
 }
 
 .auc-gradient-bg-theme {
@@ -492,20 +488,20 @@ body.dark-theme .ape-header-gradient-theme {
 }
 
 .auc-gradient-button :where(span, i) {
-  @apply z-20 relative
+  @apply relative z-20;
 }
 
 .auc-gradient-button::before {
-  @apply absolute left-0 top-0 content-[""] w-full h-full z-10 opacity-0 transition-all duration-300;
+  @apply absolute left-0 top-0 z-10 h-full w-full opacity-0 transition-all duration-300 content-[""];
   background: linear-gradient(to left, var(--color-auc-primary), var(--color-auc-secondary));
 }
 
 .auc-gradient-button:hover::before {
-  @apply opacity-100
+  @apply opacity-100;
 }
 
 .app-ui-ux-code .footer-link:hover {
-  @apply text-aucPrimary
+  @apply text-aucPrimary;
 }
 
 /* App UI/UX Code Styling End */
