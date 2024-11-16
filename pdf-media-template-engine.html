@@ -1,0 +1,986 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PixLab PDF & Media Template Engine.</title>
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://pixlab.io/" />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Learn how to get started with PixLab. Explore our documentation for code samples, API usage, pricing, and more." />
+    <meta name="keywords" content="PixLab, API, documentation, code samples, getting started, pricing" />
+    <link rel="stylesheet" href="assets/css/unicons/css/line.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="pdf-media-template-engine">
+    <!-- Header/Navbar -->
+    <header class="ape-header-gradient-theme absolute inset-x-0 top-3 z-50 mx-auto flex w-full max-w-[1320px] flex-wrap px-3 before:absolute before:inset-0 before:mx-5 before:max-w-full before:rounded-xl lg:top-5 lg:flex-nowrap lg:justify-start">
+      <nav class="ape-navbar relative mx-2 w-full max-w-screen-xl gap-3 px-3 py-1.5 lg:mx-auto lg:flex lg:items-center lg:justify-between lg:px-1 lg:py-0">
+        <div class="flex items-center justify-between lg:h-full">
+          <!-- Logo -->
+          <a class="nav-logo flex h-full flex-none rounded-md text-xl font-semibold focus:opacity-80 focus:outline-none" href="/" aria-label="PixLab">
+            <img class="w-28 object-contain lg:w-[137px]" src="assets/images/pixlab-logo-light.png" alt="PixLab Logo" />
+          </a>
+
+          <!-- Toggle Theme and Menu Buttons -->
+          <div class="flex items-center gap-3 lg:hidden">
+            <button class="theme-toggler flex items-center text-apeTColor">
+              <i class="uil uil-moon text-lg"></i>
+            </button>
+            <div>
+              <button type="button" class="hs-collapse-toggle flex size-8 items-center justify-center rounded-full bg-apeTColor text-sm font-semibold text-apeTColor disabled:pointer-events-none disabled:opacity-50" id="hs-navbar-floating-dark-collapse" aria-expanded="false" aria-controls="hs-navbar-floating-dark" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-floating-dark">
+                <svg class="size-4 shrink-0 text-apeBackground hs-collapse-open:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="3" x2="21" y1="6" y2="6" />
+                  <line x1="3" x2="21" y1="12" y2="12" />
+                  <line x1="3" x2="21" y1="18" y2="18" />
+                </svg>
+                <svg class="hidden size-4 shrink-0 text-apeBackground hs-collapse-open:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 6 6 18" />
+                  <path d="m6 6 12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Menu -->
+        <div id="hs-navbar-floating-dark" class="hs-collapse ape-header-gradient-theme nav-menu hidden flex-1 overflow-hidden transition-all duration-300 lg:flex lg:h-full" aria-labelledby="hs-navbar-floating-dark-collapse">
+          <div class="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
+            <div class="flex w-full flex-col gap-x-3.5 py-2 lg:w-auto lg:flex-row lg:items-center lg:justify-between lg:py-0 lg:ps-6">
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-apeTColor focus:outline-none lg:p-0" href="start">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#8343EA] bg-[#8343EA] transition-all group-hover:bg-transparent"></span>
+                Get Started
+              </a>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-apeTColor focus:outline-none lg:p-0" href="api-portal">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#EAA743] bg-[#EAA743] transition-all group-hover:bg-transparent"></span>
+                API Portal
+              </a>
+              <!-- Products & SDKs -->
+              <div class="hs-dropdown group cursor-pointer p-2 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:px-0 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
+                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-apeTColor focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  <span class="block h-2 w-2 shrink-0 rounded-full border border-[#21db49] bg-[#21db49] transition-all group-hover:bg-transparent"></span>
+                  Products & SDKs
+                  <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div class="hs-dropdown-menu ape-header-gradient-theme top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
+                  <div class="space-y-1 py-1 lg:px-1">
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="on-premises">PixLab On-Premises</a>
+                    <div class="hs-dropdown relative [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:[--is-collapse:false] lg:[--strategy:absolute] lg:[--trigger:hover]">
+                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-apeTColor focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        Open Source SDK <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      </button>
+                      <div class="hs-dropdown-menu ape-header-gradient-theme start-full top-0 z-10 !mx-[10px] -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-start-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
+                        <div class="space-y-1 py-1 lg:px-1">
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="https://sod.pixlab.io/" target="_blank">SOD - Embedded Computer Vision Library &nearr;</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="tiny-dream">Tiny Dream - Stable Diffusion Inference in C++</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="art">ART - Real-Time ASCII Art C Library</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="downloads">SOD Downloads</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="sod">SOD Licensing Information</a>
+                        </div>
+                      </div>
+                    </div>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="ekyc/">eKYC - Universal ID Scanner APIs</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="vision-llm-api-playground/">Vision Play, LLM & APIs</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="template-pdf-image-engine">PDF Template Engine</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="app-ui-ux-code">APP UX - Mobile UI Code Generator</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="api-endpoints">PixLab API Endpoints</a>
+                    <!-- NEW PRODUCT ADD -->
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="https://faceio.net/" target="_blank">FACEIO - Facial Authentication for the Web &nearr;</a>
+                  </div>
+                </div>
+              </div>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-apeTColor focus:outline-none lg:p-0" href="vision-llm-api-playground/">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#BFEA43] bg-[#BFEA43] transition-all group-hover:bg-transparent"></span>
+                Vision Play &nearr;
+              </a>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-apeTColor focus:outline-none lg:p-0" href="ekyc/">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#EA4393] bg-[#EA4393] transition-all group-hover:bg-transparent"></span>
+                eKYC APIs &nearr;
+              </a>
+              <!-- Online Creativity dropdown link -->
+              <div class="hs-dropdown group cursor-pointer p-2 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:px-0 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
+                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-apeTColor focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  <span class="block h-2 w-2 shrink-0 rounded-full border border-[#43AEEA] bg-[#43AEEA] transition-all group-hover:bg-transparent"></span>
+                  Online Creativity
+                  <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div class="hs-dropdown-menu ape-header-gradient-theme top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
+                  <div class="space-y-1 py-1 lg:px-1">
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-apeTColor focus:outline-none" href="annotate">Annotate - Image Annotation & Labelling</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-apeTColor focus:outline-none" href="creative-toolbox">Creative Toolbox</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-apeTColor focus:outline-none" href="mockup-screenshot-editor">Mockup & Screenshot AI Editor</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-apeTColor focus:outline-none" href="ai-photo-editor">AI Photo Editor</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-apeTColor focus:outline-none" href="bulk-image-video-background-removal-tool-apis">Bulk Image & Video Background Removal</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-apeTColor focus:outline-none" href="tilemap-2d-level-editor">Tilemap & 2D Level Editor</a>
+                    <!-- NEW TOOL ADD -->
+                  </div>
+                </div>
+              </div>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-apeTColor focus:outline-none lg:p-0" href="pricing">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#4643EA] bg-[#4643EA] transition-all group-hover:bg-transparent"></span>
+                Pricing
+              </a>
+            </div>
+
+            <!-- Theme / Signup / PixLab Console buttons -->
+            <div class="flex items-center gap-4 lg:hidden">
+              <button class="theme-toggler hidden items-center text-apeTColor lg:flex">
+                <i class="uil uil-moon text-xl"></i>
+              </button>
+              <div class="flex h-11 gap-3 py-1">
+                <button class="ape-gradient-button group block h-full items-center gap-x-2 rounded-lg px-3 text-sm font-medium text-white" href="https://console.pixlab.io" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Theme / Signup / PixLab Console buttons -->
+        <div class="nav-buttons hidden h-full items-center gap-4 px-1.5 py-0.5 lg:flex">
+          <button class="theme-toggler hidden items-center text-apeTColor lg:flex">
+            <i class="uil uil-moon text-xl"></i>
+          </button>
+          <div class="flex h-full gap-3">
+            <button class="ape-gradient-button console-button group flex h-full items-center gap-x-2 rounded-lg px-2.5 text-sm font-medium text-white" href="https://console.pixlab.io" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="leading-8">
+      <!-- Hero Section -->
+      <section class="hero-section lg:h-screen h-[992px]">
+        <div class=" bg-apeBackground ">
+          <div class="absolute flex h-full w-full items-center px-5 pt-80 lg:pt-10 text-white">
+            <div class="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between gap-10 lg:flex-row">
+              <!-- Hero Text -->
+              <div class="relative z-10 flex flex-col items-center text-center lg:block lg:max-w-screen-sm lg:text-left">
+                <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold max-sm:hidden">PixLab PDF & Media Template Engine</p>
+                <!-- <h1 class="mt-5 text-3xl font-medium leading-[1.2] text-apeTColor lg:text-5xl">Easily create custom <br /><span class="playfair-font ape-gradient-text" id="changing-word">legal contracts</span></h1> -->
+                <h1 class="mt-5 text-3xl font-semibold leading-[1.2] text-apeTColor lg:text-5xl">Automate <span class="playfair-font ape-gradient-text">PDF and Image Creation</span></h1>
+                <p class="mt-5 text-muted">Harness the full power of PixLab's PDF and image generation engine. Effortlessly automate media creation and customization with our powerful API, designed to meet the highest standards of quality, speed, and versatility. From high-resolution PDFs to pixel-perfect images, streamline your processes like never before.</p>
+                <!-- <div class="mt-5 space-y-2 text-muted">
+                  <div class="flex items-center space-x-2">
+                    <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    <span>Flexible Template Customization: Design once, render as needed.</span>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    <span>API-Powered Automation: Scale your workflows without the hassle.</span>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    <span>Multi-Format Support: Generate PDFs, images, and more effortlessly.</span>
+                  </div>
+                </div> -->
+
+                <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-apeTColor bg-apeTColor sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-apeBackground transition-all duration-500 hover:bg-transparent hover:text-apeTColor" href="https://console.pixlab.io" target="_blank">Get API Access. <i class="uil uil-arrow-up-right lg:text-lg"></i></a>
+              </div>
+              <div class="flex-1 w-full relative">
+                <!-- <img class="relative z-10 w-full rounded-2xl border border-apePrimary" src="assets/images/ai-photo-editor__hero.png" alt="AI Photo Editor" /> -->
+                <div class="bg-gray-800 overflow-x-auto shadow-lg rounded-lg">
+                  <div class="flex items-center p-2 border-b border-slate-500">
+                    <div class="px-1">
+                      <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#ff605c]"></span>
+                    </div>
+                    <div class="px-1">
+                      <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#ffbd44]"></span>
+                    </div>
+                    <div class="px-1">
+                      <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#00ca4e]"></span>
+                    </div>
+                  </div>
+                    <!-- Card content -->
+                    <div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl"><code class="text-nowrap">{
+  "<span class="json-key">template</span>": <span class="json-number">TEMPLATE_ID</span>,
+  "<span class="json-key">layers</span>": {
+    "<span class="json-key">title</span>": {
+      "<span class="json-key">text</span>": "<span class="json-string">The Evolution of Gaming Consoles</span>",
+      "<span class="json-key">color</span>": "<span class="json-string">#0099dd</span>"
+    },
+    "<span class="json-key">cover</span>": {
+      "<span class="json-key">image_url</span>": "<span class="json-string">https://pathtomyphoto.com/mario.jpg</span>"
+    }
+  }
+}</code></div>
+                </div>
+                <!-- <div class="ape-gradient-bg-theme z-1 absolute inset-0 h-full w-full opacity-30 blur-xl lg:blur-3xl"></div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Separator (Gradient Line) -->
+      <div class="mx-auto w-full max-w-screen-xl px-5">
+        <div class="gradient-graph-line mb-10"></div>
+      </div>
+
+      <!-- Logo's section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          
+          <div class="flex flex-col items-center">
+            <h2 class="text-center text-3xl font-semibold leading-snug text-apeTColor lg:max-w-[80%] lg:text-4xl">
+              <span class="ape-gradient-text">Effortlessly connect</span> <br />
+               with leading no-code platforms
+            </h2>
+
+            <p class="mt-5 text-center text-apeTGray sm:w-1/2">  Utilize platforms like <b class="font-medium text-tColor">Zapier, Make, Airtable, and other popular no-code tools</b> to integrate with us and streamline your processes.</p>
+
+            <div class="grid gap-6 grid-cols-3 lg:grid-cols-6 md:gap-8 my-10">
+              <div>
+                <img class="dark-logo" src="https://templated.io/_astro/zapier-logo.DelhYpXQ_v0Cxf.webp" width="140">
+              </div>
+              <div>
+                <img class="dark-logo" src="https://templated.io/_astro/make-logo.fViJX5eS_Z194jAY.webp" width="140">
+              </div>
+              <div>
+                <img class="dark-logo" src="https://templated.io/_astro/bubble-logo.f3pQ-gre_1LxyGx.webp" width="140">
+              </div>
+              <div>
+                <img class="dark-logo" src="https://templated.io/_astro/n8n-logo.CxJH-eO-_Z1jdAEh.webp" width="140">
+              </div>
+              <div>
+                <img class="dark-logo" src="https://templated.io/_astro/airtable-logo.Cu_4HMKZ_Z5VYwe.webp" width="140">
+              </div>
+              <div>
+                <img class="dark-logo" src="https://templated.io/_astro/activepieces-logo.BFfmE6j3_Z2fjGcW.webp" width="140">
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- PIXLAB MEDIA TEMPLATES -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <div class="flex md:flex-row flex-col items-start gap-16">
+            <div class="flex-1">
+              <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold max-sm:hidden">PIXLAB MEDIA TEMPLATES</p>
+              <h1 class="mt-5 text-3xl max-md:text-center font-semibold leading-[1.2] text-apeTColor ">Generate <span class="ape-gradient-text">Dynamic Media,</span><br><span class="playfair-font">Effortlessly</span></h1>
+              <p class="mt-5 text-muted">Creating customized media assets and documents can be complex and time-consuming. With PixLab's <a href="rest-api" class="link">API</a>, generate high-quality, dynamic PDF and media templates in minutes, without complicated design tools or manual adjustments. Bring your unique brand to life with customizable templates for every purpose.</p>
+              <div class="flex gap-5">
+                <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-apePrimary border-2 border-apePrimary sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-apePrimary" href="https://console.pixlab.io">Get Started</a>
+                <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-transparent border-2 border-apePrimary sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-apePrimary transition-all duration-500 hover:bg-apePrimary hover:text-white" href="#how-it-works">See how it works</a>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="mb-6">
+                <!-- Icon Block -->
+                <div class="flex gap-x-5">
+                  <!-- <svg class="shrink-0 size-8 text-apePrimary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="10" x="3" y="11" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" x2="8" y1="16" y2="16"/><line x1="16" x2="16" y1="16" y2="16"/></svg> -->
+                  <svg class="h-fit" viewBox="0 0 24 24" fill="none" width="140"  xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M13.325 7.67505L17.411 3.58902C18.192 2.80797 19.4584 2.80797 20.2394 3.58902C21.0205 4.37007 21.0205 5.6364 20.2394 6.41745L16.1534 10.5035M10.5 10.5L6.1026 14.8974C5.50491 15.4951 5.20606 15.7939 4.95434 16.1276C4.73078 16.424 4.53521 16.7404 4.37014 17.0729C4.18427 17.4473 4.05063 17.8483 3.78337 18.6501L3.00024 20.9998L5.43419 20.0599C6.14139 19.7868 6.495 19.6503 6.82584 19.4723C7.11972 19.3142 7.39989 19.1318 7.66345 18.9271C7.96016 18.6967 8.22819 18.4287 8.76425 17.8926L13.3284 13.3284M9.65685 17H7L7 14M3 3L21 21" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                  <div class="grow">
+                    <h3 class="text-base sm:text-lg font-semibold text-apeTColor">
+                      No design skills required
+                    </h3>
+                    <p class="mt-1 text-muted">
+                      With PixLab, you don’t need to be a designer. Our <a href="rest-api" class="link">API</a> gives you full control over template customization without complex software. Generate media-ready templates and PDFs with a few clicks.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-6">
+                <!-- Icon Block -->
+                <div class="flex gap-x-5">
+                  <!-- <svg class="shrink-0 size-8 text-apePrimary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="10" x="3" y="11" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" x2="8" y1="16" y2="16"/><line x1="16" x2="16" y1="16" y2="16"/></svg>
+                  -->
+                  <svg class="self-start" fill="#28A745" width="150" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 501.267 501.267" xml:space="preserve"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g> <g> <g> <g> <path d="M359.495,181.88l-40-40c-4.16-4.16-10.88-4.16-15.04,0L3.122,443.107c-4.16,4.16-4.16,10.88,0,15.04l40,40 c4.16,4.16,10.88,4.16,15.04,0L359.495,196.92C363.655,192.76,363.655,186.04,359.495,181.88z M50.695,475.64l-24.96-24.96 l236.907-236.907l24.96,24.96L50.695,475.64z M302.642,223.587l-24.96-24.96l34.24-34.24l24.96,24.96L302.642,223.587z"></path> <path d="M498.162,117.667l-38.187-38.293l24.533-48.213c2.667-5.227,0.64-11.627-4.587-14.4c-3.093-1.6-6.72-1.6-9.707,0 l-48.107,24.533l-38.187-38.08c-4.16-4.267-10.88-4.267-15.147-0.107c-2.453,2.347-3.52,5.76-3.093,9.067l7.787,54.507 l-49.173,25.493c-5.227,2.667-7.253,9.173-4.587,14.4c1.6,2.987,4.48,5.12,7.787,5.653l53.44,8.32l8.64,53.227 c0.747,4.587,4.267,8.107,8.853,8.853c0.533,0.107,1.067,0.107,1.6,0.107c4.053,0,7.68-2.24,9.493-5.76l25.067-48.853l54.4,7.68 c5.867,0.853,11.2-3.2,12.053-8.96C501.789,123.427,500.615,120.013,498.162,117.667z M430.215,105.933 c-4.48-0.747-8.96,1.6-10.987,5.653l-13.653,26.667l-4.693-28.8c-0.747-4.587-4.373-8.107-8.853-8.853l-28.907-4.48 l26.987-13.973c4.053-2.133,6.293-6.507,5.653-10.987l-4.267-30.293l21.013,21.12c3.307,3.307,8.32,4.053,12.373,2.027 l25.707-13.12l-13.12,25.813c-2.133,4.16-1.28,9.067,1.92,12.373l21.12,21.12L430.215,105.933z"></path> <path d="M378.375,395.747L353.522,382.2l-13.547-24.853c-3.733-6.827-14.933-6.827-18.667,0L307.762,382.2l-24.96,13.547 c-5.12,2.88-7.04,9.28-4.267,14.507c0.96,1.813,2.453,3.2,4.267,4.267l24.853,13.547l13.547,24.853 c2.88,5.12,9.28,7.04,14.507,4.267c1.813-0.96,3.2-2.453,4.267-4.267l13.547-24.853l24.853-13.547 c5.12-2.88,7.04-9.28,4.267-14.507C381.682,398.2,380.189,396.707,378.375,395.747z M340.615,411.107 c-1.813,0.96-3.307,2.453-4.267,4.267l-5.653,10.453l-5.76-10.453c-0.96-1.813-2.453-3.307-4.267-4.267l-10.453-5.76l10.453-5.76 c1.813-0.96,3.307-2.453,4.267-4.267l5.76-10.453l5.76,10.453c0.96,1.813,2.453,3.307,4.267,4.267l10.453,5.76L340.615,411.107z"></path> <path d="M37.469,148.067l45.547,24.96l24.853,45.547c2.88,5.12,9.28,7.04,14.507,4.267c1.813-0.96,3.2-2.453,4.267-4.267 l24.96-45.547l45.547-24.96c5.12-2.88,7.04-9.28,4.267-14.507c-0.96-1.813-2.453-3.2-4.267-4.267l-45.547-24.853l-24.96-45.547 c-3.733-6.827-14.933-6.827-18.667,0L83.122,104.44L37.575,129.4c-5.12,2.88-7.04,9.28-4.267,14.507 C34.269,145.613,35.762,147.107,37.469,148.067z M95.922,121.613c1.813-0.96,3.307-2.453,4.267-4.267L117.255,86.2l17.067,31.147 c0.96,1.813,2.453,3.307,4.267,4.267l31.147,17.067l-31.147,17.067c-1.813,0.96-3.307,2.453-4.267,4.267l-17.067,31.147 l-17.067-31.147c-0.96-1.813-2.453-3.307-4.267-4.267L64.775,138.68L95.922,121.613z"></path> </g> </g> </g> </g></svg>
+                  <div class="grow">
+                    <h3 class="text-base sm:text-lg font-semibold text-apeTColor">
+                      Your creativity, amplified by automation
+                    </h3>
+                    <p class="mt-1 text-muted">
+                      Use PixLab's API to automate the process of creating unique, branded templates. Follow our detailed <a href="rest-api-tutorial" class="link">API documentation</a> and build guides to integrate PixLab into your workflow, saving time and maximizing productivity.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="">
+                <!-- Icon Block -->
+                <div class="flex gap-x-5">
+                  <svg class="h-fit" version="1.0" id="Layer_1" width="150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#28A745"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="#28A745" d="M63.029,42.285l-15.054-9.032c0,0.004,0,0.009-0.001,0.013C47.984,32.844,48,32.427,48,32 c0-16.026-7.692-26.865-14.891-31.664C32.773,0.112,32.387,0,32,0s-0.773,0.112-1.109,0.336C23.692,5.135,16,15.974,16,32 c0,0.427,0.016,0.844,0.025,1.266c-0.001-0.004-0.001-0.009-0.001-0.013L0.971,42.285C0.368,42.646,0,43.297,0,44v6 c0,1.104,0.896,2,2,2h17.188c0.516,1.627,0.904,2.617,0.954,2.742C20.447,55.502,21.183,56,22,56h5c0,4.785,2.585,8,5,8 c2.396,0,4.961-3.166,5-7.891c0.002-0.036,0.003-0.072,0.003-0.109H42c0.817,0,1.553-0.498,1.857-1.258 c0.05-0.125,0.438-1.115,0.954-2.742H62c1.104,0,2-0.896,2-2v-6C64,43.297,63.632,42.646,63.029,42.285z M32,2c6,4,14,14,14,30 c0,4.401-0.539,8.531-1.221,12H19.221C18.539,40.531,18,36.401,18,32C18,16,26,6,32,2z M2,44l14.117-8.471 c0.234,3.901,0.814,7.484,1.472,10.471H2V44z M2,50v-2h16.059c0.182,0.728,0.362,1.396,0.54,2.022 c-0.003-0.008-0.005-0.015-0.007-0.022H2z M32,62c-1,0-3-2-3-6h6C35,60,33,62,32,62z M42,54H22c0,0-1.254-3.136-2.357-8h24.715 C43.254,50.864,42,54,42,54z M62,50H45.408c-0.002,0.008-0.004,0.015-0.007,0.022c0.178-0.626,0.358-1.295,0.54-2.022H62V50z M62,46H46.411c0.657-2.986,1.237-6.569,1.472-10.471L62,44V46z"></path> <path fill="#28A745" d="M32,30c3.313,0,6-2.687,6-6s-2.687-6-6-6s-6,2.687-6,6S28.687,30,32,30z M32,20c2.209,0,4,1.791,4,4 s-1.791,4-4,4s-4-1.791-4-4S29.791,20,32,20z"></path> </g> </g></svg>
+                  <div class="grow">
+                    <h3 class="text-base sm:text-lg font-semibold text-apeTColor">
+                      Skip starting from scratch
+                    </h3>
+                    <p class="mt-1 text-muted">
+                      Build your templates with PixLab’s diverse selection of pre-designed layouts. From certificates to marketing graphics, our library has everything you need to get started. Simply adjust elements to match your brand, or design entirely new assets on the fly.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PDf & Image generation -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-16">
+          <div class="flex flex-col gap-10">
+            <!-- Single Row -->
+            <div class="flex flex-col items-start gap-16 md:flex-row-reverse pb-16">
+              <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+                <div class="mt-5">
+                  <h2 class="text-3xl font-semibold text-apeTColor">Introduction to <span class="ape-gradient-text">Image and PDF</span> <span class="playfair-font">Generation API</span></h2>
+                  <p class="mt-5 text-apeTColor">Our Image and PDF Generation API is designed to make media generation seamless, supporting popular programming languages such as Python, JavaScript, and Ruby. Whether you're automating invoice generation or creating marketing visuals, our API handles it all. The straightforward JSON-based requests simplify integration, enabling developers to create customized outputs quickly and easily.</p>
+                  
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-apePrimary px-4 py-3 text-[15px] font-medium text-apeBackground transition-all duration-500 hover:bg-apeSecondary" href="#">Explore Our API</a>
+                </div>
+              </div>
+              <div class="flex flex-1 shadow-lg max-w-full w-full">
+                <div class="min-w-full bg-gray-800 overflow-x-auto rounded-lg">
+                  <div class="flex items-center p-2 border-b border-slate-500">
+                    <div class="px-1">
+                      <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#ff605c]"></span>
+                    </div>
+                    <div class="px-1">
+                      <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#ffbd44]"></span>
+                    </div>
+                    <div class="px-1">
+                      <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#00ca4e]"></span>
+                    </div>
+                  </div>
+                    <!-- Card content -->
+<div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-full xl:max-w-2xl"><code class="text-nowrap"><span class="js-keyword">fetch</span>(<span class="js-string">"https://api.pixlab.com/v1/render"</span>, {
+  <span class="js-key">method</span>: <span class="js-string">"POST"</span>,
+  <span class="js-key">headers</span>: { <span class="js-string">"Content-Type"</span>: <span class="js-string">"application/json"</span> },
+  <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
+    <span class="js-key">template_id</span>: <span class="js-string">"YOUR_TEMPLATE_ID"</span>,
+    <span class="js-key">output</span>: <span class="js-string">"image"</span>,
+    <span class="js-key">data</span>: {
+      <span class="js-string">"title"</span>: <span class="js-string">"Custom Title"</span>,
+      <span class="js-string">"image_url"</span>: <span class="js-string">"https://example.com/image.jpg"</span>
+    }
+  })
+})
+.<span class="js-function">then</span>(<span class="js-keyword">response</span> => <span class="js-keyword">response</span>.<span class="js-function">json</span>())
+.<span class="js-function">then</span>(<span class="js-keyword">data</span> => <span class="js-keyword">console.log</span>(<span class="js-string">"Image URL:"</span>, <span class="js-keyword">data</span>.<span class="js-key">url</span>));</code></div>
+                </div>
+              </div>
+            </div>
+            <!-- Single Row -->
+            <div class="flex flex-col items-start gap-16 md:flex-row pb-16">
+              <div class="flex flex-1 flex-col items-center self-start text-center md:items-start md:text-start">
+                <div class="mt-5">
+                  <h2 class="text-3xl font-semibold text-apeTColor"><span class="ape-gradient-text">Advanced Customization</span> for Real-Time <span class="playfair-font">Media Generation</span></h2>
+                  <p class="mt-5 text-apeTColor">For more advanced needs, our Real-Time Media Generation API offers unparalleled customization. Tailor every detail, from layer-specific colors to precise text placement, creating a unique, branded experience. This API is perfect for high-demand applications, ensuring each document or image meets your specific design requirements in real time. With robust scalability, it adapts to your growing business needs, making it ideal for enterprises.</p>
+                  <!-- <div class="mt-5 space-y-2 text-muted">
+                    <div class="flex items-center space-x-2">
+                      <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                      <span>Send a simple POST request with JSON data</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                      <span>Supports multiple output formats (.jpg, .png, .webp, .pdf)</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                      <span>Available libraries: Python, Node, Java, PHP, Ruby, and more on the way!</span>
+                    </div>
+                  </div> -->
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-apePrimary px-4 py-3 text-[15px] font-medium text-apeBackground transition-all duration-500 hover:bg-apeSecondary" href="api-endpoints">Check our API Docs</a>
+                </div>
+              </div>
+              <div class="flex flex-1 shadow-lg max-w-full w-full">
+                <div class="min-w-full bg-gray-800 overflow-x-auto rounded-lg">
+                  <div class="flex items-center p-2 border-b border-slate-500">
+                    <div class="px-1">
+                      <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#ff605c]"></span>
+                    </div>
+                    <div class="px-1">
+                      <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#ffbd44]"></span>
+                    </div>
+                    <div class="px-1">
+                      <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#00ca4e]"></span>
+                    </div>
+                  </div>
+                    <!-- Card content -->
+<div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl"><code class="text-nowrap"><span class="js-keyword">fetch</span>('https://api.templated.io/v1/render', {
+  <span class="js-key">method</span>: <span class="js-string">'POST'</span>,
+  <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
+    <span class="js-string">"template"</span>: TEMPLATE_ID,
+    <span class="js-string">"format"</span>: <span class="js-string">"pdf"</span>,
+    <span class="js-string">"layers"</span>: {
+      <span class="js-string">"text-1"</span>: {
+        <span class="js-string">"text"</span>: <span class="js-string">"This is my text to be rendered"</span>,
+        <span class="js-string">"color"</span>: <span class="js-string">"#FFFFFF"</span>,
+        <span class="js-string">"background"</span>: <span class="js-string">"#0000FF"</span>
+      },
+      <span class="js-string">"image-1"</span>: {
+        <span class="js-string">"image_url"</span>: <span class="js-string">"https://pathtomyphoto.com/123.jpg"</span>
+      }
+    }
+  }),
+  <span class="js-key">headers</span>: {
+    <span class="js-string">'Content-Type'</span>: <span class="js-string">'application/json'</span>,
+    <span class="js-string">'Authorization'</span>: <span class="js-string">`Bearer ${API_KEY}`</span>
+  }
+})</code></div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- Separator (Gradient Line) -->
+      <div class="mx-auto w-full max-w-screen-xl px-5">
+        <div class="gradient-graph-line mb-10"></div>
+      </div>
+
+      <!-- How it works section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <div class="relative mx-auto px-4 md:px-6 text-apeTColor max-w-3xl">
+          <div class="mx-auto flex flex-col gap-8 md:gap-12">
+            <div class="w-full md:self-center md:py-4">
+              <div class="mb-8 text-left md:mx-auto md:mb-12 rtl:text-right"><p class="font-heading leading-tighter text-heading text-3xl font-bold tracking-tighter lg:text-4xl">How does it work?
+              </p></div>
+              <div>
+                <div class="flex">
+                  <div class="mr-4 flex flex-col items-center rtl:ml-4 rtl:mr-0">
+                    <div>
+                      <div class="flex items-center justify-center">
+                        <svg class="h-10 w-10 rounded-full border-2 border-apePrimary p-2 text-apePrimary" height="1em" viewBox="0 0 24 24" width="1em"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0-8 0M6 21v-2a4 4 0 0 1 4-4h4m1 4l2 2l4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                      </div>
+                    </div>
+                    <div class="h-full w-px bg-black/10 "></div>
+                  </div>
+                  <div class="pb-8 pt-1">
+                    <p class="text-xl font-bold">
+                      <span class="text-2xl">Step 1: <span class="font-normal">Set Up Your Account</span></span>
+                    </p>
+                    <p class="mt-2 text-muted">Getting started is quick and easy. Begin by creating an account on our <a href="https://console.pixlab.io" class="link">PixLab Console</a>. Simply sign up using your email and password, or connect through your Google account for added convenience. Once registered, you can immediately generate your API keys to unlock access to our powerful media generation tools.</p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="mr-4 flex flex-col items-center rtl:ml-4 rtl:mr-0">
+                    <div>
+                      <div class="flex items-center justify-center">
+                        <svg class="h-10 w-10 rounded-full border-2 border-apePrimary p-2 text-apePrimary" height="1em" viewBox="0 0 24 24" width="1em">
+                            <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor">
+                              <path d="M3 21v-4a4 4 0 1 1 4 4H3"></path>
+                              <path d="M21 3A16 16 0 0 0 8.2 13.2M21 3a16 16 0 0 1-10.2 12.8"></path>
+                              <path d="M10.6 9a9 9 0 0 1 4.4 4.4"></path>
+                            </g>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="h-full w-px bg-black/10"></div>
+                  </div>
+                  <div class="pb-8 pt-1">
+                    <p class="text-xl font-bold">
+                      <span class="text-2xl">Step 2: <span class="font-normal">Choose a Template or Build Your Own</span></span>
+                    </p>
+                    <p class="mt-2 text-muted">With your account ready, explore the extensive <a href="api-portal" class="border-l-pink-50">Template Gallery</a> to select pre-designed templates or build your own from scratch. Use our Editor to design a custom layout that meets your specific needs. <br> Whether it’s creating engaging PDFs or high-quality images, you can tailor every detail to match your branding requirements. Once finalized, link your template with our robust <a href="api-endpoints" class="link">API endpoints</a> for seamless integration into your workflow.</p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="mr-4 flex flex-col items-center rtl:ml-4 rtl:mr-0">
+                    <div>
+                      <div class="flex items-center justify-center">
+                        <svg class="h-10 w-10 rounded-full border-2 border-apePrimary p-2 text-apePrimary" height="1em" viewBox="0 0 24 24" width="1em" >
+                            <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor">
+                              <path
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37c1 .608 2.296.07 2.572-1.065z"
+                              ></path>
+                              <path d="M10 9v6l5-3z"></path>
+                            </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pt-1">
+                    <p class="text-xl font-bold">
+                      <span class="text-2xl">Step 3: <span class="font-normal">Integrate with API or No-Code Tools</span></span>
+                    </p>
+                    <p class="mt-2 text-muted">Easily integrate your templates into your projects. Use our <a href="api" class="link">REST API</a> for advanced customization or connect through popular no-code platforms like Zapier or Make for a user-friendly setup. Just send a simple POST request with your template details, and let our API handle the rest. With real-time rendering, your content is ready to download as soon as it’s processed. <br><br> For more technical details, check out our <a href="api-endpoints" class="link">API Documentation</a>. From high-quality outputs to flexible customization, our platform ensures a smooth and efficient process.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <!-- Stats section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 pb-10">
+          
+          <div class="max-w-[85rem] mx-auto">
+            <!-- Grid -->
+            <div class="grid gap-6 grid-cols-2 sm:gap-12 lg:grid-cols-4 lg:gap-8 text-center">
+              
+              <div>
+                <p class="mt-2 sm:mt-3 text-4xl sm:text-6xl font-bold text-apePrimary">100+</p>
+                <p class="mt-1 text-muted">Free Templates</p>
+              </div>
+              <div>
+                <p class="mt-2 sm:mt-3 text-4xl sm:text-6xl font-bold text-apePrimary">32.2k+</p>
+                <p class="mt-1 text-muted">Images Generated</p>
+              </div>
+              <div>
+                <p class="mt-2 sm:mt-3 text-4xl sm:text-6xl font-bold text-apePrimary">10.5k+</p>
+                <p class="mt-1 text-muted">PDFS</p>
+              </div>
+              <div>
+                <p class="mt-2 sm:mt-3 text-4xl sm:text-6xl font-bold text-apePrimary">5k+</p>
+                <p class="mt-1 text-muted">Dynamic Templates</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Features -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <div class="mt-10 flex flex-col items-center justify-center">
+          <p class="text-center text-muted font-bold">Features</p>
+          <h2 class="text-center text-3xl lg:text-4xl font-semibold text-apeTColor">Design once. <span class="ape-gradient-text">Render multiple times.</span></h2>
+            <p class="text-center text-apeTGray lg:max-w-[50%] mt-3">Check out how PixLab can help you save time on your images and PDFs creation.</p>
+          </div>
+
+          <!-- Cards Grid -->
+          <div class="mt-14 grid gap-5 max-sm:grid-cols-[repeat(auto-fill,minmax(250px,1fr))] md:grid-cols-[repeat(auto-fill,minmax(350px,1fr))]">
+            <!-- Single Card -->
+            <div class="ape-card-gradient-theme rounded-xl p-4">
+              <svg class="text-primary h-11 mb-3 w-11" height="1em" viewBox="0 0 48 48" width="1em"><path d="M41 42H13c-2.2 0-4-1.8-4-4V18c0-2.2 1.8-4 4-4h28c2.2 0 4 1.8 4 4v20c0 2.2-1.8 4-4 4z" fill="#E65100"></path><path d="M35 36H7c-2.2 0-4-1.8-4-4V12c0-2.2 1.8-4 4-4h28c2.2 0 4 1.8 4 4v20c0 2.2-1.8 4-4 4z" fill="#F57C00"></path><circle cx="30" cy="16" r="3" fill="#FFF9C4"></circle><path d="M17 17.9L8 31h18z" fill="#942A09"></path><path d="M28 23.5L22 31h12z" fill="#BF360C"></path></svg>
+              <h2 class="mt-2 text-lg font-semibold text-apeTColor">Large Image Library</h2>
+              <p class="mt-3 text-[15px] text-apeTGray">Access thousands of images to enhance your designs.</p>
+            </div>
+
+            <!-- Single Card -->
+            <div class="ape-card-gradient-theme rounded-xl p-4">
+              <svg class="text-primary h-11 mb-3 w-11" height="1em" viewBox="0 0 48 48" width="1em"><path d="M40 45H8V3h22l10 10z" fill="#90CAF9"></path><path d="M38.5 14H29V4.5z" fill="#E1F5FE"></path><path d="M16 21h17v2H16zm0 4h13v2H16zm0 4h17v2H16zm0 4h13v2H16z" fill="#1976D2"></path></svg>
+              <h2 class="mt-2 text-lg font-semibold text-apeTColor">Multiple Formats</h2>
+              <p class="mt-3 text-[15px] text-apeTGray">Render in JPEG, PNG, PDF, and more.</p>
+            </div>
+
+            <!-- Single Card -->
+            <div class="ape-card-gradient-theme rounded-xl p-4">
+              <svg class="text-primary h-11 mb-3 w-11" height="1em" viewBox="0 0 48 48" width="1em"><path d="M4 7h40v34H4z" fill="#BBDEFB"></path><path d="M9 12h30v5H9z" fill="#3F51B5"></path><path d="M9 21h13v16H9zm17 0h13v16H26z" fill="#2196F3"></path></svg>
+              <h2 class="mt-2 text-lg font-semibold text-apeTColor">Template Editor</h2>
+              <p class="mt-3 text-[15px] text-apeTGray">Drag-and-drop editor for customizing templates.</p>
+            </div>
+
+            <!-- Single Card -->
+            <div class="ape-card-gradient-theme rounded-xl p-4">
+              <svg class="text-primary h-11 mb-3 w-11" height="1em" viewBox="0 0 48 48" width="1em"><path d="M38 13h-3c-5.5 0-10 4.5-10 10s4.5 10 10 10h3c5.5 0 10-4.5 10-10s-4.5-10-10-10zm0 16h-3c-3.3 0-6-2.7-6-6s2.7-6 6-6h3c3.3 0 6 2.7 6 6s-2.7 6-6 6zM13 13h-3C4.5 13 0 17.5 0 23s4.5 10 10 10h3c5.5 0 10-4.5 10-10s-4.5-10-10-10zm0 16h-3c-3.3 0-6-2.7-6-6s2.7-6 6-6h3c3.3 0 6 2.7 6 6s-2.7 6-6 6z" fill="#1976D2"></path><path d="M33 21H15c-1.1 0-2 .9-2 2s.9 2 2 2h18c1.1 0 2-.9 2-2s-.9-2-2-2z" fill="#42A5F5"></path></svg>
+              <h2 class="mt-2 text-lg font-semibold text-apeTColor">No-Code Integrations</h2>
+              <p class="mt-3 text-[15px] text-apeTGray">Integrate easily with platforms like Zapier.</p>
+            </div>
+
+            <!-- Single Card -->
+            <div class="ape-card-gradient-theme rounded-xl p-4">
+              <svg class="text-primary h-11 mb-3 w-11" height="1em" viewBox="0 0 48 48" width="1em"><path d="m24 3l4.7 3.6l5.8-.8l2.2 5.5l5.5 2.2l-.8 5.8L45 24l-3.6 4.7l.8 5.8l-5.5 2.2l-2.2 5.5l-5.8-.8L24 45l-4.7-3.6l-5.8.8l-2.2-5.5l-5.5-2.2l.8-5.8L3 24l3.6-4.7l-.8-5.8l5.5-2.2l2.2-5.5l5.8.8z" fill="#8BC34A"></path><path d="M34.6 14.6L21 28.2l-5.6-5.6l-2.8 2.8l8.4 8.4l16.4-16.4z" fill="#CCFF90"></path></svg>
+              <h2 class="mt-2 text-lg font-semibold text-apeTColor">Pixel-perfect Renders</h2>
+              <p class="mt-3 text-[15px] text-apeTGray">Get high-quality output ready for use or printing.</p>
+            </div>
+
+            <!-- Single Card -->
+            <div class="ape-card-gradient-theme rounded-xl p-4">
+              <svg class="text-primary h-11 mb-3 w-11" height="1em" viewBox="0 0 48 48" width="1em"><path d="M38 7H10c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h28c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm0 12H10c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h28c1.1 0 2-.9 2-2v-6c0-1.1-.9-2-2-2zm0 12H10c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h28c1.1 0 2-.9 2-2v-6c0-1.1-.9-2-2-2z" fill="#D1C4E9"></path></svg>
+              <h2 class="mt-2 text-lg font-semibold text-apeTColor">Simple API</h2>
+              <p class="mt-3 text-[15px] text-apeTGray">Quickly automate image and PDF generation with our API.</p>
+            </div>
+
+            <!-- Single Card -->
+            <div class="ape-card-gradient-theme rounded-xl p-4">
+              <svg class="text-primary h-11 mb-3 w-11" height="1em" viewBox="0 0 48 48" width="1em"><path d="M25 22h13l6 6V11c0-2.2-1.8-4-4-4H25c-2.2 0-4 1.8-4 4v7c0 2.2 1.8 4 4 4z" fill="#1565C0"></path><path d="M23 19H10l-6 6V8c0-2.2 1.8-4 4-4h15c2.2 0 4 1.8 4 4v7c0 2.2-1.8 4-4 4z" fill="#2196F3"></path><g fill="#FFA726"><circle cx="12" cy="31" r="5"></circle><circle cx="36" cy="31" r="5"></circle></g><path d="M20 42s-2.2-4-8-4s-8 4-8 4v2h16v-2zm24 0s-2.2-4-8-4s-8 4-8 4v2h16v-2z" fill="#607D8B"></path></svg>
+              <h2 class="mt-2 text-lg font-semibold text-apeTColor">Next Level Support</h2>
+              <p class="mt-3 text-[15px] text-apeTGray">Chat with us anytime for assistance.</p>
+            </div>
+
+            <!-- Single Card -->
+            <div class="ape-card-gradient-theme rounded-xl p-4">
+              <svg class="text-primary h-11 mb-3 w-11" height="1em" viewBox="0 0 48 48" width="1em"><circle cx="18" cy="18" r="15" fill="#3F51B5"></circle><path d="M20.3 16v1.7h-3.8v1.4h3.8v1.7h-3.8c0 .6.1 1.2.3 1.6c.2.4.4.8.7 1c.3.3.7.4 1.1.6c.4.1.9.2 1.4.2c.4 0 .7 0 1.1-.1c.4-.1.7-.1 1-.3l.4 2.7c-.4.1-.9.2-1.4.2c-.5.1-1 .1-1.5.1c-.9 0-1.8-.1-2.6-.4c-.8-.2-1.5-.6-2-1.1c-.6-.5-1-1.1-1.4-1.9c-.3-.7-.5-1.6-.5-2.6h-1.9v-1.7h1.9v-1.4h-1.9V16h1.9c.1-1 .3-1.8.6-2.6c.4-.7.8-1.4 1.4-1.9c.6-.5 1.3-.9 2.1-1.1c.8-.3 1.7-.4 2.6-.4c.4 0 .9 0 1.3.1s.9.1 1.3.3l-.4 2.7c-.3-.1-.6-.2-1-.3c-.4-.1-.7-.1-1.1-.1c-.5 0-1 .1-1.4.2c-.4.1-.8.3-1 .6c-.3.3-.5.6-.7 1s-.3.9-.3 1.5h3.8z" fill="#FFF59D"></path><circle cx="30" cy="30" r="15" fill="#4CAF50"></circle><path d="M28.4 27c.1.2.2.4.4.6c.2.2.4.4.7.5c.3.2.7.3 1.1.5c.7.3 1.4.6 2 .9c.6.3 1.1.7 1.5 1.1c.4.4.8.9 1 1.4c.2.5.4 1.2.4 1.9s-.1 1.3-.3 1.8c-.2.5-.5 1-.9 1.4s-.9.7-1.4.9c-.6.2-1.2.4-1.8.5v2.2h-1.8v-2.2c-.6-.1-1.2-.2-1.8-.4s-1.1-.5-1.5-1c-.5-.4-.8-1-1.1-1.6c-.3-.6-.4-1.4-.4-2.3h3.3c0 .5.1 1 .2 1.3c.1.4.3.6.6.9c.2.2.5.4.8.5c.3.1.6.1.9.1c.4 0 .7 0 .9-.1c.3-.1.5-.2.7-.4c.2-.2.3-.4.4-.6c.1-.2.1-.5.1-.8c0-.3 0-.6-.1-.8c-.1-.2-.2-.5-.4-.7s-.4-.4-.7-.5c-.3-.2-.7-.3-1.1-.5c-.7-.3-1.4-.6-2-.9c-.6-.3-1.1-.7-1.5-1.1c-.4-.4-.8-.9-1-1.4c-.2-.5-.4-1.2-.4-1.9c0-.6.1-1.2.3-1.7c.2-.5.5-1 .9-1.4c.4-.4.9-.7 1.4-1c.5-.2 1.2-.4 1.8-.5v-2.4h1.8v2.4c.6.1 1.2.3 1.8.6c.5.3 1 .6 1.3 1.1c.4.4.7 1 .9 1.6c.2.6.3 1.3.3 2h-3.3c0-.9-.2-1.6-.6-2c-.4-.4-.9-.7-1.5-.7c-.3 0-.6.1-.9.2c-.2.1-.4.2-.6.4c-.2.2-.3.4-.3.6c-.1.2-.1.5-.1.8c-.1.2 0 .5 0 .7z" fill="#fff"></path></svg>
+              <h2 class="mt-2 text-lg font-semibold text-apeTColor">Clear Pricing</h2>
+              <p class="mt-3 text-[15px] text-apeTGray">No hidden fees; choose the plan that works for you.</p>
+            </div>
+
+            <!-- Single Card -->
+            <div class="ape-card-gradient-theme rounded-xl p-4">
+              <svg class="text-primary h-11 mb-3 w-11" height="1em" viewBox="0 0 48 48" width="1em"><path d="m17.8 18.1l-7.4 7.3l-4.2-4.1L4 23.5l6.4 6.4l9.6-9.6zm0-13l-7.4 7.3l-4.2-4.1L4 10.5l6.4 6.4L20 7.3zm0 26l-7.4 7.3l-4.2-4.1L4 36.5l6.4 6.4l9.6-9.6z" fill="#3F51B5"></path><path d="M24 22h20v4H24zm0-13h20v4H24zm0 26h20v4H24z" fill="#90CAF9"></path></svg>
+              <h2 class="mt-2 text-lg font-semibold text-apeTColor">Description</h2>
+              <p class="mt-3 text-[15px] text-apeTGray">Instantly see a live preview of your rendered templates as you customize them.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <div class="mt-10 flex flex-col items-center justify-center">
+            <h2 class="text-center text-3xl lg:text-4xl font-semibold text-apeTColor">Hear From Our Users</h2>
+              <p class="text-center text-apeTGray lg:max-w-[50%] mt-3">Save time and streamline your workflow with automation.</p>
+            </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
+            <!-- Card -->
+            <div class="flex h-auto">
+              <div class="flex flex-col ape-card-gradient-theme rounded-xl border border-dark">
+                <div class="flex-auto p-4 md:p-6 border-b border-gray-200 border-b-dark">
+                  <p class="text-base italic md:text-lg text-muted">
+                    " Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sunt! Molestias voluptas ut quod at facere placeat aperiam rerum quaerat impedit! "
+                  </p>
+                </div>
+      
+                <div class="p-4 rounded-b-xl md:px-7">
+                  <div class="flex items-center gap-x-3">
+                    <div class="shrink-0">
+                      <img class="size-8 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar">
+                    </div>
+      
+                    <div class="grow">
+                      <p class="text-sm sm:text-base font-semibold text-apeTColor">
+                        Josh Tyson
+                      </p>
+                      <p class="text-xs text-muted">
+                        Product Manager | Capsule
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Card -->
+              <!-- Card -->
+            <div class="flex h-auto">
+              <div class="flex flex-col ape-card-gradient-theme rounded-xl border border-dark">
+                <div class="flex-auto p-4 md:p-6 border-b border-gray-200 border-b-dark">
+                  <p class="text-base italic md:text-lg text-muted">
+                    " Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sunt! Molestias voluptas ut quod at facere placeat aperiam rerum quaerat impedit! "
+                  </p>
+                </div>
+      
+                <div class="p-4 rounded-b-xl md:px-7">
+                  <div class="flex items-center gap-x-3">
+                    <div class="shrink-0">
+                      <img class="size-8 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar">
+                    </div>
+      
+                    <div class="grow">
+                      <p class="text-sm sm:text-base font-semibold text-apeTColor">
+                        Josh Tyson
+                      </p>
+                      <p class="text-xs text-muted">
+                        Product Manager | Capsule
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Card -->
+              <!-- Card -->
+            <div class="flex h-auto">
+              <div class="flex flex-col ape-card-gradient-theme rounded-xl border border-dark">
+                <div class="flex-auto p-4 md:p-6 border-b border-gray-200 border-b-dark">
+                  <p class="text-base italic md:text-lg text-muted">
+                    " Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sunt! Molestias voluptas ut quod at facere placeat aperiam rerum quaerat impedit! "
+                  </p>
+                </div>
+      
+                <div class="p-4 rounded-b-xl md:px-7">
+                  <div class="flex items-center gap-x-3">
+                    <div class="shrink-0">
+                      <img class="size-8 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar">
+                    </div>
+      
+                    <div class="grow">
+                      <p class="text-sm sm:text-base font-semibold text-apeTColor">
+                        Josh Tyson
+                      </p>
+                      <p class="text-xs text-muted">
+                        Product Manager | Capsule
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Card -->
+              <!-- Card -->
+            <div class="flex h-auto">
+              <div class="flex flex-col ape-card-gradient-theme rounded-xl border border-dark">
+                <div class="flex-auto p-4 md:p-6 border-b border-gray-200 border-b-dark">
+                  <p class="text-base italic md:text-lg text-muted">
+                    " Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sunt! Molestias voluptas ut quod at facere placeat aperiam rerum quaerat impedit! "
+                  </p>
+                </div>
+      
+                <div class="p-4 rounded-b-xl md:px-7">
+                  <div class="flex items-center gap-x-3">
+                    <div class="shrink-0">
+                      <img class="size-8 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar">
+                    </div>
+      
+                    <div class="grow">
+                      <p class="text-sm sm:text-base font-semibold text-apeTColor">
+                        Josh Tyson
+                      </p>
+                      <p class="text-xs text-muted">
+                        Product Manager | Capsule
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <!-- FAQ -->
+          <div class="max-w-[85rem] mx-auto">
+            <!-- Title -->
+            <div class="max-w-2xl mx-auto text-center my-10 lg:mb-14">
+              <h2 class="text-center text-3xl lg:text-4xl font-semibold text-apeTColor">Your questions, answered</h2>
+              <p class="text-center text-apeTGray mt-3">Answers to the most frequently asked questions.</p>
+            </div>
+            <!-- End Title -->
+
+            <div class="max-w-2xl mx-auto">
+              <!-- Accordion -->
+              <div class="hs-accordion-group divide-y divide-gray-200 divide-dark">
+                <div class="hs-accordion pb-3 active" id="hs-basic-with-title-and-arrow-stretched-heading-one">
+                  <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-apeTColor rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500" aria-expanded="true" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
+                    Lorem ipsum dolor sit amet consectetur adipisicing?
+                    <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+                  </button>
+                  <div id="hs-basic-with-title-and-arrow-stretched-collapse-one" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one">
+                    <p class="text-muted">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                  <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-apeTColor rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                    Lorem ipsum dolor sit amet consectetur adipisicing?
+                    <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+                  </button>
+                  <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
+                    <p class="text-muted">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!
+                    </p>
+                  </div>
+                </div>
+                <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                  <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-apeTColor rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                    Lorem ipsum dolor sit amet consectetur adipisicing?
+                    <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+                  </button>
+                  <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
+                    <p class="text-muted">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!
+                    </p>
+                  </div>
+                </div>
+                <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                  <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-apeTColor rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                    Lorem ipsum dolor sit amet consectetur adipisicing?
+                    <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+                  </button>
+                  <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
+                    <p class="text-muted">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!
+                    </p>
+                  </div>
+                </div>
+                <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                  <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-apeTColor rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                    Lorem ipsum dolor sit amet consectetur adipisicing?
+                    <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+                  </button>
+                  <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
+                    <p class="text-muted">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!
+                    </p>
+                  </div>
+                </div>
+                
+              </div>
+              <!-- End Accordion -->
+            </div>
+          </div>
+          <!-- End FAQ -->
+        </div>
+      </section>
+
+      <!-- PixLab's APIs Links Section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <h2 class="text-center text-lg font-medium text-muted">Explore Endless Possibilities with PixLab's APIs</h2>
+
+          <div class="mt-5 flex flex-col flex-wrap justify-center gap-2 gap-y-3 sm:flex-row">
+            <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-transparent border-2 border-apePrimary px-6 py-3 text-lg font-medium text-apeTColor transition-all duration-500 hover:bg-apePrimary hover:text-white" href="https://console.pixlab.io">Get Started <i class="uil uil-arrow-up-right"></i></a>
+            <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-transparent border-2 border-apePrimary px-6 py-3 text-lg font-medium text-apeTColor transition-all duration-500 hover:bg-apePrimary hover:text-white" href="api-portal">API Portal <i class="uil uil-arrow-up-right"></i></a>
+            <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-transparent border-2 border-apePrimary px-6 py-3 text-lg font-medium text-apeTColor transition-all duration-500 hover:bg-apePrimary hover:text-white" href="rest-api">Integration <i class="uil uil-arrow-up-right"></i></a>
+            <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-transparent border-2 border-apePrimary px-6 py-3 text-lg font-medium text-apeTColor transition-all duration-500 hover:bg-apePrimary hover:text-white" href="api-endpoints">API Endpoints <i class="uil uil-arrow-up-right"></i></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-background">
+      <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+        <div class="gradient-graph-line mb-10"></div>
+        <div class="grid grid-cols-10 gap-y-10">
+          <div class="col-span-10 md:col-span-5 lg:col-span-3">
+            <a href="/">
+              <img class="dark-logo mb-1 w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" />
+            </a>
+            <p class="pr-3 text-[15px] text-tColor">PixLab offers cutting-edge AI solutions to empower developers and creators with Automated Tools & APIs for Machine Vision, Media Processing & Creative Innovation.</p>
+
+            <!-- Search Input in Footer -->
+            <form action="search" method="get">
+              <div class="mt-5 flex h-10 w-full items-center gap-3 rounded-full border border-bColor bg-input px-4 focus-within:bg-surface md:max-w-[80%] lg:h-12">
+                <i class="uil uil-search text-xl text-tColor" aria-hidden="true"></i>
+                <input name="q" class="h-full w-full border-none bg-transparent text-tColor outline-none" type="search" placeholder="Search Docs..." aria-label="Search" />
+              </div>
+            </form>
+
+            <!-- Social Media Links -->
+            <div class="mt-10 flex gap-1.5">
+              <a href="https://www.facebook.com/pixlab.io/" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow PixLab on Facebook">
+                <i class="uil uil-facebook text-lg"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/pixlabio" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow us on LinkedIn">
+                <i class="uil uil-linkedin text-lg"></i>
+              </a>
+              <a href="https://x.com/unqlite_db" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow PixLab on Twitter/X">
+                <i class="uil uil-twitter text-lg"></i>
+              </a>
+              <a href="https://github.com/symisc" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow Symisc on GitHub">
+                <i class="uil uil-github text-lg"></i>
+              </a>
+              <a href="https://blog.pixlab.io" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="PixLab Blog">
+                <i class="uil uil-rss text-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Products Section -->
+          <div class="col-span-10 md:col-span-5 lg:col-span-3">
+            <h3 class="mb-4 font-semibold text-apePrimary">PRODUCTS & SDKs</h3>
+            <ul class="flex flex-col gap-3">
+              <li><a href="api-portal" class="footer-link">PixLab API Portal</a></li>
+              <li><a href="template-pdf-image-engine" class="footer-link">PDF Template Engine</a></li>
+              <li><a href="vision-llm-playground-api/" class="footer-link">Vision Playground, LLM & APIs</a></li>
+              <li><a href="ekyc/" class="footer-link">eKYC - Universal ID Scanner APIs</a></li>
+              <li><a href="app-ui-ux-code" class="footer-link">APP UX - Mobile UI Code Generator</a></li>
+              <li><a href="https://faceio.net/" target="_blank" class="footer-link">FACEIO - Facial Authentication for the Web &nearr;</a></li>
+            </ul>
+            <!-- Creativity Tools -->
+            <h3 class="mb-2 mt-4 font-semibold text-apePrimary">ONLINE CREATIVITY</h3>
+            <ul class="flex flex-col gap-3">
+              <li><a href="annotate" class="footer-link">Image Annotation & Segmentation</a></li>
+              <li><a href="mockup-screenshot-editor" class="footer-link">Mockup & Screenshot Editor</a></li>
+              <li><a href="bulk-image-video-background-removal-tool-apis" class="footer-link">Bulk Background Removal Tool</a></li>
+              <li><a href="creative-toolbox" class="footer-link">Creative Toolbox</a></li>
+              <li><a href="ai-photo-editor" class="footer-link">AI Photo Editor</a></li>
+              <li><a href="tilemap-2d-level-editor" class="footer-link">AI Game Tilemap Editor</a></li>
+            </ul>
+          </div>
+          <!-- Resources Section -->
+          <div class="col-span-10 md:col-span-5 lg:col-span-2">
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-apePrimary">DEVELOPERS</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="start" class="footer-link">Getting Started</a></li>
+                <li><a href="api-endpoints" class="footer-link">API Endpoints</a></li>
+                <li><a href="rest-api" class="footer-link">REST APIs</a></li>
+                <li><a href="ekyc/" class="footer-link">eKYC Platform</a></li>
+                <li><a href="vision-llm-playground-api/" class="footer-link">Vision LLM & APIs</a></li>
+                <li><a href="on-premises" class="footer-link">PixLab On-Premises</a></li>
+              </ul>
+            </div>
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-apePrimary">RESOURCES</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="https://console.pixlab.io" target="_blank" class="footer-link">PixLab Console &nearr;</a></li>
+                <li><a href="pricing" class="footer-link">Pricing</a></li>
+                <li><a href="support" class="footer-link">Support Channels</a></li>
+                <li><a href="https://community.faceio.net" target="_blank" class="footer-link">Community Forum &nearr;</a></li>
+                <li><a href="https://sod.pixlab.io" target="_blank" class="footer-link">Open Computer Vision &nearr;</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Company Section -->
+          <div class="col-span-10 md:col-span-5 lg:col-span-2">
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-apePrimary">COMPANY</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="https://symisc.net/" target="_blank" class="footer-link">Symisc Systems &nearr;</a></li>
+                <li><a href="https://blog.pixlab.io" target="_blank" class="footer-link">PixLab Blog &nearr;</a></li>
+                <li><a href="https://github.com/symisc" target="_blank" class="footer-link">Github &nearr;</a></li>
+                <li><a href="https://www.linkedin.com/company/pixlabio" target="_blank" class="footer-link">LinkedIn &nearr;</a></li>
+                <li><a href="https://x.com/unqlite_db" target="_blank" class="footer-link">Twitter | X &nearr;</a></li>
+                <li><a href="https://www.facebook.com/pixlab.io/" target="_blank" class="footer-link">Facebook &nearr;</a></li>
+              </ul>
+            </div>
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-apePrimary">LEGAL</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="privacy-policy" class="footer-link">Privacy Policy</a></li>
+                <li><a href="terms-of-use" class="footer-link">Terms of Services</a></li>
+                <li><a href="dmca" class="footer-link">DMCA</a></li>
+                <li><a href="https://status.faceio.net" target="_blank" class="footer-link">Services Status &nearr;</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="mt-10 flex flex-col justify-between gap-5 md:flex-row md:items-center">
+          <a href="/">
+            <img class="dark-logo mb-1 w-36" src="assets/images/symisc-systems-logo.png" alt="Symisc Systems" />
+          </a>
+
+          <div class="flex flex-col gap-1 text-sm text-slate-600">
+            <p>Copyright © 2017 - 2025, <a href="https://symisc.net" target="_blank">Symisc Systems</a>, SUARL. All rights reserved.</p>
+            <p>All trademarks and copyrights belong to their respective owners.</p>
+          </div>
+          <div class="flex">
+            <a class="block" href="#" title="GDPR Compliant">
+              <img class="w-32 lg:w-36" src="assets/images/gdpr-compliant.png" alt="GDPR compliant badge" />
+            </a>
+            <a class="block" href="#" title="Privacy First">
+              <img class="w-32 lg:w-36" src="assets/images/privacy-first.png" alt="Privacy first badge" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/preline/preline.min.js"></script>
+    <script src="assets/js/particles/particles.min.js"></script>
+    <script src="assets/js/particles/particles-config.js"></script>
+  </body>
+</html>
