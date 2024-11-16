@@ -276,6 +276,9 @@ body.dark-theme .border-dark {
 body.dark-theme .border-b-dark {
   @apply border-b border-neutral-700;
 }
+body.dark-theme .divide-dark{
+  @apply divide-neutral-700
+}
 
 .table-wrapper {
   @apply mx-auto my-5 overflow-x-auto rounded-lg border border-gray-200 p-6 shadow-md;
@@ -347,7 +350,31 @@ body.dark-theme .pricing-brands-carousel .brands-wrapper img {
   }
 }
 
-/* AI Photo Editor Stylings Start */
+/* Pdf media template engine styling */
+
+body.pdf-media-template-engine{
+  @apply bg-apeBackground
+}
+.pdf-media-template-engine .footer-link:hover {
+  @apply text-apePrimary
+}
+#changing-word {
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;  /* Slightly slower fade effect */
+}
+.json-key { color: #d4d4d4; } /* Light gray for keys */
+    .json-string { color: #a3e635; } /* Light green for strings */
+    .json-number { color: #f87171; } /* Red for numbers */
+
+    .js-keyword { color: #f59e0b; } /* Amber for JS keywords */
+    .js-key { color: #d4d4d4; } /* Light gray for object keys */
+    .js-string { color: #a3e635; } /* Light green for strings */
+    .js-number { color: #f87171; } /* Red for numbers */
+
+
+/* AI Photo Editor Stylings */
+
 body.ai-photo-editor {
   @apply bg-apeBackground;
 }
