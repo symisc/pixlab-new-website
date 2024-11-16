@@ -42,7 +42,6 @@
             </div>
           </div>
         </div>
-
         <!-- Main Menu -->
         <div id="hs-navbar-floating-dark" class="hs-collapse header-gradient-bg nav-menu hidden flex-1 overflow-hidden transition-all duration-300 lg:flex lg:h-full" aria-labelledby="hs-navbar-floating-dark-collapse">
           <div class="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
@@ -156,7 +155,7 @@
             <div class="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between gap-10 lg:flex-row">
               <!-- Hero Text -->
               <div class="max-w-[500px] text-center lg:max-w-screen-sm lg:text-left">
-                <h1 class="hero-heading">Getting Started with PixLab</h1>
+                <h1 class="hero-heading">List of PixLab API Endpoints</h1>
                 <p class="lead mt-5 text-gray-200">AI tools for vision, automation, and creativity. Seamless APIs to empower developers, businesses, and creators.</p>
               </div>
               <div class="flex w-full max-w-[500px] flex-col gap-6">
@@ -189,14 +188,8 @@
             <img class="dark-logo w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" title="Machine Vision & Media Processing APIs" />
             <p class="text-sm text-muted">
               <span>Version 2.197</span>
-              <span>(<a href="https://blog.pixlab.io/2020/08/pixlab-api-1972-released" target="_blank" class="text-primary hover:text-secondary">Release Notes</a>)</span>
+              <span>(<a href="https://blog.pixlab.io/2020/08/pixlab-api-1972-released" target="_blank" class="text-primary hover:text-secondary">Release Notes &nearr;</a>)</span>
             </p>
-
-            <div class="flex flex-wrap">
-              <iframe loading="lazy" src="https://ghbtns.com/github-btn.html?user=symisc&repo=pixlab&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-
-              <iframe loading="lazy" src="https://ghbtns.com/github-btn.html?user=symisc&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-            </div>
 
             <!-- AddToAny BEGIN -->
             <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
@@ -213,80 +206,124 @@
           </div>
 
           <article class="mt-5">
-            <div class="gradient-graph-line mb-12"></div>
-
-            <p class="text-tColor">The following page enumerates all the exposed PixLab API endpoints. As of this release, there is over 130 API endpoints. Enhancements & new endpoints are added on each new release. This is the reference document you should follow. If you have any suggestion or feature request, please open a new ticket via the support tab of the <a class="font-medium underline" href="#">PixLab Console</a>.</p>
-
-            <p class="mt-7 text-tColor">For a tutorial introduction, refer to Getting Started <a class="font-medium underline" href="#">with PixLab</a> and The <a class="font-medium underline" href="#">PixLab Samples Set</a>. You're welcome to copy/paste and run these examples to see the API in action.</p>
+            <div class="gradient-graph-line "></div>
+            <p class="gradient-text-animation mb-3 mt-3 font-bold text-3xl">REST API ENDPOINTS</p>
+            <form action="search" method="get" class="flex items-center justify-end mt-4 mb-4">
+              <div class="flex h-12 w-full items-center justify-between rounded-xl border border-bColor bg-surface pe-2 ps-4 backdrop-blur-md focus-within:border-secondary md:max-w-96 lg:h-12">
+                <label for="search-api" class="sr-only text-sm">Search API Endpoints</label>
+                <input id="search-api" name="q" class="h-full w-full border-none bg-transparent pe-2 text-sm text-tColor outline-none" type="search" placeholder="Search API Endpoints Documentation.." required />
+                <button type="submit" class="gradient-button flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white" title="Search PixLab knowledge Base...">
+                  <i class="uil uil-search text-lg lg:text-xl" aria-hidden="true"></i>
+                  <span class="sr-only">Search</span>
+                </button>
+              </div>
+            </form>
+            <p class="text-tColor text-lg">This page lists all the exposed <span style="font-family: Montserrat;"><strong>PixLab</strong></span> API endpoints. <strong>As of this release, there are over 150 API endpoints covering Computer Vision, Generative AI, Large Language Models (LLMs), and Media Processing tasks</strong>, with enhancements and new endpoints added in each release. This is the <strong>API endpoints reference document</strong> to follow. If you have any suggestions or feature requests, please open a new ticket via the support tab of the <a href="https://console.pixlab.io/">PixLab Console &nearr;</a>. For a tutorial introduction, refer to <a href="start">Getting Started with PixLab</a> and <a href="rest-api-examples">The REST-APIs Code Samples</a>. Feel free to copy, paste, and run these examples to see the API in action.</p>
           </article>
         </div>
       </section>
-
       <section>
-        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
-          <div class="mb-12">
-            <div class="gradient-graph-line"></div>
-            <p class="gradient-text-animation mt-3 text-[15px]">API ENDPOINTS</p>
-          </div>
-
-          <form action="search" method="get" class="flex items-center justify-end">
-            <div class="flex h-12 w-full items-center justify-between rounded-xl border border-bColor bg-surface pe-2 ps-4 backdrop-blur-md focus-within:border-secondary md:max-w-96 lg:h-12">
-              <label for="search-api" class="sr-only text-sm">Search API END Point</label>
-              <input id="search-api" class="h-full w-full border-none bg-transparent pe-2 text-sm text-tColor outline-none" type="search" placeholder="Search API END Point" required />
-              <button type="submit" class="gradient-button flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white" title="Search PixLab knowledge Base...">
-                <i class="uil uil-search text-lg lg:text-xl" aria-hidden="true"></i>
-                <span class="sr-only">Search</span>
-              </button>
-            </div>
-          </form>
-
+        <div class="mx-auto w-full max-w-screen-xl px-5">
           <!-- API Endpoints Section -->
           <div class="mt-10 flex flex-wrap justify-between gap-10">
             <!-- API Endpoint List -->
             <div class="flex flex-col gap-7">
               <div>
-                <h3 class="text-2xl font-medium text-tColor">Media Storage</h3>
+                <h3 class="text-2xl font-bold uppercase text-primary">Media Storage</h3>
                 <ul class="ml-5 mt-5 flex list-disc flex-col gap-2 marker:text-[#43EAA4]">
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=store" class="api-endpoint-link">store</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=copy" class="api-endpoint-link">copy</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=put" class="api-endpoint-link">put</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=delete" class="api-endpoint-link">delete</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=pdftoimg" class="api-endpoint-link">pdftoimg</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=convert" class="api-endpoint-link">convert</a></li>
+                  <li class="pl-1"><a href="endpoints/store" class="api-endpoint-link">store</a></li>
+                  <li class="pl-1"><a href="endpoints/copy" class="api-endpoint-link">copy</a></li>
+                  <li class="pl-1"><a href="endpoints/put" class="api-endpoint-link">put</a></li>
+                  <li class="pl-1"><a href="endpoints/delete" class="api-endpoint-link">delete</a></li>
+                  <li class="pl-1"><a href="endpoints/pdftoimg" class="api-endpoint-link">pdftoimg</a></li>
+                  <li class="pl-1"><a href="endpoints/convert" class="api-endpoint-link">convert</a></li>
                 </ul>
               </div>
 
               <div>
-                <h3 class="text-2xl font-medium text-tColor">Drawing</h3>
+                <h3 class="text-2xl font-bold uppercase text-primary">Drawing</h3>
                 <ul class="ml-5 mt-5 flex list-disc flex-col gap-2 marker:text-[#43EAA4]">
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=drawrectangle" class="api-endpoint-link">drawrectangle</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=drawrectangles" class="api-endpoint-link">drawrectangles</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=drawline" class="api-endpoint-link">drawline</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=drawlines" class="api-endpoint-link">drawlines</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=drawtext" class="api-endpoint-link">drawtext</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=drawpoints" class="api-endpoint-link">drawpoints</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=drawtextat" class="api-endpoint-link">drawtextat</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=annotate" class="api-endpoint-link">annotate</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=meme" class="api-endpoint-link">meme</a></li>
+                  <li class="pl-1"><a href="endpoints/drawrectangle" class="api-endpoint-link">drawrectangle</a></li>
+                  <li class="pl-1"><a href="endpoints/drawrectangles" class="api-endpoint-link">drawrectangles</a></li>
+                  <li class="pl-1"><a href="endpoints/drawline" class="api-endpoint-link">drawline</a></li>
+                  <li class="pl-1"><a href="endpoints/drawlines" class="api-endpoint-link">drawlines</a></li>
+                  <li class="pl-1"><a href="endpoints/drawtext" class="api-endpoint-link">drawtext</a></li>
+                  <li class="pl-1"><a href="endpoints/drawpoints" class="api-endpoint-link">drawpoints</a></li>
+                  <li class="pl-1"><a href="endpoints/drawtextat" class="api-endpoint-link">drawtextat</a></li>
+                  <li class="pl-1"><a href="endpoints/annotate" class="api-endpoint-link">annotate</a></li>
+                  <li class="pl-1"><a href="endpoints/meme" class="api-endpoint-link">meme</a></li>
                 </ul>
               </div>
 
               <div>
-                <h3 class="text-2xl font-medium text-tColor">GIF Manipulation</h3>
+                <h3 class="text-2xl font-bold uppercase text-primary">GIF Manipulation</h3>
                 <ul class="ml-5 mt-5 flex list-disc flex-col gap-2 marker:text-[#43EAA4]">
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=makegif" class="api-endpoint-link">makegif</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=cropgif" class="api-endpoint-link">cropgif</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=resizegif" class="api-endpoint-link">resizegif</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=gifcomposite" class="api-endpoint-link">gifcomposite</a></li>
+                  <li class="pl-1"><a href="endpoints/makegif" class="api-endpoint-link">makegif</a></li>
+                  <li class="pl-1"><a href="endpoints/cropgif" class="api-endpoint-link">cropgif</a></li>
+                  <li class="pl-1"><a href="endpoints/resizegif" class="api-endpoint-link">resizegif</a></li>
+                  <li class="pl-1"><a href="endpoints/gifcomposite" class="api-endpoint-link">gifcomposite</a></li>
                 </ul>
               </div>
 
               <div>
-                <h3 class="text-2xl font-medium text-tColor">Miscellaneous</h3>
+                <h3 class="text-2xl font-bold uppercase text-primary">Miscellaneous</h3>
                 <ul class="ml-5 mt-5 flex list-disc flex-col gap-2 marker:text-[#43EAA4]">
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=extension" class="api-endpoint-link">extension</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=status" class="api-endpoint-link">status</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=about" class="api-endpoint-link">about</a></li>
+                  <li class="pl-1"><a href="endpoints/extension" class="api-endpoint-link">extension</a></li>
+                  <li class="pl-1"><a href="endpoints/status" class="api-endpoint-link">status</a></li>
+                  <li class="pl-1"><a href="endpoints/about" class="api-endpoint-link">about</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- API Endpoint List -->
+            <div class="flex flex-col gap-7">
+              <div>
+                <h3 class="text-2xl font-bold uppercase text-primary">Machine Vision & Media Analysis</h3>
+                <ul class="ml-5 mt-5 flex list-disc flex-col gap-2 marker:text-[#43EAA4]">
+                  <li class="pl-1"><a href="endpoints/nsfw" class="api-endpoint-link">nsfw</a></li>
+                  <li class="pl-1"><a href="endpoints/sfw" class="api-endpoint-link">sfw</a></li>
+                  <li class="pl-1"><a href="endpoints/docscan" class="api-endpoint-link">docscan</a></li>
+                  <li class="pl-1"><a href="endpoints/tagimg" class="api-endpoint-link">tagimg</a></li>
+                  <li class="pl-1"><a href="endpoints/pixelgenerate" class="api-endpoint-link">pixelgenerate</a></li>
+                  <li class="pl-1"><a href="endpoints/facedetect" class="api-endpoint-link">facedetect</a></li>
+                  <li class="pl-1"><a href="endpoints/facelandmarks" class="api-endpoint-link">facelandmarks</a></li>
+                  <li class="pl-1"><a href="endpoints/facecompare" class="api-endpoint-link">facecompare</a></li>
+                  <li class="pl-1"><a href="endpoints/facelookup" class="api-endpoint-link">facelookup</a></li>
+                  <li class="pl-1"><a href="endpoints/facemotion" class="api-endpoint-link">facemotion</a></li>
+                  <li class="pl-1"><a href="endpoints/facegenerate" class="api-endpoint-link">facegenerate</a></li>
+                  <li class="pl-1"><a href="endpoints/ocr" class="api-endpoint-link">ocr</a></li>
+                  <li class="pl-1"><a href="endpoints/screencapture" class="api-endpoint-link">screencapture</a></li>
+                  <li class="pl-1"><a href="endpoints/colorize" class="api-endpoint-link">colorize</a></li>
+                  <li class="pl-1"><a href="endpoints/header" class="api-endpoint-link">header</a></li>
+                  <li class="pl-1"><a href="endpoints/nudity" class="api-endpoint-link">nudity</a></li>
+                  <li class="pl-1"><a href="endpoints/captchagenerate" class="api-endpoint-link">captchagenerate</a></li>
+                  <li class="pl-1"><a href="endpoints/safe" class="api-endpoint-link">safe</a></li>
+                  <li class="pl-1"><a href="endpoints/urlcapture" class="api-endpoint-link">urlcapture</a></li>
+                  <li class="pl-1"><a href="endpoints/labelimage" class="api-endpoint-link">labelimage</a></li>
+                  <li class="pl-1"><a href="endpoints/imgdiff" class="api-endpoint-link">imgdiff</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-2xl uppercase font-bold text-primary">Image Encryption & Compression</h3>
+                <ul class="ml-5 mt-5 flex list-disc flex-col gap-2 marker:text-[#43EAA4]">
+                  <li class="pl-1"><a href="endpoints/encrypt" class="api-endpoint-link">encrypt</a></li>
+                  <li class="pl-1"><a href="endpoints/encipher" class="api-endpoint-link">encipher</a></li>
+                  <li class="pl-1"><a href="endpoints/decrypt" class="api-endpoint-link">decrypt</a></li>
+                  <li class="pl-1"><a href="endpoints/decipher" class="api-endpoint-link">decipher</a></li>
+                  <li class="pl-1"><a href="endpoints/strip" class="api-endpoint-link">strip</a></li>
+                  <li class="pl-1"><a href="endpoints/compress" class="api-endpoint-link">compress</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-2xl uppercase font-bold text-primary">Image Colorspace Conversion</h3>
+                <ul class="ml-5 mt-5 flex list-disc flex-col gap-2 marker:text-[#43EAA4]">
+                  <li class="pl-1"><a href="endpoints/colorspace_rgb" class="api-endpoint-link">colorspace_rgb</a></li>
+                  <li class="pl-1"><a href="endpoints/colorspace_srgb" class="api-endpoint-link">colorspace_srgb</a></li>
+                  <li class="pl-1"><a href="endpoints/colorspace_gray" class="api-endpoint-link">colorspace_gray</a></li>
+                  <li class="pl-1"><a href="endpoints/colorspace_ycbcr" class="api-endpoint-link">colorspace_ycbcr</a></li>
+                  <li class="pl-1"><a href="endpoints/colorspace_hsl" class="api-endpoint-link">colorspace_hsl</a></li>
+                  <li class="pl-1"><a href="endpoints/colorspace_cmyk" class="api-endpoint-link">colorspace_cmyk</a></li>
+                  <li class="pl-1"><a href="endpoints/colorspace_transparent" class="api-endpoint-link">colorspace_transparent</a></li>
+                  <li class="pl-1"><a href="endpoints/image_colorspace" class="api-endpoint-link">image_colorspace</a></li>
                 </ul>
               </div>
             </div>
@@ -294,115 +331,61 @@
             <!-- API Endpoint List -->
             <div class="flex flex-col gap-7">
               <div>
-                <h3 class="text-2xl font-medium text-tColor">Machine Vision & Media Analysis</h3>
+                <h3 class="text-2xl uppercase font-bold text-primary">Image Processing</h3>
                 <ul class="ml-5 mt-5 flex list-disc flex-col gap-2 marker:text-[#43EAA4]">
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=nsfw" class="api-endpoint-link">nsfw</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=sfw" class="api-endpoint-link">sfw</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=docscan" class="api-endpoint-link">docscan</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=tagimg" class="api-endpoint-link">tagimg</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=pixelgenerate" class="api-endpoint-link">pixelgenerate</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=facedetect" class="api-endpoint-link">facedetect</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=facelandmarks" class="api-endpoint-link">facelandmarks</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=facecompare" class="api-endpoint-link">facecompare</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=facelookup" class="api-endpoint-link">facelookup</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=facemotion" class="api-endpoint-link">facemotion</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=facegenerate" class="api-endpoint-link">facegenerate</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=ocr" class="api-endpoint-link">ocr</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=screencapture" class="api-endpoint-link">screencapture</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=colorize" class="api-endpoint-link">colorize</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=header" class="api-endpoint-link">header</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=nudity" class="api-endpoint-link">nudity</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=captchagenerate" class="api-endpoint-link">captchagenerate</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=safe" class="api-endpoint-link">safe</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=urlcapture" class="api-endpoint-link">urlcapture</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=labelimage" class="api-endpoint-link">labelimage</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=imgdiff" class="api-endpoint-link">imgdiff</a></li>
-                </ul>
-              </div>
-              <div>
-                <h3 class="text-2xl font-medium text-tColor">Image Encryption & Compression</h3>
-                <ul class="ml-5 mt-5 flex list-disc flex-col gap-2 marker:text-[#43EAA4]">
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=encrypt" class="api-endpoint-link">encrypt</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=encipher" class="api-endpoint-link">encipher</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=decrypt" class="api-endpoint-link">decrypt</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=decipher" class="api-endpoint-link">decipher</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=strip" class="api-endpoint-link">strip</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=compress" class="api-endpoint-link">compress</a></li>
-                </ul>
-              </div>
-              <div>
-                <h3 class="text-2xl font-medium text-tColor">Image Colorspace Conversion</h3>
-                <ul class="ml-5 mt-5 flex list-disc flex-col gap-2 marker:text-[#43EAA4]">
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=colorspace_rgb" class="api-endpoint-link">colorspace_rgb</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=colorspace_srgb" class="api-endpoint-link">colorspace_srgb</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=colorspace_gray" class="api-endpoint-link">colorspace_gray</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=colorspace_ycbcr" class="api-endpoint-link">colorspace_ycbcr</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=colorspace_hsl" class="api-endpoint-link">colorspace_hsl</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=colorspace_cmyk" class="api-endpoint-link">colorspace_cmyk</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=colorspace_transparent" class="api-endpoint-link">colorspace_transparent</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=image_colorspace" class="api-endpoint-link">image_colorspace</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- API Endpoint List -->
-            <div class="flex flex-col gap-7">
-              <div>
-                <h3 class="text-2xl font-medium text-tColor">Image Processing</h3>
-                <ul class="ml-5 mt-5 flex list-disc flex-col gap-2 marker:text-[#43EAA4]">
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=mogrify" class="api-endpoint-link">mogrify</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=grayscale" class="api-endpoint-link">grayscale</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=noise" class="api-endpoint-link">noise</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=blur" class="api-endpoint-link">blur</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=newimage" class="api-endpoint-link">newimage</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=create" class="api-endpoint-link">create</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=adaptiveresize" class="api-endpoint-link">adaptiveresize</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=ar" class="api-endpoint-link">ar</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=scale" class="api-endpoint-link">scale</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=minify" class="api-endpoint-link">minify</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=magnify" class="api-endpoint-link">magnify</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=crop" class="api-endpoint-link">crop</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=resize" class="api-endpoint-link">resize</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=smartresize" class="api-endpoint-link">smartresize</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=chop" class="api-endpoint-link">chop</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=despeckle" class="api-endpoint-link">despeckle</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=deskew" class="api-endpoint-link">deskew</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=edge" class="api-endpoint-link">edge</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=remap" class="api-endpoint-link">remap</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=resample" class="api-endpoint-link">resample</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=thumbnail" class="api-endpoint-link">thumbnail</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=merge" class="api-endpoint-link">merge</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=composite" class="api-endpoint-link">composite</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=avatar" class="api-endpoint-link">avatar</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=webfit" class="api-endpoint-link">webfit</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=emailfit" class="api-endpoint-link">emailfit</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=msgfit" class="api-endpoint-link">msgfit</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=favicon" class="api-endpoint-link">favicon</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=motionblur" class="api-endpoint-link">motionblur</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=gaussianblur" class="api-endpoint-link">gaussianblur</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=radialblur" class="api-endpoint-link">radialblur</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=blackthreshold" class="api-endpoint-link">blackthreshold</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=threshold" class="api-endpoint-link">threshold</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=bth" class="api-endpoint-link">bth</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=border3d" class="api-endpoint-link">border3d</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=border" class="api-endpoint-link">border</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=charcoal" class="api-endpoint-link">charcoal</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=emboss" class="api-endpoint-link">emboss</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=equalize" class="api-endpoint-link">equalize</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=extent" class="api-endpoint-link">extent</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=flatten" class="api-endpoint-link">flatten</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=gamma" class="api-endpoint-link">gamma</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=flip" class="api-endpoint-link">flip</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=flop" class="api-endpoint-link">flop</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=enhance" class="api-endpoint-link">enhance</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=haldclut" class="api-endpoint-link">haldclut</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=implode" class="api-endpoint-link">implode</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=linearstretch" class="api-endpoint-link">linearstretch</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=ls" class="api-endpoint-link">ls</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=medianfilter" class="api-endpoint-link">medianfilter</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=mf" class="api-endpoint-link">mf</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=setresolution" class="api-endpoint-link">setresolution</a></li>
-                  <li class="pl-1"><a href="https://pixlab.io/cmd?id=rotate" class="api-endpoint-link">rotate</a></li>
+                  <li class="pl-1"><a href="endpoints/mogrify" class="api-endpoint-link">mogrify</a></li>
+                  <li class="pl-1"><a href="endpoints/grayscale" class="api-endpoint-link">grayscale</a></li>
+                  <li class="pl-1"><a href="endpoints/noise" class="api-endpoint-link">noise</a></li>
+                  <li class="pl-1"><a href="endpoints/blur" class="api-endpoint-link">blur</a></li>
+                  <li class="pl-1"><a href="endpoints/newimage" class="api-endpoint-link">newimage</a></li>
+                  <li class="pl-1"><a href="endpoints/create" class="api-endpoint-link">create</a></li>
+                  <li class="pl-1"><a href="endpoints/adaptiveresize" class="api-endpoint-link">adaptiveresize</a></li>
+                  <li class="pl-1"><a href="endpoints/ar" class="api-endpoint-link">ar</a></li>
+                  <li class="pl-1"><a href="endpoints/scale" class="api-endpoint-link">scale</a></li>
+                  <li class="pl-1"><a href="endpoints/minify" class="api-endpoint-link">minify</a></li>
+                  <li class="pl-1"><a href="endpoints/magnify" class="api-endpoint-link">magnify</a></li>
+                  <li class="pl-1"><a href="endpoints/crop" class="api-endpoint-link">crop</a></li>
+                  <li class="pl-1"><a href="endpoints/resize" class="api-endpoint-link">resize</a></li>
+                  <li class="pl-1"><a href="endpoints/smartresize" class="api-endpoint-link">smartresize</a></li>
+                  <li class="pl-1"><a href="endpoints/chop" class="api-endpoint-link">chop</a></li>
+                  <li class="pl-1"><a href="endpoints/despeckle" class="api-endpoint-link">despeckle</a></li>
+                  <li class="pl-1"><a href="endpoints/deskew" class="api-endpoint-link">deskew</a></li>
+                  <li class="pl-1"><a href="endpoints/edge" class="api-endpoint-link">edge</a></li>
+                  <li class="pl-1"><a href="endpoints/remap" class="api-endpoint-link">remap</a></li>
+                  <li class="pl-1"><a href="endpoints/resample" class="api-endpoint-link">resample</a></li>
+                  <li class="pl-1"><a href="endpoints/thumbnail" class="api-endpoint-link">thumbnail</a></li>
+                  <li class="pl-1"><a href="endpoints/merge" class="api-endpoint-link">merge</a></li>
+                  <li class="pl-1"><a href="endpoints/composite" class="api-endpoint-link">composite</a></li>
+                  <li class="pl-1"><a href="endpoints/avatar" class="api-endpoint-link">avatar</a></li>
+                  <li class="pl-1"><a href="endpoints/webfit" class="api-endpoint-link">webfit</a></li>
+                  <li class="pl-1"><a href="endpoints/emailfit" class="api-endpoint-link">emailfit</a></li>
+                  <li class="pl-1"><a href="endpoints/msgfit" class="api-endpoint-link">msgfit</a></li>
+                  <li class="pl-1"><a href="endpoints/favicon" class="api-endpoint-link">favicon</a></li>
+                  <li class="pl-1"><a href="endpoints/motionblur" class="api-endpoint-link">motionblur</a></li>
+                  <li class="pl-1"><a href="endpoints/gaussianblur" class="api-endpoint-link">gaussianblur</a></li>
+                  <li class="pl-1"><a href="endpoints/radialblur" class="api-endpoint-link">radialblur</a></li>
+                  <li class="pl-1"><a href="endpoints/blackthreshold" class="api-endpoint-link">blackthreshold</a></li>
+                  <li class="pl-1"><a href="endpoints/threshold" class="api-endpoint-link">threshold</a></li>
+                  <li class="pl-1"><a href="endpoints/bth" class="api-endpoint-link">bth</a></li>
+                  <li class="pl-1"><a href="endpoints/border3d" class="api-endpoint-link">border3d</a></li>
+                  <li class="pl-1"><a href="endpoints/border" class="api-endpoint-link">border</a></li>
+                  <li class="pl-1"><a href="endpoints/charcoal" class="api-endpoint-link">charcoal</a></li>
+                  <li class="pl-1"><a href="endpoints/emboss" class="api-endpoint-link">emboss</a></li>
+                  <li class="pl-1"><a href="endpoints/equalize" class="api-endpoint-link">equalize</a></li>
+                  <li class="pl-1"><a href="endpoints/extent" class="api-endpoint-link">extent</a></li>
+                  <li class="pl-1"><a href="endpoints/flatten" class="api-endpoint-link">flatten</a></li>
+                  <li class="pl-1"><a href="endpoints/gamma" class="api-endpoint-link">gamma</a></li>
+                  <li class="pl-1"><a href="endpoints/flip" class="api-endpoint-link">flip</a></li>
+                  <li class="pl-1"><a href="endpoints/flop" class="api-endpoint-link">flop</a></li>
+                  <li class="pl-1"><a href="endpoints/enhance" class="api-endpoint-link">enhance</a></li>
+                  <li class="pl-1"><a href="endpoints/haldclut" class="api-endpoint-link">haldclut</a></li>
+                  <li class="pl-1"><a href="endpoints/implode" class="api-endpoint-link">implode</a></li>
+                  <li class="pl-1"><a href="endpoints/linearstretch" class="api-endpoint-link">linearstretch</a></li>
+                  <li class="pl-1"><a href="endpoints/ls" class="api-endpoint-link">ls</a></li>
+                  <li class="pl-1"><a href="endpoints/medianfilter" class="api-endpoint-link">medianfilter</a></li>
+                  <li class="pl-1"><a href="endpoints/mf" class="api-endpoint-link">mf</a></li>
+                  <li class="pl-1"><a href="endpoints/setresolution" class="api-endpoint-link">setresolution</a></li>
+                  <li class="pl-1"><a href="endpoints/rotate" class="api-endpoint-link">rotate</a></li>
                 </ul>
               </div>
             </div>
