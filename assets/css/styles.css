@@ -1210,6 +1210,18 @@ body {
   height: 100%;
 }
 
+.h-\[90\%\] {
+  height: 90%;
+}
+
+.h-\[80\%\] {
+  height: 80%;
+}
+
+.h-\[85\%\] {
+  height: 85%;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1269,6 +1281,10 @@ body {
 
 .w-px {
   width: 1px;
+}
+
+.w-\[90\%\] {
+  width: 90%;
 }
 
 .min-w-\[34\.375rem\] {
@@ -2021,6 +2037,10 @@ body {
   background-size: cover;
 }
 
+.bg-contain {
+  background-size: contain;
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -2428,11 +2448,6 @@ body {
 .text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
-.text-gray-500 {
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
 .text-gray-600 {
@@ -4485,11 +4500,6 @@ body.dark-theme .ape-header-gradient-theme {
 }
 
 @media (prefers-color-scheme: dark) {
-  .dark\:bg-neutral-800 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(38 38 38 / var(--tw-bg-opacity));
-  }
-
   .dark\:text-gray-400 {
     --tw-text-opacity: 1;
     color: rgb(156 163 175 / var(--tw-text-opacity));
