@@ -743,6 +743,10 @@ video {
   /* App UI/UX Code Page Colors */
   --color-auc-primary: #d747f0;
   --color-auc-secondary: #6466f1;
+  /* Annotate Page Colors */
+  --color-anno-primary: #FA6D09;
+  --color-anno-secondary: #F71E02;
+  --color-anno-surface: #FFFFFF;
 }
 
 /* Apply font to all elements */
@@ -972,6 +976,10 @@ body {
   margin-bottom: 3rem;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -1042,6 +1050,10 @@ body {
 
 .mt-14 {
   margin-top: 3.5rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .mt-2 {
@@ -1193,6 +1205,10 @@ body {
   height: 75vh;
 }
 
+.h-\[85\%\] {
+  height: 85%;
+}
+
 .h-\[992px\] {
   height: 992px;
 }
@@ -1208,18 +1224,6 @@ body {
 
 .h-full {
   height: 100%;
-}
-
-.h-\[90\%\] {
-  height: 90%;
-}
-
-.h-\[80\%\] {
-  height: 80%;
-}
-
-.h-\[85\%\] {
-  height: 85%;
 }
 
 .w-1\/2 {
@@ -1281,10 +1285,6 @@ body {
 
 .w-px {
   width: 1px;
-}
-
-.w-\[90\%\] {
-  width: 90%;
 }
 
 .min-w-\[34\.375rem\] {
@@ -1357,6 +1357,10 @@ body {
 
 .max-w-lg {
   max-width: 32rem;
+}
+
+.max-w-screen-md {
+  max-width: 768px;
 }
 
 .max-w-screen-sm {
@@ -1767,6 +1771,10 @@ body {
   border-color: rgb(234 167 67 / var(--tw-border-opacity));
 }
 
+.border-annoPrimary {
+  border-color: var(--color-anno-primary);
+}
+
 .border-apePrimary {
   border-color: var(--color-ape-primary);
 }
@@ -1860,6 +1868,10 @@ body {
 .bg-\[\#ffbd44\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 189 68 / var(--tw-bg-opacity));
+}
+
+.bg-annoSurface {
+  background-color: var(--color-anno-surface);
 }
 
 .bg-apeBackground {
@@ -2033,12 +2045,16 @@ body {
   --tw-gradient-to: var(--color-secondary) var(--tw-gradient-to-position);
 }
 
+.bg-contain {
+  background-size: contain;
+}
+
 .bg-cover {
   background-size: cover;
 }
 
-.bg-contain {
-  background-size: contain;
+.fill-tColor {
+  fill: var(--color-text);
 }
 
 .object-contain {
@@ -2048,6 +2064,10 @@ body {
 
 .p-0\.5 {
   padding: 0.125rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .p-16 {
@@ -2410,6 +2430,10 @@ body {
   color: rgb(220 42 118 / var(--tw-text-opacity));
 }
 
+.text-annoPrimary {
+  color: var(--color-anno-primary);
+}
+
 .text-apeBackground {
   color: var(--color-ape-background);
 }
@@ -2543,12 +2567,20 @@ body {
   opacity: 0;
 }
 
+.opacity-15 {
+  opacity: 0.15;
+}
+
 .opacity-20 {
   opacity: 0.2;
 }
 
 .opacity-30 {
   opacity: 0.3;
+}
+
+.opacity-5 {
+  opacity: 0.05;
 }
 
 .shadow-lg {
@@ -2682,6 +2714,8 @@ body {
   --color-ape-text: #faf8f5;
   --color-ape-text-gray: #cfd2d3;
   --color-ape-surface: #3d4044;
+  /* Annotate Page Colors */
+  --color-anno-surface: #0d1016;
 }
 
 body {
@@ -2705,7 +2739,7 @@ body.dark-theme :where(.img-invert, .dark-logo) {
 }
 
 nav :where(.nav-link, .theme-toggler):hover,
-nav .hs-dropdown:hover > button {
+nav .hs-dropdown:hover>button {
   color: var(--color-primary);
 }
 
@@ -2805,7 +2839,7 @@ body.dark-theme .bg-gradient-theme {
   background: #fff;
 }
 
-.gradient-button:hover > .bg-gradient-theme {
+.gradient-button:hover>.bg-gradient-theme {
   color: #fff;
   background: transparent;
 }
@@ -3196,7 +3230,7 @@ header .ape-navbar .nav-logo {
 }
 
 nav.ape-navbar :where(.nav-link, .theme-toggler):hover,
-nav.ape-navbar .hs-dropdown:hover > button {
+nav.ape-navbar .hs-dropdown:hover>button {
   color: var(--color-ape-primary);
 }
 
@@ -3267,7 +3301,7 @@ body.dark-theme .ape-header-gradient-theme {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.text-stroke {
+.text-ape-stroke {
   color: var(--color-ape-background);
   -webkit-text-stroke: 1px var(--color-ape-primary);
 }
@@ -3317,7 +3351,7 @@ body.dark-theme .ape-header-gradient-theme {
 /* App UI/UX Code Styling Start */
 
 .app-ui-ux-code nav :where(.nav-link, .theme-toggler):hover,
-.app-ui-ux-code nav .hs-dropdown:hover > button {
+.app-ui-ux-code nav .hs-dropdown:hover>button {
   color: var(--color-auc-primary);
 }
 
@@ -3370,6 +3404,79 @@ body.dark-theme .ape-header-gradient-theme {
 }
 
 /* App UI/UX Code Styling End */
+
+/* Annotate Styling Start */
+
+.annotate nav :where(.nav-link, .theme-toggler):hover,
+.annotate nav .hs-dropdown:hover>button {
+  color: var(--color-anno-primary);
+}
+
+.anno-gradient-bg-theme {
+  background: linear-gradient(to top, var(--color-anno-primary), var(--color-anno-secondary));
+}
+
+.anno-gradient-button {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, var(--color-anno-primary), var(--color-anno-secondary));
+}
+
+.anno-gradient-button :where(span, i) {
+  position: relative;
+  z-index: 20;
+}
+
+.anno-gradient-button::before {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  --tw-content: "";
+  content: var(--tw-content);
+  background: linear-gradient(to left, var(--color-anno-primary), var(--color-anno-secondary));
+}
+
+.anno-gradient-button:hover::before {
+  opacity: 1;
+}
+
+.annotate .footer-link:hover {
+  color: var(--color-anno-primary);
+}
+
+.anno-gradient-text {
+  width: -moz-fit-content;
+  width: fit-content;
+  background: linear-gradient(to right, var(--color-anno-primary), var(--color-anno-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.anno-card-bg {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+body.dark-theme .anno-card-bg {
+  background: #181c24;
+}
+
+.text-anno-stroke {
+  color: var(--color-background);
+  -webkit-text-stroke: 1px var(--color-anno-primary);
+}
+
+.annotate .footer-link:hover {
+  color: var(--color-anno-primary);
+}
 
 .marker\:text-\[\#43EAA4\] *::marker {
   color: rgb(67 234 164 );
@@ -3479,6 +3586,10 @@ body.dark-theme .ape-header-gradient-theme {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.hover\:bg-annoPrimary:hover {
+  background-color: var(--color-anno-primary);
+}
+
 .hover\:bg-apePrimary:hover {
   background-color: var(--color-ape-primary);
 }
@@ -3566,6 +3677,10 @@ body.dark-theme .ape-header-gradient-theme {
 
 .hover\:text-secondary:hover {
   color: var(--color-secondary);
+}
+
+.hover\:text-tColor:hover {
+  color: var(--color-text);
 }
 
 .hover\:text-white:hover {
@@ -4135,6 +4250,10 @@ body.dark-theme .ape-header-gradient-theme {
     padding: 1.5rem;
   }
 
+  .md\:p-10 {
+    padding: 2.5rem;
+  }
+
   .md\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -4267,6 +4386,10 @@ body.dark-theme .ape-header-gradient-theme {
     width: auto;
   }
 
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
   .lg\:max-w-\[50\%\] {
     max-width: 50%;
   }
@@ -4336,6 +4459,10 @@ body.dark-theme .ape-header-gradient-theme {
     gap: 2.5rem;
   }
 
+  .lg\:gap-20 {
+    gap: 5rem;
+  }
+
   .lg\:gap-40 {
     gap: 10rem;
   }
@@ -4350,6 +4477,14 @@ body.dark-theme .ape-header-gradient-theme {
 
   .lg\:p-0 {
     padding: 0px;
+  }
+
+  .lg\:p-12 {
+    padding: 3rem;
+  }
+
+  .lg\:p-10 {
+    padding: 2.5rem;
   }
 
   .lg\:px-0 {
@@ -4412,6 +4547,10 @@ body.dark-theme .ape-header-gradient-theme {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:opacity-15 {
+    opacity: 0.15;
   }
 
   .lg\:shadow-md {
