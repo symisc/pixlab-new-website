@@ -37,6 +37,10 @@ module.exports = {
         annoPrimary: "var(--color-anno-primary)",
         annoSecondary: "var(--color-anno-secondary)",
         annoSurface: "var(--color-anno-surface)",
+
+        // Mockup and Screenshot Editor Page Colors
+        msePrimary: "var(--color-mse-primary)",
+        mseSecondary: "var(--color-mse-secondary)",
       },
     },
   },

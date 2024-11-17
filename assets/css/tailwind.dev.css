@@ -43,6 +43,10 @@
     --color-anno-primary: #FA6D09;
     --color-anno-secondary: #F71E02;
     --color-anno-surface: #FFFFFF;
+
+    /* Mockup and Screenshot Editor Page Colors */
+    --color-mse-primary: #1CA9C9;
+    --color-mse-secondary: #005FE5;
   }
 
   /* Apply font to all elements */
@@ -633,4 +637,65 @@ body.dark-theme .anno-card-bg {
 
 .annotate .footer-link:hover {
   @apply text-annoPrimary;
+}
+
+/* Annotate Code Styling End */
+
+/* Mockup & Screenshot Editor Styling Start */
+
+.mockup-screenshot-editor nav :where(.nav-link, .theme-toggler):hover,
+.mockup-screenshot-editor nav .hs-dropdown:hover>button {
+  @apply text-msePrimary;
+}
+
+.mse-gradient-bg-theme {
+  background: linear-gradient(to top, var(--color-mse-primary), var(--color-mse-secondary));
+}
+
+.mse-gradient-button {
+  @apply relative overflow-hidden;
+  background: linear-gradient(to right, var(--color-mse-primary), var(--color-mse-secondary));
+}
+
+.mse-gradient-button :where(span, i) {
+  @apply relative z-20;
+}
+
+.mse-gradient-button::before {
+  @apply absolute left-0 top-0 z-10 h-full w-full opacity-0 transition-all duration-300 content-[""];
+  background: linear-gradient(to left, var(--color-mse-primary), var(--color-mse-secondary));
+}
+
+.mse-gradient-button:hover::before {
+  @apply opacity-100;
+}
+
+.mockup-screenshot-editor .footer-link:hover {
+  @apply text-annoPrimary;
+}
+
+.mse-gradient-text {
+  width: fit-content;
+  background: linear-gradient(to right, var(--color-mse-primary), var(--color-mse-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mse-card-bg {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+body.dark-theme .mse-card-bg {
+  background: #181c24;
+}
+
+.text-mse-stroke {
+  color: var(--color-background);
+  -webkit-text-stroke: 1px var(--color-mse-primary);
+}
+
+.mockup-screenshot-editor .footer-link:hover {
+  @apply text-msePrimary;
 }
