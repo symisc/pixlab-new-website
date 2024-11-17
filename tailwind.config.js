@@ -32,6 +32,15 @@ module.exports = {
 
         // App UI/UX Code Page Colors
         aucPrimary: "var(--color-auc-primary)",
+
+        // Annotate Page Colors
+        annoPrimary: "var(--color-anno-primary)",
+        annoSecondary: "var(--color-anno-secondary)",
+        annoSurface: "var(--color-anno-surface)",
+
+        // Mockup and Screenshot Editor Page Colors
+        msePrimary: "var(--color-mse-primary)",
+        mseSecondary: "var(--color-mse-secondary)",
       },
     },
   },

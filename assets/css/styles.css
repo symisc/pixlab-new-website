@@ -743,6 +743,13 @@ video {
   /* App UI/UX Code Page Colors */
   --color-auc-primary: #d747f0;
   --color-auc-secondary: #6466f1;
+  /* Annotate Page Colors */
+  --color-anno-primary: #FA6D09;
+  --color-anno-secondary: #F71E02;
+  --color-anno-surface: #FFFFFF;
+  /* Mockup and Screenshot Editor Page Colors */
+  --color-mse-primary: #1CA9C9;
+  --color-mse-secondary: #005FE5;
 }
 
 /* Apply font to all elements */
@@ -956,6 +963,14 @@ body {
   margin-bottom: 2rem;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.-ml-1 {
+  margin-left: -0.25rem;
+}
+
 .-mt-5 {
   margin-top: -1.25rem;
 }
@@ -970,6 +985,10 @@ body {
 
 .mb-12 {
   margin-bottom: 3rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
 }
 
 .mb-2 {
@@ -1016,6 +1035,10 @@ body {
   margin-right: 1rem;
 }
 
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
 .ms-2 {
   margin-inline-start: 0.5rem;
 }
@@ -1042,6 +1065,10 @@ body {
 
 .mt-14 {
   margin-top: 3.5rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .mt-2 {
@@ -1086,6 +1113,18 @@ body {
 
 .mt-auto {
   margin-top: auto;
+}
+
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
+.mr-10 {
+  margin-right: 2.5rem;
+}
+
+.-ml-1 {
+  margin-left: -0.25rem;
 }
 
 .block {
@@ -1191,6 +1230,10 @@ body {
 
 .h-\[75vh\] {
   height: 75vh;
+}
+
+.h-\[85\%\] {
+  height: 85%;
 }
 
 .h-\[840px\] {
@@ -1347,6 +1390,10 @@ body {
   max-width: 32rem;
 }
 
+.max-w-screen-md {
+  max-width: 768px;
+}
+
 .max-w-screen-sm {
   max-width: 640px;
 }
@@ -1357,6 +1404,26 @@ body {
 
 .max-w-xl {
   max-width: 36rem;
+}
+
+.max-w-sm {
+  max-width: 24rem;
+}
+
+.max-w-md {
+  max-width: 28rem;
+}
+
+.max-w-\[25\%\] {
+  max-width: 25%;
+}
+
+.max-w-\[400px\] {
+  max-width: 400px;
+}
+
+.max-w-\[200px\] {
+  max-width: 200px;
 }
 
 .flex-1 {
@@ -1427,6 +1494,12 @@ body {
   cursor: pointer;
 }
 
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 .resize {
   resize: both;
 }
@@ -1445,10 +1518,6 @@ body {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-cols-\[repeat\(auto-fill\2c minmax\(250px\2c 1fr\)\)\] {
@@ -1475,6 +1544,10 @@ body {
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-end {
   justify-content: flex-end;
 }
@@ -1485,6 +1558,10 @@ body {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
 .gap-1 {
@@ -1627,6 +1704,10 @@ body {
   align-self: center;
 }
 
+.self-stretch {
+  align-self: stretch;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1760,6 +1841,10 @@ body {
   border-color: rgb(250 248 245 / var(--tw-border-opacity));
 }
 
+.border-annoPrimary {
+  border-color: var(--color-anno-primary);
+}
+
 .border-apePrimary {
   border-color: var(--color-ape-primary);
 }
@@ -1782,6 +1867,10 @@ body {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
+.border-msePrimary {
+  border-color: var(--color-mse-primary);
+}
+
 .border-primary {
   border-color: var(--color-primary);
 }
@@ -1793,6 +1882,10 @@ body {
 
 .border-transparent {
   border-color: transparent;
+}
+
+.border-msePrimary {
+  border-color: var(--color-mse-primary);
 }
 
 .border-l-pink-50 {
@@ -1858,6 +1951,10 @@ body {
 .bg-\[\#ffbd44\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 189 68 / var(--tw-bg-opacity));
+}
+
+.bg-annoSurface {
+  background-color: var(--color-anno-surface);
 }
 
 .bg-apeBackground {
@@ -1985,6 +2082,15 @@ body {
   background-color: rgb(255 255 255 / 0.85);
 }
 
+.bg-\[\'url\(\.\.\/images\/mockup-screenshot-editor__shapes-background\.png\)\'\] {
+  background-color: 'url(../images/mockup-screenshot-editor__shapes-background.png)';
+}
+
+.bg-red-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-30 {
   --tw-bg-opacity: 0.3;
 }
@@ -2017,8 +2123,28 @@ body {
   background-image: url(../images/gradient-bg-type-7.png);
 }
 
+.bg-\[url\(\.\.\/images\/mockup-screenshot-editor__draw-tools-background\.png\)\] {
+  background-image: url(../images/mockup-screenshot-editor__draw-tools-background.png);
+}
+
+.bg-\[url\(\.\.\/images\/mockup-screenshot-editor__shapes-background\.png\)\] {
+  background-image: url(../images/mockup-screenshot-editor__shapes-background.png);
+}
+
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(\.\.\/images\/mockup-screenshot-editor__shapes-background\.png\)\] {
+  background-image: url(../images/mockup-screenshot-editor__shapes-background.png);
+}
+
+.bg-\[url\(\.\.\/images\/mockup-screenshot-editor__draw-tool-background\.png\)\] {
+  background-image: url(../images/mockup-screenshot-editor__draw-tool-background.png);
+}
+
+.bg-\[url\(\.\.\/images\/mockup-screenshot-editor__draw-tools-background\.png\)\] {
+  background-image: url(../images/mockup-screenshot-editor__draw-tools-background.png);
 }
 
 .from-primary {
@@ -2033,6 +2159,14 @@ body {
 
 .bg-contain {
   background-size: contain;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .bg-cover {
@@ -2080,6 +2214,14 @@ body {
   padding: 1px;
 }
 
+.p-10 {
+  padding: 2.5rem;
+}
+
+.p-7 {
+  padding: 1.75rem;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -2118,6 +2260,11 @@ body {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
 }
 
 .px-8 {
@@ -2183,6 +2330,16 @@ body {
 .py-7 {
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
 }
 
 .pb-0 {
@@ -2422,6 +2579,10 @@ body {
   color: rgb(250 248 245 / var(--tw-text-opacity));
 }
 
+.text-annoPrimary {
+  color: var(--color-anno-primary);
+}
+
 .text-apeBackground {
   color: var(--color-ape-background);
 }
@@ -2502,6 +2663,10 @@ body {
   color: rgb(163 230 53 / var(--tw-text-opacity));
 }
 
+.text-msePrimary {
+  color: var(--color-mse-primary);
+}
+
 .text-muted {
   color: var(--text-muted);
 }
@@ -2556,8 +2721,16 @@ body {
   color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
+.text-msePrimary {
+  color: var(--color-mse-primary);
+}
+
 .opacity-0 {
   opacity: 0;
+}
+
+.opacity-15 {
+  opacity: 0.15;
 }
 
 .opacity-20 {
@@ -2566,6 +2739,10 @@ body {
 
 .opacity-30 {
   opacity: 0.3;
+}
+
+.opacity-5 {
+  opacity: 0.05;
 }
 
 .shadow-lg {
@@ -2699,6 +2876,8 @@ body {
   --color-ape-text: #faf8f5;
   --color-ape-text-gray: #cfd2d3;
   --color-ape-surface: #3d4044;
+  /* Annotate Page Colors */
+  --color-anno-surface: #0d1016;
 }
 
 body {
@@ -2722,7 +2901,7 @@ body.dark-theme :where(.img-invert, .dark-logo) {
 }
 
 nav :where(.nav-link, .theme-toggler):hover,
-nav .hs-dropdown:hover > button {
+nav .hs-dropdown:hover>button {
   color: var(--color-primary);
 }
 
@@ -3154,7 +3333,7 @@ header .ape-navbar .nav-logo {
 }
 
 nav.ape-navbar :where(.nav-link, .theme-toggler):hover,
-nav.ape-navbar .hs-dropdown:hover > button {
+nav.ape-navbar .hs-dropdown:hover>button {
   color: var(--color-ape-primary);
 }
 
@@ -3225,7 +3404,7 @@ body.dark-theme .ape-header-gradient-theme {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.text-stroke {
+.text-ape-stroke {
   color: var(--color-ape-background);
   -webkit-text-stroke: 1px var(--color-ape-primary);
 }
@@ -3328,6 +3507,154 @@ body.dark-theme .ape-header-gradient-theme {
 }
 
 /* App UI/UX Code Styling End */
+
+/* Annotate Styling Start */
+
+.annotate nav :where(.nav-link, .theme-toggler):hover,
+.annotate nav .hs-dropdown:hover>button {
+  color: var(--color-anno-primary);
+}
+
+.anno-gradient-bg-theme {
+  background: linear-gradient(to top, var(--color-anno-primary), var(--color-anno-secondary));
+}
+
+.anno-gradient-button {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, var(--color-anno-primary), var(--color-anno-secondary));
+}
+
+.anno-gradient-button :where(span, i) {
+  position: relative;
+  z-index: 20;
+}
+
+.anno-gradient-button::before {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  --tw-content: "";
+  content: var(--tw-content);
+  background: linear-gradient(to left, var(--color-anno-primary), var(--color-anno-secondary));
+}
+
+.anno-gradient-button:hover::before {
+  opacity: 1;
+}
+
+.annotate .footer-link:hover {
+  color: var(--color-anno-primary);
+}
+
+.anno-gradient-text {
+  width: -moz-fit-content;
+  width: fit-content;
+  background: linear-gradient(to right, var(--color-anno-primary), var(--color-anno-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.anno-card-bg {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+body.dark-theme .anno-card-bg {
+  background: #181c24;
+}
+
+.text-anno-stroke {
+  color: var(--color-background);
+  -webkit-text-stroke: 1px var(--color-anno-primary);
+}
+
+.annotate .footer-link:hover {
+  color: var(--color-anno-primary);
+}
+
+/* Annotate Code Styling End */
+
+/* Mockup & Screenshot Editor Styling Start */
+
+.mockup-screenshot-editor nav :where(.nav-link, .theme-toggler):hover,
+.mockup-screenshot-editor nav .hs-dropdown:hover>button {
+  color: var(--color-mse-primary);
+}
+
+.mse-gradient-bg-theme {
+  background: linear-gradient(to top, var(--color-mse-primary), var(--color-mse-secondary));
+}
+
+.mse-gradient-button {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, var(--color-mse-primary), var(--color-mse-secondary));
+}
+
+.mse-gradient-button :where(span, i) {
+  position: relative;
+  z-index: 20;
+}
+
+.mse-gradient-button::before {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  --tw-content: "";
+  content: var(--tw-content);
+  background: linear-gradient(to left, var(--color-mse-primary), var(--color-mse-secondary));
+}
+
+.mse-gradient-button:hover::before {
+  opacity: 1;
+}
+
+.mockup-screenshot-editor .footer-link:hover {
+  color: var(--color-anno-primary);
+}
+
+.mse-gradient-text {
+  width: -moz-fit-content;
+  width: fit-content;
+  background: linear-gradient(to right, var(--color-mse-primary), var(--color-mse-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mse-card-bg {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+body.dark-theme .mse-card-bg {
+  background: #181c24;
+}
+
+.text-mse-stroke {
+  color: var(--color-background);
+  -webkit-text-stroke: 1px var(--color-mse-primary);
+}
+
+.mockup-screenshot-editor .footer-link:hover {
+  color: var(--color-mse-primary);
+}
 
 /* Pdf media template engine styling */
 
@@ -3563,6 +3890,18 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.hover\:bg-annoPrimary:hover {
+  background-color: var(--color-anno-primary);
+}
+.hover\:bg-\[\#faf8f5\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 248 245 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-annoPrimary:hover {
+  background-color: var(--color-anno-primary);
+}
+
 .hover\:bg-apePrimary:hover {
   background-color: var(--color-ape-primary);
 }
@@ -3599,6 +3938,10 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-msePrimary:hover {
+  background-color: var(--color-mse-primary);
+}
+
 .hover\:bg-neutral-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(229 229 229 / var(--tw-bg-opacity));
@@ -3614,6 +3957,10 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
 
 .hover\:bg-transparent:hover {
   background-color: transparent;
+}
+
+.hover\:bg-msePrimary:hover {
+  background-color: var(--color-mse-primary);
 }
 
 .hover\:bg-\[\#faf8f5\]:hover {
@@ -3648,6 +3995,11 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
   color: var(--color-ape-text);
 }
 
+.hover\:text-black:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .hover\:text-blue-600:hover {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
@@ -3660,6 +4012,10 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
 
 .hover\:text-secondary:hover {
   color: var(--color-secondary);
+}
+
+.hover\:text-tColor:hover {
+  color: var(--color-text);
 }
 
 .hover\:text-white:hover {
@@ -4054,6 +4410,10 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
     flex-direction: row;
   }
 
+  .sm\:flex-nowrap {
+    flex-wrap: nowrap;
+  }
+
   .sm\:items-center {
     align-items: center;
   }
@@ -4154,8 +4514,16 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
     height: 38.62rem;
   }
 
+  .md\:w-3\/4 {
+    width: 75%;
+  }
+
   .md\:w-\[29\.5rem\] {
     width: 29.5rem;
+  }
+
+  .md\:w-\[300px\] {
+    width: 300px;
   }
 
   .md\:w-\[55rem\] {
@@ -4168,6 +4536,14 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
 
   .md\:w-\[70rem\] {
     width: 70rem;
+  }
+
+  .md\:w-3\/4 {
+    width: 75%;
+  }
+
+  .md\:w-\[300px\] {
+    width: 300px;
   }
 
   .md\:min-w-\[50rem\] {
@@ -4188,6 +4564,10 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
 
   .md\:max-w-lg {
     max-width: 32rem;
+  }
+
+  .md\:max-w-\[400px\] {
+    max-width: 400px;
   }
 
   .md\:grid-cols-2 {
@@ -4224,10 +4604,6 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
 
   .md\:gap-40 {
     gap: 10rem;
-  }
-
-  .md\:gap-8 {
-    gap: 2rem;
   }
 
   .md\:self-center {
@@ -4415,10 +4791,6 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .lg\:grid-cols-6 {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -4447,6 +4819,10 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
     gap: 2.5rem;
   }
 
+  .lg\:gap-20 {
+    gap: 5rem;
+  }
+
   .lg\:gap-40 {
     gap: 10rem;
   }
@@ -4461,6 +4837,14 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
 
   .lg\:p-0 {
     padding: 0px;
+  }
+
+  .lg\:p-10 {
+    padding: 2.5rem;
+  }
+
+  .lg\:p-12 {
+    padding: 3rem;
   }
 
   .lg\:px-0 {
@@ -4519,6 +4903,10 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:opacity-15 {
+    opacity: 0.15;
   }
 
   .lg\:shadow-md {

@@ -38,6 +38,15 @@
     /* App UI/UX Code Page Colors */
     --color-auc-primary: #d747f0;
     --color-auc-secondary: #6466f1;
+
+    /* Annotate Page Colors */
+    --color-anno-primary: #FA6D09;
+    --color-anno-secondary: #F71E02;
+    --color-anno-surface: #FFFFFF;
+
+    /* Mockup and Screenshot Editor Page Colors */
+    --color-mse-primary: #1CA9C9;
+    --color-mse-secondary: #005FE5;
   }
 
   /* Apply font to all elements */
@@ -69,6 +78,9 @@
   --color-ape-text: #faf8f5;
   --color-ape-text-gray: #cfd2d3;
   --color-ape-surface: #3d4044;
+
+  /* Annotate Page Colors */
+  --color-anno-surface: #0d1016;
 }
 
 body {
@@ -91,7 +103,7 @@ body.dark-theme :where(.img-invert, .dark-logo) {
 }
 
 nav :where(.nav-link, .theme-toggler):hover,
-nav .hs-dropdown:hover > button {
+nav .hs-dropdown:hover>button {
   @apply text-primary;
 }
 
@@ -366,7 +378,7 @@ header .ape-navbar .nav-logo {
 }
 
 nav.ape-navbar :where(.nav-link, .theme-toggler):hover,
-nav.ape-navbar .hs-dropdown:hover > button {
+nav.ape-navbar .hs-dropdown:hover>button {
   @apply text-apePrimary;
 }
 
@@ -424,7 +436,7 @@ body.dark-theme .ape-header-gradient-theme {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.text-stroke {
+.text-ape-stroke {
   color: var(--color-ape-background);
   -webkit-text-stroke: 1px var(--color-ape-primary);
 }
@@ -435,6 +447,7 @@ body.dark-theme .ape-header-gradient-theme {
 
 /* Transparent background and no border on large screens */
 @media screen and (min-width: 1024px) {
+
   header.ape-header-gradient-theme,
   body.dark-theme header.ape-header-gradient-theme {
     background: transparent;
@@ -444,6 +457,7 @@ body.dark-theme .ape-header-gradient-theme {
 
 /* Transparent background and no border on small screens */
 @media screen and (max-width: 1024px) {
+
   header .ape-header-gradient-theme,
   body.dark-theme header .ape-header-gradient-theme {
     background: transparent;
@@ -511,6 +525,125 @@ body.dark-theme .ape-header-gradient-theme {
 
 /* App UI/UX Code Styling End */
 
+/* Annotate Styling Start */
+
+.annotate nav :where(.nav-link, .theme-toggler):hover,
+.annotate nav .hs-dropdown:hover>button {
+  @apply text-annoPrimary;
+}
+
+.anno-gradient-bg-theme {
+  background: linear-gradient(to top, var(--color-anno-primary), var(--color-anno-secondary));
+}
+
+.anno-gradient-button {
+  @apply relative overflow-hidden;
+  background: linear-gradient(to right, var(--color-anno-primary), var(--color-anno-secondary));
+}
+
+.anno-gradient-button :where(span, i) {
+  @apply relative z-20;
+}
+
+.anno-gradient-button::before {
+  @apply absolute left-0 top-0 z-10 h-full w-full opacity-0 transition-all duration-300 content-[""];
+  background: linear-gradient(to left, var(--color-anno-primary), var(--color-anno-secondary));
+}
+
+.anno-gradient-button:hover::before {
+  @apply opacity-100;
+}
+
+.annotate .footer-link:hover {
+  @apply text-annoPrimary;
+}
+
+.anno-gradient-text {
+  width: fit-content;
+  background: linear-gradient(to right, var(--color-anno-primary), var(--color-anno-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.anno-card-bg {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+body.dark-theme .anno-card-bg {
+  background: #181c24;
+}
+
+.text-anno-stroke {
+  color: var(--color-background);
+  -webkit-text-stroke: 1px var(--color-anno-primary);
+}
+
+.annotate .footer-link:hover {
+  @apply text-annoPrimary;
+}
+
+/* Annotate Code Styling End */
+
+/* Mockup & Screenshot Editor Styling Start */
+
+.mockup-screenshot-editor nav :where(.nav-link, .theme-toggler):hover,
+.mockup-screenshot-editor nav .hs-dropdown:hover>button {
+  @apply text-msePrimary;
+}
+
+.mse-gradient-bg-theme {
+  background: linear-gradient(to top, var(--color-mse-primary), var(--color-mse-secondary));
+}
+
+.mse-gradient-button {
+  @apply relative overflow-hidden;
+  background: linear-gradient(to right, var(--color-mse-primary), var(--color-mse-secondary));
+}
+
+.mse-gradient-button :where(span, i) {
+  @apply relative z-20;
+}
+
+.mse-gradient-button::before {
+  @apply absolute left-0 top-0 z-10 h-full w-full opacity-0 transition-all duration-300 content-[""];
+  background: linear-gradient(to left, var(--color-mse-primary), var(--color-mse-secondary));
+}
+
+.mse-gradient-button:hover::before {
+  @apply opacity-100;
+}
+
+.mockup-screenshot-editor .footer-link:hover {
+  @apply text-annoPrimary;
+}
+
+.mse-gradient-text {
+  width: fit-content;
+  background: linear-gradient(to right, var(--color-mse-primary), var(--color-mse-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mse-card-bg {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+body.dark-theme .mse-card-bg {
+  background: #181c24;
+}
+
+.text-mse-stroke {
+  color: var(--color-background);
+  -webkit-text-stroke: 1px var(--color-mse-primary);
+}
+
+.mockup-screenshot-editor .footer-link:hover {
+  @apply text-msePrimary;
+}
 
 /* Pdf media template engine styling */
 
