@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="assets/css/unicons/css/line.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
-  <body class="pdf-media-template-engine">
+  <body class="template-pdf-media-engine">
     <!-- Header/Navbar -->
-    <header class="ape-header-gradient-theme absolute inset-x-0 top-3 z-50 mx-auto flex w-full max-w-[1320px] flex-wrap px-3 before:absolute before:inset-0 before:mx-5 before:max-w-full before:rounded-xl lg:top-5 lg:flex-nowrap lg:justify-start">
-      <nav class="ape-navbar relative mx-2 w-full max-w-screen-xl gap-3 px-3 py-1.5 lg:mx-auto lg:flex lg:items-center lg:justify-between lg:px-1 lg:py-0">
+    <header class="absolute inset-x-0 top-3 z-50 mx-auto flex w-full max-w-[1320px] flex-wrap px-3 before:absolute before:inset-0 before:mx-5 before:max-w-full before:rounded-xl max-lg:before:bg-neutral-800/30 max-lg:before:backdrop-blur-lg lg:top-5 lg:flex-nowrap lg:justify-start">
+      <nav class="tpme-navbar relative mx-2 w-full max-w-screen-xl gap-3 px-3 py-1.5 lg:mx-auto lg:flex lg:items-center lg:justify-between lg:px-1 lg:py-0">
         <div class="flex items-center justify-between lg:h-full">
           <!-- Logo -->
           <a class="nav-logo flex h-full flex-none rounded-md text-xl font-semibold focus:opacity-80 focus:outline-none" href="/" aria-label="PixLab">
@@ -24,17 +24,17 @@
 
           <!-- Toggle Theme and Menu Buttons -->
           <div class="flex items-center gap-3 lg:hidden">
-            <button class="theme-toggler flex items-center text-apeTColor">
+            <button class="theme-toggler flex items-center text-white">
               <i class="uil uil-moon text-lg"></i>
             </button>
             <div>
-              <button type="button" class="hs-collapse-toggle flex size-8 items-center justify-center rounded-full bg-apeTColor text-sm font-semibold text-apeTColor disabled:pointer-events-none disabled:opacity-50" id="hs-navbar-floating-dark-collapse" aria-expanded="false" aria-controls="hs-navbar-floating-dark" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-floating-dark">
-                <svg class="size-4 shrink-0 text-apeBackground hs-collapse-open:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <button type="button" class="hs-collapse-toggle flex size-8 items-center justify-center rounded-full bg-neutral-800 text-sm font-semibold text-white disabled:pointer-events-none disabled:opacity-50" id="hs-navbar-floating-dark-collapse" aria-expanded="false" aria-controls="hs-navbar-floating-dark" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-floating-dark">
+                <svg class="size-4 shrink-0 hs-collapse-open:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="3" x2="21" y1="6" y2="6" />
                   <line x1="3" x2="21" y1="12" y2="12" />
                   <line x1="3" x2="21" y1="18" y2="18" />
                 </svg>
-                <svg class="hidden size-4 shrink-0 text-apeBackground hs-collapse-open:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="hidden size-4 shrink-0 hs-collapse-open:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 6 6 18" />
                   <path d="m6 6 12 12" />
                 </svg>
@@ -44,81 +44,81 @@
         </div>
 
         <!-- Main Menu -->
-        <div id="hs-navbar-floating-dark" class="hs-collapse ape-header-gradient-theme nav-menu hidden flex-1 overflow-hidden transition-all duration-300 lg:flex lg:h-full" aria-labelledby="hs-navbar-floating-dark-collapse">
+        <div id="hs-navbar-floating-dark" class="hs-collapse header-gradient-bg nav-menu hidden flex-1 overflow-hidden transition-all duration-300 lg:flex lg:h-full" aria-labelledby="hs-navbar-floating-dark-collapse">
           <div class="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
             <div class="flex w-full flex-col gap-x-3.5 py-2 lg:w-auto lg:flex-row lg:items-center lg:justify-between lg:py-0 lg:ps-6">
-              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-apeTColor focus:outline-none lg:p-0" href="start">
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="start">
                 <span class="block h-2 w-2 shrink-0 rounded-full border border-[#8343EA] bg-[#8343EA] transition-all group-hover:bg-transparent"></span>
                 Get Started
               </a>
-              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-apeTColor focus:outline-none lg:p-0" href="api-portal">
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="api-portal">
                 <span class="block h-2 w-2 shrink-0 rounded-full border border-[#EAA743] bg-[#EAA743] transition-all group-hover:bg-transparent"></span>
                 API Portal
               </a>
               <!-- Products & SDKs -->
               <div class="hs-dropdown group cursor-pointer p-2 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:px-0 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
-                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-apeTColor focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                   <span class="block h-2 w-2 shrink-0 rounded-full border border-[#21db49] bg-[#21db49] transition-all group-hover:bg-transparent"></span>
                   Products & SDKs
                   <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
                 </button>
                 <!-- Dropdown menu -->
-                <div class="hs-dropdown-menu ape-header-gradient-theme top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
+                <div class="hs-dropdown-menu header-gradient-bg top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
                   <div class="space-y-1 py-1 lg:px-1">
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="on-premises">PixLab On-Premises</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="on-premises">PixLab On-Premises</a>
                     <div class="hs-dropdown relative [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:[--is-collapse:false] lg:[--strategy:absolute] lg:[--trigger:hover]">
-                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-apeTColor focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-white focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                         Open Source SDK <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
                       </button>
-                      <div class="hs-dropdown-menu ape-header-gradient-theme start-full top-0 z-10 !mx-[10px] -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-start-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
+                      <div class="hs-dropdown-menu header-gradient-bg start-full top-0 z-10 !mx-[10px] -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-start-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
                         <div class="space-y-1 py-1 lg:px-1">
-                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="https://sod.pixlab.io/" target="_blank">SOD - Embedded Computer Vision Library &nearr;</a>
-                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="tiny-dream">Tiny Dream - Stable Diffusion Inference in C++</a>
-                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="art">ART - Real-Time ASCII Art C Library</a>
-                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="downloads">SOD Downloads</a>
-                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="sod">SOD Licensing Information</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="https://sod.pixlab.io/" target="_blank">SOD - Embedded Computer Vision Library &nearr;</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="tiny-dream">Tiny Dream - Stable Diffusion Inference in C++</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="art">ART - Real-Time ASCII Art C Library</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="downloads">SOD Downloads</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="sod">SOD Licensing Information</a>
                         </div>
                       </div>
                     </div>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="ekyc/">eKYC - Universal ID Scanner APIs</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="vision-llm-api-playground/">Vision Play, LLM & APIs</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="template-pdf-image-engine">PDF Template Engine</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="app-ui-ux-code">APP UX - Mobile UI Code Generator</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="api-endpoints">PixLab API Endpoints</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="ekyc/">eKYC - Universal ID Scanner APIs</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="vision-llm-api-playground/">Vision Play, LLM & APIs</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="template-pdf-media-engine">PDF & Media Template Engine</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="app-ui-ux-code">APP UX - Mobile UI Code Generator</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="api-endpoints">PixLab API Endpoints</a>
                     <!-- NEW PRODUCT ADD -->
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-apeTColor focus:outline-none lg:px-3" href="https://faceio.net/" target="_blank">FACEIO - Facial Authentication for the Web &nearr;</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="https://faceio.net/" target="_blank">FACEIO - Facial Authentication for the Web &nearr;</a>
                   </div>
                 </div>
               </div>
-              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-apeTColor focus:outline-none lg:p-0" href="vision-llm-api-playground/">
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="vision-llm-api-playground/">
                 <span class="block h-2 w-2 shrink-0 rounded-full border border-[#BFEA43] bg-[#BFEA43] transition-all group-hover:bg-transparent"></span>
                 Vision Play &nearr;
               </a>
-              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-apeTColor focus:outline-none lg:p-0" href="ekyc/">
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="ekyc/">
                 <span class="block h-2 w-2 shrink-0 rounded-full border border-[#EA4393] bg-[#EA4393] transition-all group-hover:bg-transparent"></span>
                 eKYC APIs &nearr;
               </a>
               <!-- Online Creativity dropdown link -->
               <div class="hs-dropdown group cursor-pointer p-2 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:px-0 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
-                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-apeTColor focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                   <span class="block h-2 w-2 shrink-0 rounded-full border border-[#43AEEA] bg-[#43AEEA] transition-all group-hover:bg-transparent"></span>
                   Online Creativity
                   <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
                 </button>
                 <!-- Dropdown menu -->
-                <div class="hs-dropdown-menu ape-header-gradient-theme top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
+                <div class="hs-dropdown-menu header-gradient-bg top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
                   <div class="space-y-1 py-1 lg:px-1">
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-apeTColor focus:outline-none" href="annotate">Annotate - Image Annotation & Labelling</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-apeTColor focus:outline-none" href="creative-toolbox">Creative Toolbox</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-apeTColor focus:outline-none" href="mockup-screenshot-editor">Mockup & Screenshot AI Editor</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-apeTColor focus:outline-none" href="ai-photo-editor">AI Photo Editor</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-apeTColor focus:outline-none" href="bulk-image-video-background-removal-tool-apis">Bulk Image & Video Background Removal</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-apeTColor focus:outline-none" href="tilemap-2d-level-editor">Tilemap & 2D Level Editor</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="annotate">Annotate - Image Annotation & Labelling</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="creative-toolbox">Creative Toolbox</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="mockup-screenshot-editor">Mockup & Screenshot AI Editor</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="ai-photo-editor">AI Photo Editor</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="bulk-image-video-background-removal-tool-apis">Bulk Image & Video Background Removal</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="tilemap-2d-level-editor">Tilemap & 2D Level Editor</a>
                     <!-- NEW TOOL ADD -->
                   </div>
                 </div>
               </div>
-              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-apeTColor focus:outline-none lg:p-0" href="pricing">
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="pricing">
                 <span class="block h-2 w-2 shrink-0 rounded-full border border-[#4643EA] bg-[#4643EA] transition-all group-hover:bg-transparent"></span>
                 Pricing
               </a>
@@ -126,7 +126,7 @@
 
             <!-- Theme / Signup / PixLab Console buttons -->
             <div class="flex items-center gap-4 lg:hidden">
-              <button class="theme-toggler hidden items-center text-apeTColor lg:flex">
+              <button class="theme-toggler hidden items-center text-white lg:flex">
                 <i class="uil uil-moon text-xl"></i>
               </button>
               <div class="flex h-11 gap-3 py-1">
@@ -138,7 +138,7 @@
 
         <!-- Theme / Signup / PixLab Console buttons -->
         <div class="nav-buttons hidden h-full items-center gap-4 px-1.5 py-0.5 lg:flex">
-          <button class="theme-toggler hidden items-center text-apeTColor lg:flex">
+          <button class="theme-toggler hidden items-center text-white lg:flex">
             <i class="uil uil-moon text-xl"></i>
           </button>
           <div class="flex h-full gap-3">
@@ -150,36 +150,38 @@
 
     <main class="leading-8">
       <!-- Hero Section -->
-      <section class="hero-section lg:h-screen h-[992px]">
-        <div class=" bg-apeBackground ">
-          <div class="absolute flex h-full w-full items-center px-5 pt-80 lg:pt-10 text-white">
+      <section class="hero-section">
+        <div id="particles-js" class="lg:h-screen h-[840px] bg-[#0b0e13]">
+          <div class="absolute flex h-full w-full items-center px-5 max-lg:pt-64 pt-10 text-white">
             <div class="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between gap-10 lg:flex-row">
               <!-- Hero Text -->
-              <div class="relative z-10 flex flex-col items-center text-center lg:block lg:max-w-screen-sm lg:text-left">
+              <div class="relative flex-1 z-10 flex flex-col items-center text-center lg:block lg:max-w-screen-sm lg:text-left">
                 <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold max-sm:hidden">PixLab PDF & Media Template Engine</p>
-                <!-- <h1 class="mt-5 text-3xl font-medium leading-[1.2] text-apeTColor lg:text-5xl">Easily create custom <br /><span class="playfair-font ape-gradient-text" id="changing-word">legal contracts</span></h1> -->
-                <h1 class="mt-5 text-3xl font-semibold leading-[1.2] text-apeTColor lg:text-5xl">Automate <span class="playfair-font ape-gradient-text">PDF and Image Creation</span></h1>
-                <p class="mt-5 text-muted">Harness the full power of PixLab's PDF and image generation engine. Effortlessly automate media creation and customization with our powerful API, designed to meet the highest standards of quality, speed, and versatility. From high-resolution PDFs to pixel-perfect images, streamline your processes like never before.</p>
-                <!-- <div class="mt-5 space-y-2 text-muted">
-                  <div class="flex items-center space-x-2">
+                <h1 class="mt-5 text-3xl font-semibold leading-[1.2] text-[#faf8f5] lg:text-5xl">Automate <span class="ape-gradient-text">PDF and Image Creation</span></h1>
+                <p class="mt-5 text-[#d4d4d4]">Harness the full power of PixLab's PDF and image generation engine. Effortlessly automate media creation and customization with our powerful API, designed to meet the highest standards of quality, speed, and versatility. From high-resolution PDFs to pixel-perfect images, streamline your processes like never before.</p>
+                <div class="mt-5 space-y-2 text-[#d4d4d4] text-left leading-[1.2]">
+                  <div class="flex items-start space-x-2">
                     <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                    <span>Flexible Template Customization: Design once, render as needed.</span>
+                    <span>Create dynamic images and PDFs from customizable templates.</span>
                   </div>
-                  <div class="flex items-center space-x-2">
+                  <div class="flex items-start space-x-2">
                     <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                    <span>API-Powered Automation: Scale your workflows without the hassle.</span>
+                    <span>Automate scalable content creation effortlessly.</span>
                   </div>
-                  <div class="flex items-center space-x-2">
+                  <div class="flex items-start space-x-2">
                     <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                    <span>Multi-Format Support: Generate PDFs, images, and more effortlessly.</span>
+                    <span>Seamlessly integrate with our API or use no-code solutions.</span>
                   </div>
-                </div> -->
+                </div>
 
-                <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-apeTColor bg-apeTColor sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-apeBackground transition-all duration-500 hover:bg-transparent hover:text-apeTColor" href="https://console.pixlab.io" target="_blank">Get API Access. <i class="uil uil-arrow-up-right lg:text-lg"></i></a>
+                <!-- <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-[#faf8f5] bg-[#faf8f5] sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[14px] font-medium text-black transition-all duration-500 hover:bg-transparent hover:text-[#faf8f5]" href="https://console.pixlab.io" target="_blank">Get API Access. <i class="uil uil-arrow-up-right lg:text-lg"></i></a> -->
+                <div class="flex gap-5">
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-[#faf8f5] bg-[#faf8f5] p-3 sm:text-lg text-[14px] font-medium text-black transition-all duration-500 hover:bg-transparent hover:text-[#faf8f5]" href="#" target="_blank">Read more</a>
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-[#faf8f5] bg-transparent p-3 sm:text-lg text-[14px] font-medium text-[#faf8f5] transition-all duration-500 hover:bg-[#faf8f5] hover:text-black" href="#" target="_blank">Learn more</a>
+                 </div>
               </div>
               <div class="flex-1 w-full relative">
-                <!-- <img class="relative z-10 w-full rounded-2xl border border-apePrimary" src="assets/images/ai-photo-editor__hero.png" alt="AI Photo Editor" /> -->
-                <div class="bg-gray-800 overflow-x-auto shadow-lg rounded-lg">
+                <div class="bg-gray-800 overflow-x-auto shadow-lg rounded-lg text-sm sm:w-[500px] w-full mx-auto">
                   <div class="flex items-center p-2 border-b border-slate-500">
                     <div class="px-1">
                       <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#ff605c]"></span>
@@ -192,18 +194,20 @@
                     </div>
                   </div>
                     <!-- Card content -->
-                    <div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl"><code class="text-nowrap">{
-  "<span class="json-key">template</span>": <span class="json-number">TEMPLATE_ID</span>,
-  "<span class="json-key">layers</span>": {
-    "<span class="json-key">title</span>": {
-      "<span class="json-key">text</span>": "<span class="json-string">The Evolution of Gaming Consoles</span>",
-      "<span class="json-key">color</span>": "<span class="json-string">#0099dd</span>"
-    },
-    "<span class="json-key">cover</span>": {
-      "<span class="json-key">image_url</span>": "<span class="json-string">https://pathtomyphoto.com/mario.jpg</span>"
+                    <div class="p-4 whitespace-pre-wrap text-gray-200"><code class="text-nowrap"><span class="js-keyword">fetch</span>(<span class="js-string">"https://api.pixlab.io/template"</span>, {
+  <span class="js-key">method</span>: <span class="js-string">"POST"</span>,
+  <span class="js-key">headers</span>: { <span class="js-string">"Content-Type"</span>: <span class="js-string">"application/json"</span> },
+  <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
+    <span class="js-key">template_id</span>: <span class="js-string">"YOUR_TEMPLATE_ID"</span>,
+    <span class="js-key">output</span>: <span class="js-string">"image"</span>,
+    <span class="js-key">data</span>: {
+      <span class="js-string">"title"</span>: <span class="js-string">"Custom Title"</span>,
+      <span class="js-string">"image_url"</span>: <span class="js-string">"https://example.com/image.jpg"</span>
     }
-  }
-}</code></div>
+  })
+})
+.<span class="js-function">then</span>(<span class="js-keyword">response</span> => <span class="js-keyword">response</span>.<span class="js-function">json</span>())
+.<span class="js-function">then</span>(<span class="js-keyword">data</span> => <span class="js-keyword">console.log</span>(<span class="js-string">"Image URL:"</span>, <span class="js-keyword">data</span>.<span class="js-key">url</span>));</code></div>
                 </div>
                 <!-- <div class="ape-gradient-bg-theme z-1 absolute inset-0 h-full w-full opacity-30 blur-xl lg:blur-3xl"></div> -->
               </div>
@@ -212,11 +216,6 @@
         </div>
 
       </section>
-
-      <!-- Separator (Gradient Line) -->
-      <div class="mx-auto w-full max-w-screen-xl px-5">
-        <div class="gradient-graph-line mb-10"></div>
-      </div>
 
       <!-- Logo's section -->
       <section>
@@ -228,29 +227,49 @@
                with leading no-code platforms
             </h2>
 
-            <p class="mt-5 text-center text-apeTGray sm:w-1/2">  Utilize platforms like <b class="font-medium text-tColor">Zapier, Make, Airtable, and other popular no-code tools</b> to integrate with us and streamline your processes.</p>
+            <p class="mt-5 text-center text-apeTGray sm:w-1/2">Utilize platforms like <b class="font-medium text-tColor">Zapier, Make, Airtable, and other popular no-code tools</b> to integrate with us and streamline your processes.</p>
+           <div class="brands-slider">
+            <div class="brands-slider-track">
+              <div class="slide">
+                <img class="dark-logo" src="assets/images/zapier-logo.webp" alt="Zapier Logo">
+              </div>
+              <div class="slide">
+                <img class="dark-logo" src="assets/images/make-logo.webp" alt="Make Logo">
+              </div>
+              <div class="slide">
+                <img class="dark-logo" src="assets/images/bubble-logo.webp" alt="Bubble Logo">
+              </div>
+              <div class="slide">
+                <img class="dark-logo" src="assets/images/n8n-logo.webp" alt="n8n Logo">
+              </div>
+              <div class="slide">
+                <img class="dark-logo" src="assets/images/airtable-logo.webp" alt="Airtable Logo">
+              </div>
+              <div class="slide">
+                <img class="dark-logo" src="assets/images/activepieces-logo.webp" alt="Activepieces Logo">
+              </div>
+              <div class="slide">
+                <img class="dark-logo" src="assets/images/zapier-logo.webp" alt="Zapier Logo">
+              </div>
+              <div class="slide">
+                <img class="dark-logo" src="assets/images/make-logo.webp" alt="Make Logo">
+              </div>
+              <div class="slide">
+                <img class="dark-logo" src="assets/images/bubble-logo.webp" alt="Bubble Logo">
+              </div>
+              <div class="slide">
+                <img class="dark-logo" src="assets/images/n8n-logo.webp" alt="n8n Logo">
+              </div>
+              <div class="slide">
+                <img class="dark-logo" src="assets/images/airtable-logo.webp" alt="Airtable Logo">
+              </div>
+              <div class="slide">
+                <img class="dark-logo" src="assets/images/activepieces-logo.webp" alt="Activepieces Logo">
+              </div>
 
-            <div class="grid gap-6 grid-cols-3 lg:grid-cols-6 md:gap-8 my-10">
-              <div>
-                <img class="dark-logo" src="https://templated.io/_astro/zapier-logo.DelhYpXQ_v0Cxf.webp" width="140">
-              </div>
-              <div>
-                <img class="dark-logo" src="https://templated.io/_astro/make-logo.fViJX5eS_Z194jAY.webp" width="140">
-              </div>
-              <div>
-                <img class="dark-logo" src="https://templated.io/_astro/bubble-logo.f3pQ-gre_1LxyGx.webp" width="140">
-              </div>
-              <div>
-                <img class="dark-logo" src="https://templated.io/_astro/n8n-logo.CxJH-eO-_Z1jdAEh.webp" width="140">
-              </div>
-              <div>
-                <img class="dark-logo" src="https://templated.io/_astro/airtable-logo.Cu_4HMKZ_Z5VYwe.webp" width="140">
-              </div>
-              <div>
-                <img class="dark-logo" src="https://templated.io/_astro/activepieces-logo.BFfmE6j3_Z2fjGcW.webp" width="140">
-              </div>
-              
+
             </div>
+           </div>
           </div>
           
         </div>
@@ -262,11 +281,11 @@
           <div class="flex md:flex-row flex-col items-start gap-16">
             <div class="flex-1">
               <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold max-sm:hidden">PIXLAB MEDIA TEMPLATES</p>
-              <h1 class="mt-5 text-3xl max-md:text-center font-semibold leading-[1.2] text-apeTColor ">Generate <span class="ape-gradient-text">Dynamic Media,</span><br><span class="playfair-font">Effortlessly</span></h1>
+              <h1 class="mt-5 text-3xl max-md:text-center font-semibold leading-[1.2] text-apeTColor ">Generate <span class="ape-gradient-text">Dynamic Media,</span><br>Effortlessly</h1> 
               <p class="mt-5 text-muted">Creating customized media assets and documents can be complex and time-consuming. With PixLab's <a href="rest-api" class="link">API</a>, generate high-quality, dynamic PDF and media templates in minutes, without complicated design tools or manual adjustments. Bring your unique brand to life with customizable templates for every purpose.</p>
               <div class="flex gap-5">
-                <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-apePrimary border-2 border-apePrimary sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-apePrimary" href="https://console.pixlab.io">Get Started</a>
-                <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-transparent border-2 border-apePrimary sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-apePrimary transition-all duration-500 hover:bg-apePrimary hover:text-white" href="#how-it-works">See how it works</a>
+                <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-apePrimary border-2 border-apePrimary sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-apePrimary" href="https://console.pixlab.io">Read more</a>
+                <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-transparent border-2 border-apePrimary sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-apePrimary transition-all duration-500 hover:bg-apePrimary hover:text-white" href="#how-it-works">Learn more</a>
               </div>
             </div>
             <div class="flex-1">
@@ -329,10 +348,12 @@
             <div class="flex flex-col items-start gap-16 md:flex-row-reverse pb-16">
               <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
                 <div class="mt-5">
-                  <h2 class="text-3xl font-semibold text-apeTColor">Introduction to <span class="ape-gradient-text">Image and PDF</span> <span class="playfair-font">Generation API</span></h2>
+                  <h2 class="text-3xl font-semibold text-apeTColor">Introduction to  <span class="ape-gradient-text">Image and PDF </span>Generation API</h2>
                   <p class="mt-5 text-apeTColor">Our Image and PDF Generation API is designed to make media generation seamless, supporting popular programming languages such as Python, JavaScript, and Ruby. Whether you're automating invoice generation or creating marketing visuals, our API handles it all. The straightforward JSON-based requests simplify integration, enabling developers to create customized outputs quickly and easily.</p>
-                  
-                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-apePrimary px-4 py-3 text-[15px] font-medium text-apeBackground transition-all duration-500 hover:bg-apeSecondary" href="#">Explore Our API</a>
+                  <div class="flex gap-5">
+                    <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-apePrimary border-2 border-apePrimary px-3 py-1.5 text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-apePrimary" href="#">Read more</a>
+                    <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-transparent border-2 border-apePrimary px-3 py-1.5 text-[15px] font-medium text-apePrimary transition-all duration-500 hover:bg-apePrimary hover:text-white" href="#">Learn more</a>
+                  </div>
                 </div>
               </div>
               <div class="flex flex-1 shadow-lg max-w-full w-full">
@@ -349,7 +370,7 @@
                     </div>
                   </div>
                     <!-- Card content -->
-<div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-full xl:max-w-2xl"><code class="text-nowrap"><span class="js-keyword">fetch</span>(<span class="js-string">"https://api.pixlab.com/v1/render"</span>, {
+<div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-full xl:max-w-2xl leading-[1.6]"><code class="text-nowrap"><span class="js-keyword">fetch</span>(<span class="js-string">"https://api.pixlab.io/template"</span>, {
   <span class="js-key">method</span>: <span class="js-string">"POST"</span>,
   <span class="js-key">headers</span>: { <span class="js-string">"Content-Type"</span>: <span class="js-string">"application/json"</span> },
   <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
@@ -370,7 +391,7 @@
             <div class="flex flex-col items-start gap-16 md:flex-row pb-16">
               <div class="flex flex-1 flex-col items-center self-start text-center md:items-start md:text-start">
                 <div class="mt-5">
-                  <h2 class="text-3xl font-semibold text-apeTColor"><span class="ape-gradient-text">Advanced Customization</span> for Real-Time <span class="playfair-font">Media Generation</span></h2>
+                  <h2 class="text-3xl font-semibold text-apeTColor"><span class="ape-gradient-text">Advanced Customization</span> for Real-Time Media Generation</h2>
                   <p class="mt-5 text-apeTColor">For more advanced needs, our Real-Time Media Generation API offers unparalleled customization. Tailor every detail, from layer-specific colors to precise text placement, creating a unique, branded experience. This API is perfect for high-demand applications, ensuring each document or image meets your specific design requirements in real time. With robust scalability, it adapts to your growing business needs, making it ideal for enterprises.</p>
                   <!-- <div class="mt-5 space-y-2 text-muted">
                     <div class="flex items-center space-x-2">
@@ -386,7 +407,10 @@
                       <span>Available libraries: Python, Node, Java, PHP, Ruby, and more on the way!</span>
                     </div>
                   </div> -->
-                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-apePrimary px-4 py-3 text-[15px] font-medium text-apeBackground transition-all duration-500 hover:bg-apeSecondary" href="api-endpoints">Check our API Docs</a>
+                 <div class="flex gap-5">
+                    <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-apePrimary border-2 border-apePrimary px-3 py-1.5 text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-apePrimary" href="#">Read more</a>
+                    <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-transparent border-2 border-apePrimary px-3 py-1.5 text-[15px] font-medium text-apePrimary transition-all duration-500 hover:bg-apePrimary hover:text-white" href="#">Learn more</a>
+                  </div>
                 </div>
               </div>
               <div class="flex flex-1 shadow-lg max-w-full w-full">
@@ -403,7 +427,7 @@
                     </div>
                   </div>
                     <!-- Card content -->
-<div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl"><code class="text-nowrap"><span class="js-keyword">fetch</span>('https://api.templated.io/v1/render', {
+<div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl leading-[1.6]"><code class="text-nowrap"><span class="js-keyword">fetch</span>(<span class="js-string">'https://api.pixlab.io/template'</span>, {
   <span class="js-key">method</span>: <span class="js-string">'POST'</span>,
   <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
     <span class="js-string">"template"</span>: TEMPLATE_ID,
@@ -439,7 +463,7 @@
 
       <!-- How it works section -->
       <section>
-        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10" id="how-it-works">
           <div class="relative mx-auto px-4 md:px-6 text-apeTColor max-w-3xl">
           <div class="mx-auto flex flex-col gap-8 md:gap-12">
             <div class="w-full md:self-center md:py-4">
@@ -640,7 +664,7 @@
                 <div class="p-4 rounded-b-xl md:px-7">
                   <div class="flex items-center gap-x-3">
                     <div class="shrink-0">
-                      <img class="size-8 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar">
+                      <img class="size-8 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full" src="assets/images/face1.jpg" alt="Avatar">
                     </div>
       
                     <div class="grow">
@@ -668,7 +692,7 @@
                 <div class="p-4 rounded-b-xl md:px-7">
                   <div class="flex items-center gap-x-3">
                     <div class="shrink-0">
-                      <img class="size-8 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar">
+                      <img class="size-8 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full" src="assets/images/face1.jpg" alt="Avatar">
                     </div>
       
                     <div class="grow">
@@ -696,7 +720,7 @@
                 <div class="p-4 rounded-b-xl md:px-7">
                   <div class="flex items-center gap-x-3">
                     <div class="shrink-0">
-                      <img class="size-8 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar">
+                      <img class="size-8 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full" src="assets/images/face1.jpg" alt="Avatar">
                     </div>
       
                     <div class="grow">
@@ -724,7 +748,7 @@
                 <div class="p-4 rounded-b-xl md:px-7">
                   <div class="flex items-center gap-x-3">
                     <div class="shrink-0">
-                      <img class="size-8 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Avatar">
+                      <img class="size-8 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full" src="assets/images/face1.jpg" alt="Avatar">
                     </div>
       
                     <div class="grow">

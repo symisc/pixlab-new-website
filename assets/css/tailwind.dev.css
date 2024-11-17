@@ -170,7 +170,7 @@ body.dark-theme .bg-gradient-theme {
   background: #fff;
 }
 
-.gradient-button:hover > .bg-gradient-theme {
+.gradient-button:hover>.bg-gradient-theme {
   color: #fff;
   background: transparent;
 }
@@ -276,7 +276,8 @@ body.dark-theme .border-dark {
 body.dark-theme .border-b-dark {
   @apply border-b border-neutral-700;
 }
-body.dark-theme .divide-dark{
+
+body.dark-theme .divide-dark {
   @apply divide-neutral-700
 }
 
@@ -349,29 +350,6 @@ body.dark-theme .pricing-brands-carousel .brands-wrapper img {
     background: transparent;
   }
 }
-
-/* Pdf media template engine styling */
-
-body.pdf-media-template-engine{
-  @apply bg-apeBackground
-}
-.pdf-media-template-engine .footer-link:hover {
-  @apply text-apePrimary
-}
-#changing-word {
-  display: inline-block;
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;  /* Slightly slower fade effect */
-}
-.json-key { color: #d4d4d4; } /* Light gray for keys */
-    .json-string { color: #a3e635; } /* Light green for strings */
-    .json-number { color: #f87171; } /* Red for numbers */
-
-    .js-keyword { color: #f59e0b; } /* Amber for JS keywords */
-    .js-key { color: #d4d4d4; } /* Light gray for object keys */
-    .js-string { color: #a3e635; } /* Light green for strings */
-    .js-number { color: #f87171; } /* Red for numbers */
-
 
 /* AI Photo Editor Stylings */
 
@@ -493,7 +471,7 @@ body.dark-theme .ape-header-gradient-theme {
 
 /* App UI/UX Code Styling Start */
 .app-ui-ux-code nav :where(.nav-link, .theme-toggler):hover,
-.app-ui-ux-code nav .hs-dropdown:hover > button {
+.app-ui-ux-code nav .hs-dropdown:hover>button {
   @apply text-aucPrimary;
 }
 
@@ -532,3 +510,126 @@ body.dark-theme .ape-header-gradient-theme {
 }
 
 /* App UI/UX Code Styling End */
+
+
+/* Pdf media template engine styling */
+
+body.template-pdf-media-engine {
+  @apply bg-apeBackground
+}
+
+body.template-pdf-media-engine nav.tpme-navbar :where(.nav-link, .theme-toggler):hover,
+body.template-pdf-media-engine nav .hs-dropdown:hover>button {
+  @apply text-apePrimary;
+}
+
+.template-pdf-media-engine .footer-link:hover {
+  @apply text-apePrimary
+}
+
+#changing-word {
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  /* Slightly slower fade effect */
+}
+
+.json-key {
+  color: #d4d4d4;
+}
+
+/* Light gray for keys */
+.json-string {
+  color: #a3e635;
+}
+
+/* Light green for strings */
+.json-number {
+  color: #f87171;
+}
+
+/* Red for numbers */
+
+.js-keyword {
+  color: #f59e0b;
+}
+
+/* Amber for JS keywords */
+.js-key {
+  color: #d4d4d4;
+}
+
+/* Light gray for object keys */
+.js-string {
+  color: #a3e635;
+}
+
+/* Light green for strings */
+.js-number {
+  color: #f87171;
+}
+
+/* Red for numbers */
+
+.brands-slider {
+  overflow: hidden;
+  width: 100%;
+  padding: 70px 0;
+  position: relative;
+}
+
+.brands-slider::before,
+.brands-slider::after {
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+}
+
+.brands-slider::before {
+  left: 0;
+  background: linear-gradient(to left, transparent, var(--color-background));
+}
+
+.brands-slider::after {
+  right: 0;
+  background: linear-gradient(to right, transparent, var(--color-background));
+}
+
+
+.brands-slider-track {
+  display: flex;
+  gap: 50px;
+  animation: scroll 20s linear infinite;
+  width: calc(150px * 12);
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 150px;
+  /* Adjust the size of each logo */
+  margin: 0 10px;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-150px * 5));
+  }
+}
+
+@media (max-width: 768px) {
+  .brands-slider-track {
+    animation: scroll 10s linear infinite;
+  }
+}
