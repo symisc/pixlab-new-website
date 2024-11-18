@@ -148,30 +148,32 @@
   </header>
   <main class="leading-8">
     <section class="hero-section">
-      <div id="particles-js" class="lg:h-screen h-[840px] bg-[#0b0e13]">
-        <div class="absolute flex h-full w-full items-center px-5 max-lg:pt-64 pt-10 text-white">
-          <div class="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between gap-10 lg:flex-row">
+      <div id="particles-js" class="lg:h-[95vh] h-[840px] bg-[#0b0e13]">
+        <div class="absolute flex h-full w-full items-center px-5 pt-10 text-white">
+          <div class="mx-auto flex w-full max-w-screen-xl flex-col items-start justify-between gap-10 lg:flex-row">
             <!-- Hero Text -->
-            <div class="relative flex-1 z-10 flex flex-col items-center text-center lg:block lg:max-w-screen-sm lg:text-left mt-14">
-              <h1 class="mt-5 text-3xl font-semibold leading-[1.2] text-[#faf8f5] lg:text-5xl">Automate <span class="ape-gradient-text">PDF and Image Creation</span></h1>
-              <p class="mt-5 text-[#d4d4d4]">Harness the full power of PixLab's PDF and image generation engine. Effortlessly automate media creation and customization with our powerful API, designed to meet the highest standards of quality, speed, and versatility. From high-resolution PDFs to pixel-perfect images, streamline your processes like never before.</p>
-              <div class="mt-5 space-y-2 text-[#d4d4d4] text-left leading-[1.2]">
-                <div class="flex items-start space-x-2">
-                  <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                  <span>Create dynamic images and PDFs from customizable templates.</span>
-                </div>
-                <div class="flex items-start space-x-2">
-                  <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                  <span>Automate scalable content creation effortlessly.</span>
-                </div>
-                <div class="flex items-start space-x-2">
-                  <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                  <span>Seamlessly integrate with our API or use no-code solutions.</span>
+            <div class="relative flex-1 z-10 flex flex-col items-center text-center lg:block lg:max-w-screen-sm lg:text-left">
+              <h1 class="text-3xl font-semibold leading-[1.2] text-[#faf8f5] lg:text-5xl">Automate <span class="ape-gradient-text">PDF and Image Creation</span></h1>
+              <div class="tpme-lead">
+                <p class="mt-5 text-[#d4d4d4]">Harness the full power of PixLab's PDF and image generation engine. Effortlessly automate media creation and customization with our powerful API, designed to meet the highest standards of quality, speed, and versatility. From high-resolution PDFs to pixel-perfect images, streamline your processes like never before.</p>
+                <div class="mt-5 space-y-2 text-[#d4d4d4] text-left leading-[1.2]">
+                  <div class="flex items-start space-x-2">
+                    <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    <span>Create dynamic images and PDFs from customizable templates.</span>
+                  </div>
+                  <div class="flex items-start space-x-2">
+                    <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    <span>Automate scalable content creation effortlessly.</span>
+                  </div>
+                  <div class="flex items-start space-x-2">
+                    <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    <span>Seamlessly integrate with our API or use no-code solutions.</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="flex-1 w-full relative">
-              <div class="bg-gray-800 overflow-x-auto shadow-lg rounded-lg text-sm sm:w-[500px] w-full mx-auto">
+              <div class="relative z-10 bg-gray-800 overflow-x-auto shadow-lg rounded-lg text-sm sm:w-[500px] w-full mx-auto">
                 <div class="flex items-center p-2 border-b border-slate-500">
                   <div class="px-1">
                     <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#ff605c]"></span>
@@ -185,19 +187,19 @@
                 </div>
                 <!-- Card content -->
                 <div class="p-4 whitespace-pre-wrap text-gray-200"><code class="text-nowrap"><span class="js-keyword">fetch</span>(<span class="js-string">"https://api.pixlab.io/template"</span>, {
-                  <span class="js-key">method</span>: <span class="js-string">"POST"</span>,
-                  <span class="js-key">headers</span>: { <span class="js-string">"Content-Type"</span>: <span class="js-string">"application/json"</span> },
-                  <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
-                    <span class="js-key">template_id</span>: <span class="js-string">"YOUR_TEMPLATE_ID"</span>,
-                    <span class="js-key">output</span>: <span class="js-string">"image"</span>,
-                    <span class="js-key">data</span>: {
-                      <span class="js-string">"title"</span>: <span class="js-string">"Custom Title"</span>,
-                      <span class="js-string">"image_url"</span>: <span class="js-string">"https://example.com/image.jpg"</span>
-                    }
-                  })
-                })
-                .<span class="js-function">then</span>(<span class="js-keyword">response</span> => <span class="js-keyword">response</span>.<span class="js-function">json</span>())
-                .<span class="js-function">then</span>(<span class="js-keyword">data</span> => <span class="js-keyword">console.log</span>(<span class="js-string">"Image URL:"</span>, <span class="js-keyword">data</span>.<span class="js-key">url</span>));</code></div>
+  <span class="js-key">method</span>: <span class="js-string">"POST"</span>,
+  <span class="js-key">headers</span>: { <span class="js-string">"Content-Type"</span>: <span class="js-string">"application/json"</span> },
+  <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
+    <span class="js-key">template_id</span>: <span class="js-string">"YOUR_TEMPLATE_ID"</span>,
+    <span class="js-key">output</span>: <span class="js-string">"image"</span>,
+    <span class="js-key">data</span>: {
+      <span class="js-string">"title"</span>: <span class="js-string">"Custom Title"</span>,
+      <span class="js-string">"image_url"</span>: <span class="js-string">"https://example.com/image.jpg"</span>
+    }
+  })
+})
+.<span class="js-function">then</span>(<span class="js-keyword">response</span> => <span class="js-keyword">response</span>.<span class="js-function">json</span>())
+.<span class="js-function">then</span>(<span class="js-keyword">data</span> => <span class="js-keyword">console.log</span>(<span class="js-string">"Image URL:"</span>, <span class="js-keyword">data</span>.<span class="js-key">url</span>));</code></div>
               </div>
               <div class="ape-gradient-bg-theme z-1 absolute inset-0 h-full w-full opacity-30 blur-xl lg:blur-3xl mb-3"></div>
               <a href="https://console.pixlab.io" target="_blank" class="mt-5 gradient-button flex h-12 w-full items-center justify-between gap-x-3 rounded-xl pe-3 ps-4 lg:h-14" title="Connect to the PixLab Console and elevate your projects with powerful Vision and ID Scan APIs...">
@@ -209,95 +211,72 @@
         </div>
       </div>
     </section>
-    <section>
-      <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
-        <!-- Social Bar -->
-        <div class="flex flex-wrap items-center justify-between gap-5 pb-3">
-          <div class="flex flex-wrap items-center gap-5">
-            <img class="dark-logo w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" title="Machine Vision & Media Processing APIs" />
-            <p class="text-sm text-muted">
-              <span>Version 2.197</span>
-              <span>(<a href="https://blog.pixlab.io/2020/08/pixlab-api-1972-released" target="_blank" class="text-primary hover:text-secondary">Release Notes &nearr;</a>)</span>
-            </p>
-          </div>
-          
-          <!-- AddToAny BEGIN -->
-          <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-            <a class="a2a_button_google_gmail"></a>
-            <a class="a2a_button_email"></a>
-            <a class="a2a_button_linkedin"></a>
-            <a class="a2a_button_twitter"></a>
-            <a class="a2a_button_facebook_messenger"></a>
-            <a class="a2a_button_facebook"></a>
-            <a class="a2a_button_hacker_news"></a>
-          </div>
-          <script async src="https://static.addtoany.com/menu/page.js"></script>
-          <!-- AddToAny END -->
-        </div>
-        <div class="gradient-graph-line"></div>
-        <p class="gradient-text-animation mb-3 mt-3 text-3xl font-bold">PDF Generation API & Media Template Engine</p>
-        <div class="flex flex-col items-center mt-4">
-          <h2 class="text-center text-3xl font-semibold leading-snug text-apeTColor lg:max-w-[80%] lg:text-4xl">
-            <span class="ape-gradient-text">Effortlessly connect</span> <br />
-            with leading no-code platforms
-          </h2>
-
-          <p class="mt-5 text-center text-apeTGray sm:w-1/2">Utilize platforms like <b class="font-medium text-tColor">Zapier, Make, Airtable, and other popular no-code tools</b> to integrate with us and streamline your processes.</p>
-          <div class="brands-slider">
-            <div class="brands-slider-track">
-              <div class="slide">
-                <img class="dark-logo" src="assets/images/zapier-logo.webp" alt="Zapier Logo">
-              </div>
-              <div class="slide">
-                <img class="dark-logo" src="assets/images/make-logo.webp" alt="Make Logo">
-              </div>
-              <div class="slide">
-                <img class="dark-logo" src="assets/images/bubble-logo.webp" alt="Bubble Logo">
-              </div>
-              <div class="slide">
-                <img class="dark-logo" src="assets/images/n8n-logo.webp" alt="n8n Logo">
-              </div>
-              <div class="slide">
-                <img class="dark-logo" src="assets/images/airtable-logo.webp" alt="Airtable Logo">
-              </div>
-              <div class="slide">
-                <img class="dark-logo" src="assets/images/activepieces-logo.webp" alt="Activepieces Logo">
-              </div>
-              <div class="slide">
-                <img class="dark-logo" src="assets/images/zapier-logo.webp" alt="Zapier Logo">
-              </div>
-              <div class="slide">
-                <img class="dark-logo" src="assets/images/make-logo.webp" alt="Make Logo">
-              </div>
-              <div class="slide">
-                <img class="dark-logo" src="assets/images/bubble-logo.webp" alt="Bubble Logo">
-              </div>
-              <div class="slide">
-                <img class="dark-logo" src="assets/images/n8n-logo.webp" alt="n8n Logo">
-              </div>
-              <div class="slide">
-                <img class="dark-logo" src="assets/images/airtable-logo.webp" alt="Airtable Logo">
-              </div>
-              <div class="slide">
-                <img class="dark-logo" src="assets/images/activepieces-logo.webp" alt="Activepieces Logo">
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </section>
 
     <!-- PIXLAB MEDIA TEMPLATES -->
     <section>
-      <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
-        <div class="flex md:flex-row flex-col items-start gap-16">
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <!-- Social Bar -->
+          <div class="flex flex-wrap items-center justify-between gap-5 pb-3">
+            <div class="flex flex-wrap items-center gap-5">
+              <img class="dark-logo w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" title="Machine Vision & Media Processing APIs" />
+              <p class="text-sm text-muted">
+                <span>Version 2.197</span>
+                <span>(<a href="https://blog.pixlab.io/2020/08/pixlab-api-1972-released" target="_blank" class="text-primary hover:text-secondary">Release Notes &nearr;</a>)</span>
+              </p>
+            </div>
+            
+            <!-- AddToAny BEGIN -->
+            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+              <a class="a2a_button_google_gmail"></a>
+              <a class="a2a_button_email"></a>
+              <a class="a2a_button_linkedin"></a>
+              <a class="a2a_button_twitter"></a>
+              <a class="a2a_button_facebook_messenger"></a>
+              <a class="a2a_button_facebook"></a>
+              <a class="a2a_button_hacker_news"></a>
+            </div>
+            <script async src="https://static.addtoany.com/menu/page.js"></script>
+            <!-- AddToAny END -->
+          </div>
+          <div class="gradient-graph-line"></div>
+          <p class="gradient-text-animation mb-3 mt-3 text-3xl font-bold">PDF Generation API & Media Template Engine</p>
+          <div class="sm:w-1/2 text-center mx-auto">
+            <!-- <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold max-sm:hidden">PIXLAB MEDIA TEMPLATES</p> -->
+              <h1 class="mt-5 text-3xl max-md:text-center font-semibold leading-[1.2] text-apeTColor ">Generate <span class="ape-gradient-text">Dynamic Media,</span><br>Effortlessly</h1> 
+              <p class="mt-5 text-muted">Creating customized media assets and documents can be complex and time-consuming. With PixLab's <a href="rest-api" class="link">API</a>, generate high-quality, dynamic PDF and media templates in minutes, without complicated design tools or manual adjustments. Bring your unique brand to life with customizable templates for every purpose.</p>
+              
+          </div>
+        <div class="flex md:flex-row flex-col items-start gap-16 mt-7">
           <div class="flex-1">
-            <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold max-sm:hidden">PIXLAB MEDIA TEMPLATES</p>
-            <h1 class="mt-5 text-3xl max-md:text-center font-semibold leading-[1.2] text-apeTColor ">Generate <span class="ape-gradient-text">Dynamic Media,</span><br>Effortlessly</h1> 
-            <p class="mt-5 text-muted">Creating customized media assets and documents can be complex and time-consuming. With PixLab's <a href="rest-api" class="link">API</a>, generate high-quality, dynamic PDF and media templates in minutes, without complicated design tools or manual adjustments. Bring your unique brand to life with customizable templates for every purpose.</p>
+            
+             <div class="min-w-full bg-gray-800 overflow-x-auto rounded-lg">
+              <div class="flex items-center p-2 border-b border-slate-500">
+                <div class="px-1">
+                  <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#ff605c]"></span>
+                </div>
+                <div class="px-1">
+                  <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#ffbd44]"></span>
+                </div>
+                <div class="px-1">
+                  <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#00ca4e]"></span>
+                </div>
+              </div>
+              <!-- Card content -->
+              <div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-full xl:max-w-2xl leading-[1.6]"><code class="text-nowrap"><span class="js-keyword">fetch</span>(<span class="js-string">"https://api.pixlab.io/template"</span>, {
+  <span class="js-key">method</span>: <span class="js-string">"POST"</span>,
+  <span class="js-key">headers</span>: { <span class="js-string">"Content-Type"</span>: <span class="js-string">"application/json"</span> },
+  <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
+  <span class="js-key">template_id</span>: <span class="js-string">"YOUR_TEMPLATE_ID"</span>,
+  <span class="js-key">output</span>: <span class="js-string">"image"</span>,
+  <span class="js-key">data</span>: {
+  <span class="js-string">"title"</span>: <span class="js-string">"Custom Title"</span>,
+  <span class="js-string">"image_url"</span>: <span class="js-string">"https://example.com/image.jpg"</span>
+  }
+  })
+  })
+  .<span class="js-function">then</span>(<span class="js-keyword">response</span> => <span class="js-keyword">response</span>.<span class="js-function">json</span>())
+  .<span class="js-function">then</span>(<span class="js-keyword">data</span> => <span class="js-keyword">console.log</span>(<span class="js-string">"Image URL:"</span>, <span class="js-keyword">data</span>.<span class="js-key">url</span>));</code></div>
+            </div>
             <div class="flex gap-5">
               <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-apePrimary border-2 border-apePrimary sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-apePrimary" href="https://console.pixlab.io">Read more</a>
               <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-transparent border-2 border-apePrimary sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-apePrimary transition-all duration-500 hover:bg-apePrimary hover:text-white" href="#how-it-works">Learn more</a>
@@ -352,8 +331,65 @@
               
             </div>
           </div>
+          
         </div>
-      </section>
+    </section>
+
+    <!-- No-code Tools Section -->
+    <section>
+      <div class="flex flex-col items-center mt-4">
+        <h2 class="text-center text-3xl font-semibold leading-snug text-apeTColor lg:max-w-[80%] lg:text-4xl">
+          <span class="ape-gradient-text">Effortlessly connect</span> <br />
+          with leading no-code platforms
+        </h2>
+
+        <p class="mt-5 text-center text-apeTGray sm:w-1/2">Utilize platforms like <b class="font-medium text-tColor">Zapier, Make, Airtable, and other popular no-code tools</b> to integrate with us and streamline your processes.</p>
+        <div class="brands-slider">
+          <div class="brands-slider-track">
+            <div class="slide">
+              <img class="dark-logo" src="assets/images/zapier-logo.webp" alt="Zapier Logo">
+            </div>
+            <div class="slide">
+              <img class="dark-logo" src="assets/images/make-logo.webp" alt="Make Logo">
+            </div>
+            <div class="slide">
+              <img class="dark-logo" src="assets/images/bubble-logo.webp" alt="Bubble Logo">
+            </div>
+            <div class="slide">
+              <img class="dark-logo" src="assets/images/n8n-logo.webp" alt="n8n Logo">
+            </div>
+            <div class="slide">
+              <img class="dark-logo" src="assets/images/airtable-logo.webp" alt="Airtable Logo">
+            </div>
+            <div class="slide">
+              <img class="dark-logo" src="assets/images/activepieces-logo.webp" alt="Activepieces Logo">
+            </div>
+            <div class="slide">
+              <img class="dark-logo" src="assets/images/zapier-logo.webp" alt="Zapier Logo">
+            </div>
+            <div class="slide">
+              <img class="dark-logo" src="assets/images/make-logo.webp" alt="Make Logo">
+            </div>
+            <div class="slide">
+              <img class="dark-logo" src="assets/images/bubble-logo.webp" alt="Bubble Logo">
+            </div>
+            <div class="slide">
+              <img class="dark-logo" src="assets/images/n8n-logo.webp" alt="n8n Logo">
+            </div>
+            <div class="slide">
+              <img class="dark-logo" src="assets/images/airtable-logo.webp" alt="Airtable Logo">
+            </div>
+            <div class="slide">
+              <img class="dark-logo" src="assets/images/activepieces-logo.webp" alt="Activepieces Logo">
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    </section>
 
       <!-- PDf & Image generation -->
       <section>
@@ -386,19 +422,19 @@
                   </div>
                   <!-- Card content -->
                   <div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-full xl:max-w-2xl leading-[1.6]"><code class="text-nowrap"><span class="js-keyword">fetch</span>(<span class="js-string">"https://api.pixlab.io/template"</span>, {
-                    <span class="js-key">method</span>: <span class="js-string">"POST"</span>,
-                    <span class="js-key">headers</span>: { <span class="js-string">"Content-Type"</span>: <span class="js-string">"application/json"</span> },
-                    <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
-                      <span class="js-key">template_id</span>: <span class="js-string">"YOUR_TEMPLATE_ID"</span>,
-                      <span class="js-key">output</span>: <span class="js-string">"image"</span>,
-                      <span class="js-key">data</span>: {
-                        <span class="js-string">"title"</span>: <span class="js-string">"Custom Title"</span>,
-                        <span class="js-string">"image_url"</span>: <span class="js-string">"https://example.com/image.jpg"</span>
-                      }
-                    })
-                  })
-                  .<span class="js-function">then</span>(<span class="js-keyword">response</span> => <span class="js-keyword">response</span>.<span class="js-function">json</span>())
-                  .<span class="js-function">then</span>(<span class="js-keyword">data</span> => <span class="js-keyword">console.log</span>(<span class="js-string">"Image URL:"</span>, <span class="js-keyword">data</span>.<span class="js-key">url</span>));</code></div>
+  <span class="js-key">method</span>: <span class="js-string">"POST"</span>,
+  <span class="js-key">headers</span>: { <span class="js-string">"Content-Type"</span>: <span class="js-string">"application/json"</span> },
+  <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
+    <span class="js-key">template_id</span>: <span class="js-string">"YOUR_TEMPLATE_ID"</span>,
+    <span class="js-key">output</span>: <span class="js-string">"image"</span>,
+    <span class="js-key">data</span>: {
+      <span class="js-string">"title"</span>: <span class="js-string">"Custom Title"</span>,
+      <span class="js-string">"image_url"</span>: <span class="js-string">"https://example.com/image.jpg"</span>
+    }
+  })
+})
+.<span class="js-function">then</span>(<span class="js-keyword">response</span> => <span class="js-keyword">response</span>.<span class="js-function">json</span>())
+.<span class="js-function">then</span>(<span class="js-keyword">data</span> => <span class="js-keyword">console.log</span>(<span class="js-string">"Image URL:"</span>, <span class="js-keyword">data</span>.<span class="js-key">url</span>));</code></div>
                 </div>
               </div>
             </div>
@@ -443,26 +479,26 @@
                   </div>
                   <!-- Card content -->
                   <div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl leading-[1.6]"><code class="text-nowrap"><span class="js-keyword">fetch</span>(<span class="js-string">'https://api.pixlab.io/template'</span>, {
-                    <span class="js-key">method</span>: <span class="js-string">'POST'</span>,
-                    <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
-                      <span class="js-string">"template"</span>: TEMPLATE_ID,
-                      <span class="js-string">"format"</span>: <span class="js-string">"pdf"</span>,
-                      <span class="js-string">"layers"</span>: {
-                        <span class="js-string">"text-1"</span>: {
-                          <span class="js-string">"text"</span>: <span class="js-string">"This is my text to be rendered"</span>,
-                          <span class="js-string">"color"</span>: <span class="js-string">"#FFFFFF"</span>,
-                          <span class="js-string">"background"</span>: <span class="js-string">"#0000FF"</span>
-                        },
-                        <span class="js-string">"image-1"</span>: {
-                          <span class="js-string">"image_url"</span>: <span class="js-string">"https://pathtomyphoto.com/123.jpg"</span>
-                        }
-                      }
-                    }),
-                    <span class="js-key">headers</span>: {
-                      <span class="js-string">'Content-Type'</span>: <span class="js-string">'application/json'</span>,
-                      <span class="js-string">'Authorization'</span>: <span class="js-string">`Bearer ${API_KEY}`</span>
-                    }
-                  })</code></div>
+  <span class="js-key">method</span>: <span class="js-string">'POST'</span>,
+  <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
+    <span class="js-string">"template"</span>: TEMPLATE_ID,
+    <span class="js-string">"format"</span>: <span class="js-string">"pdf"</span>,
+    <span class="js-string">"layers"</span>: {
+      <span class="js-string">"text-1"</span>: {
+        <span class="js-string">"text"</span>: <span class="js-string">"This is my text to be rendered"</span>,
+        <span class="js-string">"color"</span>: <span class="js-string">"#FFFFFF"</span>,
+        <span class="js-string">"background"</span>: <span class="js-string">"#0000FF"</span>
+      },
+      <span class="js-string">"image-1"</span>: {
+        <span class="js-string">"image_url"</span>: <span class="js-string">"https://pathtomyphoto.com/123.jpg"</span>
+      }
+    }
+  }),
+  <span class="js-key">headers</span>: {
+    <span class="js-string">'Content-Type'</span>: <span class="js-string">'application/json'</span>,
+    <span class="js-string">'Authorization'</span>: <span class="js-string">`Bearer ${API_KEY}`</span>
+  }
+})</code></div>
                 </div>
               </div>
             </div>

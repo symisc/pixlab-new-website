@@ -523,6 +523,53 @@ body.dark-theme .ape-header-gradient-theme {
   @apply text-aucPrimary;
 }
 
+.logos-slider {
+  overflow: hidden;
+  width: 100%;
+  padding: 70px 0;
+  position: relative;
+}
+
+.logos-slider::before,
+.logos-slider::after {
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+}
+
+.logos-slider::before {
+  left: 0;
+  background: linear-gradient(to left, transparent, var(--color-background));
+}
+
+.logos-slider::after {
+  right: 0;
+  background: linear-gradient(to right, transparent, var(--color-background));
+}
+
+
+.logos-slider-track {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  animation: scroll 20s linear infinite;
+  width: calc(150px * 12);
+}
+
+.logos-slide {
+  /* flex: 1; */
+  /* width: 150px; */
+  margin: 0 10px;
+  @apply flex gap-4 items-center
+}
+
+.logos-slide img {
+  @apply w-12 object-contain
+}
+
 /* App UI/UX Code Styling End */
 
 /* Annotate Styling Start */
@@ -694,6 +741,9 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
 .js-number {
   color: #f87171;/* Red for numbers */
 }
+.tpme-lead{
+  @apply text-xl font-normal leading-relaxed antialiased
+}
 
 .brands-slider {
   overflow: hidden;
@@ -725,6 +775,7 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
 
 .brands-slider-track {
   display: flex;
+  align-items: center;
   gap: 50px;
   animation: scroll 20s linear infinite;
   width: calc(150px * 12);
