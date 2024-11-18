@@ -1,253 +1,252 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PixLab PDF & Media Template Engine.</title>
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://pixlab.io/" />
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
-    <meta name="description" content="Learn how to get started with PixLab. Explore our documentation for code samples, API usage, pricing, and more." />
-    <meta name="keywords" content="PixLab, API, documentation, code samples, getting started, pricing" />
-    <link rel="stylesheet" href="assets/css/unicons/css/line.css" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
-  <body class="template-pdf-media-engine">
-    <!-- Header/Navbar -->
-    <header class="absolute inset-x-0 top-3 z-50 mx-auto flex w-full max-w-[1320px] flex-wrap px-3 before:absolute before:inset-0 before:mx-5 before:max-w-full before:rounded-xl max-lg:before:bg-neutral-800/30 max-lg:before:backdrop-blur-lg lg:top-5 lg:flex-nowrap lg:justify-start">
-      <nav class="tpme-navbar relative mx-2 w-full max-w-screen-xl gap-3 px-3 py-1.5 lg:mx-auto lg:flex lg:items-center lg:justify-between lg:px-1 lg:py-0">
-        <div class="flex items-center justify-between lg:h-full">
-          <!-- Logo -->
-          <a class="nav-logo flex h-full flex-none rounded-md text-xl font-semibold focus:opacity-80 focus:outline-none" href="/" aria-label="PixLab">
-            <img class="w-28 object-contain lg:w-[137px]" src="assets/images/pixlab-logo-light.png" alt="PixLab Logo" />
-          </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PixLab PDF Generation & Media Template Engine</title>
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://pixlab.io/" />
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+  <meta name="description" content="Learn how to get started with PixLab. Explore our documentation for code samples, API usage, pricing, and more." />
+  <meta name="keywords" content="PixLab, API, documentation, code samples, getting started, pricing" />
+  <link rel="stylesheet" href="assets/css/unicons/css/line.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="template-pdf-media-engine">
+  <!-- Header/Navbar -->
+  <header class="absolute inset-x-0 top-3 z-50 mx-auto flex w-full max-w-[1320px] flex-wrap px-3 before:absolute before:inset-0 before:mx-5 before:max-w-full before:rounded-xl max-lg:before:bg-neutral-800/30 max-lg:before:backdrop-blur-lg lg:top-5 lg:flex-nowrap lg:justify-start">
+    <nav class="tpme-navbar relative mx-2 w-full max-w-screen-xl gap-3 px-3 py-1.5 lg:mx-auto lg:flex lg:items-center lg:justify-between lg:px-1 lg:py-0">
+      <div class="flex items-center justify-between lg:h-full">
+        <!-- Logo -->
+        <a class="nav-logo flex h-full flex-none rounded-md text-xl font-semibold focus:opacity-80 focus:outline-none" href="/" aria-label="PixLab">
+          <img class="w-28 object-contain lg:w-[137px]" src="assets/images/pixlab-logo-light.png" alt="PixLab Logo" />
+        </a>
 
-          <!-- Toggle Theme and Menu Buttons -->
-          <div class="flex items-center gap-3 lg:hidden">
-            <button class="theme-toggler flex items-center text-white">
-              <i class="uil uil-moon text-lg"></i>
-            </button>
-            <div>
-              <button type="button" class="hs-collapse-toggle flex size-8 items-center justify-center rounded-full bg-neutral-800 text-sm font-semibold text-white disabled:pointer-events-none disabled:opacity-50" id="hs-navbar-floating-dark-collapse" aria-expanded="false" aria-controls="hs-navbar-floating-dark" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-floating-dark">
-                <svg class="size-4 shrink-0 hs-collapse-open:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="3" x2="21" y1="6" y2="6" />
-                  <line x1="3" x2="21" y1="12" y2="12" />
-                  <line x1="3" x2="21" y1="18" y2="18" />
-                </svg>
-                <svg class="hidden size-4 shrink-0 hs-collapse-open:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M18 6 6 18" />
-                  <path d="m6 6 12 12" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Main Menu -->
-        <div id="hs-navbar-floating-dark" class="hs-collapse header-gradient-bg nav-menu hidden flex-1 overflow-hidden transition-all duration-300 lg:flex lg:h-full" aria-labelledby="hs-navbar-floating-dark-collapse">
-          <div class="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
-            <div class="flex w-full flex-col gap-x-3.5 py-2 lg:w-auto lg:flex-row lg:items-center lg:justify-between lg:py-0 lg:ps-6">
-              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="start">
-                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#8343EA] bg-[#8343EA] transition-all group-hover:bg-transparent"></span>
-                Get Started
-              </a>
-              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="api-portal">
-                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#EAA743] bg-[#EAA743] transition-all group-hover:bg-transparent"></span>
-                API Portal
-              </a>
-              <!-- Products & SDKs -->
-              <div class="hs-dropdown group cursor-pointer p-2 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:px-0 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
-                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                  <span class="block h-2 w-2 shrink-0 rounded-full border border-[#21db49] bg-[#21db49] transition-all group-hover:bg-transparent"></span>
-                  Products & SDKs
-                  <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
-                </button>
-                <!-- Dropdown menu -->
-                <div class="hs-dropdown-menu header-gradient-bg top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
-                  <div class="space-y-1 py-1 lg:px-1">
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="on-premises">PixLab On-Premises</a>
-                    <div class="hs-dropdown relative [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:[--is-collapse:false] lg:[--strategy:absolute] lg:[--trigger:hover]">
-                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-white focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                        Open Source SDK <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
-                      </button>
-                      <div class="hs-dropdown-menu header-gradient-bg start-full top-0 z-10 !mx-[10px] -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-start-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
-                        <div class="space-y-1 py-1 lg:px-1">
-                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="https://sod.pixlab.io/" target="_blank">SOD - Embedded Computer Vision Library &nearr;</a>
-                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="tiny-dream">Tiny Dream - Stable Diffusion Inference in C++</a>
-                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="art">ART - Real-Time ASCII Art C Library</a>
-                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="downloads">SOD Downloads</a>
-                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="sod">SOD Licensing Information</a>
-                        </div>
-                      </div>
-                    </div>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="ekyc/">eKYC - Universal ID Scanner APIs</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="vision-llm-api-playground/">Vision Play, LLM & APIs</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="template-pdf-media-engine">PDF & Media Template Engine</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="app-ui-ux-code">APP UX - Mobile UI Code Generator</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="api-endpoints">PixLab API Endpoints</a>
-                    <!-- NEW PRODUCT ADD -->
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="https://faceio.net/" target="_blank">FACEIO - Facial Authentication for the Web &nearr;</a>
-                  </div>
-                </div>
-              </div>
-              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="vision-llm-api-playground/">
-                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#BFEA43] bg-[#BFEA43] transition-all group-hover:bg-transparent"></span>
-                Vision Play &nearr;
-              </a>
-              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="ekyc/">
-                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#EA4393] bg-[#EA4393] transition-all group-hover:bg-transparent"></span>
-                eKYC APIs &nearr;
-              </a>
-              <!-- Online Creativity dropdown link -->
-              <div class="hs-dropdown group cursor-pointer p-2 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:px-0 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
-                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                  <span class="block h-2 w-2 shrink-0 rounded-full border border-[#43AEEA] bg-[#43AEEA] transition-all group-hover:bg-transparent"></span>
-                  Online Creativity
-                  <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
-                </button>
-                <!-- Dropdown menu -->
-                <div class="hs-dropdown-menu header-gradient-bg top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
-                  <div class="space-y-1 py-1 lg:px-1">
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="annotate">Annotate - Image Annotation & Labelling</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="creative-toolbox">Creative Toolbox</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="mockup-screenshot-editor">Mockup & Screenshot AI Editor</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="ai-photo-editor">AI Photo Editor</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="bulk-image-video-background-removal-tool-apis">Bulk Image & Video Background Removal</a>
-                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="tilemap-2d-level-editor">Tilemap & 2D Level Editor</a>
-                    <!-- NEW TOOL ADD -->
-                  </div>
-                </div>
-              </div>
-              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="pricing">
-                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#4643EA] bg-[#4643EA] transition-all group-hover:bg-transparent"></span>
-                Pricing
-              </a>
-            </div>
-
-            <!-- Theme / Signup / PixLab Console buttons -->
-            <div class="flex items-center gap-4 lg:hidden">
-              <button class="theme-toggler hidden items-center text-white lg:flex">
-                <i class="uil uil-moon text-xl"></i>
-              </button>
-              <div class="flex h-11 gap-3 py-1">
-                <button class="ape-gradient-button group block h-full items-center gap-x-2 rounded-lg px-3 text-sm font-medium text-white" href="https://console.pixlab.io" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Theme / Signup / PixLab Console buttons -->
-        <div class="nav-buttons hidden h-full items-center gap-4 px-1.5 py-0.5 lg:flex">
-          <button class="theme-toggler hidden items-center text-white lg:flex">
-            <i class="uil uil-moon text-xl"></i>
+        <!-- Toggle Theme and Menu Buttons -->
+        <div class="flex items-center gap-3 lg:hidden">
+          <button class="theme-toggler flex items-center text-white">
+            <i class="uil uil-moon text-lg"></i>
           </button>
-          <div class="flex h-full gap-3">
-            <button class="ape-gradient-button console-button group flex h-full items-center gap-x-2 rounded-lg px-2.5 text-sm font-medium text-white" href="https://console.pixlab.io" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></button>
+          <div>
+            <button type="button" class="hs-collapse-toggle flex size-8 items-center justify-center rounded-full bg-neutral-800 text-sm font-semibold text-white disabled:pointer-events-none disabled:opacity-50" id="hs-navbar-floating-dark-collapse" aria-expanded="false" aria-controls="hs-navbar-floating-dark" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-floating-dark">
+              <svg class="size-4 shrink-0 hs-collapse-open:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" x2="21" y1="6" y2="6" />
+                <line x1="3" x2="21" y1="12" y2="12" />
+                <line x1="3" x2="21" y1="18" y2="18" />
+              </svg>
+              <svg class="hidden size-4 shrink-0 hs-collapse-open:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </button>
           </div>
         </div>
-      </nav>
-    </header>
-    <main class="leading-8">
-      <section class="hero-section">
-        <div id="particles-js" class="lg:h-screen h-[840px] bg-[#0b0e13]">
-          <div class="absolute flex h-full w-full items-center px-5 max-lg:pt-64 pt-10 text-white">
-            <div class="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between gap-10 lg:flex-row">
-              <!-- Hero Text -->
-              <div class="relative flex-1 z-10 flex flex-col items-center text-center lg:block lg:max-w-screen-sm lg:text-left mt-14">
-                <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold max-sm:hidden">PixLab PDF & Media Template Engine</p>
-                <h1 class="mt-5 text-3xl font-semibold leading-[1.2] text-[#faf8f5] lg:text-5xl">Automate <span class="ape-gradient-text">PDF and Image Creation</span></h1>
-                <p class="mt-5 text-[#d4d4d4]">Harness the full power of PixLab's PDF and image generation engine. Effortlessly automate media creation and customization with our powerful API, designed to meet the highest standards of quality, speed, and versatility. From high-resolution PDFs to pixel-perfect images, streamline your processes like never before.</p>
-                <div class="mt-5 space-y-2 text-[#d4d4d4] text-left leading-[1.2]">
-                  <div class="flex items-start space-x-2">
-                    <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                    <span>Create dynamic images and PDFs from customizable templates.</span>
+      </div>
+      <!-- Main Menu -->
+      <div id="hs-navbar-floating-dark" class="hs-collapse header-gradient-bg nav-menu hidden flex-1 overflow-hidden transition-all duration-300 lg:flex lg:h-full" aria-labelledby="hs-navbar-floating-dark-collapse">
+        <div class="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
+          <div class="flex w-full flex-col gap-x-3.5 py-2 lg:w-auto lg:flex-row lg:items-center lg:justify-between lg:py-0 lg:ps-6">
+            <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="start">
+              <span class="block h-2 w-2 shrink-0 rounded-full border border-[#8343EA] bg-[#8343EA] transition-all group-hover:bg-transparent"></span>
+              Get Started
+            </a>
+            <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="api-portal">
+              <span class="block h-2 w-2 shrink-0 rounded-full border border-[#EAA743] bg-[#EAA743] transition-all group-hover:bg-transparent"></span>
+              API Portal
+            </a>
+            <!-- Products & SDKs -->
+            <div class="hs-dropdown group cursor-pointer p-2 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:px-0 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
+              <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#21db49] bg-[#21db49] transition-all group-hover:bg-transparent"></span>
+                Products & SDKs
+                <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div class="hs-dropdown-menu header-gradient-bg top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
+                <div class="space-y-1 py-1 lg:px-1">
+                  <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="on-premises">PixLab On-Premises</a>
+                  <div class="hs-dropdown relative [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:[--is-collapse:false] lg:[--strategy:absolute] lg:[--trigger:hover]">
+                    <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-white focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                      Open Source SDK <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                    </button>
+                    <div class="hs-dropdown-menu header-gradient-bg start-full top-0 z-10 !mx-[10px] -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-start-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
+                      <div class="space-y-1 py-1 lg:px-1">
+                        <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="https://sod.pixlab.io/" target="_blank">SOD - Embedded Computer Vision Library &nearr;</a>
+                        <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="tiny-dream">Tiny Dream - Stable Diffusion Inference in C++</a>
+                        <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="art">ART - Real-Time ASCII Art C Library</a>
+                        <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="downloads">SOD Downloads</a>
+                        <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="sod">SOD Licensing Information</a>
+                      </div>
+                    </div>
                   </div>
-                  <div class="flex items-start space-x-2">
-                    <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                    <span>Automate scalable content creation effortlessly.</span>
-                  </div>
-                  <div class="flex items-start space-x-2">
-                    <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                    <span>Seamlessly integrate with our API or use no-code solutions.</span>
-                  </div>
+                  <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="ekyc/">eKYC - Universal ID Scanner APIs</a>
+                  <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="vision-llm-api-playground/">Vision Play, LLM & APIs</a>
+                  <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="template-pdf-media-engine">PDF & Media Template Engine</a>
+                  <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="app-ui-ux-code">APP UX - Mobile UI Code Generator</a>
+                  <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="api-endpoints">PixLab API Endpoints</a>
+                  <!-- NEW PRODUCT ADD -->
+                  <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="https://faceio.net/" target="_blank">FACEIO - Facial Authentication for the Web &nearr;</a>
                 </div>
+              </div>
+            </div>
+            <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="vision-llm-api-playground/">
+              <span class="block h-2 w-2 shrink-0 rounded-full border border-[#BFEA43] bg-[#BFEA43] transition-all group-hover:bg-transparent"></span>
+              Vision Play &nearr;
+            </a>
+            <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="ekyc/">
+              <span class="block h-2 w-2 shrink-0 rounded-full border border-[#EA4393] bg-[#EA4393] transition-all group-hover:bg-transparent"></span>
+              eKYC APIs &nearr;
+            </a>
+            <!-- Online Creativity dropdown link -->
+            <div class="hs-dropdown group cursor-pointer p-2 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:px-0 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
+              <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#43AEEA] bg-[#43AEEA] transition-all group-hover:bg-transparent"></span>
+                Online Creativity
+                <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div class="hs-dropdown-menu header-gradient-bg top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
+                <div class="space-y-1 py-1 lg:px-1">
+                  <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="annotate">Annotate - Image Annotation & Labelling</a>
+                  <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="creative-toolbox">Creative Toolbox</a>
+                  <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="mockup-screenshot-editor">Mockup & Screenshot AI Editor</a>
+                  <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="ai-photo-editor">AI Photo Editor</a>
+                  <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="bulk-image-video-background-removal-tool-apis">Bulk Image & Video Background Removal</a>
+                  <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="tilemap-2d-level-editor">Tilemap & 2D Level Editor</a>
+                  <!-- NEW TOOL ADD -->
+                </div>
+              </div>
+            </div>
+            <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="pricing">
+              <span class="block h-2 w-2 shrink-0 rounded-full border border-[#4643EA] bg-[#4643EA] transition-all group-hover:bg-transparent"></span>
+              Pricing
+            </a>
+          </div>
 
-                <!-- <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-[#faf8f5] bg-[#faf8f5] sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[14px] font-medium text-black transition-all duration-500 hover:bg-transparent hover:text-[#faf8f5]" href="https://console.pixlab.io" target="_blank">Get API Access. <i class="uil uil-arrow-up-right lg:text-lg"></i></a> -->
-                <div class="flex gap-5">
-                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-[#faf8f5] bg-[#faf8f5] p-3 sm:text-lg text-[14px] font-medium text-black transition-all duration-500 hover:bg-transparent hover:text-[#faf8f5]" href="#" target="_blank">Read more</a>
-                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-[#faf8f5] bg-transparent p-3 sm:text-lg text-[14px] font-medium text-[#faf8f5] transition-all duration-500 hover:bg-[#faf8f5] hover:text-black" href="#" target="_blank">Learn more</a>
-                 </div>
-              </div>
-              <div class="flex-1 w-full relative">
-                <div class="bg-gray-800 overflow-x-auto shadow-lg rounded-lg text-sm sm:w-[500px] w-full mx-auto">
-                  <div class="flex items-center p-2 border-b border-slate-500">
-                    <div class="px-1">
-                      <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#ff605c]"></span>
-                    </div>
-                    <div class="px-1">
-                      <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#ffbd44]"></span>
-                    </div>
-                    <div class="px-1">
-                      <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#00ca4e]"></span>
-                    </div>
-                  </div>
-                    <!-- Card content -->
-                    <div class="p-4 whitespace-pre-wrap text-gray-200"><code class="text-nowrap"><span class="js-keyword">fetch</span>(<span class="js-string">"https://api.pixlab.io/template"</span>, {
-  <span class="js-key">method</span>: <span class="js-string">"POST"</span>,
-  <span class="js-key">headers</span>: { <span class="js-string">"Content-Type"</span>: <span class="js-string">"application/json"</span> },
-  <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
-    <span class="js-key">template_id</span>: <span class="js-string">"YOUR_TEMPLATE_ID"</span>,
-    <span class="js-key">output</span>: <span class="js-string">"image"</span>,
-    <span class="js-key">data</span>: {
-      <span class="js-string">"title"</span>: <span class="js-string">"Custom Title"</span>,
-      <span class="js-string">"image_url"</span>: <span class="js-string">"https://example.com/image.jpg"</span>
-    }
-  })
-})
-.<span class="js-function">then</span>(<span class="js-keyword">response</span> => <span class="js-keyword">response</span>.<span class="js-function">json</span>())
-.<span class="js-function">then</span>(<span class="js-keyword">data</span> => <span class="js-keyword">console.log</span>(<span class="js-string">"Image URL:"</span>, <span class="js-keyword">data</span>.<span class="js-key">url</span>));</code></div>
-                </div>
-                <!-- <div class="ape-gradient-bg-theme z-1 absolute inset-0 h-full w-full opacity-30 blur-xl lg:blur-3xl"></div> -->
-              </div>
+          <!-- Theme / Signup / PixLab Console buttons -->
+          <div class="flex items-center gap-4 lg:hidden">
+            <button class="theme-toggler hidden items-center text-white lg:flex">
+              <i class="uil uil-moon text-xl"></i>
+            </button>
+            <div class="flex h-11 gap-3 py-1">
+              <button class="ape-gradient-button group block h-full items-center gap-x-2 rounded-lg px-3 text-sm font-medium text-white" href="https://console.pixlab.io" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></button>
             </div>
           </div>
         </div>
-      </section>
-      <section>
-        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
-            <!-- Social Bar -->
-            <div class="flex flex-wrap items-center justify-between gap-5 pb-3">
-              <div class="flex flex-wrap items-center gap-5">
-                <img class="dark-logo w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" title="Machine Vision & Media Processing APIs" />
-                  <p class="text-sm text-muted">
-                    <span>Version 2.197</span>
-                          <span>(<a href="https://blog.pixlab.io/2020/08/pixlab-api-1972-released" target="_blank" class="text-primary hover:text-secondary">Release Notes &nearr;</a>)</span>
-                        </p>
-                      </div>
-          
-                      <!-- AddToAny BEGIN -->
-                      <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-                        <a class="a2a_button_google_gmail"></a>
-                        <a class="a2a_button_email"></a>
-                        <a class="a2a_button_linkedin"></a>
-                        <a class="a2a_button_twitter"></a>
-                        <a class="a2a_button_facebook_messenger"></a>
-                        <a class="a2a_button_facebook"></a>
-                        <a class="a2a_button_hacker_news"></a>
-                      </div>
-                      <script async src="https://static.addtoany.com/menu/page.js"></script>
-                      <!-- AddToAny END -->
-                    </div>
-          <div class="gradient-graph-line"></div>
-          <p class="gradient-text-animation mb-3 mt-3 text-3xl font-bold">PDF & Media Template APIs</p>
-          <div class="flex flex-col items-center">
-            <h2 class="text-center text-3xl font-semibold leading-snug text-apeTColor lg:max-w-[80%] lg:text-4xl">
-              <span class="ape-gradient-text">Effortlessly connect</span> <br />
-               with leading no-code platforms
-            </h2>
+      </div>
 
-            <p class="mt-5 text-center text-apeTGray sm:w-1/2">Utilize platforms like <b class="font-medium text-tColor">Zapier, Make, Airtable, and other popular no-code tools</b> to integrate with us and streamline your processes.</p>
-           <div class="brands-slider">
+      <!-- Theme / Signup / PixLab Console buttons -->
+      <div class="nav-buttons hidden h-full items-center gap-4 px-1.5 py-0.5 lg:flex">
+        <button class="theme-toggler hidden items-center text-white lg:flex">
+          <i class="uil uil-moon text-xl"></i>
+        </button>
+        <div class="flex h-full gap-3">
+          <button class="ape-gradient-button console-button group flex h-full items-center gap-x-2 rounded-lg px-2.5 text-sm font-medium text-white" href="https://console.pixlab.io" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="leading-8">
+    <section class="hero-section">
+      <div id="particles-js" class="lg:h-screen h-[840px] bg-[#0b0e13]">
+        <div class="absolute flex h-full w-full items-center px-5 max-lg:pt-64 pt-10 text-white">
+          <div class="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between gap-10 lg:flex-row">
+            <!-- Hero Text -->
+            <div class="relative flex-1 z-10 flex flex-col items-center text-center lg:block lg:max-w-screen-sm lg:text-left mt-14">
+              <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold max-sm:hidden">PixLab PDF & Media Template Engine</p>
+              <h1 class="mt-5 text-3xl font-semibold leading-[1.2] text-[#faf8f5] lg:text-5xl">Automate <span class="ape-gradient-text">PDF and Image Creation</span></h1>
+              <p class="mt-5 text-[#d4d4d4]">Harness the full power of PixLab's PDF and image generation engine. Effortlessly automate media creation and customization with our powerful API, designed to meet the highest standards of quality, speed, and versatility. From high-resolution PDFs to pixel-perfect images, streamline your processes like never before.</p>
+              <div class="mt-5 space-y-2 text-[#d4d4d4] text-left leading-[1.2]">
+                <div class="flex items-start space-x-2">
+                  <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                  <span>Create dynamic images and PDFs from customizable templates.</span>
+                </div>
+                <div class="flex items-start space-x-2">
+                  <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                  <span>Automate scalable content creation effortlessly.</span>
+                </div>
+                <div class="flex items-start space-x-2">
+                  <svg class="inline-block" height="1em" viewBox="0 0 24 24" width="1em" data-icon="tabler:arrow-right"><path d="M5 12h14m-6 6l6-6m-6-6l6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                  <span>Seamlessly integrate with our API or use no-code solutions.</span>
+                </div>
+              </div>
+
+              <!-- <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-[#faf8f5] bg-[#faf8f5] sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[14px] font-medium text-black transition-all duration-500 hover:bg-transparent hover:text-[#faf8f5]" href="https://console.pixlab.io" target="_blank">Get API Access. <i class="uil uil-arrow-up-right lg:text-lg"></i></a> -->
+              <div class="flex gap-5">
+                <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-[#faf8f5] bg-[#faf8f5] p-3 sm:text-lg text-[14px] font-medium text-black transition-all duration-500 hover:bg-transparent hover:text-[#faf8f5]" href="#" target="_blank">Read more</a>
+                <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-[#faf8f5] bg-transparent p-3 sm:text-lg text-[14px] font-medium text-[#faf8f5] transition-all duration-500 hover:bg-[#faf8f5] hover:text-black" href="#" target="_blank">Learn more</a>
+              </div>
+            </div>
+            <div class="flex-1 w-full relative">
+              <div class="bg-gray-800 overflow-x-auto shadow-lg rounded-lg text-sm sm:w-[500px] w-full mx-auto">
+                <div class="flex items-center p-2 border-b border-slate-500">
+                  <div class="px-1">
+                    <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#ff605c]"></span>
+                  </div>
+                  <div class="px-1">
+                    <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#ffbd44]"></span>
+                  </div>
+                  <div class="px-1">
+                    <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#00ca4e]"></span>
+                  </div>
+                </div>
+                <!-- Card content -->
+                <div class="p-4 whitespace-pre-wrap text-gray-200"><code class="text-nowrap"><span class="js-keyword">fetch</span>(<span class="js-string">"https://api.pixlab.io/template"</span>, {
+                  <span class="js-key">method</span>: <span class="js-string">"POST"</span>,
+                  <span class="js-key">headers</span>: { <span class="js-string">"Content-Type"</span>: <span class="js-string">"application/json"</span> },
+                  <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
+                    <span class="js-key">template_id</span>: <span class="js-string">"YOUR_TEMPLATE_ID"</span>,
+                    <span class="js-key">output</span>: <span class="js-string">"image"</span>,
+                    <span class="js-key">data</span>: {
+                      <span class="js-string">"title"</span>: <span class="js-string">"Custom Title"</span>,
+                      <span class="js-string">"image_url"</span>: <span class="js-string">"https://example.com/image.jpg"</span>
+                    }
+                  })
+                })
+                .<span class="js-function">then</span>(<span class="js-keyword">response</span> => <span class="js-keyword">response</span>.<span class="js-function">json</span>())
+                .<span class="js-function">then</span>(<span class="js-keyword">data</span> => <span class="js-keyword">console.log</span>(<span class="js-string">"Image URL:"</span>, <span class="js-keyword">data</span>.<span class="js-key">url</span>));</code></div>
+              </div>
+              <!-- <div class="ape-gradient-bg-theme z-1 absolute inset-0 h-full w-full opacity-30 blur-xl lg:blur-3xl"></div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+        <!-- Social Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-5 pb-3">
+          <div class="flex flex-wrap items-center gap-5">
+            <img class="dark-logo w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" title="Machine Vision & Media Processing APIs" />
+            <p class="text-sm text-muted">
+              <span>Version 2.197</span>
+              <span>(<a href="https://blog.pixlab.io/2020/08/pixlab-api-1972-released" target="_blank" class="text-primary hover:text-secondary">Release Notes &nearr;</a>)</span>
+            </p>
+          </div>
+          
+          <!-- AddToAny BEGIN -->
+          <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+            <a class="a2a_button_google_gmail"></a>
+            <a class="a2a_button_email"></a>
+            <a class="a2a_button_linkedin"></a>
+            <a class="a2a_button_twitter"></a>
+            <a class="a2a_button_facebook_messenger"></a>
+            <a class="a2a_button_facebook"></a>
+            <a class="a2a_button_hacker_news"></a>
+          </div>
+          <script async src="https://static.addtoany.com/menu/page.js"></script>
+          <!-- AddToAny END -->
+        </div>
+        <div class="gradient-graph-line"></div>
+        <p class="gradient-text-animation mb-3 mt-3 text-3xl font-bold">PDF Generation API & Media Template Engine</p>
+        <div class="flex flex-col items-center mt-4">
+          <h2 class="text-center text-3xl font-semibold leading-snug text-apeTColor lg:max-w-[80%] lg:text-4xl">
+            <span class="ape-gradient-text">Effortlessly connect</span> <br />
+            with leading no-code platforms
+          </h2>
+
+          <p class="mt-5 text-center text-apeTGray sm:w-1/2">Utilize platforms like <b class="font-medium text-tColor">Zapier, Make, Airtable, and other popular no-code tools</b> to integrate with us and streamline your processes.</p>
+          <div class="brands-slider">
             <div class="brands-slider-track">
               <div class="slide">
                 <img class="dark-logo" src="assets/images/zapier-logo.webp" alt="Zapier Logo">
@@ -288,44 +287,44 @@
 
 
             </div>
-           </div>
           </div>
-          
         </div>
-      </section>
+        
+      </div>
+    </section>
 
-      <!-- PIXLAB MEDIA TEMPLATES -->
-      <section>
-        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
-          <div class="flex md:flex-row flex-col items-start gap-16">
-            <div class="flex-1">
-              <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold max-sm:hidden">PIXLAB MEDIA TEMPLATES</p>
-              <h1 class="mt-5 text-3xl max-md:text-center font-semibold leading-[1.2] text-apeTColor ">Generate <span class="ape-gradient-text">Dynamic Media,</span><br>Effortlessly</h1> 
-              <p class="mt-5 text-muted">Creating customized media assets and documents can be complex and time-consuming. With PixLab's <a href="rest-api" class="link">API</a>, generate high-quality, dynamic PDF and media templates in minutes, without complicated design tools or manual adjustments. Bring your unique brand to life with customizable templates for every purpose.</p>
-              <div class="flex gap-5">
-                <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-apePrimary border-2 border-apePrimary sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-apePrimary" href="https://console.pixlab.io">Read more</a>
-                <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-transparent border-2 border-apePrimary sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-apePrimary transition-all duration-500 hover:bg-apePrimary hover:text-white" href="#how-it-works">Learn more</a>
-              </div>
+    <!-- PIXLAB MEDIA TEMPLATES -->
+    <section>
+      <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+        <div class="flex md:flex-row flex-col items-start gap-16">
+          <div class="flex-1">
+            <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold max-sm:hidden">PIXLAB MEDIA TEMPLATES</p>
+            <h1 class="mt-5 text-3xl max-md:text-center font-semibold leading-[1.2] text-apeTColor ">Generate <span class="ape-gradient-text">Dynamic Media,</span><br>Effortlessly</h1> 
+            <p class="mt-5 text-muted">Creating customized media assets and documents can be complex and time-consuming. With PixLab's <a href="rest-api" class="link">API</a>, generate high-quality, dynamic PDF and media templates in minutes, without complicated design tools or manual adjustments. Bring your unique brand to life with customizable templates for every purpose.</p>
+            <div class="flex gap-5">
+              <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-apePrimary border-2 border-apePrimary sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-apePrimary" href="https://console.pixlab.io">Read more</a>
+              <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-transparent border-2 border-apePrimary sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-apePrimary transition-all duration-500 hover:bg-apePrimary hover:text-white" href="#how-it-works">Learn more</a>
             </div>
-            <div class="flex-1">
-              <div class="mb-6">
-                <!-- Icon Block -->
-                <div class="flex gap-x-5">
-                  <!-- <svg class="shrink-0 size-8 text-apePrimary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="10" x="3" y="11" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" x2="8" y1="16" y2="16"/><line x1="16" x2="16" y1="16" y2="16"/></svg> -->
-                  <svg class="h-fit" viewBox="0 0 24 24" fill="none" width="140"  xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M13.325 7.67505L17.411 3.58902C18.192 2.80797 19.4584 2.80797 20.2394 3.58902C21.0205 4.37007 21.0205 5.6364 20.2394 6.41745L16.1534 10.5035M10.5 10.5L6.1026 14.8974C5.50491 15.4951 5.20606 15.7939 4.95434 16.1276C4.73078 16.424 4.53521 16.7404 4.37014 17.0729C4.18427 17.4473 4.05063 17.8483 3.78337 18.6501L3.00024 20.9998L5.43419 20.0599C6.14139 19.7868 6.495 19.6503 6.82584 19.4723C7.11972 19.3142 7.39989 19.1318 7.66345 18.9271C7.96016 18.6967 8.22819 18.4287 8.76425 17.8926L13.3284 13.3284M9.65685 17H7L7 14M3 3L21 21" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-                  <div class="grow">
-                    <h3 class="text-base sm:text-lg font-semibold text-apeTColor">
-                      No design skills required
-                    </h3>
-                    <p class="mt-1 text-muted">
-                      With PixLab, you don’t need to be a designer. Our <a href="rest-api" class="link">API</a> gives you full control over template customization without complex software. Generate media-ready templates and PDFs with a few clicks.
-                    </p>
-                  </div>
+          </div>
+          <div class="flex-1">
+            <div class="mb-6">
+              <!-- Icon Block -->
+              <div class="flex gap-x-5">
+                <!-- <svg class="shrink-0 size-8 text-apePrimary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="10" x="3" y="11" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" x2="8" y1="16" y2="16"/><line x1="16" x2="16" y1="16" y2="16"/></svg> -->
+                <svg class="h-fit" viewBox="0 0 24 24" fill="none" width="140"  xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M13.325 7.67505L17.411 3.58902C18.192 2.80797 19.4584 2.80797 20.2394 3.58902C21.0205 4.37007 21.0205 5.6364 20.2394 6.41745L16.1534 10.5035M10.5 10.5L6.1026 14.8974C5.50491 15.4951 5.20606 15.7939 4.95434 16.1276C4.73078 16.424 4.53521 16.7404 4.37014 17.0729C4.18427 17.4473 4.05063 17.8483 3.78337 18.6501L3.00024 20.9998L5.43419 20.0599C6.14139 19.7868 6.495 19.6503 6.82584 19.4723C7.11972 19.3142 7.39989 19.1318 7.66345 18.9271C7.96016 18.6967 8.22819 18.4287 8.76425 17.8926L13.3284 13.3284M9.65685 17H7L7 14M3 3L21 21" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                <div class="grow">
+                  <h3 class="text-base sm:text-lg font-semibold text-apeTColor">
+                    No design skills required
+                  </h3>
+                  <p class="mt-1 text-muted">
+                    With PixLab, you don’t need to be a designer. Our <a href="rest-api" class="link">API</a> gives you full control over template customization without complex software. Generate media-ready templates and PDFs with a few clicks.
+                  </p>
                 </div>
               </div>
-              <div class="mb-6">
-                <!-- Icon Block -->
-                <div class="flex gap-x-5">
+            </div>
+            <div class="mb-6">
+              <!-- Icon Block -->
+              <div class="flex gap-x-5">
                   <!-- <svg class="shrink-0 size-8 text-apePrimary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="10" x="3" y="11" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" x2="8" y1="16" y2="16"/><line x1="16" x2="16" y1="16" y2="16"/></svg>
                   -->
                   <svg class="self-start" fill="#28A745" width="150" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 501.267 501.267" xml:space="preserve"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g> <g> <g> <g> <path d="M359.495,181.88l-40-40c-4.16-4.16-10.88-4.16-15.04,0L3.122,443.107c-4.16,4.16-4.16,10.88,0,15.04l40,40 c4.16,4.16,10.88,4.16,15.04,0L359.495,196.92C363.655,192.76,363.655,186.04,359.495,181.88z M50.695,475.64l-24.96-24.96 l236.907-236.907l24.96,24.96L50.695,475.64z M302.642,223.587l-24.96-24.96l34.24-34.24l24.96,24.96L302.642,223.587z"></path> <path d="M498.162,117.667l-38.187-38.293l24.533-48.213c2.667-5.227,0.64-11.627-4.587-14.4c-3.093-1.6-6.72-1.6-9.707,0 l-48.107,24.533l-38.187-38.08c-4.16-4.267-10.88-4.267-15.147-0.107c-2.453,2.347-3.52,5.76-3.093,9.067l7.787,54.507 l-49.173,25.493c-5.227,2.667-7.253,9.173-4.587,14.4c1.6,2.987,4.48,5.12,7.787,5.653l53.44,8.32l8.64,53.227 c0.747,4.587,4.267,8.107,8.853,8.853c0.533,0.107,1.067,0.107,1.6,0.107c4.053,0,7.68-2.24,9.493-5.76l25.067-48.853l54.4,7.68 c5.867,0.853,11.2-3.2,12.053-8.96C501.789,123.427,500.615,120.013,498.162,117.667z M430.215,105.933 c-4.48-0.747-8.96,1.6-10.987,5.653l-13.653,26.667l-4.693-28.8c-0.747-4.587-4.373-8.107-8.853-8.853l-28.907-4.48 l26.987-13.973c4.053-2.133,6.293-6.507,5.653-10.987l-4.267-30.293l21.013,21.12c3.307,3.307,8.32,4.053,12.373,2.027 l25.707-13.12l-13.12,25.813c-2.133,4.16-1.28,9.067,1.92,12.373l21.12,21.12L430.215,105.933z"></path> <path d="M378.375,395.747L353.522,382.2l-13.547-24.853c-3.733-6.827-14.933-6.827-18.667,0L307.762,382.2l-24.96,13.547 c-5.12,2.88-7.04,9.28-4.267,14.507c0.96,1.813,2.453,3.2,4.267,4.267l24.853,13.547l13.547,24.853 c2.88,5.12,9.28,7.04,14.507,4.267c1.813-0.96,3.2-2.453,4.267-4.267l13.547-24.853l24.853-13.547 c5.12-2.88,7.04-9.28,4.267-14.507C381.682,398.2,380.189,396.707,378.375,395.747z M340.615,411.107 c-1.813,0.96-3.307,2.453-4.267,4.267l-5.653,10.453l-5.76-10.453c-0.96-1.813-2.453-3.307-4.267-4.267l-10.453-5.76l10.453-5.76 c1.813-0.96,3.307-2.453,4.267-4.267l5.76-10.453l5.76,10.453c0.96,1.813,2.453,3.307,4.267,4.267l10.453,5.76L340.615,411.107z"></path> <path d="M37.469,148.067l45.547,24.96l24.853,45.547c2.88,5.12,9.28,7.04,14.507,4.267c1.813-0.96,3.2-2.453,4.267-4.267 l24.96-45.547l45.547-24.96c5.12-2.88,7.04-9.28,4.267-14.507c-0.96-1.813-2.453-3.2-4.267-4.267l-45.547-24.853l-24.96-45.547 c-3.733-6.827-14.933-6.827-18.667,0L83.122,104.44L37.575,129.4c-5.12,2.88-7.04,9.28-4.267,14.507 C34.269,145.613,35.762,147.107,37.469,148.067z M95.922,121.613c1.813-0.96,3.307-2.453,4.267-4.267L117.255,86.2l17.067,31.147 c0.96,1.813,2.453,3.307,4.267,4.267l31.147,17.067l-31.147,17.067c-1.813,0.96-3.307,2.453-4.267,4.267l-17.067,31.147 l-17.067-31.147c-0.96-1.813-2.453-3.307-4.267-4.267L64.775,138.68L95.922,121.613z"></path> </g> </g> </g> </g></svg>
@@ -388,21 +387,21 @@
                       <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#00ca4e]"></span>
                     </div>
                   </div>
-                    <!-- Card content -->
-<div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-full xl:max-w-2xl leading-[1.6]"><code class="text-nowrap"><span class="js-keyword">fetch</span>(<span class="js-string">"https://api.pixlab.io/template"</span>, {
-  <span class="js-key">method</span>: <span class="js-string">"POST"</span>,
-  <span class="js-key">headers</span>: { <span class="js-string">"Content-Type"</span>: <span class="js-string">"application/json"</span> },
-  <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
-    <span class="js-key">template_id</span>: <span class="js-string">"YOUR_TEMPLATE_ID"</span>,
-    <span class="js-key">output</span>: <span class="js-string">"image"</span>,
-    <span class="js-key">data</span>: {
-      <span class="js-string">"title"</span>: <span class="js-string">"Custom Title"</span>,
-      <span class="js-string">"image_url"</span>: <span class="js-string">"https://example.com/image.jpg"</span>
-    }
-  })
-})
-.<span class="js-function">then</span>(<span class="js-keyword">response</span> => <span class="js-keyword">response</span>.<span class="js-function">json</span>())
-.<span class="js-function">then</span>(<span class="js-keyword">data</span> => <span class="js-keyword">console.log</span>(<span class="js-string">"Image URL:"</span>, <span class="js-keyword">data</span>.<span class="js-key">url</span>));</code></div>
+                  <!-- Card content -->
+                  <div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-full xl:max-w-2xl leading-[1.6]"><code class="text-nowrap"><span class="js-keyword">fetch</span>(<span class="js-string">"https://api.pixlab.io/template"</span>, {
+                    <span class="js-key">method</span>: <span class="js-string">"POST"</span>,
+                    <span class="js-key">headers</span>: { <span class="js-string">"Content-Type"</span>: <span class="js-string">"application/json"</span> },
+                    <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
+                      <span class="js-key">template_id</span>: <span class="js-string">"YOUR_TEMPLATE_ID"</span>,
+                      <span class="js-key">output</span>: <span class="js-string">"image"</span>,
+                      <span class="js-key">data</span>: {
+                        <span class="js-string">"title"</span>: <span class="js-string">"Custom Title"</span>,
+                        <span class="js-string">"image_url"</span>: <span class="js-string">"https://example.com/image.jpg"</span>
+                      }
+                    })
+                  })
+                  .<span class="js-function">then</span>(<span class="js-keyword">response</span> => <span class="js-keyword">response</span>.<span class="js-function">json</span>())
+                  .<span class="js-function">then</span>(<span class="js-keyword">data</span> => <span class="js-keyword">console.log</span>(<span class="js-string">"Image URL:"</span>, <span class="js-keyword">data</span>.<span class="js-key">url</span>));</code></div>
                 </div>
               </div>
             </div>
@@ -426,7 +425,7 @@
                       <span>Available libraries: Python, Node, Java, PHP, Ruby, and more on the way!</span>
                     </div>
                   </div> -->
-                 <div class="flex gap-5">
+                  <div class="flex gap-5">
                     <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-apePrimary border-2 border-apePrimary px-3 py-1.5 text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-apePrimary" href="#">Read more</a>
                     <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-transparent border-2 border-apePrimary px-3 py-1.5 text-[15px] font-medium text-apePrimary transition-all duration-500 hover:bg-apePrimary hover:text-white" href="#">Learn more</a>
                   </div>
@@ -445,28 +444,28 @@
                       <span class="inline-block w-2 h-2 p-[1px] rounded-full bg-[#00ca4e]"></span>
                     </div>
                   </div>
-                    <!-- Card content -->
-<div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl leading-[1.6]"><code class="text-nowrap"><span class="js-keyword">fetch</span>(<span class="js-string">'https://api.pixlab.io/template'</span>, {
-  <span class="js-key">method</span>: <span class="js-string">'POST'</span>,
-  <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
-    <span class="js-string">"template"</span>: TEMPLATE_ID,
-    <span class="js-string">"format"</span>: <span class="js-string">"pdf"</span>,
-    <span class="js-string">"layers"</span>: {
-      <span class="js-string">"text-1"</span>: {
-        <span class="js-string">"text"</span>: <span class="js-string">"This is my text to be rendered"</span>,
-        <span class="js-string">"color"</span>: <span class="js-string">"#FFFFFF"</span>,
-        <span class="js-string">"background"</span>: <span class="js-string">"#0000FF"</span>
-      },
-      <span class="js-string">"image-1"</span>: {
-        <span class="js-string">"image_url"</span>: <span class="js-string">"https://pathtomyphoto.com/123.jpg"</span>
-      }
-    }
-  }),
-  <span class="js-key">headers</span>: {
-    <span class="js-string">'Content-Type'</span>: <span class="js-string">'application/json'</span>,
-    <span class="js-string">'Authorization'</span>: <span class="js-string">`Bearer ${API_KEY}`</span>
-  }
-})</code></div>
+                  <!-- Card content -->
+                  <div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl leading-[1.6]"><code class="text-nowrap"><span class="js-keyword">fetch</span>(<span class="js-string">'https://api.pixlab.io/template'</span>, {
+                    <span class="js-key">method</span>: <span class="js-string">'POST'</span>,
+                    <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
+                      <span class="js-string">"template"</span>: TEMPLATE_ID,
+                      <span class="js-string">"format"</span>: <span class="js-string">"pdf"</span>,
+                      <span class="js-string">"layers"</span>: {
+                        <span class="js-string">"text-1"</span>: {
+                          <span class="js-string">"text"</span>: <span class="js-string">"This is my text to be rendered"</span>,
+                          <span class="js-string">"color"</span>: <span class="js-string">"#FFFFFF"</span>,
+                          <span class="js-string">"background"</span>: <span class="js-string">"#0000FF"</span>
+                        },
+                        <span class="js-string">"image-1"</span>: {
+                          <span class="js-string">"image_url"</span>: <span class="js-string">"https://pathtomyphoto.com/123.jpg"</span>
+                        }
+                      }
+                    }),
+                    <span class="js-key">headers</span>: {
+                      <span class="js-string">'Content-Type'</span>: <span class="js-string">'application/json'</span>,
+                      <span class="js-string">'Authorization'</span>: <span class="js-string">`Bearer ${API_KEY}`</span>
+                    }
+                  })</code></div>
                 </div>
               </div>
             </div>
@@ -484,75 +483,75 @@
       <section>
         <div class="mx-auto w-full max-w-screen-xl px-5 py-10" id="how-it-works">
           <div class="relative mx-auto px-4 md:px-6 text-apeTColor max-w-3xl">
-          <div class="mx-auto flex flex-col gap-8 md:gap-12">
-            <div class="w-full md:self-center md:py-4">
-              <div class="mb-8 text-left md:mx-auto md:mb-12 rtl:text-right"><p class="font-heading leading-tighter text-heading text-3xl font-bold tracking-tighter lg:text-4xl">How does it work?
-              </p></div>
-              <div>
-                <div class="flex">
-                  <div class="mr-4 flex flex-col items-center rtl:ml-4 rtl:mr-0">
-                    <div>
-                      <div class="flex items-center justify-center">
-                        <svg class="h-10 w-10 rounded-full border-2 border-apePrimary p-2 text-apePrimary" height="1em" viewBox="0 0 24 24" width="1em"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0-8 0M6 21v-2a4 4 0 0 1 4-4h4m1 4l2 2l4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            <div class="mx-auto flex flex-col gap-8 md:gap-12">
+              <div class="w-full md:self-center md:py-4">
+                <div class="mb-8 text-left md:mx-auto md:mb-12 rtl:text-right"><p class="font-heading leading-tighter text-heading text-3xl font-bold tracking-tighter lg:text-4xl">How does it work?
+                </p></div>
+                <div>
+                  <div class="flex">
+                    <div class="mr-4 flex flex-col items-center rtl:ml-4 rtl:mr-0">
+                      <div>
+                        <div class="flex items-center justify-center">
+                          <svg class="h-10 w-10 rounded-full border-2 border-apePrimary p-2 text-apePrimary" height="1em" viewBox="0 0 24 24" width="1em"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0-8 0M6 21v-2a4 4 0 0 1 4-4h4m1 4l2 2l4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                        </div>
                       </div>
+                      <div class="h-full w-px bg-black/10 "></div>
                     </div>
-                    <div class="h-full w-px bg-black/10 "></div>
+                    <div class="pb-8 pt-1">
+                      <p class="text-xl font-bold">
+                        <span class="text-2xl">Step 1: <span class="font-normal">Set Up Your Account</span></span>
+                      </p>
+                      <p class="mt-2 text-muted">Getting started is quick and easy. Begin by creating an account on our <a href="https://console.pixlab.io" class="link">PixLab Console</a>. Simply sign up using your email and password, or connect through your Google account for added convenience. Once registered, you can immediately generate your API keys to unlock access to our powerful media generation tools.</p>
+                    </div>
                   </div>
-                  <div class="pb-8 pt-1">
-                    <p class="text-xl font-bold">
-                      <span class="text-2xl">Step 1: <span class="font-normal">Set Up Your Account</span></span>
-                    </p>
-                    <p class="mt-2 text-muted">Getting started is quick and easy. Begin by creating an account on our <a href="https://console.pixlab.io" class="link">PixLab Console</a>. Simply sign up using your email and password, or connect through your Google account for added convenience. Once registered, you can immediately generate your API keys to unlock access to our powerful media generation tools.</p>
-                  </div>
-                </div>
-                <div class="flex">
-                  <div class="mr-4 flex flex-col items-center rtl:ml-4 rtl:mr-0">
-                    <div>
-                      <div class="flex items-center justify-center">
-                        <svg class="h-10 w-10 rounded-full border-2 border-apePrimary p-2 text-apePrimary" height="1em" viewBox="0 0 24 24" width="1em">
+                  <div class="flex">
+                    <div class="mr-4 flex flex-col items-center rtl:ml-4 rtl:mr-0">
+                      <div>
+                        <div class="flex items-center justify-center">
+                          <svg class="h-10 w-10 rounded-full border-2 border-apePrimary p-2 text-apePrimary" height="1em" viewBox="0 0 24 24" width="1em">
                             <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor">
                               <path d="M3 21v-4a4 4 0 1 1 4 4H3"></path>
                               <path d="M21 3A16 16 0 0 0 8.2 13.2M21 3a16 16 0 0 1-10.2 12.8"></path>
                               <path d="M10.6 9a9 9 0 0 1 4.4 4.4"></path>
                             </g>
-                        </svg>
+                          </svg>
+                        </div>
                       </div>
+                      <div class="h-full w-px bg-black/10"></div>
                     </div>
-                    <div class="h-full w-px bg-black/10"></div>
+                    <div class="pb-8 pt-1">
+                      <p class="text-xl font-bold">
+                        <span class="text-2xl">Step 2: <span class="font-normal">Choose a Template or Build Your Own</span></span>
+                      </p>
+                      <p class="mt-2 text-muted">With your account ready, explore the extensive <a href="api-portal" class="border-l-pink-50">Template Gallery</a> to select pre-designed templates or build your own from scratch. Use our Editor to design a custom layout that meets your specific needs. <br> Whether it’s creating engaging PDFs or high-quality images, you can tailor every detail to match your branding requirements. Once finalized, link your template with our robust <a href="api-endpoints" class="link">API endpoints</a> for seamless integration into your workflow.</p>
+                    </div>
                   </div>
-                  <div class="pb-8 pt-1">
-                    <p class="text-xl font-bold">
-                      <span class="text-2xl">Step 2: <span class="font-normal">Choose a Template or Build Your Own</span></span>
-                    </p>
-                    <p class="mt-2 text-muted">With your account ready, explore the extensive <a href="api-portal" class="border-l-pink-50">Template Gallery</a> to select pre-designed templates or build your own from scratch. Use our Editor to design a custom layout that meets your specific needs. <br> Whether it’s creating engaging PDFs or high-quality images, you can tailor every detail to match your branding requirements. Once finalized, link your template with our robust <a href="api-endpoints" class="link">API endpoints</a> for seamless integration into your workflow.</p>
-                  </div>
-                </div>
-                <div class="flex">
-                  <div class="mr-4 flex flex-col items-center rtl:ml-4 rtl:mr-0">
-                    <div>
-                      <div class="flex items-center justify-center">
-                        <svg class="h-10 w-10 rounded-full border-2 border-apePrimary p-2 text-apePrimary" height="1em" viewBox="0 0 24 24" width="1em" >
+                  <div class="flex">
+                    <div class="mr-4 flex flex-col items-center rtl:ml-4 rtl:mr-0">
+                      <div>
+                        <div class="flex items-center justify-center">
+                          <svg class="h-10 w-10 rounded-full border-2 border-apePrimary p-2 text-apePrimary" height="1em" viewBox="0 0 24 24" width="1em" >
                             <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor">
                               <path
-                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37c1 .608 2.296.07 2.572-1.065z"
+                              d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37c1 .608 2.296.07 2.572-1.065z"
                               ></path>
                               <path d="M10 9v6l5-3z"></path>
                             </g>
-                        </svg>
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="pt-1">
-                    <p class="text-xl font-bold">
-                      <span class="text-2xl">Step 3: <span class="font-normal">Integrate with API or No-Code Tools</span></span>
-                    </p>
-                    <p class="mt-2 text-muted">Easily integrate your templates into your projects. Use our <a href="api" class="link">REST API</a> for advanced customization or connect through popular no-code platforms like Zapier or Make for a user-friendly setup. Just send a simple POST request with your template details, and let our API handle the rest. With real-time rendering, your content is ready to download as soon as it’s processed. <br><br> For more technical details, check out our <a href="api-endpoints" class="link">API Documentation</a>. From high-quality outputs to flexible customization, our platform ensures a smooth and efficient process.</p>
+                    <div class="pt-1">
+                      <p class="text-xl font-bold">
+                        <span class="text-2xl">Step 3: <span class="font-normal">Integrate with API or No-Code Tools</span></span>
+                      </p>
+                      <p class="mt-2 text-muted">Easily integrate your templates into your projects. Use our <a href="api" class="link">REST API</a> for advanced customization or connect through popular no-code platforms like Zapier or Make for a user-friendly setup. Just send a simple POST request with your template details, and let our API handle the rest. With real-time rendering, your content is ready to download as soon as it’s processed. <br><br> For more technical details, check out our <a href="api-endpoints" class="link">API Documentation</a>. From high-quality outputs to flexible customization, our platform ensures a smooth and efficient process.</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
       </section>
 
@@ -590,8 +589,8 @@
       <section>
         <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
           <div class="mt-10 flex flex-col items-center justify-center">
-          <p class="text-center text-muted font-bold">Features</p>
-          <h2 class="text-center text-3xl lg:text-4xl font-semibold text-apeTColor">Design once. <span class="ape-gradient-text">Render multiple times.</span></h2>
+            <p class="text-center text-muted font-bold">Features</p>
+            <h2 class="text-center text-3xl lg:text-4xl font-semibold text-apeTColor">Design once. <span class="ape-gradient-text">Render multiple times.</span></h2>
             <p class="text-center text-apeTGray lg:max-w-[50%] mt-3">Check out how PixLab can help you save time on your images and PDFs creation.</p>
           </div>
 
@@ -668,8 +667,8 @@
         <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
           <div class="mt-10 flex flex-col items-center justify-center">
             <h2 class="text-center text-3xl lg:text-4xl font-semibold text-apeTColor">Hear From Our Users</h2>
-              <p class="text-center text-apeTGray lg:max-w-[50%] mt-3">Save time and streamline your workflow with automation.</p>
-            </div>
+            <p class="text-center text-apeTGray lg:max-w-[50%] mt-3">Save time and streamline your workflow with automation.</p>
+          </div>
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
             <!-- Card -->
             <div class="flex h-auto">
@@ -679,13 +678,13 @@
                     " Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sunt! Molestias voluptas ut quod at facere placeat aperiam rerum quaerat impedit! "
                   </p>
                 </div>
-      
+                
                 <div class="p-4 rounded-b-xl md:px-7">
                   <div class="flex items-center gap-x-3">
                     <div class="shrink-0">
                       <img class="size-8 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full" src="assets/images/face1.jpg" alt="Avatar">
                     </div>
-      
+                    
                     <div class="grow">
                       <p class="text-sm sm:text-base font-semibold text-apeTColor">
                         Josh Tyson
@@ -699,7 +698,7 @@
               </div>
             </div>
             <!-- End Card -->
-              <!-- Card -->
+            <!-- Card -->
             <div class="flex h-auto">
               <div class="flex flex-col ape-card-gradient-theme rounded-xl border border-dark">
                 <div class="flex-auto p-4 md:p-6 border-b border-gray-200 border-b-dark">
@@ -707,13 +706,13 @@
                     " Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sunt! Molestias voluptas ut quod at facere placeat aperiam rerum quaerat impedit! "
                   </p>
                 </div>
-      
+                
                 <div class="p-4 rounded-b-xl md:px-7">
                   <div class="flex items-center gap-x-3">
                     <div class="shrink-0">
                       <img class="size-8 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full" src="assets/images/face1.jpg" alt="Avatar">
                     </div>
-      
+                    
                     <div class="grow">
                       <p class="text-sm sm:text-base font-semibold text-apeTColor">
                         Josh Tyson
@@ -727,7 +726,7 @@
               </div>
             </div>
             <!-- End Card -->
-              <!-- Card -->
+            <!-- Card -->
             <div class="flex h-auto">
               <div class="flex flex-col ape-card-gradient-theme rounded-xl border border-dark">
                 <div class="flex-auto p-4 md:p-6 border-b border-gray-200 border-b-dark">
@@ -735,13 +734,13 @@
                     " Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sunt! Molestias voluptas ut quod at facere placeat aperiam rerum quaerat impedit! "
                   </p>
                 </div>
-      
+                
                 <div class="p-4 rounded-b-xl md:px-7">
                   <div class="flex items-center gap-x-3">
                     <div class="shrink-0">
                       <img class="size-8 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full" src="assets/images/face1.jpg" alt="Avatar">
                     </div>
-      
+                    
                     <div class="grow">
                       <p class="text-sm sm:text-base font-semibold text-apeTColor">
                         Josh Tyson
@@ -755,7 +754,7 @@
               </div>
             </div>
             <!-- End Card -->
-              <!-- Card -->
+            <!-- Card -->
             <div class="flex h-auto">
               <div class="flex flex-col ape-card-gradient-theme rounded-xl border border-dark">
                 <div class="flex-auto p-4 md:p-6 border-b border-gray-200 border-b-dark">
@@ -763,13 +762,13 @@
                     " Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sunt! Molestias voluptas ut quod at facere placeat aperiam rerum quaerat impedit! "
                   </p>
                 </div>
-      
+                
                 <div class="p-4 rounded-b-xl md:px-7">
                   <div class="flex items-center gap-x-3">
                     <div class="shrink-0">
                       <img class="size-8 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full" src="assets/images/face1.jpg" alt="Avatar">
                     </div>
-      
+                    
                     <div class="grow">
                       <p class="text-sm sm:text-base font-semibold text-apeTColor">
                         Josh Tyson
@@ -1019,11 +1018,10 @@
         </div>
       </div>
     </footer>
-
     <!-- Scripts -->
     <script src="assets/js/global.js"></script>
     <script src="assets/js/preline/preline.min.js"></script>
     <script src="assets/js/particles/particles.min.js"></script>
     <script src="assets/js/particles/particles-config.js"></script>
   </body>
-</html>
+  </html>
