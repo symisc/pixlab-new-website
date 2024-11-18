@@ -668,41 +668,32 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
 }
 
 .json-key {
-  color: #d4d4d4;
+  color: #d4d4d4;/* Light gray for keys */
 }
 
-/* Light gray for keys */
 .json-string {
-  color: #a3e635;
+  color: #a3e635;/* Light green for strings */
 }
 
-/* Light green for strings */
 .json-number {
-  color: #f87171;
+  color: #f87171;/* Red for numbers */
 }
-
-/* Red for numbers */
 
 .js-keyword {
-  color: #f59e0b;
+  color: #f59e0b;/* Amber for JS keywords */
 }
 
-/* Amber for JS keywords */
 .js-key {
-  color: #d4d4d4;
+  color: #d4d4d4;/* Light gray for object keys */
 }
 
-/* Light gray for object keys */
 .js-string {
-  color: #a3e635;
+  color: #a3e635;/* Light green for strings */
 }
 
-/* Light green for strings */
 .js-number {
-  color: #f87171;
+  color: #f87171;/* Red for numbers */
 }
-
-/* Red for numbers */
 
 .brands-slider {
   overflow: hidden;
@@ -742,7 +733,6 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
 .slide {
   flex: 0 0 auto;
   width: 150px;
-  /* Adjust the size of each logo */
   margin: 0 10px;
 }
 
@@ -757,7 +747,7 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
   }
 
   100% {
-    transform: translateX(calc(-150px * 5));
+    transform: translateX(calc(-150px * 6 ));
   }
 }
 

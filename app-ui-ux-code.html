@@ -148,7 +148,7 @@
       </nav>
     </header>
 
-    <main>
+    <main class="leading-8">
       <!-- Hero Section -->
       <section class="hero-section">
         <div id="particles-js" class="relative h-[75vh] bg-[#0b0e13]">
@@ -184,13 +184,48 @@
 
       <!-- Why Choose Us Section -->
       <section>
-        <div class="mx-auto w-full max-w-screen-xl px-5 py-14">
-          <h2 class="text-center text-2xl font-bold text-tColor lg:text-3xl">Why Choose us?</h2>
+        <div class="mx-auto w-full items-center max-w-screen-xl px-5 py-14">
+          <div class="flex flex-col items-center">
+            <h2 class="text-center text-3xl lg:text-4xl font-bold text-tColor">Your Path to <span class="auc-gradient-text">Exceptional App Design</span> Starts Here</h2>
+            <p class="text-muted mt-5 w-1/2 text-center">Access an all-in-one solution for designing stunning interfaces with detailed documentation, interactive tutorials, and code samples. Empower your projects with API insights, flexible pricing, and tools designed to streamline development for optimal results.</p>
+          </div>
           <!-- Features Grid -->
-          <div class="mt-20 grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-14">
+          <div class="mt-20 grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-5">
             <!-- Feature 1 -->
-            <div class="flex flex-col items-center">
-              <img loading="lazy" class="w-[140px]" src="assets/images/app-ui-ux-code__ai-image-generator.png" alt="Effortless UI Creation with AI Image Generator for Mobile Apps" />
+            <div class="bg-gradient-theme flex flex-col items-center p-4 rounded-xl">
+              <!-- <img loading="lazy" class="w-[140px]" src="assets/images/app-ui-ux-code__ai-image-generator.png" alt="Effortless UI Creation with AI Image Generator for Mobile Apps" /> -->
+              <svg version="1.1" class="img-invert" viewBox="0 0 2048 2048" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                <path transform="translate(854,204)" d="m0 0h1158l13 2 11 6 7 8 5 9v705h-2l-6 10-7 6-8 4-12 2h-1161l-13-3-9-6-7-9-4-10-1-12v-669l1-14 3-9 7-10 9-6 7-3zm36 69-2 1v449l5-2 27-16 20-12 28-17 32-19 28-17 32-19 28-17 32-19 28-17 27-16 8-4 9-2 10 1 10 4 15 9 15 10 25 16 74 48 25 16 26 17 17 11 25 16 40 26 22 14 12 8 6 3 29-15 19-10 33-17 23-12 35-18 19-10 39-20 19-10 29-15 9-3h14l12 5 18 10 21 12 26 15 56 32 25 14 34 20 5 2v-452zm303 348-27 16-180 108-32 19-28 17-17 10-21 13v83h1091v-82l-20-12-28-16-23-13-26-15-84-48-23-13-4 1-24 12-19 10-37 19-19 10-89 46-33 17-23 12-9 3h-14l-10-4-15-9-46-30-17-11-25-16-23-15-25-16-23-15-17-11-25-16-15-10-19-12-23-15-17-11-9-6z"/>
+                <path transform="translate(207,1091)" d="m0 0 66 1 1 1v666l-1 15h1330l11 2 12 6 8 9 4 10 1 6 1 111 2 12 7 16 9 12 8 7 14 8 14 4 6 1h12l12-2 13-5 11-7 10-9 9-14 4-11 2-12 1-143 1-1h64l5 2v131l-2 25-4 18-6 17-11 20-11 14-9 10-16 13-18 10-11 5-22 7-9 2h-1605l-21-5-17-6-19-10-12-9-12-11-11-12-7-10-9-16-7-19-4-15-1-4v-132l8-13 7-6 8-4 11-2h170v-682zm-137 752-1 1v76l4 16 8 15 11 12 10 7 10 5 12 3 7 1h1456l-2-6-7-16-5-18-2-12-1-15-1-68-2-1z"/>
+                <path transform="translate(434,1091)" d="m0 0h106l692 1 12 3 8 6 6 7 4 8 1 5v419l-3 11-7 9-6 5-6 3-9 2-79 1h-769l-14-1-10-3-9-7-7-9-3-10v-420l3-10 7-9 8-6 7-3 5-1zm-24 70v340l781 1 3-2v-339z"/>
+                <path transform="translate(45,545)" d="m0 0h621l55 1 8 2 9 5 8 9 4 9 1 4v419l-3 10-6 9-8 7-9 3-7 1h-687l-12-3-8-6-7-8-4-8v-429l9-14 8-6 10-4zm24 70-1 334 1 6h613v-340z"/>
+                <path transform="translate(1366,1228)" d="m0 0h646l13 2 11 6 7 8 5 9v429l-6 10-6 7-9 5-6 2-7 1h-651l-12-3-6-4-5-4-7-11-2-8-1-14v-366l1-40 4-11 7-9 10-6 6-2zm36 69-2 1v340h579v-341z"/>
+                <path transform="translate(318)" d="m0 0h1413l4 2 27 9 17 9 11 8 13 11 11 12 9 13 10 19 6 18 4 22 1 12-3 2h-65l-2-1-2-14-5-15-6-10-6-7v-2l-4-2-9-7-13-6-13-3h-1384l-16 4-13 7-10 9-7 8-8 16-3 13-1 286v63l-1 2h-68l-1-1v-346l3-23 6-20 6-13 9-16 9-11 11-12 13-11 13-8 16-8 23-7z"/>
+                <path transform="translate(1612,341)" d="m0 0h19l16 2 21 7 19 10 16 13 9 9 10 13 10 19 6 18 3 21v14l-2 19-7 21-11 21-9 11-8 9-11 9-11 7-16 8-23 7-11 1h-25l-13-2-18-6-16-8-10-7-13-11-10-11-9-13-8-16-5-15-3-15-1-10v-11l3-21 8-24 10-17 9-11 9-10 14-11 16-9 12-5 14-4zm4 69-11 2-11 6-9 7-10 15-4 13v17l4 11 9 14 7 6 14 8 8 2h15l11-3 6-3 13-9 10-15 4-16v-8l-2-11-7-14-10-11-11-7-8-3-7-1z"/>
+                <path transform="translate(478,1365)" d="m0 0h409l1 1v67l-1 1h-409l-1-1v-67z"/>
+                <path transform="translate(341,273)" d="m0 0h410v68l-3 1h-406l-1-1-1-60z"/>
+                <path transform="translate(1604,1501)" d="m0 0h307l1 1v67l-1 1-304 1-3-1-1-17v-50z"/>
+                <path transform="translate(1604,1365)" d="m0 0h307l1 1v67l-1 1h-306l-1-1-1-16v-49z"/>
+                <path transform="translate(683,1228)" d="m0 0h270l37 1 1 66-1 2-307 1-1-1v-68z"/>
+                <path transform="translate(376,672)" d="m0 0 8 1 57 19 1 4-66 198-1 5-10-3-43-14-13-5 1-7z"/>
+                <path transform="translate(534,693)" d="m0 0 5 1 7 8 8 7 48 48 8 11 3 6 2 8-1 10-4 10-6 8-11 12-43 43h-2l-2 4-3 1-2 4-3 3-4-1-42-42-4-3v-4l8-7 15-15 5-6h2v-2h2v-2h2v-2h2v-2h2v-2l4-3-2-4-41-41 6-7z"/>
+                <path transform="translate(213,692)" d="m0 0 4 2 46 46-2 4-40 40 2 4 40 40-1 4-8 7-38 38-4-1-4-5-2-1v-2l-4-2v-2l-4-2-24-24v-2l-4-2v-2l-4-2v-2l-4-2v-2l-4-2v-2l-4-2v-2l-4-2v-2h-2l-9-13-3-9v-9l3-10 7-11 65-65z"/>
+                <path transform="translate(956,1365)" d="m0 0h169l2 2v65l-2 2h-169l-1-1v-67z"/>
+                <path transform="translate(1775,1023)" d="m0 0h67l2 2v134l-2 2h-67l-1-1v-136z" fill="#010101"/>
+                <path transform="translate(478,1228)" d="m0 0h104l32 1 1 2v65l-1 1-132 1-5-1v-68z"/>
+                <path transform="translate(1058,1228)" d="m0 0h66l3 2v66l-1 1-64 1-5-2v-67z"/>
+                <path transform="translate(614,136)" d="m0 0h68l1 1v67l-1 1h-68l-1-65z"/>
+                <path transform="translate(341,136)" d="m0 0h68l1 1v67l-1 1h-68l-1-60z"/>
+                <path transform="translate(478,136)" d="m0 0h67l1 1 1 67-1 1h-69v-68z"/>
+                <path transform="translate(1468,1365)" d="m0 0h67l1 1 1 66-2 2h-67l-1-1v-67z"/>
+                <path transform="translate(1468,1501)" d="m0 0h67l1 1 1 66-1 2h-68l-1-1v-67z"/>
+                <path transform="translate(110,2047)" d="m0 0h6v1h-6z"/>
+                <path transform="translate(313)" d="m0 0 3 1z"/>
+                <path transform="translate(2047,1683)" d="m0 0"/>
+                <path transform="translate(1733)" d="m0 0 2 1z"/>
+                <path transform="translate(0,1935)" d="m0 0"/>
+                </svg>
+              
               <div class="mt-6 text-center">
                 <h3 class="text-lg font-semibold text-tColor">Effortless UI Creation</h3>
                 <p class="mt-3 text-sm text-muted">Design production-ready UIs instantly, turning your ideas into functional components with zero coding.</p>
@@ -198,8 +233,14 @@
             </div>
 
             <!-- Feature 2 -->
-            <div class="flex flex-col items-center">
-              <img loading="lazy" class="w-[140px]" src="assets/images/app-ui-ux-code__ai-smartphone.png" alt="AI Smartphone UI for Multi-Framework Support in App Development" />
+            <div class="bg-gradient-theme flex flex-col items-center p-4 rounded-xl">
+              <!-- <img loading="lazy" class="w-[140px]" src="assets/images/app-ui-ux-code__ai-smartphone.png" alt="AI Smartphone UI for Multi-Framework Support in App Development" /> -->
+              <svg version="1.1" class="img-invert" viewBox="0 0 2048 2048" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                <path transform="translate(1901,183)" d="m0 0h15l22 3 17 5 16 7 14 8 12 9 10 9 7 7 10 13 10 17 8 20 5 18 1 1v51l-2 1-4 15-8 20-7 12-10 14-12 13-13 11-18 11-18 8-17 5-19 3h-26l-18-3-17-5-14-6-17-10-11-9-12-11-10-12-10-15-8-17-4-11h-568l-8 7-160 160-1 2h-2v2h-2v2h-2v2h-2v2h-2v2h-2v2l-8 7-1 2h-2v2l9 3 58 25 26 11 58 25 17 8 9 7 6 9 4 10v18l-5 12-8 10-12 7-149 64-40 17-1 1 25 11 70 30 26 11 35 15 6 3 5 1 1-3 8-7 94-94 10-6 5-2 6-1h191l3-10 10-21 11-16 3-4h2l2-4 11-11 12-9 16-10 16-7 17-5 11-2 11-1h19l22 3 24 8 19 10 16 12 12 11 10 12 10 15 9 19 6 20 3 20v22l-3 19-4 15-7 16-8 15-9 12-9 10-8 8-12 9-13 8-17 8-20 6-18 3h-26l-18-3-16-5-15-6-14-8-12-9-13-12-9-10-9-13-8-14-7-18v-2l-171 1-2 4-107 107-12 7-37 16-28 12-54 23-30 13-35 15-5 2-1 2 5 1 32 14 35 15 30 13 26 11 35 15 27 12 10 6 10 9 102 102 16 1h152l2-1 7-18 10-18 11-14 9-10h2v-2l14-11 16-10 13-6 15-5 20-4h34l17 3 21 7 19 10 14 10 10 9 10 10 11 15 10 18 7 19 4 20 1 8v22l-3 20-5 17-9 20-9 14-9 11-5 6h-2l-2 4-14 11-14 9-17 8-19 6-18 3-19 1-19-2-17-4-16-6-14-7-12-8-11-9-3-2v-2l-4-2-12-14-10-15-9-19-3-10h-186l-12-2-12-6-16-15-90-90-6 2-159 68-1 2 9 3 142 61 26 11 21 10 7 6v2h2l6 10 2 7v18l-5 12-8 10-12 7-135 58-26 11 6 7 184 184h569l8-19 9-16 8-11 9-10 10-10 15-11 16-9 18-7 16-4 19-2h15l22 3 17 5 16 7 14 8 12 9 10 9 7 7 10 13 10 17 8 20 5 18 1 1v51l-2 1-4 15-7 18-8 14-10 14-12 13-13 11-18 11-15 7-20 6-19 3h-26l-18-3-17-5-23-11-14-10-13-11-11-12-11-16-8-15-6-16-591-1-11-3-11-7-227-227-10 3-44 19-201 86-54 23-13 5-5 1h-12l-12-3-29-13-40-17-469-201-23-10-9-7-8-9-4-9v-23l8-14 7-7 15-8 31-13 30-13 26-11 30-13 33-14 30-13 5-1v-2l-6-2-39-17-147-63-10-7-7-7-6-12v-23l8-14 7-7 15-8 36-15 37-16 91-39 19-8h2v-2l-6-2-34-15-54-23-84-36-16-7-9-7-8-9-4-9v-23l8-14 7-7 15-8 31-13 30-13 26-11 79-34 17-7h2v-2l-6-2-34-15-38-16-114-49-10-7-7-7-6-12v-23l8-14 7-7 15-8 36-15 30-13 35-15 14-5 13-1 12 3 10 6 7 7 7 14 1 4v13l-3 10-6 10-8 7-16 8-14 6h-2l1 3 394 169 19 8 37 16h6l27-12 182-78 26-11 30-13 28-12 45-19 39-17 63-27 9-4h3v-2l-6-2-53-23-378-162-17-7-5 1-30 13-26 11-35 15-13 4h-15l-11-4-9-7-7-9-4-9-1-4v-15l5-13 9-10 9-6 15-7 38-16 30-13 33-14 12-3h8l11 3 24 10 70 30 58 25 54 23 63 27 30 13 15 6 7-1 2-4h2l2-4 4-4h2l2-4h2l2-4h2l2-4h2l2-4h2l2-4h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2l4-4h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2v-2l8-7 19-19 5-6 7-6 5-6h2l2-4h2l2-4 11-9 10-5 11-2 587-1 8-19 9-16 8-11 9-10 10-10 15-11 18-10 16-6 16-4zm3 81-15 3-14 7-10 8-9 12-5 12-2 9v18l3 12 7 13 9 10 11 8 12 5 8 2h17l15-4 15-9 8-8 7-11 4-10 2-8v-18l-4-14-7-13-8-9-14-9-11-4-12-2zm-308 459-14 3-14 7-12 11-7 10-5 12-2 10v14l4 15 8 14 4 5h2v2l11 8 11 5 13 3h13l13-3 14-7 10-9 6-7 7-14 3-14v-12l-4-15-6-12-11-12-10-7-12-5-10-2zm-1278 105-25 11-147 63-1 3 32 14 411 176 9 4h6l25-11 65-28 285-122 30-13 35-15 12-5v-2l-31-14-54-23-44-19-40-17-7-2-257 110-11 4-5 1h-13l-13-4-39-17-189-81-31-13zm0 240-9 4-53 23-26 11-84 36-1 3 32 14 203 87 30 13 47 20 58 25 33 14 49 21h6l27-12 70-30 54-23 30-13 56-24 26-11 30-13 33-14 37-16 70-30 15-6 4-2v-2l-31-14-126-54-17-7-9 3-250 107-11 4-5 1h-13l-13-4-39-17-215-92-5-2zm1274 138-12 3-11 6-10 8-7 9-7 14-3 13v13l3 13 6 12 8 10 10 8 12 6 11 3h19l16-5 11-7 8-7 7-10 4-8 3-10 1-8v-10l-4-16-7-13-11-12-14-8-13-4zm-1274 102-25 11-133 57-16 7 1 2 32 14 411 176 9 4h6l25-11 100-43 68-29 30-13 31-13 30-13 121-52 35-15 12-5v-2l-31-14-54-23-37-16-47-20-7-2-257 110-11 4-5 1h-13l-13-4-39-17-196-84-24-10zm1586 356-15 3-14 7-10 8-9 12-5 12-2 9v18l3 12 7 13 9 10 11 8 12 5 8 2h17l15-4 15-9 8-8 7-11 4-10 2-8v-18l-4-14-7-13-8-9-14-9-11-4-12-2z"/>
+                <path transform="translate(311,504)" d="m0 0h18l10 4 6 4 5 5 6 8 4 11v17l-4 10-6 8-8 7-8 4-8 2h-13l-10-3-9-6-7-7-6-12-1-3v-18l3-8 6-10 9-8 9-4z"/>
+                <path transform="translate(2047,1696)" d="m0 0"/>
+                <path transform="translate(2047,296)" d="m0 0"/>
+                </svg>
               <div class="mt-6 text-center">
                 <h3 class="text-lg font-semibold text-tColor">Multi-Framework Support</h3>
                 <p class="mt-3 text-sm text-muted">Build for SwiftUI, Flutter, React Native, or Jetpack Compose with seamless cross-platform compatibility.</p>
@@ -207,8 +248,12 @@
             </div>
 
             <!-- Feature 3 -->
-            <div class="flex flex-col items-center">
-              <img loading="lazy" class="w-[140px]" src="assets/images/app-ui-ux-code__neural-network.png" alt="Neural Network Integration for Smooth Workflow in Mobile UI Development" />
+            <div class="bg-gradient-theme flex flex-col items-center p-4 rounded-xl">
+              <!-- <img loading="lazy" class="w-[140px]" src="assets/images/app-ui-ux-code__neural-network.png" alt="Neural Network Integration for Smooth Workflow in Mobile UI Development" /> -->
+              <svg version="1.1" class="img-invert" viewBox="0 0 2048 2048" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                <path transform="translate(721,183)" d="m0 0h603l11 3 9 5 8 8 5 8 3 10v604l-3 10-7 11-8 7-8 4-8 2-260 1-1 248h745l9 2 12 6 8 8 6 11 2 6v243h166l8 2 10 5 5 4 8 11 4 7v429h-2l-4 8-9 10-9 5-9 3-9 1h-403l-11-2-12-6-9-9-6-12-2-12v-407l2-9 5-10 8-9 12-7 7-2h167v-193h-698l-1 193h165l12 3 12 8v2h2l7 11 3 8 1 13v387l-1 19-4 11-6 9-9 8-9 4-14 2h-404l-13-3-10-6-8-8-6-12-2-10v-409l3-11 6-11 10-9 11-5 4-1 166-1 1-192h-698v179l-1 14h165l12 3 9 6 5 5 6 8 4 11 1 25v350l-1 43-3 10-7 10-8 7-8 4-7 2-9 1h-403l-11-2-10-5-10-9-6-10-2-4v-425l7-13 7-8 12-7 7-2h167v-236l2-11 6-12 10-10 12-6 6-1 745-1 1-248h-262l-10-4-9-6-7-8-5-11-1-4-1-15v-582l2-13 6-12 7-8 12-7zm94 82-44 1-1 88v419h507v-507l-115-1zm-692 1197-41 1v319l127 1h59l133-1v-320zm1599 0-76 1v319l135 1h61l123-1v-319l-45-1zm-857 1-1 4v315h319l1-73v-154l-1-92z"/>
+                </svg>
+                
               <div class="mt-6 text-center">
                 <h3 class="text-lg font-semibold text-tColor">Smooth Tool Integration</h3>
                 <p class="mt-3 text-sm text-muted">Easily integrate generated UI code into your existing tools and workflows for faster development.</p>
@@ -216,13 +261,32 @@
             </div>
 
             <!-- Feature 4 -->
-            <div class="flex flex-col items-center">
-              <img loading="lazy" class="w-[140px]" src="assets/images/app-ui-ux-code__ai-prompt.png" alt="AI-Driven Optimization for Clean and Efficient Mobile App Code" />
+            <div class="bg-gradient-theme flex flex-col items-center p-4 rounded-xl">
+              <!-- <img loading="lazy" class="w-[140px]" src="assets/images/app-ui-ux-code__ai-prompt.png" alt="AI-Driven Optimization for Clean and Efficient Mobile App Code" /> -->
+              <svg version="1.1" class="img-invert" viewBox="0 0 2048 2048" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                <path transform="translate(405,955)" d="m0 0h10l17 2 18 6 18 10 13 11 7 7 10 14 7 14 5 15 2 13v20l-2 14-6 17v5l123 123 2 1h196l8-16 8-12 11-12 11-9 13-8 15-6 13-3 10-1h15l15 2 16 5 17 9 9 7 10 9 10 12 9 16 3 6v2l353-1 8-16 8-12 11-12 12-10 14-8 13-5 13-3 9-1h16l15 2 18 6 15 8 12 9 12 12 9 13 8 16 5 18 2 21-2 17-4 15-6 14-8 12-9 11-11 10-13 8-14 7-1 54v437l10 3 16 10 11 9 7 8 8 11 8 15 5 15 2 11 1 15-2 17-4 15-5 12-8 14-12 14-13 11-18 10-18 6h-5v2h-41v-2l-18-6-12-6-11-8-10-9-9-10-9-15-5-11-4-13-2-13v-21l4-18 6-16 8-13 9-11 9-9 13-9 16-8h2v-490l-4-3-16-8-11-9-9-8-12-16-9-18h-353l-8 17-10 14-9 10-12 9-14 8-16 6-15 3h-26l-18-4-16-7-13-8-12-11-7-7-7-10-8-15-1-5-216-1-11-3-13-10-132-132-9 2-11 4-24 3-21-2-20-6-18-10-14-12-8-9-7-10-8-15-5-16-2-12v-21l3-16 5-15 8-15 11-14 9-9 14-10 17-8 13-4zm-2 70-11 4-8 7-4 6-3 9-1 9 3 12 7 10 10 7 8 2h11l11-4 9-7 6-10 2-9-1-11-4-10-8-9-10-5-4-1zm518 204-11 2-9 5-8 9-4 10-1 10 2 9 4 8 4 5 9 6 10 3h8l13-4 8-6 6-9 3-11v-7l-3-10-5-8-8-7-10-4zm539 1-10 4-9 8-5 10-1 3v16l6 12 7 7 10 5 13 1 11-3 9-6 6-8 3-8 1-5v-7l-3-11-7-10-10-6-6-2zm3 682-10 3-8 6-6 7-4 10-1 9 3 12 6 9 7 6 10 4 10 1 11-3 8-5 7-7 4-10 1-5v-8l-4-12-6-8-9-6-10-3z"/>
+                <path transform="translate(354)" d="m0 0h45l1 2 17 6 16 9 10 8 7 6 11 14 9 16 6 19 2 12v20l-3 17-4 12-8 16-10 13-5 6-14 11-16 9-14 5-13 3-9 1h-12l-20-3-17-6-4 2-259 259v281l12 11 68 68 188 1h160l20 1 11 4 10 8 190 190 2 1h401l8-16 9-13 10-11 13-10 14-8 12-5 14-3 11-1h10l18 2 18 6 15 8 9 7 10 9 8 9 7 11 7 14 5 17 2 18-1 16-4 17-4 11-9 16-9 11-10 10-13 9-16 8-18 5-18 2-16-1-14-3-13-5-12-6-13-10-5-4-7-8-10-14-8-16-410-1-16-2-8-4-11-9-189-189-362-1-11-2-10-6-10-9-96-96-8-12-1-5v-324l8-13 12-13 262-262-7-21-2-11-1-13 2-18 6-20 9-17 8-10 10-11 13-10 15-8 18-6zm17 69-10 3-9 6-6 8-3 8-1 10 2 10 6 10 8 7 7 3 3 1h13l10-3 9-7 6-9 3-12-1-9-3-8-6-9-9-6-10-3zm851 956-9 3-9 7-5 7-3 8-1 9 2 10 5 9 4 5 10 6 7 2h11l10-3 9-7 4-5 4-9 1-13-4-13-9-10-10-5-5-1z"/>
+                <path transform="translate(1730,307)" d="m0 0h22l16 3 16 6 16 9 15 13 12 15 9 17 6 19 2 23-2 18-5 16-6 13-7 11-8 10-8 7-12 9-16 8-4 1v197l6 7 8 7v2l3 1 5 6 8 7v2l4 2 91 91 6-1 15-5 14-2h21l16 3 16 6 14 8 11 9 6 5 11 14 7 12 6 15 2 10h2v41h-2l-2 10-7 17-6 10-8 10-12 12-15 10-15 7-1 43-3 12-8 11-260 260-1 2-1 25 6 2 13 7 11 8 10 9 9 10 10 17 6 16 3 14v27l-4 17-7 17-9 14-11 12-10 9-13 8-12 6h-2l1 81 9 3 12 7 13 10 8 8 11 15 9 19 4 15 1 6v24l-3 16-6 16-8 14-8 10-7 8-14 11-15 8-19 6-11 2h-25l-14-3-16-6-14-8-10-8-7-6-9-11-8-13-5-11-5-17-1-8v-25l4-17 7-17 9-14 11-12 10-9 15-9 9-4h2l1-81-6-2-15-8-13-10-10-10-9-12-8-16-6-18-2-21 2-19 5-17 8-16 9-13 5-6 8-7 14-10 16-8h2l-1-17v-11l1-16 3-11 8-11 260-260 1-2v-25l-16-8-11-7-14-13-11-14-8-16-4-11-3-15-1-14 4-25 5-14 1-5h-2l-7-8-127-127-7-10-3-12-1-213-16-8-12-8-13-12-10-13-9-17-6-20-1-8v-19l3-17 5-15 9-17 9-11 4-5 11-9 9-6 16-8 12-4zm7 69-9 2-9 6-7 8-4 10-1 9 3 12 6 9 7 6 10 4 10 1 11-3 11-7 6-9 3-11v-8l-3-10-6-9-8-6-8-3-5-1zm205 512-9 2-9 6-5 5-4 7-2 6v15l4 10 8 9 7 4 12 3 8-1 9-3 8-6 6-7 4-13-1-12-4-9-6-8-10-6-9-2zm-272 546-12 3-8 6-6 7-4 9-1 5v7l3 10 6 10 10 7 11 3h7l10-3 8-5 8-9 3-9 1-8-3-14-6-9-10-7-5-2zm0 273-12 3-8 6-6 7-4 9-1 12 3 10 6 10 8 6 8 3 12 1 11-3 8-6 7-8 3-8 1-10-2-10-4-8-8-8-11-5z"/>
+                <path transform="translate(798)" d="m0 0h45v2l18 6 16 9 11 9 10 10 10 14 8 17 4 14 2 14v13l-3 19-5 15-1 4 7 8 403 403 7 12 2 11v109l9 3 14 8 13 11 8 8 10 14 8 17 5 19 1 9v13l-2 15-5 16-8 16-6 9-7 9-8 7-12 9-16 8-16 5-9 2-10 1h-9l-16-2-19-6-15-8-13-10-11-11-8-11-8-15-5-15-3-18v-15l3-17 5-15 8-15 8-11 15-15 14-9 14-7v-94l-7-8-389-389-4-1-21 7-17 2h-12l-14-2-16-5-16-8-13-10-11-11-8-11-10-19v-2h-108v70l-3 12-8 11-28 28-5 6-7 6-5 6-7 6-5 6-7 6-5 6-7 6-5 6-6 5-2 3h-2l-2 4h-2l-2 4h-2l-2 4h-2l-2 4h-2l-2 4h-2l-2 4h-2l-2 4h-2l-2 4h-2l-2 4-8 7-1 1 1 8 5 15 2 13v20l-3 16-4 12-8 16-12 16h-2l-2 4-14 11-17 9-15 5-9 2-9 1h-16l-15-2-20-7-14-8-10-8-12-12-9-13-8-16-5-17-2-16 1-16 3-15 6-16 8-14 13-16 13-11 17-10 18-6 14-2h20l17 3 14 5 5-1 123-123 1-89 3-13 6-9 8-7 8-4 20-2h124l9-1 8-16 8-12 13-14 12-9 15-8 18-6zm16 69-10 3-9 7-4 5-3 5-2 8v10l3 10 6 8 7 6 6 3 4 1h13l9-3 9-6 6-8 3-10v-12l-3-9-7-10-10-6-9-2zm-443 307-10 3-9 6-7 10-3 12 1 11 3 7 4 6 8 7 6 3 9 2 9-1 9-3 8-6 6-8 3-8 1-10-3-11-6-10-8-6-8-3zm926 375-14 3-11 8-6 10-2 7v12l4 11 9 10 10 5 6 1h8l11-3 9-7 6-8 3-9v-13l-5-12-6-7-9-5-12-3z"/>
+                <path transform="translate(1105)" d="m0 0h43l3 2 17 6 16 9 16 13 12 15 8 14 6 17 3 19v13l-2 16-7 22 4 4v2l4 2 14 14v2l4 2 276 276v2l4 2v2l4 2v2l4 2 22 22 8 10 5 10 2 11 1 327 56 56 10-3 11-4 17-2h14l16 2 17 6 15 8 9 7 10 9 8 9 7 11 6 12 6 20 1 7v24l-3 15-6 16-9 16-12 14-13 11-16 9-13 5-12 3-9 1h-23l-14-3-16-6-13-7-16-13-8-9-7-10-9-17-5-18-2-16 1-13 3-17 5-14-1-5-63-63-8-11-3-6-2-8-1-330-7-8-321-321-3-1-21 7-17 2h-11l-16-2-18-6-17-9-13-11-8-8-9-12-8-15-6-19-2-23 3-21 5-16 10-19 11-13 7-7 14-10 16-8 12-4h4zm16 69-10 3-9 7-6 9-3 11 1 12 6 12 9 8 10 4h14l9-3 9-7 6-9 2-7v-14l-4-10-6-8-10-6-9-2zm543 888-9 4-10 9-5 11-1 12 3 11 8 11 10 6 8 2h8l10-3 10-6 7-10 2-6 1-10-3-12-5-8-8-7-10-4z"/>
+                <path transform="translate(1413)" d="m0 0h40l9 3 15 6 11 6 13 10 7 6 12 16 7 12 3 7 2 1h159l20 1 10 3 9 6 10 9 228 228 9 13 3 10 1 146 19 10 11 8 10 9 11 14 8 15 6 17 2 5v41l-2 1-4 13-7 15-7 11-8 10-11 9-10 7-16 8-17 5-14 2h-16l-16-3-15-5-15-8-10-8-10-9-11-14-7-12-6-17-3-16-1-14 3-20 5-16 8-15 8-11 3-4h2l2-4 13-11 16-9 9-3-1-128-7-8-209-209-2-1h-162l-8 16-7 11-12 13-11 9-16 9-14 5-13 3-9 1h-13l-20-3-16-6-13-7-14-11-8-8-9-12-8-14-6-18-2-13v-21l3-16 5-15 10-18 12-14 10-9 11-7 14-7 13-4h4zm15 69-11 4-5 3v2h-2v2h-2l-5 9-2 6-1 9 3 12 6 9 7 6 11 4h13l11-4 10-9 4-8 2-9-1-11-4-10-7-8-12-6-5-1zm511 478-9 3-9 7-6 9-3 12 1 10 4 10 8 9 10 5 5 1h12l9-3 8-6 7-9 3-11v-7l-4-13-6-8-8-6-9-3z"/>
+                <path transform="translate(672,307)" d="m0 0h23l15 3 14 5 16 9 11 9 11 11 10 15 5 10 2 6h112l11 3 10 7 137 137 7 11 3 12 1 212 16 8 11 7 13 12 11 14 8 16 4 11 3 12 1 9v14l-3 18-5 15-9 17-11 14-11 10-9 6-15 8-19 6-16 2h-11l-16-2-18-6-16-8-11-9-9-8-10-13-8-14-7-21-2-13v-18l3-17 6-16 9-16 9-11 10-10 10-7 10-6 10-3v-198l-9-10-104-104-2-1h-94l-8 17-10 14-7 8-14 11-14 8-17 6-17 3h-18l-14-2-21-7-14-8-13-11-8-8-10-14-8-17-4-13-2-11v-22l3-16 5-15 9-16 13-16 12-10 13-8 11-5 12-4zm6 69-10 3-8 6-6 7-4 10v15l4 10 9 10 8 4 9 2 10-1 10-4 6-4 7-10 3-12-1-11-4-9-6-8-10-6-9-2zm340 444-11 4-10 9-5 10-1 4v13l4 10 7 9 9 5 7 2h12l11-4 10-9 5-10 1-5v-10l-3-10-6-8-7-6-11-4z"/>
+                <path transform="translate(228,546)" d="m0 0h24l15 3 16 6 15 9 14 12 10 12 8 13 5 11 7 1h347l2-6 8-15 11-14 7-7 13-10 15-8 11-4 17-3h23l16 3 17 6 15 9 11 9 8 8 9 12 8 15 6 19 2 15v13l-2 15-7 21-8 14-8 11-9 9-13 10-16 8-14 5-17 3h-22l-21-5-17-8-14-10-14-14-10-14-6-13v-3l-355-1-3 9-8 14-9 11-2 3h-2l-2 4-13 10-10 6-15 6-15 4-7 1h-21l-15-3-15-5-15-8-10-8-10-9-11-14-8-15-5-15-2-8-1-10v-16l3-17 5-15 9-17 11-14h2v-2l11-9 14-9 11-5 17-5zm7 69-9 2-9 6-7 8-4 11v13l3 9 7 9 9 6 7 2h15l9-4 6-4v-2h2l6-10 2-7v-11l-4-11-4-6-7-6-9-4-5-1zm546 0-9 2-10 7-5 6-4 9-1 4v11l4 11 7 9 8 5 6 2h16l9-4 8-6 6-9 2-8v-12l-4-11-9-10-11-5-4-1z"/>
+                <path transform="translate(1487,2047)" d="m0 0 3 1z"/>
+                <path transform="translate(2047,556)" d="m0 0"/>
+                <path transform="translate(1149)" d="m0 0 2 1z"/>
+                <path transform="translate(1,764)" d="m0 0"/>
+                <path transform="translate(1454)" d="m0 0"/>
+                <path transform="translate(1411)" d="m0 0"/>
+                </svg>
               <div class="mt-6 text-center">
                 <h3 class="text-lg font-semibold text-tColor">AI-Driven Optimization</h3>
                 <p class="mt-3 text-sm text-muted">Leverage AI-powered tools to create clean, optimized code that ensures top performance and efficiency.</p>
               </div>
             </div>
+          </div>
+          <div class="flex">
+            <a href="#" class="mx-auto mt-5 flex w-fit items-center gap-1 rounded-lg bg-aucPrimary border-2 border-aucPrimary shadow-lg shadow-purple-500/50 sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-aucPrimary hover:shadow-none">Launch App <i class="uil uil-arrow-right text-xl"></i></a>
           </div>
         </div>
       </section>
@@ -231,8 +295,8 @@
       <section>
         <div class="mx-auto w-full max-w-screen-xl px-5 py-14">
           <div class="flex flex-col items-center">
-            <h2 class="text-center text-2xl font-bold text-tColor lg:text-3xl">How it Works</h2>
-            <p class="mt-5 max-w-screen-sm text-center text-muted">Creating your app's UI has never been easier. Simply describe or sketch your design, select your preferred framework, and instantly receive clean, production-ready code—all in just a few steps.</p>
+            <h2 class="text-center text-3xl lg:text-4xl font-bold text-tColor">Your App's Design Journey <span class="auc-gradient-text">Simplified</span></h2>
+            <p class="mt-5 max-w-screen-sm text-center text-muted">Transform your ideas into stunning app designs effortlessly. Describe your vision, pick your framework, and get production-ready code in minutes—it's as simple as sketch, select, and generate!</p>
           </div>
 
           <!-- Steps Container -->
@@ -240,8 +304,10 @@
             <!-- Step 1 -->
             <div class="flex flex-col items-center justify-between gap-10 md:flex-row lg:gap-40">
               <div class="flex-1 text-center lg:text-left">
-                <h3 class="text-2xl font-semibold text-tColor lg:text-3xl">Describe your <span class="auc-gradient-text font-bold">UI or code</span></h3>
-                <p class="mt-5 text-tColor">Start by detailing the layout, design, or functionality you need—no coding skills required.</p>
+                <p class="auc-gradient-text border-aucPrimary w-fit rounded-lg border px-2 py-0.5 mb-3 text-sm font-semibold text-aucPrimary">No Coding Skills Needed</p>
+                <h3 class="text-2xl font-semibold text-tColor lg:text-3xl"> Describe Your <span class="auc-gradient-text font-bold">UI or code</span></h3>
+                <p class="mt-5 text-tColor">Begin your journey by clearly outlining the design, layout, or functionality you envision for your app. Whether you’re detailing complex workflows or a simple interface, our platform takes your ideas and translates them into actionable steps—no coding experience needed. The more specific your input, the more precise the results!</p>
+                <a href="#" class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-aucPrimary border-2 border-aucPrimary shadow-lg shadow-purple-500/50 px-3 py-1.5 text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-aucPrimary hover:shadow-none">Start Describing Now <i class="uil uil-arrow-right text-xl"></i></a>
               </div>
               <div class="relative flex-1">
                 <img loading="lazy" class="relative z-10" src="assets/images/app-ui-ux-code__ui-code.png" alt="Describe your UI or code" />
@@ -252,8 +318,10 @@
             <!-- Step 2 -->
             <div class="flex flex-col items-center justify-between gap-10 md:flex-row-reverse lg:gap-40">
               <div class="flex-1 text-center lg:text-left">
+                <p class="auc-gradient-text border-aucPrimary w-fit rounded-lg border px-2 py-0.5 mb-3 text-sm font-semibold text-aucPrimary">Visualize Your Design</p>
                 <h3 class="text-2xl font-semibold text-tColor lg:text-3xl">Draw your <span class="auc-gradient-text font-bold">UI mockup</span></h3>
-                <p class="mt-5 text-tColor">Optionally, sketch your UI to visualize your design and help guide the code generation process.</p>
+                <p class="mt-5 text-tColor">Bring your ideas to life by sketching out your UI design. Whether it’s a rough draft or a polished layout, this step helps visualize your concept and provides a clear blueprint for code generation. Your sketches guide our engine to deliver designs that align perfectly with your vision.</p>
+                <a href="#" class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-aucPrimary border-2 border-aucPrimary shadow-lg shadow-purple-500/50 px-3 py-1.5 text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-aucPrimary hover:shadow-none">Create Your Mockup <i class="uil uil-arrow-right text-xl"></i></a>
               </div>
               <div class="relative flex flex-1 justify-center">
                 <img loading="lazy" class="relative z-10" src="assets/images/app-ui-ux-code__ui-mockup.png" alt="Draw your UI mockup" />
@@ -264,8 +332,10 @@
             <!-- Step 3 -->
             <div class="flex flex-col items-center justify-between gap-10 md:flex-row lg:gap-40">
               <div class="flex-1 text-center lg:text-left">
+                <p class="auc-gradient-text border-aucPrimary w-fit rounded-lg border px-2 py-0.5 mb-3 text-sm font-semibold text-aucPrimary">Framework Flexibility</p>
                 <h3 class="text-2xl font-semibold text-tColor lg:text-3xl">Choose your <span class="auc-gradient-text font-bold">framework</span></h3>
-                <p class="mt-5 text-tColor">Select your preferred development framework, like SwiftUI, Flutter, React Native, or Jetpack Compose.</p>
+                <p class="mt-5 text-tColor">Select the development framework that best suits your needs—whether it’s <span class="auc-gradient-text">SwiftUI, Flutter, React Native, or Jetpack Compose.</span> Tailored code is generated based on your selection, ensuring compatibility with your chosen tools. This flexibility empowers you to work seamlessly in your preferred environment.</p>
+                <a href="#" class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-aucPrimary border-2 border-aucPrimary shadow-lg shadow-purple-500/50 px-3 py-1.5 text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-aucPrimary hover:shadow-none">Choose & Build <i class="uil uil-arrow-right text-xl"></i></a>
               </div>
               <div class="relative flex-1">
                 <img loading="lazy" class="relative z-10" src="assets/images/app-ui-ux-code__ui-framework.png" alt="Choose your framework" />
@@ -311,9 +381,7 @@
               <p class="text-sm italic text-muted">Code Generated</p>
               <div class="auc-gradient-bg-theme mt-3 w-full rounded-xl p-0.5">
                 <!-- Highlight code using https://highlight.hohli.com -->
-                <pre class="font-monospace relative z-10 h-full w-full overflow-x-auto rounded-[inherit] bg-black p-5 text-sm text-gray-200" style="scrollbar-width: none">
-<code >
-<span style="color: rgb(255, 123, 114); font-weight: 400;">import</span> <span style="color: rgb(210, 168, 255); font-weight: 400;">React</span> <span style="color: rgb(255, 123, 114); font-weight: 400;">from</span> <span style="color: rgb(165, 214, 255); font-weight: 400;">'react'</span>;
+                <pre class="font-monospace relative z-10 h-full w-full overflow-x-auto rounded-[inherit] bg-black p-5 text-sm text-gray-200" style="scrollbar-width: none"><code ><span style="color: rgb(255, 123, 114); font-weight: 400;">import</span> <span style="color: rgb(210, 168, 255); font-weight: 400;">React</span> <span style="color: rgb(255, 123, 114); font-weight: 400;">from</span> <span style="color: rgb(165, 214, 255); font-weight: 400;">'react'</span>;
 <span style="color: rgb(255, 123, 114); font-weight: 400;">import</span> { <span style="color: rgb(210, 168, 255); font-weight: 400;">SafeAreaView</span>, <span style="color: rgb(210, 168, 255); font-weight: 400;">Text</span>, <span style="color: rgb(210, 168, 255); font-weight: 400;">Button</span>, <span style="color: rgb(210, 168, 255); font-weight: 400;">StyleSheet</span> } <span style="color: rgb(255, 123, 114); font-weight: 400;">from</span> <span style="color: rgb(165, 214, 255); font-weight: 400;">'react-native'</span>;
 
 <span style="color: rgb(255, 123, 114); font-weight: 400;">const</span> <span style="color: rgb(210, 168, 255); font-weight: 400;">App</span> = (<span style="color: rgb(201, 209, 217); font-weight: 400;"></span>) =&gt; (
@@ -329,10 +397,12 @@
 });
 
 <span style="color: rgb(255, 123, 114); font-weight: 400;">export</span> <span style="color: rgb(255, 123, 114); font-weight: 400;">default</span> <span style="color: rgb(210, 168, 255); font-weight: 400;">App</span>;
-</code>
-                </pre>
+</code></pre>
               </div>
             </div>
+          </div>
+          <div class="flex">
+            <a href="#" class="mx-auto mt-5 flex w-fit items-center gap-1 rounded-lg bg-aucPrimary border-2 border-aucPrimary shadow-lg shadow-purple-500/50 sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-aucPrimary hover:shadow-none">Launch App <i class="uil uil-arrow-right text-xl"></i></a>
           </div>
         </div>
       </section>
@@ -426,6 +496,20 @@
             <!-- End Grid -->
           </div>
           <!-- End FAQ -->
+        </div>
+      </section>
+
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <div class="bg-gradient-theme flex flex-col items-center lg:p-12 p-6 rounded-xl">
+            <div class="w-1/2">
+              <h2 class="text-center text-3xl lg:text-4xl font-bold text-tColor">You’ve made it this far. Let’s build your <span class="auc-gradient-text">first application</span></h2>
+              <p class="text-muted text-center mt-3">Now, it’s time to turn your ideas into reality. Use PixLab's powerful tools to design, customize, and generate your application with ease. Let’s get started and create your first application today!</p>
+              <div class="flex">
+                <a href="#" class="mx-auto mt-5 flex w-fit items-center gap-1 rounded-lg bg-aucPrimary border-2 border-aucPrimary shadow-lg shadow-purple-500/50 sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-aucPrimary hover:shadow-none">Build Your First App <i class="uil uil-arrow-right text-xl"></i></a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
