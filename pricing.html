@@ -191,8 +191,36 @@
             <span class="text-primary">Intelligent User Experience</span>!
           </h2>
 
+          <div class="px-5 py-10">
+            <h3 class="gradient-text-animation text-center text-lg">Trusted by</h3>
+  
+            <div id="pricing-brands-carousel" class="pricing-brands-carousel relative mt-5 overflow-hidden whitespace-nowrap py-7">
+              <div class="brands-wrapper inline-block">
+                <img class="w-36 object-contain" src="assets/images/brand-creative-zone.png" alt="Creative Zone" />
+                <img class="w-36 object-contain" src="assets/images/brand-reygroup.png" alt="Reygroup" />
+                <img class="w-36 object-contain" src="assets/images/brand-media-hub.png" alt="Media Hub" />
+                <img class="w-36 object-contain" src="assets/images/brand-all-travel.png" alt="All Travel" />
+                <img class="w-36 object-contain" src="assets/images/brand-perform-line.png" alt="Perform Line" />
+                <img class="w-36 object-contain" src="assets/images/brand-hub-people.png" alt="Hub People" />
+                <img class="w-36 object-contain" src="assets/images/brand-register-play.png" alt="Register Play" />
+                <img class="w-36 object-contain" src="assets/images/brand-all-travel.png" alt="All Travel" />
+              </div>
+  
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  const carousel = document.querySelector("#pricing-brands-carousel");
+                  const brandsWrapper = carousel?.querySelector(".brands-wrapper");
+  
+                  // Clone and append the brands wrapper
+                  if (!carousel || !brandsWrapper) return;
+                  const brandsWrapperClone = brandsWrapper.cloneNode(true);
+                  carousel.appendChild(brandsWrapperClone);
+                });
+              </script>
+            </div>
+          </div>
           <!-- Pricing Cards -->
-          <div class="pricing-cards mt-12 grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-5">
+          <div class="pricing-cards mt-6 grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-5">
             <!-- Single Pricing Card -->
             <div class="card bg-gradient-theme rounded-xl p-5 transition-all duration-[400ms] hover:scale-105 hover:shadow-lg">
               <h4 class="font-medium text-yellow-400">Starter</h4>
@@ -413,38 +441,6 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Brands Carousel Section -->
-      <section>
-        <div class="px-5 py-10">
-          <h3 class="gradient-text-animation text-center text-lg">Trusted by</h3>
-
-          <div id="pricing-brands-carousel" class="pricing-brands-carousel relative mt-5 overflow-hidden whitespace-nowrap py-7">
-            <div class="brands-wrapper inline-block">
-              <img class="w-36 object-contain" src="assets/images/brand-creative-zone.png" alt="Creative Zone" />
-              <img class="w-36 object-contain" src="assets/images/brand-reygroup.png" alt="Reygroup" />
-              <img class="w-36 object-contain" src="assets/images/brand-media-hub.png" alt="Media Hub" />
-              <img class="w-36 object-contain" src="assets/images/brand-all-travel.png" alt="All Travel" />
-              <img class="w-36 object-contain" src="assets/images/brand-perform-line.png" alt="Perform Line" />
-              <img class="w-36 object-contain" src="assets/images/brand-hub-people.png" alt="Hub People" />
-              <img class="w-36 object-contain" src="assets/images/brand-register-play.png" alt="Register Play" />
-              <img class="w-36 object-contain" src="assets/images/brand-all-travel.png" alt="All Travel" />
-            </div>
-
-            <script>
-              document.addEventListener("DOMContentLoaded", () => {
-                const carousel = document.querySelector("#pricing-brands-carousel");
-                const brandsWrapper = carousel?.querySelector(".brands-wrapper");
-
-                // Clone and append the brands wrapper
-                if (!carousel || !brandsWrapper) return;
-                const brandsWrapperClone = brandsWrapper.cloneNode(true);
-                carousel.appendChild(brandsWrapperClone);
-              });
-            </script>
           </div>
         </div>
       </section>
