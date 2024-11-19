@@ -154,19 +154,13 @@
             <!-- Hero Text -->
             <div class="relative flex-1 z-10 flex flex-col items-center text-center lg:block lg:max-w-screen-sm lg:text-left">
               <h1 class="text-2xl text-center font-semibold leading-[1.2] text-[#faf8f5] lg:text-5xl ape-gradient-text">Automate PDF & Image Creation</h1>
-              <p class="mt-5 text-[#d4d4d4] text-2xl text-center  font-semibold">Harness the full power of PixLab's PDF and image generation engine. Effortlessly automate media creation and customization with PixLab's powerful API.</p>
+              <p class="mt-5 text-[#d4d4d4] text-2xl text-center font-semibold">Harness the full power of PixLab's PDF and image generation engine. Effortlessly automate media creation and customization with PixLab's powerful API.</p>
               <div class="mt-5 space-y-2 text-slate-600 font-semibold text-lg text-left leading-[1.2]">
-                  <div class="flex items-start space-x-2">
-                    <span>&nearr; Create dynamic images and PDFs from customizable templates.</span>
-                  </div>
-                  <div class="flex items-start space-x-2">
-
-                    <span>Automate scalable content creation effortlessly.</span>
-                  </div>
-                  <div class="flex items-start space-x-2">
-
-                    <span>Seamlessly integrate with our API or use no-code solutions.</span>
-                  </div>
+                  <ul class="ml-5 flex list-disc flex-col gap-2 marker:text-[#43EAA4]">
+                    <li>Create dynamic images and PDFs from customizable templates.</li>
+                    <li>Automate scalable content creation effortlessly.</li>
+                    <li>Seamlessly integrate with our API or use no-code solutions.</li>
+                  </ul>
                 </div>
             </div>
             <div class="flex-1 w-full relative">
@@ -262,16 +256,16 @@
   <span class="js-key">method</span>: <span class="js-string">"POST"</span>,
   <span class="js-key">headers</span>: { <span class="js-string">"Content-Type"</span>: <span class="js-string">"application/json"</span> },
   <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
-  <span class="js-key">template_id</span>: <span class="js-string">"YOUR_TEMPLATE_ID"</span>,
-  <span class="js-key">output</span>: <span class="js-string">"image"</span>,
-  <span class="js-key">data</span>: {
-  <span class="js-string">"title"</span>: <span class="js-string">"Custom Title"</span>,
-  <span class="js-string">"image_url"</span>: <span class="js-string">"https://example.com/image.jpg"</span>
-  }
+    <span class="js-key">template_id</span>: <span class="js-string">"YOUR_TEMPLATE_ID"</span>,
+    <span class="js-key">output</span>: <span class="js-string">"image"</span>,
+    <span class="js-key">data</span>: {
+      <span class="js-string">"title"</span>: <span class="js-string">"Custom Title"</span>,
+      <span class="js-string">"image_url"</span>: <span class="js-string">"https://example.com/image.jpg"</span>
+    }
   })
-  })
-  .<span class="js-function">then</span>(<span class="js-keyword">response</span> => <span class="js-keyword">response</span>.<span class="js-function">json</span>())
-  .<span class="js-function">then</span>(<span class="js-keyword">data</span> => <span class="js-keyword">console.log</span>(<span class="js-string">"Image URL:"</span>, <span class="js-keyword">data</span>.<span class="js-key">url</span>));</code></div>
+})
+.<span class="js-function">then</span>(<span class="js-keyword">response</span> => <span class="js-keyword">response</span>.<span class="js-function">json</span>())
+.<span class="js-function">then</span>(<span class="js-keyword">data</span> => <span class="js-keyword">console.log</span>(<span class="js-string">"Image URL:"</span>, <span class="js-keyword">data</span>.<span class="js-key">url</span>));</code></div>
             </div>
             <div class="flex gap-5">
               <a class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-apePrimary border-2 border-apePrimary sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-apePrimary" href="https://console.pixlab.io">Read more</a>
