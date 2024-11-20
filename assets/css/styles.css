@@ -1223,6 +1223,9 @@ body {
 .h-\[15px\] {
   height: 15px;
 }
+.h-\[363px\] {
+  height: 363px;
+}
 
 .h-\[70vh\] {
   height: 70vh;
@@ -1352,6 +1355,10 @@ body {
 
 .max-w-4xl {
   max-width: 56rem;
+}
+
+.max-w-7xl {
+  max-width: 80rem;
 }
 
 .max-w-\[1320px\] {
@@ -1998,6 +2005,11 @@ body {
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 
+.bg-indigo-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(79 70 229 / var(--tw-bg-opacity));
+}
+
 .bg-input {
   background-color: var(--color-input);
 }
@@ -2062,6 +2074,11 @@ body {
 
 .bg-white\/85 {
   background-color: rgb(255 255 255 / 0.85);
+}
+
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-30 {
@@ -2596,6 +2613,11 @@ body {
   color: rgb(22 101 52 / var(--tw-text-opacity));
 }
 
+.text-indigo-600 {
+  --tw-text-opacity: 1;
+  color: rgb(79 70 229 / var(--tw-text-opacity));
+}
+
 .text-lime-400 {
   --tw-text-opacity: 1;
   color: rgb(163 230 53 / var(--tw-text-opacity));
@@ -2657,6 +2679,10 @@ body {
 .text-yellow-500 {
   --tw-text-opacity: 1;
   color: rgb(234 179 8 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 .opacity-0 {
@@ -3476,13 +3502,15 @@ body.dark-theme .ape-header-gradient-theme {
   display: flex;
   align-items: center;
   gap: 50px;
-  animation: scroll 20s linear infinite;
-  width: calc(150px * 12);
+  animation: logos-scroll 15s linear infinite;
+  width: calc(265px * 8);
 }
 
 .logos-slide {
-  /* flex: 1; */
-  /* width: 150px; */
+  flex: 0 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 60px;
   margin: 0 10px;
   display: flex;
   align-items: center;
@@ -3490,9 +3518,25 @@ body.dark-theme .ape-header-gradient-theme {
 }
 
 .logos-slide img {
-  width: 3rem;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@keyframes logos-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-150px * 4 ));
+  }
+}
+
+@media (max-width: 768px) {
+  .logos-slider-track {
+    animation: logos-scroll 10s linear infinite;
+  }
 }
 
 /* App UI/UX Code Styling End */
@@ -3997,6 +4041,11 @@ body.template-pdf-media-engine nav .hs-dropdown:hover > button {
 .hover\:bg-green-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-indigo-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(67 56 202 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-msePrimary:hover {

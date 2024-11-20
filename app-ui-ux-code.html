@@ -151,43 +151,59 @@
     <main class="leading-8">
       <!-- Hero Section -->
       <section class="hero-section">
-        <div id="particles-js" class="relative h-[75vh] bg-[#0b0e13]">
+        <div id="particles-js" class="lg:h-[95vh] h-[840px] bg-[#0b0e13]">
           <div class="absolute flex h-full w-full items-center px-5 pt-10 text-white">
-            <div class="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between gap-10 lg:flex-row">
+            <div class="mx-auto flex w-full max-w-screen-xl flex-col items-start justify-between gap-10 lg:flex-row">
               <!-- Hero Text -->
-              <div class="max-w-[500px] text-center lg:max-w-screen-sm lg:text-left">
+              <div class="relative flex-1 z-10 flex flex-col items-center text-center lg:block lg:max-w-screen-sm lg:text-left">
                 <h1 class="hero-heading auc-gradient-text">Build Stunning UI & Code with Ease</h1>
-                <p class="lead mt-5 text-gray-200">AI tools for vision, automation, and creativity. Seamless APIs to empower developers, businesses, and creators</p>
+                <p class="mt-5 text-[#d4d4d4] text-2xl text-center font-semibold">AI tools for vision, automation, and creativity. Seamless APIs to empower developers, businesses, and creators</p>
+                <div class="mt-5 space-y-2 text-slate-600 font-semibold text-lg text-left leading-[1.2]">
+                    <ul class="ml-5 flex list-disc flex-col gap-2 marker:text-[#43EAA4]">
+                      <li>Create dynamic images and PDFs from customizable templates.</li>
+                      <li>Automate scalable content creation effortlessly.</li>
+                      <li>Seamlessly integrate with our API or use no-code solutions.</li>
+                    </ul>
+                  </div>
               </div>
-              <div class="flex w-full max-w-[500px] flex-col gap-6">
-                <!-- Search Form -->
-                <form action="search" method="get" class="flex h-12 w-full items-center justify-between rounded-xl bg-white/10 pe-3 ps-4 backdrop-blur-md focus-within:bg-white/15 lg:h-14">
-                  <label for="search-docs" class="sr-only">Search Documentation...</label>
-                  <input id="search-docs" name="q" class="h-full w-full border-none bg-transparent pe-2 outline-none" type="search" placeholder="Search Documentation..." required />
-                  <button type="submit" class="auc-gradient-button flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white lg:h-10 lg:w-10" title="Search PixLab knowledge Base...">
-                    <i class="uil uil-search text-lg lg:text-xl" aria-hidden="true"></i>
-                    <span class="sr-only">Search</span>
-                  </button>
-                </form>
-
-                <!-- Connect Button -->
-                <a href="https://console.pixlab.io" target="_blank" class="auc-gradient-button flex h-12 w-full items-center justify-between gap-x-3 rounded-xl pe-3 ps-4 lg:h-14" title="Connect to the PixLab Console and elevate your projects with powerful Vision and ID Scan APIs...">
-                  <span>Connect to the PixLab Console</span>
+              <div class="flex-1 relative leading-[1.6] rounded-lg overflow-x-auto w-full sm:w-[500px] mx-auto">
+<pre class="font-monospace relative z-10 w-full shadow-lg overflow-x-auto rounded-[inherit] bg-gray-900 p-5 text-xs text-gray-200 sm:w-[500px] mx-auto"><span style="color: rgb(139, 148, 158); font-weight: 400;">// Created using PixLab App UI/UX Tool</span>
+<span style="color: rgb(255, 123, 114); font-weight: 400;">import</span> SwiftUI
+  
+<span style="color: rgb(255, 123, 114); font-weight: 400;">struct</span> <span style="color: rgb(210, 168, 255); font-weight: 400;">ContentView</span>: <span style="color: rgb(210, 168, 255); font-weight: 400;">View</span> {
+    <span style="color: rgb(255, 123, 114); font-weight: 400;">var</span> body: <span style="color: rgb(255, 123, 114); font-weight: 400;">some</span> <span style="color: rgb(255, 123, 114); font-weight: 400;">View</span> {
+        <span style="color: rgb(255, 123, 114); font-weight: 400;">VStack</span> {
+            <span style="color: rgb(255, 123, 114); font-weight: 400;">Text</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"Welcome to PixLab"</span>)
+                .font(.largeTitle)
+                .padding()
+            <span style="color: rgb(255, 123, 114); font-weight: 400;">Button</span>(action: {
+                <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"Launch App UI/UX"</span>)
+            }) {
+                <span style="color: rgb(255, 123, 114); font-weight: 400;">Text</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"Launch"</span>)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(.blue)
+                    .cornerRadius(<span style="color: rgb(121, 192, 255); font-weight: 400;">10</span>)
+            }
+        }
+    }
+}</pre>
+                <a href="https://console.pixlab.io" target="_blank" class="mt-5 gradient-button flex h-12 w-full items-center justify-between gap-x-3 rounded-xl pe-3 ps-4 lg:h-14" title="Connect to the PixLab Console and elevate your projects with powerful Vision and ID Scan APIs...">
+                  <span>Connect to the PixLab Console & Get Your API Key</span>
                   <i class="uil uil-arrow-up-right flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-black bg-opacity-30 text-lg lg:h-10 lg:w-10 lg:text-xl"></i>
-                </a>
-                <span class="text-sm text-slate-600">Connect to the PixLab Console and elevate your projects with powerful Vision & Creativity APIs, designed to enhance your development workflow and productivity.</span>
+                </a> 
               </div>
             </div>
           </div>
         </div>
       </section>
-
+     
       <!-- Why Choose Us Section -->
       <section>
         <div class="mx-auto w-full items-center max-w-screen-xl px-5 py-14">
           <div class="flex flex-col items-center">
             <h2 class="text-center text-3xl lg:text-4xl font-bold text-tColor">Your Path to <span class="auc-gradient-text">Exceptional App Design</span> Starts Here</h2>
-            <p class="text-muted mt-5 w-1/2 text-center">Access an all-in-one solution for designing stunning interfaces with detailed documentation, interactive tutorials, and code samples. Empower your projects with API insights, flexible pricing, and tools designed to streamline development for optimal results.</p>
+            <p class="text-muted mt-5 sm:w-1/2 text-center">Access an all-in-one solution for designing stunning interfaces with detailed documentation, interactive tutorials, and code samples. Empower your projects with API insights, flexible pricing, and tools designed to streamline development for optimal results.</p>
           </div>
           <!-- Features Grid -->
           <div class="mt-20 grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-5">
@@ -286,39 +302,132 @@
             </div>
           </div>
           <div class="flex">
-            <a href="#" class="mx-auto mt-5 flex w-fit items-center gap-1 rounded-lg bg-aucPrimary border-2 border-aucPrimary shadow-lg shadow-purple-500/50 sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-aucPrimary hover:shadow-none">Launch App <i class="uil uil-arrow-right text-xl"></i></a>
+            <!-- <a href="#" class="mx-auto mt-5 flex w-fit items-center gap-1 rounded-lg bg-aucPrimary border-2 border-aucPrimary shadow-lg shadow-purple-500/50 sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-aucPrimary hover:shadow-none">Launch App <i class="uil uil-arrow-right text-xl"></i></a> -->
+            <a href="https://app-ux.pixlab.io" class="mx-auto mt-5 gradient-button rounded-lg p-[1px] font-medium text-tColor">
+              <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                <span>Launch App</span>
+                <i class="uil uil-arrow-right text-xl"></i>
+              </div>
+            </a>
           </div>
         </div>
       </section>
 
+      <!-- Frameworks logo Section -->
       <section>
         <div class="flex flex-col items-center mt-4">
-          <h2 class="text-center text-3xl font-semibold leading-snug text-apeTColor lg:max-w-[80%] lg:text-4xl">
-            <span class="ape-gradient-text">Effortlessly connect</span> <br />
-            with leading no-code platforms
-          </h2>
+          <h2 class="text-center text-3xl font-semibold leading-snug text-tColor lg:max-w-[80%] lg:text-4xl">Build Apps in Your Favorite <span class="auc-gradient-text">Frameworks</span></h2>
   
-          <p class="mt-5 text-center text-apeTGray sm:w-1/2">Utilize platforms like <b class="font-medium text-tColor">Zapier, Make, Airtable, and other popular no-code tools</b> to integrate with us and streamline your processes.</p>
+          <p class="mt-5 text-center text-muted sm:w-1/2">PixLab’s API empowers developers to create stunning applications using leading frameworks like <b>SwiftUI, Flutter, React Native, and Jetpack Compose.</b> Whether you’re building for iOS, Android, or cross-platform environments, our API seamlessly integrates to streamline your design-to-code process.</p>
           <div class="logos-slider">
             <div class="logos-slider-track">
               <div class="logos-slide">
-                <img class="dark-logo" src="assets/images/flutter-logo.png" alt="Flutter">
+                <img src="assets/images/brand-swiftui.svg" alt="SwiftUi">
+                <h4 class="text-tColor text-2xl font-semibold text-nowrap select-none">Swift UI</h4>
               </div>
               <div class="logos-slide">
-                <img class="dark-logo" src="assets/images/swift-logo.png" alt="SwiftUi">
+                <img src="assets/images/brand-flutter.svg" alt="Flutter">
+                <h4 class="text-tColor text-2xl font-semibold text-nowrap select-none">Flutter</h4>
               </div>
               <div class="logos-slide">
-                <img class="dark-logo" src="assets/images/react-logo.png" alt="React" >
+                <img src="assets/images/brand-reactjs.svg" alt="React Native">
+                <h4 class="text-tColor text-2xl font-semibold text-nowrap select-none">React Native</h4>
               </div>
               <div class="logos-slide">
-                <img class="dark-logo" src="assets/images/jetpack-compose-logo.png" alt="Jetpack Compose">
-                <h4 class="text-2xl font-semibold text-nowrap select-none">Jetpack Compose</h4>
+                <img src="assets/images/brand-android-studio.svg" alt="Jetpack Compose">
+                <h4 class="text-tColor text-2xl font-semibold text-nowrap select-none">Jetpack Compose</h4>
+              </div>
+              <!-- Repeat logo -->
+              <div class="logos-slide">
+                <img src="assets/images/brand-swiftui.svg" alt="SwiftUi">
+                <h4 class="text-tColor text-2xl font-semibold text-nowrap select-none">Swift UI</h4>
+              </div>
+              <div class="logos-slide">
+                <img src="assets/images/brand-flutter.svg" alt="Flutter">
+                <h4 class="text-tColor text-2xl font-semibold text-nowrap select-none">Flutter</h4>
+              </div>
+              <div class="logos-slide">
+                <img src="assets/images/brand-reactjs.svg" alt="React Native">
+                <h4 class="text-tColor text-2xl font-semibold text-nowrap select-none">React Native</h4>
+              </div>
+              <div class="logos-slide">
+                <img src="assets/images/brand-android-studio.svg" alt="Jetpack Compose">
+                <h4 class="text-tColor text-2xl font-semibold text-nowrap select-none">Jetpack Compose</h4>
               </div>
             </div>
           </div>
         </div>
         
       </div>
+      </section>
+
+      <!-- Tools Showcase Section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <div class="flex flex-col gap-14">
+            <!-- Single Row -->
+            <div class="flex flex-col justify-between gap-5 md:flex-row">
+              <div class="flex w-full flex-col items-center rounded-xl border border-bColor bg-surface px-7 py-10 md:w-3/4">
+                <h2 class="text-center text-2xl font-medium text-tColor">Enhance Your Screenshots with Text, Shapes, and Frames</h2>
+                <p class="mt-5 max-w-2xl text-center text-[15px] text-muted">SnapEdit makes it easy to add clarity and style to your screenshots. Insert customizable text for msetations, use precise shapes to highlight areas, and apply stylish frames to give your images a polished, professional look—perfect for presentations, social media, and beyond.</p>
+                <div class="relative mt-10 flex justify-center">
+                  <img loading="lazy" class="relative z-10 w-full max-w-lg" src="assets/images/mockup-screenshot-editor__text-shapes-frames-tools.png" alt="Enhance Your Screenshots with Text, Shapes, and Frames" />
+                  <div class="mse-gradient-bg-theme pointer-events-none absolute inset-0 left-1/2 z-0 h-full w-1/2 -translate-x-1/2 rounded-full opacity-15 blur-xl lg:blur-3xl"></div>
+                </div>
+                <div class="mt-5 flex justify-center">
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-aucPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-aucPrimary transition-all duration-500 hover:bg-aucPrimary hover:text-white" href="#">Launch App Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                </div>
+              </div>
+              <div class="flex h-auto w-full shrink-0 flex-col justify-evenly overflow-hidden rounded-xl bg-[url(../images/mockup-screenshot-editor__shapes-background.png)] bg-cover bg-center md:w-[300px]">
+                <div class="p-5 text-center">
+                  <h2 class="text-xl font-medium text-white">Polygon Drawing Precision at Your Fingertips</h2>
+                  <p class="mt-5 text-sm text-white">Create accurate shapes with our Polygon Tool, perfect for highlighting, diagrams, and structured elements. Choose from multiple shapes and easily adjust size, color, and position for sharp, polished results.</p>
+                </div>
+                <div class="mr-5 flex justify-start">
+                  <img loading="lazy" class="-ml-1 w-full max-w-[300px]" draggable="false" src="assets/images/mockup-screenshot-editor__shapes-polygon.png" alt="Polygon Drawing Precision at Your Fingertips" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Single Row -->
+            <div class="flex flex-col justify-between gap-5 md:flex-row">
+              <div class="flex h-auto w-full shrink-0 flex-col justify-evenly overflow-hidden rounded-xl bg-[url(../images/mockup-screenshot-editor__draw-tools-background.png)] bg-cover bg-center md:w-[300px]">
+                <div class="mr-5 mt-5 flex justify-start">
+                  <img loading="lazy" class="-ml-1 w-full max-w-[300px]" draggable="false" src="assets/images/mockup-screenshot-editor__draw-tool.png" alt="Freehand Drawing Unleash Your Creativity" />
+                </div>
+                <div class="p-5 text-center">
+                  <h2 class="text-xl font-medium text-white">Freehand Drawing Unleash Your Creativity</h2>
+                  <p class="mt-5 text-sm text-white">Bring ideas to life with Pixlab's Freehand Drawing tool, perfect for msetations or personal touches. Enjoy natural, customizable brushes and a responsive interface. Save and share high-quality edits directly from Pixlab Screenshot Editor.</p>
+                </div>
+              </div>
+              <div class="flex w-full flex-col items-center rounded-xl border border-bColor bg-surface px-7 py-10 md:w-3/4">
+                <h2 class="text-center text-2xl font-medium text-tColor">Custom Backgrounds for Personalized Screenshots</h2>
+                <p class="mt-5 max-w-2xl text-center text-[15px] text-muted">Enhance your screenshots with SnapEdit's customizable backgrounds. Select from images, solid colors, or gradients, and adjust transparency for a personalized touch.</p>
+                <div class="relative mt-10 flex justify-center">
+                  <div class="flex justify-center gap-5">
+                    <div>
+                      <h4 class="mb-3 text-center text-[15px] text-muted">Gradients</h4>
+                      <img loading="lazy" src="assets/images/mockup-screenshot-editor__gradients-pattern.png" alt="Gradients" />
+                    </div>
+                    <div>
+                      <h4 class="mb-3 text-center text-[15px] text-muted">Images</h4>
+                      <img loading="lazy" src="assets/images/mockup-screenshot-editor__images-pattern.png" alt="Images" />
+                    </div>
+                    <div>
+                      <h4 class="mb-3 text-center text-[15px] text-muted">Pallete</h4>
+                      <img loading="lazy" src="assets/images/mockup-screenshot-editor__color-palette-pattern.png" alt="Color Pallete" />
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-5 flex max-w-screen-md flex-col items-center justify-center text-center">
+                  <p class="my-4 text-sm text-muted">Transform your visuals with SnapEdit by choosing from a variety of customizable backgrounds, including images, solid colors, and gradients, while fine-tuning transparency for a unique look.</p>
+
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-aucPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-aucPrimary transition-all duration-500 hover:bg-aucPrimary hover:text-white" href="#">Launch App Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- How It Works Section -->
@@ -337,7 +446,14 @@
                 <p class="auc-gradient-text border-aucPrimary w-fit rounded-lg border px-2 py-0.5 mb-3 text-sm font-semibold text-aucPrimary">No Coding Skills Needed</p>
                 <h3 class="text-2xl font-semibold text-tColor lg:text-3xl"> Describe Your <span class="auc-gradient-text font-bold">UI or code</span></h3>
                 <p class="mt-5 text-tColor">Begin your journey by clearly outlining the design, layout, or functionality you envision for your app. Whether you’re detailing complex workflows or a simple interface, our platform takes your ideas and translates them into actionable steps—no coding experience needed. The more specific your input, the more precise the results!</p>
-                <a href="#" class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-aucPrimary border-2 border-aucPrimary shadow-lg shadow-purple-500/50 px-3 py-1.5 text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-aucPrimary hover:shadow-none">Start Describing Now <i class="uil uil-arrow-right text-xl"></i></a>
+                <div class="flex">
+                  <a href="https://app-ux.pixlab.io" class="mt-5 gradient-button rounded-lg p-[1px] font-medium text-tColor">
+                    <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                      <span>Launch App</span>
+                      <i class="uil uil-arrow-right text-xl"></i>
+                    </div>
+                  </a>
+                </div>
               </div>
               <div class="relative flex-1">
                 <img loading="lazy" class="relative z-10" src="assets/images/app-ui-ux-code__ui-code.png" alt="Describe your UI or code" />
@@ -351,7 +467,14 @@
                 <p class="auc-gradient-text border-aucPrimary w-fit rounded-lg border px-2 py-0.5 mb-3 text-sm font-semibold text-aucPrimary">Visualize Your Design</p>
                 <h3 class="text-2xl font-semibold text-tColor lg:text-3xl">Draw your <span class="auc-gradient-text font-bold">UI mockup</span></h3>
                 <p class="mt-5 text-tColor">Bring your ideas to life by sketching out your UI design. Whether it’s a rough draft or a polished layout, this step helps visualize your concept and provides a clear blueprint for code generation. Your sketches guide our engine to deliver designs that align perfectly with your vision.</p>
-                <a href="#" class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-aucPrimary border-2 border-aucPrimary shadow-lg shadow-purple-500/50 px-3 py-1.5 text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-aucPrimary hover:shadow-none">Create Your Mockup <i class="uil uil-arrow-right text-xl"></i></a>
+                <div class="flex">
+                  <a href="https://app-ux.pixlab.io" class="mt-5 gradient-button rounded-lg p-[1px] font-medium text-tColor">
+                    <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                      <span>Launch App</span>
+                      <i class="uil uil-arrow-right text-xl"></i>
+                    </div>
+                  </a>
+                </div>
               </div>
               <div class="relative flex flex-1 justify-center">
                 <img loading="lazy" class="relative z-10" src="assets/images/app-ui-ux-code__ui-mockup.png" alt="Draw your UI mockup" />
@@ -365,7 +488,14 @@
                 <p class="auc-gradient-text border-aucPrimary w-fit rounded-lg border px-2 py-0.5 mb-3 text-sm font-semibold text-aucPrimary">Framework Flexibility</p>
                 <h3 class="text-2xl font-semibold text-tColor lg:text-3xl">Choose your <span class="auc-gradient-text font-bold">framework</span></h3>
                 <p class="mt-5 text-tColor">Select the development framework that best suits your needs—whether it’s <span class="auc-gradient-text">SwiftUI, Flutter, React Native, or Jetpack Compose.</span> Tailored code is generated based on your selection, ensuring compatibility with your chosen tools. This flexibility empowers you to work seamlessly in your preferred environment.</p>
-                <a href="#" class="mt-5 flex w-fit items-center gap-1 rounded-lg  bg-aucPrimary border-2 border-aucPrimary shadow-lg shadow-purple-500/50 px-3 py-1.5 text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-aucPrimary hover:shadow-none">Choose & Build <i class="uil uil-arrow-right text-xl"></i></a>
+                <div class="flex">
+                  <a href="https://app-ux.pixlab.io" class="mt-5 gradient-button rounded-lg p-[1px] font-medium text-tColor">
+                    <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                      <span>Launch App</span>
+                      <i class="uil uil-arrow-right text-xl"></i>
+                    </div>
+                  </a>
+                </div>
               </div>
               <div class="relative flex-1">
                 <img loading="lazy" class="relative z-10" src="assets/images/app-ui-ux-code__ui-framework.png" alt="Choose your framework" />
@@ -375,6 +505,140 @@
           </div>
         </div>
       </section>
+
+      <!-- Api Integration Section -->
+       <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-14">
+          <div class="max-w-7xl mx-auto flex flex-col items-center">
+            <!-- Section Header -->
+            <div class="text-center mb-10 sm:w-1/2">
+              <h2 class="text-3xl font-extrabold text-tColor">Seamless API Integration</h2>
+              <p class="mt-4 text-muted">Effortlessly bring advanced UI/UX features into your apps with PixLab's powerful API. Simplify your development process and accelerate your workflow with dynamic design integration.</p>
+            </div>
+        
+            <!-- Integration Steps -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Step 1 -->
+              <div class="bg-gradient-theme shadow-md rounded-lg p-6 text-center">
+                <div class="mb-4">
+                  <svg version="1.1" viewBox="0 0 2048 2048" class="mx-auto" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                    <path transform="translate(501)" d="m0 0h88l55 9 31 7 27 8 29 10 26 11 22 10 22 12 22 13 24 16 15 11 13 10 13 11 14 12 8 8 2 1v2l4 2 12 12 7 8 12 13 9 11 12 15 14 19 8 12 14 22 14 25 13 26 13 31 12 34 8 28 7 31 5 31 3 27 1 19v52l-1 21-5 39-5 26-9 36-12 36-6 16-10 23-12 25-14 25-13 21-11 16-12 16-10 13-12 14-7 8-9 10-23 23-8 7-10 9-25 20-17 12-8 6-1 278-2 13-4 10-7 10-5 6-74 74 1 4 19 19v2h2l7 8 46 46 10 13 6 14 1 6v20l-4 13-4 8-7 9-14 15-63 63 1 4 19 19v2h2l7 8 46 46 10 13 6 14 1 6v20l-4 13-6 11-18 20-54 54-3 4h-2l-2 4-65 65-7 8-43 43-7 8-52 52-13 8-10 4h-23l-15-5-9-5-10-9-39-39-7-8-55-55v-2l-4-2-7-8-57-57v-2h-2l-7-8-49-49-7-8-11-11-8-13-3-11-1-7-1-759-17-12-13-10-17-14-11-9-8-8-8-7-22-22-7-8-12-14-12-15-12-16-18-27-12-20-13-24-11-23-11-27-11-31-9-32-7-33-5-33-3-25v-77l8-55 7-33 9-33 10-29 12-29 16-33 11-20 11-18 14-21 13-18 13-16 12-14 9-10 2-3h2l2-4 20-20 8-7 12-11 11-9 14-11 18-13 18-12 18-11 17-10 16-8 19-9 29-12 26-9 27-8 35-8 31-5zm23 244-21 3-22 6-19 8-15 8-16 11-14 12-13 13-13 17-12 20-9 21-6 21-3 18-1 9v26l4 27 6 21 7 17 10 18 10 14 12 14 9 9 11 9 14 10 16 9 16 7 18 6 20 4 19 2h11l32-4 20-5 20-8 16-8 12-8 13-10 13-12 10-11 13-18 8-14 9-21 6-21 3-19 2-18-1-17-4-27-7-23-8-18-11-19-10-13-9-10-13-13-19-14-18-10-18-8-16-5-14-3-24-3z" fill="#FDA537"/>
+                    <path transform="translate(539)" d="m0 0h50l55 9 31 7 27 8 29 10 26 11 22 10 22 12 22 13 24 16 15 11 13 10 13 11 14 12 8 8 2 1v2l4 2 12 12 7 8 12 13 9 11 12 15 14 19 8 12 14 22 14 25 13 26 13 31 12 34 8 28 7 31 5 31 3 27 1 19v52l-1 21-5 39-5 26-9 36-12 36-6 16-10 23-12 25-14 25-13 21-11 16-12 16-10 13-12 14-7 8-9 10-23 23-8 7-10 9-25 20-17 12-8 6-1 278-2 13-4 10-7 10-5 6-74 74 1 4 19 19v2h2l7 8 46 46 10 13 6 14 1 6v20l-4 13-4 8-7 9-14 15-63 63 1 4 19 19v2h2l7 8 46 46 10 13 6 14 1 6v20l-4 13-6 11-18 20-54 54-3 4h-2l-2 4-65 65-7 8-43 43-7 8-52 52-13 8-10 4h-15v-36l1-50v-27l-1-26v-25l-1-16v-18l-1-1v-73l1-31v-69l-1-56v-168l-1-347v-205l1-37 2-36v-37l1-59v-21l1-22 1-24 2-15v-17l-3-10-2-10 2-6 2-3 32-4 20-5 20-8 16-8 12-8 13-10 13-12 9-10 13-18 8-14 9-21 6-21 3-19 2-18-1-17-4-27-7-23-8-18-11-19-10-13-9-10-12-12-19-14-18-10-18-8-16-5-14-3-29-4-7-2-3-4 1-7 2-24 2-6 1-41v-16l-1-27v-34l1-11v-34l1-24z" fill="#FD9928"/>
+                    <path transform="translate(1013,1564)" d="m0 0h379l13 2 12 5 11 8 7 7 8 13 101 202v2h155l3-10 8-16 8-13 8-11 12-14 9-9 11-9 14-10 18-10 20-8 22-6 12-2 11-1h26l18 2 21 5 19 7 16 8 15 9 14 11 15 14 12 14 12 18 9 17 8 21 6 24 2 11v38l-5 24-6 20-7 16-7 14-12 18-11 13-9 10-10 9-18 13-22 12-24 9-25 6-5 1h-37l-26-6-17-5-16-7-15-8-14-10-11-9-19-19-13-17-9-15-10-21-1-7h-192l-16-2-14-6-9-7-7-7-7-11-69-138-9-17-11-23-14-28-333-1-14-2-13-5-11-8-7-7-8-13-5-16v-17l3-12 7-14 8-10 13-9 12-5z" fill="#1287FC"/>
+                    <path transform="translate(1855,724)" d="m0 0h26l18 2 21 5 19 7 16 8 15 9 14 11 15 14 12 14 12 18 9 17 8 21 6 24 2 11v38l-5 24-9 27-8 16-8 14-13 17-13 14-11 9-9 7-18 11-21 10-19 6-20 4-21 2h-12l-21-2-22-5-15-5-22-10-17-11-14-11-10-9-14-16-10-14-9-16-8-18v-3l-154 1-104 208-8 11-7 7-14 8-13 4-13 1h-367l-15-2-13-5-11-8-7-7-9-15-4-14v-18l4-14 6-11 8-10 13-9 12-5 10-2 339-1 2-6 8-17 9-17 11-23 9-17 11-23 9-17 11-23 9-17 11-23 9-17 6-11 8-11 10-8 15-7 11-2 198-1 3-10 8-16 8-13 10-14 14-15 13-12 17-12 18-10 20-8 22-6 12-2z" fill="#1287FC"/>
+                    <path transform="translate(1854,244)" d="m0 0h28l22 3 19 5 16 6 16 8 15 9 14 11 15 14 12 14 12 18 9 17 8 21 6 24 2 11v38l-5 24-9 27-8 16-8 14-13 17-13 14-11 9-9 7-18 11-21 10-19 6-20 4-21 2h-12l-21-2-22-5-15-5-22-10-17-11-14-11-10-9-14-16-10-14-9-16-8-18v-3l-159 1-29 43-29 44-29 43-29 44-29 43-29 44-29 43-20 30-9 10-10 7-11 5-8 2-12 1h-129l-14-2-13-5-11-8-7-7-7-11-4-10-2-9v-16l3-12 7-14 8-10 13-9 12-5 10-2 102-1 7-9 29-44 9-13 10-15 29-44 29-43 29-44 29-43 48-72 8-11 5-6 10-7 13-6 11-2 198-1 3-10 8-16 8-13 10-14 14-15 13-12 17-12 18-10 20-8 22-6z" fill="#13ACE9"/>
+                    <path transform="translate(1855,1204)" d="m0 0h26l18 2 21 5 19 7 16 8 15 9 14 11 15 14 12 14 12 18 9 17 8 21 6 24 2 11v38l-5 24-9 27-8 16-8 14-13 17-13 14-11 9-9 7-18 11-21 10-19 6-20 4-21 2h-12l-21-2-22-5-15-5-22-10-17-11-14-11-10-9-14-16-10-14-9-16-8-18v-3h-681l-14-2-13-5-11-8-7-7-8-13-5-16v-17l3-12 7-14 9-10 7-6 14-7 6-2 7-1 685-1 6-15 10-18 8-12 9-11 9-10 7-7 11-9 14-10 18-10 20-8 22-6 12-2z" fill="#13ACE9"/>
+                    <path transform="translate(1855,1684)" d="m0 0h26l18 2 21 5 19 7 16 8 15 9 14 11 15 14 12 14 12 18 9 17 8 21 6 24 2 11v38l-5 24-6 20-7 16-7 14-12 18-11 13-9 10-10 9-18 13-22 12-24 9-25 6-5 1h-37l-26-6-17-5-16-7-15-8-14-10-11-9-19-19-13-17-9-15-10-21-1-7h-6l1-2-4-26-2-25 1-29 3-24 3-12 2-3h2l3-10 8-16 8-13 8-11 12-14 9-9 11-9 14-10 18-10 20-8 22-6 12-2z" fill="#13ACE9"/>
+                    <path transform="translate(1855,724)" d="m0 0h26l18 2 21 5 19 7 16 8 15 9 14 11 15 14 12 14 12 18 9 17 8 21 6 24 2 11v38l-5 24-9 27-8 16-8 14-13 17-13 14-11 9-9 7-18 11-21 10-19 6-20 4-21 2h-12l-21-2-22-5-15-5-22-10-17-11-14-11-10-9-14-16-10-14-9-16-8-18v-3l-4-1-1-8-3-13-2-17v-42l3-25 3-12 2-3h2l3-10 8-16 8-13 10-14 14-15 13-12 17-12 18-10 20-8 22-6 12-2z" fill="#13ACE9"/>
+                    <path transform="translate(1501,364)" d="m0 0h196l-2 5-3 16-2 18-1 29 3 30 4 19v2l-2 1-154 1-29 43-29 44-29 43-29 44-29 43-29 44-29 43-20 30-9 10-10 7-11 5-8 2-12 1h-129l-14-2-13-5-11-8-7-7-7-11-4-10-2-9v-16l3-12 7-14 8-10 13-9 12-5 10-2 102-1 7-9 29-44 9-13 10-15 29-44 29-43 29-44 29-43 48-72 8-11 5-6 10-7 13-6z" fill="#1287FC"/>
+                    <path transform="translate(1013,1324)" d="m0 0h684l-2 5-3 17-2 16v43l3 23 3 13v2l-2 1h-676l-14-2-13-5-11-8-7-7-8-13-5-16v-17l3-12 7-14 9-10 7-6 14-7 6-2z" fill="#1287FC"/>
+                    <path transform="translate(240,993)" d="m0 0h1l1 45 1 24 1 43v449l1 45 1 72 2 46-3 24-2 13-2-1-1-4z" fill="#FD9928"/>
+                    <path transform="translate(716,458)" d="m0 0 2 1v20l-4 15-5 11-8 16-4 7h-2l-1 4h-2l1 4-4 6-10 6-4 2v2l-16 14-3 2h-3v2l-6 4-2 2-9 5-2 2-7 3-12 6-10 6-10 2-5 3-12 1-9 1-7-2-1-2 19-3 18-5 19-8 14-7 12-8 13-10 13-12 9-10 13-18 8-14 9-21 6-21z" fill="#FDA537"/>
+                    <path transform="translate(760,1847)" d="m0 0 2 1-7 8h-2l-2 4-65 65-7 8-43 43-7 8-52 52h-2v-2h2v-3h2l2-4 9-10 75-75 4-5 8-7 27-27h2l1-3 8-7 10-10 1-2h2v-2h2v-2h2v-2h2v-2h2v-2h2l2-4h2l2-4h2l2-4h2l2-4z" fill="#FDA638"/>
+                    <path transform="translate(599,254)" d="m0 0 7 1 10 4 3 2 9 3 12 5 2 1v2l5 1 10 6v2h2l4 5 3 5 8 6 5 7 3 7 5 5 1 3 9 6 4 9 3 5-1 2h2l3 8v3l2 1 2 4 2 9 1 3-1 11-2-4-7-21-8-17-11-18-13-16-16-16-19-14-18-10-18-8z" fill="#FDA638"/>
+                    <path transform="translate(911,932)" d="m0 0 2 1-15 14-11 9-13 11-19 14h-2v-2h2l1-4 10-7 1-2h3l1-3 13-8h2v-2l5-5 3-1 2-4 8-7 4-3z" fill="#FDA638"/>
+                    <path transform="translate(830,1295)" d="m0 0v3l-8 10-22 22v-3l3-5h2v-3l6-5 5-7h2l2-4 5-4z" fill="#FDA638"/>
+                    <path transform="translate(717,30)" d="m0 0 6 1 30 12-3 3-8-2v-2h-2v-2l-7-2h-5l-2-4-9-3z" fill="#FDA638"/>
+                    <path transform="translate(881,123)" d="m0 0 5 3 11 10 4 4-4-1-3-2v-2h-5l-5-5-3-2z" fill="#FDA537"/>
+                    <path transform="translate(950,891)" d="m0 0v3l-10 11-7 8-2 1 2-6 5-4 2-5h2v-2z" fill="#FDA537"/>
+                    <path transform="translate(1048,722)" d="m0 0 1 3-10 25-1-3 2-5 1-7 3-5 2-7z" fill="#FDA638"/>
+                    <path transform="translate(790,62)" d="m0 0 6 2 19 11v1h-5v-2l-5-2-8-2-1-3h-4v-2h-2z" fill="#FDA537"/>
+                    <path transform="translate(909,148)" d="m0 0 3 1v2l4 2 8 8-3 2-5-5-7-8z" fill="#FDA537"/>
+                    <path transform="translate(1067,656)" d="m0 0 1 3-6 25h-1v-10l2-5 3-12z" fill="#FDA638"/>
+                    <path transform="translate(826,1780)" d="m0 0 2 1-8 8-6 7-2-2 3-4h2l2-4h2l2-4z" fill="#FDA638"/>
+                    <path transform="translate(944,184)" d="m0 0 5 5 4 5h-5l-5-4z" fill="#FDA638"/>
+                    <path transform="translate(848,98)" d="m0 0 5 2 9 7-4 1-8-6-3-1z" fill="#FDA638"/>
+                    <path transform="translate(1069,449)" d="m0 0 3 1 2 7 1 11-2-2-2-10z" fill="#FDA638"/>
+                    <path transform="translate(715,385)" d="m0 0 3 3v14h-1z" fill="#FDA638"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-tColor">Step 1: Get Your API Key</h3>
+                <p class="text-muted mt-2">Sign up at the <a href="https://console.pixlab.io" class="text-indigo-600 underline">PixLab Console</a> to generate your API key and unlock advanced features.</p>
+              </div>
+        
+              <!-- Step 2 -->
+              <div class="bg-gradient-theme shadow-md rounded-lg p-6 text-center">
+                <div class="mb-4">
+                  <svg version="1.1" viewBox="0 0 2048 2048" width="50" height="50" class="mx-auto" xmlns="http://www.w3.org/2000/svg">
+                    <path transform="translate(1566)" d="m0 0h132l16 6 10 5 10 8 6 5 9 12 7 15 3 11 3 21 5 4 9 1 8-6 11-8 14-7 11-3 7-1h17l18 4 16 8 13 11 75 75 9 13 6 13 3 11 1 8v11l-3 17-6 15-8 12-6 7-2 3v8l4 6 6 2 21 3 14 5 14 9 9 8 8 11 8 16 4 12v129l-5 15-7 14-8 10-9 9-13 8-14 5-8 2-16 2-6 3-2 4v8l4 6 9 12 7 14 4 14 1 8v11l-3 17-7 16-8 11-9 10-69 69-12 9-14 7-16 4-15 1-14-2-10-3-14-7-17-13-6-1-6 3-3 3-4 25-5 14-8 13-9 10-8 7-12 7-16 5-17 2h-19v412l-1 13-6 11-8 7-10 4-7 1v64l10 1 8 4 8 8 5 10 1 7v66l-1 9-6 11-8 7-10 4-7 1v64l10 1 8 4 8 8 5 10 1 6v99h227l9 2 8 5 5 5 5 8 2 10v193l-1 20-5 25-7 20-11 21-11 15-9 10-12 12-13 10-21 12-20 8-22 6-9 2h-1316l-30-7-19-7-19-10-19-14-19-19-11-15-10-17-8-20-5-18-3-22v-299h-221l-18-1-17-4-17-8-11-8-12-11-9-12-9-17-6-20v-415l8-24 6-11 9-12 12-12 13-9 15-7 16-4 10-1h263v-64l-8-1-9-4-8-7-4-5-3-9v-38h-225l-11-2-10-6-6-8-3-7-1-5v-432l3-21 5-19 9-21 10-17 9-12 14-15 13-11 15-10 21-11 19-6 20-4 12-1 1080-1 5-2 4-4 1-9-6-9-7-9-8-16-4-17v-18l4-16 5-12 9-13 8-8 5-6 7-6 5-6 7-6 50-50 14-9 12-5 14-3h18l18 4 14 7 13 10 6 4h7l5-3 3-8 3-21 6-15 7-11 11-12 13-9 11-5z" fill="#F8FBFC"/>
+                    <path transform="translate(89,1024)" d="m0 0h528l17 3 13 5 15 8 11 9 7 7 9 12 8 16 5 16 1 7 1 343v55l-2 18-4 14-5 12-10 15-9 10-13 10-19 10-14 4-15 2-228 1-1 3v279l2 20 5 19 6 14 10 14 13 13 16 10 15 6 12 3 7 1h20l15-3 14-5 12-6 13-10 9-9 9-13 7-14 5-19 1-8 1-199 2-13 6-10 8-6 6-3 6-1 995-1 1-94 2-13 6-10 8-6 9-4 7-1 12 3 7 4 7 7 5 10 1 6v99h227l9 2 8 5 5 5 5 8 2 10v193l-1 20-5 25-7 20-11 21-11 15-9 10-12 12-13 10-21 12-20 8-22 6-9 2h-1316l-30-7-19-7-19-10-19-14-19-19-11-15-10-17-8-20-5-18-3-22v-299h-221l-18-1-17-4-17-8-11-8-12-11-9-12-9-17-6-20v-415l8-24 6-11 9-12 12-12 13-9 15-7 16-4z" fill="#033B57"/>
+                    <path transform="translate(1566)" d="m0 0h132l16 6 10 5 10 8 6 5 9 12 7 15 3 11 3 21 5 4 9 1 8-6 11-8 14-7 11-3 7-1h17l18 4 16 8 13 11 75 75 9 13 6 13 3 11 1 8v11l-3 17-6 15-8 12-6 7-2 3v8l4 6 6 2 21 3 14 5 14 9 9 8 8 11 8 16 4 12v129l-5 15-7 14-8 10-9 9-13 8-14 5-8 2-16 2-6 3-2 4v8l4 6 9 12 7 14 4 14 1 8v11l-3 17-7 16-8 11-9 10-69 69-12 9-14 7-16 4-15 1-14-2-10-3-14-7-17-13-6-1-6 3-3 3-4 25-5 14-8 13-9 10-8 7-12 7-16 5-17 2h-19v412l-1 13-6 11-8 7-10 4-8 2-10-3-9-5-8-9-3-8-1-7v-417h-27l-14-3-13-5-11-7-10-9-7-8-8-14-5-17-2-16-3-6-5-3h-8l-16 12-16 8-9 3-14 2-17-1-17-5-11-6-14-11-74-74-10-14-5-11-4-14-1-8v-9l2-14 5-15 7-12 8-10 3-5v-7l-3-5-5-3-18-2-16-5-14-8-12-11-6-7-8-14-4-12-2-14-1-17v-102l-862-1 4 7 8 13 8 17 6 18 3 16 1 9 1 496-2 11-6 10-9 7-10 4-5 1-16-5-10-9-4-7-2-6v-38h-225l-11-2-10-6-6-8-3-7-1-5v-432l3-21 5-19 9-21 10-17 9-12 14-15 13-11 15-10 21-11 19-6 20-4 12-1 1080-1 5-2 4-4 1-9-6-9-7-9-8-16-4-17v-18l4-16 5-12 9-13 8-8 5-6 7-6 5-6 7-6 50-50 14-9 12-5 14-3h18l18 4 14 7 13 10 6 4h7l5-3 3-8 3-21 6-15 7-11 11-12 13-9 11-5z" fill="#033B57"/>
+                    <path transform="translate(1655,63)" d="m0 0 33 1 5 4 3 8 5 24 5 12 7 11 12 12 14 9 13 5 9 2h24l17-5 13-7 15-11 2-1h8l10 8 67 67 4 6v7l-4 7-10 13-8 18-2 9v25l4 15 7 14 7 9 10 10 15 9 15 5 20 3 6 4 3 5 1 19v83l-2 10-5 5-5 2-19 3-12 4-15 8-13 12-8 11-7 16-3 17v9l2 14 4 12 7 13 11 15 1 2v8l-7 8-70 70-8 4-6-2-11-9-14-8-15-5-13-2h-11l-15 3-13 5-11 7-12 11-8 11-5 11-4 15-3 16-3 6-5 3-14 1h-46l-50-1-5-3-3-5-5-24-5-14-7-12-11-12-10-7-12-6-15-4-8-1h-14l-16 4-16 8-11 8-8 5h-6l-8-6-12-11-57-57-5-7v-8l7-10 9-14 4-8 4-15 1-9v-9l-3-15-5-13-7-12-12-13-11-7-11-5-14-4-15-2-7-4-3-4-1-6v-85l1-22 5-5 12-3 18-4 13-5 11-7 9-8 10-14 6-14 3-11 1-9v-9l-3-16-5-12-7-12-8-11-2-4v-7l7-9 67-67 8-5h7l9 6 11 8 13 6 9 3 5 1h23l16-4 16-8 13-11 8-11 6-12 5-17 3-17 4-5 5-2z" fill="#0474FC"/>
+                    <path transform="translate(641,1728)" d="m0 0h1215v166l-2 14-5 16-8 16-7 9-9 10-13 10-15 8-17 5-17 2h-1153v-4l7-10 12-25 6-19 3-20 1-19 1-158z" fill="#CCD4EA"/>
+                    <path transform="translate(98,1087)" d="m0 0h496l22 1 12 6 8 9 4 9 1 17v369l-2 15-6 12-8 7-7 3-5 1-16 1h-486l-22-1-10-4-9-8-4-7-2-6-1-16v-350l1-32 4-10 7-8 14-7z" fill="#0474FD"/>
+                    <path transform="translate(211,352)" d="m0 0h22l16 3 16 6 14 8 10 8 9 9 10 15 7 15 4 16 1 11v388l-1 1h-191v-394l3-17 5-13 7-13 8-10 5-6h2l1-3 15-11 17-8 14-4z" fill="#CCD4EA"/>
+                    <path transform="translate(1853,1881)" d="m0 0 3 1v12l-2 14-5 16-8 16-7 9-9 10-13 10-15 8-17 5-17 2h-1153v-4l7-10 12-25 6-19 2-6 1131-1 17-2 15-4 15-6 16-9 16-12z" fill="#95A1C6"/>
+                    <path transform="translate(1618,288)" d="m0 0h24l19 3 17 5 19 9 12 8 11 9 7 7 11 14 10 18 6 14 4 16 2 12v27l-4 20-7 19-8 15-12 16-14 14-17 12-16 8-18 6-19 4h-26l-20-4-15-5-17-8-12-8-13-11-10-11-10-14-10-21-6-20-2-12v-29l4-20 7-19 10-17 9-12 10-11 6-4 5-5 18-11 13-6 20-6z" fill="#F8FBFC"/>
+                    <path transform="translate(792,1153)" d="m0 0h656l9 4 9 9 5 11 1 8-2 9-6 10-9 8-7 3-33 1h-602l-20-1-9-4-8-7-6-9-2-12 2-10 5-9 9-8z" fill="#95A1C6"/>
+                    <path transform="translate(728,769)" d="m0 0h591l10 4 7 6 5 8 2 5 1 9-2 9-6 10-9 8-7 3-58 1h-524l-12-2-8-4-8-8-4-8-2-11 2-10 5-9 9-8z" fill="#95A1C6"/>
+                    <path transform="translate(856,897)" d="m0 0h592l9 4 6 5 6 10 3 10-1 10-5 9-8 9-10 5-45 1h-266l-280-1-9-4-8-7-6-9-2-12 2-10 5-9 9-8z" fill="#95A1C6"/>
+                    <path transform="translate(211,352)" d="m0 0h22l16 3 16 6 14 8 10 8 9 9 10 15 7 15 4 16 1 11v388l-1 1h-175v-1h112v-371l-1-26-2-13-4-15-7-16-6-11-9-12-10-11-2-1-10-1v-1z" fill="#95A1C6"/>
+                    <path transform="translate(1048,1281)" d="m0 0h400l9 4 9 9 5 11 1 8-2 9-6 10-8 7-5 3-4 1-36 1h-344l-18-1-9-4-8-7-6-9-2-12 2-10 5-9 9-8z" fill="#95A1C6"/>
+                    <path transform="translate(792,1025)" d="m0 0h337l8 4 8 8 6 12 1 7-2 10-6 10-9 8-7 3-324 1-11-1-9-4-8-7-6-9-2-12 2-10 5-9 9-8z" fill="#95A1C6"/>
+                    <path transform="translate(792,1409)" d="m0 0h304l9 4 5 4 6 9 3 7 1 7-2 10-6 10-9 8-7 3-20 1h-271l-12-1-9-4-8-7-6-9-2-12 2-10 5-9 9-8z" fill="#95A1C6"/>
+                    <path transform="translate(792,1537)" d="m0 0h304l9 4 8 8 6 12 1 8-2 9-6 10-9 8-7 3-17 1h-272l-14-1-9-4-8-7-5-7-3-11 2-13 5-9 9-8z" fill="#95A1C6"/>
+                    <path transform="translate(378,1151)" d="m0 0h9l11 3 6 4 5 5 4 5 3 10v10l-6 26-19 75-17 69-16 64-7 26-6 12-7 7-12 5h-13l-12-5-7-6-5-9-1-4v-15l8-34 15-58 18-73 23-92 6-12 4-5 9-6z" fill="#F6FAFB"/>
+                    <path transform="translate(856,641)" d="m0 0h272l8 3 6 5 7 11 3 9-1 11-5 9-7 8-8 5-3 1h-271l-9-4-8-7-6-9-2-9 1-11 5-10 10-9z" fill="#95A1C6"/>
+                    <path transform="translate(536,641)" d="m0 0h208l9 4 6 5 6 10 3 10-1 10-6 11-7 7-10 5-20 1h-168l-19-1-9-4-8-7-6-9-2-12 2-10 5-9 9-8z" fill="#95A1C6"/>
+                    <path transform="translate(536,897)" d="m0 0h208l9 4 6 5 6 10 2 5 1 8-2 9-6 10-9 8-8 3-19 1h-172l-15-1-9-4-8-7-6-9-1-4v-15l6-12 9-8z" fill="#95A1C6"/>
+                    <path transform="translate(1240,1025)" d="m0 0h208l9 4 9 9 5 11 1 8-2 9-6 10-9 8-7 3-140 1-67-1-12-6-7-7-4-7-2-12 2-10 5-9 9-8z" fill="#95A1C6"/>
+                    <path transform="translate(536,513)" d="m0 0h209l8 4 8 8 6 12 1 8-2 9-6 10-9 8-7 3h-207l-9-4-8-7-6-9-2-12 2-11 6-9 8-7z" fill="#95A1C6"/>
+                    <path transform="translate(473,1216)" d="m0 0h12l11 4 13 10 11 11v2l3 1 7 8 7 7 6 5 5 5v2l4 2 11 11 9 12 4 9v14l-6 12-9 10-57 57-10 7-8 3h-12l-11-4-10-9-4-9-1-4v-14l5-10 9-10 35-35-1-4-8-7-32-32-6-9-2-7v-14l5-10 6-7 8-5z" fill="#F6FAFB"/>
+                    <path transform="translate(217,1216)" d="m0 0h12l11 4 9 7 5 8 2 7v13l-6 12-9 10-32 32-2 1 1 4 41 41 6 11 1 4v13l-6 12-4 5-10 6-6 2h-12l-12-5-10-9-61-61-5-8-2-6v-15l5-10 9-10 61-61 8-5z" fill="#F6FAFB"/>
+                    <path transform="translate(792,1281)" d="m0 0h144l9 4 9 9 5 11 1 7-2 10-6 10-9 8-7 3-37 1h-95l-11-1-9-4-8-7-6-9-2-12 2-10 5-9 9-8z" fill="#95A1C6"/>
+                    <path transform="translate(1631,1343)" d="m0 0 13 3 7 4 7 7 5 10 1 7v66l-1 9-6 11-8 7-10 4-8 2-13-4-8-6-6-7-3-8-1-6v-65l2-13 6-10 8-6 10-4z" fill="#033B57"/>
+                    <path transform="translate(1223,1408)" d="m0 0h24l41 1 9 4 8 8 6 12 1 8-2 9-6 10-8 7-10 4-11 1h-60l-9-2-10-6-8-9-4-13 1-10 6-12 9-8 8-3z" fill="#95A1C6"/>
+                    <path transform="translate(552,768)" d="m0 0 64 1 12 6 8 10 3 8 1 7-2 10-6 10-9 8-8 3-8 1h-64l-9-2-6-3-10-9-4-8-1-3v-15l6-12 9-8 8-3z" fill="#95A1C6"/>
+                    <path transform="translate(1178,160)" d="m0 0h11l10 3 9 7 6 10 2 7v10l-4 11-7 8-5 4-8 3h-17l-9-4-7-6-6-12-1-3v-12l4-11 8-9 10-5z" fill="#95A1C6"/>
+                    <path transform="translate(1050,160)" d="m0 0h11l10 3 9 7 6 10 2 7v10l-4 11-7 8-5 4-8 3h-17l-9-4-6-5-6-10-2-6v-12l4-11 8-9 10-5z" fill="#96A1C6"/>
+                    <path transform="translate(1551,316)" d="m0 0 2 1-2 1zm-1 2m-2 1 2 1-17 17v-3l11-12z" fill="#D1D8E9"/>
+                    <path transform="translate(462,1221)" d="m0 0 2 1-11 11v-3l6-7z" fill="#CDD4E7"/>
+                    <path transform="translate(369,1154)" d="m0 0 2 1-10 9-3 2 2-5z" fill="#C9D1E6"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-tColor">Step 2: Follow API Docs</h3>
+                <p class="text-muted mt-2">Access the <a href="api-endpoints" class="text-indigo-600 underline">API Endpoints</a> to customize your app’s design and workflows effortlessly.</p>
+              </div>
+        
+              <!-- Step 3 -->
+              <div class="bg-gradient-theme shadow-md rounded-lg p-6 text-center">
+                <div class="mb-4">
+                  <svg version="1.1" viewBox="0 0 2048 2048" width="50" height="50" class="mx-auto" xmlns="http://www.w3.org/2000/svg">
+                    <path transform="translate(663,64)" d="m0 0h719l22 2 21 5 20 8 18 10 17 13 14 13 11 14 10 15 11 23 6 20 3 17 1 15v613h58l10 3 6 4 7 8 4 10 5 21 11 52 1 6 11 3 26 10 20 9 9 5 6-1 34-22 30-19 8-4 4-1h13l10 4 7 5v2l4 2 68 68 8 10 4 10v12l-4 10-7 12-22 34-10 16-4 6 1 7 12 25 11 29 3 10 26 5 52 12 10 4 8 6 6 10 2 9v109l-2 12-6 10-8 6-16 5-71 16-4 9-7 20-12 27-5 10 1 6 16 25 22 34 7 13 1 4v12l-4 10-8 10-75 75-12 6-11 1-12-3-16-10-25-16-17-11-13-8-5 2-28 13-27 10-9 4-12 57-6 25-6 10-8 7-8 3h-17l-9-4-8-7-5-10-2-9-21-1v128l-1 19-5 25-6 17-8 16-6 11-9 12-11 12-9 9-10 8-16 10-16 8-13 5-20 5-14 2-19 1h-697l-22-1-18-3-14-4-16-6-17-9-13-9-11-9-16-16-11-15-10-17-8-20-5-18-3-22v-619h-56l-12-3-8-6-5-6-4-9-10-44-7-34v-2l-10-3-21-8-25-11-11-6-6 2-34 22-22 14-14 8-10 2-11-1-10-5-82-82-5-10-1-3v-13l4-10 10-16 16-25 15-23 2-3-1-7-13-27-10-27-4-10-63-14-17-4-12-6-6-7-4-9-1-5v-116l4-11 8-9 10-5 29-7 51-11h2l1-5 11-30 9-20 6-11-1-6-16-25-11-17-14-22-5-11v-14l4-10 9-10 27-27 6-7 6-5 2-3h2l2-4 28-28 8-5 6-2h14l10 4 21 13 34 22 13 8 6-1 16-8 18-8 25-9 4-2 7-30 10-46 4-11 6-8 9-6 7-2h11l10 3 9 7 6 10 3 11h20l1-139 3-21 5-19 9-21 9-15 10-14 6-7h2l2-4 13-12 16-11 14-8 11-5 18-6 20-4zm-154 543-25 3-25 6-7 3 2 9v14l-6 12-11 10-9 7-7 6-7 8-9 12-9 16-6 15-4 15-2 14v23l4 22 7 19 8 15 12 16 14 14 16 11 11 6 11 5 21 6 14 2h10v-288zm1027 545v288l18-1 22-4 16-5 4-2-2-9v-13l4-9 7-8 14-12 8-7 10-11 10-15 7-14 6-18 3-16 1-9v-14l-3-22-5-16-8-18-8-12-8-10-6-7-11-9-11-8-17-9-21-7-18-3z" fill="#5AFC9F"/>
+                    <path transform="translate(663,64)" d="m0 0h719l22 2 21 5 20 8 18 10 17 13 14 13 11 14 10 15 11 23 6 20 3 17 1 15v613h58l10 3 6 4 7 8 4 10 5 21 11 52 1 6 11 3 26 10 20 9 9 5 6-1 34-22 30-19 8-4 4-1h13l10 4 7 5v2l4 2 68 68 8 10 4 10v12l-4 10-7 12-22 34-10 16-4 6 1 7 12 25 11 29 3 10 26 5 52 12 10 4 8 6 6 10 2 9v109l-2 12-6 10-8 6-16 5-71 16-4 9-7 20-12 27-5 10 1 6 16 25 22 34 7 13 1 4v12l-4 10-8 10-75 75-12 6-11 1-12-3-16-10-25-16-17-11-13-8-5 2-28 13-27 10-9 4-12 57-6 25-6 10-8 7-8 3h-17l-9-4-8-7-5-10-2-9-21-1v128l-1 19-5 25-6 17-8 16-6 11-9 12-11 12-9 9-10 8-16 10-16 8-13 5-20 5-14 2-19 1h-697l-22-1-18-3-14-4-16-6-17-9-13-9-11-9-16-16-11-15-10-17-8-20-5-18-3-22v-619h-56l-12-3-8-6-5-6-4-9-10-44-7-34v-2l-10-3-21-8-25-11-11-6-6 2-34 22-22 14-14 8-10 2-11-1-10-5-82-82-5-10-1-3v-13l4-10 10-16 16-25 15-23 2-3-1-7-13-27-10-27-4-10-63-14-17-4-12-6-6-7-4-9-1-5v-116l4-11 8-9 10-5 29-7 51-11h2l1-5 11-30 9-20 6-11-1-6-16-25-11-17-14-22-5-11v-14l4-10 9-10 27-27 6-7 6-5 2-3h2l2-4 28-28 8-5 6-2h14l10 4 21 13 34 22 13 8 6-1 16-8 18-8 25-9 4-2 7-30 10-46 4-11 6-8 9-6 7-2h11l10 3 9 7 6 10 3 11h20l1-139 3-21 5-19 9-21 9-15 10-14 6-7h2l2-4 13-12 16-11 14-8 11-5 18-6 20-4zm2 64-19 3-17 6-12 8-9 7-11 11-8 11-5 9-4 10-3 14-2 14v1604l4 24 6 16 8 14 9 11 7 7 11 8h2v2l17 8 19 4 61 1h631l40-1 15-3 18-8 12-8 12-11 8-10 9-16 5-15 3-14 1-19v-1568l-2-41-2-10-4-9-3-8h-2l-2-5-9-13-11-11-13-9-16-8-16-4-9-1zm-156 479-25 3-25 6-7 3 2 9v14l-6 12-11 10-9 7-7 6-7 8-9 12-9 16-6 15-4 15-2 14v23l4 22 7 19 8 15 12 16 14 14 16 11 11 6 11 5 21 6 14 2h10v-288zm1027 545v288l18-1 22-4 16-5 4-2-2-9v-13l4-9 7-8 14-12 8-7 10-11 10-15 7-14 6-18 3-16 1-9v-14l-3-22-5-16-8-18-8-12-8-10-6-7-11-9-11-8-17-9-21-7-18-3z" fill="#465964"/>
+                    <path transform="translate(665,128)" d="m0 0h719l14 2 16 5 16 9 11 9 9 9 10 15v2h2l5 13 2 4 2 10 1 22v27l-1 1h-334l-6-1 5-5 8-6 5-8 2-7v-10l-4-11-9-10-7-4-4-1h-203l-8 1-10 7-4 5-4 8-1 4v12l4 10 6 7 12 7v2h-34l-244-1-1 3v905l-1 624 1 3h209l622 1 1 1v22l-1 23-3 15-5 13-8 14-9 11-7 7-13 9-16 8-10 3-10 2-40 1h-631l-61-1-19-4-17-8v-2l-5-2-11-9-7-7-8-11-8-15-5-17-3-19v-1604l3-19 2-9 5-11 4-8 10-13 12-12 15-10 8-4 16-5z" fill="#9CFDC5"/>
+                    <path transform="translate(576,1791)" d="m0 0 896 1v22l-1 23-3 15-5 13-8 14-9 11-7 7-13 9-16 8-10 3-10 2-40 1h-631l-61-1-19-4-17-8v-2l-5-2-11-9-7-7-8-11-8-15-5-17-2-13z" fill="#FBFCFC"/>
+                    <path transform="translate(1536,896)" d="m0 0h28l3 12 11 49 4 15 5 10 7 6 12 5 21 6 28 11 28 14 10 6 9 3h11l13-5 17-11 19-12 14-9 11-7 5 2 9 10 24 24 2 1-2 6-12 19-11 17-9 14-7 12-3 8v11l4 11 9 16 8 16 10 24 10 32 4 9 6 8 9 5 19 5 58 13 1 52-1 4-72 16-10 4-6 5h-2l-2 4-6 16-6 19-6 17-6 14-10 19-9 17-2 7v10l4 11 7 11 11 17 12 19 10 16-2 5-34 34-4 2-20-12-12-8-11-7-16-10-12-6-3-1h-12l-10 4-22 12-19 9-25 9-23 7-12 6-7 9-4 13-3 15-9 41-8 35-2 9h-20l-1-1-1-267h1v12l31-4 20-5 10-3 9 10 7 4 8 2h8l10-3 11-7 11-9 14-13 7-8 10-13 11-18 11-23 8-26 4-21 1-14-1-28-4-24-6-21-9-21-12-21-8-11-11-13-13-13-11-9-10-7-13-8-16-8-15-6-21-6-18-3-22-2-1-1z" fill="#47E58C"/>
+                    <path transform="translate(511,351)" d="m0 0h1v257l-21 2-25 5-12 4h-2l-1 2-4-7-7-6-11-4h-13l-14 7-14 11-13 12-12 13-10 14-6 10-4 7-4 8-8 20-4 13-4 18-2 20v20l3 25 7 27 10 23 9 17 7 10 9 12 4 5 15 15 14 11 10 7 16 9 18 8 17 6 24 5 14 2 13 1 1 1v190l-1 1h-27l-2-6-12-56-4-15-5-9-8-7-14-5-36-12-20-9-17-9-17-8-3-1h-12l-10 4-52 33-9 6h-6l-7-8-8-8-8-7-13-13 1-5 12-19 13-20 13-21 5-12v-10l-5-13-14-26-9-20-12-37-5-13-7-8-10-5-19-5-51-11-5-1-1-12v-43l6-2 54-12 16-4 10-5 7-8 5-13 8-26 9-22 8-17 12-22 3-9v-8l-3-10-12-20-17-26-7-10-5-8 1-5 6-5 16-16 1-2h2l2-4 10-9 6 1 15 10 16 10 22 14 13 7 5 1h9l10-3 24-13 24-11 22-8 23-7 9-5 7-8 5-16 16-73 5-24 1-1z" fill="#47E68C"/>
+                    <path transform="translate(665,128)" d="m0 0h719l14 2 16 5 16 9 11 9 9 9 10 15v2h2l5 13 2 4 2 10 1 22v27l-1 1h-334l-6-1 5-5 8-6 5-8 2-7v-10l-4-11-9-10-7-4-4-1h-203l-8 1-10 7-4 5-4 8-1 4v12l4 10 6 7 12 7v2h-278l-2 1h-62l-1-1v-41l3-17 3-10 7-14 10-13 12-12 15-10 8-4 16-5z" fill="#FBFCFC"/>
+                    <path transform="translate(1178,864)" d="m0 0h11l10 4 8 6 5 4 7 8 88 88 6 5v2l4 2v2l4 2v2l4 2v2l4 2 8 9 6 12 1 5v8l-4 10-6 8-9 10-70 70h-2l-2 4-7 6-1 2h-2l-2 4-20 20-8 7-9 8-10 5-12 1-9-3-9-6-6-8-4-10v-9l3-10 6-9 24-24h2l2-4 6-5 6-7 6-5 6-7 6-5 6-7 6-5 6-7 6-5 7-8 11-11h2v-2h2v-5l-104-104-6-9-3-8v-10l4-11 9-10 9-5z" fill="#465964"/>
+                    <path transform="translate(858,864)" d="m0 0h9l10 3 8 5 6 7 4 9 1 12-3 9-6 9-12 13-24 24h-2l-2 4h-2l-2 4h-2l-2 4-8 7-7 7-5 6-36 36 1 4 78 78 3 2v2l4 2v2l4 2v2l4 2v2l4 2 10 12 4 9 1 5v8l-4 10-10 11-10 5-10 1-9-2-10-6-131-131-5-8-3-8v-9l3-10 6-9 28-28h2l2-4h2l2-4h2l2-4h2l2-4h2l2-4h2l2-4 6-5 6-7 6-5 6-7 49-49 12-9z" fill="#465964"/>
+                    <path transform="translate(1049,864)" d="m0 0h12l11 4 9 8 6 12 1 9-3 16-15 58-16 64-19 77-7 28-6 22-4 8-6 7-9 5-8 2-12-1-11-6-7-8-5-12v-9l6-26 14-54 18-73 16-64 12-47 6-9 8-7z" fill="#465964"/>
+                    <path transform="translate(924,192)" d="m0 0h203l10 4 9 9 5 10 1 4v10l-4 11-4 5-11 8-5 2-12 1h-59l-137-1-10-5-8-7-4-7-2-6v-12l3-9 6-8 8-6 3-2z" fill="#465B64"/>
+                    <path transform="translate(1690,320)" d="m0 0h11l10 3 9 7 6 10 2 7v9l-4 13-7 9-8 6-8 3h-12l-11-4-6-4-6-9-2-6v-18l4-11 8-9 10-5z" fill="#465B64"/>
+                    <path transform="translate(1691,448)" d="m0 0h9l8 2 9 5 7 9 4 11v9l-4 13-7 9-8 6-8 3h-12l-11-4-6-4-6-9-2-6v-18l4-11 8-9 10-5z" fill="#465B64"/>
+                    <path transform="translate(1691,576)" d="m0 0h9l8 2 10 6 6 8 4 11v10l-3 9-5 9-9 8-11 4h-10l-10-3-8-5-6-9-2-6v-18l4-11 8-9 10-5z" fill="#465B64"/>
+                    <path transform="translate(344,1402)" d="m0 0h16l12 6 7 8 4 8 1 5v10l-4 11-8 11-10 6-4 1h-15l-9-3-8-7-5-9-1-4v-17l4-11 9-10z" fill="#465B64"/>
+                    <path transform="translate(344,1530)" d="m0 0h15l10 4 8 7 6 11 1 5v10l-4 11-8 11-10 6-4 1h-15l-9-3-8-7-5-9-1-4v-17l4-11 9-10z" fill="#465B64"/>
+                    <path transform="translate(344,1658)" d="m0 0h15l10 4 8 7 6 11 1 5v10l-4 11-8 11-10 6-4 1h-15l-8-3-6-4-6-8-3-8v-17l4-11 9-10z" fill="#465B64"/>
+                    <path transform="translate(1471,257)" d="m0 0h1l1 1328v230l-1 19h-1v-42l-1-17v-793z" fill="#47E68C"/>
+                    <path transform="translate(1471,1778)" d="m0 0h2v37l-1 19h-1v-42l-1-11z" fill="#55EA95"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-tColor">Step 3: Start Building</h3>
+                <p class="text-muted mt-2">Begin creating stunning UI/UX designs with dynamic templates using PixLab’s API in frameworks like SwiftUI, Flutter, and React Native.</p>
+              </div>
+            </div>
+        
+            <!-- Call to Action -->
+            <div class="text-center mt-12">
+              <a href="rest-api" class="bg-indigo-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-indigo-700 transition">
+                Explore API Documentation
+              </a>
+            </div>
+          </div>
+        </div>
+       </section>
 
       <!-- Generate UI Section -->
       <section>
@@ -432,7 +696,12 @@
             </div>
           </div>
           <div class="flex">
-            <a href="#" class="mx-auto mt-5 flex w-fit items-center gap-1 rounded-lg bg-aucPrimary border-2 border-aucPrimary shadow-lg shadow-purple-500/50 sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-aucPrimary hover:shadow-none">Launch App <i class="uil uil-arrow-right text-xl"></i></a>
+            <a href="https://app-ux.pixlab.io" class="mx-auto mt-5 gradient-button rounded-lg p-[1px] font-medium text-tColor">
+              <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                <span>Launch App</span>
+                <i class="uil uil-arrow-right text-xl"></i>
+              </div>
+            </a>
           </div>
         </div>
       </section>
@@ -532,11 +801,16 @@
       <section>
         <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
           <div class="bg-gradient-theme flex flex-col items-center lg:p-12 p-6 rounded-xl">
-            <div class="w-1/2">
+            <div class="sm:w-1/2">
               <h2 class="text-center text-3xl lg:text-4xl font-bold text-tColor">You’ve made it this far. Let’s build your <span class="auc-gradient-text">first application</span></h2>
               <p class="text-muted text-center mt-3">Now, it’s time to turn your ideas into reality. Use PixLab's powerful tools to design, customize, and generate your application with ease. Let’s get started and create your first application today!</p>
               <div class="flex">
-                <a href="#" class="mx-auto mt-5 flex w-fit items-center gap-1 rounded-lg bg-aucPrimary border-2 border-aucPrimary shadow-lg shadow-purple-500/50 sm:px-6 px-3 sm:py-3 py-1.5 sm:text-lg text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-aucPrimary hover:shadow-none">Build Your First App <i class="uil uil-arrow-right text-xl"></i></a>
+                <a href="https://app-ux.pixlab.io" class="mx-auto mt-5 gradient-button rounded-lg p-[1px] font-medium text-tColor">
+                  <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                    <span>Launch App</span>
+                    <i class="uil uil-arrow-right text-xl"></i>
+                  </div>
+                </a>
               </div>
             </div>
           </div>

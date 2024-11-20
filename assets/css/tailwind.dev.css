@@ -552,19 +552,36 @@ body.dark-theme .ape-header-gradient-theme {
   display: flex;
   align-items: center;
   gap: 50px;
-  animation: scroll 20s linear infinite;
-  width: calc(150px * 12);
+  animation: logos-scroll 15s linear infinite;
+  width: calc(265px * 8);
 }
 
 .logos-slide {
-  /* flex: 1; */
-  /* width: 150px; */
+  flex: 0 0 auto;
+  width: fit-content;
+  height: 60px;
   margin: 0 10px;
   @apply flex items-center gap-4;
 }
 
 .logos-slide img {
-  @apply w-12 object-contain;
+  @apply w-fit h-full
+}
+
+@keyframes logos-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-150px * 4 ));
+  }
+}
+
+@media (max-width: 768px) {
+  .logos-slider-track {
+    animation: logos-scroll 10s linear infinite;
+  }
 }
 
 /* App UI/UX Code Styling End */
