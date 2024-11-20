@@ -744,12 +744,12 @@ video {
   --color-auc-primary: #d747f0;
   --color-auc-secondary: #6466f1;
   /* Annotate Page Colors */
-  --color-anno-primary: #FA6D09;
-  --color-anno-secondary: #F71E02;
-  --color-anno-surface: #FFFFFF;
+  --color-anno-primary: #fa6d09;
+  --color-anno-secondary: #f71e02;
+  --color-anno-surface: #ffffff;
   /* Mockup and Screenshot Editor Page Colors */
-  --color-mse-primary: #1CA9C9;
-  --color-mse-secondary: #005FE5;
+  --color-mse-primary: #1ca9c9;
+  --color-mse-secondary: #005fe5;
 }
 
 /* Apply font to all elements */
@@ -859,6 +859,10 @@ body {
 
 .-top-3 {
   top: -0.75rem;
+}
+
+.left-0 {
+  left: 0px;
 }
 
 .left-1\/2 {
@@ -1013,6 +1017,10 @@ body {
 
 .mb-8 {
   margin-bottom: 2rem;
+}
+
+.ml-0\.5 {
+  margin-left: 0.125rem;
 }
 
 .ml-3 {
@@ -1208,6 +1216,14 @@ body {
   height: 2rem;
 }
 
+.h-\[150px\] {
+  height: 150px;
+}
+
+.h-\[15px\] {
+  height: 15px;
+}
+
 .h-\[70vh\] {
   height: 70vh;
 }
@@ -1283,6 +1299,14 @@ body {
 
 .w-\[140px\] {
   width: 140px;
+}
+
+.w-\[3px\] {
+  width: 3px;
+}
+
+.w-\[800px\] {
+  width: 800px;
 }
 
 .w-fit {
@@ -1800,6 +1824,10 @@ body {
   border-color: var(--color-ape-primary);
 }
 
+.border-apeSecondary {
+  border-color: var(--color-ape-secondary);
+}
+
 .border-apeTColor {
   border-color: var(--color-ape-text);
 }
@@ -1837,6 +1865,10 @@ body {
 
 .border-transparent {
   border-color: transparent;
+}
+
+.border-tColor {
+  border-color: var(--color-text);
 }
 
 .border-l-pink-50 {
@@ -2133,6 +2165,10 @@ body {
 
 .p-6 {
   padding: 1.5rem;
+}
+
+.p-\[0\.15em\] {
+  padding: 0.15em;
 }
 
 .p-\[1px\] {
@@ -2494,6 +2530,10 @@ body {
   color: var(--color-ape-primary);
 }
 
+.text-apeSecondary {
+  color: var(--color-ape-secondary);
+}
+
 .text-apeTColor {
   color: var(--color-ape-text);
 }
@@ -2800,7 +2840,7 @@ body.dark-theme :where(.img-invert, .dark-logo) {
 }
 
 nav :where(.nav-link, .theme-toggler):hover,
-nav .hs-dropdown:hover>button {
+nav .hs-dropdown:hover > button {
   color: var(--color-primary);
 }
 
@@ -2900,7 +2940,7 @@ body.dark-theme .bg-gradient-theme {
   background: #fff;
 }
 
-.gradient-button:hover>.bg-gradient-theme {
+.gradient-button:hover > .bg-gradient-theme {
   color: #fff;
   background: transparent;
 }
@@ -3232,7 +3272,7 @@ header .ape-navbar .nav-logo {
 }
 
 nav.ape-navbar :where(.nav-link, .theme-toggler):hover,
-nav.ape-navbar .hs-dropdown:hover>button {
+nav.ape-navbar .hs-dropdown:hover > button {
   color: var(--color-ape-primary);
 }
 
@@ -3353,7 +3393,7 @@ body.dark-theme .ape-header-gradient-theme {
 /* App UI/UX Code Styling Start */
 
 .app-ui-ux-code nav :where(.nav-link, .theme-toggler):hover,
-.app-ui-ux-code nav .hs-dropdown:hover>button {
+.app-ui-ux-code nav .hs-dropdown:hover > button {
   color: var(--color-auc-primary);
 }
 
@@ -3446,7 +3486,7 @@ body.dark-theme .ape-header-gradient-theme {
   margin: 0 10px;
   display: flex;
   align-items: center;
-  gap: 1rem
+  gap: 1rem;
 }
 
 .logos-slide img {
@@ -3460,7 +3500,7 @@ body.dark-theme .ape-header-gradient-theme {
 /* Annotate Styling Start */
 
 .annotate nav :where(.nav-link, .theme-toggler):hover,
-.annotate nav .hs-dropdown:hover>button {
+.annotate nav .hs-dropdown:hover > button {
   color: var(--color-anno-primary);
 }
 
@@ -3503,6 +3543,54 @@ body.dark-theme .ape-header-gradient-theme {
   color: var(--color-anno-primary);
 }
 
+.word-highlight::before,
+.word-highlight::after {
+  content: "";
+  display: block;
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  bottom: -6px;
+  left: -6px;
+}
+
+.word-highlight:after {
+  inset: -6px -6px auto auto;
+}
+
+.word-highlight .cursor.blinking {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-reveal {
+  clip-path: polygon(0 0, 0 0, -10% 100%, 0 100%, 0 0);
+  animation: reveal 10s infinite;
+}
+
+@keyframes reveal {
+  0% {
+    clip-path: polygon(0 0, 0 0, -10% 100%, 0 100%, 0 0);
+  }
+
+  50% {
+    clip-path: polygon(0 0, 110% 0, 100% 100%, 0 100%, 0 0);
+  }
+
+  51% {
+    clip-path: polygon(0 0, 100% 0, 110% 100%, 0 100%, 0 0);
+  }
+
+  100% {
+    clip-path: polygon(0 0, -10% 0, 0 100%, 0 100%, 0 0);
+  }
+}
+
 .anno-gradient-text {
   width: -moz-fit-content;
   width: fit-content;
@@ -3535,7 +3623,7 @@ body.dark-theme .anno-card-bg {
 /* Mockup & Screenshot Editor Styling Start */
 
 .mockup-screenshot-editor nav :where(.nav-link, .theme-toggler):hover,
-.mockup-screenshot-editor nav .hs-dropdown:hover>button {
+.mockup-screenshot-editor nav .hs-dropdown:hover > button {
   color: var(--color-mse-primary);
 }
 
@@ -3612,7 +3700,7 @@ body.template-pdf-media-engine {
 }
 
 body.template-pdf-media-engine nav.tpme-navbar :where(.nav-link, .theme-toggler):hover,
-body.template-pdf-media-engine nav .hs-dropdown:hover>button {
+body.template-pdf-media-engine nav .hs-dropdown:hover > button {
   color: var(--color-ape-primary);
 }
 
@@ -3723,7 +3811,7 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
   }
 
   100% {
-    transform: translateX(calc(-150px * 6 ));
+    transform: translateX(calc(-150px * 6));
   }
 }
 
@@ -3815,6 +3903,36 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
   border-radius: 0.75rem;
 }
 
+.before\:bg-annoPrimary::before {
+  content: var(--tw-content);
+  background-color: var(--color-anno-primary);
+}
+
+.before\:bg-apeSecondary::before {
+  content: var(--tw-content);
+  background-color: var(--color-ape-secondary);
+}
+
+.before\:bg-msePrimary::before {
+  content: var(--tw-content);
+  background-color: var(--color-mse-primary);
+}
+
+.after\:bg-annoPrimary::after {
+  content: var(--tw-content);
+  background-color: var(--color-anno-primary);
+}
+
+.after\:bg-apeSecondary::after {
+  content: var(--tw-content);
+  background-color: var(--color-ape-secondary);
+}
+
+.after\:bg-msePrimary::after {
+  content: var(--tw-content);
+  background-color: var(--color-mse-primary);
+}
+
 .odd\:bg-tableRowOdd:nth-child(odd) {
   background-color: var(--color-table-row-odd);
 }
@@ -3902,6 +4020,10 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
   background-color: transparent;
 }
 
+.hover\:bg-tColor:hover {
+  background-color: var(--color-text);
+}
+
 .hover\:from-secondary:hover {
   --tw-gradient-from: var(--color-secondary) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
@@ -3949,6 +4071,10 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-background:hover {
+  color: var(--color-background);
 }
 
 .hover\:shadow-lg:hover {
@@ -4291,6 +4417,10 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
     height: 2.875rem;
   }
 
+  .sm\:h-\[200px\] {
+    height: 200px;
+  }
+
   .sm\:w-1\/2 {
     width: 50%;
   }
@@ -4431,8 +4561,16 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
     margin-bottom: 3rem;
   }
 
+  .md\:h-\[25px\] {
+    height: 25px;
+  }
+
   .md\:h-\[38\.62rem\] {
     height: 38.62rem;
+  }
+
+  .md\:h-\[500px\] {
+    height: 500px;
   }
 
   .md\:w-3\/4 {
@@ -4591,11 +4729,6 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
 
   .lg\:col-span-7 {
     grid-column: span 7 / span 7;
-  }
-
-  .lg\:mx-\[25px\] {
-    margin-left: 25px;
-    margin-right: 25px;
   }
 
   .lg\:mx-auto {
@@ -4775,19 +4908,6 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
   .lg\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
-  }
-
-  .lg\:py-0\.5 {
-    padding-top: 0.125rem;
-    padding-bottom: 0.125rem;
-  }
-
-  .lg\:pe-\[1px\] {
-    padding-inline-end: 1px;
-  }
-
-  .lg\:ps-2 {
-    padding-inline-start: 0.5rem;
   }
 
   .lg\:ps-6 {

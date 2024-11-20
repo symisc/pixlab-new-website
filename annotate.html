@@ -189,29 +189,109 @@
 
           <div class="relative flex flex-col items-center">
             <div class="relative z-10">
-              <h2 class="text-center text-2xl font-semibold text-tColor lg:text-3xl">Online Batch Image Labeling tool</h2>
+              <h2 class="text-center text-2xl font-semibold text-tColor lg:text-4xl">
+                Online Batch Image
+                <p class="mt-2">
+                  <span class="word-highlight relative inline-block border-2 border-annoPrimary bg-surface p-[0.15em] font-medium text-annoPrimary before:bg-annoPrimary after:bg-annoPrimary" data-type='["Segmentation", "Labeling", "Annotation"]'>
+                    <span class="typing-effect">Labeling</span>
+                    <span class="cursor ml-0.5 inline-block h-[15px] w-[3px] bg-input md:h-[25px]"></span>
+                  </span>
+                  tool
+                </p>
+              </h2>
+
               <p class="mt-5 max-w-screen-md text-center text-muted">With the PixLab image annotation online tool , effortlessly annotate, segment, label & share your images directly from your web browser at no cost. It's intuitive, free, and user-friendly.</p>
             </div>
             <div class="anno-gradient-bg-theme pointer-events-none absolute inset-0 left-1/2 z-0 h-full w-1/2 -translate-x-1/2 rounded-full opacity-5 blur-xl lg:opacity-15 lg:blur-3xl"></div>
           </div>
 
           <!-- Steps Container -->
-          <div class="bg-annoSurface mt-20 rounded-xl border border-bColor p-6 lg:p-10">
+          <div class="mt-20 rounded-xl border border-bColor bg-annoSurface p-6 lg:p-10">
             <div class="flex flex-col items-center">
               <h2 class="text-center text-xl font-semibold text-tColor lg:text-2xl">Online Image Segmentation & Annotation Tool</h2>
               <p class="mt-5 max-w-screen-md text-center text-sm text-muted">Perfect for professionals and hobbyists, PixLab's tool combines simplicity with advanced features for streamlined image processing and collaboration.</p>
             </div>
 
             <div class="relative mt-10 flex justify-center">
-              <div class="z-10 rounded-xl p-2">
-                <img loading="lazy" class="h-full w-full rounded-xl" src="assets/images/annotate__online-annotation-tool.png" alt="Online Image Segmentation & Annotation Tool" />
+              <div class="relative z-10 h-[150px] w-[800px] rounded-xl p-2 sm:h-[200px] md:h-[500px]">
+                <img loading="lazy" class="animate-reveal absolute left-0 top-0 z-10 h-full w-full rounded-xl object-contain" src="assets/images/annotate__annotation-tool-after.png" draggable="false" alt="Online Image Segmentation & Annotation Tool" />
+                <img loading="lazy" class="absolute left-0 top-0 h-full w-full rounded-xl object-contain" src="assets/images/annotate__annotation-tool-before.png" draggable="false" alt="Online Image Segmentation & Annotation Tool" />
+                <!-- <div class="anno-gradient-bg-theme pointer-events-none absolute inset-0 left-1/2 z-0 h-full w-1/2 -translate-x-1/2 rounded-full opacity-15 blur-xl lg:blur-3xl"></div> -->
               </div>
-              <div class="anno-gradient-bg-theme pointer-events-none absolute inset-0 left-1/2 z-0 h-full w-1/2 -translate-x-1/2 rounded-full opacity-15 blur-xl lg:blur-3xl"></div>
             </div>
           </div>
 
           <div class="mt-5 flex justify-center">
-            <a class="border-annoPrimary text-annoPrimary hover:bg-annoPrimary mt-5 flex w-fit items-center gap-1 rounded-lg border bg-transparent px-3 py-1.5 text-[15px] font-medium transition-all duration-500 hover:text-tColor" href="#">Launch Annotate Web Application <i class="uil uil-arrow-right lg:text-lg"></i></a>
+            <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Launch Annotate Web Application <i class="uil uil-arrow-right lg:text-lg"></i></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tools Showcase Section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <div class="flex flex-col gap-14">
+            <!-- Single Row -->
+            <div class="flex flex-col justify-between gap-5 md:flex-row">
+              <div class="flex w-full flex-col items-center rounded-xl border border-bColor bg-surface px-7 py-10 md:w-3/4">
+                <h2 class="text-center text-2xl font-medium text-tColor">Enhance Your Screenshots with Text, Shapes, and Frames</h2>
+                <p class="mt-5 max-w-2xl text-center text-[15px] text-muted">SnapEdit makes it easy to add clarity and style to your screenshots. Insert customizable text for annotations, use precise shapes to highlight areas, and apply stylish frames to give your images a polished, professional look—perfect for presentations, social media, and beyond.</p>
+                <div class="relative mt-10 flex justify-center">
+                  <img loading="lazy" class="relative z-10 w-full max-w-lg" src="assets/images/mockup-screenshot-editor__text-shapes-frames-tools.png" alt="Enhance Your Screenshots with Text, Shapes, and Frames" />
+                  <div class="anno-gradient-bg-theme pointer-events-none absolute inset-0 left-1/2 z-0 h-full w-1/2 -translate-x-1/2 rounded-full opacity-15 blur-xl lg:blur-3xl"></div>
+                </div>
+                <div class="mt-5 flex justify-center">
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Launch Onine Screenshot Editor Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                </div>
+              </div>
+              <div class="flex h-auto w-full shrink-0 flex-col justify-evenly overflow-hidden rounded-xl bg-[url(../images/mockup-screenshot-editor__shapes-background.png)] bg-cover bg-center md:w-[300px]">
+                <div class="p-5 text-center">
+                  <h2 class="text-xl font-medium text-white">Polygon Drawing Precision at Your Fingertips</h2>
+                  <p class="mt-5 text-sm text-white">Create accurate shapes with our Polygon Tool, perfect for highlighting, diagrams, and structured elements. Choose from multiple shapes and easily adjust size, color, and position for sharp, polished results.</p>
+                </div>
+                <div class="mr-5 flex justify-start">
+                  <img loading="lazy" class="-ml-1 w-full max-w-[300px]" draggable="false" src="assets/images/mockup-screenshot-editor__shapes-polygon.png" alt="Polygon Drawing Precision at Your Fingertips" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Single Row -->
+            <div class="flex flex-col justify-between gap-5 md:flex-row">
+              <div class="flex h-auto w-full shrink-0 flex-col justify-evenly overflow-hidden rounded-xl bg-[url(../images/mockup-screenshot-editor__draw-tools-background.png)] bg-cover bg-center md:w-[300px]">
+                <div class="mr-5 mt-5 flex justify-start">
+                  <img loading="lazy" class="-ml-1 w-full max-w-[300px]" draggable="false" src="assets/images/mockup-screenshot-editor__draw-tool.png" alt="Freehand Drawing Unleash Your Creativity" />
+                </div>
+                <div class="p-5 text-center">
+                  <h2 class="text-xl font-medium text-white">Freehand Drawing Unleash Your Creativity</h2>
+                  <p class="mt-5 text-sm text-white">Bring ideas to life with Pixlab's Freehand Drawing tool, perfect for annotations or personal touches. Enjoy natural, customizable brushes and a responsive interface. Save and share high-quality edits directly from Pixlab Screenshot Editor.</p>
+                </div>
+              </div>
+              <div class="flex w-full flex-col items-center rounded-xl border border-bColor bg-surface px-7 py-10 md:w-3/4">
+                <h2 class="text-center text-2xl font-medium text-tColor">Custom Backgrounds for Personalized Screenshots</h2>
+                <p class="mt-5 max-w-2xl text-center text-[15px] text-muted">Enhance your screenshots with SnapEdit's customizable backgrounds. Select from images, solid colors, or gradients, and adjust transparency for a personalized touch.</p>
+                <div class="relative mt-10 flex justify-center">
+                  <div class="flex justify-center gap-5">
+                    <div>
+                      <h4 class="mb-3 text-center text-[15px] text-muted">Gradients</h4>
+                      <img loading="lazy" src="assets/images/mockup-screenshot-editor__gradients-pattern.png" alt="Gradients" />
+                    </div>
+                    <div>
+                      <h4 class="mb-3 text-center text-[15px] text-muted">Images</h4>
+                      <img loading="lazy" src="assets/images/mockup-screenshot-editor__images-pattern.png" alt="Images" />
+                    </div>
+                    <div>
+                      <h4 class="mb-3 text-center text-[15px] text-muted">Pallete</h4>
+                      <img loading="lazy" src="assets/images/mockup-screenshot-editor__color-palette-pattern.png" alt="Color Pallete" />
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-5 flex max-w-screen-md flex-col items-center justify-center text-center">
+                  <p class="my-4 text-sm text-muted">Transform your visuals with SnapEdit by choosing from a variety of customizable backgrounds, including images, solid colors, and gradients, while fine-tuning transparency for a unique look.</p>
+
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Launch Onine Screenshot Editor Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -223,11 +303,11 @@
             <!-- Single Row -->
             <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row lg:gap-40">
               <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
-                <p class="anno-gradient-text border-annoPrimary w-fit rounded-lg border px-2 py-0.5 text-sm font-semibold text-primary">Annotate</p>
+                <p class="anno-gradient-text w-fit rounded-lg border border-annoPrimary px-2 py-0.5 text-sm font-semibold text-primary">Annotate</p>
                 <div class="mt-5 flex flex-col items-center md:items-start">
                   <h2 class="text-3xl font-semibold text-tColor">Bulk Image Labeling <span class="anno-gradient-text"> & Annotations</span></h2>
                   <p class="mt-5 text-tColor">Start by uploading images in bulk from a local directory or selecting individual files, making it simple to label and annotate multiple images at once. Choose to either upload several images simultaneously or handpick specific ones as needed.</p>
-                  <a class="border-annoPrimary text-annoPrimary hover:bg-annoPrimary mt-5 flex w-fit items-center gap-1 rounded-lg border bg-transparent px-3 py-1.5 text-[15px] font-medium transition-all duration-500 hover:text-tColor" href="#">Get Started Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Get Started Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
               <div class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
@@ -238,11 +318,11 @@
             <!-- Single Row -->
             <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row-reverse lg:gap-40">
               <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
-                <p class="anno-gradient-text border-annoPrimary w-fit rounded-lg border px-2 py-0.5 text-sm font-semibold text-primary">Advanced Tools</p>
+                <p class="anno-gradient-text w-fit rounded-lg border border-annoPrimary px-2 py-0.5 text-sm font-semibold text-primary">Advanced Tools</p>
                 <div class="mt-5 flex flex-col items-center md:items-start">
                   <h2 class="text-3xl font-semibold text-tColor">Advanced Annotation <span class="anno-gradient-text">& Segmentation Tools</span></h2>
                   <p class="mt-5 text-tColor">Effortlessly segment, annotate, and label various sections within images using an intuitive Annotation web application. This user-friendly tool allows for precise customization with options to incorporate text, shapes, and freehand drawings, making it ideal for detailed labeling and marking.</p>
-                  <a class="border-annoPrimary text-annoPrimary hover:bg-annoPrimary mt-5 flex w-fit items-center gap-1 rounded-lg border bg-transparent px-3 py-1.5 text-[15px] font-medium transition-all duration-500 hover:text-tColor" href="#">Launch Annotate Web Application <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Launch Annotate Web Application <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
               <div class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
@@ -253,11 +333,11 @@
             <!-- Single Row -->
             <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row lg:gap-40">
               <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
-                <p class="anno-gradient-text border-annoPrimary w-fit rounded-lg border px-2 py-0.5 text-sm font-semibold text-primary">Collaboration</p>
+                <p class="anno-gradient-text w-fit rounded-lg border border-annoPrimary px-2 py-0.5 text-sm font-semibold text-primary">Collaboration</p>
                 <div class="mt-5 flex flex-col items-center md:items-start">
                   <h2 class="text-3xl font-semibold text-tColor">Enhanced Coordinates <span class="anno-gradient-text">Output in JSON</span></h2>
                   <p class="mt-5 text-tColor">Generate machine learning-friendly JSON outputs, ensuring compatibility with a wide range of framework. Utilize specialized tools, including rectangles and polygons, tailored for advanced segmentation tasks like Mask R-CNN.</p>
-                  <a class="border-annoPrimary text-annoPrimary hover:bg-annoPrimary mt-5 flex w-fit items-center gap-1 rounded-lg border bg-transparent px-3 py-1.5 text-[15px] font-medium transition-all duration-500 hover:text-tColor" href="#">Start Annotation Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Start Annotation Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
               <div class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
@@ -268,11 +348,11 @@
             <!-- Single Row -->
             <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row-reverse lg:gap-40">
               <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
-                <p class="anno-gradient-text border-annoPrimary w-fit rounded-lg border px-2 py-0.5 text-sm font-semibold text-primary">Advanced Tools</p>
+                <p class="anno-gradient-text w-fit rounded-lg border border-annoPrimary px-2 py-0.5 text-sm font-semibold text-primary">Advanced Tools</p>
                 <div class="mt-5 flex flex-col items-center md:items-start">
                   <h2 class="text-3xl font-semibold text-tColor">Annotation tracking history</h2>
                   <p class="mt-5 text-tColor">Seamlessly create, edit, or remove labels, giving you full control over your annotations. Access a detailed history of your annotation activities and easily undo or redo actions.</p>
-                  <a class="border-annoPrimary text-annoPrimary hover:bg-annoPrimary mt-5 flex w-fit items-center gap-1 rounded-lg border bg-transparent px-3 py-1.5 text-[15px] font-medium transition-all duration-500 hover:text-tColor" href="#">Give Annotate a Try <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Give Annotate a Try <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
               <div class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
@@ -283,11 +363,11 @@
             <!-- Single Row -->
             <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row lg:gap-40">
               <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
-                <p class="anno-gradient-text border-annoPrimary w-fit rounded-lg border px-2 py-0.5 text-sm font-semibold text-primary">Collaboration</p>
+                <p class="anno-gradient-text w-fit rounded-lg border border-annoPrimary px-2 py-0.5 text-sm font-semibold text-primary">Collaboration</p>
                 <div class="mt-5 flex flex-col items-center md:items-start">
                   <h2 class="text-3xl font-semibold text-tColor">Manage your labels</h2>
                   <p class="mt-5 text-tColor">One place for managing all your labels to add, remove or edit labels and giving colors to them all via label manager tool.</p>
-                  <a class="border-annoPrimary text-annoPrimary hover:bg-annoPrimary mt-5 flex w-fit items-center gap-1 rounded-lg border bg-transparent px-3 py-1.5 text-[15px] font-medium transition-all duration-500 hover:text-tColor" href="#">Start Annotating Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Start Annotating Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
               <div class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
@@ -411,7 +491,7 @@
             <div class="relative flex-1">
               <h2 class="text-2xl font-medium text-tColor">Ready to experience the efficiency and control of PixLab Image Annotation Tool?</h2>
               <p class="mt-5 text-muted">In an age of data-driven decisions, PixLab Annotate stands out as a reliable and user-friendly platform, ensuring your image annotation tasks are efficient, secure, and integrated with the tools you love...</p>
-              <a class="border-annoPrimary text-annoPrimary hover:bg-annoPrimary mt-8 flex w-fit items-center gap-1 rounded-lg border bg-transparent px-3 py-1.5 text-[15px] font-medium transition-all duration-500 hover:text-tColor" href="#">Launch Annotate Web Application <i class="uil uil-arrow-right lg:text-lg"></i></a>
+              <a class="mt-8 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Launch Annotate Web Application <i class="uil uil-arrow-right lg:text-lg"></i></a>
             </div>
             <div class="relative flex-1">
               <img loading="lazy" class="relative z-10 w-full" src="assets/images/annotate__annotation-tool-showcase.png" alt="Ready to experience the efficiency and control of PixLab Image Annotation Tool?" />
@@ -443,19 +523,19 @@
 
             <!-- Social Media Links -->
             <div class="mt-10 flex gap-1.5">
-              <a href="https://www.facebook.com/pixlab.io/" target="_blank" class="hover:bg-annoPrimary flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300" title="Follow PixLab on Facebook">
+              <a href="https://www.facebook.com/pixlab.io/" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-annoPrimary" title="Follow PixLab on Facebook">
                 <i class="uil uil-facebook text-lg"></i>
               </a>
-              <a href="https://www.linkedin.com/company/pixlabio" target="_blank" class="hover:bg-annoPrimary flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300" title="Follow PixLab on LinkedIn">
+              <a href="https://www.linkedin.com/company/pixlabio" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-annoPrimary" title="Follow PixLab on LinkedIn">
                 <i class="uil uil-linkedin text-lg"></i>
               </a>
-              <a href="https://x.com/unqlite_db" target="_blank" class="hover:bg-annoPrimary flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300" title="Follow PixLab on Twitter/X">
+              <a href="https://x.com/unqlite_db" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-annoPrimary" title="Follow PixLab on Twitter/X">
                 <i class="uil uil-twitter text-lg"></i>
               </a>
-              <a href="https://github.com/symisc" target="_blank" class="hover:bg-annoPrimary flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300" title="Follow Symisc on GitHub">
+              <a href="https://github.com/symisc" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-annoPrimary" title="Follow Symisc on GitHub">
                 <i class="uil uil-github text-lg"></i>
               </a>
-              <a href="https://blog.pixlab.io" target="_blank" class="hover:bg-annoPrimary flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300" title="PixLab Blog">
+              <a href="https://blog.pixlab.io" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-annoPrimary" title="PixLab Blog">
                 <i class="uil uil-rss text-lg"></i>
               </a>
             </div>
@@ -463,7 +543,7 @@
 
           <!-- Products Section -->
           <div class="col-span-10 md:col-span-5 lg:col-span-3">
-            <h3 class="text-annoPrimary mb-4 font-semibold">PRODUCTS & SDKs</h3>
+            <h3 class="mb-4 font-semibold text-annoPrimary">PRODUCTS & SDKs</h3>
             <ul class="flex flex-col gap-3">
               <li><a href="api-portal" class="footer-link">PixLab API Portal</a></li>
               <li><a href="vision-llm-api-playground/" class="footer-link">Vision Playground, LLM & APIs</a></li>
@@ -473,7 +553,7 @@
               <li><a href="https://faceio.net/" target="_blank" class="footer-link">FACEIO - Facial Authentication for the Web &nearr;</a></li>
             </ul>
             <!-- Creativity Tools -->
-            <h3 class="text-annoPrimary mb-2 mt-4 font-semibold">ONLINE CREATIVITY</h3>
+            <h3 class="mb-2 mt-4 font-semibold text-annoPrimary">ONLINE CREATIVITY</h3>
             <ul class="flex flex-col gap-3">
               <li><a href="annotate" class="footer-link">Image Annotation & Segmentation</a></li>
               <li><a href="mockup-screenshot-editor" class="footer-link">Mockup & Screenshot Editor</a></li>
@@ -486,7 +566,7 @@
           <!-- Resources Section -->
           <div class="col-span-10 md:col-span-5 lg:col-span-2">
             <div class="mb-4">
-              <h3 class="text-annoPrimary mb-4 font-semibold">DEVELOPERS</h3>
+              <h3 class="mb-4 font-semibold text-annoPrimary">DEVELOPERS</h3>
               <ul class="flex flex-col gap-3">
                 <li><a href="start" class="footer-link">Getting Started</a></li>
                 <li><a href="api-endpoints" class="footer-link">API Endpoints</a></li>
@@ -497,7 +577,7 @@
               </ul>
             </div>
             <div class="mb-4">
-              <h3 class="text-annoPrimary mb-4 font-semibold">RESOURCES</h3>
+              <h3 class="mb-4 font-semibold text-annoPrimary">RESOURCES</h3>
               <ul class="flex flex-col gap-3">
                 <li><a href="https://console.pixlab.io" target="_blank" class="footer-link">PixLab Console &nearr;</a></li>
                 <li><a href="pricing" class="footer-link">Pricing</a></li>
@@ -511,7 +591,7 @@
           <!-- Company Section -->
           <div class="col-span-10 md:col-span-5 lg:col-span-2">
             <div class="mb-4">
-              <h3 class="text-annoPrimary mb-4 font-semibold">COMPANY</h3>
+              <h3 class="mb-4 font-semibold text-annoPrimary">COMPANY</h3>
               <ul class="flex flex-col gap-3">
                 <li><a href="https://symisc.net/" target="_blank" class="footer-link">Symisc Systems &nearr;</a></li>
                 <li><a href="https://blog.pixlab.io" target="_blank" class="footer-link">PixLab Blog &nearr;</a></li>
@@ -522,7 +602,7 @@
               </ul>
             </div>
             <div class="mb-4">
-              <h3 class="text-annoPrimary mb-4 font-semibold">LEGAL</h3>
+              <h3 class="mb-4 font-semibold text-annoPrimary">LEGAL</h3>
               <ul class="flex flex-col gap-3">
                 <li><a href="privacy-policy" class="footer-link">Privacy Policy</a></li>
                 <li><a href="terms-of-use" class="footer-link">Terms of Services</a></li>
@@ -557,6 +637,7 @@
 
     <!-- Scripts -->
     <script src="assets/js/global.js"></script>
+    <script src="assets/js/typing.js"></script>
     <script src="assets/js/preline/preline.min.js"></script>
     <script src="assets/js/particles/particles.min.js"></script>
     <script src="assets/js/particles/particles-config.js"></script>

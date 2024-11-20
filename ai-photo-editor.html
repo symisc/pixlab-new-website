@@ -194,8 +194,13 @@
             <div class="flex justify-center">
               <div class="flex flex-col items-center text-center lg:max-w-[50%]">
                 <h2 class="text-center text-3xl font-semibold leading-snug text-apeTColor lg:max-w-[80%] lg:text-4xl">
-                  <span class="ape-gradient-text">Unleash Your Creativity: </span> <span class="playfair-font">Edit Photos with AI</span>
-                  <span class="font-normal text-apePrimary">|</span>
+                  <span class="ape-gradient-text">Unleash Your Creativity: </span>
+                  <p class="mt-2">
+                    <span class="word-highlight relative inline-block border-2 border-apeSecondary bg-background p-[0.15em] font-medium text-apeSecondary before:bg-apeSecondary after:bg-apeSecondary" data-type='["Edit Photos with AI", "AI Generate Assets", "Instant Magic Fixes"]'>
+                      <span class="typing-effect">Edit Photos with AI</span>
+                      <span class="cursor ml-0.5 inline-block h-[15px] w-[3px] bg-input md:h-[25px]"></span>
+                    </span>
+                  </p>
                 </h2>
                 <p class="mt-5 text-center text-apeTGray">Step into the world of the <b class="font-medium text-tColor"> Online AI Photo Editor</b>! Powered by artificial intelligence to effortlessly convert your creative ideas into captivating images. Immerse yourself in the smooth editing process, intuitive controls, and comprehensive features that are designed to uplift your photos with ease. It's intuitive and user-friendly.</p>
               </div>
@@ -209,6 +214,75 @@
                 <input class="h-12 w-full rounded-xl border border-transparent bg-apeBackground px-4 text-tColor outline-none focus:border-apePrimary" type="text" placeholder="Enter a prompt" required />
                 <button class="h-12 rounded-xl bg-apePrimary px-5 font-medium text-white hover:bg-apeSecondary">Generate</button>
               </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tools Showcase Section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <div class="flex flex-col gap-14">
+            <!-- Single Row -->
+            <div class="flex flex-col justify-between gap-5 md:flex-row">
+              <div class="flex w-full flex-col items-center rounded-xl border border-bColor bg-surface px-7 py-10 md:w-3/4">
+                <h2 class="text-center text-2xl font-medium text-tColor">Enhance Your Screenshots with Text, Shapes, and Frames</h2>
+                <p class="mt-5 max-w-2xl text-center text-[15px] text-muted">SnapEdit makes it easy to add clarity and style to your screenshots. Insert customizable text for apetations, use precise shapes to highlight areas, and apply stylish frames to give your images a polished, professional look—perfect for presentations, social media, and beyond.</p>
+                <div class="relative mt-10 flex justify-center">
+                  <img loading="lazy" class="relative z-10 w-full max-w-lg" src="assets/images/mockup-screenshot-editor__text-shapes-frames-tools.png" alt="Enhance Your Screenshots with Text, Shapes, and Frames" />
+                  <div class="ape-gradient-bg-theme pointer-events-none absolute inset-0 left-1/2 z-0 h-full w-1/2 -translate-x-1/2 rounded-full opacity-15 blur-xl lg:blur-3xl"></div>
+                </div>
+                <div class="mt-5 flex justify-center">
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-tColor bg-transparent px-3 py-1.5 text-[15px] font-medium text-tColor transition-all duration-500 hover:bg-tColor hover:text-background" href="#">Launch Onine Screenshot Editor Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                </div>
+              </div>
+              <div class="flex h-auto w-full shrink-0 flex-col justify-evenly overflow-hidden rounded-xl bg-[url(../images/mockup-screenshot-editor__shapes-background.png)] bg-cover bg-center md:w-[300px]">
+                <div class="p-5 text-center">
+                  <h2 class="text-xl font-medium text-white">Polygon Drawing Precision at Your Fingertips</h2>
+                  <p class="mt-5 text-sm text-white">Create accurate shapes with our Polygon Tool, perfect for highlighting, diagrams, and structured elements. Choose from multiple shapes and easily adjust size, color, and position for sharp, polished results.</p>
+                </div>
+                <div class="mr-5 flex justify-start">
+                  <img loading="lazy" class="-ml-1 w-full max-w-[300px]" draggable="false" src="assets/images/mockup-screenshot-editor__shapes-polygon.png" alt="Polygon Drawing Precision at Your Fingertips" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Single Row -->
+            <div class="flex flex-col justify-between gap-5 md:flex-row">
+              <div class="flex h-auto w-full shrink-0 flex-col justify-evenly overflow-hidden rounded-xl bg-[url(../images/mockup-screenshot-editor__draw-tools-background.png)] bg-cover bg-center md:w-[300px]">
+                <div class="mr-5 mt-5 flex justify-start">
+                  <img loading="lazy" class="-ml-1 w-full max-w-[300px]" draggable="false" src="assets/images/mockup-screenshot-editor__draw-tool.png" alt="Freehand Drawing Unleash Your Creativity" />
+                </div>
+                <div class="p-5 text-center">
+                  <h2 class="text-xl font-medium text-white">Freehand Drawing Unleash Your Creativity</h2>
+                  <p class="mt-5 text-sm text-white">Bring ideas to life with Pixlab's Freehand Drawing tool, perfect for apetations or personal touches. Enjoy natural, customizable brushes and a responsive interface. Save and share high-quality edits directly from Pixlab Screenshot Editor.</p>
+                </div>
+              </div>
+              <div class="flex w-full flex-col items-center rounded-xl border border-bColor bg-surface px-7 py-10 md:w-3/4">
+                <h2 class="text-center text-2xl font-medium text-tColor">Custom Backgrounds for Personalized Screenshots</h2>
+                <p class="mt-5 max-w-2xl text-center text-[15px] text-muted">Enhance your screenshots with SnapEdit's customizable backgrounds. Select from images, solid colors, or gradients, and adjust transparency for a personalized touch.</p>
+                <div class="relative mt-10 flex justify-center">
+                  <div class="flex justify-center gap-5">
+                    <div>
+                      <h4 class="mb-3 text-center text-[15px] text-muted">Gradients</h4>
+                      <img loading="lazy" src="assets/images/mockup-screenshot-editor__gradients-pattern.png" alt="Gradients" />
+                    </div>
+                    <div>
+                      <h4 class="mb-3 text-center text-[15px] text-muted">Images</h4>
+                      <img loading="lazy" src="assets/images/mockup-screenshot-editor__images-pattern.png" alt="Images" />
+                    </div>
+                    <div>
+                      <h4 class="mb-3 text-center text-[15px] text-muted">Pallete</h4>
+                      <img loading="lazy" src="assets/images/mockup-screenshot-editor__color-palette-pattern.png" alt="Color Pallete" />
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-5 flex max-w-screen-md flex-col items-center justify-center text-center">
+                  <p class="my-4 text-sm text-muted">Transform your visuals with SnapEdit by choosing from a variety of customizable backgrounds, including images, solid colors, and gradients, while fine-tuning transparency for a unique look.</p>
+
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-tColor bg-transparent px-3 py-1.5 text-[15px] font-medium text-tColor transition-all duration-500 hover:bg-tColor hover:text-background" href="#">Launch Onine Screenshot Editor Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -499,6 +573,7 @@
 
     <!-- Scripts -->
     <script src="assets/js/global.js"></script>
+    <script src="assets/js/typing.js"></script>
     <script src="assets/js/preline/preline.min.js"></script>
   </body>
 </html>
