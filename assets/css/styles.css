@@ -3644,7 +3644,7 @@ body.dark-theme .ape-header-gradient-theme {
   }
 
   100% {
-    transform: translateX(calc(-150px * 4 ));
+    transform: translateX(calc(-150px * 4));
   }
 }
 
@@ -4049,6 +4049,56 @@ body.dark-theme .ctb-card-bg {
 }
 
 /* Creative Toolbox Styling End */
+
+/* Custom scroll reveal effect */
+
+[data-sr="sr-top"],
+[data-sr="sr-bottom"],
+[data-sr="sr-left"],
+[data-sr="sr-right"] {
+  opacity: 0;
+  transform: translate(0);
+  transition:
+    opacity 1.2s,
+    transform 1.2s;
+}
+
+/* Initial positions outside the viewport */
+
+[data-sr="sr-top"] {
+  transform: translateY(-70px);
+}
+
+[data-sr="sr-bottom"] {
+  transform: translateY(70px);
+}
+
+[data-sr="sr-left"] {
+  transform: translateX(-70px);
+}
+
+[data-sr="sr-right"] {
+  transform: translateX(70px);
+}
+
+/* When the element is revealed, it will slide into place */
+
+[data-sr="sr-top"].revealed,
+[data-sr="sr-bottom"].revealed,
+[data-sr="sr-left"].revealed,
+[data-sr="sr-right"].revealed {
+  opacity: 1;
+}
+
+[data-sr="sr-top"].revealed,
+[data-sr="sr-left"].revealed {
+  transform: translateY(0);
+}
+
+[data-sr="sr-bottom"].revealed,
+[data-sr="sr-right"].revealed {
+  transform: translateY(0);
+}
 
 .marker\:text-\[\#43EAA4\] *::marker {
   color: rgb(67 234 164 );

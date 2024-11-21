@@ -154,13 +154,13 @@
         <div class="relative my-10 h-[70vh] bg-apeBackground lg:my-0">
           <div class="absolute flex h-full w-full items-center px-5 pt-10 text-white">
             <div class="mx-auto flex w-full max-w-screen-xl flex-col-reverse items-center justify-between gap-10 lg:flex-row">
-              <div class="relative max-w-[300px] lg:max-w-[500px]">
+              <div data-sr="sr-left" class="relative max-w-[300px] lg:max-w-[500px]">
                 <img class="relative z-10 w-full rounded-2xl border border-apePrimary" src="assets/images/ai-photo-editor__hero.png" alt="AI Photo Editor" />
                 <div class="ape-gradient-bg-theme z-1 absolute inset-0 h-full w-full opacity-30 blur-xl lg:blur-3xl"></div>
               </div>
 
               <!-- Hero Text -->
-              <div class="relative z-10 flex flex-col items-center text-center lg:block lg:max-w-screen-sm lg:text-left">
+              <div data-sr="sr-right" class="relative z-10 flex flex-col items-center text-center lg:block lg:max-w-screen-sm lg:text-left">
                 <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold text-primary">PixLab Online AI Photo Editor</p>
                 <h1 class="mt-5 text-3xl font-medium leading-[1.2] text-apeTColor lg:text-5xl">Online AI Photo Editor <span class="playfair-font">Redefine Image Editing</span></h1>
                 <p class="mt-5 text-muted">Create, Edit & Transform your photos into masterpieces with the power of Generative AI at your fingertips.</p>
@@ -181,12 +181,12 @@
         <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
           <!-- First Heading Row -->
           <div class="flex flex-col items-center">
-            <h2 class="text-center text-3xl font-semibold leading-snug text-apeTColor lg:max-w-[80%] lg:text-4xl">
+            <h2 data-sr="sr-bottom" class="text-center text-3xl font-semibold leading-snug text-apeTColor lg:max-w-[80%] lg:text-4xl">
               <span class="ape-gradient-text">Harness AI's capabilities</span> <br />
               to turn your media assets into masterpieces!
             </h2>
 
-            <p class="mt-5 text-center text-apeTGray">Online AI Photo Editor is the <b class="font-medium text-tColor"> leading free, web based, online AI image editor from PixLab</b>. Elevate your photos, design generative art, and craft standout social media graphics, presentations, posters, videos, and logos, on your Web browser all backed by generative AI!</p>
+            <p data-sr="sr-bottom" class="mt-5 text-center text-apeTGray">Online AI Photo Editor is the <b class="font-medium text-tColor"> leading free, web based, online AI image editor from PixLab</b>. Elevate your photos, design generative art, and craft standout social media graphics, presentations, posters, videos, and logos, on your Web browser all backed by generative AI!</p>
           </div>
 
           <!-- Second Heading Row -->
@@ -202,15 +202,15 @@
                     </span>
                   </p>
                 </h2>
-                <p class="mt-5 text-center text-apeTGray">Step into the world of the <b class="font-medium text-tColor"> Online AI Photo Editor</b>! Powered by artificial intelligence to effortlessly convert your creative ideas into captivating images. Immerse yourself in the smooth editing process, intuitive controls, and comprehensive features that are designed to uplift your photos with ease. It's intuitive and user-friendly.</p>
+                <p data-sr="sr-bottom" class="mt-5 text-center text-apeTGray">Step into the world of the <b class="font-medium text-tColor"> Online AI Photo Editor</b>! Powered by artificial intelligence to effortlessly convert your creative ideas into captivating images. Immerse yourself in the smooth editing process, intuitive controls, and comprehensive features that are designed to uplift your photos with ease. It's intuitive and user-friendly.</p>
               </div>
             </div>
 
             <!-- Image Generator Form -->
             <div class="mt-14 rounded-3xl bg-apeSurface p-4">
-              <img loading="lazy" class="block w-full lg:max-w-[500px]" src="assets/images/ai-photo-editor__pyramid.png" alt="Pyramid in Desert Oasis" />
+              <img loading="lazy" data-sr="sr-bottom" class="relative z-10 block w-full lg:max-w-[500px]" src="assets/images/ai-photo-editor__pyramid.png" alt="Pyramid in Desert Oasis" />
 
-              <form class="mt-6 flex flex-col items-center gap-3 lg:flex-row">
+              <form data-sr="sr-top" class="mt-6 flex flex-col items-center gap-3 lg:flex-row">
                 <input class="h-12 w-full rounded-xl border border-transparent bg-apeBackground px-4 text-tColor outline-none focus:border-apePrimary" type="text" placeholder="Enter a prompt" required />
                 <button class="h-12 rounded-xl bg-apePrimary px-5 font-medium text-white hover:bg-apeSecondary">Generate</button>
               </form>
@@ -225,18 +225,18 @@
           <div class="flex flex-col gap-14">
             <!-- Single Row -->
             <div class="flex flex-col justify-between gap-5 md:flex-row">
-              <div class="flex w-full flex-col items-center rounded-xl border border-bColor bg-surface px-7 py-10 md:w-3/4">
+              <div data-sr="sr-left" class="flex w-full flex-col items-center rounded-xl border border-bColor bg-surface px-7 py-10 md:w-3/4">
                 <h2 class="text-center text-2xl font-medium text-tColor">Enhance Your Screenshots with Text, Shapes, and Frames</h2>
                 <p class="mt-5 max-w-2xl text-center text-[15px] text-muted">SnapEdit makes it easy to add clarity and style to your screenshots. Insert customizable text for apetations, use precise shapes to highlight areas, and apply stylish frames to give your images a polished, professional look—perfect for presentations, social media, and beyond.</p>
                 <div class="relative mt-10 flex justify-center">
                   <img loading="lazy" class="relative z-10 w-full max-w-lg" src="assets/images/mockup-screenshot-editor__text-shapes-frames-tools.png" alt="Enhance Your Screenshots with Text, Shapes, and Frames" />
                   <div class="ape-gradient-bg-theme pointer-events-none absolute inset-0 left-1/2 z-0 h-full w-1/2 -translate-x-1/2 rounded-full opacity-15 blur-xl lg:blur-3xl"></div>
                 </div>
-                <div class="mt-5 flex justify-center">
+                <div data-sr="sr-top" class="mt-5 flex justify-center">
                   <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-tColor bg-transparent px-3 py-1.5 text-[15px] font-medium text-tColor transition-all duration-500 hover:bg-tColor hover:text-background" href="#">Launch Onine Screenshot Editor Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
-              <div class="flex h-auto w-full shrink-0 flex-col justify-evenly overflow-hidden rounded-xl bg-[url(../images/mockup-screenshot-editor__shapes-background.png)] bg-cover bg-center md:w-[300px]">
+              <div data-sr="sr-right" class="flex h-auto w-full shrink-0 flex-col justify-evenly overflow-hidden rounded-xl bg-[url(../images/mockup-screenshot-editor__shapes-background.png)] bg-cover bg-center md:w-[300px]">
                 <div class="p-5 text-center">
                   <h2 class="text-xl font-medium text-white">Polygon Drawing Precision at Your Fingertips</h2>
                   <p class="mt-5 text-sm text-white">Create accurate shapes with our Polygon Tool, perfect for highlighting, diagrams, and structured elements. Choose from multiple shapes and easily adjust size, color, and position for sharp, polished results.</p>
@@ -249,7 +249,7 @@
 
             <!-- Single Row -->
             <div class="flex flex-col justify-between gap-5 md:flex-row">
-              <div class="flex h-auto w-full shrink-0 flex-col justify-evenly overflow-hidden rounded-xl bg-[url(../images/mockup-screenshot-editor__draw-tools-background.png)] bg-cover bg-center md:w-[300px]">
+              <div data-sr="sr-left" class="flex h-auto w-full shrink-0 flex-col justify-evenly overflow-hidden rounded-xl bg-[url(../images/mockup-screenshot-editor__draw-tools-background.png)] bg-cover bg-center md:w-[300px]">
                 <div class="mr-5 mt-5 flex justify-start">
                   <img loading="lazy" class="-ml-1 w-full max-w-[300px]" draggable="false" src="assets/images/mockup-screenshot-editor__draw-tool.png" alt="Freehand Drawing Unleash Your Creativity" />
                 </div>
@@ -258,7 +258,7 @@
                   <p class="mt-5 text-sm text-white">Bring ideas to life with Pixlab's Freehand Drawing tool, perfect for apetations or personal touches. Enjoy natural, customizable brushes and a responsive interface. Save and share high-quality edits directly from Pixlab Screenshot Editor.</p>
                 </div>
               </div>
-              <div class="flex w-full flex-col items-center rounded-xl border border-bColor bg-surface px-7 py-10 md:w-3/4">
+              <div data-sr="sr-right" class="flex w-full flex-col items-center rounded-xl border border-bColor bg-surface px-7 py-10 md:w-3/4">
                 <h2 class="text-center text-2xl font-medium text-tColor">Custom Backgrounds for Personalized Screenshots</h2>
                 <p class="mt-5 max-w-2xl text-center text-[15px] text-muted">Enhance your screenshots with SnapEdit's customizable backgrounds. Select from images, solid colors, or gradients, and adjust transparency for a personalized touch.</p>
                 <div class="relative mt-10 flex justify-center">
@@ -280,7 +280,7 @@
                 <div class="mt-5 flex max-w-screen-md flex-col items-center justify-center text-center">
                   <p class="my-4 text-sm text-muted">Transform your visuals with SnapEdit by choosing from a variety of customizable backgrounds, including images, solid colors, and gradients, while fine-tuning transparency for a unique look.</p>
 
-                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-tColor bg-transparent px-3 py-1.5 text-[15px] font-medium text-tColor transition-all duration-500 hover:bg-tColor hover:text-background" href="#">Launch Onine Screenshot Editor Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                  <a data-sr="sr-top" class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-tColor bg-transparent px-3 py-1.5 text-[15px] font-medium text-tColor transition-all duration-500 hover:bg-tColor hover:text-background" href="#">Launch Onine Screenshot Editor Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
             </div>
@@ -294,45 +294,45 @@
           <div class="flex flex-col gap-10">
             <!-- Single Row -->
             <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row lg:gap-60">
-              <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+              <div data-sr="sr-left" class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
                 <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold text-primary">AI Tools</p>
                 <div class="mt-5 flex flex-col items-center md:items-start">
                   <h2 class="text-3xl font-semibold text-apeTColor">AI-Powered Tools <span class="ape-gradient-text">to Supercharge</span> <span class="playfair-font">Your Development</span></h2>
                   <p class="mt-5 text-apeTColor">Utilize intelligent editing features that learn and adapt to your unique style, delivering personalized results every time. Effortlessly remove unwanted elements with our smart object removal tool, leaving no trace behind and ensuring flawless visuals.</p>
-                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-apeTColor bg-apeTColor px-3 py-1.5 text-[15px] font-medium text-apeBackground transition-all duration-500 hover:bg-transparent hover:text-apeTColor" href="#">Give AI Editor A Try <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                  <a data-sr="sr-top" class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-apeTColor bg-apeTColor px-3 py-1.5 text-[15px] font-medium text-apeBackground transition-all duration-500 hover:bg-transparent hover:text-apeTColor" href="#">Give AI Editor A Try <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
-              <div class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
+              <div data-sr="sr-right" class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
                 <img loading="lazy" src="assets/images/ai-photo-editor__ai-tools.png" alt="AI Tools" />
               </div>
             </div>
 
             <!-- Single Row -->
             <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row-reverse lg:gap-60">
-              <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+              <div data-sr="sr-left" class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
                 <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold text-primary">Design Freedom</p>
                 <div class="mt-5 flex flex-col items-center md:items-start">
                   <h2 class="text-3xl font-semibold text-apeTColor">Advanced Editing Suite <span class="ape-gradient-text">& Creative Freedom</span> to <span class="playfair-font">Bring Every Vision to Life</span></h2>
                   <p class="mt-5 text-apeTColor">From basic adjustments to sophisticated effects, AI Photo Editor gives you the freedom to experiment and create without limits. Dive into professional-grade tools for detailed image manipulation, color correction, and more, allowing you to fine-tune every detail.</p>
-                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-apeTColor bg-apeTColor px-3 py-1.5 text-[15px] font-medium text-apeBackground transition-all duration-500 hover:bg-transparent hover:text-apeTColor" href="#">Start Editing Like a Pro <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                  <a data-sr="sr-top" class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-apeTColor bg-apeTColor px-3 py-1.5 text-[15px] font-medium text-apeBackground transition-all duration-500 hover:bg-transparent hover:text-apeTColor" href="#">Start Editing Like a Pro <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
-              <div class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
+              <div data-sr="sr-right" class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
                 <img loading="lazy" src="assets/images/ai-photo-editor__design-freedon.png" alt="Design Freedom" />
               </div>
             </div>
 
             <!-- Single Row -->
             <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row lg:gap-60">
-              <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+              <div data-sr="sr-left" class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
                 <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold text-primary">Collaboration</p>
                 <div class="mt-5 flex flex-col items-center md:items-start">
                   <h2 class="text-3xl font-semibold text-apeTColor">Collaborative Features <span class="ape-gradient-text">& Cloud Integration</span> <span class="playfair-font">for Seamless Teamwork</span></h2>
                   <p class="mt-5 text-apeTColor">Switch seamlessly between dark and light modes for a personalized, comfortable experience tailored to your preferences.</p>
-                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-apeTColor bg-apeTColor px-3 py-1.5 text-[15px] font-medium text-apeBackground transition-all duration-500 hover:bg-transparent hover:text-apeTColor" href="#">Launch AI Editor <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                  <a data-sr="sr-top" class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-apeTColor bg-apeTColor px-3 py-1.5 text-[15px] font-medium text-apeBackground transition-all duration-500 hover:bg-transparent hover:text-apeTColor" href="#">Launch AI Editor <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
-              <div class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
+              <div data-sr="sr-right" class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
                 <img loading="lazy" src="assets/images/ai-photo-editor__collaboration.png" alt="Collaboration" />
               </div>
             </div>
@@ -343,71 +343,73 @@
       <!-- Dive into AI Photo Editor (Cards) Section -->
       <section>
         <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
-          <h2 class="text-center text-3xl font-semibold text-apeTColor">Dive into AI Photo Editor</h2>
+          <h2 data-sr="sr-bottom" class="text-center text-3xl font-semibold text-apeTColor">Dive into AI Photo Editor</h2>
           <div class="mt-10 flex justify-center">
-            <p class="text-center text-apeTGray lg:max-w-[50%]">Leverage advanced AI editing tools like <b class="font-medium text-apeTColor"> Generative Fill, Magic Erase, and Background Removal </b> for precise, effortless adjustments. Instantly remove objects or backgrounds, automatically identify and enhance photo elements, and blend content seamlessly. AI-driven features intuitively fill spaces with context-aware content, streamlining your workflow and unlocking creative possibilities.</p>
+            <p data-sr="sr-bottom" class="text-center text-apeTGray lg:max-w-[50%]">
+              Leverage advanced AI editing tools like <b class="font-medium text-apeTColor"> Generative Fill, Magic Erase, and Background Removal </b> for precise, effortless adjustments. Instantly remove objects or backgrounds, automatically identify and enhance photo elements, and blend content seamlessly. AI-driven features intuitively fill spaces with context-aware content, streamlining your workflow and unlocking creative possibilities.
+            </p>
           </div>
 
           <!-- Cards Grid -->
           <div class="mt-14 grid gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <!-- Single Card -->
-            <div class="ape-card-gradient-theme rounded-xl p-4">
+            <div data-sr="sr-left" class="ape-card-gradient-theme rounded-xl p-4">
               <h3 class="text-ape-stroke text-3xl font-semibold">01</h3>
               <h2 class="mt-2 text-lg font-semibold text-apeTColor">Automated Retouching</h2>
               <p class="mt-3 text-[15px] text-apeTGray">Smooth, sharpen, and refine details where it counts.</p>
             </div>
 
             <!-- Single Card -->
-            <div class="ape-card-gradient-theme rounded-xl p-4">
+            <div data-sr="sr-bottom" class="ape-card-gradient-theme rounded-xl p-4">
               <h3 class="text-ape-stroke text-3xl font-semibold">02</h3>
               <h2 class="mt-2 text-lg font-semibold text-apeTColor">Story-Ready Templates</h2>
               <p class="mt-3 text-[15px] text-apeTGray">Utilize a range of templates perfect for your social media stories.</p>
             </div>
 
             <!-- Single Card -->
-            <div class="ape-card-gradient-theme rounded-xl p-4">
+            <div data-sr="sr-right" class="ape-card-gradient-theme rounded-xl p-4">
               <h3 class="text-ape-stroke text-3xl font-semibold">03</h3>
               <h2 class="mt-2 text-lg font-semibold text-apeTColor">Hashtag Highlighter</h2>
               <p class="mt-3 text-[15px] text-apeTGray">Enhance your images with text tools optimized for impactful hashtag and caption integration, making your posts more discoverable.</p>
             </div>
 
             <!-- Single Card -->
-            <div class="ape-card-gradient-theme rounded-xl p-4">
+            <div data-sr="sr-left" class="ape-card-gradient-theme rounded-xl p-4">
               <h3 class="text-ape-stroke text-3xl font-semibold">04</h3>
               <h2 class="mt-2 text-lg font-semibold text-apeTColor">Intuitive Layer Management</h2>
               <p class="mt-3 text-[15px] text-apeTGray">Simplify complex edits with smart layer organization.</p>
             </div>
 
             <!-- Single Card -->
-            <div class="ape-card-gradient-theme rounded-xl p-4">
+            <div data-sr="sr-bottom" class="ape-card-gradient-theme rounded-xl p-4">
               <h3 class="text-ape-stroke text-3xl font-semibold">05</h3>
               <h2 class="mt-2 text-lg font-semibold text-apeTColor">Seamless Content Extension</h2>
               <p class="mt-3 text-[15px] text-apeTGray">Expand your canvases creatively with AI-generated content matching.</p>
             </div>
 
             <!-- Single Card -->
-            <div class="ape-card-gradient-theme rounded-xl p-4">
+            <div data-sr="sr-right" class="ape-card-gradient-theme rounded-xl p-4">
               <h3 class="text-ape-stroke text-3xl font-semibold">06</h3>
               <h2 class="mt-2 text-lg font-semibold text-apeTColor">Live Edit Sessions</h2>
               <p class="mt-3 text-[15px] text-apeTGray">Stream your editing process live for feedback or collaborative input.</p>
             </div>
 
             <!-- Single Card -->
-            <div class="ape-card-gradient-theme rounded-xl p-4">
+            <div data-sr="sr-left" class="ape-card-gradient-theme rounded-xl p-4">
               <h3 class="text-ape-stroke text-3xl font-semibold">07</h3>
               <h2 class="mt-2 text-lg font-semibold text-apeTColor">Quick Share Integration</h2>
               <p class="mt-3 text-[15px] text-apeTGray">Share your masterpieces instantly across social platforms or with collaborators.</p>
             </div>
 
             <!-- Single Card -->
-            <div class="ape-card-gradient-theme rounded-xl p-4">
+            <div data-sr="sr-bottom" class="ape-card-gradient-theme rounded-xl p-4">
               <h3 class="text-ape-stroke text-3xl font-semibold">08</h3>
               <h2 class="mt-2 text-lg font-semibold text-apeTColor">Dynamic Brush Tools</h2>
               <p class="mt-3 text-[15px] text-apeTGray">Paint with AI-assisted brushes for natural or fantastical effects.</p>
             </div>
 
             <!-- Single Card -->
-            <div class="ape-card-gradient-theme rounded-xl p-4">
+            <div data-sr="sr-right" class="ape-card-gradient-theme rounded-xl p-4">
               <h3 class="text-ape-stroke text-3xl font-semibold">09</h3>
               <h2 class="mt-2 text-lg font-semibold text-apeTColor">Color Wizardry</h2>
               <p class="mt-3 text-[15px] text-apeTGray">Manipulate and match colors with precision, guided by AI.</p>
@@ -421,18 +423,18 @@
         <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
           <div class="flex justify-center">
             <div class="lg:max-w-[50%]">
-              <h2 class="text-center text-3xl font-semibold text-apeTColor">Ready to take your photo editing <span class="playfair-font">to the next level?</span></h2>
-              <p class="mt-10 text-center text-apeTGray">Give AI Photo Editor a whirl and see for yourself how our AI-driven tools can transform your images into stunning visuals. It's time to unleash your creativity and redefine what's possible. Try it out now and join the community of visionaries who are already crafting the future of photo editing!</p>
+              <h2 data-sr="sr-bottom" class="text-center text-3xl font-semibold text-apeTColor">Ready to take your photo editing <span class="playfair-font">to the next level?</span></h2>
+              <p data-sr="sr-bottom" class="mt-10 text-center text-apeTGray">Give AI Photo Editor a whirl and see for yourself how our AI-driven tools can transform your images into stunning visuals. It's time to unleash your creativity and redefine what's possible. Try it out now and join the community of visionaries who are already crafting the future of photo editing!</p>
             </div>
           </div>
 
           <div class="mt-14 flex flex-col items-center">
-            <div class="relative w-full md:w-[700px]">
+            <div data-sr="sr-bottom" class="relative w-full md:w-[700px]">
               <div class="ape-gradient-bg-theme z-1 absolute inset-0 h-full w-full opacity-20 blur-xl lg:blur-2xl"></div>
               <iframe class="relative z-10 aspect-video" width="100%" height="100%" src="https://www.youtube.com/embed/oJPx7mrPBkk?si=vKx1RIEuxNGPE27s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
-            <a class="mt-10 flex w-fit items-center gap-1 rounded-lg border border-apeTColor bg-apeBackground px-3 py-1.5 text-sm font-medium text-apeTColor transition-all duration-500 hover:bg-apeTColor hover:text-apeBackground" href="#">Start Editing Like a Pro <i class="uil uil-arrow-right text-lg"></i></a>
+            <a data-sr="sr-top" class="mt-10 flex w-fit items-center gap-1 rounded-lg border border-apeTColor bg-apeBackground px-3 py-1.5 text-sm font-medium text-apeTColor transition-all duration-500 hover:bg-apeTColor hover:text-apeBackground" href="#">Start Editing Like a Pro <i class="uil uil-arrow-right text-lg"></i></a>
           </div>
         </div>
       </section>
@@ -574,6 +576,7 @@
     <!-- Scripts -->
     <script src="assets/js/global.js"></script>
     <script src="assets/js/typing.js"></script>
+    <script src="assets/js/scrollreveal.js"></script>
     <script src="assets/js/preline/preline.min.js"></script>
   </body>
 </html>

@@ -155,11 +155,11 @@
           <div class="absolute flex h-full w-full items-center px-5 pt-10 text-white">
             <div class="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between gap-10 lg:flex-row">
               <!-- Hero Text -->
-              <div class="max-w-[500px] text-center lg:max-w-screen-sm lg:text-left">
+              <div data-sr="sr-left" class="max-w-[500px] text-center lg:max-w-screen-sm lg:text-left">
                 <h1 class="hero-heading anno-gradient-text">Annotate - Online Image Annotation & Labeling Tool</h1>
                 <p class="lead mt-5 text-gray-200">A Web based image annotation, labeling, and segmentation tool for your Machine Learning model training tasks and more</p>
               </div>
-              <div class="flex w-full max-w-[500px] flex-col gap-6">
+              <div data-sr="sr-right" class="flex w-full max-w-[500px] flex-col gap-6">
                 <!-- Search Form -->
                 <form action="search" method="get" class="flex h-12 w-full items-center justify-between rounded-xl bg-white/10 pe-3 ps-4 backdrop-blur-md focus-within:bg-white/15 lg:h-14">
                   <label for="search-docs" class="sr-only">Search Documentation...</label>
@@ -200,7 +200,7 @@
                 </p>
               </h2>
 
-              <p class="mt-5 max-w-screen-md text-center text-muted">With the PixLab image annotation online tool , effortlessly annotate, segment, label & share your images directly from your web browser at no cost. It's intuitive, free, and user-friendly.</p>
+              <p data-sr="sr-bottom" class="mt-5 max-w-screen-md text-center text-muted">With the PixLab image annotation online tool , effortlessly annotate, segment, label & share your images directly from your web browser at no cost. It's intuitive, free, and user-friendly.</p>
             </div>
             <div class="anno-gradient-bg-theme pointer-events-none absolute inset-0 left-1/2 z-0 h-full w-1/2 -translate-x-1/2 rounded-full opacity-5 blur-xl lg:opacity-15 lg:blur-3xl"></div>
           </div>
@@ -208,12 +208,12 @@
           <!-- Steps Container -->
           <div class="mt-20 rounded-xl border border-bColor bg-annoSurface p-6 lg:p-10">
             <div class="flex flex-col items-center">
-              <h2 class="text-center text-xl font-semibold text-tColor lg:text-2xl">Online Image Segmentation & Annotation Tool</h2>
-              <p class="mt-5 max-w-screen-md text-center text-sm text-muted">Perfect for professionals and hobbyists, PixLab's tool combines simplicity with advanced features for streamlined image processing and collaboration.</p>
+              <h2 data-sr="sr-bottom" class="text-center text-xl font-semibold text-tColor lg:text-2xl">Online Image Segmentation & Annotation Tool</h2>
+              <p data-sr="sr-bottom" class="mt-5 max-w-screen-md text-center text-sm text-muted">Perfect for professionals and hobbyists, PixLab's tool combines simplicity with advanced features for streamlined image processing and collaboration.</p>
             </div>
 
             <div class="relative mt-10 flex justify-center">
-              <div class="relative z-10 h-[150px] w-[800px] rounded-xl p-2 sm:h-[200px] md:h-[500px]">
+              <div data-sr="sr-top" class="relative z-10 h-[150px] w-[800px] rounded-xl p-2 sm:h-[200px] md:h-[500px]">
                 <img loading="lazy" class="animate-reveal absolute left-0 top-0 z-10 h-full w-full rounded-xl object-contain" src="assets/images/annotate__annotation-tool-after.png" draggable="false" alt="Online Image Segmentation & Annotation Tool" />
                 <img loading="lazy" class="absolute left-0 top-0 h-full w-full rounded-xl object-contain" src="assets/images/annotate__annotation-tool-before.png" draggable="false" alt="Online Image Segmentation & Annotation Tool" />
                 <!-- <div class="anno-gradient-bg-theme pointer-events-none absolute inset-0 left-1/2 z-0 h-full w-1/2 -translate-x-1/2 rounded-full opacity-15 blur-xl lg:blur-3xl"></div> -->
@@ -221,7 +221,7 @@
             </div>
           </div>
 
-          <div class="mt-5 flex justify-center">
+          <div data-sr="sr-top" class="mt-5 flex justify-center">
             <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Launch Annotate Web Application <i class="uil uil-arrow-right lg:text-lg"></i></a>
           </div>
         </div>
@@ -233,18 +233,18 @@
           <div class="flex flex-col gap-14">
             <!-- Single Row -->
             <div class="flex flex-col justify-between gap-5 md:flex-row">
-              <div class="flex w-full flex-col items-center rounded-xl border border-bColor bg-surface px-7 py-10 md:w-3/4">
+              <div data-sr="sr-left" class="flex w-full flex-col items-center rounded-xl border border-bColor bg-surface px-7 py-10 md:w-3/4">
                 <h2 class="text-center text-2xl font-medium text-tColor">Enhance Your Screenshots with Text, Shapes, and Frames</h2>
                 <p class="mt-5 max-w-2xl text-center text-[15px] text-muted">SnapEdit makes it easy to add clarity and style to your screenshots. Insert customizable text for annotations, use precise shapes to highlight areas, and apply stylish frames to give your images a polished, professional look—perfect for presentations, social media, and beyond.</p>
                 <div class="relative mt-10 flex justify-center">
                   <img loading="lazy" class="relative z-10 w-full max-w-lg" src="assets/images/mockup-screenshot-editor__text-shapes-frames-tools.png" alt="Enhance Your Screenshots with Text, Shapes, and Frames" />
                   <div class="anno-gradient-bg-theme pointer-events-none absolute inset-0 left-1/2 z-0 h-full w-1/2 -translate-x-1/2 rounded-full opacity-15 blur-xl lg:blur-3xl"></div>
                 </div>
-                <div class="mt-5 flex justify-center">
+                <div data-sr="sr-top" class="mt-5 flex justify-center">
                   <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Launch Onine Screenshot Editor Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
-              <div class="flex h-auto w-full shrink-0 flex-col justify-evenly overflow-hidden rounded-xl bg-[url(../images/mockup-screenshot-editor__shapes-background.png)] bg-cover bg-center md:w-[300px]">
+              <div data-sr="sr-right" class="flex h-auto w-full shrink-0 flex-col justify-evenly overflow-hidden rounded-xl bg-[url(../images/mockup-screenshot-editor__shapes-background.png)] bg-cover bg-center md:w-[300px]">
                 <div class="p-5 text-center">
                   <h2 class="text-xl font-medium text-white">Polygon Drawing Precision at Your Fingertips</h2>
                   <p class="mt-5 text-sm text-white">Create accurate shapes with our Polygon Tool, perfect for highlighting, diagrams, and structured elements. Choose from multiple shapes and easily adjust size, color, and position for sharp, polished results.</p>
@@ -257,7 +257,7 @@
 
             <!-- Single Row -->
             <div class="flex flex-col justify-between gap-5 md:flex-row">
-              <div class="flex h-auto w-full shrink-0 flex-col justify-evenly overflow-hidden rounded-xl bg-[url(../images/mockup-screenshot-editor__draw-tools-background.png)] bg-cover bg-center md:w-[300px]">
+              <div data-sr="sr-left" class="flex h-auto w-full shrink-0 flex-col justify-evenly overflow-hidden rounded-xl bg-[url(../images/mockup-screenshot-editor__draw-tools-background.png)] bg-cover bg-center md:w-[300px]">
                 <div class="mr-5 mt-5 flex justify-start">
                   <img loading="lazy" class="-ml-1 w-full max-w-[300px]" draggable="false" src="assets/images/mockup-screenshot-editor__draw-tool.png" alt="Freehand Drawing Unleash Your Creativity" />
                 </div>
@@ -266,7 +266,7 @@
                   <p class="mt-5 text-sm text-white">Bring ideas to life with Pixlab's Freehand Drawing tool, perfect for annotations or personal touches. Enjoy natural, customizable brushes and a responsive interface. Save and share high-quality edits directly from Pixlab Screenshot Editor.</p>
                 </div>
               </div>
-              <div class="flex w-full flex-col items-center rounded-xl border border-bColor bg-surface px-7 py-10 md:w-3/4">
+              <div data-sr="sr-right" class="flex w-full flex-col items-center rounded-xl border border-bColor bg-surface px-7 py-10 md:w-3/4">
                 <h2 class="text-center text-2xl font-medium text-tColor">Custom Backgrounds for Personalized Screenshots</h2>
                 <p class="mt-5 max-w-2xl text-center text-[15px] text-muted">Enhance your screenshots with SnapEdit's customizable backgrounds. Select from images, solid colors, or gradients, and adjust transparency for a personalized touch.</p>
                 <div class="relative mt-10 flex justify-center">
@@ -288,7 +288,7 @@
                 <div class="mt-5 flex max-w-screen-md flex-col items-center justify-center text-center">
                   <p class="my-4 text-sm text-muted">Transform your visuals with SnapEdit by choosing from a variety of customizable backgrounds, including images, solid colors, and gradients, while fine-tuning transparency for a unique look.</p>
 
-                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Launch Onine Screenshot Editor Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                  <a data-sr="sr-top" class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Launch Onine Screenshot Editor Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
             </div>
@@ -302,75 +302,75 @@
           <div class="flex flex-col gap-14">
             <!-- Single Row -->
             <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row lg:gap-40">
-              <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+              <div data-sr="sr-left" class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
                 <p class="anno-gradient-text w-fit rounded-lg border border-annoPrimary px-2 py-0.5 text-sm font-semibold text-primary">Annotate</p>
                 <div class="mt-5 flex flex-col items-center md:items-start">
                   <h2 class="text-3xl font-semibold text-tColor">Bulk Image Labeling <span class="anno-gradient-text"> & Annotations</span></h2>
                   <p class="mt-5 text-tColor">Start by uploading images in bulk from a local directory or selecting individual files, making it simple to label and annotate multiple images at once. Choose to either upload several images simultaneously or handpick specific ones as needed.</p>
-                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Get Started Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                  <a data-sr="sr-top" class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Get Started Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
-              <div class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
+              <div data-sr="sr-right" class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
                 <img loading="lazy" src="assets/images/annotate__bulk-image-labeling.png" alt=">Bulk Image Labeling & Annotations" />
               </div>
             </div>
 
             <!-- Single Row -->
             <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row-reverse lg:gap-40">
-              <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+              <div data-sr="sr-left" class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
                 <p class="anno-gradient-text w-fit rounded-lg border border-annoPrimary px-2 py-0.5 text-sm font-semibold text-primary">Advanced Tools</p>
                 <div class="mt-5 flex flex-col items-center md:items-start">
                   <h2 class="text-3xl font-semibold text-tColor">Advanced Annotation <span class="anno-gradient-text">& Segmentation Tools</span></h2>
                   <p class="mt-5 text-tColor">Effortlessly segment, annotate, and label various sections within images using an intuitive Annotation web application. This user-friendly tool allows for precise customization with options to incorporate text, shapes, and freehand drawings, making it ideal for detailed labeling and marking.</p>
-                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Launch Annotate Web Application <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                  <a data-sr="sr-top" class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Launch Annotate Web Application <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
-              <div class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
+              <div data-sr="sr-right" class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
                 <img loading="lazy" src="assets/images/annotate__annotation-segementation-tools.png" alt="Advanced Annotation & Segmentation Tools" />
               </div>
             </div>
 
             <!-- Single Row -->
             <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row lg:gap-40">
-              <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+              <div data-sr="sr-left" class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
                 <p class="anno-gradient-text w-fit rounded-lg border border-annoPrimary px-2 py-0.5 text-sm font-semibold text-primary">Collaboration</p>
                 <div class="mt-5 flex flex-col items-center md:items-start">
                   <h2 class="text-3xl font-semibold text-tColor">Enhanced Coordinates <span class="anno-gradient-text">Output in JSON</span></h2>
                   <p class="mt-5 text-tColor">Generate machine learning-friendly JSON outputs, ensuring compatibility with a wide range of framework. Utilize specialized tools, including rectangles and polygons, tailored for advanced segmentation tasks like Mask R-CNN.</p>
-                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Start Annotation Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                  <a data-sr="sr-top" class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Start Annotation Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
-              <div class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
+              <div data-sr="sr-right" class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
                 <img loading="lazy" src="assets/images/annotate__json-output.png" alt="Enhanced Coordinates Output in JSON" />
               </div>
             </div>
 
             <!-- Single Row -->
             <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row-reverse lg:gap-40">
-              <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+              <div data-sr="sr-left" class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
                 <p class="anno-gradient-text w-fit rounded-lg border border-annoPrimary px-2 py-0.5 text-sm font-semibold text-primary">Advanced Tools</p>
                 <div class="mt-5 flex flex-col items-center md:items-start">
                   <h2 class="text-3xl font-semibold text-tColor">Annotation tracking history</h2>
                   <p class="mt-5 text-tColor">Seamlessly create, edit, or remove labels, giving you full control over your annotations. Access a detailed history of your annotation activities and easily undo or redo actions.</p>
-                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Give Annotate a Try <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                  <a data-sr="sr-top" class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Give Annotate a Try <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
-              <div class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
+              <div data-sr="sr-right" class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
                 <img loading="lazy" src="assets/images/annotate__tracking-history.png" alt="Annotation tracking history" />
               </div>
             </div>
 
             <!-- Single Row -->
             <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row lg:gap-40">
-              <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+              <div data-sr="sr-left" class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
                 <p class="anno-gradient-text w-fit rounded-lg border border-annoPrimary px-2 py-0.5 text-sm font-semibold text-primary">Collaboration</p>
                 <div class="mt-5 flex flex-col items-center md:items-start">
                   <h2 class="text-3xl font-semibold text-tColor">Manage your labels</h2>
                   <p class="mt-5 text-tColor">One place for managing all your labels to add, remove or edit labels and giving colors to them all via label manager tool.</p>
-                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Start Annotating Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                  <a data-sr="sr-top" class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Start Annotating Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
-              <div class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
+              <div data-sr="sr-right" class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
                 <img loading="lazy" src="assets/images/annotate__manage-labels.png" alt="Manage your labels" />
               </div>
             </div>
@@ -385,7 +385,7 @@
           <!-- Features Grid -->
           <div class="mt-16 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <!-- Feature 1 -->
-            <div class="anno-card-bg flex flex-col items-center rounded-xl px-5 py-10">
+            <div data-sr="sr-left" class="anno-card-bg flex flex-col items-center rounded-xl px-5 py-10">
               <svg class="text-tColor" width="70" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M83.3337 24.9997C83.3337 15.9663 68.0712 8.33301 50.0003 8.33301C31.9295 8.33301 16.667 15.9663 16.667 24.9997V33.333C16.667 42.3663 31.9295 49.9997 50.0003 49.9997C68.0712 49.9997 83.3337 42.3663 83.3337 33.333V24.9997ZM50.0003 79.1663C31.9295 79.1663 16.667 71.533 16.667 62.4997V74.9997C16.667 84.033 31.9295 91.6663 50.0003 91.6663C68.0712 91.6663 83.3337 84.033 83.3337 74.9997V62.4997C83.3337 71.533 68.0712 79.1663 50.0003 79.1663Z" fill="currentColor" />
                 <path d="M83.3337 41.667C83.3337 50.7003 68.0712 58.3337 50.0003 58.3337C31.9295 58.3337 16.667 50.7003 16.667 41.667V54.167C16.667 63.2003 31.9295 70.8337 50.0003 70.8337C68.0712 70.8337 83.3337 63.2003 83.3337 54.167V41.667Z" fill="currentColor" />
@@ -398,7 +398,7 @@
             </div>
 
             <!-- Feature 2 -->
-            <div class="anno-card-bg flex flex-col items-center rounded-xl px-5 py-10">
+            <div data-sr="sr-bottom" class="anno-card-bg flex flex-col items-center rounded-xl px-5 py-10">
               <svg class="text-tColor" width="70" height="70" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   fill-rule="evenodd"
@@ -419,7 +419,7 @@
             </div>
 
             <!-- Feature 3 -->
-            <div class="anno-card-bg flex flex-col items-center rounded-xl px-5 py-10">
+            <div data-sr="sr-right" class="anno-card-bg flex flex-col items-center rounded-xl px-5 py-10">
               <svg class="text-tColor" width="70" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M41.6663 45.8333H24.9997C23.8946 45.8333 22.8348 45.3943 22.0534 44.6129C21.272 43.8315 20.833 42.7717 20.833 41.6667V29.1667C20.833 28.0616 21.272 27.0018 22.0534 26.2204C22.8348 25.439 23.8946 25 24.9997 25H37.4997C38.6047 25 39.6645 25.439 40.446 26.2204C41.2274 27.0018 41.6663 28.0616 41.6663 29.1667V54.1667C41.6663 65.2778 36.1108 72.2222 24.9997 75M79.1663 45.8333H62.4997C61.3946 45.8333 60.3348 45.3943 59.5534 44.6129C58.772 43.8315 58.333 42.7717 58.333 41.6667V29.1667C58.333 28.0616 58.772 27.0018 59.5534 26.2204C60.3348 25.439 61.3946 25 62.4997 25H74.9997C76.1047 25 77.1646 25.439 77.946 26.2204C78.7274 27.0018 79.1663 28.0616 79.1663 29.1667V54.1667C79.1663 65.2778 73.6108 72.2222 62.4997 75"
@@ -440,42 +440,42 @@
           <!-- Cards Grid -->
           <div class="mt-14 grid gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <!-- Single Card -->
-            <div class="ape-card-gradient-theme rounded-xl p-4">
+            <div data-sr="sr-left" class="ape-card-gradient-theme rounded-xl p-4">
               <h3 class="text-anno-stroke text-3xl font-semibold">01</h3>
               <h2 class="mt-2 text-lg font-semibold text-tColor">User-Friendly Interface</h2>
               <p class="mt-3 text-[15px] text-apeTGray">An intuitive and easy-to-use interface that allows users to interact with images and create annotations with minimal effort.</p>
             </div>
 
             <!-- Single Card -->
-            <div class="ape-card-gradient-theme rounded-xl p-4">
+            <div data-sr="sr-bottom" class="ape-card-gradient-theme rounded-xl p-4">
               <h3 class="text-anno-stroke text-3xl font-semibold">02</h3>
               <h2 class="mt-2 text-lg font-semibold text-tColor">Custom Annotation Styles</h2>
               <p class="mt-3 text-[15px] text-apeTGray">Customizable annotation styles, colors, and labels to match the specific requirements of different projects and datasets.</p>
             </div>
 
             <!-- Single Card -->
-            <div class="ape-card-gradient-theme rounded-xl p-4">
+            <div data-sr="sr-right" class="ape-card-gradient-theme rounded-xl p-4">
               <h3 class="text-anno-stroke text-3xl font-semibold">03</h3>
               <h2 class="mt-2 text-lg font-semibold text-tColor">Secure & Local Data Handling</h2>
               <p class="mt-3 text-[15px] text-apeTGray">Benefit from our client-side persistent storage, ensuring your data remains private with no external transfers.</p>
             </div>
 
             <!-- Single Card -->
-            <div class="ape-card-gradient-theme rounded-xl p-4">
+            <div data-sr="sr-left" class="ape-card-gradient-theme rounded-xl p-4">
               <h3 class="text-anno-stroke text-3xl font-semibold">04</h3>
               <h2 class="mt-2 text-lg font-semibold text-tColor">Full screen Snapshot capture</h2>
               <p class="mt-3 text-[15px] text-apeTGray">Take Snapshots from your your image while annotating it and work on full screen mode.</p>
             </div>
 
             <!-- Single Card -->
-            <div class="ape-card-gradient-theme rounded-xl p-4">
+            <div data-sr="sr-bottom" class="ape-card-gradient-theme rounded-xl p-4">
               <h3 class="text-anno-stroke text-3xl font-semibold">05</h3>
               <h2 class="mt-2 text-lg font-semibold text-tColor">Track Your Progress</h2>
               <p class="mt-3 text-[15px] text-apeTGray">Redo, Undo event tracking to make it easy to make annotation without worrying about labeling by mistake, or doing same thing twice.</p>
             </div>
 
             <!-- Single Card -->
-            <div class="ape-card-gradient-theme rounded-xl p-4">
+            <div data-sr="sr-right" class="ape-card-gradient-theme rounded-xl p-4">
               <h3 class="text-anno-stroke text-3xl font-semibold">06</h3>
               <h2 class="mt-2 text-lg font-semibold text-tColor">ML Frameworks Friendly Output</h2>
               <p class="mt-3 text-[15px] text-apeTGray">Consistent JSON output accepted by popular Machine Learning frameworks such as Torch, TensorFlow, MxNet, etc.</p>
@@ -488,12 +488,12 @@
       <section>
         <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
           <div class="anno-card-bg flex flex-col justify-between gap-14 rounded-3xl p-6 lg:flex-row lg:gap-20 lg:p-12">
-            <div class="relative flex-1">
+            <div data-sr="sr-left" class="relative flex-1">
               <h2 class="text-2xl font-medium text-tColor">Ready to experience the efficiency and control of PixLab Image Annotation Tool?</h2>
               <p class="mt-5 text-muted">In an age of data-driven decisions, PixLab Annotate stands out as a reliable and user-friendly platform, ensuring your image annotation tasks are efficient, secure, and integrated with the tools you love...</p>
-              <a class="mt-8 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Launch Annotate Web Application <i class="uil uil-arrow-right lg:text-lg"></i></a>
+              <a data-sr="sr-bottom" class="mt-8 flex w-fit items-center gap-1 rounded-lg border border-annoPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-annoPrimary transition-all duration-500 hover:bg-annoPrimary hover:text-tColor" href="#">Launch Annotate Web Application <i class="uil uil-arrow-right lg:text-lg"></i></a>
             </div>
-            <div class="relative flex-1">
+            <div data-sr="sr-right" class="relative flex-1">
               <img loading="lazy" class="relative z-10 w-full" src="assets/images/annotate__annotation-tool-showcase.png" alt="Ready to experience the efficiency and control of PixLab Image Annotation Tool?" />
               <div class="anno-gradient-bg-theme pointer-events-none absolute inset-0 left-1/2 z-0 h-full w-1/2 -translate-x-1/2 rounded-full opacity-15 blur-xl lg:blur-3xl"></div>
             </div>
@@ -637,6 +637,7 @@
 
     <!-- Scripts -->
     <script src="assets/js/global.js"></script>
+    <script src="assets/js/scrollreveal.js"></script>
     <script src="assets/js/typing.js"></script>
     <script src="assets/js/preline/preline.min.js"></script>
     <script src="assets/js/particles/particles.min.js"></script>
