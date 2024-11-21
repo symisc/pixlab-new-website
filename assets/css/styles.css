@@ -2961,7 +2961,7 @@ body.dark-theme :where(.img-invert, .dark-logo) {
 }
 
 nav :where(.nav-link, .theme-toggler):hover,
-nav .hs-dropdown:hover > button {
+nav .hs-dropdown:hover>button {
   color: var(--color-primary);
 }
 
@@ -3061,7 +3061,7 @@ body.dark-theme .bg-gradient-theme {
   background: #fff;
 }
 
-.gradient-button:hover > .bg-gradient-theme {
+.gradient-button:hover>.bg-gradient-theme {
   color: #fff;
   background: transparent;
 }
@@ -3413,7 +3413,7 @@ header .ape-navbar .nav-logo {
 }
 
 nav.ape-navbar :where(.nav-link, .theme-toggler):hover,
-nav.ape-navbar .hs-dropdown:hover > button {
+nav.ape-navbar .hs-dropdown:hover>button {
   color: var(--color-ape-primary);
 }
 
@@ -3534,7 +3534,7 @@ body.dark-theme .ape-header-gradient-theme {
 /* App UI/UX Code Styling Start */
 
 .app-ui-ux-code nav :where(.nav-link, .theme-toggler):hover,
-.app-ui-ux-code nav .hs-dropdown:hover > button {
+.app-ui-ux-code nav .hs-dropdown:hover>button {
   color: var(--color-auc-primary);
 }
 
@@ -3659,7 +3659,7 @@ body.dark-theme .ape-header-gradient-theme {
 /* Annotate Styling Start */
 
 .annotate nav :where(.nav-link, .theme-toggler):hover,
-.annotate nav .hs-dropdown:hover > button {
+.annotate nav .hs-dropdown:hover>button {
   color: var(--color-anno-primary);
 }
 
@@ -3782,7 +3782,7 @@ body.dark-theme .anno-card-bg {
 /* Mockup & Screenshot Editor Styling Start */
 
 .mockup-screenshot-editor nav :where(.nav-link, .theme-toggler):hover,
-.mockup-screenshot-editor nav .hs-dropdown:hover > button {
+.mockup-screenshot-editor nav .hs-dropdown:hover>button {
   color: var(--color-mse-primary);
 }
 
@@ -3859,7 +3859,7 @@ body.template-pdf-media-engine {
 }
 
 body.template-pdf-media-engine nav.tpme-navbar :where(.nav-link, .theme-toggler):hover,
-body.template-pdf-media-engine nav .hs-dropdown:hover > button {
+body.template-pdf-media-engine nav .hs-dropdown:hover>button {
   color: var(--color-ape-primary);
 }
 
@@ -3983,7 +3983,7 @@ body.template-pdf-media-engine nav .hs-dropdown:hover > button {
 /* Creative Toolbox Stylings */
 
 .creative-toolbox nav :where(.nav-link, .theme-toggler):hover,
-.creative-toolbox nav .hs-dropdown:hover > button {
+.creative-toolbox nav .hs-dropdown:hover>button {
   color: var(--color-ctb-primary);
 }
 
@@ -4091,13 +4091,13 @@ body.dark-theme .ctb-card-bg {
 }
 
 [data-sr="sr-top"].revealed,
-[data-sr="sr-left"].revealed {
+[data-sr="sr-bottom"].revealed {
   transform: translateY(0);
 }
 
-[data-sr="sr-bottom"].revealed,
+[data-sr="sr-left"].revealed,
 [data-sr="sr-right"].revealed {
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
 .marker\:text-\[\#43EAA4\] *::marker {
