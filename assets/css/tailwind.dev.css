@@ -47,6 +47,10 @@
     /* Mockup and Screenshot Editor Page Colors */
     --color-mse-primary: #1ca9c9;
     --color-mse-secondary: #005fe5;
+
+    /* Creative Toolbox Page Colors */
+    --color-ctb-primary: #ff6331;
+    --color-ctb-secondary: #bb17b3;
   }
 
   /* Apply font to all elements */
@@ -303,31 +307,36 @@ body.dark-theme .divide-dark {
 
 /* Pricing Page's Brands Carousel Styling */
 .pricing-brands-carousel::before,
-.pricing-brands-carousel::after {
+.pricing-brands-carousel::after,
+.creative-toolbox-carousel::before,
+.creative-toolbox-carousel::after {
   position: absolute;
   top: 0;
   content: "";
-  width: 250px;
+  width: 50px;
   height: 100%;
   z-index: 2;
 }
 
-.pricing-brands-carousel::before {
+.pricing-brands-carousel::before,
+.creative-toolbox-carousel::before {
   left: 0;
   background: linear-gradient(to left, transparent, var(--color-background));
 }
 
-.pricing-brands-carousel::after {
+.pricing-brands-carousel::after,
+.creative-toolbox-carousel::after {
   right: 0;
   background: linear-gradient(to right, transparent, var(--color-background));
 }
 
-.pricing-brands-carousel .brands-wrapper {
+.pricing-brands-carousel .brands-wrapper,
+.creative-toolbox-carousel:not(.delay-animation) .carousel-wrapper {
   animation: slide 30s linear infinite;
 }
 
-.pricing-brands-carousel:hover .brands-wrapper {
-  animation-play-state: paused;
+.creative-toolbox-carousel.delay-animation .carousel-wrapper {
+  animation: slide_reverse 40s linear infinite;
 }
 
 @keyframes slide {
@@ -340,11 +349,26 @@ body.dark-theme .divide-dark {
   }
 }
 
-.pricing-brands-carousel .brands-wrapper img {
+@keyframes slide_reverse {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.pricing-brands-carousel .brands-wrapper img,
+.creative-toolbox-carousel .carousel-wrapper img {
   display: unset;
   margin: 0 35px;
   max-width: unset;
   filter: brightness(100%) invert(1);
+}
+
+.creative-toolbox-carousel .carousel-wrapper img {
+  margin: 0 15px;
 }
 
 body.dark-theme .pricing-brands-carousel .brands-wrapper img {
@@ -642,10 +666,12 @@ body.dark-theme .ape-header-gradient-theme {
     -webkit-clip-path: polygon(0 0, 110% 0, 100% 100%, 0 100%, 0 0);
     clip-path: polygon(0 0, 110% 0, 100% 100%, 0 100%, 0 0);
   }
+
   51% {
     -webkit-clip-path: polygon(0 0, 100% 0, 110% 100%, 0 100%, 0 0);
     clip-path: polygon(0 0, 100% 0, 110% 100%, 0 100%, 0 0);
   }
+
   100% {
     -webkit-clip-path: polygon(0 0, -10% 0, 0 100%, 0 100%, 0 0);
     clip-path: polygon(0 0, -10% 0, 0 100%, 0 100%, 0 0);
@@ -762,32 +788,40 @@ body.template-pdf-media-engine nav .hs-dropdown:hover > button {
 }
 
 .json-key {
-  color: #d4d4d4; /* Light gray for keys */
+  color: #d4d4d4;
+  /* Light gray for keys */
 }
 
 .json-string {
-  color: #a3e635; /* Light green for strings */
+  color: #a3e635;
+  /* Light green for strings */
 }
 
 .json-number {
-  color: #f87171; /* Red for numbers */
+  color: #f87171;
+  /* Red for numbers */
 }
 
 .js-keyword {
-  color: #f59e0b; /* Amber for JS keywords */
+  color: #f59e0b;
+  /* Amber for JS keywords */
 }
 
 .js-key {
-  color: #d4d4d4; /* Light gray for object keys */
+  color: #d4d4d4;
+  /* Light gray for object keys */
 }
 
 .js-string {
-  color: #a3e635; /* Light green for strings */
+  color: #a3e635;
+  /* Light green for strings */
 }
 
 .js-number {
-  color: #f87171; /* Red for numbers */
+  color: #f87171;
+  /* Red for numbers */
 }
+
 .tpme-lead {
   @apply text-xl font-normal leading-relaxed antialiased;
 }
@@ -853,3 +887,60 @@ body.template-pdf-media-engine nav .hs-dropdown:hover > button {
     animation: scroll 10s linear infinite;
   }
 }
+
+/* Creative Toolbox Stylings */
+
+.creative-toolbox nav :where(.nav-link, .theme-toggler):hover,
+.creative-toolbox nav .hs-dropdown:hover > button {
+  @apply text-ctbPrimary;
+}
+
+.ctb-gradient-button {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to top right, var(--color-ctb-primary), var(--color-ctb-secondary));
+}
+
+.ctb-gradient-button :where(span, i) {
+  @apply relative z-20;
+}
+
+.ctb-gradient-button::before {
+  @apply absolute left-0 top-0 z-10 h-full w-full opacity-0 transition-all duration-300 content-[""];
+  background: linear-gradient(to bottom right, var(--color-ctb-primary) 0%, var(--color-ctb-secondary) 100%);
+}
+
+.ctb-gradient-button:hover::before {
+  @apply opacity-100;
+}
+
+.ctb-gradient-bg-theme {
+  background: linear-gradient(to top, var(--color-ctb-primary), var(--color-ctb-secondary));
+}
+
+.ape-gradient-surface-theme {
+  background: linear-gradient(to bottom, #ffffff, #999999);
+}
+
+.ctb-gradient-text {
+  width: fit-content;
+  background: linear-gradient(to right, var(--color-ctb-primary), var(--color-ctb-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ctb-card-bg {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+body.dark-theme .ctb-card-bg {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.creative-toolbox .footer-link:hover {
+  @apply text-ctbPrimary;
+}
+
+/* Creative Toolbox Styling End */

@@ -1,6 +1,6 @@
 const wordHiglight = document.querySelector(".word-highlight");
-const dynamicText = wordHiglight.querySelector(".typing-effect");
-const words = JSON.parse(wordHiglight.dataset.type);
+const dynamicText = wordHiglight?.querySelector(".typing-effect");
+const words = JSON.parse(wordHiglight?.dataset.type || "[]");
 
 // Variables to track the position and deletion status of the word
 let wordIndex = 0;

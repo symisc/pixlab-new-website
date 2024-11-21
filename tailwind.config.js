@@ -41,6 +41,10 @@ module.exports = {
         // Mockup and Screenshot Editor Page Colors
         msePrimary: "var(--color-mse-primary)",
         mseSecondary: "var(--color-mse-secondary)",
+
+        // Creative Toolbox Page Colors
+        ctbPrimary: "var(--color-ctb-primary)",
+        ctbSecondary: "var(--color-ctb-secondary)",
       },
     },
   },
