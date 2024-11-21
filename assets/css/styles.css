@@ -1242,9 +1242,6 @@ body {
 .h-\[15px\] {
   height: 15px;
 }
-.h-\[363px\] {
-  height: 363px;
-}
 
 .h-\[70vh\] {
   height: 70vh;
@@ -2054,6 +2051,11 @@ body {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
 .bg-gray-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(3 7 18 / var(--tw-bg-opacity));
@@ -2133,11 +2135,6 @@ body {
 
 .bg-white\/85 {
   background-color: rgb(255 255 255 / 0.85);
-}
-
-.bg-gray-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-30 {
