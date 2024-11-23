@@ -1002,6 +1002,10 @@ body {
   margin-bottom: 3rem;
 }
 
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
 .mb-16 {
   margin-bottom: 4rem;
 }
@@ -1459,6 +1463,10 @@ body {
 
 .shrink-0 {
   flex-shrink: 0;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 .grow {
@@ -2137,6 +2145,11 @@ body {
   background-color: rgb(255 255 255 / 0.85);
 }
 
+.bg-\[\#06bc9c\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(6 188 156 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-30 {
   --tw-bg-opacity: 0.3;
 }
@@ -2189,6 +2202,10 @@ body {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
+.bg-\[url\(\'\.\.\/images\/gradient-bg-type-6\.png\'\)\] {
+  background-image: url('../images/gradient-bg-type-6.png');
+}
+
 .from-primary {
   --tw-gradient-from: var(--color-primary) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
@@ -2214,6 +2231,11 @@ body {
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-0\.5 {
@@ -2800,6 +2822,10 @@ body {
   opacity: 0.05;
 }
 
+.bg-blend-overlay {
+  background-blend-mode: overlay;
+}
+
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -2961,7 +2987,7 @@ body.dark-theme :where(.img-invert, .dark-logo) {
 }
 
 nav :where(.nav-link, .theme-toggler):hover,
-nav .hs-dropdown:hover>button {
+nav .hs-dropdown:hover > button {
   color: var(--color-primary);
 }
 
@@ -3061,7 +3087,7 @@ body.dark-theme .bg-gradient-theme {
   background: #fff;
 }
 
-.gradient-button:hover>.bg-gradient-theme {
+.gradient-button:hover > .bg-gradient-theme {
   color: #fff;
   background: transparent;
 }
@@ -3413,7 +3439,7 @@ header .ape-navbar .nav-logo {
 }
 
 nav.ape-navbar :where(.nav-link, .theme-toggler):hover,
-nav.ape-navbar .hs-dropdown:hover>button {
+nav.ape-navbar .hs-dropdown:hover > button {
   color: var(--color-ape-primary);
 }
 
@@ -3489,6 +3515,23 @@ body.dark-theme .ape-header-gradient-theme {
   -webkit-text-stroke: 1px var(--color-ape-primary);
 }
 
+.ape-filter-button {
+  padding: 5px 16px;
+  border-radius: 24px;
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+}
+
+.ape-filter-button.active {
+  pointer-events: none;
+  color: var(--color-background);
+  background: var(--color-text);
+}
+
+.ape-filter-button:not(.active):hover {
+  background: var(--color-ape-surface);
+}
+
 .ai-photo-editor .footer-link:hover {
   color: var(--color-ape-primary);
 }
@@ -3534,7 +3577,7 @@ body.dark-theme .ape-header-gradient-theme {
 /* App UI/UX Code Styling Start */
 
 .app-ui-ux-code nav :where(.nav-link, .theme-toggler):hover,
-.app-ui-ux-code nav .hs-dropdown:hover>button {
+.app-ui-ux-code nav .hs-dropdown:hover > button {
   color: var(--color-auc-primary);
 }
 
@@ -3659,7 +3702,7 @@ body.dark-theme .ape-header-gradient-theme {
 /* Annotate Styling Start */
 
 .annotate nav :where(.nav-link, .theme-toggler):hover,
-.annotate nav .hs-dropdown:hover>button {
+.annotate nav .hs-dropdown:hover > button {
   color: var(--color-anno-primary);
 }
 
@@ -3782,7 +3825,7 @@ body.dark-theme .anno-card-bg {
 /* Mockup & Screenshot Editor Styling Start */
 
 .mockup-screenshot-editor nav :where(.nav-link, .theme-toggler):hover,
-.mockup-screenshot-editor nav .hs-dropdown:hover>button {
+.mockup-screenshot-editor nav .hs-dropdown:hover > button {
   color: var(--color-mse-primary);
 }
 
@@ -3859,7 +3902,7 @@ body.template-pdf-media-engine {
 }
 
 body.template-pdf-media-engine nav.tpme-navbar :where(.nav-link, .theme-toggler):hover,
-body.template-pdf-media-engine nav .hs-dropdown:hover>button {
+body.template-pdf-media-engine nav .hs-dropdown:hover > button {
   color: var(--color-ape-primary);
 }
 
@@ -3983,7 +4026,7 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
 /* Creative Toolbox Stylings */
 
 .creative-toolbox nav :where(.nav-link, .theme-toggler):hover,
-.creative-toolbox nav .hs-dropdown:hover>button {
+.creative-toolbox nav .hs-dropdown:hover > button {
   color: var(--color-ctb-primary);
 }
 
@@ -4316,6 +4359,10 @@ body.dark-theme .ctb-card-bg {
   background-color: transparent;
 }
 
+.hover\:bg-apeSurface:hover {
+  background-color: var(--color-ape-surface);
+}
+
 .hover\:from-secondary:hover {
   --tw-gradient-from: var(--color-secondary) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
@@ -4367,6 +4414,10 @@ body.dark-theme .ctb-card-bg {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
 }
 
 .hover\:shadow-lg:hover {

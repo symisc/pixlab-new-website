@@ -161,7 +161,7 @@
 
               <!-- Hero Text -->
               <div data-sr="sr-right" class="relative z-10 flex flex-col items-center text-center lg:block lg:max-w-screen-sm lg:text-left">
-                <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold text-primary">PixLab Online AI Photo Editor</p>
+                <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold text-apePrimary">PixLab Online AI Photo Editor</p>
                 <h1 class="mt-5 text-3xl font-medium leading-[1.2] text-apeTColor lg:text-5xl">Online AI Photo Editor <span class="playfair-font">Redefine Image Editing</span></h1>
                 <p class="mt-5 text-muted">Create, Edit & Transform your photos into masterpieces with the power of Generative AI at your fingertips.</p>
                 <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-apeTColor bg-apeTColor px-3 py-1.5 text-[15px] font-medium text-apeBackground transition-all duration-500 hover:bg-transparent hover:text-apeTColor" href="#">Launch AI Editor <i class="uil uil-arrow-right lg:text-lg"></i></a>
@@ -214,6 +214,118 @@
                 <input class="h-12 w-full rounded-xl border border-transparent bg-apeBackground px-4 text-tColor outline-none focus:border-apePrimary" type="text" placeholder="Enter a prompt" required />
                 <button class="h-12 rounded-xl bg-apePrimary px-5 font-medium text-white hover:bg-apeSecondary">Generate</button>
               </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <h2 data-sr="sr-bottom" class="text-center text-3xl font-semibold text-apeTColor">AI Tools</h2>
+
+          <!-- Button Group -->
+          <div data-sr="sr-bottom" class="mt-10 flex flex-wrap justify-center gap-3">
+            <button class="active ape-filter-button">
+              <span>All</span>
+            </button>
+            <button class="ape-filter-button">
+              <span>Highlight</span>
+            </button>
+            <button class="ape-filter-button">
+              <span>Image edition </span>
+            </button>
+            <button class="ape-filter-button">
+              <span>Generative tools</span>
+            </button>
+            <button class="ape-filter-button">
+              <span>Real-estate</span>
+            </button>
+            <button class="ape-filter-button">
+              <span>Portrait edition</span>
+            </button>
+          </div>
+
+          <!-- Cards Grid -->
+          <div class="mt-10 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Single API Card -->
+            <div data-sr="sr-left" class="flex h-full flex-col overflow-hidden rounded-xl border border-bColor bg-surface shadow-lg">
+              <img class="aspect-video w-full rounded-xl object-cover" src="assets/images/ai-photo-editor__pyramid.png" alt="Text Inpainting" />
+              <div class="px-4 py-6">
+                <h2 class="text-xl font-semibold text-apeTColor">Generative Fill</h2>
+                <p class="mt-5 text-tColor">Replace, remove & fix any element from your pictures</p>
+              </div>
+            </div>
+
+            <!-- Single API Card -->
+            <div data-sr="sr-bottom" class="flex h-full flex-col overflow-hidden rounded-xl border border-bColor bg-surface shadow-lg">
+              <img class="aspect-video w-full rounded-xl object-cover" src="assets/images/ai-photo-editor__ai-tools.png" alt="Uncrop" />
+              <div class="px-4 py-6">
+                <h2 class="text-xl font-semibold text-apeTColor">Universal Resizer</h2>
+                <p class="mt-5 text-tColor">Resize your images for any social media</p>
+              </div>
+            </div>
+
+            <!-- Single API Card -->
+            <div data-sr="sr-right" class="flex h-full flex-col overflow-hidden rounded-xl border border-bColor bg-surface shadow-lg">
+              <img class="aspect-video w-full rounded-xl object-cover" src="assets/images/creative-toolbox__carousel-img-4.png" alt="Remove Background" />
+              <div class="px-4 py-6">
+                <h2 class="text-xl font-semibold text-apeTColor">Text to image</h2>
+                <p class="mt-5 text-tColor">Generate high-resolution realistic images with AI</p>
+              </div>
+            </div>
+
+            <!-- Single API Card -->
+            <div data-sr="sr-left" class="flex h-full flex-col overflow-hidden rounded-xl border border-bColor bg-surface shadow-lg">
+              <img class="aspect-video w-full rounded-xl object-cover" src="assets/images/m3.jpg" alt="Image upscaling" />
+              <div class="px-4 py-6">
+                <h2 class="text-xl font-semibold text-apeTColor">Swap</h2>
+                <p class="mt-5 text-tColor">Swap people in any image</p>
+              </div>
+            </div>
+
+            <!-- Single API Card -->
+            <div data-sr="sr-bottom" class="flex h-full flex-col overflow-hidden rounded-xl border border-bColor bg-surface shadow-lg">
+              <img class="aspect-video w-full rounded-xl object-cover" src="assets/images/oil.jpg" alt="Cleanup" />
+              <div class="px-4 py-6">
+                <h2 class="text-xl font-semibold text-apeTColor">Instant text to image</h2>
+                <p class="mt-5 text-tColor">Real-Time Text-to-Image Generation</p>
+              </div>
+            </div>
+
+            <!-- Single API Card -->
+            <div data-sr="sr-right" class="flex h-full flex-col overflow-hidden rounded-xl border border-bColor bg-surface shadow-lg">
+              <img class="aspect-video w-full rounded-xl object-cover" src="assets/images/stablediffusion_overview.jpg" alt="Reimagine" />
+              <div class="px-4 py-6">
+                <h2 class="text-xl font-semibold text-apeTColor">Jasper AI</h2>
+                <p class="mt-5 text-tColor">Text generation for millions of use cases. Free for 7 days.</p>
+              </div>
+            </div>
+
+            <!-- Single API Card -->
+            <div data-sr="sr-left" class="flex h-full flex-col overflow-hidden rounded-xl border border-bColor bg-surface shadow-lg">
+              <img class="aspect-video w-full rounded-xl object-cover" src="assets/images/m3.jpg" alt="Image upscaling" />
+              <div class="px-4 py-6">
+                <h2 class="text-xl font-semibold text-apeTColor">Replace background</h2>
+                <p class="mt-5 text-tColor">Teleport anything, anywhere with AI</p>
+              </div>
+            </div>
+
+            <!-- Single API Card -->
+            <div data-sr="sr-bottom" class="flex h-full flex-col overflow-hidden rounded-xl border border-bColor bg-surface shadow-lg">
+              <img class="aspect-video w-full rounded-xl object-cover" src="assets/images/oil.jpg" alt="Cleanup" />
+              <div class="px-4 py-6">
+                <h2 class="text-xl font-semibold text-apeTColor">Remove background</h2>
+                <p class="mt-5 text-tColor">Extract the main subject from a picture with incredible accuracy. It's like magic.</p>
+              </div>
+            </div>
+
+            <!-- Single API Card -->
+            <div data-sr="sr-right" class="flex h-full flex-col overflow-hidden rounded-xl border border-bColor bg-surface shadow-lg">
+              <img class="aspect-video w-full rounded-xl object-cover" src="assets/images/stablediffusion_overview.jpg" alt="Reimagine" />
+              <div class="px-4 py-6">
+                <h2 class="text-xl font-semibold text-apeTColor">Cleanup</h2>
+                <p class="mt-5 text-tColor">Remove objects, people, text and defects from your pictures automatically.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -295,7 +407,7 @@
             <!-- Single Row -->
             <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row lg:gap-60">
               <div data-sr="sr-left" class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
-                <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold text-primary">AI Tools</p>
+                <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold text-apePrimary">AI Tools</p>
                 <div class="mt-5 flex flex-col items-center md:items-start">
                   <h2 class="text-3xl font-semibold text-apeTColor">AI-Powered Tools <span class="ape-gradient-text">to Supercharge</span> <span class="playfair-font">Your Development</span></h2>
                   <p class="mt-5 text-apeTColor">Utilize intelligent editing features that learn and adapt to your unique style, delivering personalized results every time. Effortlessly remove unwanted elements with our smart object removal tool, leaving no trace behind and ensuring flawless visuals.</p>
@@ -310,7 +422,7 @@
             <!-- Single Row -->
             <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row-reverse lg:gap-60">
               <div data-sr="sr-left" class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
-                <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold text-primary">Design Freedom</p>
+                <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold text-apePrimary">Design Freedom</p>
                 <div class="mt-5 flex flex-col items-center md:items-start">
                   <h2 class="text-3xl font-semibold text-apeTColor">Advanced Editing Suite <span class="ape-gradient-text">& Creative Freedom</span> to <span class="playfair-font">Bring Every Vision to Life</span></h2>
                   <p class="mt-5 text-apeTColor">From basic adjustments to sophisticated effects, AI Photo Editor gives you the freedom to experiment and create without limits. Dive into professional-grade tools for detailed image manipulation, color correction, and more, allowing you to fine-tune every detail.</p>
@@ -325,7 +437,7 @@
             <!-- Single Row -->
             <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row lg:gap-60">
               <div data-sr="sr-left" class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
-                <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold text-primary">Collaboration</p>
+                <p class="ape-gradient-text w-fit rounded-lg border border-apePrimary px-2 py-0.5 text-sm font-semibold text-apePrimary">Collaboration</p>
                 <div class="mt-5 flex flex-col items-center md:items-start">
                   <h2 class="text-3xl font-semibold text-apeTColor">Collaborative Features <span class="ape-gradient-text">& Cloud Integration</span> <span class="playfair-font">for Seamless Teamwork</span></h2>
                   <p class="mt-5 text-apeTColor">Switch seamlessly between dark and light modes for a personalized, comfortable experience tailored to your preferences.</p>
@@ -443,79 +555,68 @@
       <section>
         <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
           <!-- FAQ -->
-          <div class="max-w-[85rem] mx-auto">
+          <div class="mx-auto max-w-[85rem]">
             <!-- Title -->
-            <div class="max-w-2xl mx-auto text-center my-10 lg:mb-14">
-              <h2 class="text-center text-3xl lg:text-4xl font-semibold text-apeTColor">Your questions, answered</h2>
-              <p class="text-center text-apeTGray mt-3">Answers to the most frequently asked questions.</p>
+            <div class="mx-auto my-10 max-w-2xl text-center lg:mb-14">
+              <h2 class="text-center text-3xl font-semibold text-apeTColor lg:text-4xl">Your questions, answered</h2>
+              <p class="mt-3 text-center text-apeTGray">Answers to the most frequently asked questions.</p>
             </div>
             <!-- End Title -->
 
-            <div class="max-w-2xl mx-auto">
+            <div class="mx-auto max-w-2xl">
               <!-- Accordion -->
-              <div class="hs-accordion-group divide-y divide-gray-200 divide-dark">
-                <div class="hs-accordion pb-3 active" id="hs-basic-with-title-and-arrow-stretched-heading-one">
-                  <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-apeTColor rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500" aria-expanded="true" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
+              <div class="hs-accordion-group divide-dark divide-y divide-gray-200">
+                <div class="hs-accordion active pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-one">
+                  <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="true" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
                     Lorem ipsum dolor sit amet consectetur adipisicing?
-                    <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-                    <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+                    <svg class="block size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                    <svg class="hidden size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
                   </button>
                   <div id="hs-basic-with-title-and-arrow-stretched-collapse-one" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one">
-                    <p class="text-muted">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!
-                    </p>
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!</p>
                   </div>
                 </div>
 
-                <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-two">
-                  <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-apeTColor rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                  <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
                     Lorem ipsum dolor sit amet consectetur adipisicing?
-                    <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-                    <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+                    <svg class="block size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                    <svg class="hidden size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
                   </button>
                   <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
-                    <p class="text-muted">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!
-                    </p>
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!</p>
                   </div>
                 </div>
-                <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-two">
-                  <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-apeTColor rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                  <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
                     Lorem ipsum dolor sit amet consectetur adipisicing?
-                    <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-                    <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+                    <svg class="block size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                    <svg class="hidden size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
                   </button>
                   <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
-                    <p class="text-muted">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!
-                    </p>
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!</p>
                   </div>
                 </div>
-                <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-two">
-                  <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-apeTColor rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                  <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
                     Lorem ipsum dolor sit amet consectetur adipisicing?
-                    <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-                    <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+                    <svg class="block size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                    <svg class="hidden size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
                   </button>
                   <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
-                    <p class="text-muted">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!
-                    </p>
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!</p>
                   </div>
                 </div>
-                <div class="hs-accordion pt-6 pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-two">
-                  <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-apeTColor rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                  <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
                     Lorem ipsum dolor sit amet consectetur adipisicing?
-                    <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-                    <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+                    <svg class="block size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                    <svg class="hidden size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
                   </button>
                   <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
-                    <p class="text-muted">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!
-                    </p>
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!</p>
                   </div>
                 </div>
-                
               </div>
               <!-- End Accordion -->
             </div>
