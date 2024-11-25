@@ -928,6 +928,14 @@ body {
   grid-column: span 10 / span 10;
 }
 
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
+
+.col-span-6 {
+  grid-column: span 6 / span 6;
+}
+
 .m-3 {
   margin: 0.75rem;
 }
@@ -1443,6 +1451,18 @@ body {
 
 .max-w-xl {
   max-width: 36rem;
+}
+
+.max-w-96 {
+  max-width: 24rem;
+}
+
+.max-w-72 {
+  max-width: 18rem;
+}
+
+.max-w-80 {
+  max-width: 20rem;
 }
 
 .flex-1 {
@@ -2197,6 +2217,18 @@ body {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
+.bg-\[url\(\.\.\/images\/app\)\] {
+  background-image: url(../images/app);
+}
+
+.bg-\[url\(\.\.\/images\/app-ui-ux-code-describe-ui-background\)\] {
+  background-image: url(../images/app-ui-ux-code-describe-ui-background);
+}
+
+.bg-\[url\(\.\.\/images\/app-ui-ux-code-describe-ui-background\.png\)\] {
+  background-image: url(../images/app-ui-ux-code-describe-ui-background.png);
+}
+
 .from-primary {
   --tw-gradient-from: var(--color-primary) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
@@ -2372,11 +2404,6 @@ body {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
 }
 
 .py-6 {
@@ -4899,6 +4926,14 @@ body.dark-theme .ctb-card-bg {
     grid-column: span 5 / span 5;
   }
 
+  .md\:col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+
+  .md\:col-span-6 {
+    grid-column: span 6 / span 6;
+  }
+
   .md\:mx-10 {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
@@ -4911,6 +4946,10 @@ body.dark-theme .ctb-card-bg {
 
   .md\:mb-12 {
     margin-bottom: 3rem;
+  }
+
+  .md\:ml-5 {
+    margin-left: 1.25rem;
   }
 
   .md\:block {
