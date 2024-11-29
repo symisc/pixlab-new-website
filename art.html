@@ -183,7 +183,7 @@
         <div class="mx-auto w-full max-w-screen-xl overflow-hidden px-5 pb-12 pt-8 leading-8">
           <!-- Social Bar -->
           <div class="flex flex-wrap items-center justify-between gap-5 pb-3">
-            <img class="dark-logo w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" />
+            <img class="dark-logo w-36" title="Machine Vision & Media Processing APIs | PixLab" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" />
             <p class="text-sm text-muted">
               <span>Version 2.197</span>
               <span>(<a href="https://blog.pixlab.io/2025/01/pixlab-api-2-released-with-new-api-portal-and-over-150-endpoints" target="_blank" class="text-primary hover:text-secondary">Release Notes &nearr;</a>)</span>
@@ -216,7 +216,7 @@
             >.
           </p>
 
-          <img loading="lazy" src="assets/images/ascii_art_demo.png" alt="demo" title="For a live demonstration including tests on static images, Webcam/Camera stream, please visit art.pixlab.io" class="mx-auto" />
+          <img loading="lazy" src="assets/images/ascii_art_demo.png" alt="ASCII ART web demo" title="For a live demonstration including tests on static images, Webcam/Camera stream, please visit art.pixlab.io" class="mx-auto" />
 
           <h2 class="mb-3 mt-12 text-center text-lg font-semibold uppercase text-tColor sm:text-xl md:text-2xl">ASCII Camera is now available on Unity Asset Store - <a class="link" href="https://assetstore.unity.com/packages/slug/165558" target="_blank">assetstore.unity.com/packages/slug/165558 &nearr;</a></h2>
 
@@ -272,14 +272,11 @@
           </ul>
           <p class="my-5 mb-2 text-tColor">Below is a simple C program that demonstrates a typical usage of the ASCII Art C/C++ interfaces.</p>
           <script src="https://gist.github.com/symisc/8638b3f1959874377547b89d8a8aa801.js"></script>
-          <p class="mb-3 mt-2 text-center text-tColor"><a class="link" href="https://github.com/symisc/ascii_art/blob/master/sample.c" target="_blank">sample.c</a> on Github. Please report any issue or feature request on the <a class="link" href="https://github.com/symisc/ascii_art" target="_blank">Github page</a>.</p>
-          <h2 class="sec-title" id="capi">C+ API REFERENCE GUIDE</h2>
+          <p class="mb-3 mt-2 text-center text-tColor"><a class="link" href="https://github.com/symisc/ascii_art/blob/master/sample.c" target="_blank">sample.c &nearr;</a> on Github. Please report any issue or feature request on the <a class="link" href="https://github.com/symisc/ascii_art" target="_blank">project Github page &nearr;</a>.</p>
+          <h2 class="sec-title" id="capi">C API REFERENCE GUIDE</h2>
           <p class=" text-tColor">This is the C language interface to ASCII Art. As of this release, only <strong>three interfaces</strong> are exported plus <strong>another optional</strong> for straightforward integration.</p>
           <!-- HTML generated using hilite.me --><div class="my-5 text-sm"  style="background: #f8f8f8; overflow:auto;width:auto;border: 1px solid #ccc;padding: .6em .6em;border-radius: 4px;"><pre style="margin: 0; line-height: 125%"><span style="color: #B00040">void</span> AsciiArtInit(ascii_render <span style="color: #666666">*</span>pRender)
 </pre></div>
-
-
-
           <p class="sec-title-sm">Description</p>
           <p class="mt-3 text-tColor">Initialize and prepare the <code class="code">ascii_render</code> structure. This routine is often the first API call that an application makes and is a prerequisite in order to work with the ASCII Art library.</p>
           <p class="mt-7 sec-title-sm">Parameters</p>
@@ -318,7 +315,6 @@
               </tbody>
             </table>
           </div>
-
           <p class="mt-7 sec-title-sm">Return Type</p>
           <p class="my-5 text-tColor"><strong>Amount of bytes</strong> needed to hold the entire buffer that can be safely passed to a memory allocation routine such as <em>malloc()</em>.</p>
           <!-- HTML generated using hilite.me --><div class="text-sm" style="background: #f8f8f8; overflow:auto;width:auto;border: 1px solid #ccc;padding: .6em .6em;border-radius: 4px;"><pre style="margin: 0; line-height: 125%"><span style="color: #B00040">void</span> AsciiArtRender(ascii_render <span style="color: #666666">*</span>pRender, <span style="color: #B00040">unsigned</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span>zPixels <span style="color: #408080; font-style: italic">/*IN/OUT*/</span>, <span style="color: #B00040">int</span> <span style="color: #666666">*</span>pnWidth <span style="color: #408080; font-style: italic">/*IN/OUT*/</span>, <span style="color: #B00040">int</span> <span style="color: #666666">*</span>pnHeight <span style="color: #408080; font-style: italic">/*IN/OUT*/</span>, <span style="color: #B00040">unsigned</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span>zBuf<span style="color: #408080; font-style: italic">/* Optional/OUT */</span>, <span style="color: #B00040">int</span> Optimize)
@@ -340,7 +336,7 @@
                   <td class="p-2 sm:p-4">
                     <p>
                       A pointer to a <strong>writable</strong> memory buffer holding the <strong>raw pixels</strong> of the input image. The pixels must be in the <strong>grayscale colorspace</strong> where each byte corresponds to a shade of gray (usually a value between 0 and 255). If you are working with OpenCV, then
-                      <span><a class="link" href="https://docs.opencv.org/3.1.0/de/d25/imgproc_color_conversions.html" target="_blank">cvtColor</a>(src, bwsrc, cv::<strong>COLOR_RGB2GRAY</strong>)</span> should produce grayscale image suitable for this routine. When done, the grayscale pixels are converted to ASCII glyphs <strong>in-place</strong> which mean that the input buffer must be <strong>writable</strong>. The built-in <code class="code">AsciiArtLoadImage</code> can be called to load an
+                      <span><a class="link" href="https://docs.opencv.org/3.1.0/de/d25/imgproc_color_conversions.html" target="_blank">cvtColor &nearr;</a> (cv::<strong>COLOR_RGB2GRAY</strong>)</span> should produce grayscale image suitable for this routine. When done, the grayscale pixels are converted to ASCII glyphs <strong>in-place</strong> which mean that the input buffer must be <strong>writable</strong>. The built-in <code class="code">AsciiArtLoadImage</code> can be called to load an
                       image from disk suitable for this routine.
                     </p>
                   </td>
@@ -359,7 +355,7 @@
                 </tr>
                 <tr>
                   <td class="text-nowrap p-2 sm:p-4"><code class="code">int Optimize</code></td>
-                  <td class="p-2 sm:p-4">If non zero, perform some contrast enhancing preprocessing on the input grayscale image which is based on the <a class="link" href="https://en.wikipedia.org/wiki/Adaptive_histogram_equalization">adaptive histogram equalization</a> technique. If set, this operation is CPU intensive.</td>
+                  <td class="p-2 sm:p-4">If non zero, perform some contrast enhancing preprocessing on the input grayscale image which is based on the <a class="link" href="https://en.wikipedia.org/wiki/Adaptive_histogram_equalization">adaptive histogram equalization &nearr;</a> technique. If set, this operation is CPU intensive.</td>
                 </tr>
               </tbody>
             </table>
