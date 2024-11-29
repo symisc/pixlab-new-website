@@ -279,8 +279,8 @@
                       <div>
                         <p>To perform such operation, two endpoints are actually needed. One for the analysis phase, the other for processing:</p>
                         <ul class="list">
-                          <li><a class="link" href="cmd?id=nsfw" target="_blank">NSFW</a> is the analysis endpoint that must be called first. It does perform nudity &amp; adult content detection and returns a score value between 0..1. <strong>The more this value approaches 1, the more your picture/frame is highly nsfw</strong>. Find out more information about <em>NSFW</em> <a href="cmd?id=nsfw" target="_blank">here</a>.</li>
-                          <li><a class="link" href="cmd?id=blur" target="_blank">BLUR</a> is called later only if the <strong>nsfw score value returned earlier is greater than certain threshold</strong>. In our case, it is set to 0.5. The <em>blur</em> endpoint is documented <a class="link" href="cmd?id=blur" target="_blank">here</a>.</li>
+                          <li><a class="link" href="endpoints/nsfw" target="_blank">NSFW</a> is the analysis endpoint that must be called first. It does perform nudity &amp; adult content detection and returns a score value between 0..1. <strong>The more this value approaches 1, the more your picture/frame is highly nsfw</strong>. Find out more information about <em>NSFW</em> <a href="endpoints/nsfw" target="_blank">here</a>.</li>
+                          <li><a class="link" href="endpoints/blur" target="_blank">BLUR</a> is called later only if the <strong>nsfw score value returned earlier is greater than certain threshold</strong>. In our case, it is set to 0.5. The <em>blur</em> endpoint is documented <a class="link" href="endpoints/blur" target="_blank">here</a>.</li>
                         </ul>
                       </div>
                     </div>
@@ -337,8 +337,8 @@
                       <div>
                         <ul class="list">
                           <li>
-                            <a class="link" href="cmd?id=facecompare" target="_blank">FACECOMPARE</a> is the sole endpoint needed to perform such task. It expect a <strong>single face</strong> to be present in the <strong>source</strong> and the <strong>target</strong> image.<br />If your image contains multiple faces, you can extract the target face via <a class="link" href="cmd?id=crop" target="_blank">crop</a> using the rectangle coordinates obtained from
-                            <a class="link" href="cmd?id=facedetect" target="_blank">facedetect</a> or you can simply switch to <a class="link" href="cmd?id=facelookup" target="_blank">facelookup</a> instead. Find out more information about <em>facecompare</em> <a class="link" href="cmd?id=facecompare" target="_blank">here</a>.
+                            <a class="link" href="endpoints/facecompare" target="_blank">FACECOMPARE</a> is the sole endpoint needed to perform such task. It expect a <strong>single face</strong> to be present in the <strong>source</strong> and the <strong>target</strong> image.<br />If your image contains multiple faces, you can extract the target face via <a class="link" href="endpoints/crop" target="_blank">crop</a> using the rectangle coordinates obtained from
+                            <a class="link" href="endpoints/facedetect" target="_blank">facedetect</a> or you can simply switch to <a class="link" href="endpoints/facelookup" target="_blank">facelookup</a> instead. Find out more information about <em>facecompare</em> <a class="link" href="endpoints/facecompare" target="_blank">here</a>.
                           </li>
                         </ul>
                       </div>
@@ -395,7 +395,7 @@
                       </div>
                       <div>
                         <ul class="list">
-                          <li><a class="link" href="cmd?id=pdftoimg" target="_blank">PDFTOIMG</a> is the sole endpoint needed to perform such operation. You can specify which <strong>page number you want to extract</strong> from the target PDF, the <strong>output image format</strong> and so on. Find out more information about the <em>pdftoimg</em> endpoint <a class="link" href="cmd?id=pdftoimg" target="_blank">here</a>.</li>
+                          <li><a class="link" href="endpoints/pdftoimg" target="_blank">PDFTOIMG</a> is the sole endpoint needed to perform such operation. You can specify which <strong>page number you want to extract</strong> from the target PDF, the <strong>output image format</strong> and so on. Find out more information about the <em>pdftoimg</em> endpoint <a class="link" href="endpoints/pdftoimg" target="_blank">here</a>.</li>
                         </ul>
                       </div>
                     </div>
@@ -452,7 +452,7 @@
                       <div>
                         <ul class="list">
                           <li>
-                            <a class="link" href="cmd?id=tagimg" target="_blank">TAGIMG</a> is the sole endpoint needed for such kind of analysis. It always returns an array which hold <strong><em>name &amp; confidence</em></strong> values for each extracted tag. Find out more about this endpoint <a class="link" href="cmd?id=tagimg" target="_blank">here</a>.
+                            <a class="link" href="endpoints/tagimg" target="_blank">TAGIMG</a> is the sole endpoint needed for such kind of analysis. It always returns an array which hold <strong><em>name &amp; confidence</em></strong> values for each extracted tag. Find out more about this endpoint <a class="link" href="endpoints/tagimg" target="_blank">here</a>.
                           </li>
                         </ul>
                       </div>
@@ -511,11 +511,11 @@
                         <p>To perform such operation, only one endpoint is actually needed:</p>
                         <ul class="list">
                           <li>
-                            <p><a class="link" href="cmd?id=makegif" target="_blank">MAKEGIF</a> is the only processing endpoint needed here and it expect a set of static images which can be of different format plus a bunch of other options and the output is a <strong>GIF file where each frame correspond to one entry from the set of the given images</strong>. Find out more about <em>makegif</em> <a class="link" href="cmd?id=makegif" target="_blank">here</a>.</p>
+                            <p><a class="link" href="endpoints/makegif" target="_blank">MAKEGIF</a> is the only processing endpoint needed here and it expect a set of static images which can be of different format plus a bunch of other options and the output is a <strong>GIF file where each frame correspond to one entry from the set of the given images</strong>. Find out more about <em>makegif</em> <a class="link" href="endpoints/makegif" target="_blank">here</a>.</p>
                           </li>
                           <li>
                             <p>
-                              <span style="font-family: Montserrat"><strong>PixLab</strong></span> ships with others GIF processing endpoints such as <a class="link" href="cmd?id=cropgif" target="_blank">cropgif</a> for cropping, <a class="link" href="cmd?id=gifcomposite" target="_blank">gifcomposite</a> to composite stuff on, <a class="link" href="cmd?id=resizegif" target="_blank">resizegif</a> for resizing and so forth.
+                              <span style="font-family: Montserrat"><strong>PixLab</strong></span> ships with others GIF processing endpoints such as <a class="link" href="endpoints/cropgif" target="_blank">cropgif</a> for cropping, <a class="link" href="endpoints/gifcomposite" target="_blank">gifcomposite</a> to composite stuff on, <a class="link" href="endpoints/resizegif" target="_blank">resizegif</a> for resizing and so forth.
                             </p>
                           </li>
                         </ul>
@@ -565,7 +565,7 @@
                     </svg>
                   </button>
                   <div class="overflow-y-auto p-4">
-                    <p class="mt-1">In this sample, plain pixels are converted to <strong>enciphered pixels</strong> using <a class="link" href="cmd?id=encrypt" target="_blank">ENCRYPT</a>. The image is not readable until it has been <strong>deciphered</strong> via <a class="link" href="cmd?id=decrypt" target="_blank">DECRYPT</a>. A typical enciphered image should look like the following:</p>
+                    <p class="mt-1">In this sample, plain pixels are converted to <strong>enciphered pixels</strong> using <a class="link" href="endpoints/encrypt" target="_blank">ENCRYPT</a>. The image is not readable until it has been <strong>deciphered</strong> via <a class="link" href="endpoints/decrypt" target="_blank">DECRYPT</a>. A typical enciphered image should look like the following:</p>
                     <div class="mt-5 flex flex-col justify-between gap-4 md:flex-row">
                       <div>
                         <p class="text-center text-muted"><em>Input Picture</em></p>
@@ -578,7 +578,7 @@
                     </div>
                     <div>
                       <ul class="list">
-                        <li><a class="link" href="cmd?id=encrypt" target="_blank">ENCRYPT</a> is the endpoint that encipher the pixels. You just <strong>supply a password</strong> for this operation and the <strong>enciphered image</strong> is returned. Once done, the image is not readable until deciphered via <a class="link" href="cmd?id=decrypt" target="_blank">DECRYPT</a> with the same password used previously.</li>
+                        <li><a class="link" href="endpoints/encrypt" target="_blank">ENCRYPT</a> is the endpoint that encipher the pixels. You just <strong>supply a password</strong> for this operation and the <strong>enciphered image</strong> is returned. Once done, the image is not readable until deciphered via <a class="link" href="endpoints/decrypt" target="_blank">DECRYPT</a> with the same password used previously.</li>
                       </ul>
                     </div>
                     <div class="gradient-graph-line mb-5 mt-3 h-1 w-full"></div>
@@ -635,8 +635,8 @@
                         <p>To perform such operation, only one endpoint is actually needed:</p>
                         <ul class="list">
                           <li>
-                            <a class="link" href="cmd?id=pixelgenerate" target="_blank">PIXELGENERATE</a> is the sole endpoint needed for such a task. <strong>It expects, a <em>width</em> &amp; <em>height</em> and returns a new image filled with random pixels</strong>. This is very useful for generating background (negative) samples for feeding Machine Learning training algorithms for example. Find out more information about this endpoint
-                            <a class="link" href="cmd?id=tagimg" target="_blank">here</a>.
+                            <a class="link" href="endpoints/pixelgenerate" target="_blank">PIXELGENERATE</a> is the sole endpoint needed for such a task. <strong>It expects, a <em>width</em> &amp; <em>height</em> and returns a new image filled with random pixels</strong>. This is very useful for generating background (negative) samples for feeding Machine Learning training algorithms for example. Find out more information about this endpoint
+                            <a class="link" href="endpoints/tagimg" target="_blank">here</a>.
                           </li>
                         </ul>
                       </div>
@@ -699,8 +699,8 @@
                     <div>
                       <p>To perform such operation, two endpoints are actually needed:</p>
                       <ul class="list">
-                        <li><a class="link" href="cmd?id=facedetect" target="_blank">FACEDETECT</a> is the analysis endpoint that is called first. It outputs the rectangle coordinates for each detected human face in a given image or video frame. You can find out more information about <em>facedetect</em> <a class="link" href="cmd?id=facedetect" target="_blank">here</a>.</li>
-                        <li><a class="link" href="cmd?id=mogrify" target="_blank">MOGRIFY</a> is called later after we obtain the rectangle coordinates for all the detected faces. In which case, we simply pass these coordinates to <em>mogrify</em> untouched and the target regions of the image are blurred. The <em>mogrify</em> endpoint is documented <a class="link" href="cmd?id=mogrify" target="_blank">here</a>.</li>
+                        <li><a class="link" href="endpoints/facedetect" target="_blank">FACEDETECT</a> is the analysis endpoint that is called first. It outputs the rectangle coordinates for each detected human face in a given image or video frame. You can find out more information about <em>facedetect</em> <a class="link" href="endpoints/facedetect" target="_blank">here</a>.</li>
+                        <li><a class="link" href="endpoints/mogrify" target="_blank">MOGRIFY</a> is called later after we obtain the rectangle coordinates for all the detected faces. In which case, we simply pass these coordinates to <em>mogrify</em> untouched and the target regions of the image are blurred. The <em>mogrify</em> endpoint is documented <a class="link" href="endpoints/mogrify" target="_blank">here</a>.</li>
                       </ul>
                     </div>
                     <div class="gradient-graph-line mb-5 mt-3 h-1 w-full"></div>
@@ -747,7 +747,7 @@
                     </svg>
                   </button>
                   <div class="overflow-y-auto p-4">
-                    <p class="mt-1">In this sample, we'll perform human face detection using the <a class="link" href="cmd?id=facedetect" target="_blank">FACEDETECT</a> endpoint, and finally extract each detected face via <a class="link" href="cmd?id=crop" target="_blank">CROP</a>.</p>
+                    <p class="mt-1">In this sample, we'll perform human face detection using the <a class="link" href="endpoints/facedetect" target="_blank">FACEDETECT</a> endpoint, and finally extract each detected face via <a class="link" href="endpoints/crop" target="_blank">CROP</a>.</p>
                     <div class="flex max-sm:flex-col justify-center gap-6 text-center text-muted my-5">
                       <div>
                         <p><em>Input Picture</em></p>
@@ -762,9 +762,9 @@
                       <div>
                         <p>To perform such operation, two endpoints are actually needed: One for the analysis phase, the other for processing:</p>
                         <ul class="list">
-                          <li><a class="link" href="cmd?id=facedetect" target="_blank">FACEDETECT</a> is the analysis endpoint that must be called first. It <strong>outputs the rectangle coordinates for each detected face</strong> in a given image or video frame. This endpoint, its expected parameter, and JSON output result is documented <a class="link" href="cmd?id=facedetect">here</a>.</li>
-                          <li><a class="link" href="cmd?id=crop" target="_blank">CROP</a> is called later after we obtain the rectangle coordinates for all the detected faces. In which case, we simply pass these coordinates to <em>crop</em> untouched and the target region of the image where each face is located is extracted. Find out more information about the <em>CROP</em> endpoint <a class="link" href="cmd?id=crop">here</a>.</li>
-                          <li>Alternatively, if you prefer marking the face(s) instead of extracting it, you can rely on the <a class="link" href="cmd?id=drawrectangle">DRAWRECTANGLE</a> endpoint to perform such task.</li>
+                          <li><a class="link" href="endpoints/facedetect" target="_blank">FACEDETECT</a> is the analysis endpoint that must be called first. It <strong>outputs the rectangle coordinates for each detected face</strong> in a given image or video frame. This endpoint, its expected parameter, and JSON output result is documented <a class="link" href="endpoints/facedetect">here</a>.</li>
+                          <li><a class="link" href="endpoints/crop" target="_blank">CROP</a> is called later after we obtain the rectangle coordinates for all the detected faces. In which case, we simply pass these coordinates to <em>crop</em> untouched and the target region of the image where each face is located is extracted. Find out more information about the <em>CROP</em> endpoint <a class="link" href="endpoints/crop">here</a>.</li>
+                          <li>Alternatively, if you prefer marking the face(s) instead of extracting it, you can rely on the <a class="link" href="endpoints/drawrectangle">DRAWRECTANGLE</a> endpoint to perform such task.</li>
                         </ul>
                       </div>
                     <div class="gradient-graph-line mb-5 mt-3 h-1 w-full"></div>
@@ -812,7 +812,7 @@
                   </button>
                   <div class="overflow-y-auto p-4">
                     <p class="mt-1">
-                      In this sample, we shall mimic the famous Snapchat filters on a set of human faces. Actually, producing those filters is quite easy and require only three API endpoints: <a class="link" href="cmd?id=facelandmarks" target="_blank">facelandmarks</a>, <a class="link" href="cmd?id=smartresize" target="_blank">smartresize</a> &amp; <a class="link" href="cmd?id=merge" target="_blank">merge</a> plus a bunch of other optional endpoints for cool background effects if desired.
+                      In this sample, we shall mimic the famous Snapchat filters on a set of human faces. Actually, producing those filters is quite easy and require only three API endpoints: <a class="link" href="endpoints/facelandmarks" target="_blank">facelandmarks</a>, <a class="link" href="endpoints/smartresize" target="_blank">smartresize</a> &amp; <a class="link" href="endpoints/merge" target="_blank">merge</a> plus a bunch of other optional endpoints for cool background effects if desired.
                     </p>
                     <div class="my-5 text-center">
                       <p class="text-muted"><small>1957 Elia Kazan film “A Face in the Crowd.” Photo courtesy of Warner Bros.</small></p>
@@ -822,17 +822,17 @@
                       <p>To perform such operation, two endpoints are actually needed: One for the analysis phase, the other for processing:</p>
                       <ul class="list">
                         <li>
-                          <a class="link" href="cmd?id=facelandmarks" target="_blank">FACELANDMARKS</a> is the analysis endpoint that must be called first. It tries to detect all present human faces, extract their coordinates and more importantly, it output the <strong>landmarks</strong> for each face. That is, the coordinates for each facial member such as the <em>eye, bone, nose, mouth, chin, lip</em>, etc. We'll use these coordinates later to composite stuff such as the famous
-                          <em>flower crown</em>, <em>dog members</em>, etc. on top of the desired facial region. Find out more information about <em>facelandmarks</em> <a class="link" href="cmd?id=facelandmarks" target="_blank">here</a>.
+                          <a class="link" href="endpoints/facelandmarks" target="_blank">FACELANDMARKS</a> is the analysis endpoint that must be called first. It tries to detect all present human faces, extract their coordinates and more importantly, it output the <strong>landmarks</strong> for each face. That is, the coordinates for each facial member such as the <em>eye, bone, nose, mouth, chin, lip</em>, etc. We'll use these coordinates later to composite stuff such as the famous
+                          <em>flower crown</em>, <em>dog members</em>, etc. on top of the desired facial region. Find out more information about <em>facelandmarks</em> <a class="link" href="endpoints/facelandmarks" target="_blank">here</a>.
                         </li>
                         <br />
-                        <li><a class="link" href="cmd?id=smartresize" target="_blank">SMARTRESIZE</a> is called in order to fit the image to be composited (i.e. The flower crown) to the desired dimension such as the bone width.</li>
+                        <li><a class="link" href="endpoints/smartresize" target="_blank">SMARTRESIZE</a> is called in order to fit the image to be composited (i.e. The flower crown) to the desired dimension such as the bone width.</li>
                         <br />
-                        <li><a class="link" href="cmd?id=merge" target="_blank">MERGE</a> is the processing endpoint we call next. It expect a series of coordinates (X, Y) and a list of images to be <strong>composited</strong> on top of the target image. More about <em>merge</em> <a class="link" href="cmd?id=merge" target="_blank"> here</a>.</li>
+                        <li><a class="link" href="endpoints/merge" target="_blank">MERGE</a> is the processing endpoint we call next. It expect a series of coordinates (X, Y) and a list of images to be <strong>composited</strong> on top of the target image. More about <em>merge</em> <a class="link" href="endpoints/merge" target="_blank"> here</a>.</li>
                         <br />
                         <li>
-                          You may have noticed that <span style="font-family: Montserrat"><strong>PixLab</strong></span> ships with dozen of filters such as <a class="link" href="cmd?id=grayscale" target="_blank">grayscale</a>, <a class="link" href="cmd?id=noise" target="_blank">noise</a>, <a class="link" href="cmd?id=blur" target="_blank">blur</a>, <a class="link" href="cmd?id=chop" target="_blank">chop</a>, <a class="link" href="cmd?id=despeckle" target="_blank">despeckle</a>,
-                          <a class="link" href="cmd?id=deskew" target="_blank">deskew</a>, <a class="link" href="cmd?id=edge" target="_blank">edge</a>, <a class="link" href="cmd?id=emboss" target="_blank">emboss</a>, <a class="link" href="cmd?id=rotate" target="_blank">rotate</a>, <a class="link" href="cmd?id=flip" target="_blank">flip</a>, etc. Don't forget to use one of them for some cool background effects if desired.
+                          You may have noticed that <span style="font-family: Montserrat"><strong>PixLab</strong></span> ships with dozen of filters such as <a class="link" href="endpoints/grayscale" target="_blank">grayscale</a>, <a class="link" href="endpoints/noise" target="_blank">noise</a>, <a class="link" href="endpoints/blur" target="_blank">blur</a>, <a class="link" href="endpoints/chop" target="_blank">chop</a>, <a class="link" href="endpoints/despeckle" target="_blank">despeckle</a>,
+                          <a class="link" href="endpoints/deskew" target="_blank">deskew</a>, <a class="link" href="endpoints/edge" target="_blank">edge</a>, <a class="link" href="endpoints/emboss" target="_blank">emboss</a>, <a class="link" href="endpoints/rotate" target="_blank">rotate</a>, <a class="link" href="endpoints/flip" target="_blank">flip</a>, etc. Don't forget to use one of them for some cool background effects if desired.
                         </li>
                         <br />
                       </ul>
@@ -890,8 +890,8 @@
                       <div>
                         <ul class="list">
                           <li>
-                            <a class="link" href="cmd?id=facelookup" target="_blank">FACELOOKUP</a> is the sole endpoint needed for such operation. It expects two images: one holding the target face to search for and the other, the people crowd for the lookup operation. When done, a <strong>bounding box</strong> and a <strong>confidence threshold</strong> are returned that you can use to evaluate the search operation and extract the best candidate. Find out more about the <em>facelookup</em> API
-                            endpoint <a class="link" href="cmd?id=facelookup" target="_blank">here</a>.
+                            <a class="link" href="endpoints/facelookup" target="_blank">FACELOOKUP</a> is the sole endpoint needed for such operation. It expects two images: one holding the target face to search for and the other, the people crowd for the lookup operation. When done, a <strong>bounding box</strong> and a <strong>confidence threshold</strong> are returned that you can use to evaluate the search operation and extract the best candidate. Find out more about the <em>facelookup</em> API
+                            endpoint <a class="link" href="endpoints/facelookup" target="_blank">here</a>.
                           </li>
                         </ul>
                       </div>
@@ -948,14 +948,14 @@
                         <ul class="list">
                           <li>
                             <p>
-                              Most Analysis &amp; Processing endpoints let you upload a media file to be analyzed or processed directly by sending a <strong><em>multipart/form-data</em> POST</strong> request. Nevertheless, very few endpoints such as <a class="link" href="cmd?id=ocr" target="_blank">OCR</a>, <a class="link" href="cmd?id=mogrify" target="_blank">MOGRIFY</a>, <a class="link" href="cmd?id=facecompare" target="_blank">FACECOMPARE</a>, etc. require that the target file be remotely
-                              available before processing. In such case, <a class="link" href="cmd?id=store" target="_blank">STORE</a> is of particular help.
+                              Most Analysis &amp; Processing endpoints let you upload a media file to be analyzed or processed directly by sending a <strong><em>multipart/form-data</em> POST</strong> request. Nevertheless, very few endpoints such as <a class="link" href="endpoints/ocr" target="_blank">OCR</a>, <a class="link" href="endpoints/mogrify" target="_blank">MOGRIFY</a>, <a class="link" href="endpoints/facecompare" target="_blank">FACECOMPARE</a>, etc. require that the target file be remotely
+                              available before processing. In such case, <a class="link" href="endpoints/store" target="_blank">STORE</a> is of particular help.
                             </p>
                           </li>
                           <li>
                             <p>
-                              The <a class="link" href="cmd?id=store" target="_blank">STORE</a> endpoint let you upload a local file whether video or image to the remote <a class="link" href="https://pixlab.xyz" target="_blank">pixlab.xyz</a> storage server or your <strong>own S3 bucket</strong> depending on the configuration from your <a class="link" href="https://console.pixlab.io/" target="_blank">dashboard</a>. After that, you can use the output link for other purposes such as processing via
-                              <a class="link" href="cmd?id=mogrify" target="_blank">MOGRIFY</a>, <a class="link" href="cmd?id=drawrectangles" target="_blank">DRAWRECTANGLES</a>, etc. or simply serving content. Find out more information about the <em>store</em> endpoint <a class="link" href="cmd?id=store" target="_blank">here</a>.
+                              The <a class="link" href="endpoints/store" target="_blank">STORE</a> endpoint let you upload a local file whether video or image to the remote <a class="link" href="https://pixlab.xyz" target="_blank">pixlab.xyz</a> storage server or your <strong>own S3 bucket</strong> depending on the configuration from your <a class="link" href="https://console.pixlab.io/" target="_blank">dashboard</a>. After that, you can use the output link for other purposes such as processing via
+                              <a class="link" href="endpoints/mogrify" target="_blank">MOGRIFY</a>, <a class="link" href="endpoints/drawrectangles" target="_blank">DRAWRECTANGLES</a>, etc. or simply serving content. Find out more information about the <em>store</em> endpoint <a class="link" href="endpoints/store" target="_blank">here</a>.
                             </p>
                           </li>
                         </ul>
@@ -1012,8 +1012,8 @@
                       <div>
                         <ul class="list">
                           <li>
-                            <a class="link" href="cmd?id=gifcomposite" target="_blank">GIFCOMPOSITE</a> let you <strong>superpose any static image on top of a GIF</strong> at the desired frame. It is used to mimic the behavior of <a class="link" href="cmd?id=meme" target="_blank">MEME</a> and <a class="link" href="cmd?id=merge" target="_blank">MERGE</a>. Two endpoints designed to work with static images. Find out more about <em>gifcomposite</em>
-                            <a class="link" href="cmd?id=gifcomposite" target="_blank">here</a>.
+                            <a class="link" href="endpoints/gifcomposite" target="_blank">GIFCOMPOSITE</a> let you <strong>superpose any static image on top of a GIF</strong> at the desired frame. It is used to mimic the behavior of <a class="link" href="endpoints/meme" target="_blank">MEME</a> and <a class="link" href="endpoints/merge" target="_blank">MERGE</a>. Two endpoints designed to work with static images. Find out more about <em>gifcomposite</em>
+                            <a class="link" href="endpoints/gifcomposite" target="_blank">here</a>.
                           </li>
                         </ul>
                       </div>
@@ -1073,8 +1073,8 @@
                       <div>
                         <ul class="list-disc space-y-4 pl-5 marker:text-blue-600">
                           <li>
-                            <a class="link" href="cmd?id=facemotion" target="_blank">FACEMOTION</a> is the sole endpoint needed to perform such a task. It should output the rectangle coordinates for each detected human face that you can pass verbatim if desired to other processing endpoints like <a class="link" href="cmd?id=crop" target="_blank">crop</a> or <a class="link" href="cmd?id=mogrify" target="_blank">mogrify</a> plus the age, gender and emotion pattern of the target face based on its
-                            facial shape.<br />Find out more information about <em>facemotion</em> <a class="link" href="cmd?id=facemotion" target="_blank">here</a>.
+                            <a class="link" href="endpoints/facemotion" target="_blank">FACEMOTION</a> is the sole endpoint needed to perform such a task. It should output the rectangle coordinates for each detected human face that you can pass verbatim if desired to other processing endpoints like <a class="link" href="endpoints/crop" target="_blank">crop</a> or <a class="link" href="endpoints/mogrify" target="_blank">mogrify</a> plus the age, gender and emotion pattern of the target face based on its
+                            facial shape.<br />Find out more information about <em>facemotion</em> <a class="link" href="endpoints/facemotion" target="_blank">here</a>.
                           </li>
                         </ul>
                       </div>
@@ -1128,16 +1128,16 @@
                       <div class="text-center md:w-[55rem]">
                         <img src="assets/images/bj.png" alt="Draw after processing" />
                         <p clas="text-muted">
-                          <em class="text-center text-muted">Dynamically created using <a class="link" href="cmd?id=newimage" target="_blank">NEWIMAGE</a>, text drawn via <a class="link" href="cmd?id=drawtext" target="_blank">DRAWTEXT</a></em>
+                          <em class="text-center text-muted">Dynamically created using <a class="link" href="endpoints/newimage" target="_blank">NEWIMAGE</a>, text drawn via <a class="link" href="endpoints/drawtext" target="_blank">DRAWTEXT</a></em>
                         </p>
                       </div>
                       <div>
                         <ul class="list-disc space-y-4 pl-5 marker:text-blue-600">
-                          <li>A <strong>blank image</strong> is requested first via call to <a href="cmd?id=newimage" target="_blank">NEWIMAGE</a> which export to PNG by default but you can change the <strong>output format</strong> at request. We set the image <strong>height</strong>, <strong>width</strong> and the <strong>background color</strong> respectively to 300x300 with a yellow background color.</li>
+                          <li>A <strong>blank image</strong> is requested first via call to <a href="endpoints/newimage" target="_blank">NEWIMAGE</a> which export to PNG by default but you can change the <strong>output format</strong> at request. We set the image <strong>height</strong>, <strong>width</strong> and the <strong>background color</strong> respectively to 300x300 with a yellow background color.</li>
                           <li>Note, if one of the <em>height</em> or <em>width</em> parameter is missing (but not both), then the available length is applied to the missing side and if you want a <strong>transparent image</strong> set the <em>color</em> parameter to <em>none</em>.</li>
                           <li>
-                            We finally <a class="link" href="cmd?id=drawtext" target="_blank">DRAW</a> our text at the center of the newly created image using the <em>WOLF Font</em>, <strong>black color</strong> and <strong>35 px font size</strong>. One could also draw <a class="link" href="cmd?id=drawlines" target="_blank">lines</a>, a <a class="link" href="cmd?id=drawrectangle" target="_blank">rectangle</a>, and other shapes for example to surround
-                            <a class="link" href="cmd?id=facedetect" target="_blank">faces</a>, <a class="link" href="cmd?id=merge" target="_blank">merge</a> with other images and so on...
+                            We finally <a class="link" href="endpoints/drawtext" target="_blank">DRAW</a> our text at the center of the newly created image using the <em>WOLF Font</em>, <strong>black color</strong> and <strong>35 px font size</strong>. One could also draw <a class="link" href="endpoints/drawlines" target="_blank">lines</a>, a <a class="link" href="endpoints/drawrectangle" target="_blank">rectangle</a>, and other shapes for example to surround
+                            <a class="link" href="endpoints/facedetect" target="_blank">faces</a>, <a class="link" href="endpoints/merge" target="_blank">merge</a> with other images and so on...
                           </li>
                         </ul>
                       </div>
@@ -1194,7 +1194,7 @@
                       </div>
                       <div>
                         <ul class="list">
-                          <li><a class="link" href="cmd?id=ocr" target="_blank">OCR</a> is the only analysis endpoint needed to perform such a task and handle dozen of languages. Find out more information about this endpoint <a class="link" href="cmd?id=ocr" target="_blank">here</a>.</li>
+                          <li><a class="link" href="endpoints/ocr" target="_blank">OCR</a> is the only analysis endpoint needed to perform such a task and handle dozen of languages. Find out more information about this endpoint <a class="link" href="endpoints/ocr" target="_blank">here</a>.</li>
                         </ul>
                       </div>
                     </div>
@@ -1249,8 +1249,8 @@
                       </div>
                       <div>
                         <ul class="list-disc space-y-4 pl-5 marker:text-blue-600">
-                          <li><a class="link" href="cmd?id=header" target="_blank">HEADER</a> is the command to invoke first. It should return most of the metadata associated with this image. This includes <strong>width, height, color channels, size, MIME type, etc</strong>. You can use these information to validate or reject an uploaded image based on your criteria. You can read more about <em>header</em> <a class="link" href="cmd?id=header" target="_blank">here</a>.</li>
-                          <li><a class="link" href="cmd?id=smartresize" target="_blank">SMARTRESIZE</a>, <a class="link" href="cmd?id=avatar" target="_blank">AVATAR</a>, <a class="link" href="cmd?id=thumbnail" target="_blank">THUMBNAIL</a>, <a class="link" href="cmd?id=convert" target="_blank">CONVERT</a> etc. are the processing commands that you can invoke later to change the dimension of the target image or even convert to different format to feet your needs.</li>
+                          <li><a class="link" href="endpoints/header" target="_blank">HEADER</a> is the command to invoke first. It should return most of the metadata associated with this image. This includes <strong>width, height, color channels, size, MIME type, etc</strong>. You can use these information to validate or reject an uploaded image based on your criteria. You can read more about <em>header</em> <a class="link" href="endpoints/header" target="_blank">here</a>.</li>
+                          <li><a class="link" href="endpoints/smartresize" target="_blank">SMARTRESIZE</a>, <a class="link" href="endpoints/avatar" target="_blank">AVATAR</a>, <a class="link" href="endpoints/thumbnail" target="_blank">THUMBNAIL</a>, <a class="link" href="endpoints/convert" target="_blank">CONVERT</a> etc. are the processing commands that you can invoke later to change the dimension of the target image or even convert to different format to feet your needs.</li>
                         </ul>
                       </div>
                     </div>
@@ -1302,27 +1302,27 @@
                     <div class="mt-5 flex flex-col justify-between gap-4 md:flex-row">
                       <div>
                         <p class="text-center text-muted">
-                          <em><a class="link" href="cmd?id=edge" target="_blank">EDGE</a></em>
+                          <em><a class="link" href="endpoints/edge" target="_blank">EDGE</a></em>
                         </p>
                         <img class="mb-3" src="assets/images/edge.jpg" alt="edge" />
                       </div>
                       <div>
                         <p class="text-center text-muted">
-                          <em><a class="link" href="cmd?id=grayscale" target="_blank">GRAYSCALE</a></em>
+                          <em><a class="link" href="endpoints/grayscale" target="_blank">GRAYSCALE</a></em>
                         </p>
                         <img class="mb-3" src="assets/images/nature31_gray.jpg" alt="grayscale" />
                       </div>
                       <div>
                         <p class="text-center text-muted">
-                          <em><a class="link" href="cmd?id=oilpaint" target="_blank">Oil Paint</a></em>
+                          <em><a class="link" href="endpoints/oilpaint" target="_blank">Oil Paint</a></em>
                         </p>
                         <img class="mb-3" src="assets/images/oil.jpg" width="511" alt="oil" />
                       </div>
                     </div>
                     <ul class="list">
                       <li>
-                        <a class="link" href="cmd?id=grayscale" target="_blank">GRAYSCALE</a>, <a class="link" href="cmd?id=noise" target="_blank">NOISE</a>, <a class="link" href="cmd?id=blur" target="_blank">BLUR</a>, <a class="link" href="cmd?id=chop" target="_blank">CHOP</a>, <a class="link" href="cmd?id=despeckle" target="_blank">DESPECKLE</a>, <a class="link" href="cmd?id=deskew" target="_blank">DESKEW</a>, <a class="link" href="cmd?id=edge" target="_blank">EDGE</a>,
-                        <a class="link" href="cmd?id=emboss" target="_blank">EMBOSS</a>, <a class="link" href="cmd?id=flatten" target="_blank">FLATTEN</a>, <a class="link" href="cmd?id=flip" target="_blank">FLIP</a>, and <a class="link" href="cmdls.html" target="_blank">dozen of others filters</a> are sitting there waiting to be consumed by your app!
+                        <a class="link" href="endpoints/grayscale" target="_blank">GRAYSCALE</a>, <a class="link" href="endpoints/noise" target="_blank">NOISE</a>, <a class="link" href="endpoints/blur" target="_blank">BLUR</a>, <a class="link" href="endpoints/chop" target="_blank">CHOP</a>, <a class="link" href="endpoints/despeckle" target="_blank">DESPECKLE</a>, <a class="link" href="endpoints/deskew" target="_blank">DESKEW</a>, <a class="link" href="endpoints/edge" target="_blank">EDGE</a>,
+                        <a class="link" href="endpoints/emboss" target="_blank">EMBOSS</a>, <a class="link" href="endpoints/flatten" target="_blank">FLATTEN</a>, <a class="link" href="endpoints/flip" target="_blank">FLIP</a>, and <a class="link" href="cmdls.html" target="_blank">dozen of others filters</a> are sitting there waiting to be consumed by your app!
                       </li>
                     </ul>
                     <div class="gradient-graph-line mb-5 mt-3 h-1 w-full"></div>
@@ -1375,8 +1375,8 @@
                       </div>
                       <div>
                         <ul class="list">
-                          <li><strong>Let's merge few small images on top of a big one</strong>. This operation is done via the <a class="link" href="cmd?id=merge" target="_blank">MERGE</a> endpoint which accept as much images as desired.</li>
-                          <li>A more sophisticated approach is to capture the facial landmarks coordinates via <a class="link" href="cmd?id=facelandmarks " target="_blank">FACELANDMARKS</a> and composite something such as <em>dog facial parts</em>, <em>glasses</em>, <em>Batman mask</em>, etc. on the target facial region to mimic the famous Snapchat filters for example.</li>
+                          <li><strong>Let's merge few small images on top of a big one</strong>. This operation is done via the <a class="link" href="endpoints/merge" target="_blank">MERGE</a> endpoint which accept as much images as desired.</li>
+                          <li>A more sophisticated approach is to capture the facial landmarks coordinates via <a class="link" href="endpoints/facelandmarks " target="_blank">FACELANDMARKS</a> and composite something such as <em>dog facial parts</em>, <em>glasses</em>, <em>Batman mask</em>, etc. on the target facial region to mimic the famous Snapchat filters for example.</li>
                         </ul>
                       </div>
                     </div>
@@ -1437,8 +1437,8 @@
                     </div>
                     <ul class="list">
                       <li>
-                        <a class="link" href="cmd?id=drawtext" target="_blank">DRAWTEXT</a> is the sole endpoint needed to generate such image. It expect the text to be displayed on <strong>TOP</strong>, <strong>CENTER</strong> or <strong>BOTTOM</strong> of the target image. This endpoint is so flexible that you can supply <em>Font Name</em>, <em>Size</em> &amp; <em>Color</em>, <em>Stroke width</em>, etc. Refer to <a class="link" href="cmd?id=drawtext" target="_blank">DRAWTEXT</a> documentation
-                        for additional information. Notice that there is a more flexible endpoint named <a class="link" href="cmd?id=drawtextat" target="_blank">DRAWTEXTAT</a> which let you draw text on <strong>any region</strong> of the target image by specifying the <em>X</em> &amp; <em>Y</em> coordinates instead.
+                        <a class="link" href="endpoints/drawtext" target="_blank">DRAWTEXT</a> is the sole endpoint needed to generate such image. It expect the text to be displayed on <strong>TOP</strong>, <strong>CENTER</strong> or <strong>BOTTOM</strong> of the target image. This endpoint is so flexible that you can supply <em>Font Name</em>, <em>Size</em> &amp; <em>Color</em>, <em>Stroke width</em>, etc. Refer to <a class="link" href="endpoints/drawtext" target="_blank">DRAWTEXT</a> documentation
+                        for additional information. Notice that there is a more flexible endpoint named <a class="link" href="endpoints/drawtextat" target="_blank">DRAWTEXTAT</a> which let you draw text on <strong>any region</strong> of the target image by specifying the <em>X</em> &amp; <em>Y</em> coordinates instead.
                       </li>
                     </ul>
                     <div class="gradient-graph-line mb-5 mt-3 h-1 w-full"></div>

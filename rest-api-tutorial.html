@@ -264,8 +264,8 @@
                 </li>
                 <li>
                   <p>
-                    The request URL scheme is <code class="code">https://api.pixlab.io/cmd?param=val&amp;param2=val2</code> where <strong><code class="code">cmd</code></strong> is the <a href="cmdls" class="link">API Endpoint</a> you want to call such as <a href="cmd?id=facedetect" class="link">FACEDETECT</a> (for face detection), <a href="https://ekyc.pixlab.io/docscan" class="link">DOCSCAN</a> (for Passports &amp; ID scanning), <a href="cmd?id=mogrify" class="link">MOGRIFY</a> (for face
-                    blurring), <a href="cmd?id=nsfw" class="link">NSFW</a> (for adult &amp; bloody content detection), <a href="cmd?id=" class="link">ROTATE</a>, and <a href="cmdls" class="link">hundreds of others</a> and <code class="code">param=val</code> are the endpoint parameters (if any).
+                    The request URL scheme is <code class="code">https://api.pixlab.io/cmd?param=val&amp;param2=val2</code> where <strong><code class="code">cmd</code></strong> is the <a href="cmdls" class="link">API Endpoint</a> you want to call such as <a href="endpoints/facedetect" class="link">FACEDETECT</a> (for face detection), <a href="ekyc/docscan" class="link">DOCSCAN</a> (for Passports &amp; ID scanning), <a href="endpoints/mogrify" class="link">MOGRIFY</a> (for face
+                    blurring), <a href="endpoints/nsfw" class="link">NSFW</a> (for adult &amp; bloody content detection), <a href="endpoints/" class="link">ROTATE</a>, and <a href="cmdls" class="link">hundreds of others</a> and <code class="code">param=val</code> are the endpoint parameters (if any).
                   </p>
                 </li>
                 <li>
@@ -326,21 +326,21 @@
             <ul class="list">
                 <li>
                     <p><strong class="text-green-600">Media Processing</strong> where you can apply series of transformations to your input media assets such as image <em>resizing, crop, motion blur, rotation</em>, etc. using your favorite programming language. Example of such endpoints: 
-                    <a href="cmd?id=crop" class="link">CROP</a>, 
-                    <a href="cmd?id=blur" class="link">BLUR</a>, 
-                    <a href="cmd?id=rotate" class="link">ROTATE</a>, 
-                    <a href="cmd?id=resize" class="link">RESIZE</a>, and 
+                    <a href="endpoints/crop" class="link">CROP</a>, 
+                    <a href="endpoints/blur" class="link">BLUR</a>, 
+                    <a href="endpoints/rotate" class="link">ROTATE</a>, 
+                    <a href="endpoints/resize" class="link">RESIZE</a>, and 
                     <a href="cmdls" class="link">dozens of others</a>.
                     </p>
                 </li>
                 <li>
                     <p><strong class="text-green-600">Media Analysis</strong> where you can apply series of <strong>Machine Learning analysis</strong> that does not alter the contents of the input image or video frame but rather return its <strong>computation result</strong>. For example, the 
-                    <a href="cmd?id=nsfw" class="link">NSFW</a> endpoint, returns a score value of type float between 0 and 1. The more this value approaches 1, the highly your input image contain bloody, gory or adult scene. 
-                    <a href="cmd?id=facedetect" class="link">FACEDETECT</a> on the other hand, output the rectangle coordinates for all the detected human faces in a given image or video frame. Example of such media analysis endpoints includes 
-                    <a href="cmd?id=nsfw" class="link">NSFW</a> for <em>not suitable for work</em> content detection, 
-                    <a href="cmd?id=tagimg" class="link">TAGIMG</a> for content extraction &amp; image tagging, 
-                    <a href="cmd?id=facedetect" class="link">FACEDETECT</a> is for face detection, 
-                    <a href="https://ekyc.pixlab.io/docscan" class="link">DOCSCAN</a> for Passports &amp; ID cards scan, and 
+                    <a href="endpoints/nsfw" class="link">NSFW</a> endpoint, returns a score value of type float between 0 and 1. The more this value approaches 1, the highly your input image contain bloody, gory or adult scene. 
+                    <a href="endpoints/facedetect" class="link">FACEDETECT</a> on the other hand, output the rectangle coordinates for all the detected human faces in a given image or video frame. Example of such media analysis endpoints includes 
+                    <a href="endpoints/nsfw" class="link">NSFW</a> for <em>not suitable for work</em> content detection, 
+                    <a href="endpoints/tagimg" class="link">TAGIMG</a> for content extraction &amp; image tagging, 
+                    <a href="endpoints/facedetect" class="link">FACEDETECT</a> is for face detection, 
+                    <a href="ekyc/docscan" class="link">DOCSCAN</a> for Passports &amp; ID cards scan, and 
                     <a href="cmdls" class="link">many others</a>.
                     </p>
                 </li>
@@ -367,14 +367,14 @@
         <div class="mt-12" id="first-api-call">
             <h2 class="sec-title">Your First API Call</h2>
             <div class="gradient-graph-line mb-5 h-1 w-full"></div>
-            <p class="mb-5">In order to familiarize yourself with the <span><strong> PixLab</strong></span> API, Let's start with the simplest command: <a class="link" href="cmd?id=grayscale">GRAYSCALE</a>. Given an input image, the <a class="link" href="cmd?id=grayscale">GRAYSCALE</a> endpoint produce a graylevel image in which the only colors are shades of gray like the following:</p>
+            <p class="mb-5">In order to familiarize yourself with the <span><strong> PixLab</strong></span> API, Let's start with the simplest command: <a class="link" href="endpoints/grayscale">GRAYSCALE</a>. Given an input image, the <a class="link" href="endpoints/grayscale">GRAYSCALE</a> endpoint produce a graylevel image in which the only colors are shades of gray like the following:</p>
             <div class="flex max-sm:flex-col max-sm:gap-3 gap-6 mx-auto mb-5 max-w-4xl">
                 <div>
                     <p class="text-muted text-sm mb-2">Input Picture</p>                    
                     <img src="assets/images/nature31.jpg" alt="input picture">
                 </div>
                 <div>
-                    <p class="text-muted text-sm mb-2"><a class="link" href="cmd?id=grayscale">GRAYSCALE</a> (api.pixlab.io/grayscale) Picture Output</p>
+                    <p class="text-muted text-sm mb-2"><a class="link" href="endpoints/grayscale">GRAYSCALE</a> (api.pixlab.io/grayscale) Picture Output</p>
                     <img src="assets/images/nature31_gray.jpg" alt="Nature after processing">
                 </div>
             </div>
@@ -409,18 +409,18 @@
             <h2 class="sec-title">Detect & Extract or Mark Faces
             </h2>
             <div class="gradient-graph-line mb-5 h-1 w-full"></div>
-            <p class="mb-5">Let's tackle a more serious, yet very useful example that <strong>mixes analysis &amp; processing API calls at the same time</strong> now you understand how the <span><strong>PixLab API Servers</strong></span> handle your incoming HTTP request. First, we will try to <strong>detect all human faces</strong> present in a given image or video frame via the <a class="link" href="cmd?id=facedetect">FACEDETECT</a> endpoint, then, we will <strong>extract each detected face</strong> in a new image using the <a class="link" href="cmd?id=crop">CROP</a> endpoint (Useful for your KYC verification form).</p>
+            <p class="mb-5">Let's tackle a more serious, yet very useful example that <strong>mixes analysis &amp; processing API calls at the same time</strong> now you understand how the <span><strong>PixLab API Servers</strong></span> handle your incoming HTTP request. First, we will try to <strong>detect all human faces</strong> present in a given image or video frame via the <a class="link" href="endpoints/facedetect">FACEDETECT</a> endpoint, then, we will <strong>extract each detected face</strong> in a new image using the <a class="link" href="endpoints/crop">CROP</a> endpoint (Useful for your KYC verification form).</p>
             <div class="flex max-sm:flex-col max-sm:gap-3 gap-6 mx-auto mb-5 max-w-full">
                 <div>
                     <p class="text-muted text-sm mb-2">Input Picture</p>                    
                     <img src="assets/images/face1.jpg" alt="picture before processing" title="Input picture we are going to perform face detection on">
                 </div>
                 <div>
-                    <p class="text-muted text-sm mb-2"><a class="link" href="cmd?id=drawrectangle">Draw Rectangle</a> instead of CROP</p>
+                    <p class="text-muted text-sm mb-2"><a class="link" href="endpoints/drawrectangle">Draw Rectangle</a> instead of CROP</p>
                     <img src="assets/images/face_rec.jpg" alt="Jeremy after processing" title="Rectangle is drawn on each detected face">
                 </div>
                 <div>
-                    <p class="text-muted text-sm mb-2">Extract (crop) face via <a class="link" href="cmd?id=crop">CROP</a></p>
+                    <p class="text-muted text-sm mb-2">Extract (crop) face via <a class="link" href="endpoints/crop">CROP</a></p>
                     <img src="assets/images/face_crop.jpg" width="554" alt="cropped face" title="Cropped face after processing">
                 </div>
                 
@@ -445,9 +445,9 @@
               </div>
               <p class="text-lg">To perform such operation, two endpoints are actually needed: One for the analysis phase, the other for processing:</p>
               <ul class="list">
-                <li><a class="link" href="cmd?id=facedetect">FACEDETECT</a> is the analysis endpoint that must be called first. It <strong>outputs the rectangle coordinates for each detected face</strong> in a given image or video frame. This endpoint, its expected parameter, and JSON output result is documented <a class="link" href="cmd?id=facedetect">here</a>.</li>
-                <li><a class="link" href="cmd?id=crop">CROP</a> is called later after we obtain the rectangle coordinates for all the detected faces. In which case, we simply pass these coordinates to <em>crop</em> untouched and the target region of the image where each face is located is extracted and saved in a new image. Find out more information on the <em>CROP</em> endpoint <a class="link" href="cmd?id=crop">here</a>.</li>
-                <li>Alternatively, if you prefer marking the face(s) instead of extracting it, you can rely on the <a class="link" href="cmd?id=drawrectangle">DRAWRECTANGLE</a> endpoint to perform such operation.</li>
+                <li><a class="link" href="endpoints/facedetect">FACEDETECT</a> is the analysis endpoint that must be called first. It <strong>outputs the rectangle coordinates for each detected face</strong> in a given image or video frame. This endpoint, its expected parameter, and JSON output result is documented <a class="link" href="endpoints/facedetect">here</a>.</li>
+                <li><a class="link" href="endpoints/crop">CROP</a> is called later after we obtain the rectangle coordinates for all the detected faces. In which case, we simply pass these coordinates to <em>crop</em> untouched and the target region of the image where each face is located is extracted and saved in a new image. Find out more information on the <em>CROP</em> endpoint <a class="link" href="endpoints/crop">here</a>.</li>
+                <li>Alternatively, if you prefer marking the face(s) instead of extracting it, you can rely on the <a class="link" href="endpoints/drawrectangle">DRAWRECTANGLE</a> endpoint to perform such operation.</li>
             </ul>
         </div>
 
@@ -486,7 +486,7 @@
                 </div>
               </div>
               <ul class="list">
-                <li>Just like the previous example, we relied on the <a class="link" href="cmd?id=facedetect">FACEDETECT</a> endpoint to output the rectangle coordinates for each present human face then, we immediately called the <a class="link" href="cmd?id=mogrify">MOGRIFY</a> endpoint, and we simply passed the facial coordinates untouched to <em>mogrify</em> to <strong>blur the target regions of the input image</strong> hence, the facial coordinates. The <em>mogrify</em> endpoint, its expected parameters, and output results is documented <a class="link" href="cmd?id=mogrify">here</a>.</li>
+                <li>Just like the previous example, we relied on the <a class="link" href="endpoints/facedetect">FACEDETECT</a> endpoint to output the rectangle coordinates for each present human face then, we immediately called the <a class="link" href="endpoints/mogrify">MOGRIFY</a> endpoint, and we simply passed the facial coordinates untouched to <em>mogrify</em> to <strong>blur the target regions of the input image</strong> hence, the facial coordinates. The <em>mogrify</em> endpoint, its expected parameters, and output results is documented <a class="link" href="endpoints/mogrify">here</a>.</li>
                 </ul>
         </div>
 
@@ -495,14 +495,14 @@
             <h2 class="sec-title">Programmatically Generate MEMEs
             </h2>
             <div class="gradient-graph-line mb-5 h-1 w-full"></div>
-            <p class="mb-5">Let's generate a funny MEME by drawing some text on top of the famous <a class="link" href="https://unsplash.com/photos/yMSecCHsIBc" target="_blank">Cool Cat</a>, public domain image using the <a class="link" href="cmd?id=drawtext">DRAWTEXT</a> API endpoint. Given an input image, <strong>draw some text</strong> on TOP &amp; BOTTOM of the image to obtain something like this:</p>
+            <p class="mb-5">Let's generate a funny MEME by drawing some text on top of the famous <a class="link" href="https://unsplash.com/photos/yMSecCHsIBc" target="_blank">Cool Cat</a>, public domain image using the <a class="link" href="endpoints/drawtext">DRAWTEXT</a> API endpoint. Given an input image, <strong>draw some text</strong> on TOP &amp; BOTTOM of the image to obtain something like this:</p>
             <div class="flex max-sm:flex-col max-sm:gap-3 gap-6 mx-auto mb-5 max-w-4xl">
                 <div>
                     <p class="text-muted text-sm mb-2">Input Picture</p>                    
                     <img src="assets/images/jdr.jpg" alt="input image">
                 </div>
                 <div>
-                    <p class="text-muted text-sm mb-2">Output Picture, dynamically generated <a class="link" href="cmd?id=drawtext">DRAWTEXT</a></p>
+                    <p class="text-muted text-sm mb-2">Output Picture, dynamically generated <a class="link" href="endpoints/drawtext">DRAWTEXT</a></p>
                     <img src="assets/images/jdr_draw.jpg" alt="dynamically generated image with text drawn on top, and bottom">
                 </div>
             </div>
@@ -526,7 +526,7 @@
                 </div>
               </div>
               <ul class="list">
-                <li><a class="link" href="cmd?id=drawtext" target="_blank">DRAWTEXT</a> is the sole endpoint needed to generate such image. It expect the text to be displayed on <strong>TOP</strong>, <strong>CENTER</strong> or <strong>BOTTOM</strong> of the target image. This endpoint is so flexible that you can supply <em>Font Name</em>, <em>Size</em> &amp; <em>Color</em>, <em>Stroke width</em>, etc. Refer to <a class="link" href="cmd?id=drawtext" target="_blank">DRAWTEXT</a> documentation for additional information. Notice that there is a more flexible endpoint named <a class="link" href="cmd?id=drawtextat" target="_blank">DRAWTEXTAT</a> which let you draw text on <strong>any region</strong> of the target image by specifying the <em>X</em> &amp; <em>Y</em> coordinates instead.</li>
+                <li><a class="link" href="endpoints/drawtext" target="_blank">DRAWTEXT</a> is the sole endpoint needed to generate such image. It expect the text to be displayed on <strong>TOP</strong>, <strong>CENTER</strong> or <strong>BOTTOM</strong> of the target image. This endpoint is so flexible that you can supply <em>Font Name</em>, <em>Size</em> &amp; <em>Color</em>, <em>Stroke width</em>, etc. Refer to <a class="link" href="endpoints/drawtext" target="_blank">DRAWTEXT</a> documentation for additional information. Notice that there is a more flexible endpoint named <a class="link" href="endpoints/drawtextat" target="_blank">DRAWTEXTAT</a> which let you draw text on <strong>any region</strong> of the target image by specifying the <em>X</em> &amp; <em>Y</em> coordinates instead.</li>
             </ul>
         </div>
 
@@ -539,13 +539,13 @@
            <div class="flex max-sm:flex-col mb-5">
             <div class="basis-96 sm:pr-6">
                 <img src="assets/images/bj.png" alt="Draw after processing" class="max-sm:mx-auto">
-                <p class="text-muted max-sm:hidden"><em>Dynamically created using <a class="link" href="cmd?id=newimage">NEWIMAGE</a>, text drawn via <a class="link" href="cmd?id=drawtext">DRAWTEXT</a></em></p>
+                <p class="text-muted max-sm:hidden"><em>Dynamically created using <a class="link" href="endpoints/newimage">NEWIMAGE</a>, text drawn via <a class="link" href="endpoints/drawtext">DRAWTEXT</a></em></p>
             </div>
             <div class="basis-3/4">
                 <ul class="list">
-                    <li>A <strong>blank image</strong> is requested first via a call <a class="link" href="cmd?id=newimage">NEWIMAGE</a> which export to PNG by default but you can change the <strong>output format</strong> at request. We set the image <strong>height</strong>, <strong>width</strong> and the <strong>background color</strong> respectively to 300x300 with a yellow background color.</li>
+                    <li>A <strong>blank image</strong> is requested first via a call <a class="link" href="endpoints/newimage">NEWIMAGE</a> which export to PNG by default but you can change the <strong>output format</strong> at request. We set the image <strong>height</strong>, <strong>width</strong> and the <strong>background color</strong> respectively to 300x300 with a yellow background color.</li>
                     <li>Note, if one of the <em>height</em> or <em>width</em> parameter is missing (but not both), then the available length is applied to the missing side and if you want a <strong>transparent image</strong> set the <em>color</em> parameter to <em>none</em>.</li>
-                    <li>We finally <a class="link" href="cmd?id=drawtext">DRAW</a> our text at the center of the newly created image using the <em>WOLF Font</em>, <strong>black color</strong> and <strong>35 px font size</strong>. One could also draw <a class="link" href="cmd?id=drawlines">lines</a>, a <a class="link" href="cmd?id=drawrectangle">rectangle</a>, and other shapes for example to surround <a class="link" href="cmd?id=facedetect">faces</a>, <a class="link" href="cmd?id=merge">merge</a> with other images and so on...</li>
+                    <li>We finally <a class="link" href="endpoints/drawtext">DRAW</a> our text at the center of the newly created image using the <em>WOLF Font</em>, <strong>black color</strong> and <strong>35 px font size</strong>. One could also draw <a class="link" href="endpoints/drawlines">lines</a>, a <a class="link" href="endpoints/drawrectangle">rectangle</a>, and other shapes for example to surround <a class="link" href="endpoints/facedetect">faces</a>, <a class="link" href="endpoints/merge">merge</a> with other images and so on...</li>
                 </ul>
             </div>
            </div>
@@ -606,8 +606,8 @@
                 </div>
               </div>
               <ul class="list">
-                <li><a class="link" href="https://ekyc.pixlab.io/docscan">DOCSCAN</a> is the sole endpoint needed for such a task. It support various ID cards besides Passports &amp; Visas and does face extraction automatically for you.</li>
-                <li><strong>PixLab recommend that you connect your AWS S3 bucket via the <a class="link" href="https://pixlab.io/dashboard" target="_blank">dashboard</a> so that, any extracted face or MRZ crop is automatically stored on your S3 bucket rather than the PixLab one</strong>. This feature should give you full control over your analyzed media files.<br>Refer to the <em>docscan</em> <a class="link" href="https://ekyc.pixlab.io/docscan">documentation</a> for additional information such as the set of scanned fields, where face crops are stored, how to process PDF documents instead of images and so forth.</li>
+                <li><a class="link" href="ekyc/docscan">DOCSCAN</a> is the sole endpoint needed for such a task. It support various ID cards besides Passports &amp; Visas and does face extraction automatically for you.</li>
+                <li><strong>PixLab recommend that you connect your AWS S3 bucket via the <a class="link" href="https://pixlab.io/dashboard" target="_blank">dashboard</a> so that, any extracted face or MRZ crop is automatically stored on your S3 bucket rather than the PixLab one</strong>. This feature should give you full control over your analyzed media files.<br>Refer to the <em>docscan</em> <a class="link" href="ekyc/docscan">documentation</a> for additional information such as the set of scanned fields, where face crops are stored, how to process PDF documents instead of images and so forth.</li>
             </ul>
         </div>
 
@@ -640,8 +640,8 @@
               </div>
               <p class="mb-5">To perform such operation, two endpoints are actually needed. One for the analysis phase, the other for processing:</p>
               <ul class="list">
-                <li><a class="link" href="cmd?id=nsfw">NSFW</a> is the analysis endpoint that must be called first. It does perform nudity &amp; adult content detection and <strong>returns a score value between 0..1. The more this value approaches 1, the more your picture/frame is highly nsfw</strong>. Find out more information about <em>NSFW</em> <a class="link" href="cmd?id=nsfw">here</a>.</li>
-                <li><a class="link" href="cmd?id=blur">BLUR</a> is called later only if the <strong>nsfw score value returned earlier is greater than certain threshold</strong>. In our case, it is set to 0.5. The <em>blur</em> endpoint is documented <a class="link" href="cmd?id=blur">here</a>.</li>
+                <li><a class="link" href="endpoints/nsfw">NSFW</a> is the analysis endpoint that must be called first. It does perform nudity &amp; adult content detection and <strong>returns a score value between 0..1. The more this value approaches 1, the more your picture/frame is highly nsfw</strong>. Find out more information about <em>NSFW</em> <a class="link" href="endpoints/nsfw">here</a>.</li>
+                <li><a class="link" href="endpoints/blur">BLUR</a> is called later only if the <strong>nsfw score value returned earlier is greater than certain threshold</strong>. In our case, it is set to 0.5. The <em>blur</em> endpoint is documented <a class="link" href="endpoints/blur">here</a>.</li>
             </ul>
         </div>
 
