@@ -131,24 +131,22 @@
                 <i class="uil uil-moon text-xl"></i>
               </button>
               <div class="flex h-11 gap-3 py-1">
-                <button class="gradient-button group block h-full items-center gap-x-2 rounded-lg px-3 text-sm font-medium text-white" href="https://console.pixlab.io" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></button>
+                <a class="gradient-button group block h-full items-center gap-x-2 rounded-lg px-3 text-sm font-medium text-white" href="https://console.pixlab.io" target="_blank" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></a>
               </div>
             </div>
           </div>
         </div>
-
         <!-- Theme / Signup / PixLab Console buttons -->
         <div class="nav-buttons hidden h-full items-center gap-4 px-1.5 py-0.5 lg:flex">
           <button class="theme-toggler hidden items-center text-white lg:flex">
             <i class="uil uil-moon text-xl"></i>
           </button>
           <div class="flex h-full gap-3">
-            <button class="gradient-button console-button group flex h-full items-center gap-x-2 rounded-lg px-2.5 text-sm font-medium text-white" href="https://console.pixlab.io" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></button>
+            <a class="gradient-button console-button group flex h-full items-center gap-x-2 rounded-lg px-2.5 text-sm font-medium text-white" href="https://console.pixlab.io" target="_blank" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></a>
           </div>
         </div>
       </nav>
     </header>
-
     <main>
       <!-- Hero Section -->
       <section class="hero-section">
@@ -160,29 +158,26 @@
                 <h1 class="hero-heading">DMCA - Copyright Complaint Form</h1>
                 <p class="lead mt-5 text-gray-200">Report content that you would like to be removed from the PixLab's services under applicable laws.</p>
               </div>
-
               <div class="flex w-full max-w-[500px] flex-col gap-6">
-                <!-- Search Form -->
-                <form action="#" class="flex h-12 w-full items-center justify-between rounded-xl bg-white/10 pe-3 ps-4 backdrop-blur-md focus-within:bg-white/15 lg:h-14">
-                  <label for="search-docs" class="sr-only">Search Documentation</label>
-                  <input id="search-docs" class="h-full w-full border-none bg-transparent pe-2 outline-none" type="search" placeholder="Search Documentation..." required />
-                  <button class="gradient-button flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white lg:h-10 lg:w-10">
+                <form action="search" method="get" class="flex h-12 w-full items-center justify-between rounded-xl bg-white/10 pe-3 ps-4 backdrop-blur-md focus-within:bg-white/15 lg:h-14">
+                  <label for="search-docs" class="sr-only">Search Documentation...</label>
+                  <input id="search-docs" name="q" class="h-full w-full border-none bg-transparent pe-2 outline-none" type="search" placeholder="Search Documentation..." required />
+                  <button type="submit" class="gradient-button flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white lg:h-10 lg:w-10" title="Search PixLab knowledge Base...">
                     <i class="uil uil-search text-lg lg:text-xl" aria-hidden="true"></i>
                     <span class="sr-only">Search</span>
                   </button>
                 </form>
-
                 <!-- Connect Button -->
-                <a href="#" class="gradient-button flex h-12 w-full items-center justify-between gap-x-3 rounded-xl pe-3 ps-4 lg:h-14">
+                <a href="https://console.pixlab.io" target="_blank" class="gradient-button flex h-12 w-full items-center justify-between gap-x-3 rounded-xl pe-3 ps-4 lg:h-14" title="Connect to the PixLab Console and elevate your projects with powerful Vision and ID Scan APIs...">
                   <span>Connect to the PixLab Console</span>
                   <i class="uil uil-arrow-up-right flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-black bg-opacity-30 text-lg lg:h-10 lg:w-10 lg:text-xl"></i>
                 </a>
+                <span class="text-sm text-slate-600">Connect to the PixLab Console and elevate your projects with powerful Vision & Creativity APIs, designed to enhance your development workflow and productivity.</span>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       <!-- Content Section -->
       <section>
         <div class="mx-auto w-full max-w-screen-xl px-5 pb-12 pt-8 leading-8">
@@ -205,7 +200,7 @@
           </div>
           <article class="mt-5">
             <div class="gradient-graph-line mb-5 h-1 w-full"></div>
-            <h2 class="mb-5 text-center text-xl font-semibold md:text-3xl"><span class="gradient-text">Copyright Complaint Form</span> <span class="text-sm text-slate-600">December 2024 Update</span></h2>
+            <h2 class="mb-5 text-center text-xl font-semibold uppercase md:text-3xl"><span class="gradient-text">Copyright Complaint Form</span> <span class="text-sm text-slate-600">January 2025 Update</span></h2>
             <h6 class="mb-3 text-tColor">Legal & Support Links</h6>
             <ul class="list-disc pl-5 text-tColor marker:text-blue-600">
               <li><a href="terms-of-use" class="link">Terms of Service</a></li>
@@ -285,7 +280,6 @@
               </a>
             </div>
           </div>
-
           <!-- Products Section -->
           <div class="col-span-10 md:col-span-5 lg:col-span-3">
             <h3 class="mb-4 font-semibold text-primary">PRODUCTS & SDKs</h3>
