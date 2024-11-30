@@ -928,14 +928,6 @@ body {
   grid-column: span 10 / span 10;
 }
 
-.col-span-4 {
-  grid-column: span 4 / span 4;
-}
-
-.col-span-6 {
-  grid-column: span 6 / span 6;
-}
-
 .m-3 {
   margin: 0.75rem;
 }
@@ -1284,8 +1276,16 @@ body {
   height: 100%;
 }
 
+.h-\[100vh\] {
+  height: 100vh;
+}
+
 .min-h-28 {
   min-height: 7rem;
+}
+
+.min-h-\[75vh\] {
+  min-height: 75vh;
 }
 
 .w-1\/2 {
@@ -1451,14 +1451,6 @@ body {
 
 .max-w-xl {
   max-width: 36rem;
-}
-
-.max-w-96 {
-  max-width: 24rem;
-}
-
-.max-w-72 {
-  max-width: 18rem;
 }
 
 .max-w-80 {
@@ -2215,18 +2207,6 @@ body {
 
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\.\.\/images\/app\)\] {
-  background-image: url(../images/app);
-}
-
-.bg-\[url\(\.\.\/images\/app-ui-ux-code-describe-ui-background\)\] {
-  background-image: url(../images/app-ui-ux-code-describe-ui-background);
-}
-
-.bg-\[url\(\.\.\/images\/app-ui-ux-code-describe-ui-background\.png\)\] {
-  background-image: url(../images/app-ui-ux-code-describe-ui-background.png);
 }
 
 .from-primary {
@@ -4968,6 +4948,14 @@ body.dark-theme .ctb-card-bg {
     height: 500px;
   }
 
+  .md\:h-\[75vh\] {
+    height: 75vh;
+  }
+
+  .md\:min-h-\[70vh\] {
+    min-height: 70vh;
+  }
+
   .md\:w-3\/4 {
     width: 75%;
   }
@@ -5178,6 +5166,14 @@ body.dark-theme .ctb-card-bg {
 
   .lg\:h-full {
     height: 100%;
+  }
+
+  .lg\:h-\[75vh\] {
+    height: 75vh;
+  }
+
+  .lg\:min-h-\[70vh\] {
+    min-height: 70vh;
   }
 
   .lg\:w-10 {

@@ -10,9 +10,9 @@
     <meta name="author" content="Copyright (C) PixLab | Symisc Systems. All rights reserved." />
     <meta name="description" content="ASCII Art is a lightweight C/C++ library that converts images or video frames into real-time printable ASCII characters using a single decision tree. Transform visuals into art effortlessly with this efficient and versatile tool." />
     <meta name="keywords" content="ascii art webassembly, web based ascii art library, pixlab online ascii, ascii art, C/C++ ascii art library, pixlab ascii art, C/C++ library,decision tree c code,embedded ascii art library,open source ascii art library,ascii art algorithms, ascii art graphics, ascii art rendering,ascii image processing, ascii-art web engine, ascii-glyphs C library" />
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="ASCII ART Open Source C/ Library by PixLab">
-    <meta property="og:url" content="https://pixlab.io/art">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ASCII ART Open Source C/ Library by PixLab" />
+    <meta property="og:url" content="https://pixlab.io/art" />
     <link rel="stylesheet" href="assets/css/unicons/css/line.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
@@ -83,7 +83,8 @@
                       </div>
                     </div>
                     <div class="hs-dropdown relative [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:[--is-collapse:false] lg:[--strategy:absolute] lg:[--trigger:hover]">
-                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-white focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">Media Processing <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-white focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        Media Processing <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
                       </button>
                       <div class="hs-dropdown-menu header-gradient-bg start-full top-0 z-10 !mx-[10px] -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-start-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
                         <div class="space-y-1 py-1 lg:px-1">
@@ -162,7 +163,7 @@
     <main>
       <!-- Hero Section -->
       <section class="hero-section">
-        <div id="particles-js" class="relative h-[75vh] bg-[#0b0e13]">
+        <div id="particles-js" class="relative h-[100vh] bg-[#0b0e13] md:h-[75vh]">
           <div class="absolute flex h-full w-full items-center px-5 pt-10 text-white">
             <div class="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between gap-10 lg:flex-row">
               <!-- Hero Text -->
@@ -219,8 +220,9 @@
             <!-- AddToAny END -->
           </div>
           <div class="gradient-graph-line my-5 h-1 w-full"></div>
-          <p class="my-5 text-tColor text-lg">
-            ASCII Art is a <strong>Header-only, Open-source C library with with Web-Assembly support</strong> developed by <strong>PixLab</strong>, inspired by the work of <a class="link" href="https://nenadmarkus.com/" target="_blank">Nenad Markus &nearr;</a>. It enables real-time transformation of input images or video frames into printable ASCII characters using a single <a class="link" href="https://en.wikipedia.org/wiki/Decision_tree" target="_blank">decision tree &nearr;</a>. This real-time performance is powered by <strong>pixel intensity comparisons</strong> within the tree's internal nodes.
+          <p class="my-5 text-lg text-tColor">
+            ASCII Art is a <strong>Header-only, Open-source C library with with Web-Assembly support</strong> developed by <strong>PixLab</strong>, inspired by the work of <a class="link" href="https://nenadmarkus.com/" target="_blank">Nenad Markus &nearr;</a>. It enables real-time transformation of input images or video frames into printable ASCII characters using a single <a class="link" href="https://en.wikipedia.org/wiki/Decision_tree" target="_blank">decision tree &nearr;</a>. This
+            real-time performance is powered by <strong>pixel intensity comparisons</strong> within the tree's internal nodes.
           </p>
           <p class="my-5 text-tColor">
             For a live demonstration including tests on static images, Webcam/Camera stream and a general overview on how the algorithm works, please visit <a class="link" href="https://art.pixlab.io" target="_blank"><strong>art.pixlab.io</strong></a
@@ -237,7 +239,7 @@
           <div class="gradient-graph-line my-5 h-1 w-full"></div>
           <h2 class="sec-title" id="artm">Download</h2>
           <div class="flex flex-col gap-2 border-b md:flex-row md:items-center md:gap-4" id="model_dl">
-            <div class="flex-none text-lg font-semibold md:p-4 text-tColor">ASCII ART HEX MODEL</div>
+            <div class="flex-none text-lg font-semibold text-tColor md:p-4">ASCII ART HEX MODEL</div>
             <p class="text-tColor">This is the hex output model generated during the training phase. It contains both the <strong>codebook and the decision tree</strong> that let you render your images or video frames at Real-time. Once downloaded, just put it in the directory where the ASCII Art source reside.</p>
             <div class="flex-none self-center py-4 md:p-4">
               <a href="downloads" class="flex items-center gap-2 rounded-md bg-blue-200 px-5 py-3 font-bold text-blue-700 shadow-sm transition duration-500 ease-in-out hover:bg-blue-300 hover:shadow-lg">
@@ -249,7 +251,7 @@
             </div>
           </div>
           <div class="flex flex-col gap-2 md:flex-row md:items-center md:gap-4">
-            <div class="flex-none text-lg font-semibold md:p-4 text-tColor">ASCII ART Source Code</div>
+            <div class="flex-none text-lg font-semibold text-tColor md:p-4">ASCII ART Source Code</div>
             <p class="text-tColor">This ZIP archive contains all C source code for ASCII Art combined into a single source file (the amalgamation).</p>
             <div class="flex-none self-center py-4 md:p-4">
               <a href="https://github.com/symisc/ascii_art/archive/1.3.zip" class="flex items-center gap-2 rounded-md bg-blue-200 px-5 py-3 font-bold text-blue-700 shadow-sm transition duration-500 ease-in-out hover:bg-blue-300 hover:shadow-lg">
@@ -263,7 +265,7 @@
 
           <div class="gradient-graph-line my-5 h-1 w-full"></div>
           <h2 class="sec-title" id="gstart">Getting Started</h2>
-          <p class=" text-tColor">Embedding the library in your application is straightforward. All you have to do is drop the <code class="code">ascii_art.c</code> and its accompanying <a class="link" href="https://github.com/symisc/ascii_art" target="_blank">header file &nearr;</a> in your source tree plus the <strong>model</strong> that you can download from the link <a class="link" href="#model_dl">above</a> and perform the following API calls successively:</p>
+          <p class="text-tColor">Embedding the library in your application is straightforward. All you have to do is drop the <code class="code">ascii_art.c</code> and its accompanying <a class="link" href="https://github.com/symisc/ascii_art" target="_blank">header file &nearr;</a> in your source tree plus the <strong>model</strong> that you can download from the link <a class="link" href="#model_dl">above</a> and perform the following API calls successively:</p>
           <ul class="list">
             <li>
               <p>Call <code class="code">AsciiArtInit</code> first to initialize the <code class="code">ascii_render</code> structure defined in the <code class="code">ascii_art.h</code> header file.</p>
@@ -282,23 +284,29 @@
           <script src="https://gist.github.com/symisc/8638b3f1959874377547b89d8a8aa801.js"></script>
           <p class="mb-3 mt-2 text-center text-tColor"><a class="link" href="https://github.com/symisc/ascii_art/blob/master/sample.c" target="_blank">sample.c &nearr;</a> on Github. Please report any issue or feature request on the <a class="link" href="https://github.com/symisc/ascii_art" target="_blank">project Github page &nearr;</a>.</p>
           <h2 class="sec-title" id="capi">C API REFERENCE GUIDE</h2>
-          <p class=" text-tColor">This is the C language interface to ASCII Art. As of this release, only <strong>three interfaces</strong> are exported plus <strong>another optional</strong> for straightforward integration.</p>
-          <!-- HTML generated using hilite.me --><div class="my-5 text-sm"  style="background: #f8f8f8; overflow:auto;width:auto;border: 1px solid #ccc;padding: .6em .6em;border-radius: 4px;"><pre style="margin: 0; line-height: 125%"><span style="color: #B00040">void</span> AsciiArtInit(ascii_render <span style="color: #666666">*</span>pRender)
-</pre></div>
+          <p class="text-tColor">This is the C language interface to ASCII Art. As of this release, only <strong>three interfaces</strong> are exported plus <strong>another optional</strong> for straightforward integration.</p>
+          <!-- HTML generated using hilite.me -->
+          <div class="my-5 text-sm" style="background: #f8f8f8; overflow: auto; width: auto; border: 1px solid #ccc; padding: 0.6em 0.6em; border-radius: 4px">
+            <pre style="margin: 0; line-height: 125%"><span style="color: #B00040">void</span> AsciiArtInit(ascii_render <span style="color: #666666">*</span>pRender)
+</pre>
+          </div>
           <p class="sec-title-sm">Description</p>
           <p class="mt-3 text-tColor">Initialize and prepare the <code class="code">ascii_render</code> structure. This routine is often the first API call that an application makes and is a prerequisite in order to work with the ASCII Art library.</p>
-          <p class="mt-7 sec-title-sm">Parameters</p>
+          <p class="sec-title-sm mt-7">Parameters</p>
           <div class="my-7 flex flex-col items-start gap-3 border-b pb-6 sm:flex-row sm:items-center sm:gap-12">
             <code class="code">ascii_render *pRender</code>
-            <p class=" text-tColor">A pointer to a stack or heap allocated ascii_render structure defined in the header file of the library.</p>
+            <p class="text-tColor">A pointer to a stack or heap allocated ascii_render structure defined in the header file of the library.</p>
           </div>
 
-          <!-- HTML generated using hilite.me --><div class="text-sm" style="background: #f8f8f8; overflow:auto;width:auto;border: 1px solid #ccc;padding: .6em .6em;border-radius: 4px;"><pre style="margin: 0; line-height: 125%"><span style="color: #B00040">unsigned</span> <span style="color: #B00040">int</span> AsciiArtTextBufSize(ascii_render <span style="color: #666666">*</span>pRender, <span style="color: #B00040">int</span> img_width, <span style="color: #B00040">int</span> img_height)
-</pre></div>
+          <!-- HTML generated using hilite.me -->
+          <div class="text-sm" style="background: #f8f8f8; overflow: auto; width: auto; border: 1px solid #ccc; padding: 0.6em 0.6em; border-radius: 4px">
+            <pre style="margin: 0; line-height: 125%"><span style="color: #B00040">unsigned</span> <span style="color: #B00040">int</span> AsciiArtTextBufSize(ascii_render <span style="color: #666666">*</span>pRender, <span style="color: #B00040">int</span> img_width, <span style="color: #B00040">int</span> img_height)
+</pre>
+          </div>
 
           <p class="sec-title-sm mt-5">Description</p>
           <p class="mt-3 text-tColor">Calculate the <strong>amount of bytes</strong> needed to hold the <strong>entire ASCII text output</strong> of the input image.</p>
-          <p class="mt-7 sec-title-sm">Parameters</p>
+          <p class="sec-title-sm mt-7">Parameters</p>
           <div class="overflow-x-auto text-tColor">
             <table class="whitespace-nowrap">
               <tbody>
@@ -323,13 +331,18 @@
               </tbody>
             </table>
           </div>
-          <p class="mt-7 sec-title-sm">Return Type</p>
+          <p class="sec-title-sm mt-7">Return Type</p>
           <p class="my-5 text-tColor"><strong>Amount of bytes</strong> needed to hold the entire buffer that can be safely passed to a memory allocation routine such as <em>malloc()</em>.</p>
-          <!-- HTML generated using hilite.me --><div class="text-sm" style="background: #f8f8f8; overflow:auto;width:auto;border: 1px solid #ccc;padding: .6em .6em;border-radius: 4px;"><pre style="margin: 0; line-height: 125%"><span style="color: #B00040">void</span> AsciiArtRender(ascii_render <span style="color: #666666">*</span>pRender, <span style="color: #B00040">unsigned</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span>zPixels <span style="color: #408080; font-style: italic">/*IN/OUT*/</span>, <span style="color: #B00040">int</span> <span style="color: #666666">*</span>pnWidth <span style="color: #408080; font-style: italic">/*IN/OUT*/</span>, <span style="color: #B00040">int</span> <span style="color: #666666">*</span>pnHeight <span style="color: #408080; font-style: italic">/*IN/OUT*/</span>, <span style="color: #B00040">unsigned</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span>zBuf<span style="color: #408080; font-style: italic">/* Optional/OUT */</span>, <span style="color: #B00040">int</span> Optimize)
-</pre></div>
-          <p class="mt-7 sec-title-sm">Description</p>
+          <!-- HTML generated using hilite.me -->
+          <div class="text-sm" style="background: #f8f8f8; overflow: auto; width: auto; border: 1px solid #ccc; padding: 0.6em 0.6em; border-radius: 4px">
+            <pre
+              style="margin: 0; line-height: 125%"
+            ><span style="color: #B00040">void</span> AsciiArtRender(ascii_render <span style="color: #666666">*</span>pRender, <span style="color: #B00040">unsigned</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span>zPixels <span style="color: #408080; font-style: italic">/*IN/OUT*/</span>, <span style="color: #B00040">int</span> <span style="color: #666666">*</span>pnWidth <span style="color: #408080; font-style: italic">/*IN/OUT*/</span>, <span style="color: #B00040">int</span> <span style="color: #666666">*</span>pnHeight <span style="color: #408080; font-style: italic">/*IN/OUT*/</span>, <span style="color: #B00040">unsigned</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span>zBuf<span style="color: #408080; font-style: italic">/* Optional/OUT */</span>, <span style="color: #B00040">int</span> Optimize)
+</pre>
+          </div>
+          <p class="sec-title-sm mt-7">Description</p>
           <p class="my-5 text-tColor">Transform an input <strong>grayscaled image</strong> into ASCII Art.</p>
-          <p class="mt-7 sec-title-sm">Parameters</p>
+          <p class="sec-title-sm mt-7">Parameters</p>
           <div class="overflow-x-auto border-b text-tColor">
             <table class="min-w-[80rem] md:min-w-[50rem]">
               <tbody>
@@ -369,9 +382,14 @@
             </table>
           </div>
 
-          <!-- HTML generated using hilite.me --><div class="mt-5 text-sm"  style="background: #f8f8f8; overflow:auto;width:auto;border: 1px solid #ccc;padding: .6em .6em;border-radius: 4px;"><pre style="margin: 0; line-height: 125%"><span style="color: #B00040">unsigned</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span> AsciiArtLoadImage(<span style="color: #008000; font-weight: semi-bold">const</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span>zPath, <span style="color: #B00040">int</span> <span style="color: #666666">*</span>pWidth, <span style="color: #B00040">int</span> <span style="color: #666666">*</span>pHeight)
-</pre></div>
-          <p class="mt-7 sec-title-sm">Description</p>
+          <!-- HTML generated using hilite.me -->
+          <div class="mt-5 text-sm" style="background: #f8f8f8; overflow: auto; width: auto; border: 1px solid #ccc; padding: 0.6em 0.6em; border-radius: 4px">
+            <pre
+              style="margin: 0; line-height: 125%"
+            ><span style="color: #B00040">unsigned</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span> AsciiArtLoadImage(<span style="color: #008000; font-weight: semi-bold">const</span> <span style="color: #B00040">char</span> <span style="color: #666666">*</span>zPath, <span style="color: #B00040">int</span> <span style="color: #666666">*</span>pWidth, <span style="color: #B00040">int</span> <span style="color: #666666">*</span>pHeight)
+</pre>
+          </div>
+          <p class="sec-title-sm mt-7">Description</p>
           <p class="my-5 text-tColor">Loads an image from a file, convert it to the grayscale colorspace. Where done, the returned memory buffer can be passed directly to <code class="code">AsciiArtRender</code>. This interface is available only if the library is compiled with the <code class="code">ART_ENABLE_STB_IMAGE</code> compile-time directive.</p>
           <div class="overflow-x-auto border-b text-tColor">
             <table class="min-w-[50rem]">
@@ -397,7 +415,7 @@
               </tbody>
             </table>
           </div>
-          <p class="mt-7 sec-title-sm">Return Value</p>
+          <p class="sec-title-sm mt-7">Return Value</p>
           <p class="my-5 text-tColor">A pointer to a writable buffer holding the <strong>raw grayscaled pixels</strong> of the target image that can be safely passed to <code class="code">AsciiArtRender</code> for processing. When done, this buffer must be freed using the <em>free()</em> interface from the standard C library to avoid memory leaks. <strong>NULL</strong> is returned on failure.</p>
         </div>
       </section>

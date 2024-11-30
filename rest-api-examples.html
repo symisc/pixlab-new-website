@@ -81,7 +81,8 @@
                       </div>
                     </div>
                     <div class="hs-dropdown relative [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:[--is-collapse:false] lg:[--strategy:absolute] lg:[--trigger:hover]">
-                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-white focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">Media Processing <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-white focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        Media Processing <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
                       </button>
                       <div class="hs-dropdown-menu header-gradient-bg start-full top-0 z-10 !mx-[10px] -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-start-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
                         <div class="space-y-1 py-1 lg:px-1">
@@ -163,7 +164,7 @@
     <main>
       <!-- Hero Section -->
       <section class="hero-section">
-        <div id="particles-js" class="relative h-[75vh] bg-[#0b0e13]">
+        <div id="particles-js" class="relative h-[100vh] bg-[#0b0e13] md:h-[75vh]">
           <div class="absolute flex h-full w-full items-center px-5 pt-10 text-white">
             <div class="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between gap-10 lg:flex-row">
               <!-- Hero Text -->
@@ -760,25 +761,25 @@
                   </button>
                   <div class="overflow-y-auto p-4">
                     <p class="mt-1">In this sample, we'll perform human face detection using the <a class="link" href="endpoints/facedetect" target="_blank">FACEDETECT</a> endpoint, and finally extract each detected face via <a class="link" href="endpoints/crop" target="_blank">CROP</a>.</p>
-                    <div class="flex max-sm:flex-col justify-center gap-6 text-center text-muted my-5">
+                    <div class="my-5 flex justify-center gap-6 text-center text-muted max-sm:flex-col">
                       <div>
                         <p><em>Input Picture</em></p>
-                        <img class="max-md:mx-auto" src="assets/images/face1.jpg" width="347" alt="input image" >
+                        <img class="max-md:mx-auto" src="assets/images/face1.jpg" width="347" alt="input image" />
                       </div>
                       <div>
                         <p><em>After Crop</em></p>
                         <img class="max-md:mx-auto" src="assets/images/face_crop.jpg" alt="After crop" />
-                       </div>
+                      </div>
                     </div>
 
-                      <div>
-                        <p>To perform such operation, two endpoints are actually needed: One for the analysis phase, the other for processing:</p>
-                        <ul class="list">
-                          <li><a class="link" href="endpoints/facedetect" target="_blank">FACEDETECT</a> is the analysis endpoint that must be called first. It <strong>outputs the rectangle coordinates for each detected face</strong> in a given image or video frame. This endpoint, its expected parameter, and JSON output result is documented <a class="link" href="endpoints/facedetect">here</a>.</li>
-                          <li><a class="link" href="endpoints/crop" target="_blank">CROP</a> is called later after we obtain the rectangle coordinates for all the detected faces. In which case, we simply pass these coordinates to <em>crop</em> untouched and the target region of the image where each face is located is extracted. Find out more information about the <em>CROP</em> endpoint <a class="link" href="endpoints/crop">here</a>.</li>
-                          <li>Alternatively, if you prefer marking the face(s) instead of extracting it, you can rely on the <a class="link" href="endpoints/drawrectangle">DRAWRECTANGLE</a> endpoint to perform such task.</li>
-                        </ul>
-                      </div>
+                    <div>
+                      <p>To perform such operation, two endpoints are actually needed: One for the analysis phase, the other for processing:</p>
+                      <ul class="list">
+                        <li><a class="link" href="endpoints/facedetect" target="_blank">FACEDETECT</a> is the analysis endpoint that must be called first. It <strong>outputs the rectangle coordinates for each detected face</strong> in a given image or video frame. This endpoint, its expected parameter, and JSON output result is documented <a class="link" href="endpoints/facedetect">here</a>.</li>
+                        <li><a class="link" href="endpoints/crop" target="_blank">CROP</a> is called later after we obtain the rectangle coordinates for all the detected faces. In which case, we simply pass these coordinates to <em>crop</em> untouched and the target region of the image where each face is located is extracted. Find out more information about the <em>CROP</em> endpoint <a class="link" href="endpoints/crop">here</a>.</li>
+                        <li>Alternatively, if you prefer marking the face(s) instead of extracting it, you can rely on the <a class="link" href="endpoints/drawrectangle">DRAWRECTANGLE</a> endpoint to perform such task.</li>
+                      </ul>
+                    </div>
                     <div class="gradient-graph-line mb-5 mt-3 h-1 w-full"></div>
                     <div>
                       <h3 class="text-center text-2xl font-semibold text-primary">The Code</h3>
@@ -824,7 +825,8 @@
                   </button>
                   <div class="overflow-y-auto p-4">
                     <p class="mt-1">
-                      In this sample, we shall mimic the famous Snapchat filters on a set of human faces. Actually, producing those filters is quite easy and require only three API endpoints: <a class="link" href="endpoints/facelandmarks" target="_blank">facelandmarks</a>, <a class="link" href="endpoints/smartresize" target="_blank">smartresize</a> &amp; <a class="link" href="endpoints/merge" target="_blank">merge</a> plus a bunch of other optional endpoints for cool background effects if desired.
+                      In this sample, we shall mimic the famous Snapchat filters on a set of human faces. Actually, producing those filters is quite easy and require only three API endpoints: <a class="link" href="endpoints/facelandmarks" target="_blank">facelandmarks</a>, <a class="link" href="endpoints/smartresize" target="_blank">smartresize</a> &amp; <a class="link" href="endpoints/merge" target="_blank">merge</a> plus a bunch of other optional endpoints for cool background effects if
+                      desired.
                     </p>
                     <div class="my-5 text-center">
                       <p class="text-muted"><small>1957 Elia Kazan film “A Face in the Crowd.” Photo courtesy of Warner Bros.</small></p>
@@ -902,8 +904,8 @@
                       <div>
                         <ul class="list">
                           <li>
-                            <a class="link" href="endpoints/facelookup" target="_blank">FACELOOKUP</a> is the sole endpoint needed for such operation. It expects two images: one holding the target face to search for and the other, the people crowd for the lookup operation. When done, a <strong>bounding box</strong> and a <strong>confidence threshold</strong> are returned that you can use to evaluate the search operation and extract the best candidate. Find out more about the <em>facelookup</em> API
-                            endpoint <a class="link" href="endpoints/facelookup" target="_blank">here</a>.
+                            <a class="link" href="endpoints/facelookup" target="_blank">FACELOOKUP</a> is the sole endpoint needed for such operation. It expects two images: one holding the target face to search for and the other, the people crowd for the lookup operation. When done, a <strong>bounding box</strong> and a <strong>confidence threshold</strong> are returned that you can use to evaluate the search operation and extract the best candidate. Find out more about the
+                            <em>facelookup</em> API endpoint <a class="link" href="endpoints/facelookup" target="_blank">here</a>.
                           </li>
                         </ul>
                       </div>
@@ -960,14 +962,14 @@
                         <ul class="list">
                           <li>
                             <p>
-                              Most Analysis &amp; Processing endpoints let you upload a media file to be analyzed or processed directly by sending a <strong><em>multipart/form-data</em> POST</strong> request. Nevertheless, very few endpoints such as <a class="link" href="endpoints/ocr" target="_blank">OCR</a>, <a class="link" href="endpoints/mogrify" target="_blank">MOGRIFY</a>, <a class="link" href="endpoints/facecompare" target="_blank">FACECOMPARE</a>, etc. require that the target file be remotely
-                              available before processing. In such case, <a class="link" href="endpoints/store" target="_blank">STORE</a> is of particular help.
+                              Most Analysis &amp; Processing endpoints let you upload a media file to be analyzed or processed directly by sending a <strong><em>multipart/form-data</em> POST</strong> request. Nevertheless, very few endpoints such as <a class="link" href="endpoints/ocr" target="_blank">OCR</a>, <a class="link" href="endpoints/mogrify" target="_blank">MOGRIFY</a>, <a class="link" href="endpoints/facecompare" target="_blank">FACECOMPARE</a>, etc. require that the target file be
+                              remotely available before processing. In such case, <a class="link" href="endpoints/store" target="_blank">STORE</a> is of particular help.
                             </p>
                           </li>
                           <li>
                             <p>
-                              The <a class="link" href="endpoints/store" target="_blank">STORE</a> endpoint let you upload a local file whether video or image to the remote <a class="link" href="https://pixlab.xyz" target="_blank">pixlab.xyz</a> storage server or your <strong>own S3 bucket</strong> depending on the configuration from your <a class="link" href="https://console.pixlab.io/" target="_blank">dashboard</a>. After that, you can use the output link for other purposes such as processing via
-                              <a class="link" href="endpoints/mogrify" target="_blank">MOGRIFY</a>, <a class="link" href="endpoints/drawrectangles" target="_blank">DRAWRECTANGLES</a>, etc. or simply serving content. Find out more information about the <em>store</em> endpoint <a class="link" href="endpoints/store" target="_blank">here</a>.
+                              The <a class="link" href="endpoints/store" target="_blank">STORE</a> endpoint let you upload a local file whether video or image to the remote <a class="link" href="https://pixlab.xyz" target="_blank">pixlab.xyz</a> storage server or your <strong>own S3 bucket</strong> depending on the configuration from your <a class="link" href="https://console.pixlab.io/" target="_blank">dashboard</a>. After that, you can use the output link for other purposes such as processing
+                              via <a class="link" href="endpoints/mogrify" target="_blank">MOGRIFY</a>, <a class="link" href="endpoints/drawrectangles" target="_blank">DRAWRECTANGLES</a>, etc. or simply serving content. Find out more information about the <em>store</em> endpoint <a class="link" href="endpoints/store" target="_blank">here</a>.
                             </p>
                           </li>
                         </ul>
@@ -1085,8 +1087,8 @@
                       <div>
                         <ul class="list-disc space-y-4 pl-5 marker:text-blue-600">
                           <li>
-                            <a class="link" href="endpoints/facemotion" target="_blank">FACEMOTION</a> is the sole endpoint needed to perform such a task. It should output the rectangle coordinates for each detected human face that you can pass verbatim if desired to other processing endpoints like <a class="link" href="endpoints/crop" target="_blank">crop</a> or <a class="link" href="endpoints/mogrify" target="_blank">mogrify</a> plus the age, gender and emotion pattern of the target face based on its
-                            facial shape.<br />Find out more information about <em>facemotion</em> <a class="link" href="endpoints/facemotion" target="_blank">here</a>.
+                            <a class="link" href="endpoints/facemotion" target="_blank">FACEMOTION</a> is the sole endpoint needed to perform such a task. It should output the rectangle coordinates for each detected human face that you can pass verbatim if desired to other processing endpoints like <a class="link" href="endpoints/crop" target="_blank">crop</a> or <a class="link" href="endpoints/mogrify" target="_blank">mogrify</a> plus the age, gender and emotion pattern of the target face based
+                            on its facial shape.<br />Find out more information about <em>facemotion</em> <a class="link" href="endpoints/facemotion" target="_blank">here</a>.
                           </li>
                         </ul>
                       </div>
@@ -1437,7 +1439,7 @@
                   </button>
                   <div class="overflow-y-auto p-4">
                     <p class="mb-4">In this sample, we'll programmatically generate a <em>funny MEME</em> by drawing some funny text on top of the famous Cool Cat. Given an input image, output the following:</p>
-                    <div class="mt-5 mx-auto max-w-4xl flex flex-col justify-between gap-4 md:flex-row">
+                    <div class="mx-auto mt-5 flex max-w-4xl flex-col justify-between gap-4 md:flex-row">
                       <div>
                         <p class="text-center text-muted"><em>Input Picture</em></p>
                         <img class="mb-3" src="assets/images/jdr.jpg" alt="input picture" />
@@ -1449,8 +1451,8 @@
                     </div>
                     <ul class="list">
                       <li>
-                        <a class="link" href="endpoints/drawtext" target="_blank">DRAWTEXT</a> is the sole endpoint needed to generate such image. It expect the text to be displayed on <strong>TOP</strong>, <strong>CENTER</strong> or <strong>BOTTOM</strong> of the target image. This endpoint is so flexible that you can supply <em>Font Name</em>, <em>Size</em> &amp; <em>Color</em>, <em>Stroke width</em>, etc. Refer to <a class="link" href="endpoints/drawtext" target="_blank">DRAWTEXT</a> documentation
-                        for additional information. Notice that there is a more flexible endpoint named <a class="link" href="endpoints/drawtextat" target="_blank">DRAWTEXTAT</a> which let you draw text on <strong>any region</strong> of the target image by specifying the <em>X</em> &amp; <em>Y</em> coordinates instead.
+                        <a class="link" href="endpoints/drawtext" target="_blank">DRAWTEXT</a> is the sole endpoint needed to generate such image. It expect the text to be displayed on <strong>TOP</strong>, <strong>CENTER</strong> or <strong>BOTTOM</strong> of the target image. This endpoint is so flexible that you can supply <em>Font Name</em>, <em>Size</em> &amp; <em>Color</em>, <em>Stroke width</em>, etc. Refer to
+                        <a class="link" href="endpoints/drawtext" target="_blank">DRAWTEXT</a> documentation for additional information. Notice that there is a more flexible endpoint named <a class="link" href="endpoints/drawtextat" target="_blank">DRAWTEXTAT</a> which let you draw text on <strong>any region</strong> of the target image by specifying the <em>X</em> &amp; <em>Y</em> coordinates instead.
                       </li>
                     </ul>
                     <div class="gradient-graph-line mb-5 mt-3 h-1 w-full"></div>
