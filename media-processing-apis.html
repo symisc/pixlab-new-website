@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blank Page Templates</title>
+    <title>Media processing API for images and videos | Pixlab.io</title>
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://pixlab.io/" />
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
@@ -11,6 +11,28 @@
     <meta name="keywords" content="PixLab, API, documentation, code samples, getting started, pricing" />
     <link rel="stylesheet" href="assets/css/unicons/css/line.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <style>
+      /* Custom Styles */
+      .code-container {
+        background-color: #1f2937;
+        color: #ffffff;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+      }
+      .code-comment {
+        color: #60a5fa; /* Default: Tailwind's blue-400 */
+      }
+      .code-command {
+        color: #22c55e; /* Default: Tailwind's green-500 */
+      }
+      .code-url {
+        color: #d1d5db; /* Default: Tailwind's gray-300 */
+      }
+      .code-key {
+        color: #facc15; /* Default: Tailwind's yellow-300 */
+      }
+    </style>
   </head>
   <body>
     <!-- Header/Navbar -->
@@ -190,43 +212,491 @@
           </div>
         </div>
       </section>
-      <!-- Content Section -->
-      <section>
-        <div class="mx-auto w-full max-w-screen-xl px-5 pb-36 pt-8">
-          <!-- Social Bar -->
-          <div class="flex flex-wrap items-center justify-between gap-5 pb-3">
-            <img class="dark-logo w-36" title="Machine Vision & Media Processing APIs | PixLab" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" title="Machine Vision & Media Processing APIs" />
-            <p class="text-sm text-muted">
-              <span>Version 2.197</span>
-              <span>(<a href="https://blog.pixlab.io/2025/01/pixlab-api-2-released-with-new-api-portal-and-over-150-endpoints" target="_blank" class="text-primary hover:text-secondary">Release Notes &nearr;</a>)</span>
-            </p>
-            <div class="flex flex-wrap">
-              <iframe loading="lazy" src="https://ghbtns.com/github-btn.html?user=symisc&repo=pixlab&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-              <iframe loading="lazy" src="https://ghbtns.com/github-btn.html?user=symisc&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-            </div>
-            <!-- AddToAny BEGIN -->
-            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-              <a class="a2a_button_google_gmail"></a>
-              <a class="a2a_button_email"></a>
-              <a class="a2a_button_linkedin"></a>
-              <a class="a2a_button_twitter"></a>
-              <a class="a2a_button_facebook_messenger"></a>
-              <a class="a2a_button_facebook"></a>
-              <a class="a2a_button_hacker_news"></a>
-            </div>
-            <script async src="https://static.addtoany.com/menu/page.js"></script>
-            <!-- AddToAny END -->
-          </div>
-          <article class="mt-5">
-            <div class="gradient-graph-line mb-5 h-1 w-full"></div>
-            <p class="text-tColor">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit lacus, sagittis in eros sed, lobortis cursus felis. In eu accumsan enim. Sed luctus, diam non dictum lobortis, augue quam tristique velit, at fermentum enim turpis in urna. Pellentesque ac imperdiet libero. Suspendisse non placerat urna. Praesent sit amet varius ex. Pellentesque mollis arcu augue, a ultricies dui congue eget.</p>
-          </article>
 
-          <article class="mt-12">
-            <h2 class="mb-5 text-center text-2xl font-semibold text-tColor">PixLab Tool Name</h2>
-            <div class="gradient-graph-line mb-5 h-1 w-full"></div>
-            <p class="text-tColor">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit lacus, sagittis in eros sed, lobortis cursus felis. In eu accumsan enim. Sed luctus, diam non dictum lobortis, augue quam tristique velit.</p>
-          </article>
+      <section>
+        <div class="px-5 py-10">
+          <h3 class="text-center text-lg text-muted">Built for scale, trusted by thousands</h3>
+
+          <div id="pricing-brands-carousel" class="pricing-brands-carousel relative mt-5 overflow-hidden whitespace-nowrap py-7">
+            <div class="brands-wrapper inline-block">
+              <img class="w-36 object-contain" src="assets/images/brand-creative-zone.png" alt="Creative Zone" />
+              <img class="w-36 object-contain" src="assets/images/brand-reygroup.png" alt="Reygroup" />
+              <img class="w-36 object-contain" src="assets/images/brand-media-hub.png" alt="Media Hub" />
+              <img class="w-36 object-contain" src="assets/images/brand-all-travel.png" alt="All Travel" />
+              <img class="w-36 object-contain" src="assets/images/brand-perform-line.png" alt="Perform Line" />
+              <img class="w-36 object-contain" src="assets/images/brand-hub-people.png" alt="Hub People" />
+              <img class="w-36 object-contain" src="assets/images/brand-register-play.png" alt="Register Play" />
+              <img class="w-36 object-contain" src="assets/images/brand-all-travel.png" alt="All Travel" />
+            </div>
+
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                const carousel = document.querySelector("#pricing-brands-carousel");
+                const brandsWrapper = carousel?.querySelector(".brands-wrapper");
+
+                // Clone and append the brands wrapper
+                if (!carousel || !brandsWrapper) return;
+                const brandsWrapperClone = brandsWrapper.cloneNode(true);
+                carousel.appendChild(brandsWrapperClone);
+              });
+            </script>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="mx-auto mt-8 w-full max-w-screen-xl px-5 py-10 leading-8">
+          <div class="grid gap-8 md:grid-cols-2">
+            <!-- Left Section -->
+            <div>
+              <h1 class="mb-4 text-4xl font-bold text-tColor">
+                Simplify Media Processing <br />
+                with PixLab APIs
+              </h1>
+              <p class="mb-6 text-lg text-muted">Enhance your media workflows with PixLab’s powerful and scalable APIs. Seamlessly upload, process, and deliver media content across various platforms in record time.</p>
+              <!-- <p class="text-lg font-medium mb-4 text-tColor">Pick and choose the parts of Bytescale you need:</p> -->
+              <ul class="space-y-4 text-tColor">
+                <li class="flex items-center">
+                  <div class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-pink-100 text-pink-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span class="ml-3">Image, Video & Audio APIs</span>
+                </li>
+                <li class="flex items-center">
+                  <div class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-pink-100 text-pink-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span class="ml-3">Built-in Storage & External Storage</span>
+                </li>
+                <li class="flex items-center">
+                  <div class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-pink-100 text-pink-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span class="ml-3">Content Delivery Network (CDN)</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Right Section -->
+            <div>
+              <div class="code-container">
+        <pre><span class="code-command">curl</span> <span class="code-url">https://api.pixlab.io/v1/media/upload</span> \
+-u apikey:<span class="code-key">YOUR_API_KEY</span> \
+-F file=@<span class="code-key">your-image.jpg</span>
+
+<span class="code-comment"># Process the uploaded image</span>
+<span class="code-command">curl</span> <span class="code-url">https://api.pixlab.io/v1/media/process</span> \
+-u apikey:<span class="code-key">YOUR_API_KEY</span> \
+-d url=<span class="code-url">https://pixlab.io/your-image.jpg</span> \
+-d filters=resize:800x800</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="mx-auto mt-8 w-full max-w-screen-xl px-5 py-16 leading-8">
+          <div class="mx-auto lg:max-w-5xl text-center">
+            <h1 class="mb-4 text-4xl font-bold text-tColor">Works Seamlessly with Your Storage Solutions</h1>
+            <p class="mt-6 text-lg text-muted">PixLab's Media Processing API integrates effortlessly with all major cloud storage services and HTTP servers. Whether your assets are distributed across multiple locations or you plan to migrate storage in the future, PixLab guarantees seamless real-time optimization, transformation, and delivery for your media files, ensuring high-performance streaming and processing of images and videos.</p>
+          </div>
+          <div class="mt-12 flex items-center justify-center gap-x-20">
+            <div>
+              <img src="assets/images/aws.webp" class="max-h-10" alt="" />
+            </div>
+            <div>
+              <img src="assets/images/google-cloud.webp" class="max-h-10" alt="" />
+            </div>
+            <div>
+              <img src="assets/images/akeneo.webp" class="max-h-10" alt="" />
+            </div>
+            <div>
+              <img src="assets/images/digitalocean-logo-vector.svg" class="max-h-10" alt="" />
+            </div>
+            <div>
+              <img src="assets/images/cld.webp" class="max-h-10" alt="" />
+            </div>
+            <div>
+              <img src="assets/images/azure.webp" class="max-h-10" alt="" />
+            </div>
+            <div>
+              <img src="assets/images/google-drive.webp" class="max-h-10" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-16">
+          <div class="flex flex-col gap-10">
+            <!-- Single Row -->
+            <div class="flex flex-col items-start gap-16 pb-16 md:flex-row-reverse">
+              <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+                <div class="mt-5">
+                  <h2 class="text-3xl font-semibold text-apeTColor">Generate Images with Text Prompts</h2>
+                  <p class="mt-5 text-apeTColor">Transform your ideas into visuals by using descriptive text prompts directly in the URL. This functionality allows seamless integration with other PixLab transformations, enabling you to create unique assets on demand, effortlessly and at scale.</p>
+                    <div class="flex gap-5 mt-5">
+                        <button class="gradient-button rounded-lg p-[1px] font-medium text-tColor">
+                            <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                            <span>Learn more</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+              </div>
+              <div class="flex w-full max-w-full flex-1 shadow-lg">
+                <div class="min-w-full overflow-x-auto rounded-lg bg-gray-800">
+                  <div class="flex items-center border-b border-slate-500 p-2">
+                    <div class="px-1">
+                      <span class="inline-block h-2 w-2 rounded-full bg-[#ff605c] p-[1px]"></span>
+                    </div>
+                    <div class="px-1">
+                      <span class="inline-block h-2 w-2 rounded-full bg-[#ffbd44] p-[1px]"></span>
+                    </div>
+                    <div class="px-1">
+                      <span class="inline-block h-2 w-2 rounded-full bg-[#00ca4e] p-[1px]"></span>
+                    </div>
+                  </div>
+                  <!-- Card content -->
+<div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-full xl:max-w-2xl leading-[1.6]"><pre style="font-family:monospace;color: rgb(201, 209, 217); white-space: break-spaces; font-weight: 400; "><span style="color: rgb(139, 148, 158); font-weight: 400;">// Sample fetch request to generate an image using PixLab's Media Processing API</span>
+    <span style="color: rgb(255, 123, 114); font-weight: 400;">const</span> apiKey = <span style="color: rgb(165, 214, 255); font-weight: 400;">"YOUR_API_KEY"</span>;
+    <span style="color: rgb(255, 123, 114); font-weight: 400;">const</span> prompt = <span style="color: rgb(165, 214, 255); font-weight: 400;">"sunset over mountains in watercolor style"</span>;
+    <span style="color: rgb(255, 123, 114); font-weight: 400;">const</span> url = <span style="color: rgb(165, 214, 255); font-weight: 400;">`https://api.pixlab.io/media/process?api_key=<span style="color: rgb(201, 209, 217); font-weight: 400;">${apiKey}</span>&amp;prompt=<span style="color: rgb(201, 209, 217); font-weight: 400;">${<span style="color: rgb(255, 166, 87); font-weight: 400;">encodeURIComponent</span>(prompt)}</span>&amp;format=png`</span>;
+    
+    <span style="color: rgb(210, 168, 255); font-weight: 400;">fetch</span>(url)
+      .<span style="color: rgb(210, 168, 255); font-weight: 400;">then</span>(<span style="color: rgb(201, 209, 217); font-weight: 400;">(<span style="color: rgb(201, 209, 217); font-weight: 400;">response</span>) =&gt;</span> {
+        <span style="color: rgb(255, 123, 114); font-weight: 400;">if</span> (!response.<span style="color: rgb(201, 209, 217); font-weight: 400;">ok</span>) {
+          <span style="color: rgb(255, 123, 114); font-weight: 400;">throw</span> <span style="color: rgb(255, 123, 114); font-weight: 400;">new</span> <span style="color: rgb(210, 168, 255); font-weight: 400;">Error</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"Failed to process the image"</span>);
+        }
+        <span style="color: rgb(255, 123, 114); font-weight: 400;">return</span> response.<span style="color: rgb(210, 168, 255); font-weight: 400;">json</span>();
+      })
+      .<span style="color: rgb(210, 168, 255); font-weight: 400;">then</span>(<span style="color: rgb(201, 209, 217); font-weight: 400;">(<span style="color: rgb(201, 209, 217); font-weight: 400;">data</span>) =&gt;</span> {
+        <span style="color: rgb(255, 123, 114); font-weight: 400;">console</span>.<span style="color: rgb(210, 168, 255); font-weight: 400;">log</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"Generated image URL:"</span>, data.<span style="color: rgb(201, 209, 217); font-weight: 400;">image_url</span>);
+      })
+      .<span style="color: rgb(210, 168, 255); font-weight: 400;">catch</span>(<span style="color: rgb(201, 209, 217); font-weight: 400;">(<span style="color: rgb(201, 209, 217); font-weight: 400;">error</span>) =&gt;</span> <span style="color: rgb(255, 123, 114); font-weight: 400;">console</span>.<span style="color: rgb(210, 168, 255); font-weight: 400;">error</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"Error:"</span>, error));</pre></div>
+</div>
+              </div>
+            </div>
+            <!-- Single Row -->
+            <div class="flex flex-col items-start gap-16 md:flex-row">
+              <div class="flex flex-1 flex-col items-center self-start text-center md:items-start md:text-start">
+                <div class="mt-5">
+                  <h2 class="text-3xl font-semibold text-apeTColor">Create Stunning Personalized Marketing Visuals</h2>
+                  <p class="mt-5 text-apeTColor">Elevate your marketing game with PixLab's Layers API. Effortlessly add watermarks, overlay text, and combine images or videos to craft dynamic, custom visuals that captivate your audience at scale.</p>
+                  <ul class="space-y-4 text-tColor mt-5">
+                    <li class="flex items-center">
+                      <div class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-pink-100 text-pink-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span class="ml-3">Automatically embed product information onto images and videos.</span>
+                    </li>
+                    <li class="flex items-center">
+                      <div class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-pink-100 text-pink-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span class="ml-3">Combine multiple assets to create engaging multi-product collages.</span>
+                    </li>
+                    <li class="flex items-center">
+                      <div class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-pink-100 text-pink-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span class="ml-3">Design tailored banners and ads for your specific target audience.</span>
+                    </li>
+                    <li class="flex items-center">
+                      <div class="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-pink-100 text-pink-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span class="ml-3">Generate localized, multi-lingual visuals for global campaigns.</span>
+                    </li>
+                  </ul>
+                  <div class="flex gap-5">
+                    <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-apePrimary bg-apePrimary px-3 py-1.5 text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-apePrimary" href="#">Read more</a>
+                    <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-apePrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-apePrimary transition-all duration-500 hover:bg-apePrimary hover:text-white" href="#">Learn more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="flex w-full max-w-full flex-1 shadow-lg">
+                <div class="min-w-full overflow-x-auto rounded-lg bg-gray-800">
+                  <div class="flex items-center border-b border-slate-500 p-2">
+                    <div class="px-1">
+                      <span class="inline-block h-2 w-2 rounded-full bg-[#ff605c] p-[1px]"></span>
+                    </div>
+                    <div class="px-1">
+                      <span class="inline-block h-2 w-2 rounded-full bg-[#ffbd44] p-[1px]"></span>
+                    </div>
+                    <div class="px-1">
+                      <span class="inline-block h-2 w-2 rounded-full bg-[#00ca4e] p-[1px]"></span>
+                    </div>
+                  </div>
+                  <!-- Card content -->
+<div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl  leading-[1.6]"><pre style="font-family:monospace;color: rgb(201, 209, 217); font-weight: 400; white-space: break-spaces;"><span style="color: rgb(139, 148, 158); font-weight: 400;">// Sample fetch request to personalize media with watermarks and text overlays</span>
+<span style="color: rgb(255, 123, 114); font-weight: 400;">const</span> apiKey = <span style="color: rgb(165, 214, 255); font-weight: 400;">"YOUR_API_KEY"</span>;
+<span style="color: rgb(255, 123, 114); font-weight: 400;">const</span> imageUrl = <span style="color: rgb(165, 214, 255); font-weight: 400;">"https://example.com/sample-image.jpg"</span>;
+<span style="color: rgb(255, 123, 114); font-weight: 400;">const</span> watermarkText = <span style="color: rgb(165, 214, 255); font-weight: 400;">"Exclusive Offer!"</span>;
+<span style="color: rgb(255, 123, 114); font-weight: 400;">const</span> overlayImage = <span style="color: rgb(165, 214, 255); font-weight: 400;">"https://example.com/logo.png"</span>;
+
+<span style="color: rgb(255, 123, 114); font-weight: 400;">const</span> url = <span style="color: rgb(165, 214, 255); font-weight: 400;">`https://api.pixlab.io/v1/media/process?api_key=<span style="color: rgb(201, 209, 217); font-weight: 400;">${apiKey}</span>&amp;url=<span style="color: rgb(201, 209, 217); font-weight: 400;">${<span style="color: rgb(255, 166, 87); font-weight: 400;">encodeURIComponent</span>(imageUrl)}</span>&amp;overlay_text=<span style="color: rgb(201, 209, 217); font-weight: 400;">${<span style="color: rgb(255, 166, 87); font-weight: 400;">encodeURIComponent</span>(watermarkText)}</span>&amp;overlay_image=<span style="color: rgb(201, 209, 217); font-weight: 400;">${<span style="color: rgb(255, 166, 87); font-weight: 400;">encodeURIComponent</span>(overlayImage)}</span>`</span>;
+
+<span style="color: rgb(210, 168, 255); font-weight: 400;">fetch</span>(url)
+    .<span style="color: rgb(210, 168, 255); font-weight: 400;">then</span>(<span style="color: rgb(201, 209, 217); font-weight: 400;">(<span style="color: rgb(201, 209, 217); font-weight: 400;">response</span>) =&gt;</span> {
+    <span style="color: rgb(255, 123, 114); font-weight: 400;">if</span> (!response.<span style="color: rgb(201, 209, 217); font-weight: 400;">ok</span>) {
+        <span style="color: rgb(255, 123, 114); font-weight: 400;">throw</span> <span style="color: rgb(255, 123, 114); font-weight: 400;">new</span> <span style="color: rgb(210, 168, 255); font-weight: 400;">Error</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"Failed to process the image"</span>);
+    }
+    <span style="color: rgb(255, 123, 114); font-weight: 400;">return</span> response.<span style="color: rgb(210, 168, 255); font-weight: 400;">json</span>();
+    })
+    .<span style="color: rgb(210, 168, 255); font-weight: 400;">then</span>(<span style="color: rgb(201, 209, 217); font-weight: 400;">(<span style="color: rgb(201, 209, 217); font-weight: 400;">data</span>) =&gt;</span> {
+    <span style="color: rgb(255, 123, 114); font-weight: 400;">console</span>.<span style="color: rgb(210, 168, 255); font-weight: 400;">log</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"Personalized Media URL:"</span>, data.<span style="color: rgb(201, 209, 217); font-weight: 400;">image_url</span>);
+    <span style="color: rgb(139, 148, 158); font-weight: 400;">// Optionally, display the result in your application</span>
+    <span style="color: rgb(255, 123, 114); font-weight: 400;">document</span>.<span style="color: rgb(210, 168, 255); font-weight: 400;">getElementById</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"imagePreview"</span>).<span style="color: rgb(201, 209, 217); font-weight: 400;">src</span> = data.<span style="color: rgb(201, 209, 217); font-weight: 400;">image_url</span>;
+    })
+    .<span style="color: rgb(210, 168, 255); font-weight: 400;">catch</span>(<span style="color: rgb(201, 209, 217); font-weight: 400;">(<span style="color: rgb(201, 209, 217); font-weight: 400;">error</span>) =&gt;</span> <span style="color: rgb(255, 123, 114); font-weight: 400;">console</span>.<span style="color: rgb(210, 168, 255); font-weight: 400;">error</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"Error:"</span>, error));
+</pre></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+            <div class="mx-auto lg:max-w-5xl text-center">
+                <h1 class="mb-4 text-4xl font-bold text-tColor">Unlock the Power of PixLab Features</h1>
+                <p class="mt-6 text-lg text-muted">Explore the comprehensive suite of features PixLab offers to revolutionize your media workflows. From advanced AI-driven tools to seamless API integration, PixLab empowers developers and businesses to automate, optimize, and scale their media processing needs effortlessly. </p>
+              </div>
+            <!-- Cards Grid -->
+          <div class="mb-14 mt-12 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Single API Card -->
+            <div class="flex h-full flex-col overflow-hidden rounded-xl border border-bColor bg-surface shadow-lg">
+              <img class="aspect-video w-full rounded-xl object-cover" src="assets/images/ai-photo-editor__pyramid.png" alt="Text Inpainting" />
+              <div class="flex flex-grow flex-col justify-between px-4 py-6">
+                <div>
+                  <h2>
+                    <a href="#" class="text-xl font-semibold text-primary hover:underline">Text Inpainting</a>
+                  </h2>
+                  <p class="mt-5 text-tColor">Ever wanted to replace a object in a picture, or add something nice in the background. Based on artificial intelligence, this API enables you to do inpainting and update part of an image describing what you want instead.</p>
+                </div>
+                <a class="gradient-button mt-6 block rounded-lg p-[1px] font-medium text-primary" href="#">
+                  <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                    <span>Documentation and code samples</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Single API Card -->
+            <div class="flex h-full flex-col overflow-hidden rounded-xl border border-bColor bg-surface shadow-lg">
+              <img class="aspect-video w-full rounded-xl object-cover" src="assets/images/ai-photo-editor__ai-tools.png" alt="Uncrop" />
+              <div class="flex flex-grow flex-col justify-between px-4 py-6">
+                <div>
+                  <h2>
+                    <a href="#" class="text-xl font-semibold text-primary hover:underline">Uncrop</a>
+                  </h2>
+                  <p class="mt-5 text-tColor">Uncrop your pictures to any format, extend bodies, objects, or sceneries to enlarge your perspective and get your picture with just the right amount of context.</p>
+                </div>
+                <a class="gradient-button mt-6 block rounded-lg p-[1px] font-medium text-primary" href="#">
+                  <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                    <span>Documentation and code samples</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Single API Card -->
+            <div class="flex h-full flex-col overflow-hidden rounded-xl border border-bColor bg-surface shadow-lg">
+              <img class="aspect-video w-full rounded-xl object-cover" src="assets/images/creative-toolbox__carousel-img-4.png" alt="Remove Background" />
+              <div class="flex flex-grow flex-col justify-between px-4 py-6">
+                <div>
+                  <h2>
+                    <a href="#" class="text-xl font-semibold text-primary hover:underline">Remove Background</a>
+                  </h2>
+                  <p class="mt-5 text-tColor">With the Clipdrop background removal API, you can quickly remove the background of any image with incredible accuracy without having to do a bunch of extra work! It's the most accurate background removal solution available on the market.</p>
+                </div>
+                <a class="gradient-button mt-6 block rounded-lg p-[1px] font-medium text-primary" href="#">
+                  <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                    <span>Documentation and code samples</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Single API Card -->
+            <div class="flex h-full flex-col overflow-hidden rounded-xl border border-bColor bg-surface shadow-lg">
+              <img class="aspect-video w-full rounded-xl object-cover" src="assets/images/m3.jpg" alt="Image upscaling" />
+              <div class="flex flex-grow flex-col justify-between px-4 py-6">
+                <div>
+                  <h2>
+                    <a href="#" class="text-xl font-semibold text-primary hover:underline">Image upscaling</a>
+                  </h2>
+                  <p class="mt-5 text-tColor">Sometimes the only thing preventing you from displaying a memorable picture is its low resolution. With the image upscaling API, transform your low resolution image into an ultra sharp high resolution image. Leaning on advanced computer vision algorithms you can upscale your up to x16.</p>
+                </div>
+                <a class="gradient-button mt-6 block rounded-lg p-[1px] font-medium text-primary" href="#">
+                  <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                    <span>Documentation and code samples</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Single API Card -->
+            <div class="flex h-full flex-col overflow-hidden rounded-xl border border-bColor bg-surface shadow-lg">
+              <img class="aspect-video w-full rounded-xl object-cover" src="assets/images/oil.jpg" alt="Cleanup" />
+              <div class="flex flex-grow flex-col justify-between px-4 py-6">
+                <div>
+                  <h2>
+                    <a href="#" class="text-xl font-semibold text-primary hover:underline">Cleanup</a>
+                  </h2>
+                  <p class="mt-5 text-tColor">Too many photos contain unwanted objects, text, or persons. Now, you can simply remove all these flaws with Cleanup API. Based on artificial intelligence, this API enables you to clean and remove flaws from photographs, such as strangers in the background or blemishes on portraits.</p>
+                </div>
+                <a class="gradient-button mt-6 block rounded-lg p-[1px] font-medium text-primary" href="#">
+                  <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                    <span>Documentation and code samples</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Single API Card -->
+            <div class="flex h-full flex-col overflow-hidden rounded-xl border border-bColor bg-surface shadow-lg">
+              <img class="aspect-video w-full rounded-xl object-cover" src="assets/images/stablediffusion_overview.jpg" alt="Reimagine" />
+              <div class="flex flex-grow flex-col justify-between px-4 py-6">
+                <div>
+                  <h2>
+                    <a href="#" class="text-xl font-semibold text-primary hover:underline">Reimagine</a>
+                  </h2>
+                  <p class="mt-5 text-tColor">Reimagine and view your images differently with the Reimagine API. Based on your input image, we leverage the latest Stable Diffusion tech to create an infinite number of variations to suit all your use cases!</p>
+                </div>
+                <a class="gradient-button mt-6 block rounded-lg p-[1px] font-medium text-primary" href="#">
+                  <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                    <span>Documentation and code samples</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <!-- FAQ -->
+          <div class="mx-auto max-w-[85rem]">
+            <!-- Title -->
+            <div class="mx-auto my-10 max-w-2xl text-center lg:mb-14">
+              <h2 class="text-center text-3xl font-semibold text-apeTColor lg:text-4xl">Your questions, answered</h2>
+              <p class="mt-3 text-center text-apeTGray">Answers to the most frequently asked questions.</p>
+            </div>
+            <!-- End Title -->
+
+            <div class="mx-auto max-w-2xl">
+              <!-- Accordion -->
+              <div class="hs-accordion-group divide-dark divide-y divide-gray-200">
+                <div class="hs-accordion active pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-one">
+                  <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="true" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
+                    Lorem ipsum dolor sit amet consectetur adipisicing?
+                    <svg class="block size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                    <svg class="hidden size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+                  </button>
+                  <div id="hs-basic-with-title-and-arrow-stretched-collapse-one" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one">
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!</p>
+                  </div>
+                </div>
+
+                <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                  <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                    Lorem ipsum dolor sit amet consectetur adipisicing?
+                    <svg class="block size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                    <svg class="hidden size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+                  </button>
+                  <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!</p>
+                  </div>
+                </div>
+                <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                  <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                    Lorem ipsum dolor sit amet consectetur adipisicing?
+                    <svg class="block size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                    <svg class="hidden size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+                  </button>
+                  <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!</p>
+                  </div>
+                </div>
+                <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                  <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                    Lorem ipsum dolor sit amet consectetur adipisicing?
+                    <svg class="block size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                    <svg class="hidden size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+                  </button>
+                  <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!</p>
+                  </div>
+                </div>
+                <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                  <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                    Lorem ipsum dolor sit amet consectetur adipisicing?
+                    <svg class="block size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                    <svg class="hidden size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+                  </button>
+                  <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!</p>
+                  </div>
+                </div>
+              </div>
+              <!-- End Accordion -->
+            </div>
+          </div>
+          <!-- End FAQ -->
+        </div>
+      </section>
+
+      <!-- PixLab's APIs Links Section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <h2 class="text-center text-lg font-medium text-muted">Explore Endless Possibilities with PixLab's APIs</h2>
+
+          <div class="mt-10 flex flex-col flex-wrap justify-center gap-2 gap-y-3 sm:flex-row">
+            <button class="gradient-button rounded-lg p-[1px] font-medium text-tColor">
+              <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                <span>START GET STARTED</span>
+                <i class="uil uil-arrow-up-right"></i>
+              </div>
+            </button>
+            <button class="gradient-button rounded-lg p-[1px] font-medium text-tColor">
+              <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                <span>CODE SAMPLES</span>
+                <i class="uil uil-arrow-up-right"></i>
+              </div>
+            </button>
+            <button class="gradient-button rounded-lg p-[1px] font-medium text-tColor">
+              <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                <span>INTEGRATION</span>
+                <i class="uil uil-arrow-up-right"></i>
+              </div>
+            </button>
+            <button class="gradient-button rounded-lg p-[1px] font-medium text-tColor">
+              <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                <span>API ENDPOINTS</span>
+                <i class="uil uil-arrow-up-right"></i>
+              </div>
+            </button>
+          </div>
         </div>
       </section>
     </main>
