@@ -45,6 +45,11 @@ module.exports = {
         // Creative Toolbox Page Colors
         ctbPrimary: "var(--color-ctb-primary)",
         ctbSecondary: "var(--color-ctb-secondary)",
+
+        // Image Background Removal Page Colors
+        ibrPrimary: "var(--color-ibr-primary)",
+        ibrSecondary: "var(--color-ibr-secondary)",
+        ibrSurface: "var(--color-ibr-surface)",
       },
     },
   },

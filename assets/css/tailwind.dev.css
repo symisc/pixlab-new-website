@@ -51,6 +51,11 @@
     /* Creative Toolbox Page Colors */
     --color-ctb-primary: #ff6331;
     --color-ctb-secondary: #bb17b3;
+
+    /* Image Background Removal Page Colors */
+    --color-ibr-primary: #b37876;
+    --color-ibr-secondary: #fa6d09;
+    --color-ibr-surface: #ffffff;
   }
 
   /* Apply font to all elements */
@@ -85,6 +90,9 @@
 
   /* Annotate Page Colors */
   --color-anno-surface: #0d1016;
+
+  /* Image Background Removal Page Colors */
+  --color-ibr-surface: #1e1818;
 }
 
 body {
@@ -1024,4 +1032,15 @@ body.dark-theme .ctb-card-bg {
 [data-sr="sr-left"].revealed,
 [data-sr="sr-right"].revealed {
   transform: translateX(0);
+}
+
+/* Bulk Image Background Removal Stylings */
+
+.bulk-image-background-removal nav :where(.nav-link, .theme-toggler):hover,
+.bulk-image-background-removal nav .hs-dropdown:hover > button {
+  @apply text-ibrPrimary;
+}
+
+.bulk-image-background-removal .footer-link:hover {
+  @apply text-ibrPrimary;
 }

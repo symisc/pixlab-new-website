@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulk Image Background Removal</title>
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://pixlab.io/bulk-image-background-removal-tool-apis" />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Effortlessly remove backgrounds from multiple images at once using PixLab's bulk image background removal tool. Streamline your workflow with our advanced AI technology." />
+    <meta name="keywords" content="bulk image background removal, image editing, background remover, PixLab, AI photo editor, bulk processing" />
+    <link rel="stylesheet" href="assets/css/unicons/css/line.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="bulk-image-background-removal">
+    <!-- Header/Navbar -->
+    <header class="ape-header-gradient-theme absolute inset-x-0 top-3 z-50 mx-auto flex w-full max-w-[1320px] flex-wrap px-3 before:absolute before:inset-0 before:mx-5 before:max-w-full before:rounded-xl lg:top-5 lg:flex-nowrap lg:justify-start">
+      <nav class="ape-navbar relative mx-2 w-full max-w-screen-xl gap-3 px-3 py-1.5 lg:mx-auto lg:flex lg:items-center lg:justify-between lg:px-1 lg:py-0">
+        <div class="flex items-center justify-between lg:h-full">
+          <!-- Logo -->
+          <a class="nav-logo flex h-full flex-none rounded-md text-xl font-semibold focus:opacity-80 focus:outline-none" href="/" aria-label="PixLab">
+            <img loading="lazy" class="w-28 object-contain lg:w-[137px]" src="assets/images/pixlab-logo-light.png" alt="PixLab Logo" />
+          </a>
+
+          <!-- Toggle Theme and Menu Buttons -->
+          <div class="flex items-center gap-3 lg:hidden">
+            <button class="theme-toggler flex items-center text-tColor">
+              <i class="uil uil-moon text-lg"></i>
+            </button>
+            <div>
+              <button type="button" class="hs-collapse-toggle flex size-8 items-center justify-center rounded-full bg-tColor text-sm font-semibold disabled:pointer-events-none disabled:opacity-50" id="hs-navbar-floating-dark-collapse" aria-expanded="false" aria-controls="hs-navbar-floating-dark" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-floating-dark">
+                <svg class="size-4 shrink-0 text-apeBackground hs-collapse-open:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="3" x2="21" y1="6" y2="6" />
+                  <line x1="3" x2="21" y1="12" y2="12" />
+                  <line x1="3" x2="21" y1="18" y2="18" />
+                </svg>
+                <svg class="hidden size-4 shrink-0 text-apeBackground hs-collapse-open:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 6 6 18" />
+                  <path d="m6 6 12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Menu -->
+        <div id="hs-navbar-floating-dark" class="hs-collapse ape-header-gradient-theme nav-menu hidden flex-1 overflow-hidden transition-all duration-300 lg:flex lg:h-full" aria-labelledby="hs-navbar-floating-dark-collapse">
+          <div class="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
+            <div class="flex w-full flex-col gap-x-3.5 py-2 lg:w-auto lg:flex-row lg:items-center lg:justify-between lg:py-0 lg:ps-6">
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-tColor focus:outline-none lg:p-0" href="start">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#8343EA] bg-[#8343EA] transition-all group-hover:bg-transparent"></span>
+                Get Started
+              </a>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-tColor focus:outline-none lg:p-0" href="api-portal">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#EAA743] bg-[#EAA743] transition-all group-hover:bg-transparent"></span>
+                API Portal
+              </a>
+              <!-- Products & SDKs -->
+              <div class="hs-dropdown group cursor-pointer p-2 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:px-0 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
+                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-tColor focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  <span class="block h-2 w-2 shrink-0 rounded-full border border-[#21db49] bg-[#21db49] transition-all group-hover:bg-transparent"></span>
+                  Products & SDKs
+                  <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div class="hs-dropdown-menu ape-header-gradient-theme top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
+                  <div class="space-y-1 py-1 lg:px-1">
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-tColor focus:outline-none lg:px-3" href="api-endpoints">PixLab API Endpoints</a>
+                    <div class="hs-dropdown relative [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:[--is-collapse:false] lg:[--strategy:absolute] lg:[--trigger:hover]">
+                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-tColor focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        Open Source SDKs <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      </button>
+                      <div class="hs-dropdown-menu ape-header-gradient-theme start-full top-0 z-10 !mx-[10px] -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-start-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
+                        <div class="space-y-1 py-1 lg:px-1">
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-tColor focus:outline-none lg:px-3" href="https://sod.pixlab.io/" target="_blank">SOD - Embedded Computer Vision Library &nearr;</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-tColor focus:outline-none lg:px-3" href="tiny-dream">Tiny Dream - Stable Diffusion Inference in C++</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-tColor focus:outline-none lg:px-3" href="art">ART - Real-Time ASCII Art C Library</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-tColor focus:outline-none lg:px-3" href="downloads">SOD Downloads</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-tColor focus:outline-none lg:px-3" href="sod">SOD Licensing Information</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hs-dropdown relative [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:[--is-collapse:false] lg:[--strategy:absolute] lg:[--trigger:hover]">
+                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-tColor focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        Media Processing <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      </button>
+                      <div class="hs-dropdown-menu ape-header-gradient-theme start-full top-0 z-10 !mx-[10px] -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-start-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
+                        <div class="space-y-1 py-1 lg:px-1">
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-tColor focus:outline-none lg:px-3" href="media-processing-apis">Media Processing APIs</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-tColor focus:outline-none lg:px-3" href="document-image-conversion-apis">Document & Image Conversion APIs</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-tColor focus:outline-none lg:px-3" href="media-analysis-apis">Media Analysis APIs</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-tColor focus:outline-none lg:px-3" href="rest-api">Rest APIs</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-tColor focus:outline-none lg:px-3" href="on-premises">On-Premises Deployment</a>
+                        </div>
+                      </div>
+                    </div>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-tColor focus:outline-none lg:px-3" href="ekyc/">eKYC - ID Scanner APIs</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-tColor focus:outline-none lg:px-3" href="vision-llm-api-playground/">Vision Play, LLM & APIs</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-tColor focus:outline-none lg:px-3" href="template-pdf-media-engine">PDF Template Engine</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-tColor focus:outline-none lg:px-3" href="app-ui-ux-code">APP UX - Mobile UI Code Generator</a>
+                    <!-- NEW PRODUCT ADD -->
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-tColor focus:outline-none lg:px-3" href="https://faceio.net/" target="_blank">FACEIO - Facial Authentication for the Web &nearr;</a>
+                  </div>
+                </div>
+              </div>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-tColor focus:outline-none lg:p-0" href="vision-llm-api-playground/">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#BFEA43] bg-[#BFEA43] transition-all group-hover:bg-transparent"></span>
+                Vision Play &nearr;
+              </a>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-tColor focus:outline-none lg:p-0" href="ekyc/">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#EA4393] bg-[#EA4393] transition-all group-hover:bg-transparent"></span>
+                eKYC APIs &nearr;
+              </a>
+              <!-- Online Creativity dropdown link -->
+              <div class="hs-dropdown group cursor-pointer p-2 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:px-0 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
+                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-tColor focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  <span class="block h-2 w-2 shrink-0 rounded-full border border-[#43AEEA] bg-[#43AEEA] transition-all group-hover:bg-transparent"></span>
+                  Online Creativity
+                  <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div class="hs-dropdown-menu ape-header-gradient-theme top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
+                  <div class="space-y-1 py-1 lg:px-1">
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-tColor focus:outline-none" href="annotate">Annotate - Image Annotation & Labelling</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-tColor focus:outline-none" href="creative-toolbox">Creative Toolbox</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-tColor focus:outline-none" href="mockup-screenshot-editor">Mockup & Screenshot AI Editor</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-tColor focus:outline-none" href="ai-photo-editor">AI Photo Editor</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-tColor focus:outline-none" href="bulk-image-background-removal-tool-apis">Bulk Image Background Removal Tool</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-tColor focus:outline-none" href="tilemap-2d-level-editor">Tilemap & 2D Level Editor</a>
+                    <!-- NEW TOOL ADD -->
+                  </div>
+                </div>
+              </div>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-tColor focus:outline-none lg:p-0" href="pricing">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#4643EA] bg-[#4643EA] transition-all group-hover:bg-transparent"></span>
+                Pricing
+              </a>
+            </div>
+
+            <!-- Theme / Signup / PixLab Console buttons -->
+            <div class="flex items-center gap-4 lg:hidden">
+              <button class="theme-toggler hidden items-center text-tColor lg:flex">
+                <i class="uil uil-moon text-xl"></i>
+              </button>
+              <div class="flex h-11 gap-3 py-1">
+                <button class="group block h-full items-center gap-x-2 rounded-lg bg-ibrPrimary px-3 text-sm font-medium text-white transition-all duration-300 hover:bg-ibrSecondary" href="https://console.pixlab.io" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Theme / Signup / PixLab Console buttons -->
+        <div class="nav-buttons hidden h-full items-center gap-4 px-1.5 py-0.5 lg:flex">
+          <button class="theme-toggler hidden items-center text-tColor lg:flex">
+            <i class="uil uil-moon text-xl"></i>
+          </button>
+          <div class="flex h-full gap-3">
+            <button class="console-button group flex h-full items-center gap-x-2 rounded-lg bg-ibrPrimary px-2.5 text-sm font-medium text-white transition-all duration-300 hover:bg-ibrSecondary" href="https://console.pixlab.io" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="relative my-10 h-[100vh] bg-apeBackground md:min-h-[70vh] lg:my-0">
+          <div class="absolute flex h-full w-full items-center px-5 pt-10 text-white">
+            <div class="mx-auto flex w-full max-w-screen-xl flex-col-reverse items-center justify-between gap-10 lg:flex-row">
+              <div class="relative flex w-[200px] items-center lg:w-[350px]">
+                <img loading="lazy" class="relative z-10 h-auto w-full rounded-2xl" src="assets/images/bulk-image-background-removal-tool-apis__girl-hero.png" alt="PixLab AI Script Writer, Text Editor & PDF Analyser" />
+                <div class="z-1 absolute inset-0 h-full w-full bg-ibrPrimary opacity-30 blur-xl lg:blur-3xl"></div>
+              </div>
+
+              <!-- Hero Text -->
+              <div class="relative z-10 flex flex-col items-center text-center lg:block lg:max-w-screen-sm lg:text-left">
+                <p class="w-fit rounded-lg border border-ibrPrimary px-2 py-0.5 text-xs font-semibold text-ibrPrimary md:text-sm">PixLab AI Script Writer, Text Editor & PDF Analyser</p>
+                <h1 class="mt-5 flex flex-col text-3xl font-medium text-tColor lg:text-5xl">Remove Background <span class="mt-2 block font-normal">All in One Click</span></h1>
+                <p class="mt-5 text-muted">Start by analyzing a PDF or creating content with our AI-driven tools. Whether you're drafting scripts, editing text, or extracting insights from documents, enjoy an intuitive and powerful experience tailored to your needs.</p>
+                <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-tColor bg-tColor px-3 py-1.5 text-[15px] font-medium text-apeBackground transition-all duration-500 hover:bg-transparent hover:text-tColor" href="https://bg-remove.pixlab.io/">Launch App <i class="uil uil-arrow-right lg:text-lg"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Separator (Gradient Line) -->
+        <div class="mx-auto w-full max-w-screen-xl px-5">
+          <div class="gradient-graph-line mb-10"></div>
+        </div>
+      </section>
+
+      <!-- Background Removal Steps Section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <h2 class="text-center text-3xl font-semibold text-tColor">Just Picture It!</h2>
+          <div class="mt-10 flex justify-center">
+            <p class="text-center text-apeTGray lg:max-w-[75%]">Simplify your workflow with PixLab Batch Background Removal! Remove backgrounds from multiple images in one go with our powerful bulk background removal tool, designed for speed, precision, and ease of use.</p>
+          </div>
+
+          <!-- Cards Grid -->
+          <div class="mt-14 grid gap-7 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Single Card -->
+            <div class="flex flex-col items-center justify-center gap-3 text-center">
+              <h3 class="text-[15px] text-muted">Original</h3>
+              <img loading="lazy" src="assets/images/bulk-image-background-removal-tool-apis__original-girl.png" alt="Original Girl Image" />
+            </div>
+
+            <!-- Single Card -->
+            <div class="flex flex-col items-center justify-center gap-3 text-center">
+              <h3 class="text-[15px] text-muted">Background Removed</h3>
+              <img loading="lazy" src="assets/images/bulk-image-background-removal-tool-apis__bg-removed-girl.png" alt="Background Removed" />
+            </div>
+
+            <!-- Single Card -->
+            <div class="flex flex-col items-center justify-center gap-3 text-center">
+              <h3 class="text-[15px] text-muted">Remove in Bulk</h3>
+              <img loading="lazy" src="assets/images/bulk-image-background-removal-tool-apis__remove-in-bulk.png" alt="Remove in Bulk" />
+            </div>
+          </div>
+
+          <div class="mt-20 flex flex-col items-center">
+            <h2 class="text-center text-2xl font-semibold text-tColor lg:max-w-[75%]">Automatically remove backgrounds from multiple images in just 5 seconds with a single click!</h2>
+            <p class="mt-5 text-center text-muted lg:max-w-[75%]">Speed up your workflow with customizable templates or start from scratch, using a vast collection of premium backgrounds, fonts, and design elements to elevate your visuals.</p>
+          </div>
+
+          <div class="relative mt-10 flex justify-center">
+            <div class="relative z-10 rounded-xl p-2">
+              <img loading="lazy" class="relative top-0 z-10 h-full w-full rounded-xl" src="assets/images/bulk-image-background-removal-tool-apis__bg-removal-tool-showcase.png" draggable="false" alt="Automatically remove backgrounds from multiple images in just 5 seconds with a single click!" />
+              <div class="z-1 absolute inset-0 h-full w-full bg-ibrPrimary opacity-10 blur-xl lg:blur-3xl"></div>
+            </div>
+          </div>
+
+          <!-- Launch Batch Background Removal Button -->
+          <div class="mt-5 flex justify-center">
+            <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-ibrPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-ibrPrimary transition-all duration-500 hover:bg-ibrPrimary hover:text-tColor" href="https://bg-remove.pixlab.io/">Launch Batch Background Removal <i class="uil uil-arrow-right lg:text-lg"></i></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tools Showcase Section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-16">
+          <div class="flex flex-col gap-10">
+            <!-- Single Row -->
+            <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row lg:gap-60">
+              <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+                <div class="mt-5 flex flex-col items-center md:items-start">
+                  <h2 class="text-3xl font-semibold text-tColor">Bulk Background Removal</h2>
+                  <p class="mt-5 text-tColor">Start by uploading images in bulk from a local directory or selecting individual files, making it simple to label and annotate multiple images at once. Choose to either upload several images simultaneously or handpick specific ones as needed.</p>
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-ibrPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-ibrPrimary transition-all duration-500 hover:bg-ibrPrimary hover:text-background" href="https://bg-remove.pixlab.io/">Get Started Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                </div>
+              </div>
+              <div class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
+                <img loading="lazy" src="assets/images/bulk-image-background-removal-tool-apis__bulk-removal-background.png" alt="Bulk Background Removal" />
+              </div>
+            </div>
+
+            <!-- Single Row -->
+            <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row-reverse lg:gap-60">
+              <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+                <div class="mt-5 flex flex-col items-center md:items-start">
+                  <h2 class="text-3xl font-semibold text-tColor">Fast & Efficient Processing</h2>
+                  <p class="mt-5 text-tColor">Experience unparalleled efficiency with lightning-fast processing speeds, delivering professional-quality results in just seconds. Whether you're managing a few images or an extensive batch, our tool ensures swift and reliable performance.</p>
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-ibrPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-ibrPrimary transition-all duration-500 hover:bg-ibrPrimary hover:text-background" href="https://bg-remove.pixlab.io/">Launch Web Application <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                </div>
+              </div>
+              <div class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
+                <img loading="lazy" src="assets/images/bulk-image-background-removal-tool-apis__fast-efficient-processing.png" alt="Fast And Efficient Processing" />
+              </div>
+            </div>
+
+            <!-- Single Row -->
+            <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row lg:gap-60">
+              <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+                <div class="mt-5 flex flex-col items-center md:items-start">
+                  <h2 class="text-3xl font-semibold text-tColor">Save All Images at Once</h2>
+                  <p class="mt-5 text-tColor">Get hassle-free and conveniently download all images at once. Just one click to save all the pictures to your PC. After bulk background removal, click 'Download' and save high-quality images in your preferred format to your PC for free.</p>
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-ibrPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-ibrPrimary transition-all duration-500 hover:bg-ibrPrimary hover:text-background" href="https://bg-remove.pixlab.io/">Start Removing Background <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                </div>
+              </div>
+              <div class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
+                <img loading="lazy" src="assets/images/bulk-image-background-removal-tool-apis__save-img-once.png" alt="Save All Images at Once" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <!-- FAQ -->
+          <div class="mx-auto max-w-[85rem]">
+            <!-- Title -->
+            <div class="mx-auto my-10 max-w-2xl text-center lg:mb-14">
+              <h2 class="text-center text-3xl font-semibold text-apeTColor lg:text-4xl">Your questions, answered</h2>
+              <p class="mt-3 text-center text-apeTGray">Answers to the most frequently asked questions.</p>
+            </div>
+            <!-- End Title -->
+
+            <div class="mx-auto max-w-screen-lg">
+              <!-- Accordion -->
+              <div class="hs-accordion-group divide-dark divide-y divide-gray-200">
+                <div class="hs-accordion active pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-one">
+                  <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="true" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
+                    Lorem ipsum dolor sit amet consectetur adipisicing?
+                    <svg class="block size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                    <svg class="hidden size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+                  </button>
+                  <div id="hs-basic-with-title-and-arrow-stretched-collapse-one" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one">
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!</p>
+                  </div>
+                </div>
+
+                <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                  <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                    Lorem ipsum dolor sit amet consectetur adipisicing?
+                    <svg class="block size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                    <svg class="hidden size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+                  </button>
+                  <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!</p>
+                  </div>
+                </div>
+                <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                  <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                    Lorem ipsum dolor sit amet consectetur adipisicing?
+                    <svg class="block size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                    <svg class="hidden size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+                  </button>
+                  <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!</p>
+                  </div>
+                </div>
+                <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                  <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                    Lorem ipsum dolor sit amet consectetur adipisicing?
+                    <svg class="block size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                    <svg class="hidden size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+                  </button>
+                  <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!</p>
+                  </div>
+                </div>
+                <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                  <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                    Lorem ipsum dolor sit amet consectetur adipisicing?
+                    <svg class="block size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                    <svg class="hidden size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6" /></svg>
+                  </button>
+                  <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-two">
+                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!</p>
+                  </div>
+                </div>
+              </div>
+              <!-- End Accordion -->
+            </div>
+          </div>
+          <!-- End FAQ -->
+        </div>
+      </section>
+
+      <!-- Media File Upload Section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <div class="flex flex-col items-center rounded-3xl border-2 border-dashed border-ibrPrimary bg-ibrSurface px-5 py-16">
+            <img loading="lazy" src="assets/images/bulk-image-background-removal-tool-apis__upload-file-icon.svg" alt="Upload File Icon" />
+            <h3 class="mt-7 text-center text-xl font-medium text-tColor">Drag & Drop or Upload</h3>
+            <p class="mt-3 text-center text-sm text-muted">Allowed Files PNG , JPG , JPEG</p>
+            <input id="ibr-file-upload-input" type="file" accept=".png, .jpg, .jpeg" hidden />
+            <button onclick="document.getElementById('ibr-file-upload-input').click()" class="mt-5 flex w-fit items-center gap-1 rounded-xl border border-ibrPrimary bg-ibrPrimary px-3 py-1.5 text-[15px] font-medium text-background transition-all duration-500 hover:bg-transparent hover:text-ibrPrimary"><i class="uil uil-cloud-upload lg:text-lg"></i> Upload Images</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-background">
+      <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+        <div class="gradient-graph-line mb-10"></div>
+        <div class="grid grid-cols-10 gap-y-10">
+          <div class="col-span-10 md:col-span-5 lg:col-span-3">
+            <a href="/">
+              <img loading="lazy" class="dark-logo mb-1 w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" />
+            </a>
+            <p class="pr-3 text-[15px] text-tColor">PixLab offers cutting-edge AI solutions to empower developers and creators with Automated Tools & APIs for Machine Vision, Media Processing & Creative Innovation.</p>
+
+            <!-- Search Input in Footer -->
+            <form action="search" method="get">
+              <div class="mt-5 flex h-10 w-full items-center gap-3 rounded-full border border-bColor bg-input px-4 focus-within:bg-surface md:max-w-[80%] lg:h-12">
+                <i class="uil uil-search text-xl text-tColor" aria-hidden="true"></i>
+                <input name="q" class="h-full w-full border-none bg-transparent text-tColor outline-none" type="search" placeholder="Search Docs..." aria-label="Search" />
+              </div>
+            </form>
+
+            <!-- Social Media Links -->
+            <div class="mt-10 flex gap-1.5">
+              <a href="https://www.facebook.com/pixlab.io/" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-ibrPrimary" title="Follow PixLab on Facebook">
+                <i class="uil uil-facebook text-lg"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/pixlabio" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-ibrPrimary" title="Follow us on LinkedIn">
+                <i class="uil uil-linkedin text-lg"></i>
+              </a>
+              <a href="https://x.com/unqlite_db" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-ibrPrimary" title="Follow PixLab on Twitter/X">
+                <i class="uil uil-twitter text-lg"></i>
+              </a>
+              <a href="https://github.com/symisc" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-ibrPrimary" title="Follow Symisc on GitHub">
+                <i class="uil uil-github text-lg"></i>
+              </a>
+              <a href="https://blog.pixlab.io" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-ibrPrimary" title="PixLab Blog">
+                <i class="uil uil-rss text-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Products Section -->
+          <div class="col-span-10 md:col-span-5 lg:col-span-3">
+            <h3 class="mb-4 font-semibold text-ibrPrimary">PRODUCTS & SDKs</h3>
+            <ul class="flex flex-col gap-3">
+              <li><a href="api-portal" class="footer-link">PixLab API Portal</a></li>
+              <li><a href="template-pdf-image-engine" class="footer-link">PDF Template Engine</a></li>
+              <li><a href="vision-llm-api-playground/" class="footer-link">Vision Playground, LLM & APIs</a></li>
+              <li><a href="ekyc/" class="footer-link">eKYC - Universal ID Scanner APIs</a></li>
+              <li><a href="app-ui-ux-code" class="footer-link">APP UX - Mobile UI Code Generator</a></li>
+              <li><a href="https://faceio.net/" target="_blank" class="footer-link">FACEIO - Facial Authentication for the Web &nearr;</a></li>
+            </ul>
+            <!-- Creativity Tools -->
+            <h3 class="mb-2 mt-4 font-semibold text-ibrPrimary">ONLINE CREATIVITY</h3>
+            <ul class="flex flex-col gap-3">
+              <li><a href="annotate" class="footer-link">Image Annotation & Segmentation</a></li>
+              <li><a href="mockup-screenshot-editor" class="footer-link">Mockup & Screenshot Editor</a></li>
+              <li><a href="bulk-image-background-removal-tool-apis" class="footer-link">Bulk Background Removal Tool</a></li>
+              <li><a href="creative-toolbox" class="footer-link">Creative Toolbox</a></li>
+              <li><a href="ai-photo-editor" class="footer-link">AI Photo Editor</a></li>
+              <li><a href="tilemap-2d-level-editor" class="footer-link">AI Game Tilemap Editor</a></li>
+            </ul>
+          </div>
+          <!-- Resources Section -->
+          <div class="col-span-10 md:col-span-5 lg:col-span-2">
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-ibrPrimary">DEVELOPERS</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="start" class="footer-link">Getting Started</a></li>
+                <li><a href="api-endpoints" class="footer-link">API Endpoints</a></li>
+                <li><a href="rest-api" class="footer-link">REST APIs</a></li>
+                <li><a href="ekyc/" class="footer-link">eKYC Platform</a></li>
+                <li><a href="vision-llm-api-playground/" class="footer-link">Vision LLM & APIs</a></li>
+                <li><a href="on-premises" class="footer-link">PixLab On-Premises</a></li>
+              </ul>
+            </div>
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-ibrPrimary">RESOURCES</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="https://console.pixlab.io" target="_blank" class="footer-link">PixLab Console &nearr;</a></li>
+                <li><a href="pricing" class="footer-link">Pricing</a></li>
+                <li><a href="support" class="footer-link">Support Channels</a></li>
+                <li><a href="https://community.faceio.net" target="_blank" class="footer-link">Community Forum &nearr;</a></li>
+                <li><a href="https://sod.pixlab.io" target="_blank" class="footer-link">Open Computer Vision &nearr;</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Company Section -->
+          <div class="col-span-10 md:col-span-5 lg:col-span-2">
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-ibrPrimary">COMPANY</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="https://symisc.net/" target="_blank" class="footer-link">Symisc Systems &nearr;</a></li>
+                <li><a href="https://blog.pixlab.io" target="_blank" class="footer-link">PixLab Blog &nearr;</a></li>
+                <li><a href="https://github.com/symisc" target="_blank" class="footer-link">Github &nearr;</a></li>
+                <li><a href="https://www.linkedin.com/company/pixlabio" target="_blank" class="footer-link">LinkedIn &nearr;</a></li>
+                <li><a href="https://x.com/unqlite_db" target="_blank" class="footer-link">Twitter | X &nearr;</a></li>
+                <li><a href="https://www.facebook.com/pixlab.io/" target="_blank" class="footer-link">Facebook &nearr;</a></li>
+              </ul>
+            </div>
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-ibrPrimary">LEGAL</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="privacy-policy" class="footer-link">Privacy Policy</a></li>
+                <li><a href="terms-of-use" class="footer-link">Terms of Services</a></li>
+                <li><a href="dmca" class="footer-link">DMCA</a></li>
+                <li><a href="https://status.faceio.net" target="_blank" class="footer-link">Services Status &nearr;</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="mt-10 flex flex-col justify-between gap-5 md:flex-row md:items-center">
+          <a href="/">
+            <img loading="lazy" class="dark-logo mb-1 w-36" src="assets/images/symisc-systems-logo.png" alt="Symisc Systems" />
+          </a>
+
+          <div class="flex flex-col gap-1 text-sm text-slate-600">
+            <p>Copyright © 2017 - 2025, <a href="https://symisc.net" target="_blank">Symisc Systems</a>, SUARL. All rights reserved.</p>
+            <p>All trademarks and copyrights belong to their respective owners.</p>
+          </div>
+          <div class="flex">
+            <a class="block" href="#" title="GDPR Compliant">
+              <img loading="lazy" class="w-32 lg:w-36" src="assets/images/gdpr-compliant.png" alt="GDPR compliant badge" />
+            </a>
+            <a class="block" href="#" title="Privacy First">
+              <img loading="lazy" class="w-32 lg:w-36" src="assets/images/privacy-first.png" alt="Privacy first badge" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/preline/preline.min.js"></script>
+  </body>
+</html>
