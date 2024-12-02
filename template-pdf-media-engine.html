@@ -188,13 +188,20 @@
                     </div>
                   </div>
                   <!-- Card content -->
-                  <div class="whitespace-pre-wrap p-4 text-gray-200">
-                    <code class="text-nowrap"
-                      ><span class="js-keyword">fetch</span>(<span class="js-string">"https://api.pixlab.io/template"</span>, { <span class="js-key">method</span>: <span class="js-string">"POST"</span>, <span class="js-key">headers</span>: { <span class="js-string">"Content-Type"</span>: <span class="js-string">"application/json"</span> }, <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({ <span class="js-key">template_id</span>:
-                      <span class="js-string">"YOUR_TEMPLATE_ID"</span>, <span class="js-key">output</span>: <span class="js-string">"image"</span>, <span class="js-key">data</span>: { <span class="js-string">"title"</span>: <span class="js-string">"Custom Title"</span>, <span class="js-string">"image_url"</span>: <span class="js-string">"https://example.com/image.jpg"</span> } }) }) .<span class="js-function">then</span>(<span class="js-keyword">response</span> =>
-                      <span class="js-keyword">response</span>.<span class="js-function">json</span>()) .<span class="js-function">then</span>(<span class="js-keyword">data</span> => <span class="js-keyword">console.log</span>(<span class="js-string">"Image URL:"</span>, <span class="js-keyword">data</span>.<span class="js-key">url</span>));</code
-                    >
-                  </div>
+<div class="p-4 whitespace-pre-wrap text-gray-200"><code class="text-nowrap"><span class="js-keyword">fetch</span>(<span class="js-string">"https://api.pixlab.io/template"</span>, {
+  <span class="js-key">method</span>: <span class="js-string">"POST"</span>,
+  <span class="js-key">headers</span>: { <span class="js-string">"Content-Type"</span>: <span class="js-string">"application/json"</span> },
+  <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
+    <span class="js-key">template_id</span>: <span class="js-string">"YOUR_TEMPLATE_ID"</span>,
+    <span class="js-key">output</span>: <span class="js-string">"image"</span>,
+    <span class="js-key">data</span>: {
+      <span class="js-string">"title"</span>: <span class="js-string">"Custom Title"</span>,
+      <span class="js-string">"image_url"</span>: <span class="js-string">"https://example.com/image.jpg"</span>
+    }
+  })
+})
+.<span class="js-function">then</span>(<span class="js-keyword">response</span> => <span class="js-keyword">response</span>.<span class="js-function">json</span>())
+.<span class="js-function">then</span>(<span class="js-keyword">data</span> => <span class="js-keyword">console.log</span>(<span class="js-string">"Image URL:"</span>, <span class="js-keyword">data</span>.<span class="js-key">url</span>));</code></div>
                 </div>
                 <div class="ape-gradient-bg-theme z-1 absolute inset-0 mb-3 h-full w-full opacity-30 blur-xl lg:blur-3xl"></div>
                 <a href="https://console.pixlab.io" target="_blank" class="gradient-button mt-5 flex h-12 w-full items-center justify-between gap-x-3 rounded-xl pe-3 ps-4 lg:h-14" title="Connect to the PixLab Console and elevate your projects with powerful Vision and ID Scan APIs...">
@@ -254,13 +261,20 @@
                   </div>
                 </div>
                 <!-- Card content -->
-                <div class="max-w-full whitespace-pre-wrap bg-gray-800 p-4 leading-[1.6] text-gray-200 sm:max-w-md md:max-w-lg lg:max-w-full xl:max-w-2xl">
-                  <code class="text-nowrap"
-                    ><span class="js-keyword">fetch</span>(<span class="js-string">"https://api.pixlab.io/template"</span>, { <span class="js-key">method</span>: <span class="js-string">"POST"</span>, <span class="js-key">headers</span>: { <span class="js-string">"Content-Type"</span>: <span class="js-string">"application/json"</span> }, <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({ <span class="js-key">template_id</span>:
-                    <span class="js-string">"YOUR_TEMPLATE_ID"</span>, <span class="js-key">output</span>: <span class="js-string">"image"</span>, <span class="js-key">data</span>: { <span class="js-string">"title"</span>: <span class="js-string">"Custom Title"</span>, <span class="js-string">"image_url"</span>: <span class="js-string">"https://example.com/image.jpg"</span> } }) }) .<span class="js-function">then</span>(<span class="js-keyword">response</span> =>
-                    <span class="js-keyword">response</span>.<span class="js-function">json</span>()) .<span class="js-function">then</span>(<span class="js-keyword">data</span> => <span class="js-keyword">console.log</span>(<span class="js-string">"Image URL:"</span>, <span class="js-keyword">data</span>.<span class="js-key">url</span>));</code
-                  >
-                </div>
+<div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-full xl:max-w-2xl leading-[1.6]"><code class="text-nowrap"><span class="js-keyword">fetch</span>(<span class="js-string">"https://api.pixlab.io/template"</span>, {
+  <span class="js-key">method</span>: <span class="js-string">"POST"</span>,
+  <span class="js-key">headers</span>: { <span class="js-string">"Content-Type"</span>: <span class="js-string">"application/json"</span> },
+  <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
+    <span class="js-key">template_id</span>: <span class="js-string">"YOUR_TEMPLATE_ID"</span>,
+    <span class="js-key">output</span>: <span class="js-string">"image"</span>,
+    <span class="js-key">data</span>: {
+      <span class="js-string">"title"</span>: <span class="js-string">"Custom Title"</span>,
+      <span class="js-string">"image_url"</span>: <span class="js-string">"https://example.com/image.jpg"</span>
+    }
+  })
+})
+.<span class="js-function">then</span>(<span class="js-keyword">response</span> => <span class="js-keyword">response</span>.<span class="js-function">json</span>())
+.<span class="js-function">then</span>(<span class="js-keyword">data</span> => <span class="js-keyword">console.log</span>(<span class="js-string">"Image URL:"</span>, <span class="js-keyword">data</span>.<span class="js-key">url</span>));</code></div>
               </div>
               <div class="flex gap-5">
                 <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-apePrimary bg-apePrimary px-3 py-1.5 text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-apePrimary sm:px-6 sm:py-3 sm:text-lg" href="https://console.pixlab.io">Read more</a>
@@ -433,14 +447,21 @@
                     </div>
                   </div>
                   <!-- Card content -->
-                  <div class="max-w-full whitespace-pre-wrap bg-gray-800 p-4 leading-[1.6] text-gray-200 sm:max-w-md md:max-w-lg lg:max-w-full xl:max-w-2xl">
-                    <code class="text-nowrap"
-                      ><span class="js-keyword">fetch</span>(<span class="js-string">"https://api.pixlab.io/template"</span>, { <span class="js-key">method</span>: <span class="js-string">"POST"</span>, <span class="js-key">headers</span>: { <span class="js-string">"Content-Type"</span>: <span class="js-string">"application/json"</span> }, <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({ <span class="js-key">template_id</span>:
-                      <span class="js-string">"YOUR_TEMPLATE_ID"</span>, <span class="js-key">output</span>: <span class="js-string">"image"</span>, <span class="js-key">data</span>: { <span class="js-string">"title"</span>: <span class="js-string">"Custom Title"</span>, <span class="js-string">"image_url"</span>: <span class="js-string">"https://example.com/image.jpg"</span> } }) }) .<span class="js-function">then</span>(<span class="js-keyword">response</span> =>
-                      <span class="js-keyword">response</span>.<span class="js-function">json</span>()) .<span class="js-function">then</span>(<span class="js-keyword">data</span> => <span class="js-keyword">console.log</span>(<span class="js-string">"Image URL:"</span>, <span class="js-keyword">data</span>.<span class="js-key">url</span>));</code
-                    >
-                  </div>
-                </div>
+<div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-full xl:max-w-2xl leading-[1.6]"><code class="text-nowrap"><span class="js-keyword">fetch</span>(<span class="js-string">"https://api.pixlab.io/template"</span>, {
+  <span class="js-key">method</span>: <span class="js-string">"POST"</span>,
+  <span class="js-key">headers</span>: { <span class="js-string">"Content-Type"</span>: <span class="js-string">"application/json"</span> },
+  <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
+    <span class="js-key">template_id</span>: <span class="js-string">"YOUR_TEMPLATE_ID"</span>,
+    <span class="js-key">output</span>: <span class="js-string">"image"</span>,
+    <span class="js-key">data</span>: {
+      <span class="js-string">"title"</span>: <span class="js-string">"Custom Title"</span>,
+      <span class="js-string">"image_url"</span>: <span class="js-string">"https://example.com/image.jpg"</span>
+    }
+  })
+})
+.<span class="js-function">then</span>(<span class="js-keyword">response</span> => <span class="js-keyword">response</span>.<span class="js-function">json</span>())
+.<span class="js-function">then</span>(<span class="js-keyword">data</span> => <span class="js-keyword">console.log</span>(<span class="js-string">"Image URL:"</span>, <span class="js-keyword">data</span>.<span class="js-key">url</span>));</code></div>
+</div>
               </div>
             </div>
             <!-- Single Row -->
@@ -483,16 +504,27 @@
                     </div>
                   </div>
                   <!-- Card content -->
-                  <div class="max-w-full whitespace-pre-wrap bg-gray-800 p-4 leading-[1.6] text-gray-200 sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
-                    <code class="text-nowrap"
-                      ><span class="js-keyword">fetch</span>(<span class="js-string">'https://api.pixlab.io/template'</span>, { <span class="js-key">method</span>: <span class="js-string">'POST'</span>, <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({ <span class="js-string">"template"</span>: TEMPLATE_ID, <span class="js-string">"format"</span>: <span class="js-string">"pdf"</span>, <span class="js-string">"layers"</span>: {
-                      <span class="js-string">"text-1"</span>: { <span class="js-string">"text"</span>: <span class="js-string">"This is my text to be rendered"</span>, <span class="js-string">"color"</span>: <span class="js-string">"#FFFFFF"</span>, <span class="js-string">"background"</span>: <span class="js-string">"#0000FF"</span>
-                      },
-                      <span class="js-string">"image-1"</span>: { <span class="js-string">"image_url"</span>: <span class="js-string">"https://pathtomyphoto.com/123.jpg"</span>
-                      } } }),
-                      <span class="js-key">headers</span>: { <span class="js-string">'Content-Type'</span>: <span class="js-string">'application/json'</span>, <span class="js-string">'Authorization'</span>: <span class="js-string">`Bearer ${API_KEY}`</span> } })</code
-                    >
-                  </div>
+<div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl leading-[1.6]"><code class="text-nowrap"><span class="js-keyword">fetch</span>(<span class="js-string">'https://api.pixlab.io/template'</span>, {
+  <span class="js-key">method</span>: <span class="js-string">'POST'</span>,
+  <span class="js-key">body</span>: <span class="js-keyword">JSON.stringify</span>({
+    <span class="js-string">"template"</span>: TEMPLATE_ID,
+    <span class="js-string">"format"</span>: <span class="js-string">"pdf"</span>,
+    <span class="js-string">"layers"</span>: {
+      <span class="js-string">"text-1"</span>: {
+        <span class="js-string">"text"</span>: <span class="js-string">"This is my text to be rendered"</span>,
+        <span class="js-string">"color"</span>: <span class="js-string">"#FFFFFF"</span>,
+        <span class="js-string">"background"</span>: <span class="js-string">"#0000FF"</span>
+      },
+      <span class="js-string">"image-1"</span>: {
+        <span class="js-string">"image_url"</span>: <span class="js-string">"https://pathtomyphoto.com/123.jpg"</span>
+      }
+    }
+  }),
+  <span class="js-key">headers</span>: {
+    <span class="js-string">'Content-Type'</span>: <span class="js-string">'application/json'</span>,
+    <span class="js-string">'Authorization'</span>: <span class="js-string">`Bearer ${API_KEY}`</span>
+  }
+})</code></div>
                 </div>
               </div>
             </div>
