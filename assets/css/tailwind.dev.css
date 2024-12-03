@@ -110,12 +110,17 @@ body {
   scrollbar-color: var(--color-muted) transparent;
 }
 
-body.dark-theme :where(.img-invert, .dark-logo) {
+body.dark-theme :where(.img-invert, .dark-logo),
+body .light-logo {
   filter: brightness(0) invert(1);
 }
 
+body .light-logo {
+  filter: brightness(0) invert(0);
+}
+
 nav :where(.nav-link, .theme-toggler):hover,
-nav .hs-dropdown:hover > button {
+nav .hs-dropdown:hover>button {
   @apply text-primary;
 }
 
@@ -194,7 +199,7 @@ body.dark-theme .bg-gradient-theme {
   background: #fff;
 }
 
-.gradient-button:hover > .bg-gradient-theme {
+.gradient-button:hover>.bg-gradient-theme {
   color: #fff;
   background: transparent;
 }
@@ -410,7 +415,7 @@ header .ape-navbar .nav-logo {
 }
 
 nav.ape-navbar :where(.nav-link, .theme-toggler):hover,
-nav.ape-navbar .hs-dropdown:hover > button {
+nav.ape-navbar .hs-dropdown:hover>button {
   @apply text-apePrimary;
 }
 
@@ -496,6 +501,7 @@ body.dark-theme .ape-header-gradient-theme {
 
 /* Transparent background and no border on large screens */
 @media screen and (min-width: 1024px) {
+
   header.ape-header-gradient-theme,
   body.dark-theme header.ape-header-gradient-theme {
     background: transparent;
@@ -505,6 +511,7 @@ body.dark-theme .ape-header-gradient-theme {
 
 /* Transparent background and no border on small screens */
 @media screen and (max-width: 1024px) {
+
   header .ape-header-gradient-theme,
   body.dark-theme header .ape-header-gradient-theme {
     background: transparent;
@@ -532,7 +539,7 @@ body.dark-theme .ape-header-gradient-theme {
 
 /* App UI/UX Code Styling Start */
 .app-ui-ux-code nav :where(.nav-link, .theme-toggler):hover,
-.app-ui-ux-code nav .hs-dropdown:hover > button {
+.app-ui-ux-code nav .hs-dropdown:hover>button {
   @apply text-aucPrimary;
 }
 
@@ -638,7 +645,7 @@ body.dark-theme .ape-header-gradient-theme {
 /* Annotate Styling Start */
 
 .annotate nav :where(.nav-link, .theme-toggler):hover,
-.annotate nav .hs-dropdown:hover > button {
+.annotate nav .hs-dropdown:hover>button {
   @apply text-annoPrimary;
 }
 
@@ -751,7 +758,7 @@ body.dark-theme .anno-card-bg {
 /* Mockup & Screenshot Editor Styling Start */
 
 .mockup-screenshot-editor nav :where(.nav-link, .theme-toggler):hover,
-.mockup-screenshot-editor nav .hs-dropdown:hover > button {
+.mockup-screenshot-editor nav .hs-dropdown:hover>button {
   @apply text-msePrimary;
 }
 
@@ -814,7 +821,7 @@ body.template-pdf-media-engine {
 }
 
 body.template-pdf-media-engine nav.tpme-navbar :where(.nav-link, .theme-toggler):hover,
-body.template-pdf-media-engine nav .hs-dropdown:hover > button {
+body.template-pdf-media-engine nav .hs-dropdown:hover>button {
   @apply text-apePrimary;
 }
 
@@ -933,7 +940,7 @@ body.template-pdf-media-engine nav .hs-dropdown:hover > button {
 /* Creative Toolbox Stylings */
 
 .creative-toolbox nav :where(.nav-link, .theme-toggler):hover,
-.creative-toolbox nav .hs-dropdown:hover > button {
+.creative-toolbox nav .hs-dropdown:hover>button {
   @apply text-ctbPrimary;
 }
 
@@ -1037,7 +1044,7 @@ body.dark-theme .ctb-card-bg {
 /* Bulk Image Background Removal Stylings */
 
 .bulk-image-background-removal nav :where(.nav-link, .theme-toggler):hover,
-.bulk-image-background-removal nav .hs-dropdown:hover > button {
+.bulk-image-background-removal nav .hs-dropdown:hover>button {
   @apply text-ibrPrimary;
 }
 
