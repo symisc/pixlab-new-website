@@ -4219,12 +4219,20 @@ body.dark-theme .ctb-card-bg {
   color: rgb(67 234 164 );
 }
 
+.marker\:text-annoPrimary *::marker {
+  color: var(--color-anno-primary);
+}
+
 .marker\:text-blue-600 *::marker {
   color: rgb(37 99 235 );
 }
 
 .marker\:text-\[\#43EAA4\]::marker {
   color: rgb(67 234 164 );
+}
+
+.marker\:text-annoPrimary::marker {
+  color: var(--color-anno-primary);
 }
 
 .marker\:text-blue-600::marker {
