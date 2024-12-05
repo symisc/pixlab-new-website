@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document & Image Conversion APIs</title>
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://pixlab.io/" />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Learn how to get started with PixLab. Explore our documentation for code samples, API usage, pricing, and more." />
+    <meta name="keywords" content="PixLab, API, documentation, code samples, getting started, pricing" />
+    <link rel="stylesheet" href="assets/css/unicons/css/line.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <style>
+      .card-bg{
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        transition: background-color 0.3s;
+      }
+      body.dark-theme .card-bg {
+        background: #181c24;
+      }
+      .card-bg svg{
+        opacity: .7;
+      }
+      .card-bg:hover svg{
+        opacity: 1;
+      }
+      .card-bg:hover{
+        /* background-color: rgb(248, 209, 231); */
+        background-color: rgb(255, 237, 252);
+      }
+      body.dark-theme .card-bg:hover{
+        background-color: rgba(192, 23, 91, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header/Navbar -->
+    <header class="absolute inset-x-0 top-3 z-50 mx-auto flex w-full max-w-[1320px] flex-wrap px-3 before:absolute before:inset-0 before:mx-5 before:max-w-full before:rounded-xl max-lg:before:bg-neutral-800/30 max-lg:before:backdrop-blur-lg lg:top-5 lg:flex-nowrap lg:justify-start">
+      <nav class="relative mx-2 w-full max-w-screen-xl gap-3 px-3 py-1.5 lg:mx-auto lg:flex lg:items-center lg:justify-between lg:px-1 lg:py-0">
+        <div class="flex items-center justify-between lg:h-full">
+          <!-- Logo -->
+          <a class="nav-logo flex h-full flex-none rounded-md text-xl font-semibold focus:opacity-80 focus:outline-none" href="/" aria-label="PixLab">
+            <img class="w-28 object-contain lg:w-[137px]" src="assets/images/pixlab-logo-light.png" alt="PixLab Logo" />
+          </a>
+
+          <!-- Toggle Theme and Menu Buttons -->
+          <div class="flex items-center gap-3 lg:hidden">
+            <button class="theme-toggler flex items-center text-white">
+              <i class="uil uil-moon text-lg"></i>
+            </button>
+            <div>
+              <button type="button" class="hs-collapse-toggle flex size-8 items-center justify-center rounded-full bg-neutral-800 text-sm font-semibold text-white disabled:pointer-events-none disabled:opacity-50" id="hs-navbar-floating-dark-collapse" aria-expanded="false" aria-controls="hs-navbar-floating-dark" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-floating-dark">
+                <svg class="size-4 shrink-0 hs-collapse-open:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="3" x2="21" y1="6" y2="6" />
+                  <line x1="3" x2="21" y1="12" y2="12" />
+                  <line x1="3" x2="21" y1="18" y2="18" />
+                </svg>
+                <svg class="hidden size-4 shrink-0 hs-collapse-open:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 6 6 18" />
+                  <path d="m6 6 12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Menu -->
+        <div id="hs-navbar-floating-dark" class="hs-collapse header-gradient-bg nav-menu hidden flex-1 overflow-hidden transition-all duration-300 lg:flex lg:h-full" aria-labelledby="hs-navbar-floating-dark-collapse">
+          <div class="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
+            <div class="flex w-full flex-col gap-x-3.5 py-2 lg:w-auto lg:flex-row lg:items-center lg:justify-between lg:py-0 lg:ps-6">
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="start">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#8343EA] bg-[#8343EA] transition-all group-hover:bg-transparent"></span>
+                Get Started
+              </a>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="api-portal">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#EAA743] bg-[#EAA743] transition-all group-hover:bg-transparent"></span>
+                API Portal
+              </a>
+              <!-- Products & SDKs -->
+              <div class="hs-dropdown group cursor-pointer p-2 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:px-0 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
+                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  <span class="block h-2 w-2 shrink-0 rounded-full border border-[#21db49] bg-[#21db49] transition-all group-hover:bg-transparent"></span>
+                  Products & SDKs
+                  <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div class="hs-dropdown-menu header-gradient-bg top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
+                  <div class="space-y-1 py-1 lg:px-1">
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="api-endpoints">PixLab API Endpoints</a>
+                    <div class="hs-dropdown relative [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:[--is-collapse:false] lg:[--strategy:absolute] lg:[--trigger:hover]">
+                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-white focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        Open Source SDKs <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      </button>
+                      <div class="hs-dropdown-menu header-gradient-bg start-full top-0 z-10 !mx-[10px] -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-start-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
+                        <div class="space-y-1 py-1 lg:px-1">
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="https://sod.pixlab.io/" target="_blank">SOD - Embedded Computer Vision Library &nearr;</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="tiny-dream">Tiny Dream - Stable Diffusion Inference in C++</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="art">ART - Real-Time ASCII Art C Library</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="downloads">SOD Downloads</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="sod">SOD Licensing Information</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hs-dropdown relative [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:[--is-collapse:false] lg:[--strategy:absolute] lg:[--trigger:hover]">
+                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-white focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        Media Processing <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      </button>
+                      <div class="hs-dropdown-menu header-gradient-bg start-full top-0 z-10 !mx-[10px] -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-start-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
+                        <div class="space-y-1 py-1 lg:px-1">
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="media-processing-apis">Media Processing APIs</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="document-image-conversion-apis">Document & Image Conversion APIs</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="media-analysis-apis">Media Analysis APIs</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="rest-api">Rest APIs</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="on-premises">On-Premises Deployment</a>
+                        </div>
+                      </div>
+                    </div>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="ekyc/">eKYC - ID Scanner APIs</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="vision-llm-api-playground/">Vision Play, LLM & APIs</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="template-pdf-media-engine">PDF Template Engine</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="app-ui-ux-code">APP UX - Mobile UI Code Generator</a>
+                    <!-- NEW PRODUCT ADD -->
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="https://faceio.net/" target="_blank">FACEIO - Facial Authentication for the Web &nearr;</a>
+                  </div>
+                </div>
+              </div>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="vision-llm-api-playground/">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#BFEA43] bg-[#BFEA43] transition-all group-hover:bg-transparent"></span>
+                Vision Play &nearr;
+              </a>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="ekyc/">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#EA4393] bg-[#EA4393] transition-all group-hover:bg-transparent"></span>
+                eKYC APIs &nearr;
+              </a>
+              <!-- Online Creativity dropdown link -->
+              <div class="hs-dropdown group cursor-pointer p-2 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:px-0 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
+                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  <span class="block h-2 w-2 shrink-0 rounded-full border border-[#43AEEA] bg-[#43AEEA] transition-all group-hover:bg-transparent"></span>
+                  Online Creativity
+                  <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div class="hs-dropdown-menu header-gradient-bg top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
+                  <div class="space-y-1 py-1 lg:px-1">
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="annotate">Annotate - Image Annotation & Labelling</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="creative-toolbox">Creative Toolbox</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="mockup-screenshot-editor">Mockup & Screenshot AI Editor</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="ai-photo-editor">AI Photo Editor</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="bulk-image-background-removal-tool-apis">Bulk Image Background Removal Tool</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="tilemap-2d-level-editor">Tilemap & 2D Level Editor</a>
+                    <!-- NEW TOOL ADD -->
+                  </div>
+                </div>
+              </div>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="pricing">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#4643EA] bg-[#4643EA] transition-all group-hover:bg-transparent"></span>
+                Pricing
+              </a>
+            </div>
+            <!-- Theme / Signup / PixLab Console buttons -->
+            <div class="flex items-center gap-4 lg:hidden">
+              <button class="theme-toggler hidden items-center text-white lg:flex">
+                <i class="uil uil-moon text-xl"></i>
+              </button>
+              <div class="flex h-11 gap-3 py-1">
+                <a class="gradient-button group block h-full items-center gap-x-2 rounded-lg px-3 text-sm font-medium text-white" href="https://console.pixlab.io" target="_blank" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Theme / Signup / PixLab Console buttons -->
+        <div class="nav-buttons hidden h-full items-center gap-4 px-1.5 py-0.5 lg:flex">
+          <button class="theme-toggler hidden items-center text-white lg:flex">
+            <i class="uil uil-moon text-xl"></i>
+          </button>
+          <div class="flex h-full gap-3">
+            <a class="gradient-button console-button group flex h-full items-center gap-x-2 rounded-lg px-2.5 text-sm font-medium text-white" href="https://console.pixlab.io" target="_blank" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div id="particles-js" class="lg:h-[95vh] h-[840px] bg-[#0b0e13]">
+          <div class="absolute flex h-full w-full items-center px-5 pt-10 text-white">
+            <div class="mx-auto flex w-full max-w-screen-xl flex-col items-start justify-between gap-10 lg:flex-row">
+              <!-- Hero Text -->
+              <div class="relative flex-1 z-10 flex flex-col items-center text-center lg:block lg:max-w-screen-sm lg:text-left">
+                <h1 class="hero-heading">Simplify Document and Image Conversion with PixLab</h1>
+                <p class="mt-5 text-[#d4d4d4] text-2xl text-center font-medium leading-8">PixLab's Document and Image Conversion API offers seamless processing capabilities for modern applications. Effortlessly transform images into multiple formats, extract essential metadata, and deliver optimized media across platforms.</p>
+              </div>
+              <div class="flex-1 relative rounded-lg overflow-x-auto w-full sm:w-[500px] mx-auto">
+<pre class="font-monospace relative leading-[1.6] z-10 w-full shadow-lg overflow-x-auto rounded-[inherit] bg-gray-900 p-5 text-sm text-gray-200 sm:w-[500px] mx-auto"><span style="color: rgb(139, 148, 158); font-weight: 400;">// PixLab API Example: Convert an Image to Grayscale</span>
+<span style="color: rgb(210, 168, 255); font-weight: 400;">fetch</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"https://api.pixlab.io/grayscale"</span>, {
+  <span style="color: rgb(121, 192, 255); font-weight: 400;">method</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">"GET"</span>,
+  <span style="color: rgb(121, 192, 255); font-weight: 400;">headers</span>: { <span style="color: rgb(165, 214, 255); font-weight: 400;">"Content-Type"</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">"application/json"</span> },
+  <span style="color: rgb(121, 192, 255); font-weight: 400;">params</span>: {
+    <span style="color: rgb(121, 192, 255); font-weight: 400;">img</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">"https://example.com/sample.jpg"</span>,
+    <span style="color: rgb(121, 192, 255); font-weight: 400;">key</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">"YOUR_PIXLAB_API_KEY"</span>
+  }
+})
+.<span style="color: rgb(210, 168, 255); font-weight: 400;">then</span>(<span style="color: rgb(201, 209, 217); font-weight: 400;"><span style="color: rgb(201, 209, 217); font-weight: 400;">response</span> =&gt;</span> response.<span style="color: rgb(210, 168, 255); font-weight: 400;">json</span>())
+.<span style="color: rgb(210, 168, 255); font-weight: 400;">then</span>(<span style="color: rgb(201, 209, 217); font-weight: 400;"><span style="color: rgb(201, 209, 217); font-weight: 400;">data</span> =&gt;</span> {
+  <span style="color: rgb(255, 123, 114); font-weight: 400;">console</span>.<span style="color: rgb(210, 168, 255); font-weight: 400;">log</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"Converted Image URL:"</span>, data.<span style="color: rgb(201, 209, 217); font-weight: 400;">link</span>);
+})
+.<span style="color: rgb(210, 168, 255); font-weight: 400;">catch</span>(<span style="color: rgb(201, 209, 217); font-weight: 400;"><span style="color: rgb(201, 209, 217); font-weight: 400;">error</span> =&gt;</span> {
+  <span style="color: rgb(255, 123, 114); font-weight: 400;">console</span>.<span style="color: rgb(210, 168, 255); font-weight: 400;">error</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"Error:"</span>, error);
+});</pre>
+                <a href="https://console.pixlab.io" target="_blank" class="mt-5 gradient-button flex h-12 w-full items-center justify-between gap-x-3 rounded-xl pe-3 ps-4 lg:h-14" title="Connect to the PixLab Console and elevate your projects with powerful Vision and ID Scan APIs...">
+                  <span>Connect to the PixLab Console & Get Your API Key</span>
+                  <i class="uil uil-arrow-up-right flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-black bg-opacity-30 text-lg lg:h-10 lg:w-10 lg:text-xl"></i>
+                </a> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="mx-auto w-full items-center max-w-screen-xl px-5 py-14">
+          <div class="flex flex-col items-center">
+            <p class="gradient-text font-bold tracking-widest">FEATURES</p>
+            <h2 class="text-center mt-2 text-3xl lg:text-4xl font-semibold text-tColor">Unlock Advanced Media Conversion Features</h2>
+            <p class="text-muted mt-5 max-w-2xl text-center">PixLab's API empowers you to transform, convert, and optimize media files with ease. Explore a wide array of features designed to enhance your media workflows and deliver exceptional results, tailored to your needs.</p>
+          </div>
+          <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+            <!-- feature 1 -->
+            <div class="anno-card-bg flex flex-col items-center rounded-xl px-5 py-10">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><defs><linearGradient id="a" x1="256" x2="256" y1="488" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#12c2e9"></stop><stop offset=".056" stop-color="#19bfe9"></stop><stop offset=".137" stop-color="#2db6ea"></stop><stop offset=".235" stop-color="#4da7ea"></stop><stop offset=".344" stop-color="#7993eb"></stop><stop offset=".462" stop-color="#b279ed"></stop><stop offset=".497" stop-color="#c471ed"></stop><stop offset="1" stop-color="#f64f59"></stop></linearGradient></defs><path d="M56 400h144a40.045 40.045 0 0 0 40-40V184a8 8 0 0 0-2.343-5.657l-64-64A8 8 0 0 0 168 112H56a40.045 40.045 0 0 0-40 40v208a40.045 40.045 0 0 0 40 40Zm120-260.687L212.687 176H200a24.028 24.028 0 0 1-24-24ZM32 152a24.028 24.028 0 0 1 24-24h104v24a40.045 40.045 0 0 0 40 40h24v168a24.028 24.028 0 0 1-24 24H56a24.028 24.028 0 0 1-24-24Zm397.657-37.657A8 8 0 0 0 424 112H312a40.045 40.045 0 0 0-40 40v208a40.045 40.045 0 0 0 40 40h144a40.045 40.045 0 0 0 40-40V184a8 8 0 0 0-2.343-5.657Zm2.343 24.97L468.687 176H456a24.028 24.028 0 0 1-24-24ZM480 360a24.028 24.028 0 0 1-24 24H312a24.028 24.028 0 0 1-24-24V152a24.028 24.028 0 0 1 24-24h104v24a40.045 40.045 0 0 0 40 40h24ZM360 256a8 8 0 1 1-8-8 8 8 0 0 1 8 8Zm32 0a8 8 0 1 1-8-8 8 8 0 0 1 8 8Zm32 0a8 8 0 1 1-8-8 8 8 0 0 1 8 8ZM336 64h27.294C350.312 52.368 311.231 40 256 40c-68.369 0-112 18.952-112 32a8 8 0 0 1-16 0c0-10.189 7.047-24.684 40.617-35.874C192.076 28.307 223.109 24 256 24s63.924 4.307 87.383 12.126c10.687 3.563 18.678 7.46 24.617 11.447V32a8 8 0 0 1 16 0v40a8 8 0 0 1-8 8h-40a8 8 0 0 1 0-16Zm48 376c0 10.189-7.047 24.684-40.617 35.874C319.924 483.693 288.891 488 256 488s-63.924-4.307-87.383-12.126c-10.687-3.563-18.678-7.46-24.617-11.447V480a8 8 0 0 1-16 0v-40a8 8 0 0 1 8-8h40a8 8 0 0 1 0 16h-27.294c12.982 11.632 52.063 24 107.294 24 68.369 0 112-18.952 112-32a8 8 0 0 1 16 0ZM112 232a8 8 0 0 1 8-8h64a8 8 0 0 1 0 16h-64a8 8 0 0 1-8-8Zm-48 48a8 8 0 0 1 8-8h64a8 8 0 0 1 0 16H72a8 8 0 0 1-8-8Zm128 48a8 8 0 0 1-8 8h-48a8 8 0 0 1 0-16h48a8 8 0 0 1 8 8ZM64 232a8 8 0 0 1 8-8h16a8 8 0 0 1 0 16H72a8 8 0 0 1-8-8Zm128 48a8 8 0 0 1-8 8h-16a8 8 0 0 1 0-16h16a8 8 0 0 1 8 8ZM64 328a8 8 0 0 1 8-8h32a8 8 0 0 1 0 16H72a8 8 0 0 1-8-8Zm0-144a8 8 0 0 1 8-8h32a8 8 0 0 1 0 16H72a8 8 0 0 1-8-8Z" style="fill:url(#a)" fill=""></path></g></svg>
+              <div class="mt-6 text-center">
+                <h3 class="text-lg font-semibold text-tColor">Seamless Format Conversion</h3>
+                <p class="mt-3 text-sm text-muted">Easily convert images and documents between formats like JPEG, PNG, PDF, and more.</p>
+              </div>
+            </div>
+            <!-- feature 2 -->
+            <div class="anno-card-bg flex flex-col items-center rounded-xl px-5 py-10">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#ffe177" d="M476.137 347.726a7.725 7.725 0 0 1-7.726-7.726c0-24.412-19.861-44.274-44.274-44.274H379.59a7.726 7.726 0 1 1 0-15.452h44.547c32.934 0 59.726 26.793 59.726 59.726a7.725 7.725 0 0 1-7.726 7.726z" opacity="1" data-original="#ffe177"></path><path fill="#d8ecfe" d="M351.795 32c-15.689-15.689-29.47-32-51.658-32H38.439c-5.69 0-10.302 4.612-10.302 10.302v491.396c0 5.69 4.612 10.302 10.302 10.302h363.396c5.69 0 10.302-4.612 10.302-10.302l-14.126-384.913 4.406-4.785c0-22.187-6.591-35.969-22.28-51.658z" opacity="1" data-original="#d8ecfe" class=""></path><path fill="#c4e2ff" d="m380.137 60.342-7.72-7.72c10.623 11.131 19.116 22.764 19.116 38.774v389.698c0 5.69-4.612 10.302-10.302 10.302H28.137v10.302c0 5.69 4.612 10.302 10.302 10.302h363.396c5.69 0 10.302-4.612 10.302-10.302V112c0-22.188-16.311-35.969-32-51.658z" opacity="1" data-original="#c4e2ff"></path><path fill="#eaf6ff" d="M334.789 67.046V34.652C334.789 15.514 319.275 0 300.137 0a83.658 83.658 0 0 1 59.155 24.503l28.342 28.342A83.658 83.658 0 0 1 412.137 112c0-19.138-15.514-34.652-34.652-34.652h-32.394c-5.69 0-10.302-4.613-10.302-10.302z" opacity="1" data-original="#eaf6ff"></path><g fill="#3c87d0"><path d="M353.835 144H150.439c-5.69 0-10.302-4.612-10.302-10.302v-11.396c0-5.69 4.612-10.302 10.302-10.302h203.396c5.69 0 10.302 4.612 10.302 10.302v11.396c0 5.69-4.612 10.302-10.302 10.302zM353.835 216H86.439c-5.69 0-10.302-4.612-10.302-10.302v-11.396c0-5.69 4.612-10.302 10.302-10.302h267.396c5.69 0 10.302 4.612 10.302 10.302v11.396c0 5.69-4.612 10.302-10.302 10.302zM273.835 288H86.439c-5.69 0-10.302-4.612-10.302-10.302v-11.396c0-5.69 4.612-10.302 10.302-10.302h187.396c5.69 0 10.302 4.612 10.302 10.302v11.396c0 5.69-4.612 10.302-10.302 10.302z" fill="#3c87d0" opacity="1" data-original="#3c87d0"></path></g><path fill="#fd9468" d="M188.137 442.23V335.453c0-8.534 6.918-15.453 15.453-15.453h168.277c5.167 0 9.991 2.582 12.857 6.881l26.409 39.613c9.899 14.849 7.996 34.611-4.555 47.298l-38.922 39.342z" opacity="1" data-original="#fd9468"></path><path fill="#fe7d43" d="m422.422 383.428-11.29-16.934a15.452 15.452 0 0 1-2.103 12.444l-37.698 56.547a15.453 15.453 0 0 1-12.858 6.881H190.197a15.55 15.55 0 0 1-2.06-.137v6.318c0 8.534 6.918 15.453 15.453 15.453h168.277c5.167 0 9.992-2.582 12.858-6.881l37.698-56.547a15.453 15.453 0 0 0-.001-17.144z" opacity="1" data-original="#fe7d43"></path><path fill="#bbec6c" d="M340.137 423.726a7.729 7.729 0 0 1-5.464-13.191L353.21 392l-18.537-18.536a7.729 7.729 0 0 1 0-10.928 7.73 7.73 0 0 1 10.928 0l24 24a7.729 7.729 0 0 1 0 10.928l-24 24a7.707 7.707 0 0 1-5.464 2.262zM252.137 423.726a7.704 7.704 0 0 1-5.463-2.263l-24-24a7.727 7.727 0 0 1 0-10.928l24-24a7.727 7.727 0 1 1 10.927 10.928L239.063 392l18.537 18.536a7.727 7.727 0 0 1-5.463 13.19zM284.131 423.728a7.689 7.689 0 0 1-3.449-.818 7.725 7.725 0 0 1-3.455-10.366l24-48a7.727 7.727 0 0 1 13.821 6.911l-24 48a7.727 7.727 0 0 1-6.917 4.273z" opacity="1" data-original="#bbec6c"></path><path fill="#ffe177" d="M424.137 399.726h-28a7.726 7.726 0 1 1 0-15.452h28c24.412 0 44.274-19.861 44.274-44.274a7.726 7.726 0 1 1 15.452 0c0 32.934-26.793 59.726-59.726 59.726z" opacity="1" data-original="#ffe177"></path></g></svg>
+              <div class="mt-6 text-center">
+                <h3 class="text-lg font-semibold text-tColor">Metadata Extraction</h3>
+                <p class="mt-3 text-sm text-muted">Retrieve critical metadata from media files for deeper insights and analytics.</p>
+              </div>
+            </div>
+            <!-- feature 3 -->
+            <div class="anno-card-bg flex flex-col items-center rounded-xl px-5 py-10">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" x="0" y="0" viewBox="0 0 511 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#4895ff" d="m285.758 65.41-37.051 37.05c-3.059 3.06-7.172 4.583-11.258 4.552-4.879-.063-9.457-2.246-12.476-6.29L189.14 64.892c-6.063-6.075-6.063-15.918 0-21.993 6.074-6.074 15.922-6.074 21.996 0l10.765 10.778v-38.13c0-7.773 5.692-14.198 13.133-15.358.79-.126 1.586-.188 2.414-.188 8.594 0 15.547 6.953 15.547 15.547v38.648l10.77-10.777c6.074-6.074 15.918-6.074 21.992 0 6.062 6.07 6.062 15.918 0 21.992zm0 0" opacity="1" data-original="#4895ff"></path><path fill="#2682ff" d="M248.707 102.46c-3.059 3.06-7.172 4.583-11.258 4.552V0c8.594 0 15.547 6.953 15.547 15.547v38.648l10.77-10.777c6.074-6.074 15.918-6.074 21.992 0 6.062 6.07 6.062 15.918 0 21.992zm0 0" opacity="1" data-original="#2682ff"></path><path fill="#4895ff" d="M285.758 469.102c-6.074 6.074-15.918 6.074-21.992 0l-10.77-10.778v38.13c0 8.593-6.953 15.546-15.547 15.546-8.578 0-15.547-6.941-15.547-15.547v-38.648l-10.765 10.777c-6.075 6.074-15.922 6.074-21.996 0-6.063-6.07-6.063-15.918 0-21.992l37.054-37.05c2.88-2.88 6.805-4.563 11.254-4.563 4.688.043 9.36 2.125 12.461 6.3l35.848 35.832c6.062 6.075 6.062 15.918 0 21.993zm0 0" opacity="1" data-original="#4895ff"></path><path fill="#2682ff" d="M285.758 447.11c6.062 6.074 6.062 15.917 0 21.992-6.074 6.074-15.918 6.074-21.992 0l-10.77-10.778v38.13c0 8.593-6.953 15.546-15.547 15.546V404.977c4.688.043 9.36 2.125 12.461 6.3zm0 0" opacity="1" data-original="#2682ff"></path><path fill="#4895ff" d="M321.02 225.434v130.363c0 8.594-6.958 15.547-15.547 15.547H169.43c-8.594 0-15.547-6.953-15.547-15.547V156.203c0-8.594 6.953-15.547 15.547-15.547h78.175zm0 0" opacity="1" data-original="#4895ff"></path><path fill="#2682ff" d="M321.02 225.434v130.363c0 8.594-6.958 15.547-15.547 15.547h-68.024V140.656h10.156zm0 0" opacity="1" data-original="#2682ff"></path><path fill="#aed0ff" d="M321.023 225.441h-57.87c-8.587 0-15.548-6.96-15.548-15.546v-69.243zm0 0" opacity="1" data-original="#aed0ff"></path><path fill="#4895ff" d="M474.402 252.176c0 8.594-6.957 15.547-15.547 15.547h-38.64l10.77 10.777c6.074 6.063 6.074 15.91 0 21.984s-15.91 6.075-21.985 0l-37.05-37.054c-3.06-3.055-4.595-7.16-4.563-11.254.043-4.684 2.125-9.371 6.293-12.469l35.84-35.828c6.074-6.074 15.91-6.074 21.984 0 6.07 6.062 6.07 15.906 0 21.98l-10.77 10.77h38.121c8.59 0 15.547 6.965 15.547 15.547zm0 0" opacity="1" data-original="#4895ff"></path><path fill="#2682ff" d="M474.402 252.176c0 8.594-6.957 15.547-15.547 15.547h-38.64l10.77 10.777c6.074 6.063 6.074 15.91 0 21.984s-15.91 6.075-21.985 0l-37.05-37.054c-3.06-3.055-4.595-7.16-4.563-11.254zm0 0" opacity="1" data-original="#2682ff"></path><path fill="#4895ff" d="M107.512 252.176c-.043 4.683-2.125 9.37-6.29 12.469l-35.84 35.84c-6.073 6.074-15.91 6.074-21.984 0-6.074-6.075-6.074-15.923 0-21.985l10.77-10.777H16.047C7.453 267.723.5 260.77.5 252.176c0-8.582 6.953-15.547 15.547-15.547h38.637l-10.766-10.77c-6.074-6.074-6.074-15.918 0-21.98 6.07-6.074 15.906-6.074 21.98 0l37.055 37.05c3.055 3.06 4.59 7.153 4.559 11.247zm0 0" opacity="1" data-original="#4895ff"></path><path fill="#2682ff" d="M.5 252.176h107.012c-.043 4.683-2.125 9.37-6.29 12.469l-35.84 35.84c-6.073 6.074-15.91 6.074-21.984 0-6.074-6.075-6.074-15.923 0-21.985l10.77-10.777H16.047C7.453 267.723.5 260.77.5 252.176zm0 0" opacity="1" data-original="#2682ff"></path></g></svg>
+              <div class="mt-6 text-center">
+                <h3 class="text-lg font-semibold text-tColor">Advanced Compression</h3>
+                <p class="mt-3 text-sm text-muted">Optimize file sizes without compromising quality, perfect for web delivery.
+                </p>
+              </div>
+            </div>
+            <!-- feature 4 -->
+            <div class="anno-card-bg flex flex-col items-center rounded-xl px-5 py-10">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" x="0" y="0" viewBox="0 0 682.667 682.667" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><defs><clipPath id="a" clipPathUnits="userSpaceOnUse"><path d="M0 512h512V0H0Z" fill="#000000" opacity="1" data-original="#000000"></path></clipPath></defs><g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 682.667)"><path d="M0 0h-328.205c-20.634 0-37.362 16.728-37.362 37.363v211.902c0 34.987 28.362 63.35 63.35 63.35H0c20.635 0 37.363-16.728 37.363-37.363V37.363C37.363 16.728 20.635 0 0 0" style="fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(375.567 141.653)" fill="#ee4e71" data-original="#ee4e71" class=""></path><path d="M0 0h-328.205c-20.634 0-37.362 16.728-37.362 37.363v211.902c0 34.987 28.362 63.35 63.35 63.35H0c20.635 0 37.363-16.728 37.363-37.363V37.363C37.363 16.728 20.635 0 0 0Z" style="stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(375.567 141.653)" fill="none" stroke="#000000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000" class=""></path><path d="M0 0h-328.205c-20.635 0-37.362 16.728-37.362 37.363v236.115c0 21.614 17.522 39.137 39.136 39.137H0c20.635 0 37.363-16.728 37.363-37.363V37.363C37.363 16.728 20.635 0 0 0" style="fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(418.066 99.582)" fill="#ffd866" data-original="#ffd866"></path><path d="M0 0h124.103c20.634 0 37.362-16.728 37.362-37.363v-237.889c0-20.635-16.728-37.363-37.362-37.363h-328.205c-20.635 0-37.363 16.728-37.363 37.363v236.115C-241.465-17.522-223.943 0-202.328 0H-80" style="stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(293.964 412.197)" fill="none" stroke="#000000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000" class=""></path><path d="M0 0h-337.913c-17.954 0-32.509 14.555-32.509 32.509v247.597c0 17.955 14.555 32.509 32.509 32.509H0c17.954 0 32.509-14.554 32.509-32.509V32.509C32.509 14.555 17.954 0 0 0" style="fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(469.491 57.732)" fill="#d6effb" data-original="#d6effb"></path><path d="M0 0h-337.913c-17.954 0-32.509 14.555-32.509 32.509v247.597c0 17.955 14.555 32.509 32.509 32.509H0c17.954 0 32.509-14.554 32.509-32.509V32.509C32.509 14.555 17.954 0 0 0Z" style="stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(469.491 57.732)" fill="none" stroke="#000000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000" class=""></path><path d="M0 0h337.913c17.954 0 32.508 14.555 32.508 32.509v63.776l-59.528 44.965a23.567 23.567 0 0 1-28.082.242l-62.049-45.207L109.777 210.71c-8.76 9.033-23.072 9.589-32.508 1.265l-109.778-96.852V32.509C-32.509 14.555-17.955 0 0 0" style="fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(131.579 57.732)" fill="#00b7ec" data-original="#00b7ec"></path><path d="M0 0h337.913c17.954 0 32.508 14.555 32.508 32.509v63.776l-59.528 44.965a23.567 23.567 0 0 1-28.082.242l-62.049-45.207L109.777 210.71c-8.76 9.033-23.072 9.589-32.508 1.265l-109.778-96.852V32.509C-32.509 14.555-17.955 0 0 0Z" style="stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(131.579 57.732)" fill="none" stroke="#000000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000" class=""></path><path d="m0 0 94.262-97.185" style="stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(288.72 219.61)" fill="none" stroke="#000000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000" class=""></path><path d="M0 0c0-18.112-14.683-32.795-32.795-32.795-18.113 0-32.796 14.683-32.796 32.795 0 18.112 14.683 32.795 32.796 32.795C-14.683 32.795 0 18.112 0 0" style="fill-opacity:1;fill-rule:nonzero;stroke:none" transform="translate(421.31 276.858)" fill="#ffd866" data-original="#ffd866"></path><path d="M0 0c0-18.112-14.683-32.795-32.795-32.795-18.113 0-32.796 14.683-32.796 32.795 0 18.112 14.683 32.795 32.796 32.795C-14.683 32.795 0 18.112 0 0Z" style="stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(421.31 276.858)" fill="none" stroke="#000000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000" class=""></path><path d="M0 0v0" style="stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(253.964 412.197)" fill="none" stroke="#000000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000" class=""></path></g></g></svg>
+              <div class="mt-6 text-center">
+                <h3 class="text-lg font-semibold text-tColor">Multi-File Batch Processing</h3>
+                <p class="mt-3 text-sm text-muted">Process multiple files simultaneously, streamlining your workflow and saving time.
+                </p>
+              </div>
+            </div>
+            <!-- feature 5 -->
+            <div class="anno-card-bg flex flex-col items-center rounded-xl px-5 py-10">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#4e91f2" d="M59.3 26.87v74.26c0 5.73-4.37 10.38-9.76 10.38a9.79 9.79 0 0 1-9-6.48c-.33.06-.67.11-1 .14a6.28 6.28 0 0 1-.75 0c-5.39 0-9.76-4.65-9.76-10.38v-.33a8.57 8.57 0 0 1 .09-1 10.9 10.9 0 0 1-3 .44c-6.1 0-11-5.26-11-11.74a12.23 12.23 0 0 1 .67-4.16 8 8 0 0 1 .37-.92 14 14 0 0 1-.92-25.69c.3-.14.61-.26.92-.37l-.07-.15a12.35 12.35 0 0 1-1.05-5c0-6.48 4.94-11.74 11-11.74a10.47 10.47 0 0 1 2.92.43v-.43c0-5.73 4.37-10.38 9.76-10.38a11.18 11.18 0 0 1 1.43.12 7.76 7.76 0 0 1 .33-1 9.76 9.76 0 0 1 9-6.39c5.45.01 9.82 4.66 9.82 10.39z" opacity="1" data-original="#4e91f2"></path><g fill="#336cbd"><path d="M40.5 105c-.33.06-.67.11-1 .14a11.18 11.18 0 0 1-.65-3.81.5.5 0 0 1 .5-.5.5.5 0 0 1 .5.5 10.37 10.37 0 0 0 .65 3.67zM44.68 25.29a.49.49 0 0 1-.41.21.52.52 0 0 1-.29-.09 8.83 8.83 0 0 0-3.77-1.57 7.76 7.76 0 0 1 .33-1 9.85 9.85 0 0 1 4 1.71.51.51 0 0 1 .14.74zM42.94 34.59a.5.5 0 0 1-.5-.5 3.8 3.8 0 0 0-3.66-3.92.5.5 0 0 1 0-1 4.8 4.8 0 0 1 4.66 4.92.5.5 0 0 1-.5.5zM26.06 57.63a.5.5 0 0 1-.5.5 11.36 11.36 0 0 1-10.32-6.79c.3-.14.61-.26.92-.37a10.42 10.42 0 0 0 9.4 6.16.5.5 0 0 1 .5.5zM20.71 48.39a.51.51 0 0 1-.46-.3 5.77 5.77 0 0 1 0-4.59 6.43 6.43 0 0 1 3.34-3.39.5.5 0 0 1 .41.89 5.42 5.42 0 0 0-2.82 2.85 4.72 4.72 0 0 0 0 3.81.5.5 0 0 1-.26.66.45.45 0 0 1-.21.07zM26.09 89.65a5.46 5.46 0 0 1-3.75-1.51.5.5 0 1 1 .69-.73 4.2 4.2 0 0 0 5.93 0 .5.5 0 1 1 .73.69 4.92 4.92 0 0 1-3.6 1.55zM20.51 78.18a.5.5 0 0 1-.5.5 12.86 12.86 0 0 1-4.22-.68 8 8 0 0 1 .37-.92 12 12 0 0 0 3.85.64.5.5 0 0 1 .5.46zM32.39 92.93a11.21 11.21 0 0 1-3.21 1.55H29a8.57 8.57 0 0 1 .09-1 10.43 10.43 0 0 0 2.74-1.35.5.5 0 0 1 .57.82zM41.66 89.88H38a2.24 2.24 0 0 1-2.25-2.24v-3.55a.5.5 0 0 1 .5-.5.5.5 0 0 1 .5.5v3.55A1.25 1.25 0 0 0 38 88.88h3.66a.51.51 0 0 1 .5.5.5.5 0 0 1-.5.5zM40.32 41.69h-7.53a.5.5 0 1 1 0-1h7.53a.5.5 0 0 1 0 1z" fill="#336cbd" opacity="1" data-original="#336cbd"></path></g><path fill="#4e91f2" d="M111.88 77a7.5 7.5 0 0 1 .37.93 12.23 12.23 0 0 1 .75 4.21c0 6.48-4.94 11.74-11 11.74a10.46 10.46 0 0 1-2.86-.41H99a8.91 8.91 0 0 1 0 1.04v.31c0 5.73-4.37 10.38-9.76 10.38a6.28 6.28 0 0 1-.75 0c-.34 0-.68-.08-1-.14v.08a9.77 9.77 0 0 1-9 6.41c-5.39 0-9.76-4.65-9.76-10.38v-74.3c0-5.73 4.37-10.38 9.76-10.38a9.76 9.76 0 0 1 9 6.39 7.76 7.76 0 0 1 .33 1 11 11 0 0 1 1.42-.12c5.39 0 9.76 4.65 9.76 10.38v.43a10.47 10.47 0 0 1 2.92-.43c6.1 0 11 5.26 11 11.74a12.44 12.44 0 0 1-1.07 5.12c.31.11.62.23.93.37a14 14 0 0 1-.9 25.63z" opacity="1" data-original="#4e91f2"></path><g fill="#336cbd"><path d="M89.18 101.3a11.44 11.44 0 0 1-.67 3.86c-.34 0-.68-.08-1-.14a10.47 10.47 0 0 0 .68-3.72.5.5 0 0 1 .5-.5.5.5 0 0 1 .49.5zM87.79 23.84a9 9 0 0 0-4.44 2.1.5.5 0 0 1-.33.12.5.5 0 0 1-.33-.88 10.08 10.08 0 0 1 4.77-2.3 7.76 7.76 0 0 1 .33.96zM85.06 34.59a.5.5 0 0 1-.5-.5 4.8 4.8 0 0 1 4.66-4.92.5.5 0 0 1 0 1 3.8 3.8 0 0 0-3.66 3.92.5.5 0 0 1-.5.5zM112.77 51.34a11.39 11.39 0 0 1-10.31 6.74.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5 10.43 10.43 0 0 0 9.38-6.08c.31.08.62.2.93.34zM107.94 47.68a.57.57 0 0 1-.18 0 .51.51 0 0 1-.29-.65 5.12 5.12 0 0 0-3.25-6.45.52.52 0 0 1-.3-.65.49.49 0 0 1 .64-.29 6.12 6.12 0 0 1 3.85 7.74.52.52 0 0 1-.47.3zM112.21 78a12.89 12.89 0 0 1-4.26.73.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5 12 12 0 0 0 3.89-.66 7.5 7.5 0 0 1 .37.93zM98.92 93.46a8.91 8.91 0 0 1 .08 1.05.3.3 0 0 1-.13 0 11.47 11.47 0 0 1-5.69-3.81.5.5 0 0 1 .78-.63 10.45 10.45 0 0 0 5.09 3.45zM91.23 43.5h-3.55a.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5h3.55a1.25 1.25 0 0 0 1.25-1.24V37.6a.5.5 0 0 1 .5-.5.5.5 0 0 1 .5.5v3.66a2.25 2.25 0 0 1-2.25 2.24zM96.61 85h-6.15a.5.5 0 0 1-.5-.5.5.5 0 0 1 .5-.5h6.15a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5zM103.64 89.91a.5.5 0 0 1 0-1 4.41 4.41 0 0 0 4.11-4.23.51.51 0 0 1 .55-.46.51.51 0 0 1 .45.55 5.45 5.45 0 0 1-5.07 5.13z" fill="#336cbd" opacity="1" data-original="#336cbd"></path></g><g fill="#4bd8bd"><path d="M42.57 64.5H19.26a.5.5 0 0 1 0-1h23.31a.5.5 0 0 1 0 1zM42.57 76.14H32.15a.5.5 0 1 1 0-1h10.42a.5.5 0 1 1 0 1zM42.57 52.86H32.15a.5.5 0 1 1 0-1h10.42a.5.5 0 1 1 0 1zM108.74 64.5H85.43a.5.5 0 0 1 0-1h23.31a.5.5 0 1 1 0 1zM95.85 52.86H85.43a.5.5 0 0 1 0-1h10.42a.5.5 0 0 1 0 1zM95.85 76.14H85.43a.5.5 0 0 1 0-1h10.42a.5.5 0 0 1 0 1zM52.36 43.07a.5.5 0 0 1-.5-.5V32.15a.5.5 0 1 1 1 0v10.42a.5.5 0 0 1-.5.5zM75.64 43.07a.5.5 0 0 1-.5-.5V32.15a.5.5 0 1 1 1 0v10.42a.5.5 0 0 1-.5.5zM75.64 96.35a.5.5 0 0 1-.5-.5V85.43a.5.5 0 0 1 1 0v10.42a.5.5 0 0 1-.5.5zM52.36 96.35a.5.5 0 0 1-.5-.5V85.43a.5.5 0 0 1 1 0v10.42a.5.5 0 0 1-.5.5zM64 43.07a.5.5 0 0 1-.5-.5V19.26a.5.5 0 0 1 1 0v23.31a.5.5 0 0 1-.5.5zM64 109.24a.5.5 0 0 1-.5-.5V85.43a.5.5 0 0 1 1 0v23.31a.5.5 0 0 1-.5.5z" fill="#4bd8bd" opacity="1" data-original="#4bd8bd"></path></g><rect width="42.85" height="42.85" x="42.57" y="42.57" fill="#3d47a3" rx="6" opacity="1" data-original="#3d47a3"></rect><g fill="#fff"><path d="M65.84 66.57a.14.14 0 0 0 0-.06.52.52 0 0 0-.16-.36l-4.22-12.33a.52.52 0 0 0-1 0l-6.89 20a.5.5 0 1 0 .94.32L57 67h7.91l2.47 7.17a.49.49 0 0 0 .47.34.45.45 0 0 0 .16 0 .5.5 0 0 0 .31-.63zM57.37 66 61 55.52 64.59 66zM73.91 53.48a.5.5 0 0 0-.5.5V74a.5.5 0 1 0 1 0V54a.5.5 0 0 0-.5-.52z" fill="#ffffff" opacity="1" data-original="#ffffff"></path></g><g fill="#83d5ff"><path d="M19.26 64a2.44 2.44 0 1 1-2.44-2.44A2.44 2.44 0 0 1 19.26 64zM32.15 75.64a2.44 2.44 0 1 1-2.44-2.44 2.44 2.44 0 0 1 2.44 2.44zM32.15 52.36a2.44 2.44 0 1 1-2.44-2.44 2.44 2.44 0 0 1 2.44 2.44zM64 19.26a2.44 2.44 0 1 1 2.44-2.44A2.44 2.44 0 0 1 64 19.26zM52.36 32.15a2.44 2.44 0 1 1 2.44-2.44 2.44 2.44 0 0 1-2.44 2.44zM75.64 32.15a2.44 2.44 0 1 1 2.44-2.44 2.44 2.44 0 0 1-2.44 2.44zM108.74 64a2.44 2.44 0 1 1 2.44 2.44 2.44 2.44 0 0 1-2.44-2.44zM95.85 52.36a2.44 2.44 0 1 1 2.44 2.44 2.44 2.44 0 0 1-2.44-2.44zM95.85 75.64a2.44 2.44 0 1 1 2.44 2.44 2.44 2.44 0 0 1-2.44-2.44zM64 108.74a2.44 2.44 0 1 1-2.44 2.44 2.44 2.44 0 0 1 2.44-2.44zM75.64 95.85a2.44 2.44 0 1 1-2.44 2.44 2.44 2.44 0 0 1 2.44-2.44zM52.36 95.85a2.44 2.44 0 1 1-2.44 2.44 2.44 2.44 0 0 1 2.44-2.44z" fill="#83d5ff" opacity="1" data-original="#83d5ff"></path></g></g></svg>
+              <div class="mt-6 text-center">
+                <h3 class="text-lg font-semibold text-tColor">AI-Powered Enhancements</h3>
+                <p class="mt-3 text-sm text-muted">Improve image quality with noise reduction, color correction, and upscaling.</p>
+              </div>
+            </div>
+            <!-- feature 6 -->
+            <div class="anno-card-bg flex flex-col items-center rounded-xl px-5 py-10">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" x="0" y="0" viewBox="0 0 68 68" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#dbdbdb" d="M58.87 11.57v44.85c0 3.37-2.74 6.11-6.1 6.11H8.11C4.74 62.53 2 59.79 2 56.42V11.57c0-3.37 2.74-6.1 6.11-6.1h44.66c3.36 0 6.1 2.73 6.1 6.1z" opacity="1" data-original="#dbdbdb"></path><path fill="#488ff7" d="M58.87 11.57V17H2v-5.43c0-3.37 2.74-6.1 6.11-6.1h44.66c3.36 0 6.1 2.73 6.1 6.1z" opacity="1" data-original="#488ff7"></path><circle cx="8.708" cy="11.464" r="1.811" fill="#304056" opacity="1" data-original="#304056"></circle><circle cx="14.989" cy="11.464" r="1.811" fill="#304056" opacity="1" data-original="#304056"></circle><circle cx="21.271" cy="11.464" r="1.811" fill="#304056" opacity="1" data-original="#304056"></circle><path fill="#ffffff" d="M53.97 11.27c0 .89-.72 1.61-1.61 1.61H35.05c-.89 0-1.61-.72-1.61-1.61 0-.9.72-1.62 1.61-1.62h17.31c.89 0 1.61.72 1.61 1.62z" opacity="1" data-original="#ffffff"></path><path fill="#304056" d="M46.84 37.57v5.46c0 .84-.68 1.51-1.51 1.51H16.71c-.84 0-1.51-.67-1.51-1.51v-5.46c0-.84.67-1.51 1.51-1.51h28.62c.83 0 1.51.67 1.51 1.51zM46.84 24.49v5.46c0 .83-.68 1.51-1.51 1.51H16.71c-.84 0-1.51-.68-1.51-1.51v-5.46c0-.83.67-1.51 1.51-1.51h28.62c.83 0 1.51.68 1.51 1.51z" opacity="1" data-original="#304056"></path><path fill="#488ff7" d="M37.98 51.97v2.76c0 1-.81 1.82-1.81 1.82h-10.3c-1 0-1.81-.82-1.81-1.82v-2.76c0-1 .81-1.81 1.81-1.81h10.3c1 0 1.81.81 1.81 1.81z" opacity="1" data-original="#488ff7"></path><path d="M20.164 27.72h-1.572a.5.5 0 1 1 0-1h1.572a.5.5 0 1 1 0 1zM24.057 27.72h-1.572a.5.5 0 1 1 0-1h1.572a.5.5 0 1 1 0 1zM27.95 27.72h-1.572a.5.5 0 1 1 0-1h1.571a.5.5 0 1 1 0 1zM31.842 27.72H30.27a.5.5 0 1 1 0-1h1.572a.5.5 0 1 1 0 1zM35.736 27.72h-1.573a.5.5 0 1 1 0-1h1.573a.5.5 0 1 1 0 1zM20.164 40.8h-1.572a.5.5 0 1 1 0-1h1.572a.5.5 0 1 1 0 1zM24.057 40.8h-1.572a.5.5 0 1 1 0-1h1.572a.5.5 0 1 1 0 1zM27.95 40.8h-1.572a.5.5 0 1 1 0-1h1.571a.5.5 0 1 1 0 1zM31.842 40.8H30.27a.5.5 0 1 1 0-1h1.572a.5.5 0 1 1 0 1zM35.736 40.8h-1.573a.5.5 0 1 1 0-1h1.573a.5.5 0 1 1 0 1z" fill="#000000" opacity="1" data-original="#000000"></path><path fill="#488ff7" d="M65.946 44.42c-.861 3.706-3.35 11.599-9.774 17.555a2.089 2.089 0 0 1-2.829 0c-6.412-5.945-8.909-13.82-9.777-17.535-.262-1.123.46-2.22 1.581-2.487 3.11-.738 5.889-2.158 8.241-4.454.79-.77 2.048-.711 2.858.04 2.28 2.114 4.975 3.601 8.13 4.394 1.114.28 1.83 1.367 1.57 2.487z" opacity="1" data-original="#488ff7"></path><circle cx="54.756" cy="49.737" r="4.918" fill="#ffffff" opacity="1" data-original="#ffffff"></circle><path d="M53.925 51.563a.498.498 0 0 1-.353-.146l-.99-.991a.5.5 0 1 1 .706-.707l.637.637 2.299-2.298a.5.5 0 1 1 .707.707l-2.652 2.652a.498.498 0 0 1-.354.146z" fill="#000000" opacity="1" data-original="#000000"></path></g></svg>
+              <div class="mt-6 text-center">
+                <h3 class="text-lg font-semibold text-tColor">Secure API Integration</h3>
+                <p class="mt-3 text-sm text-muted">Enjoy robust security with encrypted requests and secure endpoints for all operations.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-14">
+          <div class="flex flex-col items-center">
+            <p class="gradient-text font-bold tracking-widest">HOW IT WORKS</p>
+            <h2 class="text-center mt-2 text-3xl lg:text-4xl font-semibold text-tColor">Simplified Media Conversion in Just a Few Steps
+            </h2>
+            <p class="text-muted mt-5 max-w-3xl text-center">Transforming your media files with PixLab’s API is seamless and straightforward. Upload your file, select the desired transformation, and let our intelligent API handle the rest—delivering optimized results in no time. Whether you're resizing images, extracting text, or converting documents, PixLab streamlines the entire process for you.</p>
+          </div>
+          <div class="mt-12 flex flex-col gap-10">
+            <!-- Single Row -->
+            <div class="flex flex-col items-start gap-16 pb-16 md:flex-row-reverse">
+              <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+                <div class="mt-5">
+                  <h2 class="text-3xl font-semibold text-apeTColor">Add Custom Text to Your Images in Seconds</h2>
+                  <p class="mt-5 text-apeTColor">PixLab’s API makes it effortless to overlay text on your images. Whether it’s a meme, a marketing banner, or just a creative design, you can draw text on the top and bottom of any image. Customize text size, font, color, and more—all with a single API call.
+                  </p>
+                  <div class="flex gap-5">
+                    <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-primary bg-primary px-3 py-1.5 text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-primary" href="#">Read more</a>
+                    <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-primary bg-transparent px-3 py-1.5 text-[15px] font-medium text-primary transition-all duration-500 hover:bg-primary hover:text-white" href="#">Learn more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-1 shadow-lg">
+                <div class="min-w-full overflow-x-auto rounded-lg bg-gray-800">
+                  <div class="flex items-center border-b border-slate-500 p-2">
+                    <div class="px-1">
+                      <span class="inline-block h-2 w-2 rounded-full bg-[#ff605c] p-[1px]"></span>
+                    </div>
+                    <div class="px-1">
+                      <span class="inline-block h-2 w-2 rounded-full bg-[#ffbd44] p-[1px]"></span>
+                    </div>
+                    <div class="px-1">
+                      <span class="inline-block h-2 w-2 rounded-full bg-[#00ca4e] p-[1px]"></span>
+                    </div>
+                  </div>
+                  <!-- Card content -->
+<div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 leading-[1.6]"><code><span style="color: rgb(255, 123, 114); font-weight: 400;">import</span> requests
+<span style="color: rgb(255, 123, 114); font-weight: 400;">import</span> json
+<span style="color: rgb(139, 148, 158); font-weight: 400;"># Draw some funny text on TOP &amp; BOTTOM of the famous Cool Cat public domain image.</span>
+<span style="color: rgb(139, 148, 158); font-weight: 400;"># https://pixlab.io/cmd?id=drawtext is the target endpoint for drawing text on images</span>
+  req = requests.get(<span style="color: rgb(165, 214, 255); font-weight: 400;">'https://api.pixlab.io/drawtext'</span>,params={
+    <span style="color: rgb(165, 214, 255); font-weight: 400;">'img'</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">'https://pixlab.io/images/jdr.jpg'</span>,
+    <span style="color: rgb(165, 214, 255); font-weight: 400;">'top'</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">'someone bumps the table'</span>,
+    <span style="color: rgb(165, 214, 255); font-weight: 400;">'bottom'</span>:<span style="color: rgb(165, 214, 255); font-weight: 400;">'right before you win'</span>,
+    <span style="color: rgb(165, 214, 255); font-weight: 400;">'cap'</span>:<span style="color: rgb(121, 192, 255); font-weight: 400;">True</span>, <span style="color: rgb(139, 148, 158); font-weight: 400;"># Capitalize text,</span>
+    <span style="color: rgb(165, 214, 255); font-weight: 400;">'strokecolor'</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">'black'</span>,
+    <span style="color: rgb(165, 214, 255); font-weight: 400;">'key'</span>:<span style="color: rgb(165, 214, 255); font-weight: 400;">'PIXLAB_API_KEY'</span>, <span style="color: rgb(139, 148, 158); font-weight: 400;"># Get yours from https://pixlab.io/dashboard</span>
+  })
+  reply = req.json()
+  <span style="color: rgb(255, 123, 114); font-weight: 400;">if</span> reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'status'</span>] != <span style="color: rgb(121, 192, 255); font-weight: 400;">200</span>:
+    <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span> (reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'error'</span>])
+  <span style="color: rgb(255, 123, 114); font-weight: 400;">else</span>:
+    <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span> (<span style="color: rgb(165, 214, 255); font-weight: 400;">"Meme: "</span>+ reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'ssl_link'</span>])
+</code></div>
+</div>
+              </div>
+            </div>
+            <!-- Single Row -->
+            <div class="flex flex-col items-start gap-16 pb-16 md:flex-row">
+              <div class="flex flex-1 flex-col items-center self-start text-center md:items-start md:text-start">
+                <div class="mt-5">
+                  <h2 class="text-3xl font-semibold text-apeTColor">Convert PDFs into Stunning Images</h2>
+                  <p class="mt-5 text-apeTColor">Transform your PDF documents into high-quality JPEG or PNG images effortlessly with PixLab’s API. Perfect for archiving, previews, or sharing, our solution makes conversion quick and seamless—no manual effort required.
+                  </p>
+                  <div class="flex gap-5">
+                    <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-primary bg-primary px-3 py-1.5 text-[15px] font-medium text-white transition-all duration-500 hover:bg-transparent hover:text-primary" href="#">Read more</a>
+                    <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-primary bg-transparent px-3 py-1.5 text-[15px] font-medium text-primary transition-all duration-500 hover:bg-primary hover:text-white" href="#">Learn more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="flex w-full max-w-full flex-1 shadow-lg">
+                <div class="min-w-full overflow-x-auto rounded-lg bg-gray-800">
+                  <div class="flex items-center border-b border-slate-500 p-2">
+                    <div class="px-1">
+                      <span class="inline-block h-2 w-2 rounded-full bg-[#ff605c] p-[1px]"></span>
+                    </div>
+                    <div class="px-1">
+                      <span class="inline-block h-2 w-2 rounded-full bg-[#ffbd44] p-[1px]"></span>
+                    </div>
+                    <div class="px-1">
+                      <span class="inline-block h-2 w-2 rounded-full bg-[#00ca4e] p-[1px]"></span>
+                    </div>
+                  </div>
+                  <!-- Card content -->
+<div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 leading-[1.6]"><code><span style="color: rgb(255, 123, 114); font-weight: 400;">import</span> requests
+
+<span style="color: rgb(139, 148, 158); font-weight: 400;"># Convert a PDF document to an image (JPEG/PNG) using PixLab API</span>
+  req = requests.get(<span style="color: rgb(165, 214, 255); font-weight: 400;">'https://api.pixlab.io/pdftoimg'</span>, params={
+      <span style="color: rgb(165, 214, 255); font-weight: 400;">'src'</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">'https://www.getharvest.com/downloads/Invoice_Template.pdf'</span>, <span style="color: rgb(139, 148, 158); font-weight: 400;"># PDF source URL</span>
+      <span style="color: rgb(165, 214, 255); font-weight: 400;">'export'</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">'jpeg'</span>, <span style="color: rgb(139, 148, 158); font-weight: 400;"># Output format (jpeg/png)</span>
+      <span style="color: rgb(165, 214, 255); font-weight: 400;">'key'</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">'YOUR_PIXLAB_API_KEY'</span> <span style="color: rgb(139, 148, 158); font-weight: 400;"># Replace with your PixLab API key</span>
+  })
+  reply = req.json()
+  <span style="color: rgb(255, 123, 114); font-weight: 400;">if</span> reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'status'</span>] != <span style="color: rgb(121, 192, 255); font-weight: 400;">200</span>:
+      <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"Error:"</span>, reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'error'</span>])
+  <span style="color: rgb(255, 123, 114); font-weight: 400;">else</span>:
+      <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"Image URL:"</span>, reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'link'</span>])</code></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 pb-14">
+          <div class="flex flex-col items-center">
+            <p class="gradient-text font-bold tracking-widest">API ENDPOINTS</p>
+            <h2 class="text-center mt-2 text-3xl lg:text-4xl font-semibold text-tColor">Explore PixLab’s Versatile API Endpoints
+            </h2>
+            <p class="text-muted mt-5 max-w-2xl text-center">PixLab’s comprehensive suite of API endpoints empowers you to achieve a variety of tasks effortlessly. From advanced face recognition and document-to-image conversion to creating dynamic GIFs and secure image encryption, our endpoints simplify complex processes. </p>
+          </div>
+          <div class="mt-12 mx-auto">
+            <div class="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+              <!-- Card 1 -->
+              <div class="grid gap-3 grid-rows-10">
+                <a href="endpoints/facedetect" class="flex flex-col card-bg hover:bg-pink-50 row-span-5 min-h-48 lg:min-h-64 lg:row-span-4 p-6 shadow-lg rounded-2xl">
+                  <div class="flex-1 text-primary mb-4">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none"><path d="M36.5 2H43a5 5 0 015 5v6.5M13.5 2H7a5 5 0 00-5 5v6.5m46 23V43a5 5 0 01-5 5h-6.5m-23 0H7a5 5 0 01-5-5v-6.5" stroke="currentColor" stroke-width="3"></path><path d="M36.5 16.03v4.187m-23-4.188v4.188m12.939-3.955v9.849c0 1.37-1.144 2.481-2.556 2.481h-1.277m-5.993 6.71a13.596 13.596 0 008.865 3.248c3.398 0 6.5-1.227 8.864-3.249" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path></svg>
+                  </div>
+                  <h3 class="text-lg text-tColor font-semibold mb-2">Face Detection</h3>
+                  <p class="text-muted">Effortlessly detect and analyze faces within images to unlock advanced recognition capabilities.
+                  </p>
+                </a>
+                <a href="endpoints/pdftoimg" class="flex flex-col card-bg row-span-5 min-h-48 lg:min-h-64 lg:row-span-6 p-6 shadow-lg rounded-2xl">
+                  <div class="flex-1 text-primary mb-4">
+                    <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="file-alt"><path fill="#dc2a76" d="M9,10h1a1,1,0,0,0,0-2H9a1,1,0,0,0,0,2Zm0,2a1,1,0,0,0,0,2h6a1,1,0,0,0,0-2ZM20,8.94a1.31,1.31,0,0,0-.06-.27l0-.09a1.07,1.07,0,0,0-.19-.28h0l-6-6h0a1.07,1.07,0,0,0-.28-.19.32.32,0,0,0-.09,0A.88.88,0,0,0,13.05,2H7A3,3,0,0,0,4,5V19a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V9S20,9,20,8.94ZM14,5.41,16.59,8H15a1,1,0,0,1-1-1ZM18,19a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V5A1,1,0,0,1,7,4h5V7a3,3,0,0,0,3,3h3Zm-3-3H9a1,1,0,0,0,0,2h6a1,1,0,0,0,0-2Z"></path></svg>
+                  </div>
+                  <h3 class="text-lg text-tColor font-semibold mb-2">PDF to High-Resolution Image
+                  </h3>
+                  <p class="text-muted">Convert PDF documents into crisp JPEG or PNG formats for seamless accessibility and sharing.
+                  </p>
+                </a>
+              </div>
+              <!-- Card 2 -->
+              <div class="grid gap-3 grid-rows-10">
+                <a href="endpoints/crop" class="flex flex-col card-bg row-span-5 min-h-48 lg:min-h-64 lg:row-span-6 p-6 shadow-lg rounded-2xl">
+                  <div class="flex-1 text-primary mb-4">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none"><path d="M5.5.793V6m44 38h-5m0 5.5V44m0 0H11c-3 0-5.5-2-5.5-5V6M11 6h28c3 0 5.5 2 5.5 5v27.5M5.5 6H0" stroke="currentColor" stroke-width="3"></path></svg>
+                  </div>
+                  <h3 class="text-lg text-tColor font-semibold mb-2">Smart Image Crop</h3>
+                  <p class="text-muted">Automatically crop images to focus on key areas with precision and clarity.
+                  </p>
+                </a>
+                <a href="endpoints/makegif" class="flex flex-col card-bg row-span-5 min-h-48 lg:min-h-64 lg:row-span-4 p-6 shadow-lg rounded-2xl">
+                  <div class="flex-1 text-primary mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" x="0" y="0" viewBox="0 0 96 96" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g fill="#000"><path fill-rule="evenodd" d="M65.427 84.66H30.386c-2.88 0-5.17 0-7.017-.152-1.892-.154-3.506-.477-4.983-1.23a12.675 12.675 0 0 1-5.539-5.54c-.753-1.476-1.076-3.09-1.23-4.982-.152-1.847-.151-4.137-.151-7.016V30.698c0-2.88 0-5.17.15-7.017.155-1.892.478-3.505 1.231-4.982a12.675 12.675 0 0 1 5.54-5.54c1.476-.752 3.09-1.075 4.982-1.23 1.847-.151 4.137-.15 7.016-.15h35.042c2.88 0 5.17-.001 7.017.15 1.892.155 3.505.478 4.982 1.23a12.675 12.675 0 0 1 5.54 5.54c.752 1.477 1.075 3.09 1.23 4.982.15 1.848.15 4.138.15 7.017V65.74c0 2.88 0 5.17-.15 7.017-.155 1.892-.478 3.505-1.23 4.983a12.675 12.675 0 0 1-5.54 5.539c-1.477.752-3.09 1.076-4.982 1.23-1.848.151-4.138.151-7.017.151zm6.673-4.363c1.63-.133 2.626-.385 3.408-.784a8.45 8.45 0 0 0 3.693-3.693c.398-.782.65-1.777.784-3.408.135-1.655.137-3.773.137-6.765V30.79c0-2.993-.002-5.11-.137-6.766-.133-1.63-.386-2.626-.784-3.408a8.45 8.45 0 0 0-3.693-3.693c-.782-.399-1.778-.65-3.408-.784-1.656-.135-3.773-.137-6.766-.137H30.478c-2.993 0-5.11.002-6.765.137-1.631.133-2.626.385-3.409.784a8.45 8.45 0 0 0-3.692 3.693c-.399.782-.651 1.777-.785 3.408-.135 1.655-.136 3.773-.136 6.766v34.856c0 2.992.001 5.11.136 6.765.134 1.63.386 2.626.785 3.408a8.45 8.45 0 0 0 3.692 3.693c.783.399 1.778.651 3.409.784 1.655.136 3.772.137 6.765.137h34.856c2.993 0 5.11-.001 6.766-.137z" clip-rule="evenodd" fill="#dc2a76" opacity="1" data-original="#000000" class=""></path><path d="M35.879 59.089c-2.217 0-4.1-.42-5.646-1.258-1.528-.838-2.692-2.012-3.493-3.521-.801-1.51-1.202-3.28-1.202-5.31 0-1.565.233-2.972.699-4.22.484-1.267 1.174-2.339 2.068-3.214.913-.895 2.012-1.584 3.298-2.069 1.304-.484 2.776-.726 4.415-.726 1.006 0 2.013.112 3.019.335 1.006.224 1.975.596 2.906 1.118.392.224.652.512.783.866.149.336.186.7.112 1.09a2.053 2.053 0 0 1-.447 1.007c-.224.28-.522.465-.895.559-.354.074-.764 0-1.23-.224a7.274 7.274 0 0 0-1.956-.727 9.571 9.571 0 0 0-2.264-.251c-1.322 0-2.431.251-3.325.754-.895.485-1.565 1.211-2.013 2.18-.428.95-.642 2.124-.642 3.522 0 2.105.503 3.698 1.509 4.779 1.025 1.08 2.534 1.62 4.527 1.62.671 0 1.36-.064 2.068-.195.708-.13 1.407-.317 2.096-.559l-.81 1.76V51.04h-2.515c-.56 0-.988-.14-1.286-.42-.298-.279-.447-.66-.447-1.145 0-.503.149-.885.447-1.146.298-.28.727-.42 1.286-.42h4.388c.558 0 .978.15 1.257.448.298.298.447.727.447 1.286v6.483c0 .485-.093.895-.28 1.23-.185.335-.502.578-.95.727-.838.298-1.779.54-2.822.726-1.043.187-2.078.28-3.102.28zM49.047 59.033c-.708 0-1.248-.196-1.62-.587-.373-.391-.56-.94-.56-1.649V41.063c0-.708.187-1.258.56-1.65.372-.39.912-.586 1.62-.586.69 0 1.22.195 1.593.587.373.39.56.94.56 1.649v15.734c0 .708-.187 1.258-.56 1.649-.354.391-.885.587-1.593.587zM57.372 59.033c-.708 0-1.257-.196-1.649-.587-.372-.391-.559-.96-.559-1.705V41.342c0-.727.196-1.285.587-1.677.391-.391.95-.587 1.677-.587h9.558c.559 0 .978.15 1.258.447.298.28.447.69.447 1.23 0 .56-.15.988-.447 1.286-.28.28-.699.419-1.258.419h-7.49v4.807h6.875c.56 0 .988.149 1.286.447.298.28.447.69.447 1.23s-.15.96-.447 1.257-.727.448-1.286.448h-6.875v6.092c0 1.528-.708 2.292-2.124 2.292z" fill="#dc2a76" opacity="1" data-original="#000000" class=""></path></g></g></svg>
+                  </div>
+                  <h3 class="text-lg text-tColor font-semibold mb-2">GIF Generation</h3>
+                  <p class="text-muted">Create dynamic GIFs from a sequence of static images, perfect for animations and presentations.
+                  </p>
+                </a>
+              </div>
+              <!-- Card 3 -->
+              <div class="grid gap-3 grid-rows-10">
+                <a href="endpoints/ocr" class="flex flex-col card-bg row-span-5 min-h-48 lg:min-h-64 lg:row-span-4 p-6 shadow-lg rounded-2xl">
+                  <div class="flex-1 text-primary mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" x="0" y="0" viewBox="0 0 100 100" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path d="M40.369 59.828h19.262l4.467 12.642a3.148 3.148 0 0 0 2.968 2.099h3.741c2.172 0 3.691-2.148 2.968-4.196L57.49 24.255a3.148 3.148 0 0 0-2.968-2.1h-9.044a3.148 3.148 0 0 0-2.968 2.1L26.225 70.373c-.723 2.048.796 4.196 2.968 4.196h3.741a3.148 3.148 0 0 0 2.968-2.1zM50 32.556 56.159 50H43.84zM97.5 13.966C97.5 7.633 92.367 2.5 86.034 2.5H74.441a3.148 3.148 0 0 0-3.148 3.148V9.18a3.148 3.148 0 0 0 3.148 3.148h11.593c.905 0 1.638.733 1.638 1.638v11.593a3.148 3.148 0 0 0 3.148 3.148h3.532a3.148 3.148 0 0 0 3.148-3.148zM97.5 86.034V74.441a3.148 3.148 0 0 0-3.148-3.148H90.82a3.148 3.148 0 0 0-3.148 3.148v11.593c0 .905-.733 1.638-1.638 1.638H74.441a3.148 3.148 0 0 0-3.148 3.148v3.532a3.148 3.148 0 0 0 3.148 3.148h11.593c6.333 0 11.466-5.133 11.466-11.466zM2.5 86.034C2.5 92.367 7.633 97.5 13.966 97.5h11.593a3.148 3.148 0 0 0 3.148-3.148V90.82a3.148 3.148 0 0 0-3.148-3.148H13.966a1.638 1.638 0 0 1-1.638-1.638V74.441a3.148 3.148 0 0 0-3.148-3.148H5.648A3.148 3.148 0 0 0 2.5 74.441zM5.648 28.707H9.18a3.148 3.148 0 0 0 3.148-3.148V13.966c0-.905.733-1.638 1.638-1.638h11.593a3.148 3.148 0 0 0 3.148-3.148V5.648A3.148 3.148 0 0 0 25.559 2.5H13.966C7.633 2.5 2.5 7.633 2.5 13.966v11.593a3.148 3.148 0 0 0 3.148 3.148z" fill="#dc2a76" opacity="1" data-original="#000000"></path></g></svg>
+                  </div>
+                  <h3 class="text-lg text-tColor font-semibold mb-2">Text Extraction
+                  </h3>
+                  <p class="text-muted">Extract meaningful text content from images to streamline data processing and analysis.
+                  </p>
+                </a>
+                <a href="endpoints/smartresize" class="flex flex-col card-bg row-span-5 min-h-48 lg:min-h-64 lg:row-span-6 p-6 shadow-lg rounded-2xl">
+                  <div class="flex-1 text-primary mb-4">
+                    <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="image-resize-square"><path fill="#dc2a76" d="M3,8.1a1,1,0,0,0,1-1V6.91a1,1,0,0,0-2,0V7.1A1,1,0,0,0,3,8.1Zm0-4A1,1,0,0,0,3.42,4,1,1,0,0,0,3.1,2H3A1.09,1.09,0,0,0,2,3.1,1,1,0,0,0,3,4.05Zm17.39-.19A1,1,0,0,0,22,3a1,1,0,0,0-1-1h-.1a1,1,0,0,0-.51,1.86ZM11.89,4h.22a1,1,0,0,0,0-2h-.22a1,1,0,0,0,0,2ZM7.39,4H7.6a1,1,0,0,0,0-2H7.39a1,1,0,0,0,0,2ZM21,20a1,1,0,0,0-.42.1A1,1,0,0,0,20.9,22H21a1.09,1.09,0,0,0,1-1.1A1,1,0,0,0,21,20ZM14,11a1,1,0,0,0-1-1H3.27A1.08,1.08,0,0,0,3,10,1,1,0,0,0,2,11V21a1,1,0,0,0,1,1H13.1a1,1,0,0,0,.9-1.42Zm-2,9H5.52l3.91-3.9a.33.33,0,0,1,.47,0L12,18.19Zm0-4.63-.68-.69a2.35,2.35,0,0,0-3.31,0l-4,4V12h8Zm9,0a1,1,0,0,0-1,1v.21a1,1,0,0,0,2,0V16.4A1,1,0,0,0,21,15.4Zm0-9a1,1,0,0,0-1,1V7.6a1,1,0,1,0,2,0V7.39A1,1,0,0,0,21,6.39Zm0,4.5a1,1,0,0,0-1,1v.22a1,1,0,0,0,2,0v-.22A1,1,0,0,0,21,10.89ZM17.1,20h-.2a1,1,0,1,0,0,2h.2a1,1,0,0,0,0-2ZM16.61,4a1,1,0,0,0,0-2H16.4a1,1,0,1,0,0,2Z"></path></svg>
+                  </div>
+                  <h3 class="text-lg text-tColor font-semibold mb-2">Smart Image Resize
+                  </h3>
+                  <p class="text-muted">Resize images intelligently without losing important visual details or quality.
+                  </p>
+                </a>
+              </div>
+              <!-- Card 4 -->
+              <div class="grid gap-3 grid-rows-10">
+                <a href="" class="flex flex-col card-bg row-span-5 min-h-48 lg:min-h-64 lg:row-span-6 p-6 shadow-lg rounded-2xl">
+                  <div class="flex-1 text-primary mb-4">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none"><path d="M36.5 2H43a5 5 0 015 5v6.5M13.5 2H7a5 5 0 00-5 5v6.5m46 23V43a5 5 0 01-5 5h-6.5m-23 0H7a5 5 0 01-5-5v-6.5" stroke="currentColor" stroke-width="3"></path><circle cx="18.612" cy="18.611" r="7.667" fill="currentColor"></circle><path d="M31.39 22.445l8.944 15.333H22.445l8.945-15.333z" fill="currentColor"></path></svg>
+                  </div>
+                  <h3 class="text-lg text-tColor font-semibold mb-2">Object Recognition
+                  </h3>
+                  <p class="text-muted">Identify objects within images accurately, enabling smarter applications and workflows.
+                  </p>
+                </a>
+                <a href="ekyc/docscan" class="flex flex-col card-bg row-span-5 min-h-48 lg:min-h-64 lg:row-span-4 p-6 shadow-lg rounded-2xl">
+                  <div class="flex-1 text-primary mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="65" height="65" x="0" y="0" viewBox="0 0 100 100" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M80.25 50V33.194h-60.5V50a1.68 1.68 0 0 1-1.681 1.68 1.68 1.68 0 0 1-1.68-1.68V31.514c0-.928.752-1.68 1.68-1.68H81.93a1.68 1.68 0 0 1 1.681 1.68V50a1.68 1.68 0 1 1-3.361 0zM18.069 61.764a1.68 1.68 0 0 0-1.68 1.681v6.722a1.68 1.68 0 0 0 1.68 1.681H81.93a1.68 1.68 0 0 0 1.681-1.681v-6.722a1.68 1.68 0 1 0-3.361 0v5.042h-60.5v-5.042a1.68 1.68 0 0 0-1.681-1.681zm57.139 3.361a1.68 1.68 0 1 0 0-3.362h-5.042a1.68 1.68 0 0 0 0 3.362zm0-16.806h-5.042a1.68 1.68 0 0 0 0 3.361h5.042a1.68 1.68 0 1 0 0-3.361zM63.444 65.125a1.68 1.68 0 1 0 0-3.362H53.361a1.68 1.68 0 1 0 0 3.362zm-20.166 0a1.68 1.68 0 0 0 0-3.362H26.472a1.68 1.68 0 1 0 0 3.362zm10.083-16.806a1.68 1.68 0 1 0 0 3.361h3.361a1.68 1.68 0 1 0 0-3.361zm21.847-8.402H53.361a1.68 1.68 0 1 0 0 3.361h21.847a1.68 1.68 0 1 0 0-3.361zm-63.861-6.723a1.68 1.68 0 0 0 1.681-1.681V13.028h18.486a1.68 1.68 0 0 0 0-3.361H11.347a1.68 1.68 0 0 0-1.681 1.681v20.166c.001.929.754 1.68 1.681 1.68zM88.653 9.667H68.486a1.68 1.68 0 1 0 0 3.361h18.486v18.486a1.68 1.68 0 1 0 3.361 0V11.347a1.68 1.68 0 0 0-1.68-1.68zm0 57.138a1.68 1.68 0 0 0-1.681 1.681v18.486H68.486a1.68 1.68 0 1 0 0 3.361h20.167a1.68 1.68 0 0 0 1.68-1.681V68.486a1.68 1.68 0 0 0-1.68-1.681zM31.514 86.972H13.028V68.486a1.68 1.68 0 1 0-3.362 0v20.166a1.68 1.68 0 0 0 1.681 1.681h20.167a1.68 1.68 0 0 0 0-3.361zm58.819-30.25a1.68 1.68 0 0 1-1.68 1.68H11.347a1.68 1.68 0 1 1 0-3.361h13.614A8.403 8.403 0 0 1 28.175 50a8.364 8.364 0 0 1 1.951-1.092 7.335 7.335 0 0 1-1.133-3.95c0-3.708 2.639-6.722 5.882-6.722s5.882 3.015 5.882 6.722a7.343 7.343 0 0 1-1.132 3.95A8.38 8.38 0 0 1 41.576 50a8.407 8.407 0 0 1 3.213 5.041H88.653a1.68 1.68 0 0 1 1.68 1.681zm-49.03-1.68a5.045 5.045 0 0 0-4.748-3.361H33.194a5.047 5.047 0 0 0-4.748 3.361zm-8.949-10.084c0 1.822 1.155 3.361 2.521 3.361s2.521-1.54 2.521-3.361c0-1.822-1.154-3.361-2.521-3.361s-2.521 1.54-2.521 3.361z" fill="#dc2a76" opacity="1" data-original="#000000" class=""></path></g></svg>
+                  </div>
+                  <h3 class="text-lg text-tColor font-semibold mb-2">ID and Passport Scanning
+                  </h3>
+                  <p class="text-muted">Scan and extract details from IDs or passports for secure and efficient identity verification.
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="flex justify-center mt-7">
+              <button class="gradient-button rounded-lg p-[1px] font-medium text-tColor">
+                <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                  <span>API ENDPOINTS</span>
+                  <i class="uil uil-arrow-up-right"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <div class="bg-gradient-theme flex flex-col items-center lg:p-12 p-6 rounded-xl">
+            <div class="max-w-3xl">
+              <h2 class="text-center text-3xl lg:text-4xl font-bold text-tColor">Ready to Unlock PixLab’s Full Potential?
+              </h2>
+              <p class="text-muted text-center mt-3">Maximize the power of PixLab's Document and Image Conversion APIs with pricing plans tailored to your needs. Whether you're an individual developer or a large enterprise, we have a plan to match your scale and requirements.
+              </p>
+              <div class="flex">
+                <a href="https://app-ux.pixlab.io" class="mx-auto mt-5 gradient-button rounded-lg p-[1px] font-medium text-tColor">
+                  <div class="bg-gradient-theme flex h-full w-full justify-center gap-2 rounded-lg px-6 py-3">
+                    <span>Explore Pricing Options</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-background">
+      <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+        <div class="gradient-graph-line mb-10"></div>
+        <div class="grid grid-cols-10 gap-y-10">
+          <div class="col-span-10 md:col-span-5 lg:col-span-3">
+            <a href="/">
+              <img class="dark-logo mb-1 w-36" src="assets/images/pixlab-logo-dark.png" alt="PixLab logo" />
+            </a>
+            <p class="pr-3 text-[15px] text-tColor">PixLab offers cutting-edge AI solutions to empower developers and creators with Automated Tools & APIs for Machine Vision, Media Processing & Creative Innovation.</p>
+
+            <!-- Search Input in Footer -->
+            <form action="search" method="get">
+              <div class="mt-5 flex h-10 w-full items-center gap-3 rounded-full border border-bColor bg-input px-4 focus-within:bg-surface md:max-w-[80%] lg:h-12">
+                <i class="uil uil-search text-xl text-tColor" aria-hidden="true"></i>
+                <input name="q" class="h-full w-full border-none bg-transparent text-tColor outline-none" type="search" placeholder="Search Docs..." aria-label="Search" />
+              </div>
+            </form>
+
+            <!-- Social Media Links -->
+            <div class="mt-10 flex gap-1.5">
+              <a href="https://www.facebook.com/pixlab.io/" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow PixLab on Facebook">
+                <i class="uil uil-facebook text-lg"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/pixlabio" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow PixLab on LinkedIn">
+                <i class="uil uil-linkedin text-lg"></i>
+              </a>
+              <a href="https://x.com/unqlite_db" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow PixLab on Twitter/X">
+                <i class="uil uil-twitter text-lg"></i>
+              </a>
+              <a href="https://github.com/symisc" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="Follow Symisc on GitHub">
+                <i class="uil uil-github text-lg"></i>
+              </a>
+              <a href="https://blog.pixlab.io" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-primary" title="PixLab Blog">
+                <i class="uil uil-rss text-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Products Section -->
+          <div class="col-span-10 md:col-span-5 lg:col-span-3">
+            <h3 class="mb-4 font-semibold text-primary">PRODUCTS & SDKs</h3>
+            <ul class="flex flex-col gap-3">
+              <li><a href="api-portal" class="footer-link">PixLab API Portal</a></li>
+              <li><a href="vision-llm-api-playground/" class="footer-link">Vision Playground, LLM & APIs</a></li>
+              <li><a href="template-pdf-media-engine" class="footer-link">PDF & Media Template Engine</a></li>
+              <li><a href="ekyc/" class="footer-link">eKYC - Universal ID Scanner APIs</a></li>
+              <li><a href="app-ui-ux-code" class="footer-link">APP UX - Mobile UI Code Generator</a></li>
+              <li><a href="https://faceio.net/" target="_blank" class="footer-link">FACEIO - Facial Authentication for the Web &nearr;</a></li>
+            </ul>
+            <!-- Creativity Tools -->
+            <h3 class="mb-2 mt-4 font-semibold text-primary">ONLINE CREATIVITY</h3>
+            <ul class="flex flex-col gap-3">
+              <li><a href="annotate" class="footer-link">Image Annotation & Segmentation</a></li>
+              <li><a href="mockup-screenshot-editor" class="footer-link">Mockup & Screenshot Editor</a></li>
+              <li><a href="bulk-image-background-removal-tool-apis" class="footer-link">Bulk Image Background Removal Tool</a></li>
+              <li><a href="creative-toolbox" class="footer-link">Creative Toolbox</a></li>
+              <li><a href="ai-photo-editor" class="footer-link">AI Photo Editor</a></li>
+              <li><a href="tilemap-2d-level-editor" class="footer-link">AI Game Tilemap Editor</a></li>
+            </ul>
+          </div>
+          <!-- Resources Section -->
+          <div class="col-span-10 md:col-span-5 lg:col-span-2">
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-primary">DEVELOPERS</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="start" class="footer-link">Getting Started</a></li>
+                <li><a href="api-endpoints" class="footer-link">API Endpoints</a></li>
+                <li><a href="rest-api" class="footer-link">REST APIs</a></li>
+                <li><a href="ekyc/" class="footer-link">eKYC Platform</a></li>
+                <li><a href="vision-llm-api-playground/" class="footer-link">Vision LLM & APIs</a></li>
+                <li><a href="on-premises" class="footer-link">PixLab On-Premises</a></li>
+              </ul>
+            </div>
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-primary">RESOURCES</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="https://console.pixlab.io" target="_blank" class="footer-link">PixLab Console &nearr;</a></li>
+                <li><a href="pricing" class="footer-link">Pricing</a></li>
+                <li><a href="support" class="footer-link">Support Channels</a></li>
+                <li><a href="https://community.faceio.net" target="_blank" class="footer-link">Community Forum &nearr;</a></li>
+                <li><a href="https://sod.pixlab.io" target="_blank" class="footer-link">Open Computer Vision &nearr;</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Company Section -->
+          <div class="col-span-10 md:col-span-5 lg:col-span-2">
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-primary">COMPANY</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="https://symisc.net/" target="_blank" class="footer-link">Symisc Systems &nearr;</a></li>
+                <li><a href="https://blog.pixlab.io" target="_blank" class="footer-link">PixLab Blog &nearr;</a></li>
+                <li><a href="https://github.com/symisc" target="_blank" class="footer-link">Github &nearr;</a></li>
+                <li><a href="https://www.linkedin.com/company/pixlabio" target="_blank" class="footer-link">LinkedIn &nearr;</a></li>
+                <li><a href="https://x.com/unqlite_db" target="_blank" class="footer-link">Twitter | X &nearr;</a></li>
+                <li><a href="https://www.facebook.com/pixlab.io/" target="_blank" class="footer-link">Facebook &nearr;</a></li>
+              </ul>
+            </div>
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-primary">LEGAL</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="privacy-policy" class="footer-link">Privacy Policy</a></li>
+                <li><a href="terms-of-use" class="footer-link">Terms of Services</a></li>
+                <li><a href="dmca" class="footer-link">DMCA</a></li>
+                <li><a href="https://status.faceio.net" target="_blank" class="footer-link">Services Status &nearr;</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="mt-10 flex flex-col justify-between gap-5 md:flex-row md:items-center">
+          <a href="https://symisc.net/" target="_blank" title="Copyright © 2017 - 2025, Symisc Systems, SUARL. All rights reserved.">
+            <img class="dark-logo mb-1 w-36" src="assets/images/symisc-systems-logo.png" alt="Symisc Systems" />
+          </a>
+
+          <div class="flex flex-col gap-1 text-sm text-slate-600">
+            <p>Copyright © 2017 - 2025, <a href="https://symisc.net" target="_blank">Symisc Systems</a>, SUARL. All rights reserved.</p>
+            <p>All trademarks and copyrights belong to their respective owners.</p>
+          </div>
+          <div class="flex">
+            <a class="block" href="/" title="GDPR Compliant">
+              <img class="w-32 lg:w-36" src="assets/images/gdpr-compliant.png" alt="GDPR compliant badge" />
+            </a>
+            <a class="block" href="/" title="Privacy First">
+              <img class="w-32 lg:w-36" src="assets/images/privacy-first.png" alt="Privacy first badge" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/preline/preline.min.js"></script>
+    <script src="assets/js/particles/particles.min.js"></script>
+    <script src="assets/js/particles/particles-config.js"></script>
+  </body>
+</html>
