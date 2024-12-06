@@ -2173,11 +2173,6 @@ body {
   background-color: rgb(14 165 233 / var(--tw-bg-opacity));
 }
 
-.bg-slate-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
-}
-
 .bg-surface {
   background-color: var(--color-surface);
 }
@@ -2480,6 +2475,10 @@ body {
   padding-bottom: 3rem;
 }
 
+.pb-14 {
+  padding-bottom: 3.5rem;
+}
+
 .pb-16 {
   padding-bottom: 4rem;
 }
@@ -2546,10 +2545,6 @@ body {
 
 .pt-8 {
   padding-top: 2rem;
-}
-
-.pb-14 {
-  padding-bottom: 3.5rem;
 }
 
 .text-left {
@@ -2741,9 +2736,9 @@ body {
   color: var(--color-background);
 }
 
-.text-blue-500 {
+.text-blue-600 {
   --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
+  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
 .text-blue-700 {
@@ -2886,13 +2881,16 @@ body {
   color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
-.text-pink-500 {
-  --tw-text-opacity: 1;
-  color: rgb(236 72 153 / var(--tw-text-opacity));
-}
-
 .underline {
   text-decoration-line: underline;
+}
+
+.decoration-blue-600 {
+  text-decoration-color: #2563eb;
+}
+
+.underline-offset-4 {
+  text-underline-offset: 4px;
 }
 
 .opacity-0 {
@@ -4470,6 +4468,11 @@ body.dark-theme .ctb-card-bg {
   background-color: rgb(229 229 229 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-pink-50:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 242 248 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-primary:hover {
   background-color: var(--color-primary);
 }
@@ -4484,16 +4487,6 @@ body.dark-theme .ctb-card-bg {
 
 .hover\:bg-transparent:hover {
   background-color: transparent;
-}
-
-.hover\:bg-pink-100:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 231 243 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-pink-50:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(253 242 248 / var(--tw-bg-opacity));
 }
 
 .hover\:from-secondary:hover {
@@ -4559,6 +4552,10 @@ body.dark-theme .ctb-card-bg {
 
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+
+.hover\:opacity-80:hover {
+  opacity: 0.8;
 }
 
 .hover\:shadow-lg:hover {
