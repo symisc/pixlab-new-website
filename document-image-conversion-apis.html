@@ -298,43 +298,30 @@
                   <h2 class="text-3xl font-semibold text-apeTColor">Add Custom Text to Your Images in Seconds</h2>
                   <p class="mt-5 text-apeTColor">PixLab’s API makes it effortless to overlay text on your images. Whether it’s a meme, a marketing banner, or just a creative design, you can draw text on the top and bottom of any image. Customize text size, font, color, and more—all with a single API call.
                   </p>
-                  <div class="mt-5"><a class="text-blue-600 font-medium text-lg underline underline-offset-4 decoration-blue-600 hover:opacity-80 focus:outline-none focus:opacity-80" href="endpoints/drawtext">Learn more <i class="uil uil-arrow-right"></i></a></div>
+                  <div class="flex max-md:justify-center gap-5">
+                    <div class="mt-5"><a class="text-blue-600 font-medium text-lg underline underline-offset-4 decoration-blue-600 hover:opacity-80 focus:outline-none focus:opacity-80" href="endpoints">Learn more</a></div>
+                    <div class="mt-5"><a class="text-blue-600 font-medium text-lg underline underline-offset-4 decoration-blue-600 hover:opacity-80 focus:outline-none focus:opacity-80" href="api-portal">Explore API Portal <i class="uil uil-arrow-right"></i></a></div>
+                  </div>
                 </div>
               </div>
-              <div class="flex flex-1 shadow-lg">
-                <div class="min-w-full overflow-x-auto rounded-lg bg-gray-800">
-                  <div class="flex items-center border-b border-slate-500 p-2">
-                    <div class="px-1">
-                      <span class="inline-block h-2 w-2 rounded-full bg-[#ff605c] p-[1px]"></span>
-                    </div>
-                    <div class="px-1">
-                      <span class="inline-block h-2 w-2 rounded-full bg-[#ffbd44] p-[1px]"></span>
-                    </div>
-                    <div class="px-1">
-                      <span class="inline-block h-2 w-2 rounded-full bg-[#00ca4e] p-[1px]"></span>
-                    </div>
-                  </div>
-                  <!-- Card content -->
-<div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 leading-[1.6]"><code><span style="color: rgb(255, 123, 114); font-weight: 400;">import</span> requests
+<div class="flex flex-1 max-w-full w-full text-base bg-gray-800 p-4 rounded-lg overflow-x-auto shadow-lg">
+<pre style="font-family:monospace;color: rgb(201, 209, 217); font-weight: 400; "><span style="color: rgb(255, 123, 114); font-weight: 400;">import</span> requests
 <span style="color: rgb(255, 123, 114); font-weight: 400;">import</span> json
-<span style="color: rgb(139, 148, 158); font-weight: 400;"># Draw some funny text on TOP &amp; BOTTOM of the famous Cool Cat public domain image.</span>
-<span style="color: rgb(139, 148, 158); font-weight: 400;"># https://pixlab.io/cmd?id=drawtext is the target endpoint for drawing text on images</span>
-  req = requests.get(<span style="color: rgb(165, 214, 255); font-weight: 400;">'https://api.pixlab.io/drawtext'</span>,params={
-    <span style="color: rgb(165, 214, 255); font-weight: 400;">'img'</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">'https://pixlab.io/images/jdr.jpg'</span>,
-    <span style="color: rgb(165, 214, 255); font-weight: 400;">'top'</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">'someone bumps the table'</span>,
-    <span style="color: rgb(165, 214, 255); font-weight: 400;">'bottom'</span>:<span style="color: rgb(165, 214, 255); font-weight: 400;">'right before you win'</span>,
-    <span style="color: rgb(165, 214, 255); font-weight: 400;">'cap'</span>:<span style="color: rgb(121, 192, 255); font-weight: 400;">True</span>, <span style="color: rgb(139, 148, 158); font-weight: 400;"># Capitalize text,</span>
-    <span style="color: rgb(165, 214, 255); font-weight: 400;">'strokecolor'</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">'black'</span>,
-    <span style="color: rgb(165, 214, 255); font-weight: 400;">'key'</span>:<span style="color: rgb(165, 214, 255); font-weight: 400;">'PIXLAB_API_KEY'</span>, <span style="color: rgb(139, 148, 158); font-weight: 400;"># Get yours from https://pixlab.io/dashboard</span>
-  })
-  reply = req.json()
-  <span style="color: rgb(255, 123, 114); font-weight: 400;">if</span> reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'status'</span>] != <span style="color: rgb(121, 192, 255); font-weight: 400;">200</span>:
-    <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span> (reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'error'</span>])
-  <span style="color: rgb(255, 123, 114); font-weight: 400;">else</span>:
-    <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span> (<span style="color: rgb(165, 214, 255); font-weight: 400;">"Meme: "</span>+ reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'ssl_link'</span>])
-</code></div>
-</div>
-              </div>
+<span style="color: rgb(139, 148, 158); font-weight: 400;"># Draw some funny text on top &amp; button of the famous Michael Jordan crying face.</span>
+req = requests.get(<span style="color: rgb(165, 214, 255); font-weight: 400;">'https://api.pixlab.io/drawtext'</span>,params={
+  <span style="color: rgb(165, 214, 255); font-weight: 400;">'img'</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">'https://pixlab.io/images/jdr.jpg'</span>,
+  <span style="color: rgb(165, 214, 255); font-weight: 400;">'top'</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">'someone bumps the table'</span>,
+  <span style="color: rgb(165, 214, 255); font-weight: 400;">'bottom'</span>:<span style="color: rgb(165, 214, 255); font-weight: 400;">'right before you win'</span>,
+  <span style="color: rgb(165, 214, 255); font-weight: 400;">'cap'</span>:<span style="color: rgb(121, 192, 255); font-weight: 400;">True</span>, <span style="color: rgb(139, 148, 158); font-weight: 400;"># Capitalize text,</span>
+  <span style="color: rgb(165, 214, 255); font-weight: 400;">'strokecolor'</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">'black'</span>,
+  <span style="color: rgb(165, 214, 255); font-weight: 400;">'key'</span>:<span style="color: rgb(165, 214, 255); font-weight: 400;">'Pix_Key'</span>,
+})
+reply = req.json()
+<span style="color: rgb(255, 123, 114); font-weight: 400;">if</span> reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'status'</span>] != <span style="color: rgb(121, 192, 255); font-weight: 400;">200</span>:
+  <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span> (reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'error'</span>])
+<span style="color: rgb(255, 123, 114); font-weight: 400;">else</span>:
+  <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span> (<span style="color: rgb(165, 214, 255); font-weight: 400;">"Meme: "</span>+ reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'link'</span>])</pre>
+                              </div>
             </div>
             <!-- Single Row -->
             <div class="flex flex-col items-start gap-16 pb-16 md:flex-row">
@@ -344,38 +331,103 @@
                   <p class="mt-5 text-apeTColor">Transform your PDF documents into high-quality JPEG or PNG images effortlessly with PixLab’s API. Perfect for archiving, previews, or sharing, our solution makes conversion quick and seamless—no manual effort required.
                   </p>
                     <!-- <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-primary bg-transparent px-3 py-1.5 text-[15px] font-medium text-primary transition-all duration-500 hover:bg-primary hover:text-white" href="endpoints/pdftoimg">Learn more</a> -->
-                  <div class="mt-5"><a class="text-blue-600 font-medium text-lg underline underline-offset-4 decoration-blue-600 hover:opacity-80 focus:outline-none focus:opacity-80" href="endpoints/pdftoimg">Learn more <i class="uil uil-arrow-right"></i></a></div>
+                    <div class="flex max-md:justify-center gap-5">
+                      <div class="mt-5"><a class="text-blue-600 font-medium text-lg underline underline-offset-4 decoration-blue-600 hover:opacity-80 focus:outline-none focus:opacity-80" href="endpoints">Learn more</a></div>
+                      <div class="mt-5"><a class="text-blue-600 font-medium text-lg underline underline-offset-4 decoration-blue-600 hover:opacity-80 focus:outline-none focus:opacity-80" href="api-portal">Explore API Portal <i class="uil uil-arrow-right"></i></a></div>
+                    </div>
                 </div>
               </div>
-              <div class="flex w-full max-w-full flex-1 shadow-lg">
-                <div class="min-w-full overflow-x-auto rounded-lg bg-gray-800">
-                  <div class="flex items-center border-b border-slate-500 p-2">
-                    <div class="px-1">
-                      <span class="inline-block h-2 w-2 rounded-full bg-[#ff605c] p-[1px]"></span>
-                    </div>
-                    <div class="px-1">
-                      <span class="inline-block h-2 w-2 rounded-full bg-[#ffbd44] p-[1px]"></span>
-                    </div>
-                    <div class="px-1">
-                      <span class="inline-block h-2 w-2 rounded-full bg-[#00ca4e] p-[1px]"></span>
-                    </div>
-                  </div>
-                  <!-- Card content -->
-<div class="bg-gray-800 p-4 whitespace-pre-wrap text-gray-200 leading-[1.6]"><code><span style="color: rgb(255, 123, 114); font-weight: 400;">import</span> requests
+<div class="flex flex-1 max-w-full w-full text-base bg-gray-800 p-4 rounded-lg overflow-x-auto shadow-lg">
+<pre style="font-family:monospace;color: rgb(201, 209, 217); font-weight: 400; "><span style="color: rgb(255, 123, 114); font-weight: 400;">import</span> requests
 
 <span style="color: rgb(139, 148, 158); font-weight: 400;"># Convert a PDF document to an image (JPEG/PNG) using PixLab API</span>
-  req = requests.get(<span style="color: rgb(165, 214, 255); font-weight: 400;">'https://api.pixlab.io/pdftoimg'</span>, params={
-      <span style="color: rgb(165, 214, 255); font-weight: 400;">'src'</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">'https://www.getharvest.com/downloads/Invoice_Template.pdf'</span>, <span style="color: rgb(139, 148, 158); font-weight: 400;"># PDF source URL</span>
-      <span style="color: rgb(165, 214, 255); font-weight: 400;">'export'</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">'jpeg'</span>, <span style="color: rgb(139, 148, 158); font-weight: 400;"># Output format (jpeg/png)</span>
-      <span style="color: rgb(165, 214, 255); font-weight: 400;">'key'</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">'YOUR_PIXLAB_API_KEY'</span> <span style="color: rgb(139, 148, 158); font-weight: 400;"># Replace with your PixLab API key</span>
-  })
-  reply = req.json()
+req = requests.get(<span style="color: rgb(165, 214, 255); font-weight: 400;">'https://api.pixlab.io/pdftoimg'</span>, params={
+    <span style="color: rgb(165, 214, 255); font-weight: 400;">'src'</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">'https://www.getharvest.com/downloads/Invoice_Template.pdf'</span>, <span style="color: rgb(139, 148, 158); font-weight: 400;"># PDF source URL</span>
+    <span style="color: rgb(165, 214, 255); font-weight: 400;">'export'</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">'jpeg'</span>, <span style="color: rgb(139, 148, 158); font-weight: 400;"># Output format (jpeg/png)</span>
+    <span style="color: rgb(165, 214, 255); font-weight: 400;">'key'</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">'YOUR_PIXLAB_API_KEY'</span> <span style="color: rgb(139, 148, 158); font-weight: 400;"># Replace with your PixLab API key</span>
+})
+reply = req.json()
   <span style="color: rgb(255, 123, 114); font-weight: 400;">if</span> reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'status'</span>] != <span style="color: rgb(121, 192, 255); font-weight: 400;">200</span>:
       <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"Error:"</span>, reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'error'</span>])
   <span style="color: rgb(255, 123, 114); font-weight: 400;">else</span>:
-      <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"Image URL:"</span>, reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'link'</span>])</code></div>
+      <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"Image URL:"</span>, reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'link'</span>])</pre>
+                                </div>
+            </div>
+            <!-- Single Row -->
+            <div class="flex flex-col items-start gap-16 pb-16 md:flex-row-reverse">
+              <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+                <div class="mt-5">
+                  <h2 class="text-3xl font-semibold text-apeTColor">Simplify Image Format Conversion
+                  </h2>
+                  <p class="mt-5 text-apeTColor">Effortlessly convert images between formats such as JPEG, PNG, BMP, and TIFF with PixLab’s Format Conversion API. Maintain original dimensions or combine with resizing and cropping endpoints for customized output. Simplify media management across platforms with precise and reliable format transformations.
+                  </p>
+                  <div class="flex max-md:justify-center gap-5">
+                    <div class="mt-5"><a class="text-blue-600 font-medium text-lg underline underline-offset-4 decoration-blue-600 hover:opacity-80 focus:outline-none focus:opacity-80" href="endpoints">Learn more</a></div>
+                    <div class="mt-5"><a class="text-blue-600 font-medium text-lg underline underline-offset-4 decoration-blue-600 hover:opacity-80 focus:outline-none focus:opacity-80" href="api-portal">Explore API Portal <i class="uil uil-arrow-right"></i></a></div>
+                  </div>
                 </div>
               </div>
+<div class="flex flex-1 max-w-full w-full text-base bg-gray-800 p-4 rounded-lg overflow-x-auto shadow-lg">
+<pre style="font-family:monospace;color: rgb(201, 209, 217); font-weight: 400; "><span style="color: rgb(255, 123, 114); font-weight: 400;">import</span> requests
+<span style="color: rgb(255, 123, 114); font-weight: 400;">import</span> json
+
+<span style="color: rgb(139, 148, 158); font-weight: 400;"># Convert JPEG image to PNG with transparent background.</span>
+<span style="color: rgb(139, 148, 158); font-weight: 400;"># https://pixlab.io/cmd?id=convert for more info.</span>
+
+req = requests.get(<span style="color: rgb(165, 214, 255); font-weight: 400;">'https://api.pixlab.io/convert'</span>,params={
+  <span style="color: rgb(165, 214, 255); font-weight: 400;">'img'</span>:<span style="color: rgb(165, 214, 255); font-weight: 400;">'https://www.allaboutbirds.org/guide/PHOTO/LARGE/blue_jay_8.jpg'</span>,
+  <span style="color: rgb(165, 214, 255); font-weight: 400;">'export'</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">'png'</span>,
+  <span style="color: rgb(165, 214, 255); font-weight: 400;">'background'</span>:<span style="color: rgb(165, 214, 255); font-weight: 400;">'tr'</span>,
+  <span style="color: rgb(165, 214, 255); font-weight: 400;">'key'</span>:<span style="color: rgb(165, 214, 255); font-weight: 400;">'Pix_Key'</span>
+})
+reply = req.json()
+<span style="color: rgb(255, 123, 114); font-weight: 400;">if</span> reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'status'</span>] != <span style="color: rgb(121, 192, 255); font-weight: 400;">200</span>:
+  <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span> (reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'error'</span>])
+<span style="color: rgb(255, 123, 114); font-weight: 400;">else</span>:
+    <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span> (<span style="color: rgb(165, 214, 255); font-weight: 400;">"Pic Link: "</span>+ reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'link'</span>])</pre>
+                              </div>
+            </div>
+            <!-- Single Row -->
+            <div class="flex flex-col items-start gap-16 pb-16 md:flex-row">
+              <div class="flex flex-1 flex-col items-center self-start text-center md:items-start md:text-start">
+                <div class="mt-5">
+                  <h2 class="text-3xl font-semibold text-apeTColor">Intelligent NSFW Detection & Automated Blurring</h2>
+                  <p class="mt-5 text-apeTColor">Ensure safe content with PixLab’s NSFW Detection API. This endpoint analyzes images or video frames to detect inappropriate content, such as nudity or adult visuals. Based on the NSFW score, the API can automatically apply a blur filter, increasing intensity for higher scores. Automate content moderation and filtering to create a secure and user-friendly platform effortlessly.
+                  </p>
+                    <!-- <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border-2 border-primary bg-transparent px-3 py-1.5 text-[15px] font-medium text-primary transition-all duration-500 hover:bg-primary hover:text-white" href="endpoints/pdftoimg">Learn more</a> -->
+                    <div class="flex max-md:justify-center gap-5">
+                      <div class="mt-5"><a class="text-blue-600 font-medium text-lg underline underline-offset-4 decoration-blue-600 hover:opacity-80 focus:outline-none focus:opacity-80" href="endpoints">Learn more</a></div>
+                      <div class="mt-5"><a class="text-blue-600 font-medium text-lg underline underline-offset-4 decoration-blue-600 hover:opacity-80 focus:outline-none focus:opacity-80" href="api-portal">Explore API Portal <i class="uil uil-arrow-right"></i></a></div>
+                    </div>
+                </div>
+              </div>
+<div class="flex flex-1 max-w-full w-full text-base bg-gray-800 p-4 rounded-lg overflow-x-auto shadow-lg">
+<pre style="font-family:monospace;color: rgb(201, 209, 217); font-weight: 400; "><span style="color: rgb(255, 123, 114); font-weight: 400;">import</span> requests
+<span style="color: rgb(255, 123, 114); font-weight: 400;">import</span> json
+
+<span style="color: rgb(139, 148, 158); font-weight: 400;"># Target Image: Change to any link you want (Possibly adult) or switch to POST if you want to upload your image directly, refer to the sample set for more info.</span>
+img = <span style="color: rgb(165, 214, 255); font-weight: 400;">'https://i.redd.it/oetdn9wc13by.jpg'</span> 
+<span style="color: rgb(139, 148, 158); font-weight: 400;"># Your PixLab key</span>
+key = <span style="color: rgb(165, 214, 255); font-weight: 400;">'Pixlab_Key'</span>
+
+<span style="color: rgb(139, 148, 158); font-weight: 400;"># Censor an image according to its NSFW score</span>
+req = requests.get(<span style="color: rgb(165, 214, 255); font-weight: 400;">'https://api.pixlab.io/nsfw'</span>,params={<span style="color: rgb(165, 214, 255); font-weight: 400;">'img'</span>:img,<span style="color: rgb(165, 214, 255); font-weight: 400;">'key'</span>:key})
+reply = req.json()
+<span style="color: rgb(255, 123, 114); font-weight: 400;">if</span> reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'status'</span>] != <span style="color: rgb(121, 192, 255); font-weight: 400;">200</span>:
+  <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span> (reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'error'</span>])
+<span style="color: rgb(255, 123, 114); font-weight: 400;">elif</span> reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'score'</span>] &lt; <span style="color: rgb(121, 192, 255); font-weight: 400;">0.5</span> :
+    <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span> (<span style="color: rgb(165, 214, 255); font-weight: 400;">"No adult content were detected on this picture"</span>)
+<span style="color: rgb(255, 123, 114); font-weight: 400;">else</span>:
+    <span style="color: rgb(139, 148, 158); font-weight: 400;"># Highly NSFW picture</span>
+    <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span> (<span style="color: rgb(165, 214, 255); font-weight: 400;">"Censoring NSFW picture..."</span>)
+    <span style="color: rgb(139, 148, 158); font-weight: 400;"># Call blur with the highest possible radius and sigma</span>
+    req = requests.get(<span style="color: rgb(165, 214, 255); font-weight: 400;">'https://api.pixlab.io/blur'</span>,params={<span style="color: rgb(165, 214, 255); font-weight: 400;">'img'</span>:img,<span style="color: rgb(165, 214, 255); font-weight: 400;">'key'</span>:key,<span style="color: rgb(165, 214, 255); font-weight: 400;">'rad'</span>:<span style="color: rgb(121, 192, 255); font-weight: 400;">50</span>,<span style="color: rgb(165, 214, 255); font-weight: 400;">'sig'</span>:<span style="color: rgb(121, 192, 255); font-weight: 400;">30</span>})
+    reply = req.json()
+    <span style="color: rgb(255, 123, 114); font-weight: 400;">if</span> reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'status'</span>] != <span style="color: rgb(121, 192, 255); font-weight: 400;">200</span>:
+        <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span> (reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'error'</span>])
+    <span style="color: rgb(255, 123, 114); font-weight: 400;">else</span>:
+        <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span> (<span style="color: rgb(165, 214, 255); font-weight: 400;">"Censored image: "</span>+ reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'link'</span>])</pre>
+                                </div>
             </div>
           </div>
         </div>
