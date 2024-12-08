@@ -1643,10 +1643,6 @@ body {
   justify-content: space-between;
 }
 
-.justify-around {
-  justify-content: space-around;
-}
-
 .justify-evenly {
   justify-content: space-evenly;
 }
@@ -4264,6 +4260,10 @@ body.dark-theme .ctb-card-bg {
   color: rgb(37 99 235 );
 }
 
+.marker\:text-ibrPrimary *::marker {
+  color: var(--color-ibr-primary);
+}
+
 .marker\:text-\[\#43EAA4\]::marker {
   color: rgb(67 234 164 );
 }
@@ -4274,6 +4274,10 @@ body.dark-theme .ctb-card-bg {
 
 .marker\:text-blue-600::marker {
   color: rgb(37 99 235 );
+}
+
+.marker\:text-ibrPrimary::marker {
+  color: var(--color-ibr-primary);
 }
 
 .before\:absolute::before {

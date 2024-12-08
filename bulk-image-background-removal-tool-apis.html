@@ -286,6 +286,50 @@
         </div>
       </section>
 
+      <!-- Background Removal via API -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <div class="mx-auto my-10 text-center lg:mb-14">
+            <h2 class="text-center text-3xl font-semibold text-apeTColor lg:text-4xl">Effortless Background Removal via API</h2>
+            <p class="mt-10 mx-auto max-w-2xl text-center text-apeTGray">Streamline your workflow with PixLab's Background Removal API. Remove unwanted backgrounds from images programmatically with precision and speed. Ideal for e-commerce, graphic design, and content creators, this endpoint ensures clean and polished visuals in just a few clicks.
+            </p>
+          </div>
+          <!-- Single Row -->
+          <div class="flex flex-col items-start gap-16 pb-16 md:flex-row-reverse">
+            <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+              <div class="mt-5">
+                <h2 class="text-3xl font-semibold text-apeTColor">Programmatic Background Removal</h2>
+                <ul class="ml-5 mt-5 text-tColor text-lg flex list-disc flex-col gap-4 marker:text-blue-600">
+                  <li><span class="font-semibold">Built-in Precision:</span> Analyze and remove backgrounds with pixel-perfect accuracy.
+                  </li>
+                  <li><span class="font-semibold">Flexible Format Support:</span> Process images in JPEG, PNG, BMP, and more.
+                  </li>
+                  <li><span class="font-semibold">Customizable Outputs:</span> Apply transparent backgrounds or replace with a solid color of your choice.
+                  </li>
+                </ul>
+                <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-ibrPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-ibrPrimary transition-all duration-500 hover:bg-ibrPrimary hover:text-background" href="endpoints/background-remove-api">Explore Background Removal API <i class="uil uil-arrow-right lg:text-lg"></i></a>
+              </div>
+            </div>
+<div class="flex flex-1 max-w-full w-full text-base bg-gray-800 p-4 rounded-lg overflow-x-auto shadow-lg">
+<pre style="font-family:monospace;color: rgb(201, 209, 217); font-weight: 400; "><span style="color: rgb(255, 123, 114); font-weight: 400;">import</span> requests
+
+<span style="color: rgb(139, 148, 158); font-weight: 400;"># PixLab Background Removal API example</span>
+req = requests.get(<span style="color: rgb(165, 214, 255); font-weight: 400;">"https://api.pixlab.io/removebg"</span>, params={
+    <span style="color: rgb(165, 214, 255); font-weight: 400;">"img"</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">"https://example.com/sample-image.jpg"</span>,  <span style="color: rgb(139, 148, 158); font-weight: 400;"># Image URL</span>
+    <span style="color: rgb(165, 214, 255); font-weight: 400;">"key"</span>: <span style="color: rgb(165, 214, 255); font-weight: 400;">"YOUR_PIXLAB_API_KEY"</span>
+})
+
+reply = req.json()
+<span style="color: rgb(255, 123, 114); font-weight: 400;">if</span> reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'status'</span>] != <span style="color: rgb(121, 192, 255); font-weight: 400;">200</span>:
+    <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"Error:"</span>, reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'error'</span>])
+<span style="color: rgb(255, 123, 114); font-weight: 400;">else</span>:
+    <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"Background Removed Image URL:"</span>, reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'link'</span>])
+</pre>
+                            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- FAQ Section -->
       <section>
         <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
