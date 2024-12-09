@@ -1051,3 +1051,38 @@ body.dark-theme .ctb-card-bg {
 .bulk-image-background-removal .footer-link:hover {
   @apply text-ibrPrimary;
 }
+
+/* Media analysis api stylings */
+
+.maa-card{
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.75rem;
+}
+
+body.dark-theme{
+  .maa-card{
+  position: relative;
+	 border: 2px solid transparent;
+   background: linear-gradient(71deg, #141820, #232831, #141820);
+	 background-clip: padding-box;
+}
+
+.maa-card-inner {
+  position: relative;
+} 
+.maa-card-inner::after {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  content: "";
+  z-index: -1;
+  border-radius: 0.75rem;
+}
+
+.maa-card-inner::after {
+  background: linear-gradient(71deg, #121013, #b0afb0, #121013);
+}
+}
