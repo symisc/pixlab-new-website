@@ -167,13 +167,13 @@
         <div class="relative my-10 h-[100vh] bg-apeBackground md:min-h-[70vh] lg:my-0">
           <div class="absolute flex h-full w-full items-center px-5 pt-10 text-white">
             <div class="mx-auto flex w-full max-w-screen-xl flex-col-reverse items-center justify-evenly gap-10 lg:flex-row">
-              <div class="relative flex w-[200px] items-center lg:w-[350px]">
+              <div data-sr="sr-left" class="relative flex w-[200px] items-center lg:w-[350px]">
                 <img loading="lazy" class="relative z-10 h-auto w-full rounded-2xl" src="assets/images/bulk-image-background-removal-tool-apis__cat-hero.png" alt="PixLab AI Script Writer, Text Editor & PDF Analyser" />
                 <div class="z-1 absolute inset-0 h-full w-full bg-ibrPrimary opacity-30 blur-xl lg:blur-3xl"></div>
               </div>
 
               <!-- Hero Text -->
-              <div class="relative z-10 flex flex-col items-center text-center lg:block lg:max-w-screen-sm lg:text-left">
+              <div data-sr="sr-right" class="relative z-10 flex flex-col items-center text-center lg:block lg:max-w-screen-sm lg:text-left">
                 <p class="w-fit rounded-lg border border-ibrPrimary px-2 py-0.5 text-xs font-semibold text-ibrPrimary md:text-sm">PixLab AI Script Writer, Text Editor & PDF Analyser</p>
                 <h1 class="mt-5 flex flex-col text-3xl font-medium text-tColor lg:text-5xl">Remove Background <span class="mt-2 block font-normal">All in One Click</span></h1>
                 <p class="mt-5 text-muted">Start by analyzing a PDF or creating content with our AI-driven tools. Whether you're drafting scripts, editing text, or extracting insights from documents, enjoy an intuitive and powerful experience tailored to your needs.</p>
@@ -192,47 +192,111 @@
       <!-- Background Removal Steps Section -->
       <section>
         <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
-          <h2 class="text-center text-3xl font-semibold text-tColor">Just Picture It!</h2>
+          <h2 data-sr="sr-bottom" class="text-center text-3xl font-semibold text-tColor">Just Picture It!</h2>
           <div class="mt-10 flex justify-center">
-            <p class="text-center text-apeTGray lg:max-w-[75%]">Simplify your workflow with PixLab Batch Background Removal! Remove backgrounds from multiple images in one go with our powerful Bulk Image Background Removal Tool, designed for speed, precision, and ease of use.</p>
+            <p data-sr="sr-bottom" class="text-center text-apeTGray lg:max-w-[75%]">Simplify your workflow with PixLab Batch Background Removal! Remove backgrounds from multiple images in one go with our powerful Bulk Image Background Removal Tool, designed for speed, precision, and ease of use.</p>
           </div>
 
           <!-- Cards Grid -->
           <div class="mt-14 grid gap-7 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <!-- Single Card -->
-            <div class="flex flex-col items-center justify-center gap-3 text-center">
+            <div data-sr="sr-left" class="flex flex-col items-center justify-center gap-3 text-center">
               <h3 class="text-[15px] text-muted">Original</h3>
               <img loading="lazy" src="assets/images/bulk-image-background-removal-tool-apis__original-car.png" alt="Original Girl Image" />
             </div>
 
             <!-- Single Card -->
-            <div class="flex flex-col items-center justify-center gap-3 text-center">
+            <div data-sr="sr-bottom" class="flex flex-col items-center justify-center gap-3 text-center">
               <h3 class="text-[15px] text-muted">Background Removed</h3>
               <img loading="lazy" src="assets/images/bulk-image-background-removal-tool-apis__bg-removed-car.png" alt="Background Removed" />
             </div>
 
             <!-- Single Card -->
-            <div class="flex flex-col items-center justify-center gap-3 text-center">
+            <div data-sr="sr-right" class="flex flex-col items-center justify-center gap-3 text-center">
               <h3 class="text-[15px] text-muted">Remove in Bulk</h3>
               <img loading="lazy" src="assets/images/bulk-image-background-removal-tool-apis__remove-in-bulk.png" alt="Remove in Bulk" />
             </div>
           </div>
 
           <div class="mt-20 flex flex-col items-center">
-            <h2 class="text-center text-2xl font-semibold text-tColor lg:max-w-[75%]">Automatically remove backgrounds from multiple images in just 5 seconds with a single click!</h2>
-            <p class="mt-5 text-center text-muted lg:max-w-[75%]">Speed up your workflow with customizable templates or start from scratch, using a vast collection of premium backgrounds, fonts, and design elements to elevate your visuals.</p>
+            <h2 data-sr="sr-bottom" class="text-center text-2xl font-semibold text-tColor lg:max-w-[75%]">Automatically remove backgrounds from multiple images in just 5 seconds with a single click!</h2>
+            <p data-sr="sr-bottom" class="mt-5 text-center text-muted lg:max-w-[75%]">Speed up your workflow with customizable templates or start from scratch, using a vast collection of premium backgrounds, fonts, and design elements to elevate your visuals.</p>
           </div>
 
           <div class="relative mt-10 flex justify-center">
-            <div class="relative z-10 rounded-xl p-2">
+            <div data-sr="sr-bottom" class="relative z-10 rounded-xl p-2">
               <img loading="lazy" class="relative top-0 z-10 h-full w-full rounded-xl" src="assets/images/bulk-image-background-removal-tool-apis__bg-removal-tool-showcase.png" draggable="false" alt="Automatically remove backgrounds from multiple images in just 5 seconds with a single click!" />
               <div class="z-1 absolute inset-0 h-full w-full bg-ibrPrimary opacity-10 blur-xl lg:blur-3xl"></div>
             </div>
           </div>
 
           <!-- Launch Batch Background Removal Button -->
-          <div class="mt-5 flex justify-center">
+          <div data-sr="sr-top" class="mt-5 flex justify-center">
             <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-ibrPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-ibrPrimary transition-all duration-500 hover:bg-ibrPrimary hover:text-tColor" href="https://bg-remove.pixlab.io/">Launch Batch Background Removal <i class="uil uil-arrow-right lg:text-lg"></i></a>
+          </div>
+
+          <div class="flex flex-col gap-14 pt-14">
+            <!-- Single Row -->
+            <div class="flex flex-col justify-between gap-5 md:flex-row">
+              <div data-sr="sr-left" class="flex w-full flex-col items-center rounded-xl border border-bColor bg-surface px-7 py-10 md:w-3/4">
+                <h2 class="text-center text-2xl font-medium text-tColor">Enhance Your Screenshots with Text, Shapes, and Frames</h2>
+                <p class="mt-5 max-w-2xl text-center text-[15px] text-muted">SnapEdit makes it easy to add clarity and style to your screenshots. Insert customizable text for msetations, use precise shapes to highlight areas, and apply stylish frames to give your images a polished, professional look—perfect for presentations, social media, and beyond.</p>
+                <div class="relative mt-10 flex justify-center">
+                  <img loading="lazy" class="relative z-10 w-full max-w-lg" src="assets/images/mockup-screenshot-editor__text-shapes-frames-tools.png" alt="Enhance Your Screenshots with Text, Shapes, and Frames" />
+                  <div class="mse-gradient-bg-theme pointer-events-none absolute inset-0 left-1/2 z-0 h-full w-1/2 -translate-x-1/2 rounded-full opacity-15 blur-xl lg:blur-3xl"></div>
+                </div>
+                <div data-sr="sr-top" class="mt-5 flex justify-center">
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-ibrPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-ibrPrimary transition-all duration-500 hover:bg-ibrPrimary hover:text-tColor" href="#">Launch Onine Screenshot Editor Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                </div>
+              </div>
+              <div data-sr="sr-right" class="flex h-auto w-full shrink-0 flex-col justify-evenly overflow-hidden rounded-xl bg-[url(../images/mockup-screenshot-editor__shapes-background.png)] bg-cover bg-center md:w-[300px]">
+                <div class="p-5 text-center">
+                  <h2 class="text-xl font-medium text-white">Polygon Drawing Precision at Your Fingertips</h2>
+                  <p class="mt-5 text-sm text-white">Create accurate shapes with our Polygon Tool, perfect for highlighting, diagrams, and structured elements. Choose from multiple shapes and easily adjust size, color, and position for sharp, polished results.</p>
+                </div>
+                <div class="mr-5 flex justify-start">
+                  <img loading="lazy" class="-ml-1 w-full max-w-[300px]" draggable="false" src="assets/images/mockup-screenshot-editor__shapes-polygon.png" alt="Polygon Drawing Precision at Your Fingertips" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Single Row -->
+            <div class="flex flex-col justify-between gap-5 md:flex-row">
+              <div data-sr="sr-left" class="flex h-auto w-full shrink-0 flex-col justify-evenly overflow-hidden rounded-xl bg-[url(../images/mockup-screenshot-editor__draw-tools-background.png)] bg-cover bg-center md:w-[300px]">
+                <div class="mr-5 mt-5 flex justify-start">
+                  <img loading="lazy" class="-ml-1 w-full max-w-[300px]" draggable="false" src="assets/images/mockup-screenshot-editor__draw-tool.png" alt="Freehand Drawing Unleash Your Creativity" />
+                </div>
+                <div class="p-5 text-center">
+                  <h2 class="text-xl font-medium text-white">Freehand Drawing Unleash Your Creativity</h2>
+                  <p class="mt-5 text-sm text-white">Bring ideas to life with Pixlab's Freehand Drawing tool, perfect for msetations or personal touches. Enjoy natural, customizable brushes and a responsive interface. Save and share high-quality edits directly from Pixlab Screenshot Editor.</p>
+                </div>
+              </div>
+              <div data-sr="sr-right" class="flex w-full flex-col items-center rounded-xl border border-bColor bg-surface px-7 py-10 md:w-3/4">
+                <h2 class="text-center text-2xl font-medium text-tColor">Custom Backgrounds for Personalized Screenshots</h2>
+                <p class="mt-5 max-w-2xl text-center text-[15px] text-muted">Enhance your screenshots with SnapEdit's customizable backgrounds. Select from images, solid colors, or gradients, and adjust transparency for a personalized touch.</p>
+                <div class="relative mt-10 flex justify-center">
+                  <div class="flex justify-center gap-5">
+                    <div data-sr="sr-left">
+                      <h4 class="mb-3 text-center text-[15px] text-muted">Gradients</h4>
+                      <img loading="lazy" src="assets/images/mockup-screenshot-editor__gradients-pattern.png" alt="Gradients" />
+                    </div>
+                    <div data-sr="sr-bottom">
+                      <h4 class="mb-3 text-center text-[15px] text-muted">Images</h4>
+                      <img loading="lazy" src="assets/images/mockup-screenshot-editor__images-pattern.png" alt="Images" />
+                    </div>
+                    <div data-sr="sr-right">
+                      <h4 class="mb-3 text-center text-[15px] text-muted">Pallete</h4>
+                      <img loading="lazy" src="assets/images/mockup-screenshot-editor__color-palette-pattern.png" alt="Color Pallete" />
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-5 flex max-w-screen-md flex-col items-center justify-center text-center">
+                  <p class="my-4 text-sm text-muted">Transform your visuals with SnapEdit by choosing from a variety of customizable backgrounds, including images, solid colors, and gradients, while fine-tuning transparency for a unique look.</p>
+
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-ibrPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-ibrPrimary transition-all duration-500 hover:bg-ibrPrimary hover:text-tColor" href="#">Launch Onine Screenshot Editor Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -243,42 +307,43 @@
           <div class="flex flex-col gap-10">
             <!-- Single Row -->
             <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row lg:gap-60">
-              <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+              <div data-sr="sr-left" class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
                 <div class="mt-5 flex flex-col items-center md:items-start">
                   <h2 class="text-3xl font-semibold text-tColor">Bulk Background Removal</h2>
                   <p class="mt-5 text-tColor">Start by uploading images in bulk from a local directory or selecting individual files, making it simple to label and annotate multiple images at once. Choose to either upload several images simultaneously or handpick specific ones as needed.</p>
-                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-ibrPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-ibrPrimary transition-all duration-500 hover:bg-ibrPrimary hover:text-background" href="https://bg-remove.pixlab.io/">Get Started Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+
+                  <a data-sr="sr-top" href="bg-remove.pixlab.io/" class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-ibrPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-ibrPrimary transition-all duration-500 hover:bg-ibrPrimary hover:text-background" href="endpoints/background-remove-api">Get Started Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
-              <div class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
+              <div data-sr="sr-right" class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
                 <img loading="lazy" src="assets/images/bulk-image-background-removal-tool-apis__bulk-removal-background.png" alt="Bulk Background Removal" />
               </div>
             </div>
 
             <!-- Single Row -->
             <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row-reverse lg:gap-60">
-              <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+              <div data-sr="sr-left" class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
                 <div class="mt-5 flex flex-col items-center md:items-start">
                   <h2 class="text-3xl font-semibold text-tColor">Fast & Efficient Processing</h2>
                   <p class="mt-5 text-tColor">Experience unparalleled efficiency with lightning-fast processing speeds, delivering professional-quality results in just seconds. Whether you're managing a few images or an extensive batch, our tool ensures swift and reliable performance.</p>
-                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-ibrPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-ibrPrimary transition-all duration-500 hover:bg-ibrPrimary hover:text-background" href="https://bg-remove.pixlab.io/">Launch Web Application <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                  <a data-sr="sr-top" class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-ibrPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-ibrPrimary transition-all duration-500 hover:bg-ibrPrimary hover:text-background" href="https://bg-remove.pixlab.io/">Launch Web Application <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
-              <div class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
+              <div data-sr="sr-right" class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
                 <img loading="lazy" src="assets/images/bulk-image-background-removal-tool-apis__fast-efficient-processing.png" alt="Fast And Efficient Processing" />
               </div>
             </div>
 
             <!-- Single Row -->
             <div class="flex flex-col-reverse items-center justify-between gap-16 md:flex-row lg:gap-60">
-              <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+              <div data-sr="sr-left" class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
                 <div class="mt-5 flex flex-col items-center md:items-start">
                   <h2 class="text-3xl font-semibold text-tColor">Save All Images at Once</h2>
                   <p class="mt-5 text-tColor">Get hassle-free and conveniently download all images at once. Just one click to save all the pictures to your PC. After bulk background removal, click 'Download' and save high-quality images in your preferred format to your PC for free.</p>
-                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-ibrPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-ibrPrimary transition-all duration-500 hover:bg-ibrPrimary hover:text-background" href="https://bg-remove.pixlab.io/">Start Removing Background <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                  <a data-sr="sr-top" class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-ibrPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-ibrPrimary transition-all duration-500 hover:bg-ibrPrimary hover:text-background" href="https://bg-remove.pixlab.io/">Start Removing Background <i class="uil uil-arrow-right lg:text-lg"></i></a>
                 </div>
               </div>
-              <div class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
+              <div data-sr="sr-right" class="flex max-w-[300px] flex-1 shadow-lg md:max-w-full">
                 <img loading="lazy" src="assets/images/bulk-image-background-removal-tool-apis__save-img-once.png" alt="Save All Images at Once" />
               </div>
             </div>
@@ -290,28 +355,24 @@
       <section>
         <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
           <div class="mx-auto my-10 text-center lg:mb-14">
-            <h2 class="text-center text-3xl font-semibold text-apeTColor lg:text-4xl">Effortless Background Removal via API</h2>
-            <p class="mt-10 mx-auto max-w-2xl text-center text-apeTGray">Streamline your workflow with PixLab's Background Removal API. Remove unwanted backgrounds from images programmatically with precision and speed. Ideal for e-commerce, graphic design, and content creators, this endpoint ensures clean and polished visuals in just a few clicks.
-            </p>
+            <h2 data-sr="sr-bottom" class="text-center text-3xl font-semibold text-apeTColor lg:text-4xl">Effortless Background Removal via API</h2>
+            <p data-sr="sr-bottom" class="mx-auto mt-10 max-w-2xl text-center text-apeTGray">Streamline your workflow with PixLab's Background Removal API. Remove unwanted backgrounds from images programmatically with precision and speed. Ideal for e-commerce, graphic design, and content creators, this endpoint ensures clean and polished visuals in just a few clicks.</p>
           </div>
           <!-- Single Row -->
           <div class="flex flex-col items-start gap-16 pb-16 md:flex-row-reverse">
-            <div class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
+            <div data-sr="sr-right" class="flex flex-1 flex-col items-center text-center md:items-start md:text-start">
               <div class="mt-5">
                 <h2 class="text-3xl font-semibold text-apeTColor">Programmatic Background Removal</h2>
-                <ul class="ml-5 mt-5 text-tColor text-lg flex list-disc flex-col gap-4 marker:text-blue-600">
-                  <li><span class="font-semibold">Built-in Precision:</span> Analyze and remove backgrounds with pixel-perfect accuracy.
-                  </li>
-                  <li><span class="font-semibold">Flexible Format Support:</span> Process images in JPEG, PNG, BMP, and more.
-                  </li>
-                  <li><span class="font-semibold">Customizable Outputs:</span> Apply transparent backgrounds or replace with a solid color of your choice.
-                  </li>
+                <ul class="ml-5 mt-5 flex list-disc flex-col gap-4 text-lg text-tColor marker:text-blue-600">
+                  <li><span class="font-semibold">Built-in Precision:</span> Analyze and remove backgrounds with pixel-perfect accuracy.</li>
+                  <li><span class="font-semibold">Flexible Format Support:</span> Process images in JPEG, PNG, BMP, and more.</li>
+                  <li><span class="font-semibold">Customizable Outputs:</span> Apply transparent backgrounds or replace with a solid color of your choice.</li>
                 </ul>
                 <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-ibrPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-ibrPrimary transition-all duration-500 hover:bg-ibrPrimary hover:text-background" href="endpoints/background-remove-api">Explore Background Removal API <i class="uil uil-arrow-right lg:text-lg"></i></a>
               </div>
             </div>
-<div class="flex flex-1 max-w-full w-full text-base bg-gray-800 p-4 rounded-lg overflow-x-auto shadow-lg">
-<pre style="font-family:monospace;color: rgb(201, 209, 217); font-weight: 400; "><span style="color: rgb(255, 123, 114); font-weight: 400;">import</span> requests
+            <div data-sr="sr-left" class="flex w-full max-w-full flex-1 overflow-x-auto rounded-lg bg-gray-800 p-4 text-base shadow-lg">
+              <pre style="font-family: monospace; color: rgb(201, 209, 217); font-weight: 400"><span style="color: rgb(255, 123, 114); font-weight: 400;">import</span> requests
 
 <span style="color: rgb(139, 148, 158); font-weight: 400;"># PixLab Background Removal API example</span>
 req = requests.get(<span style="color: rgb(165, 214, 255); font-weight: 400;">"https://api.pixlab.io/removebg"</span>, params={
@@ -325,7 +386,7 @@ reply = req.json()
 <span style="color: rgb(255, 123, 114); font-weight: 400;">else</span>:
     <span style="color: rgb(255, 166, 87); font-weight: 400;">print</span>(<span style="color: rgb(165, 214, 255); font-weight: 400;">"Background Removed Image URL:"</span>, reply[<span style="color: rgb(165, 214, 255); font-weight: 400;">'link'</span>])
 </pre>
-                            </div>
+            </div>
           </div>
         </div>
       </section>
@@ -337,14 +398,14 @@ reply = req.json()
           <div class="mx-auto max-w-[85rem]">
             <!-- Title -->
             <div class="mx-auto my-10 max-w-2xl text-center lg:mb-14">
-              <h2 class="text-center text-3xl font-semibold text-apeTColor lg:text-4xl">Your questions, answered</h2>
-              <p class="mt-3 text-center text-apeTGray">Answers to the most frequently asked questions.</p>
+              <h2 data-sr="sr-bottom" class="text-center text-3xl font-semibold text-apeTColor lg:text-4xl">Your questions, answered</h2>
+              <p data-sr="sr-bottom" class="mt-3 text-center text-apeTGray">Answers to the most frequently asked questions.</p>
             </div>
             <!-- End Title -->
 
             <div class="mx-auto max-w-screen-lg">
               <!-- Accordion -->
-              <div class="hs-accordion-group divide-dark divide-y divide-gray-200">
+              <div data-sr="sr-bottom" class="hs-accordion-group divide-dark divide-y divide-gray-200">
                 <div class="hs-accordion active pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-one">
                   <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="true" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
                     Lorem ipsum dolor sit amet consectetur adipisicing?
@@ -356,7 +417,7 @@ reply = req.json()
                   </div>
                 </div>
 
-                <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                <div data-sr="sr-bottom" class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
                   <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
                     Lorem ipsum dolor sit amet consectetur adipisicing?
                     <svg class="block size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
@@ -366,7 +427,8 @@ reply = req.json()
                     <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!</p>
                   </div>
                 </div>
-                <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+
+                <div data-sr="sr-bottom" class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
                   <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
                     Lorem ipsum dolor sit amet consectetur adipisicing?
                     <svg class="block size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
@@ -376,7 +438,8 @@ reply = req.json()
                     <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!</p>
                   </div>
                 </div>
-                <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+
+                <div data-sr="sr-bottom" class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
                   <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
                     Lorem ipsum dolor sit amet consectetur adipisicing?
                     <svg class="block size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
@@ -386,7 +449,8 @@ reply = req.json()
                     <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati eum, quos ab illo dolores error animi accusantium laudantium minus maiores nulla inventore ad molestiae minima non quo sequi tempora asperiores!</p>
                   </div>
                 </div>
-                <div class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+
+                <div data-sr="sr-bottom" class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
                   <button class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 rounded-lg pb-3 text-start font-semibold text-apeTColor transition hover:text-gray-500 focus:text-gray-500 focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
                     Lorem ipsum dolor sit amet consectetur adipisicing?
                     <svg class="block size-5 shrink-0 text-gray-600 group-hover:text-gray-500 hs-accordion-active:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
@@ -408,11 +472,11 @@ reply = req.json()
       <section>
         <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
           <div class="flex flex-col items-center rounded-3xl border-2 border-dashed border-ibrPrimary bg-ibrSurface px-5 py-16">
-            <img loading="lazy" src="assets/images/bulk-image-background-removal-tool-apis__upload-file-icon.svg" alt="Upload File Icon" />
-            <h3 class="mt-7 text-center text-xl font-medium text-tColor">Drag & Drop or Upload</h3>
-            <p class="mt-3 text-center text-sm text-muted">Allowed Files PNG , JPG , JPEG</p>
+            <img data-sr="sr-bottom" loading="lazy" src="assets/images/bulk-image-background-removal-tool-apis__upload-file-icon.svg" alt="Upload File Icon" />
+            <h3 data-sr="sr-bottom" class="mt-7 text-center text-xl font-medium text-tColor">Drag & Drop or Upload</h3>
+            <p data-sr="sr-bottom" class="mt-3 text-center text-sm text-muted">Allowed Files PNG , JPG , JPEG</p>
             <input id="ibr-file-upload-input" type="file" accept=".png, .jpg, .jpeg" hidden />
-            <button onclick="document.getElementById('ibr-file-upload-input').click()" class="mt-5 flex w-fit items-center gap-1 rounded-xl border border-ibrPrimary bg-ibrPrimary px-3 py-1.5 text-[15px] font-medium text-background transition-all duration-500 hover:bg-transparent hover:text-ibrPrimary"><i class="uil uil-cloud-upload lg:text-lg"></i> Upload Images</button>
+            <button data-sr="sr-top" onclick="document.getElementById('ibr-file-upload-input').click()" class="mt-5 flex w-fit items-center gap-1 rounded-xl border border-ibrPrimary bg-ibrPrimary px-3 py-1.5 text-[15px] font-medium text-background transition-all duration-500 hover:bg-transparent hover:text-ibrPrimary"><i class="uil uil-cloud-upload lg:text-lg"></i> Upload Images</button>
           </div>
         </div>
       </section>
@@ -554,5 +618,6 @@ reply = req.json()
     <!-- Scripts -->
     <script src="assets/js/global.js"></script>
     <script src="assets/js/preline/preline.min.js"></script>
+    <script src="assets/js/scrollreveal.js"></script>
   </body>
 </html>

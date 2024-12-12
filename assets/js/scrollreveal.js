@@ -4,9 +4,9 @@ const revealElements = document.querySelectorAll("[data-sr='sr-top'], [data-sr='
 const allSections = document.querySelectorAll("section");
 
 // Check if any section's child has the `data-sr` attribute
-allSections.forEach((section) => {
+allSections?.forEach((section) => {
   if (section.querySelector("[data-sr]")) {
-    section.style.overflowX = "hidden"; // Apply the hidden style
+    section.style.overflow = "hidden"; // Apply the hidden style
   }
 });
 

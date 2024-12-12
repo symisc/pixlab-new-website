@@ -2616,6 +2616,10 @@ body {
   padding-top: 2.5rem;
 }
 
+.pt-14 {
+  padding-top: 3.5rem;
+}
+
 .pt-20 {
   padding-top: 5rem;
 }
@@ -3183,7 +3187,7 @@ body .light-logo {
 }
 
 nav :where(.nav-link, .theme-toggler):hover,
-nav .hs-dropdown:hover>button {
+nav .hs-dropdown:hover > button {
   color: var(--color-primary);
 }
 
@@ -3283,7 +3287,7 @@ body.dark-theme .bg-gradient-theme {
   background: #fff;
 }
 
-.gradient-button:hover>.bg-gradient-theme {
+.gradient-button:hover > .bg-gradient-theme {
   color: #fff;
   background: transparent;
 }
@@ -3635,7 +3639,7 @@ header .ape-navbar .nav-logo {
 }
 
 nav.ape-navbar :where(.nav-link, .theme-toggler):hover,
-nav.ape-navbar .hs-dropdown:hover>button {
+nav.ape-navbar .hs-dropdown:hover > button {
   color: var(--color-ape-primary);
 }
 
@@ -3773,7 +3777,7 @@ body.dark-theme .ape-header-gradient-theme {
 /* App UI/UX Code Styling Start */
 
 .app-ui-ux-code nav :where(.nav-link, .theme-toggler):hover,
-.app-ui-ux-code nav .hs-dropdown:hover>button {
+.app-ui-ux-code nav .hs-dropdown:hover > button {
   color: var(--color-auc-primary);
 }
 
@@ -3898,7 +3902,7 @@ body.dark-theme .ape-header-gradient-theme {
 /* Annotate Styling Start */
 
 .annotate nav :where(.nav-link, .theme-toggler):hover,
-.annotate nav .hs-dropdown:hover>button {
+.annotate nav .hs-dropdown:hover > button {
   color: var(--color-anno-primary);
 }
 
@@ -4021,7 +4025,7 @@ body.dark-theme .anno-card-bg {
 /* Mockup & Screenshot Editor Styling Start */
 
 .mockup-screenshot-editor nav :where(.nav-link, .theme-toggler):hover,
-.mockup-screenshot-editor nav .hs-dropdown:hover>button {
+.mockup-screenshot-editor nav .hs-dropdown:hover > button {
   color: var(--color-mse-primary);
 }
 
@@ -4098,7 +4102,7 @@ body.template-pdf-media-engine {
 }
 
 body.template-pdf-media-engine nav.tpme-navbar :where(.nav-link, .theme-toggler):hover,
-body.template-pdf-media-engine nav .hs-dropdown:hover>button {
+body.template-pdf-media-engine nav .hs-dropdown:hover > button {
   color: var(--color-ape-primary);
 }
 
@@ -4222,7 +4226,7 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
 /* Creative Toolbox Stylings */
 
 .creative-toolbox nav :where(.nav-link, .theme-toggler):hover,
-.creative-toolbox nav .hs-dropdown:hover>button {
+.creative-toolbox nav .hs-dropdown:hover > button {
   color: var(--color-ctb-primary);
 }
 
@@ -4298,6 +4302,7 @@ body.dark-theme .ctb-card-bg {
   opacity: 0;
   transform: translate(0);
   transition:
+    all 0.5s,
     opacity 1.2s,
     transform 1.2s;
 }
@@ -4342,7 +4347,7 @@ body.dark-theme .ctb-card-bg {
 /* Bulk Image Background Removal Stylings */
 
 .bulk-image-background-removal nav :where(.nav-link, .theme-toggler):hover,
-.bulk-image-background-removal nav .hs-dropdown:hover>button {
+.bulk-image-background-removal nav .hs-dropdown:hover > button {
   color: var(--color-ibr-primary);
 }
 
@@ -4352,14 +4357,14 @@ body.dark-theme .ctb-card-bg {
 
 /* Media analysis api stylings */
 
-.maa-card{
+.maa-card {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.75rem;
 }
 
-body.dark-theme{
-  .maa-card{
+body.dark-theme {
+  .maa-card {
     position: relative;
     border: 2px solid transparent;
     background: linear-gradient(71deg, #141820, #232831, #141820);

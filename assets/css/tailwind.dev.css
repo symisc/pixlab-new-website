@@ -120,7 +120,7 @@ body .light-logo {
 }
 
 nav :where(.nav-link, .theme-toggler):hover,
-nav .hs-dropdown:hover>button {
+nav .hs-dropdown:hover > button {
   @apply text-primary;
 }
 
@@ -199,7 +199,7 @@ body.dark-theme .bg-gradient-theme {
   background: #fff;
 }
 
-.gradient-button:hover>.bg-gradient-theme {
+.gradient-button:hover > .bg-gradient-theme {
   color: #fff;
   background: transparent;
 }
@@ -415,7 +415,7 @@ header .ape-navbar .nav-logo {
 }
 
 nav.ape-navbar :where(.nav-link, .theme-toggler):hover,
-nav.ape-navbar .hs-dropdown:hover>button {
+nav.ape-navbar .hs-dropdown:hover > button {
   @apply text-apePrimary;
 }
 
@@ -501,7 +501,6 @@ body.dark-theme .ape-header-gradient-theme {
 
 /* Transparent background and no border on large screens */
 @media screen and (min-width: 1024px) {
-
   header.ape-header-gradient-theme,
   body.dark-theme header.ape-header-gradient-theme {
     background: transparent;
@@ -511,7 +510,6 @@ body.dark-theme .ape-header-gradient-theme {
 
 /* Transparent background and no border on small screens */
 @media screen and (max-width: 1024px) {
-
   header .ape-header-gradient-theme,
   body.dark-theme header .ape-header-gradient-theme {
     background: transparent;
@@ -539,7 +537,7 @@ body.dark-theme .ape-header-gradient-theme {
 
 /* App UI/UX Code Styling Start */
 .app-ui-ux-code nav :where(.nav-link, .theme-toggler):hover,
-.app-ui-ux-code nav .hs-dropdown:hover>button {
+.app-ui-ux-code nav .hs-dropdown:hover > button {
   @apply text-aucPrimary;
 }
 
@@ -645,7 +643,7 @@ body.dark-theme .ape-header-gradient-theme {
 /* Annotate Styling Start */
 
 .annotate nav :where(.nav-link, .theme-toggler):hover,
-.annotate nav .hs-dropdown:hover>button {
+.annotate nav .hs-dropdown:hover > button {
   @apply text-annoPrimary;
 }
 
@@ -758,7 +756,7 @@ body.dark-theme .anno-card-bg {
 /* Mockup & Screenshot Editor Styling Start */
 
 .mockup-screenshot-editor nav :where(.nav-link, .theme-toggler):hover,
-.mockup-screenshot-editor nav .hs-dropdown:hover>button {
+.mockup-screenshot-editor nav .hs-dropdown:hover > button {
   @apply text-msePrimary;
 }
 
@@ -821,7 +819,7 @@ body.template-pdf-media-engine {
 }
 
 body.template-pdf-media-engine nav.tpme-navbar :where(.nav-link, .theme-toggler):hover,
-body.template-pdf-media-engine nav .hs-dropdown:hover>button {
+body.template-pdf-media-engine nav .hs-dropdown:hover > button {
   @apply text-apePrimary;
 }
 
@@ -940,7 +938,7 @@ body.template-pdf-media-engine nav .hs-dropdown:hover>button {
 /* Creative Toolbox Stylings */
 
 .creative-toolbox nav :where(.nav-link, .theme-toggler):hover,
-.creative-toolbox nav .hs-dropdown:hover>button {
+.creative-toolbox nav .hs-dropdown:hover > button {
   @apply text-ctbPrimary;
 }
 
@@ -1002,6 +1000,7 @@ body.dark-theme .ctb-card-bg {
   opacity: 0;
   transform: translate(0);
   transition:
+    all 0.5s,
     opacity 1.2s,
     transform 1.2s;
 }
@@ -1044,7 +1043,7 @@ body.dark-theme .ctb-card-bg {
 /* Bulk Image Background Removal Stylings */
 
 .bulk-image-background-removal nav :where(.nav-link, .theme-toggler):hover,
-.bulk-image-background-removal nav .hs-dropdown:hover>button {
+.bulk-image-background-removal nav .hs-dropdown:hover > button {
   @apply text-ibrPrimary;
 }
 
@@ -1054,35 +1053,35 @@ body.dark-theme .ctb-card-bg {
 
 /* Media analysis api stylings */
 
-.maa-card{
+.maa-card {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.75rem;
 }
 
-body.dark-theme{
-  .maa-card{
-  position: relative;
-	 border: 2px solid transparent;
-   background: linear-gradient(71deg, #141820, #232831, #141820);
-	 background-clip: padding-box;
-}
+body.dark-theme {
+  .maa-card {
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(71deg, #141820, #232831, #141820);
+    background-clip: padding-box;
+  }
 
-.maa-card-inner {
-  position: relative;
-} 
-.maa-card-inner::after {
-  position: absolute;
-  top: -1px;
-  bottom: -1px;
-  left: -1px;
-  right: -1px;
-  content: "";
-  z-index: -1;
-  border-radius: 0.75rem;
-}
+  .maa-card-inner {
+    position: relative;
+  }
+  .maa-card-inner::after {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    content: "";
+    z-index: -1;
+    border-radius: 0.75rem;
+  }
 
-.maa-card-inner::after {
-  background: linear-gradient(71deg, #121013, #b0afb0, #121013);
-}
+  .maa-card-inner::after {
+    background: linear-gradient(71deg, #121013, #b0afb0, #121013);
+  }
 }
