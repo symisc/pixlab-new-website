@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PixLab Tilemap Online Editor</title>
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://pixlab.io/tilemap-editor" />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="PixLab Tilemap Online Editor is a powerful and easy-to-use tool for creating and editing tilemaps for games, applications, and interactive designs. Export your tilemaps in multiple formats, suitable for game engines and creative projects." />
+    <meta name="keywords" content="tilemap editor, game development tool, online tilemap maker, free tilemap editor, pixel art tool, map design software, game level editor, tilemap generator, game asset creation, 2D game editor, interactive design tool, tile-based design editor, tilemap tool, game design resources, online game editor" />
+    <link rel="stylesheet" href="assets/css/unicons/css/line.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="tilemap-editor">
+    <!-- Header/Navbar -->
+    <header class="absolute inset-x-0 top-3 z-50 mx-auto flex w-full max-w-[1320px] flex-wrap px-3 before:absolute before:inset-0 before:mx-5 before:max-w-full before:rounded-xl max-lg:before:bg-neutral-800/30 max-lg:before:backdrop-blur-lg lg:top-5 lg:flex-nowrap lg:justify-start">
+      <nav class="relative mx-2 w-full max-w-screen-xl gap-3 px-3 py-1.5 lg:mx-auto lg:flex lg:items-center lg:justify-between lg:px-1 lg:py-0">
+        <div class="flex items-center justify-between lg:h-full">
+          <!-- Logo -->
+          <a class="nav-logo flex h-full flex-none rounded-md text-xl font-semibold focus:opacity-80 focus:outline-none" href="/" aria-label="PixLab">
+            <img class="w-28 object-contain lg:w-[137px]" src="assets/images/pixlab-logo-light.png" title="Machine Vision, AI & Media Processing APIs" alt="PixLab Logo" />
+          </a>
+          <div class="flex items-center gap-3 lg:hidden">
+            <button class="theme-toggler flex items-center text-white">
+              <i class="uil uil-moon text-lg"></i>
+            </button>
+            <div>
+              <button type="button" class="hs-collapse-toggle flex size-8 items-center justify-center rounded-full bg-neutral-800 text-sm font-semibold text-white disabled:pointer-events-none disabled:opacity-50" id="hs-navbar-floating-dark-collapse" aria-expanded="false" aria-controls="hs-navbar-floating-dark" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-floating-dark">
+                <svg class="size-4 shrink-0 hs-collapse-open:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="3" x2="21" y1="6" y2="6" />
+                  <line x1="3" x2="21" y1="12" y2="12" />
+                  <line x1="3" x2="21" y1="18" y2="18" />
+                </svg>
+                <svg class="hidden size-4 shrink-0 hs-collapse-open:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 6 6 18" />
+                  <path d="m6 6 12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Main Menu -->
+        <div id="hs-navbar-floating-dark" class="hs-collapse header-gradient-bg nav-menu hidden flex-1 overflow-hidden transition-all duration-300 lg:flex lg:h-full" aria-labelledby="hs-navbar-floating-dark-collapse">
+          <div class="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
+            <div class="flex w-full flex-col gap-x-3.5 py-2 lg:w-auto lg:flex-row lg:items-center lg:justify-between lg:py-0 lg:ps-6">
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="start">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#8343EA] bg-[#8343EA] transition-all group-hover:bg-transparent"></span>
+                Get Started
+              </a>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="api-portal">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#EAA743] bg-[#EAA743] transition-all group-hover:bg-transparent"></span>
+                API Portal
+              </a>
+              <!-- Products & SDKs -->
+              <div class="hs-dropdown group cursor-pointer p-2 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:px-0 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
+                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  <span class="block h-2 w-2 shrink-0 rounded-full border border-[#21db49] bg-[#21db49] transition-all group-hover:bg-transparent"></span>
+                  Products & SDKs
+                  <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div class="hs-dropdown-menu header-gradient-bg top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
+                  <div class="space-y-1 py-1 lg:px-1">
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="api-endpoints">PixLab API Endpoints</a>
+                    <div class="hs-dropdown relative [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:[--is-collapse:false] lg:[--strategy:absolute] lg:[--trigger:hover]">
+                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-white focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        Open Source SDKs <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      </button>
+                      <div class="hs-dropdown-menu header-gradient-bg start-full top-0 z-10 !mx-[10px] -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-start-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
+                        <div class="space-y-1 py-1 lg:px-1">
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="https://sod.pixlab.io/" target="_blank">SOD - Embedded Computer Vision Library &nearr;</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="tiny-dream">Tiny Dream - Stable Diffusion Inference in C++</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="art">ART - Real-Time ASCII Art C Library</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="downloads">SOD Downloads</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="sod">SOD Licensing Information</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hs-dropdown relative [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:[--is-collapse:false] lg:[--strategy:absolute] lg:[--trigger:hover]">
+                      <button id="hs-dropdown-floating-dark-sub" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center justify-between py-2 text-sm text-white focus:outline-none lg:px-3" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        Media Processing <svg class="ms-2 size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:-rotate-90 lg:hs-dropdown-open:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                      </button>
+                      <div class="hs-dropdown-menu header-gradient-bg start-full top-0 z-10 !mx-[10px] -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-start-5 before:top-0 before:h-full before:w-5 hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark-sub">
+                        <div class="space-y-1 py-1 lg:px-1">
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="media-processing-apis">Media Processing APIs</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="document-image-conversion-apis">Document & Image Conversion APIs</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="media-analysis-apis">Media Analysis APIs</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="rest-api">Rest APIs</a>
+                          <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="on-premises">On-Premises Deployment</a>
+                        </div>
+                      </div>
+                    </div>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="ekyc/">eKYC - ID Scanner APIs</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="vision-llm-api-playground/">Vision Play, LLM & APIs</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="template-pdf-media-engine">PDF Template Engine</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="app-ui-ux-code">APP UX - Mobile UI Code Generator</a>
+                    <!-- NEW PRODUCT ADD -->
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg py-2 text-sm text-white focus:outline-none lg:px-3" href="https://faceio.net/" target="_blank">FACEIO - Facial Authentication for the Web &nearr;</a>
+                  </div>
+                </div>
+              </div>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="vision-llm-api-playground/">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#BFEA43] bg-[#BFEA43] transition-all group-hover:bg-transparent"></span>
+                Vision Play &nearr;
+              </a>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="ekyc/">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#EA4393] bg-[#EA4393] transition-all group-hover:bg-transparent"></span>
+                eKYC APIs &nearr;
+              </a>
+              <!-- Online Creativity dropdown link -->
+              <div class="hs-dropdown group cursor-pointer p-2 [--adaptive:none] [--is-collapse:true] [--strategy:static] lg:px-0 lg:[--is-collapse:false] lg:[--strategy:fixed] lg:[--trigger:hover]">
+                <button id="hs-dropdown-floating-dark" type="button" class="hs-dropdown-toggle nav-link flex w-full items-center gap-1.5 text-sm text-white focus:outline-none" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  <span class="block h-2 w-2 shrink-0 rounded-full border border-[#43AEEA] bg-[#43AEEA] transition-all group-hover:bg-transparent"></span>
+                  Online Creativity
+                  <svg class="ms-auto size-4 shrink-0 duration-300 hs-dropdown-open:-rotate-180 lg:hs-dropdown-open:rotate-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div class="hs-dropdown-menu header-gradient-bg top-full z-10 -mt-5 hidden rounded-lg bg-transparent opacity-0 transition-[opacity,margin] duration-[0.1ms] before:absolute before:-top-5 before:start-0 before:h-5 before:w-full hs-dropdown-open:-mt-0 hs-dropdown-open:opacity-100 lg:w-48 lg:shadow-md lg:duration-[300ms]" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
+                  <div class="space-y-1 py-1 lg:px-1">
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="annotate">Annotate - Image Annotation & Labelling</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="creative-toolbox">Creative Toolbox</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="mockup-screenshot-editor">Mockup & Screenshot AI Editor</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="ai-photo-editor">AI Photo Editor</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="bulk-image-background-removal-tool-apis">Bulk Image Background Removal Tool</a>
+                    <a class="nav-link flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-white focus:outline-none" href="tilemap-2d-level-editor">Tilemap & 2D Level Editor</a>
+                    <!-- NEW TOOL ADD -->
+                  </div>
+                </div>
+              </div>
+              <a class="nav-link group flex items-center gap-1.5 p-2 text-sm text-white focus:outline-none lg:p-0" href="pricing">
+                <span class="block h-2 w-2 shrink-0 rounded-full border border-[#4643EA] bg-[#4643EA] transition-all group-hover:bg-transparent"></span>
+                Pricing
+              </a>
+            </div>
+
+            <!-- Theme / Signup / PixLab Console buttons -->
+            <div class="flex items-center gap-4 lg:hidden">
+              <button class="theme-toggler hidden items-center text-white lg:flex">
+                <i class="uil uil-moon text-xl"></i>
+              </button>
+              <div class="flex h-11 gap-3 py-1">
+                <a class="ctb-gradient-button group block h-full items-center gap-x-2 rounded-lg px-3 text-sm font-medium text-white" href="https://console.pixlab.io" target="_blank" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Theme / Signup / PixLab Console buttons -->
+        <div class="nav-buttons hidden h-full items-center gap-4 px-1.5 py-0.5 lg:flex">
+          <button class="theme-toggler hidden items-center text-white lg:flex">
+            <i class="uil uil-moon text-xl"></i>
+          </button>
+          <div class="flex h-full gap-3">
+            <a class="ctb-gradient-button console-button group flex h-full items-center gap-x-2 rounded-lg px-2.5 text-sm font-medium text-white" href="https://console.pixlab.io" target="_blank" title="Unlock limitless possibilities for developer productivity by connecting to the PixLab Console."><span>PixLab Console</span> <i class="uil uil-arrow-up-right text-lg"></i></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section relative overflow-hidden bg-[#0d1016] before:absolute before:h-full before:w-full before:bg-[url(../images/tilemap-2d-level-editor__hero-art-fade-bg.png)] before:bg-cover before:bg-center before:content-['']">
+        <img class="pointer-events-none absolute -left-[50%] -top-[30%] z-10 hidden h-full w-full opacity-15 md:block" src="assets/images/creative-toolbox__header-net.svg" alt="Header Net" />
+        <img class="pointer-events-none absolute -right-[50%] -top-[30%] z-10 hidden h-full w-full rotate-90 opacity-15 md:block" src="assets/images/creative-toolbox__header-net.svg" alt="Header Net" />
+        <div class="h-[90vh] lg:h-[100vh]">
+          <div data-sr="sr-bottom" class="relative my-10 h-[40%] pt-20 lg:my-0">
+            <div class="absolute flex h-full w-full items-center px-5 pt-10 text-white">
+              <div class="mx-auto flex w-full max-w-screen-xl flex-col-reverse items-center justify-center lg:flex-row">
+                <!-- Hero Text -->
+                <div class="relative z-10 flex max-w-screen-sm flex-col items-center justify-center text-center">
+                  <div class="relative z-10 flex flex-col items-center">
+                    <p class="ctb-gradient-text w-fit rounded-lg border border-ctbPrimary px-2 py-0.5 text-sm font-semibold">Pixlab Tilemap Online Editor</p>
+                    <h1 class="mt-5 text-3xl font-medium leading-[1.2] text-white lg:text-5xl">Craft Stunning Tilemaps, Effortlessly</h1>
+                    <p class="mt-5 text-gray-300">Create beautiful, custom tilemaps in minutes with our intuitive web app. Perfect for game developers and designers, our tool offers seamless customization, instant previews, and export-ready designs to bring your vision to life.</p>
+                    <button data-sr="sr-top" class="ctb-gradient-button mt-6 rounded-2xl p-[1px] font-medium text-white">
+                      <div class="ctb-gradient-theme flex h-full w-full items-center justify-center gap-2 rounded-lg px-6 py-2.5">
+                        <span>Launch App</span>
+                        <i class="uil uil-arrow-right lg:text-lg"></i>
+                      </div>
+                    </button>
+                  </div>
+
+                  <div class="ctb-gradient-bg-theme z-1 pointer-events-none absolute inset-0 h-full w-full opacity-10 blur-xl lg:blur-3xl"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div data-sr="sr-top" class="pointer-events-none relative z-10 mt-10 h-[60%] rounded-xl py-0 lg:p-10">
+            <img loading="lazy" class="z-10 h-full w-full rounded-xl object-contain" src="assets/images/tilemap-2d-level-editor__tilemap-editor.png" draggable="false" alt="Online Image Segmentation & Annotation Tool" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Tilemap Generator Section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <div class="flex justify-center">
+            <div class="tile-block-bg-pattern relative flex h-[400px] w-full items-end justify-center before:absolute before:h-full before:w-full before:bg-[url(../images/tilemap-2d-level-editor__tile-blocks-pattern.png)] before:bg-cover before:bg-center before:content-[''] lg:max-w-[75%]">
+              <div class="relative z-10 pb-12 lg:max-w-[50%]">
+                <h2 data-sr="sr-bottom" class="text-center text-2xl font-semibold leading-snug text-apeTColor lg:text-4xl">Tilemap Generator</h2>
+                <p data-sr="sr-bottom" class="mt-5 text-center text-apeTGray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit lacus, sagittis in eros sed, lobortis cursus felis. In eu accumsan enim.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Steps Grid List -->
+          <div class="relative z-10 mt-16 grid gap-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Start New Project -->
+            <div data-sr="sr-left" class="flex flex-col justify-between rounded-xl p-4">
+              <div>
+                <h3 class="text-4xl font-semibold text-muted">01</h3>
+                <h2 class="mt-3 text-xl font-medium text-tColor">Start New Project</h2>
+                <p class="my-3 text-sm text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+              <div>
+                <img class="mt-2 block w-full" src="assets/images/tilemap-2d-level-editor__start-new-project.png" alt="Start New Project" />
+              </div>
+            </div>
+
+            <!-- Choose tileset -->
+            <div data-sr="sr-bottom" class="flex flex-col justify-between rounded-xl p-4">
+              <div>
+                <h3 class="text-4xl font-semibold text-muted">02</h3>
+                <h2 class="mt-3 text-xl font-medium text-tColor">Choose tileset</h2>
+                <p class="my-3 text-sm text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+              <div>
+                <img class="mt-2 block w-full" src="assets/images/tilemap-2d-level-editor__choose-tileset.png" alt="Choose tileset" />
+              </div>
+            </div>
+
+            <!-- Start Creating -->
+            <div data-sr="sr-right" class="flex flex-col justify-between rounded-xl p-4">
+              <div>
+                <h3 class="text-4xl font-semibold text-muted">03</h3>
+                <h2 class="mt-3 text-xl font-medium text-tColor">Start Creating</h2>
+                <p class="my-3 text-sm text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+              <div>
+                <img class="mt-2 block w-full" src="assets/images/tilemap-2d-level-editor__start-creating.png" alt="Start Creating" />
+              </div>
+            </div>
+          </div>
+
+          <div data-sr="sr-top" class="mt-3 flex justify-center">
+            <button class="ctb-gradient-button mt-6 rounded-2xl p-[1px] font-medium text-white">
+              <div class="ctb-gradient-theme flex h-full w-full items-center justify-center gap-2 rounded-lg px-6 py-2.5">
+                <span>Start Creating Tilemaps</span>
+                <i class="uil uil-arrow-right lg:text-lg"></i>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Unleash Your Creativity Section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <div>
+            <!-- Section Details -->
+            <div class="flex flex-col items-center">
+              <h2 data-sr="sr-bottom" class="max-w-screen-sm text-center text-xl font-semibold text-tColor lg:text-4xl">Unleash Your Creativity: Start Generating Tilemaps</h2>
+              <p data-sr="sr-bottom" class="mt-5 max-w-screen-sm text-center text-sm text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit lacus, sagittis in eros sed, lobortis cursus felis. In eu accumsan enim. Sed luctus, diam non dictum lobortis, augue quam tristique velit, at fermentum enim turpis in urna. Pellentesque ac imperdiet libero. Suspendisse non placerat urna. Praesent sit amet varius ex.</p>
+            </div>
+
+            <!-- Tilemap Image Showcase -->
+            <div data-sr="sr-top" class="relative mt-10 flex justify-center">
+              <div class="relative z-10 rounded-xl p-2">
+                <img loading="lazy" class="relative z-10 h-full w-full rounded-xl object-contain" src="assets/images/tilemap-2d-level-editor__tilempa-art-bg.png" draggable="false" alt="Online Image Segmentation & Annotation Tool" />
+                <div class="ctb-gradient-bg-theme pointer-events-none absolute inset-0 left-1/2 z-0 h-full w-1/2 -translate-x-1/2 rounded-full opacity-30 blur-xl lg:blur-3xl"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-14">
+            <!-- Single Row -->
+            <div data-sr="sr-left" class="mt-14 flex flex-col justify-between gap-5 md:flex-row">
+              <div class="flex w-full flex-col items-center rounded-xl border border-bColor bg-surface px-7 py-10 md:w-3/4">
+                <h2 class="text-center text-2xl font-medium text-tColor">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                <p class="mt-5 max-w-2xl text-center text-[15px] text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit lacus, sagittis in eros sed, lobortis cursus felis. In eu accumsan enim. Sed luctus, diam non dictum lobortis, augue quam tristique velit, at fermentum enim turpis in urna. Pellentesque ac imperdiet libero. Suspendisse non placerat urna. a facilisi.</p>
+                <div class="relative mt-10 flex justify-center">
+                  <img loading="lazy" class="relative z-10 w-full max-w-xl" src="assets/images/tilemap-2d-level-editor__tilemap-editor-2.png" alt="Enhance Your Screenshots with Text, Shapes, and Frames" />
+                  <div class="ctb-gradient-bg-theme pointer-events-none absolute inset-0 left-1/2 z-0 h-full w-1/2 -translate-x-1/2 rounded-full opacity-15 blur-xl lg:blur-3xl"></div>
+                </div>
+                <div data-sr="sr-top" class="mt-5 flex justify-center">
+                  <a class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-ctbPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-ctbPrimary transition-all duration-500 hover:bg-ctbPrimary hover:text-tColor" href="#">Get Started Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                </div>
+              </div>
+              <div data-sr="sr-right" class="flex h-auto w-full shrink-0 flex-col justify-evenly overflow-hidden rounded-xl bg-[url(../images/tilemap-2d-level-editor__tilemap-editor-gradient-bg-pattern.png)] bg-cover bg-center md:w-[300px]">
+                <div class="p-5 text-center">
+                  <h2 class="text-xl font-medium text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                  <p class="mt-5 text-sm text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit lacus, sagittis in eros sed, lobortis cursus felis. In eu accumsan enim. Sed luctus, diam non dictum lobortis, augue quam tristique velit,</p>
+                </div>
+                <div class="mr-5 flex justify-start">
+                  <img loading="lazy" class="-ml-1 w-full max-w-[300px]" draggable="false" src="assets/images/tilemap-2d-level-editor__tilemap-editor-tool-options.png" alt="Polygon Drawing Precision at Your Fingertips" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Single Row -->
+            <div class="flex flex-col justify-between gap-5 md:flex-row">
+              <div data-sr="sr-left" class="flex h-auto w-full shrink-0 flex-col justify-evenly overflow-hidden rounded-xl bg-[url(../images/mockup-screenshot-editor__draw-tools-background.png)] bg-cover bg-center md:w-[300px]">
+                <div class="mr-5 mt-5 flex justify-start">
+                  <img loading="lazy" class="-ml-1 w-full max-w-[300px]" draggable="false" src="assets/images/mockup-screenshot-editor__draw-tool.png" alt="Freehand Drawing Unleash Your Creativity" />
+                </div>
+                <div class="p-5 text-center">
+                  <h2 class="text-xl font-medium text-white">Freehand Drawing Unleash Your Creativity</h2>
+                  <p class="mt-5 text-sm text-white">Bring ideas to life with Pixlab's Freehand Drawing tool, perfect for msetations or personal touches. Enjoy natural, customizable brushes and a responsive interface. Save and share high-quality edits directly from Pixlab Screenshot Editor.</p>
+                </div>
+              </div>
+              <div data-sr="sr-right" class="flex w-full flex-col items-center rounded-xl border border-bColor bg-surface px-7 py-10 md:w-3/4">
+                <h2 class="text-center text-2xl font-medium text-tColor">Custom Backgrounds for Personalized Screenshots</h2>
+                <p class="mt-5 max-w-2xl text-center text-[15px] text-muted">Enhance your screenshots with SnapEdit's customizable backgrounds. Select from images, solid colors, or gradients, and adjust transparency for a personalized touch.</p>
+                <div class="relative mt-10 flex justify-center">
+                  <div class="flex justify-center gap-5">
+                    <div data-sr="sr-left">
+                      <h4 class="mb-3 text-center text-[15px] text-muted">Gradients</h4>
+                      <img loading="lazy" src="assets/images/mockup-screenshot-editor__gradients-pattern.png" alt="Gradients" />
+                    </div>
+                    <div data-sr="sr-bottom">
+                      <h4 class="mb-3 text-center text-[15px] text-muted">Images</h4>
+                      <img loading="lazy" src="assets/images/mockup-screenshot-editor__images-pattern.png" alt="Images" />
+                    </div>
+                    <div data-sr="sr-right">
+                      <h4 class="mb-3 text-center text-[15px] text-muted">Pallete</h4>
+                      <img loading="lazy" src="assets/images/mockup-screenshot-editor__color-palette-pattern.png" alt="Color Pallete" />
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-5 flex max-w-screen-md flex-col items-center justify-center text-center">
+                  <p class="my-4 text-sm text-muted">Transform your visuals with SnapEdit by choosing from a variety of customizable backgrounds, including images, solid colors, and gradients, while fine-tuning transparency for a unique look.</p>
+
+                  <a data-sr="sr-top" class="mt-5 flex w-fit items-center gap-1 rounded-lg border border-ctbPrimary bg-transparent px-3 py-1.5 text-[15px] font-medium text-ctbPrimary transition-all duration-500 hover:bg-ctbPrimary hover:text-tColor" href="#">Launch Onine Screenshot Editor Now <i class="uil uil-arrow-right lg:text-lg"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <div class="flex justify-center">
+            <div class="max-w-screen-md pb-12">
+              <h2 data-sr="sr-bottom" class="text-center text-2xl font-semibold leading-snug text-apeTColor lg:text-4xl">Features we provide</h2>
+              <p data-sr="sr-bottom" class="mt-5 text-center text-apeTGray">Unlock your creativity with our powerful tilemap generation tool. From pixel-perfect design to instant export, everything you need to create captivating maps is at your fingertips.</p>
+            </div>
+          </div>
+
+          <div class="relative">
+            <!-- Feature Grid List -->
+            <div class="relative z-10 mt-16 grid gap-6 md:grid-cols-1 lg:grid-cols-2">
+              <!-- Feature 1 -->
+              <div data-sr="sr-left" class="ctb-card-bg flex flex-col gap-6 rounded-3xl p-4 sm:flex-row">
+                <div class="flex shrink-0 justify-center">
+                  <img class="w-full max-w-[250px]" src="assets/images/tilemap-2d-level-editor__intuitive-editor.png" alt="Intuitive Editor" />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-xl font-medium text-tColor">Intuitive Editor</h2>
+                  <ul class="mt-5 flex list-disc flex-col gap-2 pl-7">
+                    <li class="text-muted">User-friendly interface for smooth tile placement and editing.</li>
+                    <li class="text-muted">Grid snapping and alignment tools for pixel-perfect precision.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Feature 2 -->
+              <div data-sr="sr-right" class="ctb-card-bg flex flex-col gap-6 rounded-3xl p-4 sm:flex-row">
+                <div class="flex shrink-0 justify-center">
+                  <img class="w-full max-w-[250px]" src="assets/images/tilemap-2d-level-editor__realtime-previews.png" alt="Real-Time Previews" />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-xl font-medium text-tColor">Seamless Integration</h2>
+                  <ul class="mt-5 flex list-disc flex-col gap-2 pl-7">
+                    <li class="text-muted">Export maps in formats compatible with popular game engines like Unity and Unreal.</li>
+                    <li class="text-muted">Download assets optimized for both 2D and isometric layouts.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Feature 3 -->
+              <div data-sr="sr-left" class="ctb-card-bg flex flex-col gap-6 rounded-3xl p-4 sm:flex-row">
+                <div class="flex shrink-0 justify-center">
+                  <img class="w-full max-w-[250px]" src="assets/images/tilemap-2d-level-editor__custom-tilesets.png" alt="Real-Time Previews" />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-xl font-medium text-tColor">Real-Time Previews</h2>
+                  <ul class="mt-5 flex list-disc flex-col gap-2 pl-7">
+                    <li class="text-muted">Instantly see updates as you design your tilemap.</li>
+                    <li class="text-muted">Toggle between layers and visual modes to refine your view.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Feature 4 -->
+              <div data-sr="sr-right" class="ctb-card-bg flex flex-col gap-6 rounded-3xl p-4 sm:flex-row">
+                <div class="flex shrink-0 justify-center">
+                  <img class="w-full max-w-[250px]" src="assets/images/tilemap-2d-level-editor__seamless-integration.png" alt="Custom Tilesets" />
+                </div>
+                <div class="mt-3">
+                  <h2 class="text-xl font-medium text-tColor">Custom Tilesets</h2>
+                  <ul class="mt-5 flex list-disc flex-col gap-2 pl-7">
+                    <li class="text-muted">Easily import tiles or create your own directly in the app.</li>
+                    <li class="text-muted">Organize tilesets for different themes, styles, or projects.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gradient blur effect -->
+            <div class="ctb-gradient-bg-theme pointer-events-none absolute inset-0 left-1/2 z-0 h-full w-1/2 -translate-x-1/2 rounded-full opacity-10 blur-xl lg:blur-3xl"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQs Section -->
+      <section>
+        <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+          <h2 data-sr="sr-bottom" class="text-center text-2xl font-semibold leading-snug text-tColor lg:text-4xl">Frequently Asked Questions</h2>
+
+          <div class="relative">
+            <!-- FAQ -->
+            <div class="relative z-10 mx-auto mt-12 max-w-[85rem] rounded-lg p-5 pb-0">
+              <!-- Grid -->
+              <div class="grid gap-10">
+                <div class="md:col-span-3">
+                  <!-- Accordion -->
+                  <div data-sr="sr-bottom" class="hs-accordion-group divide-y divide-bColor">
+                    <div class="hs-accordion active pb-3" id="hs-basic-with-title-and-arrow-stretched-heading-one">
+                      <button class="hs-accordion-toggle group inline-flex w-full items-center gap-x-3 rounded-lg pb-3 text-start font-medium text-tColor transition focus:outline-none md:text-lg" aria-expanded="true" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
+                        <svg class="block size-6 shrink-0 transition duration-300 hs-accordion-active:-rotate-180" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                        What happens if I go over my monthly quota?
+                      </button>
+                      <div id="hs-basic-with-title-and-arrow-stretched-collapse-one" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one">
+                        <p class="ps-[34px] text-muted">Our AI can generate text based on your prompts, suggest improvements, and provide real-time editing to enhance clarity and style, making content creation effortless.</p>
+                      </div>
+                    </div>
+
+                    <div data-sr="sr-bottom" class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-two">
+                      <button class="hs-accordion-toggle group inline-flex w-full items-center gap-x-3 rounded-lg pb-3 text-start font-medium text-tColor transition focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two">
+                        <svg class="block size-6 shrink-0 transition duration-300 hs-accordion-active:-rotate-180" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                        What happens if I go over my storage quota?
+                      </button>
+                      <div id="hs-basic-with-title-and-arrow-stretched-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-collapse-heading-two">
+                        <p class="ps-[34px] text-muted">Our AI can generate text based on your prompts, suggest improvements, and provide real-time editing to enhance clarity and style, making content creation effortless.</p>
+                      </div>
+                    </div>
+
+                    <div data-sr="sr-bottom" class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-three">
+                      <button class="hs-accordion-toggle group inline-flex w-full items-center gap-x-3 rounded-lg pb-3 text-start font-medium text-tColor focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-three">
+                        <svg class="block size-6 shrink-0 transition duration-300 hs-accordion-active:-rotate-180" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                        Why don't you offer free plans?
+                      </button>
+                      <div id="hs-basic-with-title-and-arrow-collapse-heading-three" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-collapse-heading-three">
+                        <p class="ps-[34px] text-muted">Our AI can generate text based on your prompts, suggest improvements, and provide real-time editing to enhance clarity and style, making content creation effortless.</p>
+                      </div>
+                    </div>
+
+                    <div data-sr="sr-bottom" class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-four">
+                      <button class="hs-accordion-toggle group inline-flex w-full items-center gap-x-3 rounded-lg pb-3 text-start font-medium text-tColor focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-four">
+                        <svg class="block size-6 shrink-0 transition duration-300 hs-accordion-active:-rotate-180" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                        What's the limit of the free trial period?
+                      </button>
+                      <div id="hs-basic-with-title-and-arrow-collapse-heading-four" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-collapse-heading-four">
+                        <p class="ps-[34px] text-muted">Our AI can generate text based on your prompts, suggest improvements, and provide real-time editing to enhance clarity and style, making content creation effortless.</p>
+                      </div>
+                    </div>
+
+                    <div data-sr="sr-bottom" class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-five">
+                      <button class="hs-accordion-toggle group inline-flex w-full items-center gap-x-3 rounded-lg pb-3 text-start font-medium text-tColor focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-five">
+                        <svg class="block size-6 shrink-0 transition duration-300 hs-accordion-active:-rotate-180" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                        Do you offer SLA's (Service Level Agreements)?
+                      </button>
+                      <div id="hs-basic-with-title-and-arrow-collapse-heading-five" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-collapse-heading-five">
+                        <p class="ps-[34px] text-muted">Our AI can generate text based on your prompts, suggest improvements, and provide real-time editing to enhance clarity and style, making content creation effortless.</p>
+                      </div>
+                    </div>
+
+                    <div data-sr="sr-bottom" class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-six">
+                      <button class="hs-accordion-toggle group inline-flex w-full items-center gap-x-3 rounded-lg pb-3 text-start font-medium text-tColor focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-six">
+                        <svg class="block size-6 shrink-0 transition duration-300 hs-accordion-active:-rotate-180" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                        Payment Processing - Merchant of Records
+                      </button>
+                      <div id="hs-basic-with-title-and-arrow-collapse-heading-six" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-collapse-heading-six">
+                        <p class="ps-[34px] text-muted">Our AI can generate text based on your prompts, suggest improvements, and provide real-time editing to enhance clarity and style, making content creation effortless.</p>
+                      </div>
+                    </div>
+
+                    <div data-sr="sr-bottom" class="hs-accordion pb-3 pt-6" id="hs-basic-with-title-and-arrow-stretched-heading-seven">
+                      <button class="hs-accordion-toggle group inline-flex w-full items-center gap-x-3 rounded-lg pb-3 text-start font-medium text-tColor focus:outline-none md:text-lg" aria-expanded="false" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-seven">
+                        <svg class="block size-6 shrink-0 transition duration-300 hs-accordion-active:-rotate-180" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+                        Are my credit card details safe?
+                      </button>
+                      <div id="hs-basic-with-title-and-arrow-collapse-heading-seven" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-collapse-heading-seven">
+                        <p class="ps-[34px] text-muted">Our AI can generate text based on your prompts, suggest improvements, and provide real-time editing to enhance clarity and style, making content creation effortless.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Accordion -->
+                </div>
+                <!-- End Col -->
+              </div>
+              <!-- End Grid -->
+            </div>
+            <!-- End FAQ -->
+
+            <div class="ctb-gradient-bg-theme z-1 pointer-events-none absolute inset-0 left-1/2 h-full w-1/2 -translate-x-1/2 opacity-5 blur-xl lg:blur-3xl"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tilemap Generator App Section -->
+      <section>
+        <div class="mx-auto flex w-full max-w-screen-xl justify-center px-5 py-10">
+          <div class="w-full rounded-3xl bg-[url(../images/tilemap-2d-level-editor__tilemap-generator-fade-bg.png)] bg-cover bg-center px-5 py-20 text-center">
+            <div class="mx-auto max-w-screen-sm">
+              <h2 data-sr="sr-bottom" class="text-2xl font-semibold text-tColor lg:text-3xl">The Tilemap Generator App You've Been Searching For</h2>
+              <p data-sr="sr-bottom" class="mt-5 text-muted">Effortlessly create stunning tile-based maps with our advanced Tilemap Generator App. Designed for game developers and hobbyists alike, this tool simplifies the process of generating, editing, and customizing tilemaps for your projects.</p>
+
+              <button data-sr="sr-top" class="ctb-gradient-button mt-6 rounded-full p-[1px] font-medium text-white">
+                <div class="ctb-gradient-theme flex h-full w-full items-center justify-center gap-2 rounded-lg px-6 py-3">
+                  <span>Launch Tilemap Generator Now</span>
+                  <i class="uil uil-arrow-right lg:text-lg"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-background">
+      <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
+        <div class="gradient-graph-line mb-10"></div>
+        <div class="grid grid-cols-10 gap-y-10">
+          <div class="col-span-10 md:col-span-5 lg:col-span-3">
+            <a href="/">
+              <img class="dark-logo mb-1 w-36" src="assets/images/pixlab-logo-dark.png" title="Machine Vision, AI & Media Processing APIs" alt="PixLab logo" />
+            </a>
+            <p class="pr-3 text-[15px] text-tColor">PixLab offers cutting-edge AI solutions to empower developers and creators with Automated Tools & APIs for Machine Vision, Media Processing & Creative Innovation.</p>
+
+            <!-- Search Input in Footer -->
+            <form action="search" method="get">
+              <div class="mt-5 flex h-10 w-full items-center gap-3 rounded-full border border-bColor bg-input px-4 focus-within:bg-surface md:max-w-[80%] lg:h-12">
+                <i class="uil uil-search text-xl text-tColor" aria-hidden="true"></i>
+                <input name="q" class="h-full w-full border-none bg-transparent text-tColor outline-none" type="search" placeholder="Search Documentation..." aria-label="Search" required />
+              </div>
+            </form>
+
+            <!-- Social Media Links -->
+            <div class="mt-10 flex gap-1.5">
+              <a href="https://www.facebook.com/pixlab.io/" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-ctbPrimary" title="Follow PixLab on Facebook">
+                <i class="uil uil-facebook text-lg"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/pixlabio" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-ctbPrimary" title="Follow us on LinkedIn">
+                <i class="uil uil-linkedin text-lg"></i>
+              </a>
+              <a href="https://x.com/unqlite_db" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-ctbPrimary" title="Follow PixLab on Twitter/X">
+                <i class="uil uil-twitter text-lg"></i>
+              </a>
+              <a href="https://github.com/symisc" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-ctbPrimary" title="Follow Symisc on GitHub">
+                <i class="uil uil-github text-lg"></i>
+              </a>
+              <a href="https://blog.pixlab.io" target="_blank" class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-950 text-white transition-all duration-300 hover:bg-ctbPrimary" title="PixLab Blog">
+                <i class="uil uil-rss text-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Products Section -->
+          <div class="col-span-10 md:col-span-5 lg:col-span-3">
+            <h3 class="mb-4 font-semibold text-ctbPrimary">PRODUCTS & SDKs</h3>
+            <ul class="flex flex-col gap-3">
+              <li><a href="api-portal" class="footer-link">PixLab API Portal</a></li>
+              <li><a href="template-pdf-image-engine" class="footer-link">PDF Template Engine</a></li>
+              <li><a href="vision-llm-api-playground/" class="footer-link">Vision Playground, LLM & APIs</a></li>
+              <li><a href="ekyc/" class="footer-link">eKYC - Universal ID Scanner APIs</a></li>
+              <li><a href="app-ui-ux-code" class="footer-link">APP UX - Mobile UI Code Generator</a></li>
+              <li><a href="https://faceio.net/" target="_blank" class="footer-link">FACEIO - Facial Authentication for the Web &nearr;</a></li>
+            </ul>
+            <!-- Creativity Tools -->
+            <h3 class="mb-2 mt-4 font-semibold text-ctbPrimary">ONLINE CREATIVITY</h3>
+            <ul class="flex flex-col gap-3">
+              <li><a href="annotate" class="footer-link">Image Annotation & Segmentation</a></li>
+              <li><a href="mockup-screenshot-editor" class="footer-link">Mockup & Screenshot Editor</a></li>
+              <li><a href="bulk-image-background-removal-tool-apis" class="footer-link">Bulk Image Background Removal Tool</a></li>
+              <li><a href="creative-toolbox" class="footer-link">Creative Toolbox</a></li>
+              <li><a href="ai-photo-editor" class="footer-link">AI Photo Editor</a></li>
+              <li><a href="tilemap-2d-level-editor" class="footer-link">AI Game Tilemap Editor</a></li>
+            </ul>
+          </div>
+          <!-- Resources Section -->
+          <div class="col-span-10 md:col-span-5 lg:col-span-2">
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-ctbPrimary">DEVELOPERS</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="start" class="footer-link">Getting Started</a></li>
+                <li><a href="api-endpoints" class="footer-link">API Endpoints</a></li>
+                <li><a href="rest-api" class="footer-link">REST APIs</a></li>
+                <li><a href="ekyc/" class="footer-link">eKYC Platform</a></li>
+                <li><a href="vision-llm-api-playground/" class="footer-link">Vision LLM & APIs</a></li>
+                <li><a href="on-premises" class="footer-link">PixLab On-Premises</a></li>
+              </ul>
+            </div>
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-ctbPrimary">RESOURCES</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="https://console.pixlab.io" target="_blank" class="footer-link">PixLab Console &nearr;</a></li>
+                <li><a href="pricing" class="footer-link">Pricing</a></li>
+                <li><a href="support" class="footer-link">Support Channels</a></li>
+                <li><a href="https://community.faceio.net" target="_blank" class="footer-link">Community Forum &nearr;</a></li>
+                <li><a href="https://sod.pixlab.io" target="_blank" class="footer-link">Open Computer Vision &nearr;</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Company Section -->
+          <div class="col-span-10 md:col-span-5 lg:col-span-2">
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-ctbPrimary">COMPANY</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="https://symisc.net/" target="_blank" class="footer-link">Symisc Systems &nearr;</a></li>
+                <li><a href="https://blog.pixlab.io" target="_blank" class="footer-link">PixLab Blog &nearr;</a></li>
+                <li><a href="https://github.com/symisc" target="_blank" class="footer-link">Github &nearr;</a></li>
+                <li><a href="https://www.linkedin.com/company/pixlabio" target="_blank" class="footer-link">LinkedIn &nearr;</a></li>
+                <li><a href="https://x.com/unqlite_db" target="_blank" class="footer-link">Twitter | X &nearr;</a></li>
+                <li><a href="https://www.facebook.com/pixlab.io/" target="_blank" class="footer-link">Facebook &nearr;</a></li>
+              </ul>
+            </div>
+            <div class="mb-4">
+              <h3 class="mb-4 font-semibold text-ctbPrimary">LEGAL</h3>
+              <ul class="flex flex-col gap-3">
+                <li><a href="privacy-policy" class="footer-link">Privacy Policy</a></li>
+                <li><a href="terms-of-use" class="footer-link">Terms of Services</a></li>
+                <li><a href="dmca" class="footer-link">DMCA</a></li>
+                <li><a href="https://status.faceio.net" target="_blank" class="footer-link">Services Status &nearr;</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="mt-10 flex flex-col justify-between gap-5 md:flex-row md:items-center">
+          <a href="/">
+            <img class="dark-logo mb-1 w-36" src="assets/images/symisc-systems-logo.png" alt="Symisc Systems" />
+          </a>
+
+          <div class="flex flex-col gap-1 text-sm text-slate-600">
+            <p>Copyright © 2017 - 2025, <a href="https://symisc.net" target="_blank">Symisc Systems</a>, SUARL. All rights reserved.</p>
+            <p>All trademarks and copyrights belong to their respective owners.</p>
+          </div>
+          <div class="flex">
+            <a class="block" href="#" title="GDPR Compliant">
+              <img class="w-32 lg:w-36" src="assets/images/gdpr-compliant.png" alt="GDPR compliant badge" />
+            </a>
+            <a class="block" href="#" title="Privacy First">
+              <img class="w-32 lg:w-36" src="assets/images/privacy-first.png" alt="Privacy first badge" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/preline/preline.min.js"></script>
+    <script src="assets/js/scrollreveal.js"></script>
+  </body>
+</html>
