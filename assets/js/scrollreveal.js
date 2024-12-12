@@ -1,6 +1,14 @@
 // Custom scroll reveal effect
 
 const revealElements = document.querySelectorAll("[data-sr='sr-top'], [data-sr='sr-bottom'], [data-sr='sr-left'], [data-sr='sr-right']");
+const allSections = document.querySelectorAll("section");
+
+// Check if any section's child has the `data-sr` attribute
+allSections.forEach((section) => {
+  if (section.querySelector("[data-sr]")) {
+    section.style.overflowX = "hidden"; // Apply the hidden style
+  }
+});
 
 const observerOptions = {
   root: null, // Use the viewport as the root
