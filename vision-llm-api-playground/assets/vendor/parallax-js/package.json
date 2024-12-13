@@ -7,7 +7,7 @@
   "homepage": "http://wagerfield.github.io/parallax/",
   "author": "Matthew Wagerfield <matthew@wagerfield.com>, René Roth <mail@reneroth.org>",
   "directories": {
-    "example": "examples"
+    "example": "rest-api-examples"
   },
   "scripts": {},
   "repository": {

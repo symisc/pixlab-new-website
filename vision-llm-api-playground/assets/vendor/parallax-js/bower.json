@@ -14,7 +14,7 @@
     "**/.*",
     "assets",
     "source",
-    "examples"
+    "rest-api-examples"
   ],
   "keywords": [
     "parallax",
