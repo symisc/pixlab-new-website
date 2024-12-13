@@ -3,10 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pixlab APIs Reference Guide</title>
-    <meta name="author" content="Copyright (C) PixLab | Symisc Systems. All rights reserved." />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://pixlab.io/" />
+    <title>PixLab REST API Reference - Comprehensive Guide for Developers</title>
+    <meta name="description" content="Explore the PixLab REST API Reference, a detailed guide to API endpoints for media analysis, image processing, document conversion, background removal, and more. Perfect for developers." />
+    <meta name="keywords" content="PixLab REST API, PixLab API documentation, PixLab API reference, media analysis API, image processing API, document conversion API, background removal API, Online APIs, API for developers, PixLab endpoints, REST API guide" />
+    <meta name="author" content="Copyright (C) PixLab | Symisc Systems. All rights reserved." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="PixLab REST API Reference - Comprehensive Guide for Developers" />
+    <meta property="og:description" content="Discover PixLab's REST API, offering endpoints for media analysis, image processing, and automation. Perfect for developers building creative and analytical applications." />
+    <meta property="og:url" content="https://pixlab.io/rest-api" />
+    <meta property="og:image" content="https://pixlab.io/images/pixlabfb.png" />
+    <meta property="og:site_name" content="PixLab" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="PixLab REST API Reference - Comprehensive Guide for Developers" />
+    <meta property="twitter:description" content="Leverage PixLab REST API to power media analysis, image processing, document conversion, and more. Explore detailed documentation and get started today." />
+    <meta property="twitter:image" content="https://pixlab.io/images/pixlabfb.png" />
+    <meta property="twitter:url" content="https://pixlab.io/rest-api" />
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
     <meta name="description" content="Access to the PixLab RESTful API which is built with a growing list of over 130 production ready, battle tested and intelligent API endpoints..." />
     <meta name="keywords" content="pixlab api, pixlab api reference, pixlab api documentation, pixlab rest api, pixlab images api, pixlab api keys, pixlab restful HTTP api, pixlab php, pixlab python, pixlab ruby api, pixlab javascript, pixlab RESTFul API, pixlab HTTP API, pixlab api" />
@@ -22,7 +34,6 @@
           <a class="nav-logo flex h-full flex-none rounded-md text-xl font-semibold focus:opacity-80 focus:outline-none" href="/" aria-label="PixLab">
             <img class="w-28 object-contain lg:w-[137px]" src="assets/images/pixlab-logo-light.png" title="Machine Vision, AI & Media Processing APIs" alt="PixLab Logo" />
           </a>
-
           <!-- Toggle Theme and Menu Buttons -->
           <div class="flex items-center gap-3 lg:hidden">
             <button class="theme-toggler flex items-center text-white">
@@ -43,7 +54,6 @@
             </div>
           </div>
         </div>
-
         <!-- Main Menu -->
         <div id="hs-navbar-floating-dark" class="hs-collapse header-gradient-bg nav-menu hidden flex-1 overflow-hidden transition-all duration-300 lg:flex lg:h-full" aria-labelledby="hs-navbar-floating-dark-collapse">
           <div class="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
@@ -137,7 +147,6 @@
                 Pricing
               </a>
             </div>
-
             <!-- Theme / Signup / PixLab Console buttons -->
             <div class="flex items-center gap-4 lg:hidden">
               <button class="theme-toggler hidden items-center text-white lg:flex">
@@ -149,7 +158,6 @@
             </div>
           </div>
         </div>
-
         <!-- Theme / Signup / PixLab Console buttons -->
         <div class="nav-buttons hidden h-full items-center gap-4 px-1.5 py-0.5 lg:flex">
           <button class="theme-toggler hidden items-center text-white lg:flex">
@@ -161,7 +169,6 @@
         </div>
       </nav>
     </header>
-
     <main>
       <!-- Hero Section -->
       <section class="hero-section">
@@ -170,10 +177,9 @@
             <div class="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between gap-10 lg:flex-row">
               <!-- Hero Text -->
               <div class="max-w-[31.25rem] text-center lg:max-w-screen-sm lg:text-left">
-                <h1 class="hero-heading">API Reference Guide</h1>
-                <p class="lead mt-5 text-gray-200">Get access to a growing list of over 130 production ready, battle tested & intelligent PixLab API endpoints...</p>
+                <h1 class="hero-heading">REST API Reference Guide</h1>
+                <p class="lead mt-5 text-gray-200">Explore PixLab's comprehensive REST API Reference Guide, designed to help developers integrate and utilize powerful API endpoints for media analysis, image processing, and automation.</p>
               </div>
-
               <div class="flex w-full max-w-[500px] flex-col gap-6">
                 <!-- Search Form -->
                 <form action="search" method="get" class="flex h-12 w-full items-center justify-between rounded-xl bg-white/10 pe-3 ps-4 backdrop-blur-md focus-within:bg-white/15 lg:h-14">
@@ -189,29 +195,24 @@
                   <span>Connect to the PixLab Console</span>
                   <i class="uil uil-arrow-up-right flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-black bg-opacity-30 text-lg lg:h-10 lg:w-10 lg:text-xl"></i>
                 </a>
+                <span class="text-sm text-slate-600">Connect to the PixLab Console and elevate your projects with powerful Vision & Creativity APIs, designed to enhance your development workflow and productivity.</span>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       <!-- Content Section -->
       <section>
         <div class="mx-auto w-full max-w-screen-xl px-5 pb-12 pt-8 leading-7">
           <!-- Social Bar -->
           <div class="flex flex-wrap items-center justify-between gap-5 pb-3">
-            <img class="dark-logo w-36" title="Machine Vision & Media Processing APIs | PixLab" src="assets/images/pixlab-logo-dark.png" title="Machine Vision, AI & Media Processing APIs" alt="PixLab logo" />
-            <p class="text-sm text-muted">
-              <span>Version 2.197</span>
-              <span>(<a href="https://blog.pixlab.io/2025/01/pixlab-api-2-released-with-new-api-portal-and-over-150-endpoints" target="_blank" class="text-primary hover:text-secondary">Release Notes &nearr;</a>)</span>
-            </p>
-
-            <div class="flex flex-wrap">
-              <iframe loading="lazy" src="https://ghbtns.com/github-btn.html?user=symisc&repo=pixlab&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-
-              <iframe loading="lazy" src="https://ghbtns.com/github-btn.html?user=symisc&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+            <div class="flex flex-wrap items-center gap-5">
+              <img class="dark-logo w-36" title="Machine Vision & Media Processing APIs | PixLab" src="assets/images/pixlab-logo-dark.png" title="Machine Vision, AI & Media Processing APIs" alt="PixLab logo" title="Machine Vision & Media Processing APIs" />
+              <p class="text-sm text-muted">
+                <span>Version 2.197</span>
+                <span>(<a href="https://blog.pixlab.io/2025/01/pixlab-api-2-released-with-new-api-portal-and-over-150-endpoints" target="_blank" class="text-primary hover:text-secondary">Release Notes &nearr;</a>)</span>
+              </p>
             </div>
-
             <!-- AddToAny BEGIN -->
             <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
               <a class="a2a_button_google_gmail"></a>
@@ -225,71 +226,86 @@
             <script async src="https://static.addtoany.com/menu/page.js"></script>
             <!-- AddToAny END -->
           </div>
-
           <div class="mt-5 text-tColor">
             <div class="gradient-graph-line mb-5 h-1 w-full"></div>
-            <p class="">This page define the Rest API interface to <strong>PixLab</strong>. This is not a tutorial. This page is designed to be precise. Although easy to read.</p>
-            <p class="my-6">For a tutorial introduction see <a class="link" href="/start">Getting Started with PixLab</a> and <a class="link" href="/examples">The PixLab Code Samples Set</a>. You’re welcome to copy/paste and run these examples to see the API in action.</p>
-            <p class="mb-6">The<strong> PixLab</strong> API is built on HTTP/TLS. Our API is <a class="link" target="_blank" href="https://en.wikipedia.org/wiki/Representational_State_Transfer">RESTful</a> and it:</p>
-            <ul class="space-y-4">
-              <li class="flex items-start">
-                <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
-                </svg>
-                <p class="ml-3">Uses built-in HTTP capabilities for passing parameters and authentication.</p>
-              </li>
-
-              <li class="flex items-start">
-                <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
-                </svg>
-                <p class="ml-3">Responds with standard HTTP response codes to indicate errors.</p>
-              </li>
-
-              <li class="flex items-start">
-                <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
-                </svg>
-                <p class="ml-3">Always returns <code class="code">JSON</code> for each request whether successful or not.</p>
-              </li>
-            </ul>
-
+            <p class="mb-3">
+              Welcome to the <strong>PixLab REST API Reference Guide</strong>. This page provides a precise and detailed definition of the PixLab REST API interface. It is not a tutorial but a comprehensive resource for developers. For a beginner-friendly introduction, visit <a class="link" href="/start">Getting Started with PixLab</a>, or explore practical examples in <a class="link" href="/examples">The PixLab REST API Code Samples</a>. Feel free to copy, paste, and execute these examples to see the REST API in action.
+            </p>
+            <p>
+              For specialized use cases, refer to the appropriate API documentation and reference guides, including but not limited to the <a class="link" href="ekyc/docscan">eKYC API</a> for universal ID and passport scanning, the <a class="link" href="vision-llm-api-playground/">Vision LLM API & Playground</a> for large language model tools and APIs, and the <a class="link" href="template-pdf-media-engine">PDF Template Engine</a> for dynamic PDF generation. For a comprehensive overview of available APIs, visit the <a class="link" href="api-endpoints">List of API Endpoints</a>, featuring functionalities such as <a class="link" href="media-analysis-apis">Media Analysis</a>, <a class="link" href="media-processing-apis">Image Processing</a>, <a class="link" href="document-image-conversion-apis">Document Format Conversion</a>, <a class="link" href="endpoints/background-remove-api">Batch Background Removal</a>, and more.
+            </p>            
+            <ul class="list list-dot text-lg mt-3">
+              <li><a href="#features-rest-api" class="api-endpoint-link">Features of the PixLab REST APIs</a></li>
+              <li><a href="#api-base-url" class="api-endpoint-link">API Entrypoint Access URL</a></li>
+              <li><a href="#http-methods" class="api-endpoint-link">Authentication & API Keys</a></li>
+              <li><a href="#http-response" class="api-endpoint-link">Response Status Codes & Errors</a></li>
+              <li><a href="#further-reading" class="api-endpoint-link">Further Reading</a></li>
+            </ul>            
             <!-- Features -->
-            <h2 class="sec-title">Features</h2>
+            <h2 class="sec-title mt-3 uppercase" id="features-rest-api">Features of the PixLab REST APIs</h2>
             <div class="gradient-graph-line mb-5 h-1 w-full"></div>
+            <p class="mb-6">
+              The <strong>PixLab REST API</strong> is designed to deliver a seamless and powerful development experience. Built on HTTP/TLS and following <a class="link" target="_blank" href="https://en.wikipedia.org/wiki/Representational_State_Transfer">RESTful principles &nearr;</a>, it provides a reliable foundation for developers to build and innovate. Here’s what makes the PixLab API stand out:
+            </p>
             <ul class="space-y-4">
+              <li class="flex items-start">
+                <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
+                </svg>
+                <p class="ml-3">Utilizes built-in HTTP capabilities for parameter passing and authentication.</p>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
+                </svg>
+                <p class="ml-3">Adheres to standard HTTP response codes to provide clear error messaging.</p>
+              </li>
               <li class="flex items-start">
                 <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
                 </svg>
                 <p class="ml-3">
-                  Access to over <strong>130 battle tested, intelligent <a href="api-endpoints">API endpoints</a></strong> and growing...
-                </p>
-              </li>
-
-              <li class="flex items-start">
-                <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
-                </svg>
-                <p class="ml-3"><strong>99.9*% uptime guaranty</strong>. 24/7 friendly support assistance.</p>
-              </li>
-
-              <li class="flex items-start">
-                <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
-                </svg>
-                <p class="ml-3">No hidden fees, no contract. <strong>Cancel your plan at anytime</strong>!</p>
+                  Universal programming language compatibility: Returns data in <code class="code">BLOB</code> and <code class="code">JSON</code> formats for every request, ensuring seamless integration and ease of use across diverse platforms.</p>                
               </li>
               <li class="flex items-start">
                 <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
                 </svg>
-                <p class="ml-3"><a class="link" href="/api-endpoints">Rich Documentation</a>, Production Ready <a class="link" href="/examples">Code Samples</a> &amp; Open source <a class="link" href="https://github.com/symisc" target="_blank">Advocates 💗</a></p>
+                <p class="ml-3">Offers over <strong>150 intelligent <a href="api-endpoints" class="link">API endpoints</a></strong>, covering a wide range of functionalities.</p>
               </li>
-            </ul>
-
+              <li class="flex items-start">
+                <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
+                </svg>
+                <p class="ml-3">Includes specialized APIs like the <a href="ekyc/docscan" class="link">eKYC API</a> for document scanning, the <a href="vision-llm-api-playground/" class="link">Vision LLM API</a>, and the <a href="template-pdf-media-engine" class="link">PDF Template Engine</a>.</p>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
+                </svg>
+                <p class="ml-3">Categorized APIs for <a href="media-analysis-apis" class="link">Media Analysis</a>, <a href="media-processing-apis" class="link">Image Processing</a>, and <a href="document-image-conversion-apis" class="link">Document Format Conversion</a>, among others.</p>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
+                </svg>
+                <p class="ml-3">IPv4 and IPv6 Support ensures robust connectivity across modern networks.</p>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
+                </svg>
+                <p class="ml-3">Online tools built on the API include <a class="link" href="annotate">Annotate</a>, <a class="link" href="creative-toolbox">Creative Toolbox</a>, <a class="link" href="ai-photo-editor">AI Photo Editor</a>, <a class="link" href="bulk-image-background-removal-tool-apis">Bulk Image Background Removal</a>, and more.</p>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 flex-shrink-0 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-7.414l3.707-3.707a1 1 0 011.414 1.414l-4.414 4.414a1 1 0 01-1.414 0l-2.414-2.414a1 1 0 011.414-1.414L9 10.586z" clip-rule="evenodd"></path>
+                </svg>
+                <p class="ml-3">Rich <a href="api-endpoints" class="link">documentation</a>, <a href="/examples" class="link">code samples</a>, and open-source advocacy.</p>
+              </li>
+            </ul>            
             <!-- API Access Point URL -->
-            <h2 class="sec-title">API Access Point URL</h2>
+            <h2 class="sec-title mt-3" id="api-base-url">API Entrypoint Access URL</h2>
             <div class="gradient-graph-line mb-5 h-1 w-full"></div>
             <ul class="list">
               <li>
