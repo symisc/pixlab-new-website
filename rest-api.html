@@ -237,7 +237,7 @@
               <li><a href="#api-base-url" class="api-endpoint-link">API Access URL</a></li>
               <li><a href="#authentication" class="api-endpoint-link">Authentication & API Keys</a></li>
               <li><a href="#http-response" class="api-endpoint-link">Response Status Codes</a></li>
-              <li><a href="#further-reading" class="api-endpoint-link">Further Reading</a></li>
+              <li><a href="#further-read" class="api-endpoint-link">Further Reading</a></li>
             </ul>            
             <!-- Features -->
             <h2 class="sec-title mt-3 uppercase" id="features-rest-api">Features of the PixLab REST APIs</h2>
@@ -307,27 +307,35 @@
             <div class="gradient-graph-line mb-5 h-1 w-full"></div>
             <ul class="list">
               <li>
-                <p>The <strong>PixLab</strong> API’s base endpoint is located at <code class="code">https://api.pixlab.io/</code>.</p>
-              </li>
-              <li>
                 <p>
-                  The request URL scheme is <code class="code">https://api.pixlab.io/cmd?param=val&amp;param2=val2</code> where <strong><code class="code">cmd</code></strong> is the <a href="api-endpoints" class="link">API Endpoint</a> you want to call such as <a href="endpoints/facedetect" class="link">FACEDETECT</a> (for face detection), <a href="ekyc/docscan" class="link">DOCSCAN</a> (for Passports &amp; ID scanning), <a href="endpoints/mogrify" class="link">MOGRIFY</a> (for face blurring),
-                  <a href="endpoints/nsfw" class="link">NSFW</a> (for adult &amp; bloody content detection), <a href="endpoints/" class="link">ROTATE</a>, and <a href="api-endpoints" class="link">hundreds of others</a> and <code class="code">param=val</code> are the endpoint parameters (if any).
+                  The <strong>PixLab</strong> API’s base endpoint is located at <code class="code">https://api.pixlab.io/</code>, serving as the main access point for all API requests.
                 </p>
               </li>
               <li>
                 <p>
-                  Each endpoint may handle both <code class="code">GET</code> &amp; <code class="code">POST</code> requests at the same time. <span><strong>PixLab</strong></span> is shipped with over <a href="api-endpoints" class="link">130 endpoints</a> and all of them are invoked using exactly the same way.
+                  API requests follow the structure: <code class="code">https://api.pixlab.io/endpoint?param=val&amp;param2=val2</code>, where <strong><code class="code">endpoint</code></strong> specifies the <a href="api-endpoints" class="link">API Endpoint</a> you wish to call.       <code class="code">param=val</code> are the query parameters, which vary depending on the endpoint. Examples include:
+                  <ul class="mt-2 list-disc list-inside">
+                    <li class="mb-1"><a href="endpoints/facedetect" class="link">FACEDETECT</a> for face detection.</li>
+                    <li class="mb-1"><a href="endpoints/background-remove-api" class="link">BGREMOVE</a> for batch image background removal.</li>
+                    <li class="mb-1"><a href="ekyc/docscan" class="link">DOCSCAN</a> for ID &amp; passport scanning.</li>
+                    <li class="mb-1"><a href="endpoints/mogrify" class="link">MOGRIFY</a> for face blurring.</li>
+                    <li class="mb-1"><a href="endpoints/nsfw" class="link">NSFW</a> for adult and violent content detection.</li>
+                    <li>Plus hundreds more <a href="api-endpoints" class="link">API Endpoints</a>.</li>
+                  </ul>
                 </p>
               </li>
               <li>
                 <p>
-                  Health &amp; Status dashboard is located at <a class="link" href="https://status.faceio.net" target="_blank">status.faceio.net</a> (a <span><strong>PixLab</strong></span> product) for real-time monitoring.
+                  Each endpoint supports both <code class="code">GET</code> and <code class="code">POST</code> methods, providing flexibility for different implementation scenarios. With over <a href="api-endpoints" class="link">150 API endpoints</a>, PixLab ensures consistent invocation across all features.
+                </p>
+              </li>
+              <li>
+                <p>
+                  A dedicated <a class="link" href="https://status.faceio.net" target="_blank">Health & Status Dashboard &nearr;</a> (a <strong>PixLab</strong> product) offers real-time monitoring to ensure reliable service.
                 </p>
               </li>
             </ul>
-
-            <!-- Summary table -->
+            <!-- Summary Table -->
             <div class="table-wrapper bg-gradient-theme max-w-2xl">
               <h2 class="mb-2 text-xl font-semibold uppercase text-tColor sm:mb-4">Summary</h2>
               <table class="min-w-full whitespace-nowrap text-left">
@@ -342,122 +350,128 @@
                   </tr>
                   <tr class="t-row">
                     <td class="px-4 py-3 font-medium sm:py-5">Architecture</td>
-                    <td class="px-4 py-3">RESTFul</td>
+                    <td class="px-4 py-3">RESTful</td>
                   </tr>
                   <tr class="t-row">
                     <td class="px-4 py-3 font-medium sm:py-5">HTTP & TLS Protocols Version</td>
-                    <td class="px-4 py-3 sm:py-5">1.1/2 (Optional TLS 1.2/3)</td>
+                    <td class="px-4 py-3 sm:py-5">1.3</td>
                   </tr>
                   <tr class="t-row">
                     <td class="px-4 py-3 font-medium sm:py-5">Authentication</td>
-                    <td class="px-4 py-3"><a class="link" href="#authentication">Key Based</a></td>
+                    <td class="px-4 py-3"><a class="link" href="#authentication">Key-Based</a></td>
                   </tr>
                   <tr class="t-row">
                     <td class="px-4 py-3 font-medium sm:py-5">Network</td>
-                    <td class="px-4 py-3">Cloudflare, AWS & OVH</td>
+                    <td class="px-4 py-3">Cloudflare, AWS, & OVH</td>
                   </tr>
                   <tr class="t-row">
                     <td class="px-4 py-3 font-medium sm:py-5">HTTP Response MIME Type</td>
                     <td class="px-4 py-3"><code class="code">application/json</code> or BLOBs</td>
                   </tr>
-
                   <tr class="t-row">
                     <td class="px-4 py-3 font-medium sm:py-5">HTTP Status & Error Codes</td>
                     <td class="px-4 py-3 sm:py-5"><a class="link" href="#response">See Below</a></td>
                   </tr>
-                  <tr>
+                  <tr class="t-row">
                     <td class="px-4 py-3 font-medium sm:py-5">API Endpoints</td>
                     <td class="px-4 py-3 sm:py-5"><a class="link" href="api-endpoints">Listed Here</a></td>
                   </tr>
                 </tbody>
               </table>
-            </div>
-
+            </div>            
             <!-- Authentication -->
             <h2 class="sec-title" id="authentication">Authentication</h2>
             <div class="gradient-graph-line mb-5 h-1 w-full"></div>
             <p>
-              When you <a class="link" href="https://console.pixlab.io/" target="_blank">sign up</a> for an account, you are given an API key. You authenticate to the <span><strong>PixLab</strong></span> API by providing your API key in the request. You can manage your keys via the <em>API Keys</em> tab of the <a class="link" href="https://console.pixlab.io/" target="_blank">Console</a>.
+              When you <a class="link" href="https://console.pixlab.io/" target="_blank">sign up &nearr;</a> for a PixLab account, you’ll receive a unique <strong>API Key</strong>. This key is required for authenticating all requests to the <span><strong>PixLab</strong></span> API. You can manage your keys through the <em>API Keys</em> tab in the <a class="link" href="https://console.pixlab.io/" target="_blank">PixLab Console &nearr;</a>.
             </p>
-            <div class="table-wrapper bg-gradient-theme max-w-4xl">
-              <h2 class="mb-2 text-xl font-semibold uppercase sm:mb-2">Authentication Methods</h2>
-              <p>Authentication to the API occurs via two manner. Use the one you feel comfortable with:</p>
+            
+            <div class="table-wrapper bg-gradient-theme">
+              <h2 class="mb-3 text-xl text-blue-600 font-semibold text-center uppercase">Authentication Methods</h2>
+              <p><a class="link" href="https://console.pixlab.io" target="_blank">Authentication &nearr;</a> to the PixLab API can be performed via HTTP Header or by embedding the API key directly in your request as a query parameter. Choose the method that best suits your workflow:</p>
               <table class="min-w-full whitespace-nowrap text-left">
                 <tbody>
                   <tr class="t-row">
                     <td class="px-4 py-3 align-top font-medium sm:py-5">HTTP Header</td>
                     <td class="px-4 py-3 sm:py-5">
-                      <p>Embed your API Key in the <strong>WWW-Authenticate</strong> HTTP header of the incoming request as follows:<br /><code class="code">WWW-Authenticate: API_KEY</code>.<br />Replace <code class="code">API_KEY</code> with your application’s real API Key you got from the <a href="https://console.pixlab.io/" target="_blank">Console</a>.</p>
+                      <p>
+                        Embed your API Key in the <strong>WWW-Authenticate</strong> HTTP header for secure authentication. Example:<br />
+                        <code class="code">WWW-Authenticate: API_KEY</code><br />
+                        Replace <code class="code">API_KEY</code> with the actual key obtained from the <a class="link" href="https://console.pixlab.io/" target="_blank">PixLab Console &nearr;</a>.
+                      </p>
                     </td>
                   </tr>
                   <tr class="t-row">
-                    <td class="px-4 py-3 align-top font-medium sm:py-5">Query Parameter</td>
+                    <td class="px-4 py-3 align-top font-medium sm:py-5">Query Parameter (<small>Recommended</small>)</td>
                     <td class="px-4 py-3 sm:py-5">
-                      <p>Or, simply include your API key within your <code class="code">POST</code> or <code class="code">GET</code> request like any other parameters an <a class="link" href="api-endpoints">API Endpoint</a> would takes as follows:<br /><code class="code">https://api.pixlab.io/facedetect?param=val&amp;key=API_KEY</code></p>
+                      <p>
+                        <strong>PixLab recommend</strong> that you include your API key directly in your <code class="code">POST</code> or <code class="code">GET</code> request as a query parameter. Example:<br />
+                        <code class="code">https://api.pixlab.io/facedetect?param=val&amp;key=API_KEY</code><br />
+                        This approach works seamlessly with all <a class="link" href="api-endpoints">API Endpoints</a>.
+                      </p>
                     </td>
                   </tr>
                 </tbody>
               </table>
-              <span class="mt-3"><i class="uil uil-exclamation-triangle text-xl text-yellow-500"></i> Don't forget to keep your API keys handy, and make sure they are used by authorized scripts only.</span>
+              <span class="mt-5">
+                <i class="uil uil-exclamation-triangle text-xl text-yellow-500"></i> Always safeguard your API keys. Ensure they are used only by authorized scripts and avoid exposing them in public repositories.
+              </span>
             </div>
-
             <!-- Responses, Status Codes & Errors -->
-            <h2 class="sec-title" id="response">Responses, Status Codes & Errors</h2>
+            <h2 class="sec-title mt-3" id="http-response">Responses, Status & Errors Codes</h2>
             <div class="gradient-graph-line mb-5 h-1 w-full"></div>
             <p>
-              The following <strong>HTTP status codes</strong> are always returned after each initiated request. All <span><strong>PixLab</strong></span> <a class="link" href="api-endpoints">API Endpoints</a>, always returns <code class="code">application/json</code> for each request whether successful or not.&nbsp;<strong>BLOBs (images binary contents)</strong> are returned only after successful requests and at the user explicit demand, usually by setting the <code class="code">blob</code> parameter an
-              endpoint takes to <code class="code">true</code>.
+              The following <strong>HTTP status codes</strong> are consistently returned for every request made to the <span><strong>PixLab</strong></span> <a class="link" href="api-endpoints">API Endpoints</a>. Responses are always provided in <code class="code">application/json</code> format, regardless of whether the request was successful or not. For endpoints that return binary content (e.g., images as <strong>BLOBs</strong>), these are only sent after a successful request and when explicitly requested by setting the <code class="code">blob</code> parameter to <code class="code">true</code>.
             </p>
             <div class="table-wrapper bg-gradient-theme max-w-4xl">
               <table class="min-w-full table-fixed whitespace-nowrap text-left">
                 <tbody>
                   <tr class="t-row">
                     <td class="px-4 py-3 text-lg font-medium sm:py-5"><code class="code">200</code></td>
-                    <td class="px-4 py-3 sm:py-5">The target endpoint (i.e. <a href="endpoints/facedetect" class="link">FACEDETECT</a>, <a href="ekyc/docscan" class="link">DOCSCAN</a>, etc.) executed successfully.</td>
+                    <td class="px-4 py-3 sm:py-5">The endpoint (e.g., <a href="endpoints/facedetect" class="link">FACEDETECT</a>, <a href="ekyc/docscan" class="link">DOCSCAN</a>, etc.) executed successfully.</td>
                   </tr>
                   <tr class="t-row">
                     <td class="px-4 py-3 text-lg font-medium sm:py-5"><code class="code">400</code></td>
-                    <td class="px-4 py-3 sm:py-5">Bad Request - Often missing a required parameter.</td>
+                    <td class="px-4 py-3 sm:py-5">Bad Request - Often indicates missing required parameters.</td>
                   </tr>
                   <tr class="t-row">
                     <td class="px-4 py-3 text-lg font-medium sm:py-5"><code class="code">401</code></td>
-                    <td class="px-4 py-3 sm:py-5">Unauthorized - Missing, Blocked or Invalid API Key.</td>
+                    <td class="px-4 py-3 sm:py-5">Unauthorized - Missing, blocked, or invalid API Key.</td>
                   </tr>
                   <tr class="t-row">
                     <td class="px-4 py-3 text-lg font-medium sm:py-5"><code class="code">404</code></td>
-                    <td class="px-4 py-3">Not Found - The requested item (i.e. Image URL) does not exists.</td>
+                    <td class="px-4 py-3">Not Found - The requested item (e.g., an image URL) does not exist.</td>
                   </tr>
                   <tr class="t-row">
                     <td class="px-4 py-3 text-lg font-medium sm:py-5"><code class="code">405</code></td>
-                    <td class="px-4 py-3">The HTTP method is not handled by the API endpoint.</td>
+                    <td class="px-4 py-3">Method Not Allowed - The HTTP method is not supported by the endpoint.</td>
                   </tr>
                   <tr class="t-row">
                     <td class="px-4 py-3 text-lg font-medium sm:py-5"><code class="code">415</code></td>
-                    <td class="px-4 py-3">The given media file is not supported by the target API endpoint (i.e. Unsupported image format).</td>
+                    <td class="px-4 py-3">Unsupported Media Type - The provided file format is not supported by the endpoint (e.g., unsupported image format).</td>
                   </tr>
-
                   <tr class="t-row">
                     <td class="px-4 py-3 text-lg font-medium sm:py-5"><code class="code">429</code></td>
-                    <td class="px-4 py-3 sm:py-5">Too many requests (per minute) from this IP address.</td>
+                    <td class="px-4 py-3 sm:py-5">Too Many Requests - The client has exceeded the rate limit (per minute) from this IP address.</td>
                   </tr>
-                  <tr>
+                  <tr class="t-row">
                     <td class="px-4 py-3 text-lg font-medium sm:py-5"><code class="code">500</code></td>
-                    <td class="px-4 py-3 sm:py-5">Server Side Error or Maintenance Planned (We'll notify you anyway).</td>
+                    <td class="px-4 py-3 sm:py-5">Internal Server Error - Indicates a server-side issue or planned maintenance (you will be notified).</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-
             <!-- Further Reading -->
-            <h2 class="sec-title">Further Reading</h2>
+            <h2 class="sec-title" id="further-read">Further Reading</h2>
             <div class="gradient-graph-line mb-5 h-1 w-full"></div>
-            <p>Now that you understand how <strong>PixLab</strong> handle your incoming HTTP requests, we can tackle each API endpoint in details in the next lecture.</p>
-
+            <p>
+              Now that you have a solid understanding of how <strong>PixLab</strong> processes and handles your incoming HTTP requests, you are well-equipped to move forward. In the next section, we will dive into the specifics of each <strong>PixLab API endpoint</strong>, exploring their functionality, parameters, and practical use cases in detail. Whether you're looking to perform media analysis, process images, or leverage advanced tools like <a class="link" href="ekyc/">eKYC</a> and <a class="link" href="vision-llm-api-playground/">Vision LLM Services</a>, these comprehensive endpoint breakdowns will provide the insight you need to fully utilize the API's capabilities.
+            </p>            
             <!-- Button Group -->
             <div class="mt-10 flex flex-wrap justify-center gap-3">
-              <a href="start" class="gradient-outline-btn">
+              <a href="api-portal" class="gradient-outline-btn">
                 <div class="flex items-center gap-2 rounded-[98px] bg-background p-3 px-8 uppercase transition-all duration-300">
-                  <span class="text-center font-medium tracking-wider"><i class="uil uil-rocket mr-3 text-lg"></i>Getting Started</span>
+                  <span class="text-center font-medium tracking-wider"><i class="uil uil-rocket mr-3 text-lg"></i>API Portal</span>
                 </div>
               </a>
               <a href="rest-api-examples" class="gradient-outline-btn">
@@ -470,9 +484,14 @@
                   <span class="text-center font-medium tracking-wider"><i class="uil uil-list-ul mr-3 text-lg"></i>Api Endpoints</span>
                 </div>
               </a>
-              <a href="support" class="gradient-outline-btn">
+              <a href="ekyc/" class="gradient-outline-btn">
                 <div class="flex items-center gap-2 rounded-[98px] bg-background p-3 px-8 uppercase transition-all duration-300">
-                  <span class="text-center font-medium tracking-wider"><i class="uil uil-comment-alt-dots mr-3 text-lg"></i>Ask questions</span>
+                  <span class="text-center font-medium tracking-wider"><i class="uil uil-arrow-up-right mr-3 text-lg"></i>eKYC API</span>
+                </div>
+              </a>
+              <a href="vision-llm-api-playground/" class="gradient-outline-btn">
+                <div class="flex items-center gap-2 rounded-[98px] bg-background p-3 px-8 uppercase transition-all duration-300">
+                  <span class="text-center font-medium tracking-wider"><i class="uil uil-text mr-3 text-lg"></i>Vision LLM Platform</span>
                 </div>
               </a>
             </div>
@@ -480,7 +499,6 @@
         </div>
       </section>
     </main>
-
     <!-- Footer Section -->
     <footer class="bg-background">
       <div class="mx-auto w-full max-w-screen-xl px-5 py-10">
